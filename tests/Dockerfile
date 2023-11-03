@@ -163,7 +163,7 @@ ENV CMAKE_VERSION=3.25.3
 RUN curl -L https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}.tar.gz | tar -xz  && \
     cd cmake-${CMAKE_VERSION} && \
     cmake -B build -DCMAKE_BUILD_TYPE=Release && \
-    cmake --build build --parallel && \
+    cmake --build build && \
     cmake --install build && \
     cd .. && \
     rm -r cmake-${CMAKE_VERSION}
