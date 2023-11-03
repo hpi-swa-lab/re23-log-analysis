@@ -271,8 +271,7 @@ ENV GRAALPY_HOME=/opt/graalpy
 
 ### Installing GraalPy
 ENV GRAALPY_VERSION=23.1.1
-RUN curl -sL -O https://github.com/oracle/graalpython/releases/download/graal-${GRAALPY_VERSION}/graalpy-community-${GRAALPY_VERSION}-linux-amd64.tar.gz ^ \
-    tar --strip-components=1 -xzf graalpy-community-${GRAALPY_VERSION}-linux-amd64.tar.gz && \
+RUN curl -L https://github.com/oracle/graalpython/releases/download/graal-${GRAALPY_VERSION}/graalpy-community-${GRAALPY_VERSION}-linux-amd64.tar.gz | tar --strip-components=1 -xz && \
     ln -s ${GRAALPY_HOME}/bin/graalpy /usr/local/bin/graalpy && \
     ln -s ${GRAALPY_HOME}/languages/python/graalpy_virtualenv /opt/graalpy_virtualenv
 
