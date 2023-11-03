@@ -271,13 +271,14 @@ ENV GRAALPY_HOME=/opt/graalpy
 
 ### Installing GraalPy
 ENV GRAALPY_VERSION=23.1.1
-RUN curl -L https://github.com/oracle/graalpython/releases/download/graal-${GRAALPY_VERSION}/graalpy-community-${GRAALPY_VERSION}-linux-amd64.tar.gz | tar --strip-components=1 -xz && \
+RUN mkdir -p ${GRAALPY_HOME} && cd ${GRAALPY_HOME} && \
+    curl -L https://github.com/oracle/graalpython/releases/download/graal-${GRAALPY_VERSION}/graalpy-community-${GRAALPY_VERSION}-linux-amd64.tar.gz | tar --strip-components=1 -xz && \
     ln -s ${GRAALPY_HOME}/bin/graalpy /usr/local/bin/graalpy && \
-    ln -s ${GRAALPY_HOME}/languages/python/graalpy_virtualenv /opt/graalpy_virtualenv
+    ln -s ${GRAALPY_HOME}/graalpy_virtualenv /opt/graalpy_virtualenv
 
 # Some packages use stdlib test files for testing, which GraalPy doesn't ship. Just symlink them for now
-RUN rm -rf ${GRAALPY_HOME}/languages/python/lib/python3.*/test && \
-    ln -s /usr/local/lib/python${CPYTHON_VERSION_SHORT}/test/ ${GRAALPY_HOME}/languages/python/lib/python3.*/
+RUN rm -rf ${GRAALPY_HOME}/lib/python3.*/test/ && \
+    ln -s /usr/local/lib/python${CPYTHON_VERSION_SHORT}/test/ ${GRAALPY_HOME}/lib/python3.*/
 
 ### User setup
 RUN useradd -d "$WORK_DIR" -s /bin/bash tester
