@@ -29,6 +29,5 @@ for tarball in /opt/repos/sources_mirror/*.tar.xz; do
   "${CPYTHON_PATH}" /opt/tests/library_tester.py -n "${name}" -v "${version}" -t 1 -l "${result_file}"
 
   # Step 3: dump additional (log) files created while testing
-  cd "${WORK_DIR}/results/${name}/${version}/1" || return
-  cp ./*.log "/tmp/results/${name}/"
+  cp ${WORK_DIR}/results/${name}/${version}/1/*.log /tmp/results/${name}
 done
