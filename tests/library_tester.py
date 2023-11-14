@@ -23,8 +23,8 @@ from itertools import chain
 from pathlib import Path
 from textwrap import dedent
 
-from common.result import TestResult, TestResultCounts
-from python.result_parsers import parse_log, parse_junit_xml
+from result_util import TestResult, TestResultCounts
+from result_parser import parse_log, parse_junit_xml
 
 DIR = Path(__file__).parent
 IS_PRODUCTION = os.environ.get("TESTER_ENV") == 'production'

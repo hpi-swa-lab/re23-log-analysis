@@ -7,7 +7,7 @@ import re
 from functools import reduce
 from typing import Callable
 
-from common.result import TestResultCounts
+from result_util import TestResultCounts
 
 PARSERS = []
 
