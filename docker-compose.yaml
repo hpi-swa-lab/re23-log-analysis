@@ -1,5 +1,13 @@
 services:
   tests:
+    # Specify the docker file that setups the execution environment
     build:
       context: tests
       dockerfile: ./Dockerfile
+    # Mount all needed directories to the container
+    volumes:
+      - ./repos:/opt/repos
+      - ./tests:/opt/tests
+      - ./results:/tmp/results
+    # Execute the tests when the container is running
+    entrypoint: sh -c "/opt/tests/execute_tests.sh"

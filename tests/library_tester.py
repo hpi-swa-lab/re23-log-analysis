@@ -379,7 +379,8 @@ def prepare_env(name: str) -> dict[str, str]:
 
 
 def get_metadata(name: str):
-    metadata_path = DIR / 'pypi_list_repo.json'
+    # Expect the metadata file inside the repos path
+    metadata_path = '/opt/repos/pypi_list_repo.json'
     with open(metadata_path) as f:
         metadata = json.load(f)
     if name not in metadata:

@@ -280,6 +280,9 @@ RUN mkdir -p ${GRAALPY_HOME} && cd ${GRAALPY_HOME} && \
 RUN rm -rf ${GRAALPY_HOME}/lib/python3.*/test/ && \
     ln -s /usr/local/lib/python${CPYTHON_VERSION_SHORT}/test/ ${GRAALPY_HOME}/lib/python3.*/
 
+# Install some dependencies for later running our testing script (using the Cpython installation)
+RUN ${CPYTHON_PATH} -m pip install toml
+
 ### User setup
 RUN useradd -d "$WORK_DIR" -s /bin/bash tester
 USER tester
