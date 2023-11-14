@@ -185,7 +185,7 @@ class Tester:
         else:
             print(f"Downloading {nv}")
             download_path = self.work_dir / 'sources_mirror' / nv
-            return_value = subprocess.call([str(DIR / 'mirror_repos.py'), '--no-upload', self.name], cwd=self.work_dir)
+            return_value = subprocess.call([str('/opt/repos/mirror_repos.py'), '--no-upload', self.name], cwd=self.work_dir)
             if return_value or not download_path.exists():
                 raise TestError("Failed to download tarball")
             os.rename(download_path, self.work_dir / nv)
