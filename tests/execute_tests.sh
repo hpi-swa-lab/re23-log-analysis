@@ -8,25 +8,27 @@ for tarball in /opt/repos/sources_mirror/*.tar.xz; do
   tarball_basename=$(basename "${tarball}")
   # extracting follows https://unix.stackexchange.com/a/137785
   tarball_without_ending=${tarball_basename%.tar.xz}
-  echo "Testing ${tarball_without_ending}..."
+  echo "--- Testing ${tarball_without_ending} ---"
 
   # At this point tarball_without_ending should look like "<package>-<version>"
   name=${tarball_without_ending%-*} # remove everything after the last "-"
   version=${tarball_without_ending##*-} # remove all before the last "-"
 
-  # Prepare test result file (create directory if not existing, and rm previous file)
-  mkdir -p "/tmp/results/$(date -I)/${name}"
-  result_file=/tmp/results/${name}/results.json
-  rm -f result_file
+  # Prepare test result directory (clear and recreate)
+  rm -rf "/tmp/results/${name}"
+  mkdir "/tmp/results/${name}"
+  # Specify a dedicated result file for a summary of the test execution
+  result_file=/tmp/results/${name}/test_summary.json
+
 
   # Step 1: copy the tarball into WORK_DIR (env variable is set in the Dockerfile)
   cp "${tarball}" "${WORK_DIR}"
 
-  # Step 2: execute /opt/tests/library_tester.py with the name and version of the package
-  # configure it to be test run 1 and specify a respective result file.
+  # Step 2: execute the library_tester.py script with the name and version of the package,
+  # configure it to be test run 1 and reference the result file for the summary.
   "${CPYTHON_PATH}" /opt/tests/library_tester.py -n "${name}" -v "${version}" -t 1 -l "${result_file}"
-  # TODO: script fails at imports from common.result at the moment
 
-  # TODO: Step 3: If the json file is not sufficient, collect stdout log output and dump it as well
-  # TODO: How does junit-xml work with this?
+  # Step 3: dump additional (log) files created while testing
+  cd "${WORK_DIR}/results/${name}/${version}/1" || return
+  cp ./*.log "/tmp/results/${name}/"
 done

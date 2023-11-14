@@ -12,9 +12,7 @@ It should contain various tarball archives respective to the specified packages 
 Simply run `docker-compose up tests` in the repository.
 Use the `--force-recreate` option in order to apply changes in the file system by recreating the container.
 
-It should create the needed docker image as well as execute the tests based on the locally downloaded repositories.
-Therefore it uses the [`library_tester.py`](./tests/library_tester.py) script.
+It should create the docker image as well as execute the tests based on the locally downloaded repositories.
+Therefore, it uses the [`library_tester.py`](./tests/library_tester.py) script.
 
-TODO: the script does currently fail. #WIP
-
-During the testing process, in the [results](./results) directory test result files are dumped.
+During the testing process, result files are dumped in the [results](./results) directory.

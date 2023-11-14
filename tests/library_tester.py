@@ -412,7 +412,7 @@ def main():
         sys.exit(f"Given version doesn't match metadata version - {args.version!r} != {version!r}")
 
     work_dir = Path(os.environ.get('WORK_DIR', 'workdir'))
-    results_dir = work_dir / 'results' / 'python' / name / version / args.run_number
+    results_dir = work_dir / 'results' / name / version / args.run_number
     os.makedirs(results_dir, exist_ok=True)
 
     tester = Tester(
