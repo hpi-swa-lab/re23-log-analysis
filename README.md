@@ -9,8 +9,12 @@ Note that you will need to have python3 as well as the `requests` package instal
 It should contain various tarball archives respective to the specified packages in [`pypi_list_repo.json`](./repos/pypi_list_repo.json).
 
 ## Test Execution
-Simply run `docker-compose up -f tests` in the repository.
+Simply run `docker-compose up tests` in the repository.
+Use the `--force-recreate` option in order to apply changes in the file system by recreating the container.
 
 It should create the needed docker image as well as execute the tests based on the locally downloaded repositories.
+Therefore it uses the [`library_tester.py`](./tests/library_tester.py) script.
+
+TODO: the script does currently fail. #WIP
 
 During the testing process, in the [results](./results) directory test result files are dumped.
