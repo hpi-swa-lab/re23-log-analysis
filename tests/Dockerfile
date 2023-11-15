@@ -276,12 +276,19 @@ RUN mkdir -p ${GRAALPY_HOME} && cd ${GRAALPY_HOME} && \
     ln -s ${GRAALPY_HOME}/bin/graalpy /usr/local/bin/graalpy && \
     ln -s ${GRAALPY_HOME}/graalpy_virtualenv /opt/graalpy_virtualenv
 
+# Install tox (and with that virtualenv) on GraalPy and make it available globally
+ENV GRAALPY_PATH=${GRAALPY_HOME}/bin/graalpy
+RUN ${GRAALPY_PATH} -I -m ensurepip && \
+    ${GRAALPY_PATH} -m pip install tox && \
+    ln -s ${GRAALPY_HOME}/bin/virtualenv /usr/local/bin/virtualenv && \
+    ln -s ${GRAALPY_HOME}/bin/tox /usr/local/bin/tox
+
 # Some packages use stdlib test files for testing, which GraalPy doesn't ship. Just symlink them for now
 RUN rm -rf ${GRAALPY_HOME}/lib/python3.*/test/ && \
     ln -s /usr/local/lib/python${CPYTHON_VERSION_SHORT}/test/ ${GRAALPY_HOME}/lib/python3.*/
 
 # Install some dependencies for later running our testing script (using the Cpython installation)
-RUN ${CPYTHON_PATH} -m pip install toml virtualenv tox
+RUN ${CPYTHON_PATH} -m pip install toml
 
 ### User setup
 RUN useradd -d "$WORK_DIR" -s /bin/bash tester
