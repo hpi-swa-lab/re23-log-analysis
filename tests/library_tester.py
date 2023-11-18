@@ -238,17 +238,21 @@ class Tester:
                     if pyproject_toml.get('build-system', {}).get('build-backend'):
                         isolated_build = True
             use_unittest = False
+            use_nosetest = False
             setup_py = self.test_dir / 'setup.py'
             if setup_py.exists():
                 with open(setup_py) as setup_file:
                     if match := re.search(r'test_suite\s*=\s*(.*)', setup_file.read()):
+                        use_nosetest = 'nose' in match.group(1)
                         use_unittest = 'nose' not in match.group(1)
             # Mock Dependency always needed
             deps = ['mock']
             result_xml_file = self.results_dir / f'{interpreter}-test-results.xml'
             if use_unittest:
                 commands = '{envpython} setup.py test'
-                deps += ['mock']
+            elif use_nosetest:
+                commands = 'nosetests --with-xunit --xunit-file ' + str(result_xml_file)
+                deps += ['nosetests']
             else:
                 commands = 'pytest -v --tb=native --junitxml ' + str(result_xml_file)
                 deps += ['pytest']
