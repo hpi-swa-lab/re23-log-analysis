@@ -18,8 +18,7 @@ for tarball in /opt/repos/sources_mirror/*.tar.xz; do
   rm -rf "/tmp/results/${name}"
   mkdir "/tmp/results/${name}"
   # Specify a dedicated result file for a summary of the test execution
-  result_file=/tmp/results/${name}/test_summary.json
-
+  result_file=/tmp/results/${name}/summary.json
 
   # Step 1: copy the tarball into WORK_DIR (env variable is set in the Dockerfile)
   cp "${tarball}" "${WORK_DIR}"
@@ -28,6 +27,6 @@ for tarball in /opt/repos/sources_mirror/*.tar.xz; do
   # configure it to be test run 1 and reference the result file for the summary.
   "${CPYTHON_PATH}" /opt/tests/library_tester.py -n "${name}" -v "${version}" -t 1 -l "${result_file}"
 
-  # Step 3: dump additional (log) files created while testing
-  cp ${WORK_DIR}/results/${name}/${version}/1/*.log /tmp/results/${name}
+  # Step 3: dump additional files created while testing
+  cp ${WORK_DIR}/results/${name}/${version}/1/* /tmp/results/${name}
 done

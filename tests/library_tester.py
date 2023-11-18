@@ -224,8 +224,8 @@ class Tester:
     def get_timeout(self, timeout_name: str) -> timedelta:
         return get_timeout(self.metadata, timeout_name)
 
-    def generate_tox_file(self):
-        with open(self.test_dir / 'tox.ini', 'w') as tox_ini_file:
+    def generate_tox_file(self, interpreter: Interpreter):
+        with open(self.test_dir / f'{interpreter}-tox.ini', 'w') as tox_ini_file:
             isolated_build = False
             pyproject_toml_file = self.test_dir / 'pyproject.toml'
             if pyproject_toml_file.exists():
@@ -243,13 +243,15 @@ class Tester:
                 with open(setup_py) as setup_file:
                     if match := re.search(r'test_suite\s*=\s*(.*)', setup_file.read()):
                         use_unittest = 'nose' not in match.group(1)
-            deps = []
+            # Mock Dependency always needed
+            deps = ['mock']
+            result_xml_file = self.results_dir / f'{interpreter}-test-results.xml'
             if use_unittest:
                 commands = '{envpython} setup.py test'
                 deps += ['mock']
             else:
-                commands = 'pytest --tb=native -v'
-                deps += ['pytest', 'mock']
+                commands = 'pytest -v --tb=native --junitxml ' + str(result_xml_file)
+                deps += ['pytest']
             unwanted_requirements = ('docs', 'flake', 'pylint', 'black', '2', '3')
             for requirements_file in chain(self.test_dir.rglob('*requirements*.txt'),
                                            self.test_dir.glob('*requirements*/*.txt')):
@@ -317,7 +319,7 @@ class Tester:
         if any(re.match(r'py\d+', factor) for factor in tox_factors):
             raise RuntimeError("It is not allowed to specify one of the base interpreter factors in tox_factors")
         testenv = f'{interpreter}libtest-{"-".join(tox_factors)}'
-        with open(self.test_dir / 'tox.ini', 'a') as f:
+        with open(self.test_dir / f'{interpreter}-tox.ini', 'a') as f:
             f.write('\n' + dedent(f'''\
             [testenv:{testenv}]
             basepython = {interpreter.path}
@@ -330,7 +332,7 @@ class Tester:
                 PYO_TEST_*
                 ORACLE_HOME
             ''') + '\n')
-        cmd = ['tox', '-c', 'tox.ini', '-e', testenv]
+        cmd = ['tox', '-c', f'{interpreter}-tox.ini', '-e', testenv]
         print(f"Running command: {shlex.join(cmd)}")
         result = TestResult(name=f'{interpreter}-test', log_path=log_path, reference_impl=interpreter.reference_impl)
         try:
@@ -447,19 +449,31 @@ def main():
             tester.unpack_sources()
             tester.apply_patch(results)
 
-            tox_ini = tester.test_dir / 'tox.ini'
-            tox_ini_msg = 'tox.ini'
-            if not tox_ini.exists():
-                tox_ini_msg = 'tox.ini (generated)'
-                tester.generate_tox_file()
+            # Create tox config for Cpython tests
+            cpython_tox_ini = tester.test_dir / f'{cpython}-tox.ini'
+            cpython_tox_ini_msg = f'{cpython}-tox.ini'
+            if not cpython_tox_ini.exists():
+                cpython_tox_ini_msg = f'{cpython}-tox.ini (generated)'
+                tester.generate_tox_file(cpython)
                 # n.b. cannot be named tox.ini, that screws up mime type on the mirror
-                upload_path = results_dir / 'tox-ini.log'
-                shutil.copy(tox_ini, upload_path)
-                results.append(TestResult(name='tox.ini', log_path=upload_path, auxiliary=True))
+                upload_path = results_dir / f'{cpython}-tox-ini.log'
+                shutil.copy(cpython_tox_ini, upload_path)
+                results.append(TestResult(name=f'{cpython}-tox.ini', log_path=upload_path, auxiliary=True))
+
+            # Create tox config for GraalPy tests
+            graalpy_tox_ini = tester.test_dir / f'{graalpy}-tox.ini'
+            graalpy_tox_ini_msg = f'{graalpy}-tox.ini'
+            if not graalpy_tox_ini.exists():
+                graalpy_tox_ini_msg = f'{graalpy}-tox.ini (generated)'
+                tester.generate_tox_file(graalpy)
+                # n.b. cannot be named tox.ini, that screws up mime type on the mirror
+                upload_path = results_dir / f'{graalpy}-tox-ini.log'
+                shutil.copy(graalpy_tox_ini, upload_path)
+                results.append(TestResult(name=f'{graalpy}-tox.ini', log_path=upload_path, auxiliary=True))
 
             cpython_test_result = None
             if args.test_cpython:
-                with open(tox_ini) as f, print_hrule(tox_ini_msg):
+                with open(cpython_tox_ini) as f, print_hrule(cpython_tox_ini_msg):
                     print(f.read())
                 cpython_test_result = tester.run_tests(cpython)
                 results.append(cpython_test_result)
@@ -467,7 +481,7 @@ def main():
                     raise TestError("CPython didn't finish tests, not running GraalPy")
 
             if args.test_graalpy:
-                with open(tox_ini) as f, print_hrule(tox_ini_msg):
+                with open(graalpy_tox_ini) as f, print_hrule(graalpy_tox_ini_msg):
                     print(f.read())
                 graalpy_test_result = tester.run_tests(graalpy)
                 results.append(graalpy_test_result)
