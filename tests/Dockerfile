@@ -300,11 +300,15 @@ RUN git config --global user.email "tester@graalpy.org"
 # Prebuild numpy into the cache, everything needs it. But don't fail the build if it fails
 # We prebuild matplotlib because it downloads stuff from sourceforge and sourceforge is impossible to reliably
 # whitelist in the cluster because they keep adding mirrors all the time
-ARG PREBUILD_NUMPY=''
-RUN if [ -n "${PREBUILD_NUMPY}" ]; then \
-    graalpy -m venv prebuild-venv && \
+# Also, prebuild scipy, scikit-learn and pandas as well because patching these is really costly as well.
+ARG PREBUILD_COSTLY_PACKAGES=''
+RUN if [[ "${PREBUILD_COSTLY_PACKAGES}" == "true" ]]; then \
+    ${GRAALPY_PATH} -m venv prebuild-venv && \
     prebuild-venv/bin/pip wheel numpy; \
     prebuild-venv/bin/pip wheel oldest-supported-numpy; \
     prebuild-venv/bin/pip wheel matplotlib; \
+    prebuild-venv/bin/pip wheel scipy; \
+    prebuild-venv/bin/pip wheel scikit-learn; \
+    prebuild-venv/bin/pip wheel pandas; \
     true ; \
     fi

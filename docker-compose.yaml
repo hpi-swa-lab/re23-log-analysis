@@ -4,6 +4,8 @@ services:
     build:
       context: tests
       dockerfile: ./Dockerfile
+      args:
+        - PREBUILD_COSTLY_PACKAGES=true
     # Mount all needed directories to the container
     volumes:
       - ./repos:/opt/repos
