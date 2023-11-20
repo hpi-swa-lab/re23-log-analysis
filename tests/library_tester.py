@@ -252,7 +252,7 @@ class Tester:
                 commands = '{envpython} setup.py test'
             elif use_nosetest:
                 commands = 'nosetests --with-xunit --xunit-file ' + str(result_xml_file)
-                deps += ['nosetests']
+                deps += ['nose']
             else:
                 commands = 'pytest -v --tb=native --junitxml ' + str(result_xml_file)
                 deps += ['pytest']
