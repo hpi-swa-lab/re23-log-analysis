@@ -242,14 +242,18 @@ class Tester:
             setup_py = self.test_dir / 'setup.py'
             if setup_py.exists():
                 with open(setup_py) as setup_file:
-                    if match := re.search(r'test_suite\s*=\s*(.*)', setup_file.read()):
+                    if match := re.search(r'test_suite\s*=\s*[\'|"](.*)[\'|"]', setup_file.read()):
+                        # Check, if testing via nose is preferred.
                         use_nosetest = 'nose' in match.group(1)
-                        use_unittest = 'nose' not in match.group(1)
+                        # Otherwise, try "legacy" unittest test execution.
+                        use_unittest = not use_nosetest
+                        # When no setup.py is given, pytest will be used.
             # Mock Dependency always needed
             deps = ['mock']
             result_xml_file = self.results_dir / f'{interpreter}-test-results.xml'
             if use_unittest:
-                commands = '{envpython} setup.py test'
+                commands = '{envpython} -m xmlrunner --output-file ' + str(result_xml_file)
+                deps += ['unittest-xml-reporting']
             elif use_nosetest:
                 commands = 'nosetests --with-xunit --xunit-file ' + str(result_xml_file)
                 deps += ['nose']
