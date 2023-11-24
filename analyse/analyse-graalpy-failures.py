@@ -1,6 +1,7 @@
 import argparse
 import os 
 from ErrorAnalyser import ErrorAnalyser
+import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--graalpy-files', default='graalpy-test-results.xml', help='name of the JunitXML-files with graalpy results')
@@ -20,8 +21,12 @@ if __name__ == "__main__":
     
     analyser = ErrorAnalyser(files)
     analyser.load()
-    
-    
-
-        
-
+    #analyser.plot_hist_error_types()
+    #analyser.plot_hist_error_messages()
+    #analyser.print_top_error_messages()
+    #analyser.plot_tfidf_error_messages()
+    #analyser.plot_tfidf_error_stacktraces()
+    #analyser.print_tfidf_error_stracktrace()
+    #analyser.print_tfidf_last_stacktrace_line(0.8, 0.95)
+    #analyser.plot_tfidf_last_stacktrace_line()
+    plt.show()
