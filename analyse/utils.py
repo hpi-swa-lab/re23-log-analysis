@@ -11,4 +11,6 @@ def create_heatmap(similarity, labels, title, cmap = "YlGnBu"):
   sns.heatmap(df, cmap=cmap)
 
 def tokenize(text: str):
+  if text is None:
+    return text
   return ''.join([i if ord(i) < 128 else ' ' for i in text])
