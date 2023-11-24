@@ -26,7 +26,7 @@ if __name__ == "__main__":
     #analyser.print_top_error_messages()
     #analyser.plot_tfidf_error_messages()
     #analyser.plot_tfidf_error_stacktraces()
-    #analyser.print_tfidf_error_stracktrace()
+    #analyser.print_tfidf_error_stracktrace(0.8, 0.95)
     #analyser.print_tfidf_last_stacktrace_line(0.8, 0.95)
     #analyser.plot_tfidf_last_stacktrace_line()
     plt.show()
