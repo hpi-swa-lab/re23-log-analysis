@@ -66,6 +66,11 @@ class ErrorAnalyser(object):
         df = pandas.DataFrame.from_dict(package_counts, orient='index')
         df.plot(subplots=True, kind='bar', title="Packages")
     
+    def print_everything(self):
+        for errorDocument in self.error_documents:
+            print(errorDocument)
+            print()
+
     def plot_tfidf_error_messages(self):
         errors = [tokenize(errorDocument.errorMessage) for errorDocument in self.error_documents]
         self._plot_tfidf(errors, "TF-IDF Error Messages")

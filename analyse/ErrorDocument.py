@@ -13,4 +13,7 @@ class ErrorDocument(object):
         while self.stackTrace.split('\n')[i] == '':
             i -= 1
         return self.stackTrace.split('\n')[i]
+
+    def __str__(self):
+        return "{}({}): {}\n{}".format(self.errorType,self.packageName, self.errorMessage, self.stackTrace)
   
