@@ -7,12 +7,13 @@ import pandas
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from utils import create_heatmap, tokenize
+import re 
 class ErrorAnalyser(object):
     
-    def __init__(self, files):
+    def __init__(self, files, error_documents = list()):
         self.files = files
-        self.error_documents = list()
-    
+        self.error_documents = error_documents
+
     def load(self):
         for package, file in self.files:
             if os.path.isfile(file):
@@ -21,6 +22,22 @@ class ErrorAnalyser(object):
                     errorDocument = ErrorDocument(package, errorType, errorMessage, stackTrace)
                     self.error_documents.append(errorDocument)
     
+    def filter_error_type(self, error_type):
+        error_documents = [errorDocument for errorDocument in self.error_documents if errorDocument.errorType is not None and re.match(error_type, errorDocument.errorType)]
+        return ErrorAnalyser(self.files, error_documents)   
+    
+    def filter_error_message(self, error_message):
+        error_documents = [errorDocument for errorDocument in self.error_documents if errorDocument.errorMessage is not None and re.match(error_message, errorDocument.errorMessage)]
+        return ErrorAnalyser(self.files, error_documents)
+
+    def filter_stacktrace(self, stacktrace):
+        error_documents = [errorDocument for errorDocument in self.error_documents if errorDocument.stacktrace is not None and re.match(stacktrace, errorDocument.stacktrace)]
+        return ErrorAnalyser(self.files, error_documents)
+    
+    def filtere_packages(self, packages):
+        error_documents = [errorDocument for errorDocument in self.error_documents if errorDocument.packageName in packages]
+        return ErrorAnalyser(self.files, error_documents)
+
     def plot_hist_error_types(self):
         error = [tokenize(errorDocument.errorType) for errorDocument in self.error_documents]
         error_counts = Counter(error)
