@@ -8,8 +8,8 @@ from ResultVisualizer import ResultVisualizer
 parser = argparse.ArgumentParser(description='Analyse graalpy failures')
 parser.add_argument("-gx", "--graalpy-xml", help="Name of the JunitXML-file with graalpy results", default='graalpy-test-results.xml')
 parser.add_argument("-cx", "--cpython-xml", help="Name of the JunitXML-file with cpython results", default='cpython-test-results.xml')
-parser.add_argument("-gf", "--graalpy-folder", help="Name of the folder with graalpy results")
-parser.add_argument("-cf", "--cpython-folder", help="Name of the folder with cpython results")
+parser.add_argument("-gf", "--graalpy-folder", help="Name of the folder with graalpy results", required=True)
+parser.add_argument("-cf", "--cpython-folder", help="Name of the folder with cpython results", required=True)
 
 parser.add_argument('-ft', '--filter-type', help='filter error type by regex')
 parser.add_argument('-fm', '--filter-message', help='filter error message by regex')
