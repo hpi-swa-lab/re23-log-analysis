@@ -1,10 +1,11 @@
 class ErrorDocument(object):
     
-    def __init__(self, packageName, errorType, errorMessage, stackTrace):
+    def __init__(self, name, packageName, errorType, errorMessage, stackTrace):
         self.packageName = packageName
         self.errorType = errorType
         self.errorMessage = errorMessage
         self.stackTrace = stackTrace
+        self.name = name
 
     @property
     def last_stacktrace_line(self):
@@ -15,5 +16,5 @@ class ErrorDocument(object):
         return self.stackTrace.split('\n')[i]
 
     def __str__(self):
-        return "{}({}): {}\n{}".format(self.errorType,self.packageName, self.errorMessage, self.stackTrace)
+        return "{}({} # {}): {}\n{}".format(self.errorType,self.packageName, self.name, self.errorMessage, self.stackTrace)
   

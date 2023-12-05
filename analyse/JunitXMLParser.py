@@ -33,7 +33,7 @@ class JunitXMLParser(object):
         for testsuite in self.root.findall(TESTSUITE_TAG):
             tests += int(testsuite.attrib['tests'])
         return tests
-
+    
     def get_error_stacktraces(self):
         return self._get_stacktraces(ERROR_TAG)
     
@@ -44,11 +44,12 @@ class JunitXMLParser(object):
         stacktraces = []
         for testsuite in self.root.findall(TESTSUITE_TAG):
             for testcase in testsuite.findall(TESTCASE_TAG):
+                test_name = testcase.attrib['name']
                 for failure in testcase.findall(tag):
                     message = failure.attrib.get('message', None)
                     error_type = failure.attrib.get('type', None)
                     trace = failure.text
-                    stacktraces.append((error_type, message, trace))
+                    stacktraces.append((test_name, error_type, message, trace))
         return stacktraces
 
         
