@@ -13,23 +13,27 @@ class ErrorAnalyzer(object):
     def __init__(self, data_collector: FailureDataCollector, graalpy_error_documents = None, cpython_error_documents = None):
         self.data_collector: FailureDataCollector = data_collector
         if graalpy_error_documents is None:
-            self.graalpy_error_documents = list()
-            self.load(self.data_collector.graalpy_xml_files, self.graalpy_error_documents)
+            self.graalpy_error_documents = self.load(self.data_collector.graalpy_xml_files)
         else:
             self.graalpy_error_documents = graalpy_error_documents
         if cpython_error_documents is None:
-            self.cpython_error_documents = list()
-            self.load(self.data_collector.cpython_xml_files, self.cpython_error_documents)
+            self.cpython_error_documents = self.load(self.data_collector.cpython_xml_files)
         else:
             self.cpython_error_documents = cpython_error_documents
 
-    def load(self, files, error_documents):
+    def load(self, files):
+        error_documents = list()
         for package, file in files:
             if os.path.isfile(file):
                 xml_parser = JunitXMLParser(file)
+                
+                for testName, errorType, errorMessage, stackTrace in xml_parser.get_failure_stacktraces():
+                    errorDocument = ErrorDocument(testName, package, errorType, errorMessage, stackTrace)
+                    error_documents.append(errorDocument)
                 for testName, errorType, errorMessage, stackTrace in xml_parser.get_error_stacktraces():
                     errorDocument = ErrorDocument(testName, package, errorType, errorMessage, stackTrace)
                     error_documents.append(errorDocument)
+        return error_documents
     
     def _filter(self, filter_function):
         graalpy_error_documents = [errorDocument for errorDocument in self.graalpy_error_documents if filter_function(errorDocument)]
