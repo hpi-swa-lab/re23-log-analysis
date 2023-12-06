@@ -70,6 +70,11 @@ class ErrorAnalyzer(object):
         packages = [errorDocument.packageName for errorDocument in self.error_documents]
         package_counts = Counter(packages)
         return package_counts
+
+    def count_last_lines(self):
+        last_lines = [tokenize(errorDocument.last_stacktrace_line) for errorDocument in self.error_documents]
+        last_line_counts = Counter(last_lines)
+        return last_line_counts
     
     def _calculate_similarity(self, errors):
         vectorizer = CountVectorizer()
@@ -94,6 +99,6 @@ class ErrorAnalyzer(object):
         error_documents = list()
         cpython_failures_names = [errorDocument.name for errorDocument in self.cpython_error_documents]
         for errorDocument in self.graalpy_error_documents:
-            if errorDocument.name in cpython_failures_names:
+            if errorDocument.name not in cpython_failures_names:
                 error_documents.append(errorDocument)
         return error_documents

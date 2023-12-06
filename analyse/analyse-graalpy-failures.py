@@ -19,9 +19,11 @@ parser.add_argument('-fp', '--filter-package', help='filter package by regex')
 parser.add_argument('-sht', '--show-hist-type', help='show histogram of error types', action='store_true')
 parser.add_argument('-shm', '--show-hist-message', help='show histogram of error messages', action='store_true')
 parser.add_argument('-shp', '--show-hist-package', help='show histogram of packages', action='store_true')
+parser.add_argument('-shl', '--show-hist-last-lines', help='show histogram of last stacktrace lines', action='store_true')
 
 parser.add_argument('-ptt', '--print-top-types', help='print top error types', action='store_true')
 parser.add_argument('-ptm', '--print-top-messages', help='print top error messages', action='store_true')
+parser.add_argument('-ptl', '--print-top-last-lines', help='print top last stacktrace lines', action='store_true')
 parser.add_argument('-pe', '--print-everything', help='print everything', action='store_true')
 
 parser.add_argument('--plot-tfidf-messages', help='plot tfidf of error messages', action='store_true')
@@ -52,10 +54,14 @@ if __name__ == "__main__":
         visualizer.plot_hist_error_messages()
     if args.show_hist_package:
         visualizer.plot_hist_packages()
+    if args.show_hist_last_lines:
+        visualizer.plot_hist_last_stacktrace_lines()
     if args.print_top_types:
         visualizer.print_top_error_types()
     if args.print_top_messages:
         visualizer.print_top_error_messages()
+    if args.print_top_last_lines:
+        visualizer.print_top_error_last_stacktrace_lines()
     if args.print_everything:
         visualizer.print_everything()
     if args.plot_tfidf_messages:

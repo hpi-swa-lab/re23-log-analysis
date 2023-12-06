@@ -27,6 +27,17 @@ class ResultVisualizer:
         error_counts = self.analyzer.count_error_messages()
         self._print_top_error(error_counts, top)
     
+    def plot_hist_last_stacktrace_lines(self, minimum=3):
+        error_counts = self.analyzer.count_last_lines()
+        important_error_counts = {error: count for error, count in error_counts.items() if count >= minimum}
+        df = pd.DataFrame.from_dict(important_error_counts, orient='index')
+        df.plot(subplots=True, kind='bar', title="Last lines")
+    
+    def print_top_error_last_stacktrace_lines(self, top=10):
+        print("--- TOP {} LAST LINES ---".format(top))
+        error_counts = self.analyzer.count_last_lines()
+        self._print_top_error(error_counts, top)
+    
     def plot_hist_packages(self):
         package_counts = self.analyzer.count_packages()
         df = pd.DataFrame.from_dict(package_counts, orient='index')
