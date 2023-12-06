@@ -16,9 +16,10 @@ class ResultVisualizer:
         error_counts = self.analyzer.count_error_types()
         self._print_top_error(error_counts, top)
     
-    def plot_hist_error_messages(self):
+    def plot_hist_error_messages(self, minimum=3):
         error_counts = self.analyzer.count_error_messages()
-        df = pd.DataFrame.from_dict(error_counts, orient='index')
+        important_error_counts = {error: count for error, count in error_counts.items() if count >= minimum}
+        df = pd.DataFrame.from_dict(important_error_counts, orient='index')
         df.plot(subplots=True, kind='bar', title="Error messages")
     
     def print_top_error_messages(self, top=10):
