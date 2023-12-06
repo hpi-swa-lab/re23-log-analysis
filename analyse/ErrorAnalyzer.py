@@ -45,7 +45,7 @@ class ErrorAnalyzer(object):
         return self._filter(filter_function)
 
     def filter_stacktrace(self, stacktrace):
-        filter_function = lambda errorDocument: errorDocument.stacktrace is not None and re.search(stacktrace, errorDocument.stacktrace) is not None
+        filter_function = lambda errorDocument: errorDocument.stackTrace is not None and re.search(stacktrace, errorDocument.stackTrace) is not None
         return self._filter(filter_function)
     
     def filter_packages(self, packages):
