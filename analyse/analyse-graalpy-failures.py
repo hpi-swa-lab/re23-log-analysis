@@ -16,6 +16,7 @@ parser.add_argument('-fm', '--filter-message', help='filter error message by reg
 parser.add_argument('-fs', '--filter-stacktrace', help='filter stacktrace by regex')
 parser.add_argument('-fp', '--filter-package', help='filter package by regex')
 
+parser.add_argument('-sh', '--show-hist', help='show histogram of error types, message, package and last stacktrace line', action='store_true')
 parser.add_argument('-sht', '--show-hist-type', help='show histogram of error types', action='store_true')
 parser.add_argument('-shm', '--show-hist-message', help='show histogram of error messages', action='store_true')
 parser.add_argument('-shp', '--show-hist-package', help='show histogram of packages', action='store_true')
@@ -48,13 +49,13 @@ if __name__ == "__main__":
         analyzer = analyzer.filter_packages(args.filter_package)
 
     visualizer = ResultVisualizer(analyzer)
-    if args.show_hist_type:
+    if args.show_hist_type or args.show_hist:
         visualizer.plot_hist_error_types()
-    if args.show_hist_message:
+    if args.show_hist_message or args.show_hist:
         visualizer.plot_hist_error_messages()
-    if args.show_hist_package:
+    if args.show_hist_package or args.show_hist:
         visualizer.plot_hist_packages()
-    if args.show_hist_last_lines:
+    if args.show_hist_last_lines or args.show_hist:
         visualizer.plot_hist_last_stacktrace_lines()
     if args.print_top_types:
         visualizer.print_top_error_types()
