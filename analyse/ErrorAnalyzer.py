@@ -41,19 +41,19 @@ class ErrorAnalyzer(object):
         return ErrorAnalyzer(self.data_collector, graalpy_error_documents, cpython_error_documents)
     
     def filter_error_type(self, error_type):
-        filter_function = lambda errorDocument: errorDocument.errorType is not None and re.search(error_type, errorDocument.errorType) is not None
+        filter_function = lambda errorDocument: errorDocument.errorType is not None and re.search(error_type, errorDocument.errorType, re.IGNORECASE) is not None
         return self._filter(filter_function)
     
     def filter_error_message(self, error_message):
-        filter_function = lambda errorDocument: errorDocument.errorMessage is not None and re.search(error_message, errorDocument.errorMessage) is not None
+        filter_function = lambda errorDocument: errorDocument.errorMessage is not None and re.search(error_message, errorDocument.errorMessage, re.IGNORECASE) is not None
         return self._filter(filter_function)
 
     def filter_stacktrace(self, stacktrace):
-        filter_function = lambda errorDocument: errorDocument.stackTrace is not None and re.search(stacktrace, errorDocument.stackTrace) is not None
+        filter_function = lambda errorDocument: errorDocument.stackTrace is not None and re.search(stacktrace, errorDocument.stackTrace, re.IGNORECASE) is not None
         return self._filter(filter_function)
     
-    def filter_packages(self, packages):
-        filter_function = lambda errorDocument: errorDocument.packageName in packages
+    def filter_packages(self, package):
+        filter_function = lambda errorDocument: errorDocument.packageName is not None and re.search(package, errorDocument.packageName, re.IGNORECASE) is not None
         return self._filter(filter_function)
 
     def count_error_types(self):
