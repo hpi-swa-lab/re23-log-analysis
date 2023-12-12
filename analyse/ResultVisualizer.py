@@ -6,6 +6,12 @@ class ResultVisualizer:
     def __init__(self, analyzer: ErrorAnalyzer):
         self.analyzer: ErrorAnalyzer = analyzer
 
+    def print_general_information(self):
+        graalpy_error_count, both_error_count, cpython_error_count = self.analyzer.general_information()
+        print("Graalpy error count: {}".format(graalpy_error_count))
+        print("Both error count: {}".format(both_error_count))
+        print("Cpython error count: {}".format(cpython_error_count))
+
     def plot_hist_error_types(self):
         error_counts = self.analyzer.count_error_types()
         df = pd.DataFrame.from_dict(error_counts, orient='index')

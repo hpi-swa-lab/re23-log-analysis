@@ -11,6 +11,8 @@ parser.add_argument("-cx", "--cpython-xml", help="Name of the JunitXML-file with
 parser.add_argument("-gf", "--graalpy-folder", help="Name of the folder with graalpy results", required=True)
 parser.add_argument("-cf", "--cpython-folder", help="Name of the folder with cpython results", required=True)
 
+parser.add_argument('-p', '--print-general-information', help='print general information about the test results', action='store_true')
+
 parser.add_argument('-ft', '--filter-type', help='filter error type by regex')
 parser.add_argument('-fm', '--filter-message', help='filter error message by regex')
 parser.add_argument('-fs', '--filter-stacktrace', help='filter stacktrace by regex')
@@ -78,6 +80,8 @@ if __name__ == "__main__":
         visualizer.plot_hist_last_stacktrace_lines()
 
     visualizer = ResultVisualizer(root_analyzer)
+    if args.print_general_information:
+        visualizer.print_general_information()
     if args.print_top_types:
         visualizer.print_top_error_types()
     if args.print_top_messages:

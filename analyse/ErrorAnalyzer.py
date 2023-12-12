@@ -34,6 +34,13 @@ class ErrorAnalyzer(object):
                     errorDocument = ErrorDocument(testName, package, errorType, errorMessage, stackTrace)
                     error_documents.append(errorDocument)
         return error_documents
+
+    def general_information(self):
+        graalpy_error_count = len(self.error_documents)
+        # Count the number of cpython errors that are also in the graalpy errors
+        both_error_count = len([errorDocument for errorDocument in self.cpython_error_documents if errorDocument.name in [errorDocument.name for errorDocument in self.cpython_error_documents]])
+        cpython_error_count = len(self.cpython_error_documents) - both_error_count
+        return (graalpy_error_count, both_error_count, cpython_error_count)
     
     def _filter(self, filter_function):
         graalpy_error_documents = [errorDocument for errorDocument in self.graalpy_error_documents if filter_function(errorDocument)]
