@@ -136,6 +136,6 @@ class ErrorAnalyzer(object):
         error_documents = list()
         cpython_failures_names = [errorDocument.name for errorDocument in self.cpython_error_documents]
         for errorDocument in self.graalpy_error_documents:
-            if errorDocument.name not in cpython_failures_names:
+            if errorDocument.name is None or errorDocument.name == "" or errorDocument.name not in cpython_failures_names:
                 error_documents.append(errorDocument)
         return error_documents
