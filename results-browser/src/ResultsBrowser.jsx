@@ -2,19 +2,37 @@ import React, { useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
 import "./ResultsBrowser.css";
 import { getFileStatistics, getPlainFiles } from "./resultsUtil";
+import FileViewer from "./FileViewer";
 
 const ResultsBrowser = () => {
-  const [resultData, setResultData] = useState([]);
+  const [resultsIndexData, setResultsIndexData] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(undefined);
+  const [selectedFileContent, setSelectedFileContent] = useState(undefined);
 
   useEffect(() => {
-    fetch("results_index.json")
+    fetch("results/results_index.json")
       .then(response => response.json())
-      .then(data => setResultData(data))
+      .then(data => setResultsIndexData(data))
       .catch(error => console.error(error.message))
   }, []);
 
-  const { plainFiles, totalCount } = useMemo(() => getPlainFiles(resultData), [resultData]);
+  useEffect( () => {
+    if (!selectedFile) return;
+    fetch(`results/${selectedFile.key}`)
+      .then(response => response.text())
+      .then(data => {
+        setSelectedFileContent(data);
+      })
+      .catch(error => console.error(error.message));
+  }, [selectedFile]);
+
+  const { plainFiles, totalCount } = useMemo(() => getPlainFiles(resultsIndexData), [resultsIndexData]);
   const fileCounts = useMemo(() => getFileStatistics(plainFiles), [plainFiles]);
+
+  const selectNewFile = (file) => {
+    setSelectedFileContent(undefined);
+    setSelectedFile(file);
+  };
 
   return (
     <div className="results-browser">
@@ -33,9 +51,12 @@ const ResultsBrowser = () => {
       </table>
       <FileBrowser
         files={ plainFiles }
+        onSelectFile={ selectNewFile }
         canFilter
         showFoldersOnFilter
+        detailRenderer={ () => null }
       />
+      { selectedFile && selectedFileContent && <FileViewer file={ { ...selectedFile, content: selectedFileContent } } /> }
     </div>
   );
 }

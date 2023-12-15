@@ -23,7 +23,7 @@ You can find the code inside the [results-browser](./results-browser) directory.
 
 ### Setup
 To make the application aware of the result files, you will need to execute the [`results_index.sh`](./results/results_index.sh) script inside the [results](./results) directory.
-It will output a `results_index.json` file which you need to copy into the [results-browser/public](./results-browser/public) directory.
+Afterwards, please copy all contents of the [results](./results) directory inside the `results-browser/public/results` directory.
 
 ### Startup
 Execute `npm start` inside the [results-browser](./results-browser) directory to start the application.
