@@ -95,7 +95,7 @@ const ResultsBrowser = () => {
           detailRenderer={ () => null }
         />
       </div>
-      { selectedFile && filesWithContent && <FileViewer file={ selectedFile } /> }
+      { selectedFile && filesWithContent && <FileViewer file={ selectedFile } searchString={ filterRegexInput } /> }
     </div>
   );
 }
