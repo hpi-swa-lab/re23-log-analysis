@@ -8,7 +8,7 @@ const FileViewer = ({ file }) => {
   const fileInfo = <b>{ file.key }</b>
 
   const fileContentView = useMemo(() => {
-    const fileEnding = file.key.split(".")[1];
+    const fileEnding = file.key.split(".").pop();
     switch (fileEnding) {
       case "json":
         return <JsonView data={ JSON.parse(file.content) } style={ defaultStyles } />
