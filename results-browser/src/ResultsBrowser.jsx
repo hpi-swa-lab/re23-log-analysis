@@ -42,9 +42,15 @@ const ResultsBrowser = () => {
   // Filter files
   const filteredFiles = useMemo(() => {
     if (!filterRegexInput) return filesWithContent;
-    const filterRegex = new RegExp(filterRegexInput.toString());
-    const regexPredicate = filesWithContent => filesWithContent.content.match(filterRegex);
-    return filesWithContent.filter(regexPredicate)
+    try {
+      const filterRegex = new RegExp(filterRegexInput.toString());
+      const regexPredicate = filesWithContent => filesWithContent.content.match(filterRegex);
+      return filesWithContent.filter(regexPredicate);
+    } catch (e) {
+      // Regexp not parseable --> just try with includes as fallback
+      const includesPredicate = filesWithContent => filesWithContent.content.includes(filterRegexInput);
+      return filesWithContent.filter(includesPredicate);
+    }
   }, [filesWithContent, filterRegexInput]);
 
   const filterFiles = (event) => {
