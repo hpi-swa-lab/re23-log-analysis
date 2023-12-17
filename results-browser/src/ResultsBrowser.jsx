@@ -10,6 +10,8 @@ const ResultsBrowser = () => {
   const [selectedFile, setSelectedFile] = useState(undefined);
   const [filesWithContent, setFilesWithContent] = useState([]);
   const [filterRegexInput, setFilterRegexInput] = useState(undefined);
+  const [includeCPython, setIncludeCPython] = useState(true);
+  const [includeGraalPy, setIncludeGraalPy] = useState(true);
 
   useEffect(() => {
     // Load index of result files
@@ -41,24 +43,46 @@ const ResultsBrowser = () => {
 
   // Filter files
   const filteredFiles = useMemo(() => {
-    if (!filterRegexInput) return filesWithContent;
+    // First filter based on whether cpython/graalpy should be included
+    let filesToInclude = filesWithContent;
+    if (!includeCPython) {
+      filesToInclude = filesToInclude.filter(file => !file.key.includes("cpython"));
+    }
+    if (!includeGraalPy) {
+      filesToInclude = filesToInclude.filter(file => !file.key.includes("graalpy"));
+    }
+
+    // Then filter based on the filter input
+    if (!filterRegexInput) return filesToInclude;
     try {
       const filterRegex = new RegExp(filterRegexInput.toString());
       const regexPredicate = filesWithContent => filesWithContent.content.match(filterRegex);
-      return filesWithContent.filter(regexPredicate);
+      return filesToInclude.filter(regexPredicate);
     } catch (e) {
       // Regexp not parseable --> just try with includes as fallback
       const includesPredicate = filesWithContent => filesWithContent.content.includes(filterRegexInput);
-      return filesWithContent.filter(includesPredicate);
+      return filesToInclude.filter(includesPredicate);
     }
-  }, [filesWithContent, filterRegexInput]);
+  }, [filesWithContent, filterRegexInput, includeCPython, includeGraalPy]);
 
   const filterFiles = (event) => {
     setSelectedFile(undefined);
     setFilterRegexInput(event.target.value);
   };
 
-  const fileCounts = useMemo(() => getFileStatistics(filteredFiles), [filteredFiles]);
+  const toggleIncludeCPython = (_) => {
+    setSelectedFile(undefined);
+    setIncludeCPython((prevState) => !prevState);
+  };
+
+  const toggleIncludeGraalPy = (_) => {
+    setSelectedFile(undefined);
+    setIncludeGraalPy((prevState) => !prevState);
+  };
+
+  const fileCounts = useMemo(
+    () => getFileStatistics(filteredFiles, includeCPython, includeGraalPy)
+  , [filteredFiles, includeCPython, includeGraalPy]);
 
   const selectNewFile = (file) => {
     const fileWithContent = filesWithContent.find(fileWithContent => fileWithContent.key === file.key);
@@ -81,12 +105,28 @@ const ResultsBrowser = () => {
           }
         </tbody>
       </table>
-      <div className="fileBrowserWithFilter">
-        <input
-          type="text"
-          placeholder="Filter files based on Regex"
-          onChange={ filterFiles }
-        />
+      <div className="file-browser-with-filter">
+        <div className="filters">
+          <input
+            type="text"
+            placeholder="Filter files based on Regex"
+            onChange={ filterFiles }
+          />
+          <input
+            type="checkbox"
+            name="includeCPython"
+            checked={ includeCPython }
+            onChange={ toggleIncludeCPython }
+          />
+          <label htmlFor="includeCPython">Show CPython files</label>
+          <input
+            type="checkbox"
+            name="includeGraalPy"
+            checked={ includeGraalPy }
+            onChange={ toggleIncludeGraalPy }
+          />
+          <label htmlFor="includeGraalPy">Show GraalPy files</label>
+        </div>
         <FileBrowser
           files={ filteredFiles }
           onSelectFile={ selectNewFile }

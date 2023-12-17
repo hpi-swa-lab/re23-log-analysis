@@ -44,7 +44,7 @@ const FileViewer = ({ file, searchString }) => {
   }, [file, searchString]);
 
   return (
-    <div className="fileViewer">
+    <div className="file-viewer">
       { fileInfo }
       <div className="fileContent">
         { fileContentView }
