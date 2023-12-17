@@ -38,7 +38,7 @@ const ResultsBrowser = () => {
     ).then(resultFiles => {
       setLoading(false);
       setFilesWithContent(resultFiles);
-    });
+    }).catch(error => console.error(error));
   }, [flattenedFiles]);
 
   // Filter files
