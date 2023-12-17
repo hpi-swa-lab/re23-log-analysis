@@ -14,10 +14,8 @@ const FileViewer = ({ file, searchString }) => {
         return <JsonView data={ JSON.parse(file.content) } style={ defaultStyles } />
       case "xml":
         return <XMLViewer xml={ file.content } />
-      case "log":
-        return <div className="logView">{ file.content }</div>
       default:
-        return null;
+        return <div className="log-view">{ file.content }</div>;
     }
 
   }, [file]);
@@ -28,7 +26,7 @@ const FileViewer = ({ file, searchString }) => {
 
     // https://stackoverflow.com/a/69711130
     const windowFind = () => {
-      const wrapper = document.getElementsByClassName("fileContent")[0];
+      const wrapper = document.getElementsByClassName("file-content")[0];
       if (window.find(searchString, true) ) {
         const s = window.getSelection();
         const oRange = s.getRangeAt(0);
@@ -46,7 +44,7 @@ const FileViewer = ({ file, searchString }) => {
   return (
     <div className="file-viewer">
       { fileInfo }
-      <div className="fileContent">
+      <div className="file-content">
         { fileContentView }
       </div>
     </div>
