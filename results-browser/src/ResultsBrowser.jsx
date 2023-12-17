@@ -28,14 +28,17 @@ const ResultsBrowser = () => {
   useEffect(() => {
     if (flattenedFiles.length === 0) return [];
 
-    Promise.all(
-      flattenedFiles.map(async file => {
-        console.log(`Loading ${file.key}`);
-        const response = await fetch(`results/${file.key}`)
+    const getFilesWithContents = async () => {
+      const results = [];
+      for (const file of flattenedFiles) {
+        const response = await fetch(`results/${file.key}`);
         const textContent = await response.text();
-        return { ...file, content: textContent };
-      })
-    ).then(resultFiles => {
+        results.push({ ...file, content: textContent });
+      }
+      return results;
+    };
+
+    getFilesWithContents().then(resultFiles => {
       setLoading(false);
       setFilesWithContent(resultFiles);
     }).catch(error => console.error(error));
