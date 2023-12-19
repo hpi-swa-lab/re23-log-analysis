@@ -1,0 +1,47 @@
+@import "../node_modules/react-keyed-file-browser/dist/react-keyed-file-browser.css";
+
+.results-browser {
+    padding: 12px;
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: max-content;
+    align-items: start;
+    overflow: hidden;
+    max-height: 95vh;
+}
+
+.file-statistics {
+    grid-column: 1;
+}
+
+.file-browser-with-filter {
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+.file-viewer {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.files {
+    max-height: calc(50vh - 25px);
+    overflow: auto;
+}
+
+.action-bar {
+    display: none !important;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    margin-right: 6px;
+}
+
+label {
+    padding: 0 6px;
+}

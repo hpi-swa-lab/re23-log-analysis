@@ -16,3 +16,15 @@ It should create the docker image as well as execute the tests based on the loca
 Therefore, it uses the [`library_tester.py`](./tests/library_tester.py) script.
 
 During the testing process, result files are dumped in the [results](./results) directory.
+
+## Result Browsing
+In order to browse through the result files we implemented a lightweight React application.
+You can find the code inside the [results-browser](./results-browser) directory.
+
+### Setup
+To make the application aware of the result files, you will need to execute the [`results_index.sh`](./results/results_index.sh) script inside the [results](./results) directory.
+Afterwards, please copy all contents of the [results](./results) directory inside the `results-browser/public/results` directory.
+
+### Startup
+Execute `npm start` inside the [results-browser](./results-browser) directory to start the application.
+On [localhost:3000](http://localhost:3000) you can now browse through the files.
