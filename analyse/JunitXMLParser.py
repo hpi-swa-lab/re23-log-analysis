@@ -44,7 +44,9 @@ class JunitXMLParser(object):
         stacktraces = []
         for testsuite in self.root.findall(TESTSUITE_TAG):
             for testcase in testsuite.findall(TESTCASE_TAG):
-                test_name = testcase.attrib['name']
+                class_name = testcase.attrib.get('classname', "UNKNOWN") 
+                name = testcase.attrib.get('name', "UNKNOWN")
+                test_name = class_name + '.' + name
                 for failure in testcase.findall(tag):
                     message = failure.attrib.get('message', None)
                     error_type = failure.attrib.get('type', None)
