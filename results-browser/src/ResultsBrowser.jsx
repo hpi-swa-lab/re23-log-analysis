@@ -3,6 +3,7 @@ import FileBrowser from "react-keyed-file-browser";
 import "./ResultsBrowser.css";
 import { getFileStatistics, getFlattenedFiles } from "./resultsUtil";
 import FileViewer from "./FileViewer";
+import FileStatistics from "./FileStatistics";
 
 const ResultsBrowser = () => {
   const [loading, setLoading] = useState(true);
@@ -83,7 +84,7 @@ const ResultsBrowser = () => {
     setIncludeGraalPy((prevState) => !prevState);
   };
 
-  const fileCounts = useMemo(
+  const fileStatistics = useMemo(
     () => getFileStatistics(filteredFiles, includeCPython, includeGraalPy)
   , [filteredFiles, includeCPython, includeGraalPy]);
 
@@ -96,18 +97,7 @@ const ResultsBrowser = () => {
 
   return (
     <div className="results-browser">
-      <table className="results-statistics">
-        <thead>
-          <tr><th>Subject</th><th>Count</th></tr>
-        </thead>
-        <tbody>
-          {
-            Object.entries(fileCounts).map(([file, count]) => (
-              <tr key={ file }><td>{ file }</td><td>{ count }</td></tr>
-            ))
-          }
-        </tbody>
-      </table>
+      <FileStatistics fileStatistics={ fileStatistics } />
       <div className="file-browser-with-filter">
         <div className="filters">
           <input
