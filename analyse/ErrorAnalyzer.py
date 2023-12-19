@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from utils import tokenize
 import re 
 from FailureDataCollector import FailureDataCollector
-
+from tqdm import tqdm
 class ErrorAnalyzer(object):
     
     def __init__(self, data_collector: FailureDataCollector, graalpy_error_documents = None, cpython_error_documents = None):
@@ -23,10 +23,9 @@ class ErrorAnalyzer(object):
 
     def load(self, files):
         error_documents = list()
-        for package, file in files:
+        for package, file in tqdm(files):
             if os.path.isfile(file):
                 xml_parser = JunitXMLParser(file)
-                
                 for testName, errorType, errorMessage, stackTrace in xml_parser.get_failure_stacktraces():
                     errorDocument = ErrorDocument(testName, package, errorType, errorMessage, stackTrace)
                     error_documents.append(errorDocument)
