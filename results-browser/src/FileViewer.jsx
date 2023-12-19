@@ -22,11 +22,15 @@ const FileViewer = ({ file, searchString }) => {
 
   // Scroll to first appearance of search string in content (not regex compatible)
   useEffect(() => {
-    if (!searchString) return;
+    const wrapper = document.getElementsByClassName("file-content")[0];
+    if (!searchString) {
+      // If no search string was given, just scroll back to the top.
+      wrapper.scrollTo({ top: 0 });
+      return;
+    }
 
     // https://stackoverflow.com/a/69711130
     const windowFind = () => {
-      const wrapper = document.getElementsByClassName("file-content")[0];
       if (window.find(searchString, true) ) {
         const s = window.getSelection();
         const oRange = s.getRangeAt(0);
