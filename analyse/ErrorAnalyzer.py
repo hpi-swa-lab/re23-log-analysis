@@ -26,6 +26,7 @@ class ErrorAnalyzer(object):
         for package, file in tqdm(files):
             if os.path.isfile(file):
                 xml_parser = JunitXMLParser(file)
+                
                 for testName, errorType, errorMessage, stackTrace in xml_parser.get_failure_stacktraces():
                     errorDocument = ErrorDocument(testName, package, errorType, errorMessage, stackTrace)
                     error_documents.append(errorDocument)
@@ -89,7 +90,7 @@ class ErrorAnalyzer(object):
     
     def group_packages(self, package):
         grouping_function = lambda errorDocument: errorDocument.last_stacktrace_line is not None and re.search(package, errorDocument.package, re.IGNORECASE) is not None
-        return self._group(grouping_function, "package", package)
+        return self._group(grouping_function, "packageName", package)
 
     def _count(agg, curr):
         error, value = curr
@@ -110,7 +111,7 @@ class ErrorAnalyzer(object):
         return error_counts
     
     def count_packages(self):
-        packages = [(tokenize(errorDocument.package), errorDocument.value) for errorDocument in self.error_documents]
+        packages = [(tokenize(errorDocument.packageName), errorDocument.value) for errorDocument in self.error_documents]
         packages_counts = reduce(ErrorAnalyzer._count, packages, dict())
         return packages_counts
 
