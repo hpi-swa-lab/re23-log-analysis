@@ -1,13 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
 import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
+import { LinearProgress } from "@mui/material";
 import "./ResultsBrowser.css";
 import { getFileStatistics, getFlattenedFiles } from "./resultsUtil";
 import FileViewer from "./FileViewer";
 import FileStatistics from "./FileStatistics";
 
 const ResultsBrowser = () => {
-  const [loading, setLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
   const [resultsIndexData, setResultsIndexData] = useState([]);
   const [selectedFile, setSelectedFile] = useState(undefined);
   const [filesWithContent, setFilesWithContent] = useState([]);
@@ -32,16 +33,17 @@ const ResultsBrowser = () => {
 
     const getFilesWithContents = async () => {
       const results = [];
-      for (const file of flattenedFiles) {
+      for (const [index, file] of flattenedFiles.entries()) {
         const response = await fetch(`results/${file.key}`);
         const textContent = await response.text();
         results.push({ ...file, content: textContent });
+        setLoadingProgress((index + 1) / flattenedFiles.length * 100);
       }
       return results;
     };
 
     getFilesWithContents().then(resultFiles => {
-      setLoading(false);
+      setLoadingProgress(undefined);
       setFilesWithContent(resultFiles);
     }).catch(error => console.error(error));
   }, [flattenedFiles]);
@@ -94,7 +96,16 @@ const ResultsBrowser = () => {
     setSelectedFile(fileWithContent);
   };
 
-  if (loading) return "Loading files...";
+  if (loadingProgress) {
+    return (
+      <div className="loading">
+        <div>
+          <LinearProgress variant="determinate" value={ loadingProgress } />
+        </div>
+        { Math.round(loadingProgress) }%
+      </div>
+    );
+  }
 
   return (
     <div className="results-browser">
