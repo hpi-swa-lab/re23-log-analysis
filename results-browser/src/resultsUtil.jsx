@@ -100,3 +100,16 @@ export const filterResultFiles = (filesWithContent, filterRegexInput, includeCPy
   });
   return results;
 };
+
+export const getFurtherInspectionMessage = (filteredFiles, selectedFile) => {
+  // If for the package of the selected file there also is a "graalpy-tmp" directory that contains tmp test files,
+  // we should display a message that graalpy error can be further inspected through the files in this directory.
+  let message;
+  const packageOfSelectedFile = selectedFile.key.split("/")[0];
+  const selectedFileIsGraalPy = selectedFile.key.includes("graalpy");
+  const graalPyTmpAvailable = filteredFiles.find(filteredFile => filteredFile.key.startsWith(`${packageOfSelectedFile}/graalpy-tmp`));
+  if (selectedFileIsGraalPy && graalPyTmpAvailable) {
+    message = `Further GraalPy error inspection possible - check out the "graalpy-tmp" directory for package ${packageOfSelectedFile}.`;
+  }
+  return message;
+};

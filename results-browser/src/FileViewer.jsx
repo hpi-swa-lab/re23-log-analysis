@@ -4,10 +4,20 @@ import { JsonView, defaultStyles } from "react-json-view-lite";
 import "react-json-view-lite/dist/index.css";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { vs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Alert from "@mui/material/Alert";
 import "./FileViewer.css";
 
-const FileViewer = ({ file, searchString }) => {
+const FileViewer = ({ file, searchString, furtherInspectionMessage }) => {
   const fileInfo = <b>{ file.key }</b>
+
+  const furtherInspectionInfo = useMemo(() => {
+    if (!furtherInspectionMessage) return null;
+    return (
+      <Alert severity="info">
+        { furtherInspectionMessage }
+      </Alert>
+    );
+  }, [furtherInspectionMessage]);
 
   const fileContentView = useMemo(() => {
     const fileEnding = file.key.split(".").pop();
@@ -54,6 +64,7 @@ const FileViewer = ({ file, searchString }) => {
 
   return (
     <div className="file-viewer">
+      { furtherInspectionInfo }
       { fileInfo }
       <div className="file-content">
         { fileContentView }

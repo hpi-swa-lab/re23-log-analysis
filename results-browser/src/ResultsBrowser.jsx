@@ -3,7 +3,7 @@ import FileBrowser from "react-keyed-file-browser";
 import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
 import { LinearProgress } from "@mui/material";
 import "./ResultsBrowser.css";
-import { filterResultFiles, getFileStatistics, getFlattenedFiles } from "./resultsUtil";
+import { filterResultFiles, getFileStatistics, getFlattenedFiles, getFurtherInspectionMessage } from "./resultsUtil";
 import FileViewer from "./FileViewer";
 import FileStatistics from "./FileStatistics";
 
@@ -128,7 +128,14 @@ const ResultsBrowser = () => {
           }}
         />
       </div>
-      { selectedFile && filesWithContent && <FileViewer file={ selectedFile } searchString={ filterRegexInput } /> }
+      {
+        selectedFile && filteredFiles &&
+          <FileViewer
+            file={ selectedFile }
+            searchString={ filterRegexInput }
+            furtherInspectionMessage={ getFurtherInspectionMessage(filteredFiles, selectedFile) }
+          />
+      }
     </div>
   );
 }
