@@ -2,6 +2,8 @@ import React, { useEffect, useMemo } from "react";
 import XMLViewer from "react-xml-viewer";
 import { JsonView, defaultStyles } from "react-json-view-lite";
 import "react-json-view-lite/dist/index.css";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { vs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import "./FileViewer.css";
 
 const FileViewer = ({ file, searchString }) => {
@@ -14,10 +16,15 @@ const FileViewer = ({ file, searchString }) => {
         return <JsonView data={ JSON.parse(file.content) } style={ defaultStyles } />
       case "xml":
         return <XMLViewer xml={ file.content } />
+      case "py":
+        return (
+          <SyntaxHighlighter language="python" style={ vs } showLineNumbers wrapLongLines>
+            { file.content }
+          </SyntaxHighlighter>
+        );
       default:
         return <div className="log-view">{ file.content }</div>;
     }
-
   }, [file]);
 
   // Scroll to first appearance of search string in content (not regex compatible)
