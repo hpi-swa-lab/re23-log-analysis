@@ -1,20 +1,24 @@
 import Moment from "moment";
 
+const _getFlattenedFiles = (contents) => {
+  if (!contents) return [];
+  // Recursively flatmap files of each directory
+  return contents.flatMap(content => {
+    if (content.type === "directory") {
+      return _getFlattenedFiles(content.contents);
+    }
+    return [{
+      key: content.name.substring((2)), // Cut the first "./" from the file name
+      modified: +Moment(content.time),
+      size: content.size,
+    }];
+  });
+}
+
 export const getFlattenedFiles = (resultData) => {
   if (resultData.length === 0) return [];
-
   // First directory is "." (the results dir)
-  const resultsDirectories = resultData[0].contents;
-  return resultsDirectories.flatMap(dir => {
-    if (!dir.contents) return [];
-
-    // Flatmap files of each directory
-    return dir.contents.map(file => ({
-      key: file.name.substring((2)), // Cut "./" from the file name
-      modified: +Moment(file.time),
-      size: file.size,
-    }));
-  });
+  return _getFlattenedFiles(resultData[0].contents);
 };
 
 export const getFileStatistics = (flattenedFiles, includeCPython = true, includeGraalPy = true) => {
