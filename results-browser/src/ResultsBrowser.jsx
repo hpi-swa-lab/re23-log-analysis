@@ -78,7 +78,7 @@ const ResultsBrowser = () => {
     setSelectedFile(fileWithContent);
   };
 
-  if (loadingProgress) {
+  if (loadingProgress !== undefined) {
     return (
       <div className="loading">
         <div>
