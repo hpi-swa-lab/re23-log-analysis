@@ -342,7 +342,7 @@ class Tester:
             ''') + '\n')
         cmd = ['tox', '-c', f'{interpreter}-tox.ini', '-e', testenv]
         print(f"Running command: {shlex.join(cmd)}")
-        result = TestResult(name=f'{interpreter}-test', log_path=log_path, reference_impl=interpreter.reference_impl)
+        result = TestResult(name=f'{interpreter}-test', log_path=log_path, test_env_name=testenv, reference_impl=interpreter.reference_impl)
         try:
             returncode = run_command(
                 cmd,
@@ -510,6 +510,11 @@ def main():
                             failed=graalpy_test_result.counts.failed + unexecuted_tests,
                             unknown=graalpy_test_result.counts.unknown,
                         )
+                    if graalpy_test_result.counts.failed > 0 or graalpy_test_result.counts.unknown > 0:
+                        # If sth. went wrong with GraalPy testing, also dump the tox-related test files for later inspection.
+                        test_dir = work_dir / f'{name}-{version}' / ".tox" / graalpy_test_result.test_env_name
+                        inspection_dir = results_dir / "graalpy-tmp"
+                        shutil.copytree(test_dir, inspection_dir)
     except TestError as e:
         print(e)
         # Just submit the current results

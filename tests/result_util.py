@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass, KW_ONLY
+from typing import Optional
 from datetime import timedelta
 from os import PathLike
 
@@ -44,6 +45,7 @@ class TestResultCounts:
 class TestResult:
     name: str
     log_path: PathLike | str
+    test_env_name: Optional[str] = None
     counts: TestResultCounts | None = None
     test_duration: timedelta | None = None
     installs: bool | None = None

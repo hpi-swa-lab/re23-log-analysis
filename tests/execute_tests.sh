@@ -28,7 +28,7 @@ for tarball in /opt/repos/sources_mirror/*.tar.xz; do
   "${CPYTHON_PATH}" /opt/tests/library_tester.py -n "${name}" -v "${version}" -t 1 -l "${result_file}"
 
   # Step 3: dump additional files created while testing
-  cp ${WORK_DIR}/results/${name}/${version}/1/* /tmp/results/${name}
+  cp -rf ${WORK_DIR}/results/${name}/${version}/1/* /tmp/results/${name}
 
   # Step 4: move tarball to processed sources (so it does not get processed again after restarting)
   mv "${tarball}" /opt/repos/processed_sources
