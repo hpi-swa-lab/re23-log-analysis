@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
+import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
 import "./ResultsBrowser.css";
 import { getFileStatistics, getFlattenedFiles } from "./resultsUtil";
 import FileViewer from "./FileViewer";
@@ -124,8 +125,14 @@ const ResultsBrowser = () => {
           files={ filteredFiles }
           onSelectFile={ selectNewFile }
           canFilter={ false } // disable file browsers own filters
+          showActionBar={ false }
           noFilesMessage="No files available or matching"
           detailRenderer={ () => null }
+          icons={{
+            File: <InsertDriveFileOutlined />,
+            Folder: <FolderOutlined />,
+            FolderOpen: <FolderOpen />,
+          }}
         />
       </div>
       { selectedFile && filesWithContent && <FileViewer file={ selectedFile } searchString={ filterRegexInput } /> }
