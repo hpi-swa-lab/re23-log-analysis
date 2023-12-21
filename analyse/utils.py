@@ -13,6 +13,6 @@ def create_heatmap(similarity, labels, title, cmap = "YlGnBu"):
 
 def tokenize(text: str):
   if text is None:
-    return text
+    return str(text)
   #return ''.join([i if ord(i) < 128 else ' ' for i in text])
   return re.sub('[^0-9a-zA-Z]+', ' ', text).lower().strip()
