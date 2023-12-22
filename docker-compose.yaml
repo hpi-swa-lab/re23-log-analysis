@@ -10,6 +10,6 @@ services:
     volumes:
       - ./repos:/opt/repos
       - ./tests:/opt/tests
-      - ./results:/tmp/results
+      - ./results-browser/public/results:/tmp/results
     # Execute the tests when the container is running
     entrypoint: sh -c "/opt/tests/execute_tests.sh"
