@@ -188,7 +188,6 @@ def filter_package(
 
     all_error_documents = analyzer.error_documents
     all_error_documents.sort(key=lambda _: _.packageName.lower())
-    print([_.packageName for _ in all_error_documents])
     error_components = [
         build_error_component(error) for error in all_error_documents[:loaded_documents]
     ]
