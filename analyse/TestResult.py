@@ -4,8 +4,12 @@ class TestResult(object):
         self.errors = errors
         self.failures = failures
         self.skipped = skipped
-        self.tests = tests  
-    
+        self.tests = tests
+
     @property
-    def passed (self):
-        return self.tests - self.skipped - self.failures - self.errors if self.wasExecuted else -1
+    def passed(self):
+        return (
+            self.tests - self.skipped - self.failures - self.errors
+            if self.wasExecuted
+            else -1
+        )
