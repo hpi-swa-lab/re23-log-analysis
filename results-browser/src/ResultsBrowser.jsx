@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
 import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
-import { LinearProgress } from "@mui/material";
+import { Alert, LinearProgress } from "@mui/material";
 import "./ResultsBrowser.css";
 import { filterResultFiles, getFileStatistics, getFlattenedFiles, getFurtherInspectionMessage } from "./resultsUtil";
 import FileViewer from "./FileViewer";
 import FileStatistics from "./FileStatistics";
 
 const ResultsBrowser = () => {
-  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState({ progress: 0 });
   const [resultsIndexData, setResultsIndexData] = useState([]);
   const [selectedFile, setSelectedFile] = useState(undefined);
   const [filesWithContent, setFilesWithContent] = useState([]);
@@ -37,15 +37,22 @@ const ResultsBrowser = () => {
         const response = await fetch(`results/${file.key}`);
         const textContent = await response.text();
         results.push({ ...file, content: textContent });
-        setLoadingProgress((index + 1) / flattenedFiles.length * 100);
+        setLoadingProgress({
+          progress: (index + 1) / flattenedFiles.length * 100,
+        });
       }
       return results;
     };
 
-    getFilesWithContents().then(resultFiles => {
-      setLoadingProgress(undefined);
-      setFilesWithContent(resultFiles);
-    }).catch(error => console.error(error));
+    getFilesWithContents()
+      .then(resultFiles => {
+        setLoadingProgress(undefined);
+        setFilesWithContent(resultFiles);
+      })
+      .catch(error => setLoadingProgress(prevState => ({
+        ...prevState,
+        error: error.message,
+      })));
   }, [flattenedFiles]);
 
   // Filter files
@@ -78,13 +85,17 @@ const ResultsBrowser = () => {
     setSelectedFile(fileWithContent);
   };
 
-  if (loadingProgress !== undefined) {
+  if (loadingProgress) {
+    const { error, progress } = loadingProgress;
     return (
       <div className="loading">
-        <div>
-          <LinearProgress variant="determinate" value={ loadingProgress } />
+        <div className="loading-indicator">
+          <div>
+            <LinearProgress variant="determinate" value={ progress } />
+          </div>
+          { Math.round(progress) }%
         </div>
-        { Math.round(loadingProgress) }%
+        { error && <Alert severity="error">{ error }</Alert> }
       </div>
     );
   }
