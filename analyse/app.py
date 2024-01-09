@@ -145,25 +145,48 @@ app.layout = html.Div(
 
 
 @callback(
-    Output(component_id="plot-hist-package", component_property="figure"),
-    Output(component_id="plot-hist-type", component_property="figure"),
     Output(component_id="plot-hist-message", component_property="figure"),
+    Output(component_id="plot-hist-type", component_property="figure"),
+    Output(component_id="plot-hist-package", component_property="figure"),
     Output(component_id="plot-hist-stacktrace", component_property="figure"),
     Output(component_id="all-documents", component_property="children"),
-    Input(component_id="input-package", component_property="value"),
+    Output(component_id="plot-hist-message", component_property="clickData"),
+    Output(component_id="plot-hist-type", component_property="clickData"),
+    Output(component_id="plot-hist-package", component_property="clickData"),
+    Output(component_id="plot-hist-stacktrace", component_property="clickData"),
+    Output(component_id="input-message", component_property="value"),
+    Output(component_id="input-type", component_property="value"),
+    Output(component_id="input-package", component_property="value"),
+    Output(component_id="input-stacktrace", component_property="value"),
     Input(component_id="input-message", component_property="value"),
     Input(component_id="input-type", component_property="value"),
+    Input(component_id="input-package", component_property="value"),
     Input(component_id="input-stacktrace", component_property="value"),
     Input(component_id="loaded-documents", component_property="data"),
+    Input(component_id="plot-hist-message", component_property="clickData"),
+    Input(component_id="plot-hist-type", component_property="clickData"),
+    Input(component_id="plot-hist-package", component_property="clickData"),
+    Input(component_id="plot-hist-stacktrace", component_property="clickData"),
 )
 def filter_package(
-    filter_package,
     filter_message,
     filter_type,
+    filter_package,
     filter_stacktrace,
     loaded_documents,
+    click_data_message,
+    click_data_type,
+    click_data_package,
+    click_data_stacktrace,
 ):
     analyzer = root_analyzer
+
+    filter_message = extract_x_from_click_data(click_data_message) or filter_message
+    filter_type = extract_x_from_click_data(click_data_type) or filter_type
+    filter_package = extract_x_from_click_data(click_data_package) or filter_package
+    filter_stacktrace = (
+        extract_x_from_click_data(click_data_stacktrace) or filter_stacktrace
+    )
 
     if filter_package is not None:
         analyzer = analyzer.filter_packages(filter_package)
@@ -191,7 +214,23 @@ def filter_package(
     error_components = [
         build_error_component(error) for error in all_error_documents[:loaded_documents]
     ]
-    return package, types, message, stacktrace, error_components
+
+    empty_click_data = {"points": []}
+    return (
+        message,
+        types,
+        package,
+        stacktrace,
+        error_components,
+        empty_click_data,
+        empty_click_data,
+        empty_click_data,
+        empty_click_data,
+        filter_message,
+        filter_type,
+        filter_package,
+        filter_stacktrace,
+    )
 
 
 @callback(
@@ -201,6 +240,16 @@ def filter_package(
 )
 def increase_loaded_documents(n_clicks, loaded_documents):
     return loaded_documents + 10
+
+
+def extract_x_from_click_data(click_data):
+    if (
+        click_data is not None
+        and click_data["points"] is not None
+        and len(click_data["points"]) > 0
+    ):
+        return click_data["points"][0]["x"]
+    return None
 
 
 if __name__ == "__main__":
