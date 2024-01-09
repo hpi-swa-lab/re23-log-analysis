@@ -25,10 +25,10 @@ You can find the code inside the [results-browser](./results-browser) directory.
 To make the application aware of the result files, you will need to execute the [`results_index.sh`](./results-browser/public/results/results_index.sh) script inside the [results-browser/public/results](./results-browser/public/results) directory.
 The script will create a `results_index.json` file which indexes all result files that were dumped in the directory during the testing process.
 
-Also, you will need to execute `npm install` in the [results-browser](/results-browser) directory in order to install all dependencies for the application.
+Also, you will need to execute the `npm install` command in the [results-browser](/results-browser) directory in order to install all dependencies for the application.
 
 ### Startup
-Execute `npm start` inside the [results-browser](./results-browser) directory to start the application.
+Execute the `npm start` command inside the [results-browser](./results-browser) directory to start the application.
 On [localhost:3000](http://localhost:3000) you can now browse through the files.
 
 The application reads in all file contents into memory in order to filter/display it.

@@ -1,14 +1,23 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import XMLViewer from "react-xml-viewer";
 import { JsonView, defaultStyles } from "react-json-view-lite";
 import "react-json-view-lite/dist/index.css";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { vs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import Alert from "@mui/material/Alert";
+import { Alert, CircularProgress } from "@mui/material";
 import "./FileViewer.css";
 
-const FileViewer = ({ file, searchString, furtherInspectionMessage }) => {
-  const fileInfo = <b>{ file.key }</b>
+const FileViewer = ({ file, searchString, furtherInspectionMessage, onLazyFileLoad }) => {
+  const [lazyLoading, setLazyLoading] = useState(false);
+
+  useEffect(() => {
+    // If the user clicked the "graalpy-tmp.tar.gz entry,
+    // we need to lazy load the included files.
+    if (file.key.includes("graalpy-tmp.tar.gz")) {
+      setLazyLoading(true);
+      onLazyFileLoad(file).then(() => setLazyLoading(false));
+    }
+  }, [file, onLazyFileLoad]);
 
   const furtherInspectionInfo = useMemo(() => {
     if (!furtherInspectionMessage) return null;
@@ -20,6 +29,7 @@ const FileViewer = ({ file, searchString, furtherInspectionMessage }) => {
   }, [furtherInspectionMessage]);
 
   const fileContentView = useMemo(() => {
+    if (!file.content) return;
     const fileEnding = file.key.split(".").pop();
     switch (fileEnding) {
       case "json":
@@ -39,7 +49,12 @@ const FileViewer = ({ file, searchString, furtherInspectionMessage }) => {
 
   // Scroll to first appearance of search string in content (not regex compatible)
   useEffect(() => {
-    const wrapper = document.getElementsByClassName("file-content")[0];
+    const wrapperElements = document.getElementsByClassName("file-content");
+    if (!wrapperElements[0]) {
+      // There is no file's content displayed.
+      return;
+    }
+    const wrapper = wrapperElements[0];
     if (!searchString) {
       // If no search string was given, just scroll back to the top.
       wrapper.scrollTo({ top: 0 });
@@ -62,13 +77,28 @@ const FileViewer = ({ file, searchString, furtherInspectionMessage }) => {
     windowFind();
   }, [file, searchString]);
 
-  return (
-    <div className="file-viewer">
-      { furtherInspectionInfo }
+  if (lazyLoading) {
+    return (
+      <div className="file-viewer">
+        <CircularProgress />
+      </div>
+    );
+  }
+
+  const fileInfo = <b>{ file.key }</b>
+  const fileContentSection = (
+    <>
       { fileInfo }
       <div className="file-content">
         { fileContentView }
       </div>
+    </>
+  );
+
+  return (
+    <div className="file-viewer">
+      { furtherInspectionInfo }
+      { file.content && fileContentSection }
     </div>
   );
 };
