@@ -34,12 +34,14 @@ const convertTarFilesToBrowserFormat = (tarFiles, pathOfTar) => {
 };
 
 export const getNewResultFilesAfterLazyLoad = (prevFiles, newTarFiles, pathOfTar) => {
+  // Don't re-include the tar when we already unpacked its files.
+  const prevFilesWithoutTarball = prevFiles.filter(prevFile => prevFile.key !== pathOfTar);
   const tarFilesInBrowserFormat = convertTarFilesToBrowserFormat(newTarFiles, pathOfTar);
   if (prevFiles.find(prevFile => prevFile.key === tarFilesInBrowserFormat[0].key)) {
     // Be idempotent
-    return prevFiles;
+    return prevFilesWithoutTarball;
   } else {
-    return [...prevFiles, ...tarFilesInBrowserFormat];
+    return [...prevFilesWithoutTarball, ...tarFilesInBrowserFormat];
   }
 };
 
