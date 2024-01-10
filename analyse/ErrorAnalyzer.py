@@ -93,31 +93,28 @@ class ErrorAnalyzer(object):
     def filter_error_type(self, error_type):
         filter_function = (
             lambda errorDocument: errorDocument.errorType is not None
-            and re.search(error_type, errorDocument.errorType, re.IGNORECASE)
-            is not None
+            and tokenize(error_type) in tokenize(errorDocument.errorType)
         )
         return self._filter(filter_function)
 
     def filter_error_message(self, error_message):
         filter_function = (
             lambda errorDocument: errorDocument.errorMessage is not None
-            and re.search(error_message, errorDocument.errorMessage, re.IGNORECASE)
-            is not None
+            and tokenize(error_message) in tokenize(errorDocument.errorMessage)
         )
         return self._filter(filter_function)
 
     def filter_stacktrace(self, stacktrace):
         filter_function = (
             lambda errorDocument: errorDocument.stackTrace is not None
-            and re.search(stacktrace, errorDocument.stackTrace, re.IGNORECASE)
-            is not None
+            and tokenize(stacktrace) in tokenize(errorDocument.stackTrace)
         )
         return self._filter(filter_function)
 
     def filter_packages(self, package):
         filter_function = (
             lambda errorDocument: errorDocument.packageName is not None
-            and re.search(package, errorDocument.packageName, re.IGNORECASE) is not None
+            and tokenize(package) in tokenize(errorDocument.packageName)
         )
         return self._filter(filter_function)
 
@@ -161,31 +158,28 @@ class ErrorAnalyzer(object):
     def group_error_type(self, error_type):
         grouping_function = (
             lambda errorDocument: errorDocument.errorType is not None
-            and re.search(error_type, errorDocument.errorType, re.IGNORECASE)
-            is not None
+            and tokenize(error_type) in tokenize(errorDocument.errorType)
         )
         return self._group(grouping_function, "errorType", error_type)
 
     def group_error_message(self, error_message):
         grouping_function = (
             lambda errorDocument: errorDocument.errorMessage is not None
-            and re.search(error_message, errorDocument.errorMessage, re.IGNORECASE)
-            is not None
+            and tokenize(error_message) in tokenize(errorDocument.errorMessage)
         )
         return self._group(grouping_function, "errorMessage", error_message)
 
     def group_last_lines(self, last_line):
         grouping_function = (
             lambda errorDocument: errorDocument.last_stacktrace_line is not None
-            and re.search(last_line, errorDocument.last_stacktrace_line, re.IGNORECASE)
-            is not None
+            and tokenize(last_line) in tokenize(errorDocument.last_stacktrace_line)
         )
         return self._group(grouping_function, "stackTrace", last_line)
 
     def group_packages(self, package):
         grouping_function = (
             lambda errorDocument: errorDocument.last_stacktrace_line is not None
-            and re.search(package, errorDocument.package, re.IGNORECASE) is not None
+            and tokenize(package) in tokenize(errorDocument.package)
         )
         return self._group(grouping_function, "packageName", package)
 
