@@ -13,7 +13,8 @@ const ResultsBrowser = () => {
   const [resultsIndexData, setResultsIndexData] = useState([]);
   const [selectedFile, setSelectedFile] = useState(undefined);
   const [filesWithContent, setFilesWithContent] = useState([]);
-  const [filterRegexInput, setFilterRegexInput] = useState(undefined);
+  const [filterContentInput, setFilterContentInput] = useState(undefined);
+  const [filterNameInput, setFilterNameInput] = useState(undefined);
   const [includeCPython, setIncludeCPython] = useState(true);
   const [includeGraalPy, setIncludeGraalPy] = useState(true);
 
@@ -90,17 +91,22 @@ const ResultsBrowser = () => {
 
   // Filter files
   const filteredFiles = useMemo(
-    () => filterResultFiles(filesWithContent, filterRegexInput, includeCPython, includeGraalPy)
-  , [filesWithContent, filterRegexInput, includeCPython, includeGraalPy]);
+    () => filterResultFiles(filesWithContent, filterContentInput, filterNameInput, includeCPython, includeGraalPy)
+  , [filesWithContent, filterContentInput, filterNameInput, includeCPython, includeGraalPy]);
 
   // Get file statistics
   const fileStatistics = useMemo(
     () => getFileStatistics(filteredFiles, includeCPython, includeGraalPy)
     , [filteredFiles, includeCPython, includeGraalPy]);
 
-  const handleFilterFiles = (event) => {
+  const handleContentFilterChange = (event) => {
     setSelectedFile(undefined);
-    setFilterRegexInput(event.target.value);
+    setFilterContentInput(event.target.value);
+  };
+
+  const handleNameFilterChange = (event) => {
+    setSelectedFile(undefined);
+    setFilterNameInput(event.target.value);
   };
 
   const handleToggleIncludeCPython = (_) => {
@@ -141,8 +147,13 @@ const ResultsBrowser = () => {
         <div className="filters">
           <input
             type="text"
-            placeholder="Filter files based on Regex"
-            onChange={ handleFilterFiles }
+            placeholder="Filter file name"
+            onChange={ handleNameFilterChange }
+          />
+          <input
+            type="text"
+            placeholder="Filter file content"
+            onChange={ handleContentFilterChange }
           />
           <input
             type="checkbox"
@@ -177,7 +188,7 @@ const ResultsBrowser = () => {
         selectedFile && filteredFiles &&
           <FileViewer
             file={ selectedFile }
-            searchString={ filterRegexInput }
+            searchString={ filterContentInput }
             furtherInspectionMessage={ getFurtherInspectionMessage(filteredFiles, selectedFile) }
             onLazyFileLoad={ handleLazyFileLoad }
           />

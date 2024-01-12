@@ -76,7 +76,7 @@ export const getFileStatistics = (flattenedFiles, includeCPython = true, include
   };
 };
 
-export const filterResultFiles = (filesWithContent, filterRegexInput, includeCPython = true, includeGraalPy = true) => {
+export const filterResultFiles = (filesWithContent, filterContentInput, filterNameInput, includeCPython = true, includeGraalPy = true) => {
   // First filter based on whether cpython/graalpy should be included
   let filesToInclude = filesWithContent;
   if (!includeCPython) {
@@ -85,9 +85,25 @@ export const filterResultFiles = (filesWithContent, filterRegexInput, includeCPy
   if (!includeGraalPy) {
     filesToInclude = filesToInclude.filter(file => !file.key.includes("graalpy"));
   }
-  if (!filterRegexInput) return filesToInclude;
+  if (!filterNameInput && !filterContentInput) return filesToInclude;
 
-  // Some files should not be further filtered by content
+  // First: name based filtering
+  let nameFilteredFiles = filesToInclude;
+  if (filterNameInput) {
+    try {
+      const filterNameRegex = new RegExp(filterNameInput.toString());
+      const nameRegexPredicate = file => file.key.match(filterNameRegex);
+      nameFilteredFiles = nameFilteredFiles.filter(nameRegexPredicate);
+    } catch (e) {
+      // Regexp not parseable --> just try with includes as fallback
+      const nameIncludesPredicate = file => file.key.includes(filterNameInput);
+      nameFilteredFiles = nameFilteredFiles.filter(nameIncludesPredicate);
+    }
+  }
+
+  if (!filterContentInput) return nameFilteredFiles;
+
+  // Some files should not be further filtered by content afterward.
   const noContentFilterPattern = [
     // If GraalPy failed (partly or even completely), the scripts also dumps
     // tmp files created for the GraalPy run in the .tox directory.
@@ -101,25 +117,24 @@ export const filterResultFiles = (filesWithContent, filterRegexInput, includeCPy
     }
     return false;
   };
-  const notContentFilteredFiles = filesToInclude.filter(noContentFilterPredicate);
-  let contentFilteredFiles = filesToInclude.filter(file => !noContentFilterPredicate(file));
 
-  // Filter based on the filter input in content
+  // Second: content based filtering
+  let contentFilteredFiles;
   try {
-    const filterRegex = new RegExp(filterRegexInput.toString());
-    const regexPredicate = file => file.content.match(filterRegex);
-    contentFilteredFiles = contentFilteredFiles.filter(regexPredicate);
+    const filterContentRegex = new RegExp(filterContentInput.toString());
+    const contentRegexPredicate = file => file.content.match(filterContentRegex);
+    contentFilteredFiles = nameFilteredFiles.filter(file => !noContentFilterPredicate(file) && contentRegexPredicate(file));
   } catch (e) {
     // Regexp not parseable --> just try with includes as fallback
-    const includesPredicate = file => file.content.includes(filterRegexInput);
-    contentFilteredFiles = contentFilteredFiles.filter(includesPredicate);
+    const contentIncludesPredicate = file => file.content.includes(filterContentInput);
+    contentFilteredFiles = nameFilteredFiles.filter(file => !noContentFilterPredicate(file) && contentIncludesPredicate(file));
   }
 
   // For each package that got through the content filter, now re-include related files that were not be filtered by content.
   const results = contentFilteredFiles;
   const packages = new Set(contentFilteredFiles.map(file => file.key.split("/")[0]));
   packages.forEach(_package => {
-    const notContentFilteredFilesForPackage = notContentFilteredFiles.filter(file => file.key.startsWith(_package));
+    const notContentFilteredFilesForPackage = filesToInclude.filter(file => noContentFilterPredicate(file) && file.key.startsWith(_package));
     notContentFilteredFilesForPackage.forEach(file => results.push(file));
   });
   return results;
