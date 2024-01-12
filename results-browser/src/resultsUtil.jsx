@@ -21,6 +21,30 @@ export const getFlattenedFiles = (resultData) => {
   return _getFlattenedFiles(resultData[0].contents);
 };
 
+const convertTarFilesToBrowserFormat = (tarFiles, pathOfTar) => {
+  // Filter out directories (tar returns them separately)
+  const plainFiles = tarFiles.filter(file => !file.name.endsWith("/") && !file.name.includes("@LongLink"));
+  const textDecoder = new TextDecoder();
+  return plainFiles.map(file => ({
+    key: `${pathOfTar.split("/")[0]}/${file.name}`, // Prepend the directory the graalpy-tmp-tar was requested from to the file name
+    modified: +Moment.unix(file.mtime),
+    size: file.size,
+    content: textDecoder.decode(file.buffer), // Get text content
+  }));
+};
+
+export const getNewResultFilesAfterLazyLoad = (prevFiles, newTarFiles, pathOfTar) => {
+  // Don't re-include the tar when we already unpacked its files.
+  const prevFilesWithoutTarball = prevFiles.filter(prevFile => prevFile.key !== pathOfTar);
+  const tarFilesInBrowserFormat = convertTarFilesToBrowserFormat(newTarFiles, pathOfTar);
+  if (prevFiles.find(prevFile => prevFile.key === tarFilesInBrowserFormat[0].key)) {
+    // Be idempotent
+    return prevFilesWithoutTarball;
+  } else {
+    return [...prevFilesWithoutTarball, ...tarFilesInBrowserFormat];
+  }
+};
+
 export const getFileStatistics = (flattenedFiles, includeCPython = true, includeGraalPy = true) => {
   if (flattenedFiles.length === 0) return {};
 

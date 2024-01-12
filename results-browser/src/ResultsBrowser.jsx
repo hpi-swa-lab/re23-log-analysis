@@ -1,14 +1,15 @@
+import untar from "js-untar";
 import React, { useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
 import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
-import { LinearProgress } from "@mui/material";
+import { Alert, LinearProgress } from "@mui/material";
 import "./ResultsBrowser.css";
-import { filterResultFiles, getFileStatistics, getFlattenedFiles, getFurtherInspectionMessage } from "./resultsUtil";
+import { filterResultFiles, getFileStatistics, getFurtherInspectionMessage, getFlattenedFiles, getNewResultFilesAfterLazyLoad } from "./resultsUtil";
 import FileViewer from "./FileViewer";
 import FileStatistics from "./FileStatistics";
 
 const ResultsBrowser = () => {
-  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState({ progress: 0 });
   const [resultsIndexData, setResultsIndexData] = useState([]);
   const [selectedFile, setSelectedFile] = useState(undefined);
   const [filesWithContent, setFilesWithContent] = useState([]);
@@ -27,26 +28,65 @@ const ResultsBrowser = () => {
   // Flat down directory structure
   const flattenedFiles = useMemo(() => getFlattenedFiles(resultsIndexData), [resultsIndexData]);
 
-  // Enrich all result files with their contents
+  // Enrich basic result files with their contents
   useEffect(() => {
     if (flattenedFiles.length === 0) return [];
 
     const getFilesWithContents = async () => {
       const results = [];
       for (const [index, file] of flattenedFiles.entries()) {
+        if (file.key.includes("graalpy-tmp.tar.gz")) {
+          // But skip content fetching for the "graalpy-tmp" directory,
+          // as we lazy load its content only if necessary.
+          results.push(file);
+          continue;
+        }
         const response = await fetch(`results/${file.key}`);
         const textContent = await response.text();
         results.push({ ...file, content: textContent });
-        setLoadingProgress((index + 1) / flattenedFiles.length * 100);
+        setLoadingProgress({
+          progress: (index + 1) / flattenedFiles.length * 100,
+          directory: file.key.split("/")[0],
+        });
       }
       return results;
     };
 
-    getFilesWithContents().then(resultFiles => {
-      setLoadingProgress(undefined);
-      setFilesWithContent(resultFiles);
-    }).catch(error => console.error(error));
+    getFilesWithContents()
+      .then(resultFiles => {
+        setLoadingProgress(undefined);
+        setFilesWithContent(resultFiles);
+      })
+      .catch(error => setLoadingProgress(prevState => ({
+        ...prevState,
+        error: error.message,
+      })));
   }, [flattenedFiles]);
+
+  const handleLazyFileLoad = async (fileToLazyLoad) => {
+    if (!fileToLazyLoad.key.includes("graalpy-tmp.tar.gz")) {
+      // lazy loading and extraction only for graalpy-tmp directory expected
+      return;
+    }
+    fetch(`results/${fileToLazyLoad.key}`)
+      .then(response => response.blob())
+      // Decompress the tar archive
+      .then(blob => {
+        const ds = new DecompressionStream("gzip");
+        const decompressedStream = blob.stream().pipeThrough(ds);
+        return new Response(decompressedStream).blob();
+      })
+      .then(blob => blob.arrayBuffer())
+      // Extract files from graalpy-tmp tarball using js-untar
+      .then(decompressed => {
+        untar(decompressed)
+          .then(
+            tarFiles => setFilesWithContent(prevFiles => getNewResultFilesAfterLazyLoad(prevFiles, tarFiles, fileToLazyLoad.key)),
+            error => console.error(error)
+          )
+      })
+      .catch(error => console.error(error));
+  };
 
   // Filter files
   const filteredFiles = useMemo(
@@ -78,13 +118,18 @@ const ResultsBrowser = () => {
     setSelectedFile(fileWithContent);
   };
 
-  if (loadingProgress !== undefined) {
+  if (loadingProgress) {
+    const { directory, error, progress } = loadingProgress;
     return (
       <div className="loading">
-        <div>
-          <LinearProgress variant="determinate" value={ loadingProgress } />
+        <div className="loading-indicator">
+          <div>
+            <LinearProgress variant="determinate" value={ progress } />
+          </div>
+          { Math.round(progress) }%
         </div>
-        { Math.round(loadingProgress) }%
+        { directory && <div>Loading files for { directory }</div> }
+        { error && <Alert severity="error">{ error }</Alert> }
       </div>
     );
   }
@@ -134,6 +179,7 @@ const ResultsBrowser = () => {
             file={ selectedFile }
             searchString={ filterRegexInput }
             furtherInspectionMessage={ getFurtherInspectionMessage(filteredFiles, selectedFile) }
+            onLazyFileLoad={ handleLazyFileLoad }
           />
       }
     </div>
