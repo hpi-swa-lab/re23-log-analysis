@@ -15,7 +15,7 @@ const FileViewer = ({ file, searchString, furtherInspectionMessage, onLazyFileLo
     // we need to lazy load the included files.
     if (file.key.includes("graalpy-tmp.tar.gz")) {
       setLazyLoading(true);
-      onLazyFileLoad(file).then(() => setLazyLoading(false));
+      onLazyFileLoad(file, () => setLazyLoading(false));
     }
   }, [file, onLazyFileLoad]);
 

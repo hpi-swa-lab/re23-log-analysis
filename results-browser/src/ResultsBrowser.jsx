@@ -1,5 +1,5 @@
 import untar from "js-untar";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import FileBrowser from "react-keyed-file-browser";
 import { FolderOpen, FolderOutlined, InsertDriveFileOutlined } from "@mui/icons-material";
 import { Alert, LinearProgress } from "@mui/material";
@@ -64,7 +64,7 @@ const ResultsBrowser = () => {
       })));
   }, [flattenedFiles]);
 
-  const handleLazyFileLoad = async (fileToLazyLoad) => {
+  const handleLazyFileLoad = useCallback(async (fileToLazyLoad, onSuccess) => {
     if (!fileToLazyLoad.key.includes("graalpy-tmp.tar.gz")) {
       // lazy loading and extraction only for graalpy-tmp directory expected
       return;
@@ -86,8 +86,9 @@ const ResultsBrowser = () => {
             error => console.error(error)
           )
       })
+      .then(onSuccess)
       .catch(error => console.error(error));
-  };
+  }, []);
 
   // Filter files
   const filteredFiles = useMemo(
