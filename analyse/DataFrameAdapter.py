@@ -15,7 +15,7 @@ class DataFrameAdapter(object):
             .sort_values(by=["count"], ascending=False)
         )
 
-    def get_error_messages_df(self, minimum=3):
+    def get_error_messages_df(self, minimum=0):
         error_counts = self.analyzer.count_error_messages()
         important_error_counts = {
             error: count for error, count in error_counts.items() if count >= minimum
@@ -29,7 +29,7 @@ class DataFrameAdapter(object):
             .sort_values(by=["count"], ascending=False)
         )
 
-    def get_last_stacktrace_lines_df(self, minimum=3):
+    def get_last_stacktrace_lines_df(self, minimum=0):
         error_counts = self.analyzer.count_last_lines()
         important_error_counts = {
             error: count for error, count in error_counts.items() if count >= minimum
