@@ -6,12 +6,14 @@ import plotly.express as px
 
 app = Dash(__name__)
 
+# Analyzer for the data from the graalpy test run
 root_analyzer = ErrorAnalyzer(
     FailureDataCollectorConstant(
         "graalpy-test-results.xml", "cpython-test-results.xml", "results/", "results/"
     )
 )
 
+# Group of filter inputs to filter the error documents
 filter_group = (
     html.Div(
         [
@@ -37,25 +39,30 @@ filter_group = (
     ),
 )
 
+# Histograms to display the distribution of the error messages
 error_message_histogram = dcc.Loading(
     [dcc.Graph(figure={}, id="plot-hist-message")],
     type="default",
 )
+# Histograms to display the distribution of the error types
 error_type_histogram = dcc.Loading(
     [dcc.Graph(figure={}, id="plot-hist-type")],
     type="default",
 )
 
+# Histograms to display the distribution of the packages
 package_histogram = dcc.Loading(
     [dcc.Graph(figure={}, id="plot-hist-package")],
     type="default",
 )
 
+# Histograms to display the distribution of the last stacktrace lines
 stacktrace_histogram = dcc.Loading(
     [dcc.Graph(figure={}, id="plot-hist-stacktrace")],
     type="default",
 )
 
+# Group of histograms
 histogram_group = (
     html.Table(
         [
@@ -82,7 +89,7 @@ histogram_group = (
     ),
 )
 
-
+# Display filtered error documents including the package, message, type and complete stacktrace
 error_group = dcc.Loading(
     [
         html.Div(
@@ -100,6 +107,7 @@ error_group = dcc.Loading(
 )
 
 
+# Builds a component to display a single error document
 def build_error_component(error):
     subtitle = (
         "{}: {}".format(error.errorType, error.errorMessage)
@@ -180,7 +188,7 @@ def filter_package(
     click_data_stacktrace,
 ):
     analyzer = root_analyzer
-
+    # Check if the user clicked on a histogram bar to filter the error documents
     filter_message = extract_x_from_click_data(click_data_message) or filter_message
     filter_type = extract_x_from_click_data(click_data_type) or filter_type
     filter_package = extract_x_from_click_data(click_data_package) or filter_package
@@ -188,6 +196,7 @@ def filter_package(
         extract_x_from_click_data(click_data_stacktrace) or filter_stacktrace
     )
 
+    # Filter the error documents if the user entered a filter
     if filter_package is not None:
         analyzer = analyzer.filter_packages(filter_package)
     if filter_message is not None:
@@ -197,6 +206,7 @@ def filter_package(
     if filter_stacktrace is not None:
         analyzer = analyzer.filter_stacktrace(filter_stacktrace)
 
+    # Adapter from internal error documents to pandas data frame
     dict_adapter = DataFrameAdapter(analyzer)
 
     package_df = dict_adapter.get_packages_df()
@@ -204,17 +214,20 @@ def filter_package(
     message_df = dict_adapter.get_error_messages_df()
     stacktrace_df = dict_adapter.get_last_stacktrace_lines_df()
 
+    # Build histograms from the data frames
     package = px.bar(package_df, x="package", y="count")
     types = px.bar(type_df, x="error type", y="count")
     message = px.bar(message_df, x="error message", y="count")
     stacktrace = px.bar(stacktrace_df, x="last stacktrace line", y="count")
 
+    # Build list of error components to display them in left column
     all_error_documents = analyzer.error_documents
     all_error_documents.sort(key=lambda _: _.packageName.lower())
     error_components = [
         build_error_component(error) for error in all_error_documents[:loaded_documents]
     ]
 
+    # Reset the click data to allow the user to click for filtering again
     empty_click_data = {"points": []}
     return (
         message,
@@ -239,10 +252,17 @@ def filter_package(
     Input(component_id="loaded-documents", component_property="data"),
 )
 def increase_loaded_documents(n_clicks, loaded_documents):
+    """
+    Increases the number of loaded documents by 10 if the user clicks on the "load more" button.
+    Paginates the error documents.
+    """
     return loaded_documents + 10
 
 
 def extract_x_from_click_data(click_data):
+    """
+    Extracts the x value from a click data object, e.g., a bar in a histogram.
+    """
     if (
         click_data is not None
         and click_data["points"] is not None

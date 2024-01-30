@@ -20,6 +20,11 @@ def _load_and_extract_files(files, result_dict):
 
 
 class CpythonGraalpyComparator(object):
+    """
+    A class to create a summary about the test results of CPython and GraalPython.
+    Use to compare the number of passed, skipped, failed and erroneous tests in both
+    """
+
     def __init__(self, cpython_files, graalpy_files):
         self.cpython_files = cpython_files
         self.graalpy_files = graalpy_files
@@ -52,8 +57,10 @@ class CpythonGraalpyComparator(object):
                 ]
             )
             for package in packages:
+                # Collect test results for both implementations
                 cpython_result = self.cpython_results[package]
                 graalpy_result = self.graalpy_results[package]
+                # Check if at least one implementation has results
                 haveResults = cpython_result.wasExecuted or graalpy_result.wasExecuted
                 row = [package]
 

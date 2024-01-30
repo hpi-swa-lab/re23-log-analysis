@@ -1,4 +1,8 @@
 class ErrorDocument(object):
+    """
+    Internal representation of an error document.
+    """
+
     def __init__(
         self,
         name="",
@@ -13,6 +17,8 @@ class ErrorDocument(object):
         self.errorMessage = errorMessage
         self.stackTrace = stackTrace
         self.name = name
+        # Value is used to count the number of errors.
+        # It's different when using grouping
         self.value = value
 
     @property

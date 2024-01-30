@@ -3,6 +3,10 @@ import pandas as pd
 
 
 class DataFrameAdapter(object):
+    """
+    Adapter from internal error documents to pandas data frame
+    """
+
     def __init__(self, analyzer: ErrorAnalyzer):
         self.analyzer: ErrorAnalyzer = analyzer
 

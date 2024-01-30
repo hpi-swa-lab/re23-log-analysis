@@ -16,5 +16,5 @@ def create_heatmap(similarity, labels, title, cmap="YlGnBu"):
 def tokenize(text: str):
     if text is None:
         return str(text)
-    # return ''.join([i if ord(i) < 128 else ' ' for i in text])
+    # Remove all non-alphanumeric characters
     return re.sub("[^0-9a-zA-Z]+", " ", text).casefold().strip()

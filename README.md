@@ -33,3 +33,8 @@ On [localhost:3000](http://localhost:3000) you can now browse through the files.
 
 The application reads in all file contents into memory in order to filter/display it.
 So depending on the size of the [results-browser/public/results](./results-browser/public/results) directory, this might take some time.
+
+## Analyse
+
+This folder contains scripts and webapps to analyse the output of individual test frameworks.
+Take a look into this [README](./analyse/README.md) for more information.

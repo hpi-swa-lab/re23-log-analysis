@@ -7,6 +7,11 @@ FAILURE_TAG = "failure"
 
 
 class JunitXMLParser(object):
+    """
+    Class to parse a JUnit XML file.
+    You can extract the number of errors, failures and skipped tests and specific stacktraces.
+    """
+
     def __init__(self, path):
         self.path = path
         self.root = ET.parse(path).getroot()

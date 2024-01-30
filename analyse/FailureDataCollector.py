@@ -1,5 +1,10 @@
 import os
 
+"""
+This classes are used to collect the files that contain the test results
+based on the given parameters. The source of the parameters differ.
+"""
+
 
 class FailureDataCollector(object):
     @property

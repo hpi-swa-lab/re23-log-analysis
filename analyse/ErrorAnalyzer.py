@@ -11,6 +11,10 @@ from tqdm import tqdm
 
 
 class ErrorAnalyzer(object):
+    """
+    Class to calculate different statistics about the errors in the test runs.
+    """
+
     def __init__(
         self,
         data_collector: FailureDataCollector,
@@ -18,6 +22,7 @@ class ErrorAnalyzer(object):
         cpython_error_documents=None,
     ):
         self.data_collector: FailureDataCollector = data_collector
+        # If no error documents are given, load them from the files
         if graalpy_error_documents is None:
             self.graalpy_error_documents = self.load(
                 self.data_collector.graalpy_xml_files
@@ -43,6 +48,7 @@ class ErrorAnalyzer(object):
                     errorMessage,
                     stackTrace,
                 ) in xml_parser.get_failure_stacktraces():
+                    # Create a new error document for each failure
                     errorDocument = ErrorDocument(
                         testName, package, errorType, errorMessage, stackTrace
                     )
@@ -53,6 +59,7 @@ class ErrorAnalyzer(object):
                     errorMessage,
                     stackTrace,
                 ) in xml_parser.get_error_stacktraces():
+                    # Create a new error document for each error
                     errorDocument = ErrorDocument(
                         testName, package, errorType, errorMessage, stackTrace
                     )
@@ -72,10 +79,15 @@ class ErrorAnalyzer(object):
                 ]
             ]
         )
+        # Calculate the number of cpython errors that are not in the graalpy errors
         cpython_error_count = len(self.cpython_error_documents) - both_error_count
         return (graalpy_error_count, both_error_count, cpython_error_count)
 
     def _filter(self, filter_function):
+        """
+        General filter function that filters the error documents from both implementations by a given filter function.
+        Returns a new ErrorAnalyzer object only with the filtered error documents.
+        """
         graalpy_error_documents = [
             errorDocument
             for errorDocument in self.graalpy_error_documents
@@ -91,6 +103,10 @@ class ErrorAnalyzer(object):
         )
 
     def filter_error_type(self, error_type):
+        """
+        Filter the error documents by the error type.
+        Returns a new ErrorAnalyzer object only with the filtered error documents.
+        """
         filter_function = (
             lambda errorDocument: errorDocument.errorType is not None
             and tokenize(error_type) in tokenize(errorDocument.errorType)
@@ -98,6 +114,10 @@ class ErrorAnalyzer(object):
         return self._filter(filter_function)
 
     def filter_error_message(self, error_message):
+        """
+        Filter the error documents by the error message.
+        Returns a new ErrorAnalyzer object only with the filtered error documents.
+        """
         filter_function = (
             lambda errorDocument: errorDocument.errorMessage is not None
             and tokenize(error_message) in tokenize(errorDocument.errorMessage)
@@ -105,6 +125,10 @@ class ErrorAnalyzer(object):
         return self._filter(filter_function)
 
     def filter_stacktrace(self, stacktrace):
+        """
+        Filter the error documents by the error stacktrace.
+        Returns a new ErrorAnalyzer object only with the filtered error documents.
+        """
         filter_function = (
             lambda errorDocument: errorDocument.stackTrace is not None
             and tokenize(stacktrace) in tokenize(errorDocument.stackTrace)
@@ -112,6 +136,10 @@ class ErrorAnalyzer(object):
         return self._filter(filter_function)
 
     def filter_packages(self, package):
+        """
+        Filter the error documents by the package.
+        Returns a new ErrorAnalyzer object only with the filtered error documents.
+        """
         filter_function = (
             lambda errorDocument: errorDocument.packageName is not None
             and tokenize(package) in tokenize(errorDocument.packageName)
@@ -149,6 +177,7 @@ class ErrorAnalyzer(object):
                 "name": "group_{}_{}".format(error_property, grouping_value),
             }
         )
+        # Return a new ErrorAnalyzer object with the new graalpy error documents
         return ErrorAnalyzer(
             self.data_collector,
             [*graalpy_error_documents_without_group, new_graalpy_error_document],
@@ -184,6 +213,9 @@ class ErrorAnalyzer(object):
         return self._group(grouping_function, "packageName", package)
 
     def _count(agg, curr):
+        """
+        Use this function to count the number of occurrences of a value in a list of tuples.
+        """
         error, value = curr
         if error in agg:
             agg[error] += value
@@ -224,6 +256,9 @@ class ErrorAnalyzer(object):
         return last_line_counts
 
     def _calculate_similarity(self, errors):
+        """
+        Calculate the similarity between the given errors.
+        """
         vectorizer = CountVectorizer()
         X = vectorizer.fit_transform(errors)
         arr = X.toarray()
@@ -254,11 +289,17 @@ class ErrorAnalyzer(object):
 
     @property
     def error_documents(self):
+        """
+        Returns a list of all error documents from graalpy.
+        Removes all error documents that are also in cpython.
+        """
         error_documents = list()
         cpython_failures_names = [
             errorDocument.name for errorDocument in self.cpython_error_documents
         ]
         for errorDocument in self.graalpy_error_documents:
+            # Only add error documents that are not in cpython
+            # Identifies an error document by the identifier name
             if (
                 errorDocument.name is None
                 or errorDocument.name == ""
