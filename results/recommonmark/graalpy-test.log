@@ -1,0 +1,923 @@
+GLOB sdist-make: /workdir/recommonmark-0.7.1/setup.py
+graalpylibtest-sphinx18 create: /workdir/recommonmark-0.7.1/.tox/graalpylibtest-sphinx18
+graalpylibtest-sphinx18 installdeps: mock, pytest
+graalpylibtest-sphinx18 inst: /workdir/recommonmark-0.7.1/.tox/.tmp/package/1/recommonmark-0.7.1.zip
+graalpylibtest-sphinx18 installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.1.0,commonmark==0.9.1,docutils==0.20.1,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,recommonmark @ file:///workdir/recommonmark-0.7.1/.tox/.tmp/package/1/recommonmark-0.7.1.zip,requests==2.31.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0
+graalpylibtest-sphinx18 run-test-pre: PYTHONHASHSEED='1036853029'
+graalpylibtest-sphinx18 run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/recommonmark/0.7.1/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/recommonmark-0.7.1/.tox/graalpylibtest-sphinx18/bin/python
+cachedir: .tox/graalpylibtest-sphinx18/.pytest_cache
+rootdir: /workdir/recommonmark-0.7.1
+collecting ... collected 28 items
+
+tests/test_basic.py::TestParsing::test_block_quote PASSED                [  3%]
+tests/test_basic.py::TestParsing::test_bullet_list PASSED                [  7%]
+tests/test_basic.py::TestParsing::test_code PASSED                       [ 10%]
+tests/test_basic.py::TestParsing::test_entities PASSED                   [ 14%]
+tests/test_basic.py::TestParsing::test_enumerated_list PASSED            [ 17%]
+tests/test_basic.py::TestParsing::test_eval PASSED                       [ 21%]
+tests/test_basic.py::TestParsing::test_heading PASSED                    [ 25%]
+tests/test_basic.py::TestParsing::test_heading_inline PASSED             [ 28%]
+tests/test_basic.py::TestParsing::test_horizontal_rule PASSED            [ 32%]
+tests/test_basic.py::TestParsing::test_html_block PASSED                 [ 35%]
+tests/test_basic.py::TestParsing::test_html_inline PASSED                [ 39%]
+tests/test_basic.py::TestParsing::test_image PASSED                      [ 42%]
+tests/test_basic.py::TestParsing::test_inline_code PASSED                [ 46%]
+tests/test_basic.py::TestParsing::test_known_schemes PASSED              [ 50%]
+tests/test_basic.py::TestParsing::test_linebreak PASSED                  [ 53%]
+tests/test_basic.py::TestParsing::test_links PASSED                      [ 57%]
+tests/test_basic.py::TestParsing::test_paragraph PASSED                  [ 60%]
+tests/test_sphinx.py::GenericTests::test_code FAILED                     [ 64%]
+tests/test_sphinx.py::GenericTests::test_headings FAILED                 [ 67%]
+tests/test_sphinx.py::GenericTests::test_image FAILED                    [ 71%]
+tests/test_sphinx.py::GenericTests::test_links FAILED                    [ 75%]
+tests/test_sphinx.py::GenericTests::test_lists FAILED                    [ 78%]
+tests/test_sphinx.py::GenericTests::test_paragraph PASSED                [ 82%]
+tests/test_sphinx.py::GenericTests::test_thematic_break PASSED           [ 85%]
+tests/test_sphinx.py::CodeBlockTests::test_integration FAILED            [ 89%]
+tests/test_sphinx.py::IndentedCodeTests::test_integration FAILED         [ 92%]
+tests/test_sphinx.py::NestedHeaderBlock::test_integration FAILED         [ 96%]
+tests/test_sphinx.py::CustomExtensionTests::test_integration FAILED      [100%]
+
+=================================== FAILURES ===================================
+____________________________ GenericTests.test_code ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 168, in test_code
+    self.assertIn(
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<pre><span></span><span class="ch">#!/bin/sh</span>\n<span class="n">python</span>\n</pre>' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>&lt;no title&gt; &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <p># Heading 1</p>\n<p>## Heading 2</p>\n<p>### Heading 3</p>\n<p>#### Heading 4</p>\n<p>This is a [link](<a class="reference external" href="http://example.com">http://example.com</a> “Example”)</p>\n<p>This is a [ref link][example]</p>\n<p>This is a [relative link](/example)</p>\n<p>This is a [pending ref](index)</p>\n<p>[example]: <a class="reference external" href="http://example.com/foobar">http://example.com/foobar</a> “Example”</p>\n<p>External link to Markdown file: [Readme](<a class="reference external" href="https://github.com/readthedocs/recommonmark/blob/master/README.md">https://github.com/readthedocs/recommonmark/blob/master/README.md</a>).</p>\n<p>Foo</p>\n<hr class="docutils" />\n<p>Bar</p>\n<p>![foo “handle quotes”](/image.png “Example”)</p>\n<blockquote>\n<div><p>#!/bin/sh\npython</p>\n</div></blockquote>\n<ul class="simple">\n<li><p>Item A</p></li>\n<li><p>Item B</p></li>\n<li><p>Item C</p></li>\n</ul>\n<ol class="arabic simple">\n<li><p>Item 1</p></li>\n<li><p>Item 2</p></li>\n<li><p>Item 3</p></li>\n</ol>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 2 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_generic/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+__________________________ GenericTests.test_headings __________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 68, in test_headings
+    self.assertIn(
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<h1>Heading 1<a class="headerlink" href="#heading-1" title="Permalink to this headline">¶</a></h1>' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>&lt;no title&gt; &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <p># Heading 1</p>\n<p>## Heading 2</p>\n<p>### Heading 3</p>\n<p>#### Heading 4</p>\n<p>This is a [link](<a class="reference external" href="http://example.com">http://example.com</a> “Example”)</p>\n<p>This is a [ref link][example]</p>\n<p>This is a [relative link](/example)</p>\n<p>This is a [pending ref](index)</p>\n<p>[example]: <a class="reference external" href="http://example.com/foobar">http://example.com/foobar</a> “Example”</p>\n<p>External link to Markdown file: [Readme](<a class="reference external" href="https://github.com/readthedocs/recommonmark/blob/master/README.md">https://github.com/readthedocs/recommonmark/blob/master/README.md</a>).</p>\n<p>Foo</p>\n<hr class="docutils" />\n<p>Bar</p>\n<p>![foo “handle quotes”](/image.png “Example”)</p>\n<blockquote>\n<div><p>#!/bin/sh\npython</p>\n</div></blockquote>\n<ul class="simple">\n<li><p>Item A</p></li>\n<li><p>Item B</p></li>\n<li><p>Item C</p></li>\n</ul>\n<ol class="arabic simple">\n<li><p>Item 1</p></li>\n<li><p>Item 2</p></li>\n<li><p>Item 3</p></li>\n</ol>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_generic/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+___________________________ GenericTests.test_image ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 137, in test_image
+    self.assertIn(
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<p><img alt="foo &quot;handle quotes&quot;" src="image.png" /></p>' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>&lt;no title&gt; &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <p># Heading 1</p>\n<p>## Heading 2</p>\n<p>### Heading 3</p>\n<p>#### Heading 4</p>\n<p>This is a [link](<a class="reference external" href="http://example.com">http://example.com</a> “Example”)</p>\n<p>This is a [ref link][example]</p>\n<p>This is a [relative link](/example)</p>\n<p>This is a [pending ref](index)</p>\n<p>[example]: <a class="reference external" href="http://example.com/foobar">http://example.com/foobar</a> “Example”</p>\n<p>External link to Markdown file: [Readme](<a class="reference external" href="https://github.com/readthedocs/recommonmark/blob/master/README.md">https://github.com/readthedocs/recommonmark/blob/master/README.md</a>).</p>\n<p>Foo</p>\n<hr class="docutils" />\n<p>Bar</p>\n<p>![foo “handle quotes”](/image.png “Example”)</p>\n<blockquote>\n<div><p>#!/bin/sh\npython</p>\n</div></blockquote>\n<ul class="simple">\n<li><p>Item A</p></li>\n<li><p>Item B</p></li>\n<li><p>Item C</p></li>\n</ul>\n<ol class="arabic simple">\n<li><p>Item 1</p></li>\n<li><p>Item 2</p></li>\n<li><p>Item 3</p></li>\n</ol>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_generic/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+___________________________ GenericTests.test_links ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 103, in test_links
+    self.assertIn(
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'This is a <a class="reference external" href="http://example.com">link</a>' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>&lt;no title&gt; &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <p># Heading 1</p>\n<p>## Heading 2</p>\n<p>### Heading 3</p>\n<p>#### Heading 4</p>\n<p>This is a [link](<a class="reference external" href="http://example.com">http://example.com</a> “Example”)</p>\n<p>This is a [ref link][example]</p>\n<p>This is a [relative link](/example)</p>\n<p>This is a [pending ref](index)</p>\n<p>[example]: <a class="reference external" href="http://example.com/foobar">http://example.com/foobar</a> “Example”</p>\n<p>External link to Markdown file: [Readme](<a class="reference external" href="https://github.com/readthedocs/recommonmark/blob/master/README.md">https://github.com/readthedocs/recommonmark/blob/master/README.md</a>).</p>\n<p>Foo</p>\n<hr class="docutils" />\n<p>Bar</p>\n<p>![foo “handle quotes”](/image.png “Example”)</p>\n<blockquote>\n<div><p>#!/bin/sh\npython</p>\n</div></blockquote>\n<ul class="simple">\n<li><p>Item A</p></li>\n<li><p>Item B</p></li>\n<li><p>Item C</p></li>\n</ul>\n<ol class="arabic simple">\n<li><p>Item 1</p></li>\n<li><p>Item 2</p></li>\n<li><p>Item 3</p></li>\n</ol>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_generic/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+___________________________ GenericTests.test_lists ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 149, in test_lists
+    self.assertIn(
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<ul class="simple">\n<li>Item A</li>\n<li>Item B</li>\n<li>Item C</li>\n</ul>' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>&lt;no title&gt; &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <p># Heading 1</p>\n<p>## Heading 2</p>\n<p>### Heading 3</p>\n<p>#### Heading 4</p>\n<p>This is a [link](<a class="reference external" href="http://example.com">http://example.com</a> “Example”)</p>\n<p>This is a [ref link][example]</p>\n<p>This is a [relative link](/example)</p>\n<p>This is a [pending ref](index)</p>\n<p>[example]: <a class="reference external" href="http://example.com/foobar">http://example.com/foobar</a> “Example”</p>\n<p>External link to Markdown file: [Readme](<a class="reference external" href="https://github.com/readthedocs/recommonmark/blob/master/README.md">https://github.com/readthedocs/recommonmark/blob/master/README.md</a>).</p>\n<p>Foo</p>\n<hr class="docutils" />\n<p>Bar</p>\n<p>![foo “handle quotes”](/image.png “Example”)</p>\n<blockquote>\n<div><p>#!/bin/sh\npython</p>\n</div></blockquote>\n<ul class="simple">\n<li><p>Item A</p></li>\n<li><p>Item B</p></li>\n<li><p>Item C</p></li>\n</ul>\n<ol class="arabic simple">\n<li><p>Item 1</p></li>\n<li><p>Item 2</p></li>\n<li><p>Item 3</p></li>\n</ol>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_generic/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_generic/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+_______________________ CodeBlockTests.test_integration ________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 188, in test_integration
+    self.assertIn('<div class="highlight">', output)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<div class="highlight">' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>Header &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <section id="header">\n<h1>Header<a class="headerlink" href="#header" title="Link to this heading">¶</a></h1>\n<p>A paragraph\n<a href="#id1"><span class="problematic" id="id2">``</span></a>`\ndef f():</p>\n<blockquote>\n<div><p>pass</p>\n</div></blockquote>\n<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`\nAnother paragraph</p>\n</section>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.md.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_code_block/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_code_block/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_code_block/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_code_block/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 58 warnings.[39;49;00m
+
+The HTML pages are in _build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+[31m/workdir/recommonmark-0.7.1/tests/sphinx_code_block/index.md:7: ERROR: Unexpected indentation.[39;49;00m
+[91m/workdir/recommonmark-0.7.1/tests/sphinx_code_block/index.md:4: WARNING: Inline literal start-string without end-string.[39;49;00m
+[91m/workdir/recommonmark-0.7.1/tests/sphinx_code_block/index.md:8: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91m/workdir/recommonmark-0.7.1/tests/sphinx_code_block/index.md:8: WARNING: Inline literal start-string without end-string.[39;49;00m
+______________________ IndentedCodeTests.test_integration ______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 194, in test_integration
+    run_test(
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 33, in run_test
+    assert test_string in output
+AssertionError
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_indented_code/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_indented_code/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_indented_code/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_indented_code/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in _build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+______________________ NestedHeaderBlock.test_integration ______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 203, in test_integration
+    run_test(
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 33, in run_test
+    assert test_string in output
+AssertionError
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_nested_header_block/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_nested_header_block/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_nested_header_block/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_nested_header_block/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in _build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+____________________ CustomExtensionTests.test_integration _____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/recommonmark-0.7.1/tests/test_sphinx.py", line 215, in test_integration
+    self.assertIn('<table ', output)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '<table ' not found in '<!DOCTYPE html>\n\n<html lang="en" data-content_root="./">\n  <head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />\n\n    <title>Header &#8212; sphinxproj 0.1 documentation</title>\n    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />\n    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />\n    <script src="_static/documentation_options.js?v=2709fde1"></script>\n    <script src="_static/doctools.js?v=888ff710"></script>\n    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>\n    <link rel="index" title="Index" href="genindex.html" />\n    <link rel="search" title="Search" href="search.html" />\n   \n  <link rel="stylesheet" href="_static/custom.css" type="text/css" />\n  \n  \n  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />\n\n  </head><body>\n  \n\n    <div class="document">\n      <div class="documentwrapper">\n        <div class="bodywrapper">\n          \n\n          <div class="body" role="main">\n            \n  <section id="header">\n<h1>Header<a class="headerlink" href="#header" title="Link to this heading">¶</a></h1>\n<p>A paragraph</p>\n<p><code class="docutils literal notranslate"><span class="pre">`eval_rst</span>\n<span class="pre">+-----+------+</span>\n<span class="pre">|</span> <span class="pre">abc</span> <span class="pre">|</span> <span class="pre">data</span> <span class="pre">|</span>\n<span class="pre">+=====+======+</span>\n<span class="pre">|</span> <span class="pre">a</span>&#160;&#160; <span class="pre">|</span> <span class="pre">1</span>&#160;&#160;&#160; <span class="pre">|</span>\n<span class="pre">+-----+------+</span>\n<span class="pre">`</span></code></p>\n<p>Another paragraph</p>\n<p><code class="docutils literal notranslate"><span class="pre">`eval_rst</span>\n<span class="pre">..</span> <span class="pre">contents::</span> <span class="pre">Contents</span>\n<span class="pre">`</span></code></p>\n<section id="header-2">\n<h2>Header 2<a class="headerlink" href="#header-2" title="Link to this heading">¶</a></h2>\n</section>\n</section>\n\n\n          </div>\n          \n        </div>\n      </div>\n      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">\n        <div class="sphinxsidebarwrapper">\n<h1 class="logo"><a href="#">sphinxproj</a></h1>\n\n\n\n\n\n\n\n\n<h3>Navigation</h3>\n\n<div class="relations">\n<h3>Related Topics</h3>\n<ul>\n  <li><a href="#">Documentation overview</a><ul>\n  </ul></li>\n</ul>\n</div>\n<div id="searchbox" style="display: none" role="search">\n  <h3 id="searchlabel">Quick search</h3>\n    <div class="searchformwrapper">\n    <form class="search" action="search.html" method="get">\n      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>\n      <input type="submit" value="Go" />\n    </form>\n    </div>\n</div>\n<script>document.getElementById(\'searchbox\').style.display = "block"</script>\n\n\n\n\n\n\n\n\n        </div>\n      </div>\n      <div class="clearer"></div>\n    </div>\n    <div class="footer">\n      &copy;2015, rtfd.\n      \n      |\n      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>\n      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>\n      \n      |\n      <a href="_sources/index.markdown.txt"\n          rel="nofollow">Page source</a>\n    </div>\n\n    \n\n    \n  </body>\n</html>'
+----------------------------- Captured stdout call -----------------------------
+[01mRunning Sphinx v7.2.6[39;49;00m
+[01mmaking output directory... [39;49;00mdone
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_custom_md/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_custom_md/locales/en/LC_MESSAGES does not exist
+locale_dir /workdir/recommonmark-0.7.1/tests/sphinx_custom_md/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00mlocale_dir /workdir/recommonmark-0.7.1/tests/sphinx_custom_md/locales/en/LC_MESSAGES does not exist
+[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 54 warnings.[39;49;00m
+
+The HTML pages are in tests/sphinx_custom_md/_build/text.
+----------------------------- Captured stderr call -----------------------------
+[91mWARNING: Invalid configuration value found: 'language = None'. Update your configuration to a valid language code. Falling back to 'en' (English).[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'toctree' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_signature_line' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_content' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_inline' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_addname' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_returns' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameterlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter_list' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_type_parameter' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_optional' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_annotation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_space' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_name' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_operator' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_punctuation' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_keyword_type' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_number' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_string' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'desc_sig_literal_char' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'versionmodified' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'seealso' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'productionlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'production' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'index' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'centered' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'acks' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlist' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'hlistcol' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'compact_paragraph' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'glossary' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'only' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'start_of_file' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'highlightlang' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'tabular_col_spec' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'pending_xref' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'number_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'download_reference' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_emphasis' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'literal_strong' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'manpage' is already registered, its visitors will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'deprecated' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionadded' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.changeset: directive 'versionchanged' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: directive 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.index: role 'index' is already registered, it will be overridden[39;49;00m
+[91mWARNING: while setting up extension sphinx.domains.math: role 'eq' is already registered, it will be overridden[39;49;00m
+[91mWARNING: html_static_path entry '_static' does not exist[39;49;00m
+=============================== warnings summary ===============================
+tests/test_basic.py:35
+  /workdir/recommonmark-0.7.1/tests/test_basic.py:35: DeprecationWarning: invalid escape sequence '\ '
+    """
+
+tests/test_basic.py:52
+  /workdir/recommonmark-0.7.1/tests/test_basic.py:52: DeprecationWarning: invalid escape sequence '\ '
+    """
+
+tests/test_basic.py: 51 warnings
+  /workdir/recommonmark-0.7.1/recommonmark/parser.py:117: DeprecationWarning: nodes.Text: initialization argument "rawsource" is ignored and will be removed in Docutils 2.0.
+    self.current_node.append(nodes.Text(mdnode.literal, mdnode.literal))
+
+tests/test_basic.py: 26 warnings
+  /workdir/recommonmark-0.7.1/recommonmark/parser.py:75: UserWarning: Container node skipped: type=document
+    warn("Container node skipped: type={0}".format(mdnode.t))
+
+tests/test_sphinx.py::GenericTests::test_code
+  /workdir/recommonmark-0.7.1/.tox/graalpylibtest-sphinx18/lib/python3.10/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'GraalVM JSSE'. See: https://github.com/urllib3/urllib3/issues/3020
+    warnings.warn(
+
+tests/test_sphinx.py::CustomExtensionTests::test_integration
+  /workdir/recommonmark-0.7.1/recommonmark/transform.py:254: DeprecationWarning: invalid escape sequence '\w'
+    match = re.search('[ ]?[\w_-]+::.*', language)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/recommonmark/0.7.1/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_sphinx.py::GenericTests::test_code - AssertionError: '<pre>...
+FAILED tests/test_sphinx.py::GenericTests::test_headings - AssertionError: '<...
+FAILED tests/test_sphinx.py::GenericTests::test_image - AssertionError: '<p><...
+FAILED tests/test_sphinx.py::GenericTests::test_links - AssertionError: 'This...
+FAILED tests/test_sphinx.py::GenericTests::test_lists - AssertionError: '<ul ...
+FAILED tests/test_sphinx.py::CodeBlockTests::test_integration - AssertionErro...
+FAILED tests/test_sphinx.py::IndentedCodeTests::test_integration - AssertionE...
+FAILED tests/test_sphinx.py::NestedHeaderBlock::test_integration - AssertionE...
+FAILED tests/test_sphinx.py::CustomExtensionTests::test_integration - Asserti...
+================== 9 failed, 19 passed, 81 warnings in 22.90s ==================
+ERROR: InvocationError for command /workdir/recommonmark-0.7.1/.tox/graalpylibtest-sphinx18/bin/pytest -v --tb=native --junitxml /workdir/results/recommonmark/0.7.1/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-sphinx18: commands failed

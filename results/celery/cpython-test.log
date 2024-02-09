@@ -1,0 +1,145 @@
+GLOB sdist-make: /workdir/celery-5.2.7/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/celery-5.2.7/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rexamples/django/requirements.txt, -rrequirements/test-ci-default.txt, -rrequirements/security.txt, -rrequirements/default.txt, -rrequirements/pkgutils.txt, -rrequirements/test-ci-base.txt, -rrequirements/dev.txt, -rrequirements/test.txt, -rrequirements/test-integration.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/celery-5.2.7/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring futures: markers 'python_version < "3.0"' don't match your environment
+Ignoring tblib: markers 'python_version < "3.8.0"' don't match your environment
+Ignoring eventlet: markers 'python_version < "3.10"' don't match your environment
+Ignoring futures: markers 'python_version < "3.0"' don't match your environment
+Ignoring importlib-metadata: markers 'python_version < "3.8"' don't match your environment
+Ignoring futures: markers 'python_version < "3.0"' don't match your environment
+Collecting git+https://github.com/celery/py-amqp.git (from -r requirements/dev.txt (line 2))
+  Cloning https://github.com/celery/py-amqp.git to /tmp/pip-req-build-2lfr0__3
+  Running command git clone --filter=blob:none --quiet https://github.com/celery/py-amqp.git /tmp/pip-req-build-2lfr0__3
+  Resolved https://github.com/celery/py-amqp.git to commit 75a6e0fce4008430c831eec067679c728a0e017d
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/celery/kombu.git (from -r requirements/dev.txt (line 3))
+  Cloning https://github.com/celery/kombu.git to /tmp/pip-req-build-20tbon4k
+  Running command git clone --filter=blob:none --quiet https://github.com/celery/kombu.git /tmp/pip-req-build-20tbon4k
+  Resolved https://github.com/celery/kombu.git to commit 562b6f6fefa8f00fb5667225e4f55277fc4bfd9b
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/celery/billiard.git (from -r requirements/dev.txt (line 4))
+  Cloning https://github.com/celery/billiard.git to /tmp/pip-req-build-z5sjixta
+  Running command git clone --filter=blob:none --quiet https://github.com/celery/billiard.git /tmp/pip-req-build-z5sjixta
+  Resolved https://github.com/celery/billiard.git to commit 13922230092a4191583e592e9c6d49f912a3fd03
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting django>=2.2.1 (from -r examples/django/requirements.txt (line 1))
+  Downloading Django-4.2.7-py3-none-any.whl.metadata (4.1 kB)
+Collecting sqlalchemy>=1.0.14 (from -r examples/django/requirements.txt (line 2))
+  Downloading SQLAlchemy-2.0.23-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Collecting celery>=5.0.5 (from -r examples/django/requirements.txt (line 3))
+  Downloading celery-5.3.5-py3-none-any.whl.metadata (21 kB)
+Collecting pytest-cov (from -r requirements/test-ci-base.txt (line 1))
+  Using cached pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting codecov (from -r requirements/test-ci-base.txt (line 2))
+  Downloading codecov-2.1.13-py2.py3-none-any.whl (16 kB)
+Collecting redis!=4.0.0,!=4.0.1,>=3.4.1 (from -r requirements/extras/redis.txt (line 1))
+  Using cached redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting python-memcached (from -r requirements/extras/pymemcache.txt (line 1))
+  Downloading python_memcached-1.59-py2.py3-none-any.whl (16 kB)
+Collecting cryptography (from -r requirements/extras/auth.txt (line 1))
+  Using cached cryptography-41.0.5-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Collecting ephem (from -r requirements/extras/solar.txt (line 1))
+  Downloading ephem-4.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.0 kB)
+Collecting pymongo>=3.11.1 (from pymongo[srv]>=3.11.1->-r requirements/extras/mongodb.txt (line 1))
+  Downloading pymongo-4.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+Collecting PyYAML>=3.10 (from -r requirements/extras/yaml.txt (line 1))
+  Using cached PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting tblib>=1.5.0 (from -r requirements/extras/tblib.txt (line 1))
+  Downloading tblib-3.0.0-py3-none-any.whl.metadata (25 kB)
+Collecting softlayer_messaging>=1.0.3 (from -r requirements/extras/slmq.txt (line 1))
+  Downloading softlayer_messaging-1.0.3.tar.gz (5.4 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting msgpack (from -r requirements/extras/msgpack.txt (line 1))
+  Using cached msgpack-1.0.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+Collecting pylibmc (from -r requirements/extras/memcache.txt (line 1))
+  Downloading pylibmc-1.6.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.7 MB/s eta 0:00:00
+Collecting gevent>=1.5.0 (from -r requirements/extras/gevent.txt (line 1))
+  Downloading gevent-23.9.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting elasticsearch (from -r requirements/extras/elasticsearch.txt (line 1))
+  Downloading elasticsearch-8.11.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting pycouchdb (from -r requirements/extras/couchdb.txt (line 1))
+  Downloading pycouchdb-1.14.2-py2.py3-none-any.whl (12 kB)
+Collecting couchbase>=3.0.0 (from -r requirements/extras/couchbase.txt (line 1))
+  Downloading couchbase-4.1.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+Collecting pyArango>=1.3.2 (from -r requirements/extras/arangodb.txt (line 1))
+  Downloading pyArango-2.0.2-py2.py3-none-any.whl (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.5/52.5 kB 4.1 MB/s eta 0:00:00
+Collecting python-consul2 (from -r requirements/extras/consul.txt (line 1))
+  Downloading python_consul2-0.1.5-py2.py3-none-any.whl (30 kB)
+Collecting pydocumentdb==2.3.2 (from -r requirements/extras/cosmosdbsql.txt (line 1))
+  Downloading pydocumentdb-2.3.2.tar.gz (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 7.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cassandra-driver<3.21.0 (from -r requirements/extras/cassandra.txt (line 1))
+  Downloading cassandra-driver-3.20.2.tar.gz (482 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 482.8/482.8 kB 19.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting azure-storage-blob==12.9.0 (from -r requirements/extras/azureblockblob.txt (line 1))
+  Downloading azure_storage_blob-12.9.0-py2.py3-none-any.whl (356 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 356.5/356.5 kB 17.3 MB/s eta 0:00:00
+Collecting pycurl==7.43.0.5 (from -r requirements/test-ci-default.txt (line 23))
+  Downloading pycurl-7.43.0.5.tar.gz (216 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.9/216.9 kB 10.9 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pytz>=2021.3 (from -r requirements/default.txt (line 1))
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting billiard<4.0,>=3.6.4.0 (from -r requirements/default.txt (line 2))
+  Using cached billiard-3.6.4.0-py3-none-any.whl (89 kB)
+Collecting kombu<6.0,>=5.2.3 (from -r requirements/default.txt (line 3))
+  Using cached kombu-5.3.4-py3-none-any.whl.metadata (3.1 kB)
+Collecting vine<6.0,>=5.0.0 (from -r requirements/default.txt (line 4))
+  Using cached vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting click<9.0,>=8.0.3 (from -r requirements/default.txt (line 5))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting click-didyoumean>=0.0.3 (from -r requirements/default.txt (line 6))
+  Using cached click_didyoumean-0.3.0-py3-none-any.whl (2.7 kB)
+Collecting click-repl>=0.2.0 (from -r requirements/default.txt (line 7))
+  Using cached click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting click-plugins>=1.1.1 (from -r requirements/default.txt (line 8))
+  Using cached click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: setuptools>=40.8.0 in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/pkgutils.txt (line 1)) (68.2.2)
+Requirement already satisfied: wheel>=0.33.1 in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/pkgutils.txt (line 2)) (0.41.3)
+Collecting flake8>=3.8.3 (from -r requirements/pkgutils.txt (line 3))
+  Using cached flake8-6.1.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting flakeplus>=1.1 (from -r requirements/pkgutils.txt (line 4))
+  Downloading flakeplus-1.1.0-py2.py3-none-any.whl (7.1 kB)
+Collecting flake8-docstrings~=1.5 (from -r requirements/pkgutils.txt (line 5))
+  Downloading flake8_docstrings-1.7.0-py2.py3-none-any.whl (5.0 kB)
+Collecting pydocstyle~=5.0 (from -r requirements/pkgutils.txt (line 6))
+  Downloading pydocstyle-5.1.1-py3-none-any.whl (35 kB)
+Collecting tox>=3.8.4 (from -r requirements/pkgutils.txt (line 7))
+  Using cached tox-4.11.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting sphinx2rst>=1.0 (from -r requirements/pkgutils.txt (line 8))
+  Downloading sphinx2rst-1.1.0-py2.py3-none-any.whl (5.5 kB)
+Collecting bumpversion (from -r requirements/pkgutils.txt (line 11))
+  Using cached bumpversion-0.6.0-py2.py3-none-any.whl (8.4 kB)
+ERROR: Cannot install billiard 4.2.0 (from git+https://github.com/celery/billiard.git) and billiard<4.0 and >=3.6.4.0 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested billiard<4.0 and >=3.6.4.0
+    The user requested billiard 4.2.0 (from git+https://github.com/celery/billiard.git)
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rexamples/django/requirements.txt, -rrequirements/test-ci-default.txt, -rrequirements/security.txt, -rrequirements/default.txt, -rrequirements/pkgutils.txt, -rrequirements/test-ci-base.txt, -rrequirements/dev.txt, -rrequirements/test.txt, -rrequirements/test-integration.txt]; v = InvocationError('/workdir/celery-5.2.7/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rexamples/django/requirements.txt -rrequirements/test-ci-default.txt -rrequirements/security.txt -rrequirements/default.txt -rrequirements/pkgutils.txt -rrequirements/test-ci-base.txt -rrequirements/dev.txt -rrequirements/test.txt -rrequirements/test-integration.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rexamples/django/requirements.txt, -rrequirements/test-ci-default.txt, -rrequirements/security.txt, -rrequirements/default.txt, -rrequirements/pkgutils.txt, -rrequirements/test-ci-base.txt, -rrequirements/dev.txt, -rrequirements/test.txt, -rrequirements/test-integration.txt]; v = InvocationError('/workdir/celery-5.2.7/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rexamples/django/requirements.txt -rrequirements/test-ci-default.txt -rrequirements/security.txt -rrequirements/default.txt -rrequirements/pkgutils.txt -rrequirements/test-ci-base.txt -rrequirements/dev.txt -rrequirements/test.txt -rrequirements/test-integration.txt', 1)

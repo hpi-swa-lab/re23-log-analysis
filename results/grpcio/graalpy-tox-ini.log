@@ -1,0 +1,15 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/grpcio/1.51.1/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rrequirements.bazel.txt
+	-rexamples/python/xds/requirements.txt
+	-rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt
+	-rtools/run_tests/xds_k8s_test_driver/requirements.txt
+	-rtools/internal_ci/helper_scripts/requirements.linux_perf.txt
+	-rtools/internal_ci/helper_scripts/requirements.macos.txt
+	-rthird_party/benchmark/requirements.txt
+	-rthird_party/benchmark/tools/requirements.txt
+	-rthird_party/benchmark/bindings/python/requirements.txt
+

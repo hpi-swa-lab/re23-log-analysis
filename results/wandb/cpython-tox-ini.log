@@ -1,0 +1,19 @@
+[testenv]
+commands = {envpython} -m xmlrunner --output-file /workdir/results/wandb/0.13.5/1/cpython-test-results.xml
+deps = mock
+	unittest-xml-reporting
+	-rrequirements_build.txt
+	-rrequirements_dev.txt
+	-rrequirements.txt
+	-rrequirements_sweeps.txt
+	-rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt
+	-rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt
+	-rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt
+	-rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt
+	-rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt
+	-rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt
+	-rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt
+	-rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt
+	-rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt
+	-rtests/unit_tests_old/assets/fixtures/requirements.txt
+

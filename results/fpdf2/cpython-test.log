@@ -1,0 +1,341 @@
+GLOB sdist-make: /workdir/fpdf2-2.7.4/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/fpdf2-2.7.4/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rcontributors/requirements.txt, -rtest/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/fpdf2-2.7.4/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting agithub (from -r contributors/requirements.txt (line 1))
+  Downloading agithub-2.2.2-py2.py3-none-any.whl (20 kB)
+Collecting jinja2 (from -r contributors/requirements.txt (line 2))
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting bandit (from -r test/requirements.txt (line 1))
+  Using cached bandit-1.7.5-py3-none-any.whl (123 kB)
+Collecting black (from -r test/requirements.txt (line 2))
+  Downloading black-23.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.9/66.9 kB 3.6 MB/s eta 0:00:00
+Collecting camelot-py (from -r test/requirements.txt (line 4))
+  Downloading camelot_py-0.11.0-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.0/41.0 kB 6.5 MB/s eta 0:00:00
+Collecting endesive (from -r test/requirements.txt (line 5))
+  Downloading endesive-2.16-py3-none-any.whl.metadata (5.3 kB)
+Collecting ghostscript (from -r test/requirements.txt (line 6))
+  Downloading ghostscript-0.7-py2.py3-none-any.whl (25 kB)
+Collecting opencv-python (from -r test/requirements.txt (line 7))
+  Downloading opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+Collecting pre-commit (from -r test/requirements.txt (line 8))
+  Downloading pre_commit-3.5.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting pylint (from -r test/requirements.txt (line 9))
+  Downloading pylint-3.0.2-py3-none-any.whl.metadata (12 kB)
+Collecting pytest-cov (from -r test/requirements.txt (line 11))
+  Using cached pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting qrcode (from -r test/requirements.txt (line 12))
+  Downloading qrcode-7.4.2-py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 kB 5.5 MB/s eta 0:00:00
+Collecting semgrep (from -r test/requirements.txt (line 13))
+  Downloading semgrep-1.50.0-cp38.cp39.cp310.cp311.py37.py38.py39.py310.py311-none-any.whl.metadata (19 kB)
+Collecting tabula-py (from -r test/requirements.txt (line 14))
+  Downloading tabula_py-2.9.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting iniconfig (from pytest)
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging (from pytest)
+  Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest)
+  Using cached pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest)
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tomli>=1.0.0 (from pytest)
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->-r contributors/requirements.txt (line 2))
+  Using cached MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting GitPython>=1.0.1 (from bandit->-r test/requirements.txt (line 1))
+  Using cached GitPython-3.1.40-py3-none-any.whl.metadata (12 kB)
+Collecting PyYAML>=5.3.1 (from bandit->-r test/requirements.txt (line 1))
+  Using cached PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting stevedore>=1.20.0 (from bandit->-r test/requirements.txt (line 1))
+  Using cached stevedore-5.1.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting rich (from bandit->-r test/requirements.txt (line 1))
+  Using cached rich-13.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting click>=8.0.0 (from black->-r test/requirements.txt (line 2))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting mypy-extensions>=0.4.3 (from black->-r test/requirements.txt (line 2))
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting pathspec>=0.9.0 (from black->-r test/requirements.txt (line 2))
+  Downloading pathspec-0.11.2-py3-none-any.whl.metadata (19 kB)
+Collecting platformdirs>=2 (from black->-r test/requirements.txt (line 2))
+  Using cached platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting typing-extensions>=4.0.1 (from black->-r test/requirements.txt (line 2))
+  Using cached typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting chardet>=3.0.4 (from camelot-py->-r test/requirements.txt (line 4))
+  Using cached chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting numpy>=1.13.3 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading numpy-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 10.7 MB/s eta 0:00:00
+Collecting openpyxl>=2.5.8 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading openpyxl-3.1.2-py2.py3-none-any.whl (249 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.0/250.0 kB 13.3 MB/s eta 0:00:00
+Collecting pandas>=0.23.4 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading pandas-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting pdfminer.six>=20200726 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading pdfminer.six-20221105-py3-none-any.whl (5.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 29.3 MB/s eta 0:00:00
+Collecting pypdf>=3.0.0 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading pypdf-3.17.1-py3-none-any.whl.metadata (7.5 kB)
+Collecting tabulate>=0.8.9 (from camelot-py->-r test/requirements.txt (line 4))
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting certvalidator (from endesive->-r test/requirements.txt (line 5))
+  Downloading certvalidator-0.11.1-py2.py3-none-any.whl (31 kB)
+Collecting cryptography (from endesive->-r test/requirements.txt (line 5))
+  Downloading cryptography-41.0.5-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Collecting asn1crypto (from endesive->-r test/requirements.txt (line 5))
+  Downloading asn1crypto-1.5.1-py2.py3-none-any.whl (105 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.0/105.0 kB 18.8 MB/s eta 0:00:00
+Collecting oscrypto (from endesive->-r test/requirements.txt (line 5))
+  Downloading oscrypto-1.3.0-py2.py3-none-any.whl (194 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 194.6/194.6 kB 17.3 MB/s eta 0:00:00
+Collecting lxml (from endesive->-r test/requirements.txt (line 5))
+  Downloading lxml-4.9.3-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting pykcs11 (from endesive->-r test/requirements.txt (line 5))
+  Downloading PyKCS11-1.5.12.tar.gz (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.7/79.7 kB 14.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting Pillow (from endesive->-r test/requirements.txt (line 5))
+  Using cached Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting pytz (from endesive->-r test/requirements.txt (line 5))
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting requests (from endesive->-r test/requirements.txt (line 5))
+  Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting paramiko (from endesive->-r test/requirements.txt (line 5))
+  Downloading paramiko-3.3.1-py3-none-any.whl.metadata (4.4 kB)
+Collecting attrs (from endesive->-r test/requirements.txt (line 5))
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Requirement already satisfied: setuptools>=38.6.0 in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from ghostscript->-r test/requirements.txt (line 6)) (68.2.2)
+Collecting cfgv>=2.0.0 (from pre-commit->-r test/requirements.txt (line 8))
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit->-r test/requirements.txt (line 8))
+  Downloading identify-2.5.32-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit->-r test/requirements.txt (line 8))
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit->-r test/requirements.txt (line 8))
+  Using cached virtualenv-20.24.7-py3-none-any.whl.metadata (4.5 kB)
+Collecting astroid<=3.1.0-dev0,>=3.0.1 (from pylint->-r test/requirements.txt (line 9))
+  Downloading astroid-3.0.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting isort<6,>=4.2.5 (from pylint->-r test/requirements.txt (line 9))
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 13.3 MB/s eta 0:00:00
+Collecting mccabe<0.8,>=0.6 (from pylint->-r test/requirements.txt (line 9))
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting tomlkit>=0.10.1 (from pylint->-r test/requirements.txt (line 9))
+  Downloading tomlkit-0.12.3-py3-none-any.whl.metadata (2.7 kB)
+Collecting dill>=0.2 (from pylint->-r test/requirements.txt (line 9))
+  Downloading dill-0.3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting coverage>=5.2.1 (from coverage[toml]>=5.2.1->pytest-cov->-r test/requirements.txt (line 11))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting pypng (from qrcode->-r test/requirements.txt (line 12))
+  Downloading pypng-0.20220715.0-py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 11.4 MB/s eta 0:00:00
+Collecting boltons~=21.0 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading boltons-21.0.0-py2.py3-none-any.whl (193 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.7/193.7 kB 22.5 MB/s eta 0:00:00
+Collecting click-option-group~=0.5 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading click_option_group-0.5.6-py3-none-any.whl.metadata (8.3 kB)
+Collecting colorama~=0.4.0 (from semgrep->-r test/requirements.txt (line 13))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting defusedxml~=0.7.1 (from semgrep->-r test/requirements.txt (line 13))
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting glom~=22.1 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading glom-22.1.0-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.7/100.7 kB 16.6 MB/s eta 0:00:00
+Collecting jsonschema~=4.6 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading jsonschema-4.20.0-py3-none-any.whl.metadata (8.1 kB)
+Collecting peewee~=3.14 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading peewee-3.17.0.tar.gz (2.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 30.6 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting ruamel.yaml<0.18,>=0.16.0 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading ruamel.yaml-0.17.40-py3-none-any.whl.metadata (19 kB)
+Collecting urllib3~=1.26 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading urllib3-1.26.18-py2.py3-none-any.whl.metadata (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 9.3 MB/s eta 0:00:00
+Collecting wcmatch~=8.3 (from semgrep->-r test/requirements.txt (line 13))
+  Downloading wcmatch-8.5-py3-none-any.whl.metadata (5.1 kB)
+Collecting distro (from tabula-py->-r test/requirements.txt (line 14))
+  Downloading distro-1.8.0-py3-none-any.whl (20 kB)
+Collecting gitdb<5,>=4.0.1 (from GitPython>=1.0.1->bandit->-r test/requirements.txt (line 1))
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting face>=20.1.0 (from glom~=22.1->semgrep->-r test/requirements.txt (line 13))
+  Downloading face-22.0.0-py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 10.1 MB/s eta 0:00:00
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema~=4.6->semgrep->-r test/requirements.txt (line 13))
+  Downloading jsonschema_specifications-2023.11.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting referencing>=0.28.4 (from jsonschema~=4.6->semgrep->-r test/requirements.txt (line 13))
+  Downloading referencing-0.31.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema~=4.6->semgrep->-r test/requirements.txt (line 13))
+  Downloading rpds_py-0.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.7 kB)
+Collecting et-xmlfile (from openpyxl>=2.5.8->camelot-py->-r test/requirements.txt (line 4))
+  Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+Collecting python-dateutil>=2.8.2 (from pandas>=0.23.4->camelot-py->-r test/requirements.txt (line 4))
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting tzdata>=2022.1 (from pandas>=0.23.4->camelot-py->-r test/requirements.txt (line 4))
+  Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 24.6 MB/s eta 0:00:00
+Collecting charset-normalizer>=2.0.0 (from pdfminer.six>=20200726->camelot-py->-r test/requirements.txt (line 4))
+  Using cached charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+Collecting cffi>=1.12 (from cryptography->endesive->-r test/requirements.txt (line 5))
+  Downloading cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting idna<4,>=2.5 (from requests->endesive->-r test/requirements.txt (line 5))
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting certifi>=2017.4.17 (from requests->endesive->-r test/requirements.txt (line 5))
+  Using cached certifi-2023.11.17-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->bandit->-r test/requirements.txt (line 1))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->bandit->-r test/requirements.txt (line 1))
+  Downloading pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting ruamel.yaml.clib>=0.2.7 (from ruamel.yaml<0.18,>=0.16.0->semgrep->-r test/requirements.txt (line 13))
+  Downloading ruamel.yaml.clib-0.2.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (2.2 kB)
+Collecting pbr!=2.1.0,>=2.0.0 (from stevedore>=1.20.0->bandit->-r test/requirements.txt (line 1))
+  Using cached pbr-6.0.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit->-r test/requirements.txt (line 8))
+  Using cached distlib-0.3.7-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit->-r test/requirements.txt (line 8))
+  Using cached filelock-3.13.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting bracex>=2.1.1 (from wcmatch~=8.3->semgrep->-r test/requirements.txt (line 13))
+  Downloading bracex-2.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting bcrypt>=3.2 (from paramiko->endesive->-r test/requirements.txt (line 5))
+  Downloading bcrypt-4.0.1-cp36-abi3-manylinux_2_28_x86_64.whl (593 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 593.7/593.7 kB 24.9 MB/s eta 0:00:00
+Collecting pynacl>=1.5 (from paramiko->endesive->-r test/requirements.txt (line 5))
+  Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (856 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 856.7/856.7 kB 26.7 MB/s eta 0:00:00
+Collecting pycparser (from cffi>=1.12->cryptography->endesive->-r test/requirements.txt (line 5))
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->GitPython>=1.0.1->bandit->-r test/requirements.txt (line 1))
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->bandit->-r test/requirements.txt (line 1))
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=0.23.4->camelot-py->-r test/requirements.txt (line 4))
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Downloading black-23.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 29.3 MB/s eta 0:00:00
+Downloading endesive-2.16-py3-none-any.whl (341 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 23.0 MB/s eta 0:00:00
+Downloading opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.7/61.7 MB 24.9 MB/s eta 0:00:00
+Downloading pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.7/203.7 kB 16.1 MB/s eta 0:00:00
+Downloading pylint-3.0.2-py3-none-any.whl (510 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.6/510.6 kB 26.2 MB/s eta 0:00:00
+Using cached pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Downloading semgrep-1.50.0-cp38.cp39.cp310.cp311.py37.py38.py39.py310.py311-none-any.whl (34.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.4/34.4 MB 26.6 MB/s eta 0:00:00
+Downloading tabula_py-2.9.0-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 30.0 MB/s eta 0:00:00
+Downloading astroid-3.0.1-py3-none-any.whl (275 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 275.2/275.2 kB 24.5 MB/s eta 0:00:00
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Using cached chardet-5.2.0-py3-none-any.whl (199 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Downloading click_option_group-0.5.6-py3-none-any.whl (12 kB)
+Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (227 kB)
+Downloading dill-0.3.7-py3-none-any.whl (115 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.3/115.3 kB 18.7 MB/s eta 0:00:00
+Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Using cached GitPython-3.1.40-py3-none-any.whl (190 kB)
+Downloading identify-2.5.32-py2.py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 16.7 MB/s eta 0:00:00
+Downloading jsonschema-4.20.0-py3-none-any.whl (84 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.7/84.7 kB 15.7 MB/s eta 0:00:00
+Using cached MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Downloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Downloading numpy-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 30.0 MB/s eta 0:00:00
+Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Downloading pandas-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 29.8 MB/s eta 0:00:00
+Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+Downloading cryptography-41.0.5-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 29.5 MB/s eta 0:00:00
+Using cached platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Using cached pluggy-1.3.0-py3-none-any.whl (18 kB)
+Downloading pypdf-3.17.1-py3-none-any.whl (277 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 277.6/277.6 kB 22.9 MB/s eta 0:00:00
+Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Using cached PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Downloading ruamel.yaml-0.17.40-py3-none-any.whl (113 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.7/113.7 kB 18.9 MB/s eta 0:00:00
+Using cached stevedore-5.1.0-py3-none-any.whl (49 kB)
+Downloading tomlkit-0.12.3-py3-none-any.whl (37 kB)
+Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Downloading urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.8/143.8 kB 22.1 MB/s eta 0:00:00
+Using cached virtualenv-20.24.7-py3-none-any.whl (3.8 MB)
+Downloading wcmatch-8.5-py3-none-any.whl (39 kB)
+Downloading lxml-4.9.3-cp310-cp310-manylinux_2_28_x86_64.whl (7.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 31.1 MB/s eta 0:00:00
+Downloading paramiko-3.3.1-py3-none-any.whl (224 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.8/224.8 kB 25.3 MB/s eta 0:00:00
+Using cached Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.6 MB)
+Downloading bracex-2.4-py3-none-any.whl (11 kB)
+Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Downloading cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 26.5 MB/s eta 0:00:00
+Using cached charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+Using cached distlib-0.3.7-py2.py3-none-any.whl (468 kB)
+Using cached filelock-3.13.1-py3-none-any.whl (11 kB)
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Downloading jsonschema_specifications-2023.11.1-py3-none-any.whl (17 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached pbr-6.0.0-py2.py3-none-any.whl (107 kB)
+Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 29.0 MB/s eta 0:00:00
+Downloading referencing-0.31.0-py3-none-any.whl (25 kB)
+Downloading rpds_py-0.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 28.0 MB/s eta 0:00:00
+Downloading ruamel.yaml.clib-0.2.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (526 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 526.7/526.7 kB 25.3 MB/s eta 0:00:00
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Building wheels for collected packages: peewee, pykcs11
+  Building wheel for peewee (pyproject.toml): started
+  Building wheel for peewee (pyproject.toml): finished with status 'done'
+  Created wheel for peewee: filename=peewee-3.17.0-cp310-cp310-linux_x86_64.whl size=798962 sha256=e21655a219f69e1c5cef3ee40b3f7b9aacf10305f2a89d32d5613eee11a032ed
+  Stored in directory: /workdir/.cache/pip/wheels/c7/70/ad/212867e96e7004265a69c4aa5dcff00a95f547a67ba26e7e76
+  Building wheel for pykcs11 (setup.py): started
+  Building wheel for pykcs11 (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      running build_ext
+      building 'PyKCS11._LowLevel' extension
+      swigging src/pykcs11.i to src/pykcs11_wrap.cpp
+      swig -python -c++ -o src/pykcs11_wrap.cpp src/pykcs11.i
+      error: command 'swig' failed: No such file or directory
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pykcs11
+  Running setup.py clean for pykcs11
+Successfully built peewee
+Failed to build pykcs11
+ERROR: Could not build wheels for pykcs11, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rcontributors/requirements.txt, -rtest/requirements.txt]; v = InvocationError('/workdir/fpdf2-2.7.4/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rcontributors/requirements.txt -rtest/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rcontributors/requirements.txt, -rtest/requirements.txt]; v = InvocationError('/workdir/fpdf2-2.7.4/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rcontributors/requirements.txt -rtest/requirements.txt', 1)

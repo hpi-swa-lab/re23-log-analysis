@@ -1,0 +1,1094 @@
+GLOB sdist-make: /workdir/fonttools-4.38.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt, -rrequirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/log/graalpylibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring brotlicffi: markers 'platform_python_implementation == "PyPy"' don't match your environment
+Ignoring scipy: markers 'platform_python_implementation != "PyPy" and python_version <= "3.7"' don't match your environment
+Ignoring munkres: markers 'platform_python_implementation == "PyPy"' don't match your environment
+Ignoring pyobjc: markers 'sys_platform == "darwin"' don't match your environment
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting tox>=2.5
+  Using cached tox-3.28.0-py2.py3-none-any.whl (86 kB)
+Collecting bump2version>=0.5.6
+  Downloading bump2version-1.0.1-py2.py3-none-any.whl (22 kB)
+Collecting sphinx>=1.5.5
+  Downloading sphinx-7.2.6-py3-none-any.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 6.4 MB/s eta 0:00:00
+Collecting mypy>=0.782
+  Downloading mypy-1.7.0-py3-none-any.whl (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 8.1 MB/s eta 0:00:00
+Collecting brotli==1.0.9
+  Downloading Brotli-1.0.9.zip (510 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.2/510.2 kB 5.6 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-71iwshcf/brotli_2e1d514b934b4db693acd1a8b763075d/python/_brotli.cc
+Looking for GraalPy patches for Brotli
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting unicodedata2==14.0.0
+  Downloading unicodedata2-14.0.0.tar.gz (590 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 590.9/590.9 kB 8.4 MB/s eta 0:00:00
+Looking for GraalPy patches for unicodedata2
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting scipy==1.9.1
+  Downloading scipy-1.9.1.tar.gz (42.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.0/42.0 MB 3.7 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/scipy/_lib/boost/boost/python/detail/wrap_python.hpp
+auto-patching C API usages in /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/scipy/_lib/boost/boost/python/suite/indexing/detail/indexing_suite_detail.hpp
+auto-patching C API usages in /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/scipy/_lib/boost/boost/mpi/python/serialize.hpp
+auto-patching C API usages in /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/scipy/_lib/boost/boost/mpi/python/skeleton_and_content.hpp
+Looking for GraalPy patches for scipy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+scipy == 1.4.1
+scipy == 1.7.3
+scipy == 1.8.1
+scipy == 1.9.3
+scipy == 1.10.1
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [999 lines of output]
+      + meson setup --native-file=/tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/.mesonpy-native-file.ini -Ddebug=false -Doptimization=2 --prefix=/opt/graalpy /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34 /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/.mesonpy-2omgrich/build
+      The Meson build system
+      Version: 0.62.2
+      Source dir: /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34
+      Build dir: /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/.mesonpy-2omgrich/build
+      Build type: native build
+      Project name: SciPy
+      Project version: 1.9.1
+      C compiler for the host machine: cc (gcc 8.5.0 "cc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      C linker for the host machine: cc ld.bfd 2.30-119
+      C++ compiler for the host machine: c++ (gcc 8.5.0 "c++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      C++ linker for the host machine: c++ ld.bfd 2.30-119
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES
+      Library m found: YES
+      Fortran compiler for the host machine: gfortran (gcc 8.5.0 "GNU Fortran (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      Fortran linker for the host machine: gfortran ld.bfd 2.30-119
+      Program cython found: YES (/tmp/pip-build-env-3_fxo461/overlay/bin/cython)
+      Program pythran found: YES (/tmp/pip-build-env-3_fxo461/overlay/bin/pythran)
+      Program cp found: YES (/usr/bin/cp)
+      Program python found: YES (/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/bin/python)
+      Library npymath found: YES
+      Library npyrandom found: YES
+      Found pkg-config: /usr/bin/pkg-config (1.4.2)
+      Run-time dependency openblas found: YES 0.3.15
+      Dependency openblas found: YES 0.3.15 (cached)
+      Program _build_utils/cythoner.py found: YES (/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/bin/python /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/scipy/_build_utils/cythoner.py)
+      Checking for function "open_memstream" : NO
+      Configuring messagestream_config.h using configuration
+      Checking for size of "void*" : 8
+      Run-time dependency threads found: YES
+      Checking for size of "void*" : 8
+      Dependency threads found: YES unknown (cached)
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+      Compiler for C++ supports arguments -Wno-format-truncation: YES
+      Compiler for C++ supports arguments -Wno-class-memaccess: YES
+      Build targets in project: 201
+      
+      SciPy 1.9.1
+      
+        User defined options
+          Native files: /tmp/pip-install-71iwshcf/scipy_e9cae93024cb42d69508f2b52ef32f34/.mesonpy-native-file.ini
+          debug       : false
+          optimization: 2
+          prefix      : /opt/graalpy
+      
+      Found ninja-1.11.1.git.kitware.jobserver-1 at /tmp/pip-build-env-3_fxo461/overlay/bin/ninja
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_ufuncs_pxi_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_ufuncs_pxi_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_ufuncs_pxi_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_ufuncs_pxi_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_ufuncs_pxi_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_pxd' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_special' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_gen_pyx' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_gen_pyx' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_gen_pyx' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_gen_pyx' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_stats_gen_pyx' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_spatial_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_spatial_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target 'cython_linalg' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_lib_pxd' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_dummy_init_cyoptimize' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      WARNING: custom_target '_cython_tree' has more than one output! Using the first one.
+      /tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py:452: UserWarning: Using heuristics to map files to wheel, this may result in incorrect locations
+        warnings.warn('Using heuristics to map files to wheel, this may result in incorrect locations')
+      + meson compile
+      [1/1572] Generating scipy/_cython_tree with a custom command
+      [2/1572] Generating scipy/_lib/_lib_pxd with a custom command
+      [3/1572] Compiling C object scipy/_lib/_fpumode.graalpy231-310-native-x86_64-linux.so.p/_fpumode.c.o
+      [4/1572] Linking target scipy/_lib/_fpumode.graalpy231-310-native-x86_64-linux.so
+      [5/1572] Compiling C object scipy/_lib/_test_ccallback.graalpy231-310-native-x86_64-linux.so.p/src__test_ccallback.c.o
+      [6/1572] Generating scipy/special/_ufuncs_pxi_pxd with a custom command
+      [7/1572] Compiling C++ object scipy/_lib/_uarray/_uarray.graalpy231-310-native-x86_64-linux.so.p/vectorcall.cxx.o
+      [8/1572] Linking target scipy/_lib/_test_ccallback.graalpy231-310-native-x86_64-linux.so
+      [9/1572] Compiling C object scipy/special/libcephes.a.p/cephes_airy.c.o
+      [10/1572] Compiling C object scipy/special/libcephes.a.p/cephes_besselpoly.c.o
+      [11/1572] Compiling C object scipy/special/libcephes.a.p/cephes_bdtr.c.o
+      [12/1572] Compiling C object scipy/special/libcephes.a.p/cephes_btdtr.c.o
+      [13/1572] Compiling C object scipy/special/libcephes.a.p/cephes_beta.c.o
+      [14/1572] Compiling C object scipy/special/libcephes.a.p/cephes_chbevl.c.o
+      [15/1572] Compiling C object scipy/special/libcephes.a.p/cephes_cbrt.c.o
+      [16/1572] Compiling C object scipy/special/libcephes.a.p/cephes_const.c.o
+      [17/1572] Compiling C object scipy/special/libcephes.a.p/cephes_chdtr.c.o
+      [18/1572] Compiling C object scipy/special/libcephes.a.p/cephes_dawsn.c.o
+      [19/1572] Generating scipy/generate-version with a custom command
+      [20/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ellie.c.o
+      [21/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ellik.c.o
+      [22/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ellpe.c.o
+      [23/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ellpj.c.o
+      [24/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ellpk.c.o
+      [25/1572] Compiling C object scipy/special/libcephes.a.p/cephes_erfinv.c.o
+      [26/1572] Compiling C object scipy/special/libcephes.a.p/cephes_exp10.c.o
+      [27/1572] Compiling C object scipy/special/libcephes.a.p/cephes_dd_real.c.o
+      [28/1572] Compiling C object scipy/special/libcephes.a.p/cephes_exp2.c.o
+      [29/1572] Compiling C object scipy/special/libcephes.a.p/cephes_fdtr.c.o
+      [30/1572] Compiling C object scipy/special/libcephes.a.p/cephes_expn.c.o
+      [31/1572] Compiling C object scipy/special/libcephes.a.p/cephes_fresnl.c.o
+      [32/1572] Compiling C object scipy/special/libcephes.a.p/cephes_gamma.c.o
+      [33/1572] Compiling C object scipy/special/libcephes.a.p/cephes_gammasgn.c.o
+      [34/1572] Compiling C object scipy/special/libcephes.a.p/cephes_gdtr.c.o
+      [35/1572] Compiling C object scipy/special/libcephes.a.p/cephes_i0.c.o
+      [36/1572] Compiling C object scipy/special/libcephes.a.p/cephes_i1.c.o
+      [37/1572] Compiling C object scipy/special/libcephes.a.p/cephes_hyperg.c.o
+      [38/1572] Compiling C object scipy/special/libcephes.a.p/cephes_hyp2f1.c.o
+      [39/1572] Compiling C object scipy/special/libcephes.a.p/cephes_incbet.c.o
+      [40/1572] Compiling C object scipy/special/libcephes.a.p/cephes_igami.c.o
+      [41/1572] Compiling C object scipy/special/libcephes.a.p/cephes_igam.c.o
+      [42/1572] Compiling C object scipy/special/libcephes.a.p/cephes_incbi.c.o
+      [43/1572] Compiling C object scipy/special/libcephes.a.p/cephes_j1.c.o
+      [44/1572] Compiling C object scipy/special/libcephes.a.p/cephes_k0.c.o
+      [45/1572] Compiling C object scipy/special/libcephes.a.p/cephes_j0.c.o
+      [46/1572] Compiling C object scipy/special/libcephes.a.p/cephes_jv.c.o
+      [47/1572] Compiling C object scipy/special/libcephes.a.p/cephes_kn.c.o
+      [48/1572] Compiling C object scipy/special/libcephes.a.p/cephes_k1.c.o
+      [49/1572] Compiling C object scipy/special/libcephes.a.p/cephes_lanczos.c.o
+      [50/1572] Compiling C object scipy/special/libcephes.a.p/cephes_nbdtr.c.o
+      [51/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ndtr.c.o
+      [52/1572] Compiling C object scipy/special/libcephes.a.p/cephes_ndtri.c.o
+      [53/1572] Compiling C object scipy/special/libcephes.a.p/cephes_pdtr.c.o
+      [54/1572] Compiling C object scipy/special/libcephes.a.p/cephes_owens_t.c.o
+      [55/1572] Compiling C object scipy/special/libcephes.a.p/cephes_poch.c.o
+      [56/1572] Compiling C object scipy/special/libcephes.a.p/cephes_rgamma.c.o
+      [57/1572] Compiling C object scipy/special/libcephes.a.p/cephes_psi.c.o
+      [58/1572] Compiling C object scipy/special/libcephes.a.p/cephes_kolmogorov.c.o
+      [59/1572] Compiling C object scipy/special/libcephes.a.p/cephes_round.c.o
+      [60/1572] Compiling C object scipy/special/libcephes.a.p/cephes_shichi.c.o
+      [61/1572] Compiling C object scipy/special/libcephes.a.p/cephes_scipy_iv.c.o
+      [62/1572] Compiling C object scipy/special/libcephes.a.p/cephes_sici.c.o
+      [63/1572] Compiling C object scipy/special/libcephes.a.p/cephes_sindg.c.o
+      [64/1572] Compiling C object scipy/special/libcephes.a.p/cephes_sinpi.c.o
+      [65/1572] Compiling C object scipy/special/libcephes.a.p/cephes_spence.c.o
+      [66/1572] Compiling C object scipy/special/libcephes.a.p/cephes_tandg.c.o
+      [67/1572] Compiling C object scipy/special/libcephes.a.p/cephes_stdtr.c.o
+      [68/1572] Compiling C++ object scipy/_lib/_uarray/_uarray.graalpy231-310-native-x86_64-linux.so.p/_uarray_dispatch.cxx.o
+      [69/1572] Compiling C object scipy/special/libcephes.a.p/cephes_tukey.c.o
+      [70/1572] Compiling C object scipy/special/libcephes.a.p/cephes_yn.c.o
+      [71/1572] Linking target scipy/_lib/_uarray/_uarray.graalpy231-310-native-x86_64-linux.so
+      [72/1572] Compiling C object scipy/special/libcephes.a.p/cephes_yv.c.o
+      [73/1572] Compiling C object scipy/special/libcephes.a.p/cephes_unity.c.o
+      [74/1572] Compiling C object scipy/special/libcephes.a.p/cephes_struve.c.o
+      [75/1572] Compiling C object scipy/special/libcephes.a.p/cephes_zeta.c.o
+      [76/1572] Compiling C object scipy/special/libcephes.a.p/cephes_zetac.c.o
+      [77/1572] Linking static target scipy/special/libcephes.a
+      [78/1572] Generating scipy/generate-config with a custom command
+      [79/1572] Compiling C object scipy/special/_specfun.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [80/1572] Module scanner.
+      [81/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_algdiv.f.o
+      [82/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_alngam.f.o
+      [83/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_alnrel.f.o
+      [84/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_apser.f.o
+      [85/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_basym.f.o
+      [86/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bcorr.f.o
+      [87/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_betaln.f.o
+      [88/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bfrac.f.o
+      [89/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bgrat.f.o
+      [90/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bpser.f.o
+      [91/1572] Module scanner.
+      [92/1572] Module scanner.
+      [93/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_dgamln.f.o
+      [94/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bratio.f.o
+      [95/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zabs.f.o
+      [96/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zacai.f.o
+      [97/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zairy.f.o
+      [98/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zacon.f.o
+      [99/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zasyi.f.o
+      [100/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbesh.f.o
+      [101/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbesi.f.o
+      [102/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbesj.f.o
+      [103/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbesy.f.o
+      [104/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbesk.f.o
+      [105/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbinu.f.o
+      [106/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbiry.f.o
+      [107/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbunk.f.o
+      [108/1572] Module scanner.
+      [109/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zdiv.f.o
+      [110/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbuni.f.o
+      [111/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zexp.f.o
+      [112/1572] Generating scipy/special/cython_special with a custom command
+      [113/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zlog.f.o
+      [114/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zmlri.f.o
+      [115/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zkscl.f.o
+      [116/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zmlt.f.o
+      [117/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zs1s2.f.o
+      [118/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zshch.f.o
+      [119/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zrati.f.o
+      [120/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zsqrt.f.o
+      [121/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zseri.f.o
+      [122/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zbknu.f.o
+      [123/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zuchk.f.o
+      [124/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zunik.f.o
+      [125/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zuni1.f.o
+      [126/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zunhj.f.o
+      [127/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zuni2.f.o
+      [128/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zwrsk.f.o
+      [129/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_brcomp.f.o
+      [130/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_brcmp1.f.o
+      [131/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zunk1.f.o
+      [132/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zuoik.f.o
+      [133/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_bup.f.o
+      [134/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfbet.f.o
+      [135/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfchi.f.o
+      [136/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfbin.f.o
+      [137/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfchn.f.o
+      [138/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdff.f.o
+      [139/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfgam.f.o
+      [140/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdffnc.f.o
+      [141/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfpoi.f.o
+      [142/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfnor.f.o
+      [143/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdfnbn.f.o
+      [144/1572] Compiling Fortran object scipy/special/libamos.a.p/amos_zunk2.f.o
+      [145/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumbet.f.o
+      [146/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumbin.f.o
+      [147/1572] Linking static target scipy/special/libamos.a
+      [148/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdft.f.o
+      [149/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumchi.f.o
+      [150/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cdftnc.f.o
+      [151/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumf.f.o
+      [152/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumfnc.f.o
+      [153/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumgam.f.o
+      [154/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumchn.f.o
+      [155/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumnbn.f.o
+      [156/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumpoi.f.o
+      [157/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumnor.f.o
+      [158/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumt.f.o
+      [159/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_devlpl.f.o
+      [160/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_dinvnr.f.o
+      [161/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_cumtnc.f.o
+      [162/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_dinvr.f.o
+      [163/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_erf.f.o
+      [164/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_dt1.f.o
+      [165/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_dzror.f.o
+      [166/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_erfc1.f.o
+      [167/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_esum.f.o
+      [168/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_exparg.f.o
+      [169/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_fpser.f.o
+      [170/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gam1.f.o
+      [171/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gamma_fort.f.o
+      [172/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gamln1.f.o
+      [173/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gamln.f.o
+      [174/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_grat1.f.o
+      [175/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gsumln.f.o
+      [176/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_ipmpar.f.o
+      [177/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_psi_fort.f.o
+      [178/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_rcomp.f.o
+      [179/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_rexp.f.o
+      [180/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gratio.f.o
+      [181/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_rlog.f.o
+      [182/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_rlog1.f.o
+      [183/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_spmpar.f.o
+      [184/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_stvaln.f.o
+      [185/1572] Compiling Fortran object scipy/special/libcdflib.a.p/cdflib_gaminv.f.o
+      [186/1572] Compiling Fortran object scipy/special/libmach.a.p/mach_d1mach.f.o
+      [187/1572] Compiling Fortran object scipy/special/libmach.a.p/mach_i1mach.f.o
+      [188/1572] Compiling Fortran object scipy/special/libmach.a.p/mach_xerror.f.o
+      [189/1572] Linking static target scipy/special/libcdflib.a
+      [190/1572] Linking static target scipy/special/libmach.a
+      [191/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/_cosine.c.o
+      [192/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/cdf_wrappers.c.o
+      [193/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/amos_wrappers.c.o
+      [194/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/sf_error.c.o
+      [195/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/specfun_wrappers.c.o
+      [196/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/_faddeeva.cxx.o
+      [197/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/_wright.cxx.o
+      [198/1572] Generating scipy/special/specfun_module with a custom command
+      [199/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/Faddeeva.cc.o
+      [200/1572] Compiling C object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/sf_error.c.o
+      [201/1572] Compiling C object scipy/special/_specfun.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__specfunmodule.c.o
+      [202/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/wright.cc.o
+      [203/1572] Compiling C object scipy/special/_ellip_harm_2.graalpy231-310-native-x86_64-linux.so.p/sf_error.c.o
+      [204/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/ellint_carlson_wrap.cxx.o
+      [205/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/_cosine.c.o
+      [206/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/amos_wrappers.c.o
+      [207/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/cdf_wrappers.c.o
+      [208/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/specfun_wrappers.c.o
+      [209/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/sf_error.c.o
+      [210/1572] Compiling Fortran object scipy/special/libspecfun.a.p/specfun_specfun.f.o
+      [211/1572] Linking static target scipy/special/libspecfun.a
+      [212/1572] Linking target scipy/special/_specfun.graalpy231-310-native-x86_64-linux.so
+      [213/1572] Generating scipy/special/_data_gsl with a custom command
+      [214/1572] Generating scipy/special/_data_local with a custom command
+      [215/1572] Generating scipy/linalg/__init__py with a custom command
+      [216/1572] Generating scipy/linalg/_cy_array_utils_pxd with a custom command
+      [217/1572] Generating scipy/linalg/cython_linalg with a custom command
+      [218/1572] Generating scipy/special/_data_boost with a custom command
+      [219/1572] Compiling C object scipy/linalg/_fblas.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [220/1572] Generating 'scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/_ufuncs_cxx.cpp'.
+      [221/1572] Compiling C++ object scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so.p/meson-generated__ufuncs_cxx.cpp.o
+      [222/1572] Linking target scipy/special/_ufuncs_cxx.graalpy231-310-native-x86_64-linux.so
+      [223/1572] Compiling C object scipy/linalg/_flapack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [224/1572] Generating scipy/linalg/flinalg_module with a custom command
+      [225/1572] Compiling C object scipy/linalg/_flinalg.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__flinalgmodule.c.o
+      [226/1572] Compiling C object scipy/linalg/_flinalg.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [227/1572] Generating 'scipy/special/_ellip_harm_2.graalpy231-310-native-x86_64-linux.so.p/_ellip_harm_2.c'.
+      [228/1572] Compiling C object scipy/special/_ellip_harm_2.graalpy231-310-native-x86_64-linux.so.p/meson-generated__ellip_harm_2.c.o
+      [229/1572] Linking target scipy/special/_ellip_harm_2.graalpy231-310-native-x86_64-linux.so
+      [230/1572] Module scanner.
+      [231/1572] Compiling Fortran object scipy/linalg/_flinalg.graalpy231-310-native-x86_64-linux.so.p/src_det.f.o
+      [232/1572] Compiling Fortran object scipy/linalg/_flinalg.graalpy231-310-native-x86_64-linux.so.p/src_lu.f.o
+      [233/1572] Linking target scipy/linalg/_flinalg.graalpy231-310-native-x86_64-linux.so
+      [234/1572] Compiling C object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [235/1572] Generating scipy/linalg/fblas_module with a custom command
+      [236/1572] Generating scipy/linalg/interpolative_module with a custom command
+      [237/1572] Module scanner.
+      [238/1572] Compiling Fortran object scipy/linalg/_fblas.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__fblas-f2pywrappers.f.o
+      [239/1572] Compiling Fortran object scipy/linalg/_fblas.graalpy231-310-native-x86_64-linux.so.p/..__build_utils_src_wrap_dummy_g77_abi.f.o
+      [240/1572] Compiling C object scipy/linalg/_fblas.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__fblasmodule.c.o
+      [241/1572] Linking target scipy/linalg/_fblas.graalpy231-310-native-x86_64-linux.so
+      [242/1572] Compiling C object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__interpolativemodule.c.o
+      [243/1572] Module scanner.
+      [244/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_dfft.f.o
+      [245/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_id_rand.f.o
+      [246/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_id_rtrans.f.o
+      [247/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_frm.f.o
+      [248/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_house.f.o
+      [249/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_id.f.o
+      [250/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_id2svd.f.o
+      [251/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_qrpiv.f.o
+      [252/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_sfft.f.o
+      [253/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_snorm.f.o
+      [254/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idd_svd.f.o
+      [255/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddp_aid.f.o
+      [256/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddp_asvd.f.o
+      [257/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddp_rid.f.o
+      [258/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddp_rsvd.f.o
+      [259/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddr_aid.f.o
+      [260/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddr_asvd.f.o
+      [261/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddr_rid.f.o
+      [262/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_iddr_rsvd.f.o
+      [263/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_frm.f.o
+      [264/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_house.f.o
+      [265/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_id.f.o
+      [266/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_id2svd.f.o
+      [267/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_qrpiv.f.o
+      [268/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_sfft.f.o
+      [269/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_snorm.f.o
+      [270/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idz_svd.f.o
+      [271/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzp_aid.f.o
+      [272/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzp_asvd.f.o
+      [273/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzp_rid.f.o
+      [274/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzp_rsvd.f.o
+      [275/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzr_aid.f.o
+      [276/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzr_asvd.f.o
+      [277/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzr_rid.f.o
+      [278/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_idzr_rsvd.f.o
+      [279/1572] Compiling Fortran object scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so.p/src_id_dist_src_prini.f.o
+      [280/1572] Linking target scipy/linalg/_interpolative.graalpy231-310-native-x86_64-linux.so
+      [281/1572] Module scanner.
+      [282/1572] Compiling Fortran object scipy/linalg/libfwrappers.a.p/meson-generated_..__blas_subroutine_wrappers.f.o
+      [283/1572] Compiling Fortran object scipy/linalg/libfwrappers.a.p/meson-generated_..__lapack_subroutine_wrappers.f.o
+      [284/1572] Compiling Fortran object scipy/linalg/libfwrappers.a.p/..__build_utils_src_wrap_dummy_g77_abi.f.o
+      [285/1572] Linking static target scipy/linalg/libfwrappers.a
+      [286/1572] Generating scipy/linalg/_decomp_update with a custom command
+      [287/1572] Generating scipy/linalg/_matfuncs_expm with a custom command
+      [288/1572] Generating scipy/linalg/flapack_module with a custom command
+      [289/1572] Generating 'scipy/linalg/_solve_toeplitz.graalpy231-310-native-x86_64-linux.so.p/_solve_toeplitz.c'.
+      [290/1572] Module scanner.
+      [291/1572] Compiling Fortran object scipy/linalg/_flapack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__flapack-f2pywrappers.f.o
+      [292/1572] Compiling Fortran object scipy/linalg/_flapack.graalpy231-310-native-x86_64-linux.so.p/..__build_utils_src_wrap_dummy_g77_abi.f.o
+      [293/1572] Compiling C object scipy/linalg/_solve_toeplitz.graalpy231-310-native-x86_64-linux.so.p/meson-generated__solve_toeplitz.c.o
+      [294/1572] Linking target scipy/linalg/_solve_toeplitz.graalpy231-310-native-x86_64-linux.so
+      [295/1572] Compiling C object scipy/linalg/_flapack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__flapackmodule.c.o
+      [296/1572] Linking target scipy/linalg/_flapack.graalpy231-310-native-x86_64-linux.so
+      [297/1572] Generating 'scipy/linalg/_matfuncs_sqrtm_triu.graalpy231-310-native-x86_64-linux.so.p/_matfuncs_sqrtm_triu.c'.
+      [298/1572] Compiling C object scipy/linalg/_matfuncs_sqrtm_triu.graalpy231-310-native-x86_64-linux.so.p/meson-generated__matfuncs_sqrtm_triu.c.o
+      [299/1572] Linking target scipy/linalg/_matfuncs_sqrtm_triu.graalpy231-310-native-x86_64-linux.so
+      [300/1572] Generating 'scipy/linalg/cython_blas.graalpy231-310-native-x86_64-linux.so.p/cython_blas.c'.
+      [301/1572] Compiling C object scipy/linalg/cython_blas.graalpy231-310-native-x86_64-linux.so.p/meson-generated_cython_blas.c.o
+      [302/1572] Linking target scipy/linalg/cython_blas.graalpy231-310-native-x86_64-linux.so
+      [303/1572] Generating 'scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/cython_special.c'.
+      [304/1572] Compiling C object scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so.p/meson-generated_cython_special.c.o
+      [305/1572] Linking target scipy/special/cython_special.graalpy231-310-native-x86_64-linux.so
+      [306/1572] Generating scipy/sparse/_csparsetools_pyx with a custom command
+      [307/1572] Generating 'scipy/_lib/_test_deprecation_call.graalpy231-310-native-x86_64-linux.so.p/_test_deprecation_call.c'.
+      [308/1572] Compiling C object scipy/_lib/_test_deprecation_call.graalpy231-310-native-x86_64-linux.so.p/meson-generated__test_deprecation_call.c.o
+      [309/1572] Linking target scipy/_lib/_test_deprecation_call.graalpy231-310-native-x86_64-linux.so
+      [310/1572] Generating 'scipy/_lib/_test_deprecation_def.graalpy231-310-native-x86_64-linux.so.p/_test_deprecation_def.c'.
+      [311/1572] Compiling C object scipy/_lib/_test_deprecation_def.graalpy231-310-native-x86_64-linux.so.p/meson-generated__test_deprecation_def.c.o
+      [312/1572] Linking target scipy/_lib/_test_deprecation_def.graalpy231-310-native-x86_64-linux.so
+      [313/1572] Generating 'scipy/linalg/_decomp_update.graalpy231-310-native-x86_64-linux.so.p/_decomp_update.c'.
+      [314/1572] Generating 'scipy/special/_comb.graalpy231-310-native-x86_64-linux.so.p/_comb.c'.
+      [315/1572] Compiling C object scipy/special/_comb.graalpy231-310-native-x86_64-linux.so.p/meson-generated__comb.c.o
+      [316/1572] Linking target scipy/special/_comb.graalpy231-310-native-x86_64-linux.so
+      [317/1572] Generating 'scipy/linalg/_matfuncs_expm.graalpy231-310-native-x86_64-linux.so.p/_matfuncs_expm.c'.
+      [318/1572] Compiling C object scipy/linalg/_decomp_update.graalpy231-310-native-x86_64-linux.so.p/meson-generated__decomp_update.c.o
+      [319/1572] Linking target scipy/linalg/_decomp_update.graalpy231-310-native-x86_64-linux.so
+      [320/1572] Compiling C object scipy/linalg/_matfuncs_expm.graalpy231-310-native-x86_64-linux.so.p/meson-generated__matfuncs_expm.c.o
+      [321/1572] Linking target scipy/linalg/_matfuncs_expm.graalpy231-310-native-x86_64-linux.so
+      [322/1572] Generating scipy/sparse/sparsetools/_sparsetools_headers with a custom command
+      [323/1572] Generating 'scipy/linalg/_cythonized_array_utils.graalpy231-310-native-x86_64-linux.so.p/_cythonized_array_utils.c'.
+      [324/1572] Compiling C object scipy/linalg/_cythonized_array_utils.graalpy231-310-native-x86_64-linux.so.p/meson-generated__cythonized_array_utils.c.o
+      [325/1572] Linking target scipy/linalg/_cythonized_array_utils.graalpy231-310-native-x86_64-linux.so
+      [326/1572] Generating 'scipy/linalg/cython_lapack.graalpy231-310-native-x86_64-linux.so.p/cython_lapack.c'.
+      [327/1572] Compiling C object scipy/linalg/cython_lapack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_cython_lapack.c.o
+      [328/1572] Linking target scipy/linalg/cython_lapack.graalpy231-310-native-x86_64-linux.so
+      [329/1572] Compiling C++ object scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so.p/csc.cxx.o
+      [330/1572] Compiling C++ object scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so.p/other.cxx.o
+      [331/1572] Compiling C++ object scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so.p/sparsetools.cxx.o
+      [332/1572] Generating 'scipy/special/_test_round.graalpy231-310-native-x86_64-linux.so.p/_test_round.c'.
+      [333/1572] Compiling C object scipy/special/_test_round.graalpy231-310-native-x86_64-linux.so.p/meson-generated__test_round.c.o
+      [334/1572] Linking target scipy/special/_test_round.graalpy231-310-native-x86_64-linux.so
+      [335/1572] Generating 'scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/_ufuncs.c'.
+      [336/1572] Compiling C object scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/meson-generated__ufuncs.c.o
+      scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/_ufuncs.c: In function ‘__Pyx_TryUnpackUnboundCMethod’:
+      scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so.p/_ufuncs.c:98618:30: warning: unused variable ‘descr’ [-Wunused-variable]
+               PyMethodDescrObject *descr = (PyMethodDescrObject*) method;
+                                    ^~~~~
+      [337/1572] Linking target scipy/special/_ufuncs.graalpy231-310-native-x86_64-linux.so
+      [338/1572] Compiling C++ object scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so.p/bsr.cxx.o
+      [339/1572] Compiling C++ object scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so.p/csr.cxx.o
+      [340/1572] Linking target scipy/sparse/sparsetools/_sparsetools.graalpy231-310-native-x86_64-linux.so
+      [341/1572] Generating 'scipy/sparse/_csparsetools.graalpy231-310-native-x86_64-linux.so.p/_csparsetools.c'.
+      [342/1572] Compiling C object scipy/sparse/_csparsetools.graalpy231-310-native-x86_64-linux.so.p/meson-generated__csparsetools.c.o
+      [343/1572] Linking target scipy/sparse/_csparsetools.graalpy231-310-native-x86_64-linux.so
+      [344/1572] Generating 'scipy/sparse/csgraph/_flow.graalpy231-310-native-x86_64-linux.so.p/_flow.c'.
+      [345/1572] Compiling C object scipy/sparse/csgraph/_flow.graalpy231-310-native-x86_64-linux.so.p/meson-generated__flow.c.o
+      [346/1572] Linking target scipy/sparse/csgraph/_flow.graalpy231-310-native-x86_64-linux.so
+      [347/1572] Generating 'scipy/sparse/csgraph/_matching.graalpy231-310-native-x86_64-linux.so.p/_matching.c'.
+      [348/1572] Compiling C object scipy/sparse/csgraph/_matching.graalpy231-310-native-x86_64-linux.so.p/meson-generated__matching.c.o
+      [349/1572] Linking target scipy/sparse/csgraph/_matching.graalpy231-310-native-x86_64-linux.so
+      [350/1572] Generating 'scipy/sparse/csgraph/_tools.graalpy231-310-native-x86_64-linux.so.p/_tools.c'.
+      [351/1572] Compiling C object scipy/sparse/csgraph/_tools.graalpy231-310-native-x86_64-linux.so.p/meson-generated__tools.c.o
+      [352/1572] Linking target scipy/sparse/csgraph/_tools.graalpy231-310-native-x86_64-linux.so
+      [353/1572] Module scanner.
+      [354/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_printstat.F.o
+      [355/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sblasext.F.o
+      [356/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sbsvd.F.o
+      [357/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_second.F.o
+      [358/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sgemm_ovwr.F.o
+      [359/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sgetu0.F.o
+      [360/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_slanbpro.F.o
+      [361/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_slansvd.F.o
+      [362/1572] Generating 'scipy/sparse/csgraph/_reordering.graalpy231-310-native-x86_64-linux.so.p/_reordering.c'.
+      [363/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_slansvd_irl.F.o
+      [364/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_smgs.pentium.F.o
+      [365/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sreorth.F.o
+      [366/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_sritzvec.F.o
+      [367/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_ssafescal.F.o
+      [368/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__spropack.a.p/PROPACK_single_smgs.risc.F.o
+      [369/1572] Linking static target scipy/sparse/linalg/_propack/liblib__spropack.a
+      [370/1572] Compiling C object scipy/sparse/linalg/_propack/_spropack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [371/1572] Compiling C object scipy/sparse/csgraph/_reordering.graalpy231-310-native-x86_64-linux.so.p/meson-generated__reordering.c.o
+      [372/1572] Linking target scipy/sparse/csgraph/_reordering.graalpy231-310-native-x86_64-linux.so
+      [373/1572] Generating scipy/sparse/linalg/_propack/propack_module_spropack with a custom command
+      [374/1572] Compiling C object scipy/sparse/linalg/_propack/_spropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__spropackmodule.c.o
+      [375/1572] Generating 'scipy/sparse/csgraph/_traversal.graalpy231-310-native-x86_64-linux.so.p/_traversal.c'.
+      [376/1572] Module scanner.
+      [377/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dblasext.F.o
+      [378/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dbsvd.F.o
+      [379/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dgemm_ovwr.F.o
+      [380/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dgetu0.F.o
+      [381/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dlanbpro.F.o
+      [382/1572] Generating 'scipy/sparse/csgraph/_min_spanning_tree.graalpy231-310-native-x86_64-linux.so.p/_min_spanning_tree.c'.
+      [383/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dlansvd.F.o
+      [384/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dlansvd_irl.F.o
+      [385/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dmgs.pentium.F.o
+      [386/1572] Compiling C object scipy/sparse/csgraph/_traversal.graalpy231-310-native-x86_64-linux.so.p/meson-generated__traversal.c.o
+      [387/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dreorth.F.o
+      [388/1572] Linking target scipy/sparse/csgraph/_traversal.graalpy231-310-native-x86_64-linux.so
+      [389/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dsafescal.F.o
+      [390/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dritzvec.F.o
+      [391/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_second.F.o
+      [392/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_printstat.F.o
+      [393/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__dpropack.a.p/PROPACK_double_dmgs.risc.F.o
+      [394/1572] Linking static target scipy/sparse/linalg/_propack/liblib__dpropack.a
+      [395/1572] Compiling C object scipy/sparse/linalg/_propack/_dpropack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [396/1572] Compiling C object scipy/sparse/csgraph/_min_spanning_tree.graalpy231-310-native-x86_64-linux.so.p/meson-generated__min_spanning_tree.c.o
+      [397/1572] Linking target scipy/sparse/csgraph/_min_spanning_tree.graalpy231-310-native-x86_64-linux.so
+      [398/1572] Module scanner.
+      [399/1572] Compiling Fortran object scipy/sparse/linalg/_propack/_spropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__spropack-f2pywrappers.f.o
+      [400/1572] Linking target scipy/sparse/linalg/_propack/_spropack.graalpy231-310-native-x86_64-linux.so
+      [401/1572] Compiling C object scipy/sparse/linalg/_propack/_cpropack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [402/1572] Generating scipy/sparse/linalg/_propack/propack_module_dpropack with a custom command
+      [403/1572] Compiling C object scipy/sparse/linalg/_propack/_dpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__dpropackmodule.c.o
+      [404/1572] Module scanner.
+      [405/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_cblasext.F.o
+      [406/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_cgemm_ovwr.F.o
+      [407/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_cgetu0.F.o
+      [408/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_clanbpro.F.o
+      [409/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_clansvd.F.o
+      [410/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_clansvd_irl.F.o
+      [411/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_cmgs.pentium.F.o
+      [412/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_creorth.F.o
+      [413/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_critzvec.F.o
+      [414/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_csafescal.F.o
+      [415/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_printstat.F.o
+      [416/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_sblasext.F.o
+      [417/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_sbsvd.F.o
+      [418/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_second.F.o
+      [419/1572] Module scanner.
+      [420/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_sgemm_ovwr.F.o
+      [421/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__cpropack.a.p/PROPACK_complex8_cmgs.risc.F.o
+      [422/1572] Generating scipy/sparse/linalg/_propack/propack_module_cpropack with a custom command
+      [423/1572] Linking static target scipy/sparse/linalg/_propack/liblib__cpropack.a
+      [424/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_dblasext.F.o
+      [425/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_dbsvd.F.o
+      [426/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_dgemm_ovwr.F.o
+      [427/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_printstat.F.o
+      [428/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_second.F.o
+      [429/1572] Compiling C object scipy/sparse/linalg/_propack/_cpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__cpropackmodule.c.o
+      [430/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zblasext.F.o
+      [431/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zgetu0.F.o
+      [432/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zgemm_ovwr.F.o
+      [433/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zlansvd.F.o
+      [434/1572] Module scanner.
+      [435/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zlanbpro.F.o
+      [436/1572] Compiling Fortran object scipy/sparse/linalg/_propack/_dpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__dpropack-f2pywrappers.f.o
+      [437/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zmgs.pentium.F.o
+      [438/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zlansvd_irl.F.o
+      [439/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zreorth.F.o
+      [440/1572] Linking target scipy/sparse/linalg/_propack/_dpropack.graalpy231-310-native-x86_64-linux.so
+      [441/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zritzvec.F.o
+      [442/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zsafescal.F.o
+      [443/1572] Compiling Fortran object scipy/sparse/linalg/_propack/liblib__zpropack.a.p/PROPACK_complex16_zmgs.risc.F.o
+      [444/1572] Linking static target scipy/sparse/linalg/_propack/liblib__zpropack.a
+      [445/1572] Compiling C object scipy/sparse/linalg/_propack/_zpropack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [446/1572] Generating scipy/sparse/linalg/_propack/propack_module_zpropack with a custom command
+      [447/1572] Generating scipy/sparse/linalg/_isolve/methods_f_0 with a custom command
+      [448/1572] Generating scipy/sparse/linalg/_isolve/methods_f_1 with a custom command
+      [449/1572] Generating scipy/sparse/linalg/_isolve/methods_f_2 with a custom command
+      [450/1572] Compiling C object scipy/sparse/linalg/_propack/_zpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__zpropackmodule.c.o
+      [451/1572] Generating scipy/sparse/linalg/_isolve/methods_f_3 with a custom command
+      [452/1572] Generating scipy/sparse/linalg/_isolve/methods_f_4 with a custom command
+      [453/1572] Generating scipy/sparse/linalg/_isolve/methods_f_5 with a custom command
+      [454/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ccolumn_bmod.c.o
+      [455/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ccolumn_dfs.c.o
+      [456/1572] Generating scipy/sparse/linalg/_isolve/Util_f_0 with a custom command
+      [457/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ccopy_to_ucol.c.o
+      [458/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cdiagonal.c.o
+      [459/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgscon.c.o
+      [460/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgsequ.c.o
+      [461/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgsisx.c.o
+      [462/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgsrfs.c.o
+      [463/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgsitrf.c.o
+      [464/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgssv.c.o
+      [465/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgstrf.c.o
+      [466/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgssvx.c.o
+      [467/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_clacon2.c.o
+      [468/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_clangs.c.o
+      [469/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cgstrs.c.o
+      [470/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_claqgs.c.o
+      [471/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cldperm.c.o
+      [472/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cmyblas2.c.o
+      [473/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cmemory.c.o
+      [474/1572] Module scanner.
+      [475/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cpanel_bmod.c.o
+      [476/1572] Compiling Fortran object scipy/sparse/linalg/_propack/_cpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__cpropack-f2pywrappers.f.o
+      [477/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cpanel_dfs.c.o
+      [478/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_colamd.c.o
+      [479/1572] Linking target scipy/sparse/linalg/_propack/_cpropack.graalpy231-310-native-x86_64-linux.so
+      [480/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cpivotL.c.o
+      [481/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cpruneL.c.o
+      [482/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cpivotgrowth.c.o
+      [483/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_creadhb.c.o
+      [484/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_csnode_bmod.c.o
+      [485/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_creadtriple.c.o
+      [486/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_creadrb.c.o
+      [487/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_csnode_dfs.c.o
+      [488/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_csp_blas3.c.o
+      [489/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dGetDiagU.c.o
+      [490/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_cutil.c.o
+      [491/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_csp_blas2.c.o
+      [492/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dcolumn_bmod.c.o
+      [493/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dcomplex.c.o
+      [494/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dcolumn_dfs.c.o
+      [495/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dcopy_to_ucol.c.o
+      [496/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgscon.c.o
+      [497/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ddiagonal.c.o
+      [498/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgsequ.c.o
+      [499/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgsisx.c.o
+      [500/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgsrfs.c.o
+      [501/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgssv.c.o
+      [502/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgsitrf.c.o
+      [503/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgssvx.c.o
+      [504/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgstrf.c.o
+      [505/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dgstrs.c.o
+      [506/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dlacon2.c.o
+      [507/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dlangs.c.o
+      [508/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dlaqgs.c.o
+      [509/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dldperm.c.o
+      [510/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dmach.c.o
+      [511/1572] Module scanner.
+      [512/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dmyblas2.c.o
+      [513/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dmemory.c.o
+      [514/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dpanel_bmod.c.o
+      [515/1572] Compiling Fortran object scipy/sparse/linalg/_propack/_zpropack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__zpropack-f2pywrappers.f.o
+      [516/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dpanel_dfs.c.o
+      [517/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dpivotL.c.o
+      [518/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dpivotgrowth.c.o
+      [519/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dpruneL.c.o
+      [520/1572] Linking target scipy/sparse/linalg/_propack/_zpropack.graalpy231-310-native-x86_64-linux.so
+      [521/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dreadrb.c.o
+      [522/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dreadtriple.c.o
+      [523/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dsnode_bmod.c.o
+      [524/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dreadhb.c.o
+      [525/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dsnode_dfs.c.o
+      [526/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dsp_blas3.c.o
+      [527/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dzsum1.c.o
+      [528/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_heap_relax_snode.c.o
+      [529/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dsp_blas2.c.o
+      [530/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_dutil.c.o
+      [531/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_icmax1.c.o
+      [532/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_ccolumn_dfs.c.o
+      [533/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_get_perm_c.c.o
+      [534/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_ccopy_to_ucol.c.o
+      [535/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_cdrop_row.c.o
+      [536/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_cpivotL.c.o
+      [537/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_cpanel_dfs.c.o
+      [538/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_dcolumn_dfs.c.o
+      [539/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_csnode_dfs.c.o
+      [540/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_dcopy_to_ucol.c.o
+      [541/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_dpanel_dfs.c.o
+      [542/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_dpivotL.c.o
+      [543/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_ddrop_row.c.o
+      [544/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_dsnode_dfs.c.o
+      [545/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_heap_relax_snode.c.o
+      [546/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_relax_snode.c.o
+      [547/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_scolumn_dfs.c.o
+      [548/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_scopy_to_ucol.c.o
+      [549/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_spanel_dfs.c.o
+      [550/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_ssnode_dfs.c.o
+      [551/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zcolumn_dfs.c.o
+      [552/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_sdrop_row.c.o
+      [553/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_spivotL.c.o
+      [554/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zpanel_dfs.c.o
+      [555/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zcopy_to_ucol.c.o
+      [556/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_input_error.c.o
+      [557/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zpivotL.c.o
+      [558/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zsnode_dfs.c.o
+      [559/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_izmax1.c.o
+      [560/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ilu_zdrop_row.c.o
+      [561/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_memory.c.o
+      [562/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_mark_relax.c.o
+      [563/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_qselect.c.o
+      [564/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_relax_snode.c.o
+      [565/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_scolumn_dfs.c.o
+      [566/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_scomplex.c.o
+      [567/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_scolumn_bmod.c.o
+      [568/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_scsum1.c.o
+      [569/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_scopy_to_ucol.c.o
+      [570/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_mmd.c.o
+      [571/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgscon.c.o
+      [572/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sdiagonal.c.o
+      [573/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgsequ.c.o
+      [574/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgsisx.c.o
+      [575/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgssv.c.o
+      [576/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgsitrf.c.o
+      [577/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgssvx.c.o
+      [578/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgsrfs.c.o
+      [579/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgstrf.c.o
+      [580/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_slacon2.c.o
+      [581/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_slaqgs.c.o
+      [582/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sgstrs.c.o
+      [583/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_slangs.c.o
+      [584/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_smach.c.o
+      [585/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sldperm.c.o
+      [586/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sp_ienv.c.o
+      [587/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_smyblas2.c.o
+      [588/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sp_coletree.c.o
+      [589/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sp_preorder.c.o
+      [590/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_spanel_dfs.c.o
+      [591/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_smemory.c.o
+      [592/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_spivotL.c.o
+      [593/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_spanel_bmod.c.o
+      [594/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_spruneL.c.o
+      [595/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_spivotgrowth.c.o
+      [596/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sreadhb.c.o
+      [597/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ssnode_bmod.c.o
+      [598/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sreadtriple.c.o
+      [599/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sreadrb.c.o
+      [600/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ssnode_dfs.c.o
+      [601/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ssp_blas3.c.o
+      [602/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_superlu_timer.c.o
+      [603/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_ssp_blas2.c.o
+      [604/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zcolumn_bmod.c.o
+      [605/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_util.c.o
+      [606/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zcolumn_dfs.c.o
+      [607/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zcopy_to_ucol.c.o
+      [608/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_sutil.c.o
+      [609/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgscon.c.o
+      [610/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zdiagonal.c.o
+      [611/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgsequ.c.o
+      [612/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgssv.c.o
+      [613/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgsisx.c.o
+      [614/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgsitrf.c.o
+      [615/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgsrfs.c.o
+      [616/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zlacon2.c.o
+      [617/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgstrf.c.o
+      [618/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgssvx.c.o
+      [619/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zgstrs.c.o
+      [620/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zlangs.c.o
+      [621/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zlaqgs.c.o
+      [622/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zldperm.c.o
+      [623/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zmyblas2.c.o
+      [624/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zpanel_dfs.c.o
+      [625/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zpivotL.c.o
+      [626/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zmemory.c.o
+      [627/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zpruneL.c.o
+      [628/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zpivotgrowth.c.o
+      [629/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zreadtriple.c.o
+      [630/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zreadrb.c.o
+      [631/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zpanel_bmod.c.o
+      [632/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zreadhb.c.o
+      [633/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zsnode_bmod.c.o
+      [634/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zsp_blas3.c.o
+      [635/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zsnode_dfs.c.o
+      [636/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zsp_blas2.c.o
+      [637/1572] Compiling C object scipy/sparse/linalg/_dsolve/_superlu.graalpy231-310-native-x86_64-linux.so.p/_superlumodule.c.o
+      [638/1572] Compiling C object scipy/sparse/linalg/_dsolve/libsuperlu_lib.a.p/SuperLU_SRC_zutil.c.o
+      [639/1572] Compiling C object scipy/sparse/linalg/_dsolve/_superlu.graalpy231-310-native-x86_64-linux.so.p/_superlu_utils.c.o
+      [640/1572] Linking static target scipy/sparse/linalg/_dsolve/libsuperlu_lib.a
+      [641/1572] Compiling C object scipy/sparse/linalg/_dsolve/_superlu.graalpy231-310-native-x86_64-linux.so.p/_superluobject.c.o
+      [642/1572] Linking target scipy/sparse/linalg/_dsolve/_superlu.graalpy231-310-native-x86_64-linux.so
+      [643/1572] Generating scipy/stats/_stats_pxd with a custom command
+      [644/1572] Compiling C object scipy/sparse/linalg/_eigen/arpack/_arpack.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [645/1572] Generating scipy/sparse/linalg/_isolve/_iterative_module with a custom command
+      [646/1572] Compiling C object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__iterativemodule.c.o
+      [647/1572] Compiling C object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [648/1572] Module scanner.
+      [649/1572] Compiling Fortran object scipy/stats/libstatlib_lib.a.p/statlib_ansari.f.o
+      [650/1572] Compiling Fortran object scipy/stats/libstatlib_lib.a.p/statlib_spearman.f.o
+      [651/1572] Compiling Fortran object scipy/stats/libstatlib_lib.a.p/statlib_swilk.f.o
+      [652/1572] Linking static target scipy/stats/libstatlib_lib.a
+      [653/1572] Module scanner.
+      [654/1572] Compiling C object scipy/stats/_statlib.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [655/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cgetv0.f.o
+      [656/1572] Generating scipy/stats/statlib_module with a custom command
+      [657/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cnaitr.f.o
+      [658/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cnapps.f.o
+      [659/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cnaupd.f.o
+      [660/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cnaup2.f.o
+      [661/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cngets.f.o
+      [662/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cneigh.f.o
+      [663/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cstatn.f.o
+      [664/1572] Generating 'scipy/sparse/csgraph/_shortest_path.graalpy231-310-native-x86_64-linux.so.p/_shortest_path.c'.
+      [665/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_csortc.f.o
+      [666/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dgetv0.f.o
+      [667/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_cneupd.f.o
+      [668/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dnaup2.f.o
+      [669/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dnaitr.f.o
+      [670/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dnapps.f.o
+      [671/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dnconv.f.o
+      [672/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dneigh.f.o
+      [673/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dnaupd.f.o
+      [674/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dngets.f.o
+      [675/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsaitr.f.o
+      [676/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsapps.f.o
+      [677/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dneupd.f.o
+      [678/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsaup2.f.o
+      [679/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsaupd.f.o
+      [680/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsconv.f.o
+      [681/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dseigt.f.o
+      [682/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsesrt.f.o
+      [683/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsgets.f.o
+      [684/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsortc.f.o
+      [685/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dseupd.f.o
+      [686/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dstatn.f.o
+      [687/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dstats.f.o
+      [688/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dsortr.f.o
+      [689/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sgetv0.f.o
+      [690/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_dstqrb.f.o
+      [691/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_snaitr.f.o
+      [692/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_snaupd.f.o
+      [693/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_snconv.f.o
+      [694/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_snaup2.f.o
+      [695/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sneigh.f.o
+      [696/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_snapps.f.o
+      [697/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sngets.f.o
+      [698/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssapps.f.o
+      [699/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssaitr.f.o
+      [700/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssaupd.f.o
+      [701/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssconv.f.o
+      [702/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sneupd.f.o
+      [703/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sseigt.f.o
+      [704/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssaup2.f.o
+      [705/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssgets.f.o
+      [706/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssesrt.f.o
+      [707/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssortr.f.o
+      [708/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_ssortc.f.o
+      [709/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sstatn.f.o
+      [710/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sstats.f.o
+      [711/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sseupd.f.o
+      [712/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zgetv0.f.o
+      [713/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_sstqrb.f.o
+      [714/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_znaitr.f.o
+      [715/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_znaup2.f.o
+      [716/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_znapps.f.o
+      [717/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zneigh.f.o
+      [718/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_znaupd.f.o
+      [719/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zngets.f.o
+      [720/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zstatn.f.o
+      [721/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zsortc.f.o
+      [722/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_SRC_zneupd.f.o
+      [723/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_cvout.f.o
+      [724/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_dmout.f.o
+      [725/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_cmout.f.o
+      [726/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_dvout.f.o
+      [727/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_icnteq.f.o
+      [728/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_iset.f.o
+      [729/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_icopy.f.o
+      [730/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_iswap.f.o
+      [731/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_second_NONE.f.o
+      [732/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_ivout.f.o
+      [733/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_svout.f.o
+      [734/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_smout.f.o
+      [735/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_zmout.f.o
+      [736/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a.p/ARPACK_UTIL_zvout.f.o
+      [737/1572] Linking static target scipy/sparse/linalg/_eigen/arpack/libarpack_lib.a
+      [738/1572] Compiling C object scipy/stats/_statlib.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__statlibmodule.c.o
+      [739/1572] Module scanner.
+      [740/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._BiCGREVCOM.f.o
+      [741/1572] Generating scipy/sparse/linalg/_eigen/arpack/arpack_module with a custom command
+      [742/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._BiCGSTABREVCOM.f.o
+      [743/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._CGREVCOM.f.o
+      [744/1572] Compiling C object scipy/sparse/csgraph/_shortest_path.graalpy231-310-native-x86_64-linux.so.p/meson-generated__shortest_path.c.o
+      [745/1572] Linking target scipy/sparse/csgraph/_shortest_path.graalpy231-310-native-x86_64-linux.so
+      [746/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._CGSREVCOM.f.o
+      [747/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._getbreak.f.o
+      [748/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/.._.._..__build_utils_src_wrap_dummy_g77_abi.f.o
+      [749/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._GMRESREVCOM.f.o
+      [750/1572] Compiling Fortran object scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so.p/meson-generated_.._QMRREVCOM.f.o
+      [751/1572] Linking target scipy/sparse/linalg/_isolve/_iterative.graalpy231-310-native-x86_64-linux.so
+      [752/1572] Compiling C object scipy/stats/_mvn.graalpy231-310-native-x86_64-linux.so.p/_tmp_pip-build-env-3_fxo461_overlay_lib_python3.10_site-packages_numpy_core_include_.._.._f2py_src_fortranobject.c.o
+      [753/1572] Compiling C object scipy/sparse/linalg/_eigen/arpack/_arpack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__arpackmodule.c.o
+      [754/1572] Module scanner.
+      [755/1572] Compiling Fortran object scipy/stats/_statlib.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__statlib-f2pywrappers.f.o
+      [756/1572] Linking target scipy/stats/_statlib.graalpy231-310-native-x86_64-linux.so
+      [757/1572] Compiling C++ object scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/biasedurn_fnchyppr.cpp.o
+      [758/1572] Compiling C++ object scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/biasedurn_impls.cpp.o
+      [759/1572] Compiling C++ object scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/biasedurn_stoc1.cpp.o
+      [760/1572] Generating scipy/stats/mvn_module with a custom command
+      [761/1572] Compiling C++ object scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/biasedurn_stoc3.cpp.o
+      [762/1572] Compiling C object scipy/stats/_mvn.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__mvnmodule.c.o
+      [763/1572] Compiling C++ object scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/biasedurn_wnchyppr.cpp.o
+      [764/1572] Generating scipy/stats/_stats_gen_pyx with a custom command
+      [765/1572] Module scanner.
+      [766/1572] Module scanner.
+      [767/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/_arpack.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__arpack-f2pywrappers.f.o
+      [768/1572] Compiling Fortran object scipy/sparse/linalg/_eigen/arpack/_arpack.graalpy231-310-native-x86_64-linux.so.p/.._.._.._..__build_utils_src_wrap_dummy_g77_abi.f.o
+      [769/1572] Linking target scipy/sparse/linalg/_eigen/arpack/_arpack.graalpy231-310-native-x86_64-linux.so
+      [770/1572] Compiling Fortran object scipy/stats/_mvn.graalpy231-310-native-x86_64-linux.so.p/meson-generated_..__mvn-f2pywrappers.f.o
+      [771/1572] Compiling Fortran object scipy/stats/_mvn.graalpy231-310-native-x86_64-linux.so.p/mvndst.f.o
+      [772/1572] Linking target scipy/stats/_mvn.graalpy231-310-native-x86_64-linux.so
+      [773/1572] Generating 'scipy/_lib/_ccallback_c.graalpy231-310-native-x86_64-linux.so.p/_ccallback_c.c'.
+      [774/1572] Compiling C object scipy/_lib/_ccallback_c.graalpy231-310-native-x86_64-linux.so.p/meson-generated__ccallback_c.c.o
+      [775/1572] Linking target scipy/_lib/_ccallback_c.graalpy231-310-native-x86_64-linux.so
+      [776/1572] Generating 'scipy/_lib/messagestream.graalpy231-310-native-x86_64-linux.so.p/messagestream.c'.
+      [777/1572] Compiling C object scipy/_lib/messagestream.graalpy231-310-native-x86_64-linux.so.p/meson-generated_messagestream.c.o
+      [778/1572] Linking target scipy/_lib/messagestream.graalpy231-310-native-x86_64-linux.so
+      [779/1572] Generating scipy/stats/_hypotests_pythran with a custom command
+      FAILED: scipy/stats/_hypotests_pythran.cpp
+      /tmp/pip-build-env-3_fxo461/overlay/bin/pythran -E ../../scipy/stats/_hypotests_pythran.py -o scipy/stats/_hypotests_pythran.cpp
+      Traceback (most recent call last):
+        File "/tmp/pip-build-env-3_fxo461/overlay/bin/pythran", line 8, in <module>
+          sys.exit(run())
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/run.py", line 180, in run
+          pythran.compile_pythranfile(args.input_file,
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/toolchain.py", line 477, in compile_pythranfile
+          output_file = compile_pythrancode(module_name, fd.read(),
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/toolchain.py", line 395, in compile_pythrancode
+          module, error_checker = generate_cxx(module_name, pythrancode, specs, opts,
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/toolchain.py", line 138, in generate_cxx
+          pm, ir, docstrings = front_middle_end(module_name, code, optimizations,
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/toolchain.py", line 105, in front_middle_end
+          refine(pm, ir, optimizations, report_times)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/middlend.py", line 63, in refine
+          apply_optimisation |= pm.apply(optimization, node, run_times)[0]
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/passmanager.py", line 243, in apply
+          ret=a.apply(node)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/passmanager.py", line 201, in apply
+          new_node = self.run(node)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/passmanager.py", line 189, in run
+          n = super(Transformation, self).run(node)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/passmanager.py", line 97, in run
+          return self.visit(node)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/pythran/optimizations/pattern_transform.py", line 327, in visit
+          matcher = pattern()
+      TypeError: 'module' object is not callable
+      [780/1572] Generating 'scipy/stats/_biasedurn.graalpy231-310-native-x86_64-linux.so.p/_biasedurn.cpp'.
+      [781/1572] Generating 'scipy/stats/_boost/hypergeom_ufunc.graalpy231-310-native-x86_64-linux.so.p/hypergeom_ufunc.cpp'.
+      [782/1572] Generating 'scipy/stats/_qmc_cy.graalpy231-310-native-x86_64-linux.so.p/_qmc_cy.cpp'.
+      [783/1572] Generating 'scipy/stats/_sobol.graalpy231-310-native-x86_64-linux.so.p/_sobol.c'.
+      [784/1572] Generating 'scipy/stats/_stats.graalpy231-310-native-x86_64-linux.so.p/_stats.c'.
+      ninja: build stopped: subcommand failed.
+      Traceback (most recent call last):
+        File "/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 363, in <module>
+          main()
+        File "/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 345, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 130, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 970, in get_requires_for_build_wheel
+          if not project.is_pure and platform.system() == 'Linux':
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 875, in is_pure
+          return bool(self._wheel_builder.is_pure)
+        File "/opt/graalpy/lib/python3.10/functools.py", line 981, in __get__
+          val = self.func(instance)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 209, in is_pure
+          if self._wheel_files['platlib']:
+        File "/opt/graalpy/lib/python3.10/functools.py", line 981, in __get__
+          val = self.func(instance)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 170, in _wheel_files
+          return self._map_to_wheel(self._sources, self._copy_files)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 512, in _map_to_wheel
+          or self._map_from_heuristics(
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 476, in _map_from_heuristics
+          self._warn_unsure_platlib(origin, destination)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 438, in _warn_unsure_platlib
+          if self._is_native(origin):
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 405, in _is_native
+          self._project.build()  # the project needs to be built for this :/
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 765, in build
+          self._meson('compile')
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 696, in _meson
+          return self._proc('meson', *args)
+        File "/tmp/pip-build-env-3_fxo461/overlay/lib/python3.10/site-packages/mesonpy/__init__.py", line 691, in _proc
+          subprocess.check_call(list(args))
+        File "/opt/graalpy/lib/python3.10/subprocess.py", line 369, in check_call
+          raise CalledProcessError(retcode, cmd)
+      subprocess.CalledProcessError: Command '['meson', 'compile']' returned non-zero exit status 1.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev-requirements.txt, -rrequirements.txt]; v = InvocationError('/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt -rrequirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: could not install deps [mock, pytest, -rdev-requirements.txt, -rrequirements.txt]; v = InvocationError('/workdir/fonttools-4.38.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt -rrequirements.txt', 1)

@@ -1,0 +1,46 @@
+Collecting astropy==5.2.1
+  Downloading astropy-5.2.1.tar.gz (8.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 2.3 MB/s eta 0:00:00
+Looking for GraalPy patches for astropy
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [23 lines of output]
+      Traceback (most recent call last):
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 363, in <module>
+          main()
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 345, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 130, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 69, in <module>
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/extension_helpers/_setup_helpers.py", line 63, in get_extensions
+          for setuppkg in iter_setup_packages(srcdir, packages):
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/extension_helpers/_setup_helpers.py", line 128, in iter_setup_packages
+          module = import_file(setup_package, name=packagename + ".setup_package")
+        File "/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/extension_helpers/_utils.py", line 133, in import_file
+          mod = loader.load_module()
+        File "/tmp/pip-install-lzm9sebc/astropy_aa6258c7c1bd46d4bd3077b9f759cede/astropy/wcs/setup_package.py", line 13, in <module>
+          from setuptools.dep_util import newer_group
+      ImportError: cannot import name 'newer_group' from 'setuptools.dep_util' (/tmp/pip-build-env-7xyxsono/overlay/lib/python3.10/site-packages/setuptools/dep_util.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.

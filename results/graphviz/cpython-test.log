@@ -1,0 +1,501 @@
+GLOB sdist-make: /workdir/graphviz-0.20.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -r.binder/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/graphviz-0.20.1/.tox/.tmp/package/1/graphviz-0.20.1.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,cachetools==5.3.2,certifi==2023.11.17,cffi==1.16.0,chardet==5.2.0,charset-normalizer==3.3.2,colorama==0.4.6,coverage==7.3.2,cryptography==41.0.5,distlib==0.3.7,docutils==0.18.1,exceptiongroup==1.2.0,filelock==3.13.1,flake8==6.1.0,graphviz @ file:///workdir/graphviz-0.20.1/.tox/.tmp/package/1/graphviz-0.20.1.zip#sha256=f9792e082bfca7a7c737914e1e8e09f97375a49071be356fa991f4c420866f04,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,jaraco.classes==3.3.0,jeepney==0.8.0,Jinja2==3.1.2,keyring==24.3.0,markdown-it-py==3.0.0,MarkupSafe==2.1.3,mccabe==0.7.0,mdurl==0.1.2,mock==5.1.0,more-itertools==10.1.0,nh3==0.2.14,packaging==23.2,pep8-naming==0.13.3,pkginfo==1.9.6,platformdirs==4.0.0,pluggy==1.3.0,pycodestyle==2.11.1,pycparser==2.21,pyflakes==3.1.0,Pygments==2.17.2,pyproject-api==1.6.1,pytest==7.4.3,pytest-cov==4.1.0,pytest-mock==3.12.0,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,SecretStorage==3.3.3,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-autodoc-typehints==1.25.2,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,tox==4.11.3,twine==4.0.2,urllib3==2.1.0,virtualenv==20.24.7,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='637959430'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/graphviz/0.20.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/graphviz-0.20.1
+configfile: setup.cfg
+testpaths: README.rst, docs, graphviz, tests
+plugins: mock-3.12.0, cov-4.1.0
+collecting ... collected 366 items
+
+README.rst::README.rst PASSED                                            [  0%]
+docs/api.rst::api.rst PASSED                                             [  0%]
+docs/attributes.rst::attributes.rst PASSED                               [  0%]
+docs/basic_usage.rst::basic_usage.rst PASSED                             [  1%]
+docs/custom_dot.rst::custom_dot.rst PASSED                               [  1%]
+docs/engines.rst::engines.rst PASSED                                     [  1%]
+docs/escapes.rst::escapes.rst PASSED                                     [  1%]
+docs/existing_files.rst::existing_files.rst PASSED                       [  2%]
+docs/formats.rst::formats.rst PASSED                                     [  2%]
+docs/integration_with_viewers.rst::integration_with_viewers.rst PASSED   [  2%]
+docs/neato_no_op.rst::neato_no_op.rst PASSED                             [  3%]
+docs/node_ports.rst::node_ports.rst PASSED                               [  3%]
+docs/piped_output.rst::piped_output.rst PASSED                           [  3%]
+docs/quoting.rst::quoting.rst PASSED                                     [  3%]
+docs/raw_dot.rst::raw_dot.rst PASSED                                     [  4%]
+docs/styling.rst::styling.rst PASSED                                     [  4%]
+docs/subgraphs_and_clusters.rst::subgraphs_and_clusters.rst PASSED       [  4%]
+docs/unflatten.rst::unflatten.rst PASSED                                 [  4%]
+graphviz/__init__.py::graphviz PASSED                                    [  5%]
+graphviz/_tools.py::graphviz._tools.attach PASSED                        [  5%]
+graphviz/_tools.py::graphviz._tools.mapping_items PASSED                 [  5%]
+graphviz/graphs.py::graphviz.graphs PASSED                               [  6%]
+graphviz/jupyter_integration.py::graphviz.jupyter_integration.JupyterIntegration._repr_mimebundle_ PASSED [  6%]
+graphviz/piping.py::graphviz.piping.Pipe.pipe PASSED                     [  6%]
+graphviz/quoting.py::graphviz.quoting.a_list PASSED                      [  6%]
+graphviz/quoting.py::graphviz.quoting.attr_list PASSED                   [  7%]
+graphviz/quoting.py::graphviz.quoting.escape PASSED                      [  7%]
+graphviz/quoting.py::graphviz.quoting.nohtml PASSED                      [  7%]
+graphviz/quoting.py::graphviz.quoting.quote PASSED                       [  7%]
+graphviz/quoting.py::graphviz.quoting.quote_edge PASSED                  [  8%]
+graphviz/rendering.py::graphviz.rendering.Render.render PASSED           [  8%]
+graphviz/backend/piping.py::graphviz.backend.piping.pipe PASSED          [  8%]
+graphviz/backend/piping.py::graphviz.backend.piping.pipe_lines PASSED    [  9%]
+graphviz/backend/piping.py::graphviz.backend.piping.pipe_lines_string PASSED [  9%]
+graphviz/backend/piping.py::graphviz.backend.piping.pipe_string PASSED   [  9%]
+graphviz/backend/rendering.py::graphviz.backend.rendering.get_supported_formats PASSED [  9%]
+graphviz/backend/rendering.py::graphviz.backend.rendering.get_supported_suffixes PASSED [ 10%]
+graphviz/backend/rendering.py::graphviz.backend.rendering.infer_format PASSED [ 10%]
+graphviz/backend/rendering.py::graphviz.backend.rendering.render PASSED  [ 10%]
+graphviz/backend/upstream_version.py::graphviz.backend.upstream_version.version PASSED [ 10%]
+tests/test_all_classes.py::test_copy[Graph] PASSED                       [ 11%]
+tests/test_all_classes.py::test_copy[Digraph] PASSED                     [ 11%]
+tests/test_all_classes.py::test_copy[Source] PASSED                      [ 11%]
+tests/test_all_classes.py::test_str[Graph] PASSED                        [ 12%]
+tests/test_all_classes.py::test_str[Digraph] PASSED                      [ 12%]
+tests/test_all_classes.py::test_str[Source] PASSED                       [ 12%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Graph-engine-ValueError-unknown engine] PASSED [ 12%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Graph-format-ValueError-unknown format] PASSED [ 13%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Graph-renderer-ValueError-unknown renderer] PASSED [ 13%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Graph-formatter-ValueError-unknown formatter] PASSED [ 13%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Graph-encoding-LookupError-encoding] PASSED [ 13%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Digraph-engine-ValueError-unknown engine] PASSED [ 14%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Digraph-format-ValueError-unknown format] PASSED [ 14%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Digraph-renderer-ValueError-unknown renderer] PASSED [ 14%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Digraph-formatter-ValueError-unknown formatter] PASSED [ 15%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Digraph-encoding-LookupError-encoding] PASSED [ 15%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Source-engine-ValueError-unknown engine] PASSED [ 15%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Source-format-ValueError-unknown format] PASSED [ 15%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Source-renderer-ValueError-unknown renderer] PASSED [ 16%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Source-formatter-ValueError-unknown formatter] PASSED [ 16%]
+tests/test_all_classes.py::test_invalid_parameter_raises_valuerror[Source-encoding-LookupError-encoding] PASSED [ 16%]
+tests/test_all_classes.py::test_encoding_none[Graph] PASSED              [ 16%]
+tests/test_all_classes.py::test_encoding_none[Digraph] PASSED            [ 17%]
+tests/test_all_classes.py::test_encoding_none[Source] PASSED             [ 17%]
+tests/test_all_classes.py::test_render_raises_before_save[Graph-kwargs0] PASSED [ 17%]
+tests/test_all_classes.py::test_render_raises_before_save[Digraph-kwargs0] PASSED [ 18%]
+tests/test_all_classes.py::test_render_raises_before_save[Source-kwargs0] PASSED [ 18%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Graph-kwargs0] PASSED [ 18%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Graph-kwargs1] PASSED [ 18%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Graph-kwargs2] PASSED [ 19%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Graph-kwargs3] PASSED [ 19%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Digraph-kwargs0] PASSED [ 19%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Digraph-kwargs1] PASSED [ 19%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Digraph-kwargs2] PASSED [ 20%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Digraph-kwargs3] PASSED [ 20%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Source-kwargs0] PASSED [ 20%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Source-kwargs1] PASSED [ 21%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Source-kwargs2] PASSED [ 21%]
+tests/test_all_classes.py::test_render_raises_before_save_mocked[Source-kwargs3] PASSED [ 21%]
+tests/test_all_classes.py::test_render_mocked[Graph] PASSED              [ 21%]
+tests/test_all_classes.py::test_render_mocked[Digraph] PASSED            [ 22%]
+tests/test_all_classes.py::test_render_mocked[Source] PASSED             [ 22%]
+tests/test_all_classes.py::test_render_outfile_mocked[Graph] PASSED      [ 22%]
+tests/test_all_classes.py::test_render_outfile_mocked[Digraph] PASSED    [ 22%]
+tests/test_all_classes.py::test_render_outfile_mocked[Source] PASSED     [ 23%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=False-Graph] PASSED [ 23%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=False-Digraph] PASSED [ 23%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=False-Source] PASSED [ 24%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=True-Graph] PASSED [ 24%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=True-Digraph] PASSED [ 24%]
+tests/test_all_classes.py::test_format_renderer_formatter_mocked[quiet=True-Source] PASSED [ 24%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-None] PASSED [ 25%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-False] PASSED [ 25%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-True] PASSED [ 25%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-0] PASSED [ 25%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-1] PASSED [ 26%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Graph-2] PASSED [ 26%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-None] PASSED [ 26%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-False] PASSED [ 27%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-True] PASSED [ 27%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-0] PASSED [ 27%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-1] PASSED [ 27%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Digraph-2] PASSED [ 28%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-None] PASSED [ 28%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-False] PASSED [ 28%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-True] PASSED [ 28%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-0] PASSED [ 29%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-1] PASSED [ 29%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=False-Source-2] PASSED [ 29%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-None] PASSED [ 30%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-False] PASSED [ 30%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-True] PASSED [ 30%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-0] PASSED [ 30%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-1] PASSED [ 31%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Graph-2] PASSED [ 31%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-None] PASSED [ 31%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-False] PASSED [ 31%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-True] PASSED [ 32%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-0] PASSED [ 32%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-1] PASSED [ 32%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Digraph-2] PASSED [ 33%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-None] PASSED [ 33%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-False] PASSED [ 33%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-True] PASSED [ 33%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-0] PASSED [ 34%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-1] PASSED [ 34%]
+tests/test_all_classes.py::test_neato_no_op_mocked[quiet=True-Source-2] PASSED [ 34%]
+tests/test_all_classes.py::test_save_mocked[Graph] PASSED                [ 34%]
+tests/test_all_classes.py::test_save_mocked[Digraph] PASSED              [ 35%]
+tests/test_all_classes.py::test_save_mocked[Source] PASSED               [ 35%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Graph-None] PASSED [ 35%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Graph-ascii] PASSED [ 36%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Graph-utf-8] PASSED [ 36%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Digraph-None] PASSED [ 36%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Digraph-ascii] PASSED [ 36%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Digraph-utf-8] PASSED [ 37%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Source-None] PASSED [ 37%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Source-ascii] PASSED [ 37%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=False-Source-utf-8] PASSED [ 37%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Graph-None] PASSED [ 38%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Graph-ascii] PASSED [ 38%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Graph-utf-8] PASSED [ 38%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Digraph-None] PASSED [ 39%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Digraph-ascii] PASSED [ 39%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Digraph-utf-8] PASSED [ 39%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Source-None] PASSED [ 39%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Source-ascii] PASSED [ 40%]
+tests/test_all_classes.py::test_pipe_mocked[quiet=True-Source-utf-8] PASSED [ 40%]
+tests/test_all_classes.py::test_pipe_lines_mocked[Graph] PASSED          [ 40%]
+tests/test_all_classes.py::test_pipe_lines_mocked[Digraph] PASSED        [ 40%]
+tests/test_all_classes.py::test_pipe_lines_mocked[Source] PASSED         [ 41%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error[Graph] PASSED [ 41%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error[Digraph] PASSED [ 41%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error[Source] PASSED [ 42%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error_mocked[Graph] PASSED [ 42%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error_mocked[Digraph] PASSED [ 42%]
+tests/test_all_classes.py::test_pipe_lines_called_process_error_mocked[Source] PASSED [ 42%]
+tests/test_all_classes.py::test_repr_mimebundle_image_svg_xml_mocked[Graph] PASSED [ 43%]
+tests/test_all_classes.py::test_repr_mimebundle_image_svg_xml_mocked[Digraph] PASSED [ 43%]
+tests/test_all_classes.py::test_repr_mimebundle_image_svg_xml_mocked[Source] PASSED [ 43%]
+tests/test_all_classes.py::test_repr_mimebundle_image_png_mocked[Graph] PASSED [ 43%]
+tests/test_all_classes.py::test_repr_mimebundle_image_png_mocked[Digraph] PASSED [ 44%]
+tests/test_all_classes.py::test_repr_mimebundle_image_png_mocked[Source] PASSED [ 44%]
+tests/test_all_classes.py::test_repr_mimebundle_image_jpeg_mocked[Graph] PASSED [ 44%]
+tests/test_all_classes.py::test_repr_mimebundle_image_jpeg_mocked[Digraph] PASSED [ 45%]
+tests/test_all_classes.py::test_repr_mimebundle_image_jpeg_mocked[Source] PASSED [ 45%]
+tests/test_all_classes.py::test_unflatten[Graph] PASSED                  [ 45%]
+tests/test_all_classes.py::test_unflatten[Digraph] PASSED                [ 45%]
+tests/test_all_classes.py::test_unflatten[Source] PASSED                 [ 46%]
+tests/test_all_classes.py::test_unflatten_mocked[Graph] PASSED           [ 46%]
+tests/test_all_classes.py::test_unflatten_mocked[Digraph] PASSED         [ 46%]
+tests/test_all_classes.py::test_unflatten_mocked[Source] PASSED          [ 46%]
+tests/test_all_classes.py::test_view_mocked[Graph] PASSED                [ 47%]
+tests/test_all_classes.py::test_view_mocked[Digraph] PASSED              [ 47%]
+tests/test_all_classes.py::test_view_mocked[Source] PASSED               [ 47%]
+tests/test_all_classes.py::test__view_unknown_platform[Graph] PASSED     [ 48%]
+tests/test_all_classes.py::test__view_unknown_platform[Digraph] PASSED   [ 48%]
+tests/test_all_classes.py::test__view_unknown_platform[Source] PASSED    [ 48%]
+tests/test_all_classes.py::test__view_mocked[platform='darwin'-Graph] PASSED [ 48%]
+tests/test_all_classes.py::test__view_mocked[platform='darwin'-Digraph] PASSED [ 49%]
+tests/test_all_classes.py::test__view_mocked[platform='darwin'-Source] PASSED [ 49%]
+tests/test_all_classes.py::test__view_mocked[platform='freebsd'-Graph] PASSED [ 49%]
+tests/test_all_classes.py::test__view_mocked[platform='freebsd'-Digraph] PASSED [ 50%]
+tests/test_all_classes.py::test__view_mocked[platform='freebsd'-Source] PASSED [ 50%]
+tests/test_all_classes.py::test__view_mocked[platform='linux'-Graph] PASSED [ 50%]
+tests/test_all_classes.py::test__view_mocked[platform='linux'-Digraph] PASSED [ 50%]
+tests/test_all_classes.py::test__view_mocked[platform='linux'-Source] PASSED [ 51%]
+tests/test_all_classes.py::test__view_mocked[platform='windows'-Graph] PASSED [ 51%]
+tests/test_all_classes.py::test__view_mocked[platform='windows'-Digraph] PASSED [ 51%]
+tests/test_all_classes.py::test__view_mocked[platform='windows'-Source] PASSED [ 51%]
+tests/test_graphs.py::test_init_filename[Graph] PASSED                   [ 52%]
+tests/test_graphs.py::test_init_filename[Digraph] PASSED                 [ 52%]
+tests/test_graphs.py::test_init_body[Graph-...-...] PASSED               [ 52%]
+tests/test_graphs.py::test_init_body[Digraph-...-...] PASSED             [ 53%]
+tests/test_graphs.py::test_subgraph_render[Graph-...] PASSED             [ 53%]
+tests/test_graphs.py::test_subgraph_render[Digraph-...] PASSED           [ 53%]
+tests/test_graphs.py::test_clear[Graph-False] PASSED                     [ 53%]
+tests/test_graphs.py::test_clear[Graph-True] PASSED                      [ 54%]
+tests/test_graphs.py::test_clear[Digraph-False] PASSED                   [ 54%]
+tests/test_graphs.py::test_clear[Digraph-True] PASSED                    [ 54%]
+tests/test_graphs.py::test_iter_subgraph_strict[Graph] PASSED            [ 54%]
+tests/test_graphs.py::test_iter_subgraph_strict[Digraph] PASSED          [ 55%]
+tests/test_graphs.py::test_iter_strict[Graph-...] PASSED                 [ 55%]
+tests/test_graphs.py::test_iter_strict[Digraph-...] PASSED               [ 55%]
+tests/test_graphs.py::test_attr_invalid_kw[Graph] PASSED                 [ 56%]
+tests/test_graphs.py::test_attr_invalid_kw[Digraph] PASSED               [ 56%]
+tests/test_graphs.py::test_attr_kw_none[Graph-...] PASSED                [ 56%]
+tests/test_graphs.py::test_attr_kw_none[Digraph-...] PASSED              [ 56%]
+tests/test_graphs.py::test_escaped_quotes_and_escapes[Graph-...] PASSED  [ 57%]
+tests/test_graphs.py::test_escaped_quotes_and_escapes[Digraph-...] PASSED [ 57%]
+tests/test_graphs.py::test_subgraph_graph_none[Graph-...] PASSED         [ 57%]
+tests/test_graphs.py::test_subgraph_graph_none[Digraph-...] PASSED       [ 57%]
+tests/test_graphs.py::test_subgraph_graph_notsole[Graph] PASSED          [ 58%]
+tests/test_graphs.py::test_subgraph_graph_notsole[Digraph] PASSED        [ 58%]
+tests/test_graphs.py::test_subgraph_mixed[Graph, Digraph] PASSED         [ 58%]
+tests/test_graphs.py::test_subgraph_mixed[Digraph, Graph] PASSED         [ 59%]
+tests/test_graphs.py::test_subgraph_reflexive[Graph-...] PASSED          [ 59%]
+tests/test_graphs.py::test_subgraph_reflexive[Digraph-...] PASSED        [ 59%]
+tests/test_graphs.py::test_subgraph PASSED                               [ 59%]
+tests/test_graphs.py::test_label_html PASSED                             [ 60%]
+tests/test_init.py::test_set_default_engine_invalid PASSED               [ 60%]
+tests/test_init.py::test_set_default_format_invalid PASSED               [ 60%]
+tests/test_init.py::test_set_default_engine PASSED                       [ 60%]
+tests/test_init.py::test_set_default_format PASSED                       [ 61%]
+tests/test_init.py::test_set_jupyter_format PASSED                       [ 61%]
+tests/test_jupyter_integration.py::test_get_jupyter_format_mimetype_invalid_raises_unknown PASSED [ 61%]
+tests/test_jupyter_integration.py::test_get_jupyter_mimetype_format_normalizes PASSED [ 62%]
+tests/test_jupyter_integration.py::test_get_jupyter_mimetype_format_raises_unsupported PASSED [ 62%]
+tests/test_jupyter_integration.py::test_repr_image_svg_xml_encoding PASSED [ 62%]
+tests/test_jupyter_integration.py::test_repr_image_svg_xml_encoding_mocked[utf-8] PASSED [ 62%]
+tests/test_jupyter_integration.py::test_repr_image_svg_xml_encoding_mocked[ascii] PASSED [ 63%]
+tests/test_jupyter_integration.py::test_repr_image_svg_xml_encoding_mocked[latin1] PASSED [ 63%]
+tests/test_parameters.py::test_parameters[Graph] PASSED                  [ 63%]
+tests/test_parameters.py::test_parameters[Digraph] PASSED                [ 63%]
+tests/test_parameters.py::test_parameters[Source] PASSED                 [ 64%]
+tests/test_parameters.py::test_verify_parameter_raises_unknown[verify_engine] PASSED [ 64%]
+tests/test_parameters.py::test_verify_parameter_raises_unknown[verify_format] PASSED [ 64%]
+tests/test_parameters.py::test_verify_parameter_raises_unknown[verify_renderer] PASSED [ 65%]
+tests/test_parameters.py::test_verify_parameter_raises_unknown[verify_formatter] PASSED [ 65%]
+tests/test_parameters.py::test_verify_parameter_none_required_false_passes[verify_engine] PASSED [ 65%]
+tests/test_parameters.py::test_verify_parameter_none_required_false_passes[verify_format] PASSED [ 65%]
+tests/test_parameters.py::test_verify_parameter_none_required_false_passes[verify_renderer] PASSED [ 66%]
+tests/test_parameters.py::test_verify_parameter_none_required_false_passes[verify_formatter] PASSED [ 66%]
+tests/test_parameters.py::test_verify_parameter_none_required_raises_missing[verify_engine] PASSED [ 66%]
+tests/test_parameters.py::test_verify_parameter_none_required_raises_missing[verify_format] PASSED [ 66%]
+tests/test_parameters.py::test_verify_parameter_none_required_raises_missing[verify_renderer] PASSED [ 67%]
+tests/test_parameters.py::test_verify_parameter_none_required_raises_missing[verify_formatter] PASSED [ 67%]
+tests/test_quoting.py::test_deprecated_escape[G] PASSED                  [ 67%]
+tests/test_quoting.py::test_deprecated_escape[E] PASSED                  [ 68%]
+tests/test_quoting.py::test_deprecated_escape[T] PASSED                  [ 68%]
+tests/test_quoting.py::test_deprecated_escape[H] PASSED                  [ 68%]
+tests/test_quoting.py::test_deprecated_escape[L] PASSED                  [ 68%]
+tests/test_quoting.py::test_deprecated_escape[l] PASSED                  [ 69%]
+tests/test_quoting.py::test_quote["spam"-"\\"spam\\""] PASSED            [ 69%]
+tests/test_quoting.py::test_quote[node-"node"] PASSED                    [ 69%]
+tests/test_quoting.py::test_quote[EDGE-"EDGE"] PASSED                    [ 69%]
+tests/test_quoting.py::test_quote[Graph-"Graph"] PASSED                  [ 70%]
+tests/test_quoting.py::test_quote[\\G \\N \\E \\T \\H \\L-"\\G \\N \\E \\T \\H \\L"] PASSED [ 70%]
+tests/test_quoting.py::test_quote[\\n \\l \\r-"\\n \\l \\r"] PASSED      [ 70%]
+tests/test_quoting.py::test_quote[\r\n-"\r\n"] PASSED                    [ 71%]
+tests/test_quoting.py::test_quote[\\\\n-"\\\\n"] PASSED                  [ 71%]
+tests/test_quoting.py::test_quote[\u0665.\u0660-"\u0665.\u0660"] PASSED  [ 71%]
+tests/test_quoting.py::test_quote[\\"spam-"\\"spam"] PASSED              [ 71%]
+tests/test_quoting.py::test_quote[\\\\"spam-"\\\\\\"spam"] PASSED        [ 72%]
+tests/test_quoting.py::test_quote[\\\\\\"spam-"\\\\\\"spam"] PASSED      [ 72%]
+tests/test_quoting.py::test_quote[\\\\\\\\"spam-"\\\\\\\\\\"spam"] PASSED [ 72%]
+tests/test_quoting.py::test_attr_list[attributes0- [spam=eggs]] PASSED   [ 72%]
+tests/test_quoting.py::test_attr_list[attributes1- [spam=eggs]] PASSED   [ 73%]
+tests/test_quoting.py::test_nohtml[spam-spam-spam] PASSED                [ 73%]
+tests/test_quoting.py::test_nohtml[<>-*-<>-<>-*-<>-"<>-*-<>"] PASSED     [ 73%]
+tests/test_saving.py::test_saves_source_from_file PASSED                 [ 74%]
+tests/test_sources.py::test_source_parameter[engine] PASSED              [ 74%]
+tests/test_sources.py::test_source_parameter[format] PASSED              [ 74%]
+tests/test_sources.py::test_source_parameter[encoding] PASSED            [ 74%]
+tests/test_sources.py::test_init PASSED                                  [ 75%]
+tests/test_sources.py::test_init_filename PASSED                         [ 75%]
+tests/test_sources.py::test_filepath PASSED                              [ 75%]
+tests/test_sources.py::test_from_file PASSED                             [ 75%]
+tests/test_sources.py::test_source_iter PASSED                           [ 76%]
+tests/test_tools.py::test_mkdirs_invalid PASSED                          [ 76%]
+tests/test_tools.py::test_mkdirs PASSED                                  [ 76%]
+tests/test_tools.py::test_deprecate_positional_args[FutureWarning- third='third' ] PASSED [ 77%]
+tests/test_tools.py::test_deprecate_positional_args[DeprecationWarning- third='third' ] PASSED [ 77%]
+tests/test_tools.py::test_deprecate_positional_args[PendingDeprecationWarning- third='third' ] PASSED [ 77%]
+tests/test_tools.py::test_deprecate_positional_args[None-None] PASSED    [ 77%]
+tests/backend/test_execute.py::test_missing_executable[render-args0] PASSED [ 78%]
+tests/backend/test_execute.py::test_missing_executable[pipe-args1] PASSED [ 78%]
+tests/backend/test_execute.py::test_missing_executable[unflatten-args2] PASSED [ 78%]
+tests/backend/test_execute.py::test_missing_executable[version-args3] PASSED [ 78%]
+tests/backend/test_execute.py::test_run_check_oserror PASSED             [ 79%]
+tests/backend/test_execute.py::test_run_check_called_process_error_mocked[quiet=False] PASSED [ 79%]
+tests/backend/test_execute.py::test_run_check_called_process_error_mocked[quiet=True] PASSED [ 79%]
+tests/backend/test_execute.py::test_run_check_input_lines_mocked PASSED  [ 80%]
+tests/backend/test_piping.py::test_pipe_invalid_data[quiet=False] PASSED [ 80%]
+tests/backend/test_piping.py::test_pipe_invalid_data[quiet=True] PASSED  [ 80%]
+tests/backend/test_piping.py::test_pipe_pipe_invalid_data_mocked[quiet=False] PASSED [ 80%]
+tests/backend/test_piping.py::test_pipe_pipe_invalid_data_mocked[quiet=True] PASSED [ 81%]
+tests/backend/test_piping.py::test_pipe[dot-svg-None-None-(?s)^<\\?xml .+</svg>\\s*$] PASSED [ 81%]
+tests/backend/test_piping.py::test_pipe[dot-ps-ps-core-%!PS-] PASSED     [ 81%]
+tests/backend/test_piping.py::test_pipe[sfdp-svg-None-None-(?s)^<\\?xml .+</svg>\\s*$] FAILED [ 81%]
+tests/backend/test_piping.py::test_pipe_mocked[quiet=False] PASSED       [ 82%]
+tests/backend/test_piping.py::test_pipe_mocked[quiet=True] PASSED        [ 82%]
+tests/backend/test_piping.py::test_pipe_string_mocked[quiet=False] PASSED [ 82%]
+tests/backend/test_piping.py::test_pipe_string_mocked[quiet=True] PASSED [ 83%]
+tests/backend/test_piping.py::test_pipe_lines_mocked[quiet=False] PASSED [ 83%]
+tests/backend/test_piping.py::test_pipe_lines_mocked[quiet=True] PASSED  [ 83%]
+tests/backend/test_piping.py::test_pipe_lines_string_mocked[quiet=False] PASSED [ 83%]
+tests/backend/test_piping.py::test_pipe_lines_string_mocked[quiet=True] PASSED [ 84%]
+tests/backend/test_rendering.py::test_render_missing_file[quiet=False] PASSED [ 84%]
+tests/backend/test_rendering.py::test_render_missing_file[quiet=True] PASSED [ 84%]
+tests/backend/test_rendering.py::test_render_unknown_parameter_raises[args0-ValueError-unknown engine] PASSED [ 84%]
+tests/backend/test_rendering.py::test_render_unknown_parameter_raises[args1-ValueError-unknown format] PASSED [ 85%]
+tests/backend/test_rendering.py::test_render_unknown_parameter_raises[args2-ValueError-unknown renderer] PASSED [ 85%]
+tests/backend/test_rendering.py::test_render_unknown_parameter_raises[args3-RequiredArgumentError-without renderer] PASSED [ 85%]
+tests/backend/test_rendering.py::test_render_unknown_parameter_raises[args4-ValueError-unknown formatter] PASSED [ 86%]
+tests/backend/test_rendering.py::test_render[dot-pdf-None-None-pdf] PASSED [ 86%]
+tests/backend/test_rendering.py::test_render[dot-plain-dot-core-core.dot.plain] PASSED [ 86%]
+tests/backend/test_rendering.py::test_render_img PASSED                  [ 86%]
+tests/backend/test_rendering.py::test_render_outfile_differnt_parent PASSED [ 87%]
+tests/backend/test_rendering.py::test_render_mocked[quiet=False-None] PASSED [ 87%]
+tests/backend/test_rendering.py::test_render_mocked[quiet=False-dot_sources] PASSED [ 87%]
+tests/backend/test_rendering.py::test_render_mocked[quiet=True-None] PASSED [ 87%]
+tests/backend/test_rendering.py::test_render_mocked[quiet=True-dot_sources] PASSED [ 88%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args0-kwargs0-RequiredArgumentError-filepath: \\(required] PASSED [ 88%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args1-kwargs1-RequiredArgumentError-filepath: \\(required] PASSED [ 88%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args2-kwargs2-RequiredArgumentError-format: \\(required] PASSED [ 89%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args3-kwargs3-RequiredArgumentError-filepath: \\(required] PASSED [ 89%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args4-kwargs4-ValueError-outfile 'spam\\.gv' must be different from input file 'spam\\.gv'] PASSED [ 89%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args5-kwargs5-ValueError-overwrite_filepath cannot be combined with raise_if_result_exists] PASSED [ 89%]
+tests/backend/test_rendering.py::test_render_raises_mocked[args6-kwargs6-FileExistsError-output file exists: 'spam.png'] PASSED [ 90%]
+tests/backend/test_rendering.py::test_get_outfile[spam.gv-kwargs0-spam.gv.pdf] PASSED [ 90%]
+tests/backend/test_rendering.py::test_get_outfile[spam.gv-kwargs1-spam.gv.dot.plain] PASSED [ 90%]
+tests/backend/test_rendering.py::test_get_filepath[spam.pdf-spam.gv] PASSED [ 90%]
+tests/backend/test_rendering.py::test_get_filepath[spam-spam.gv] PASSED  [ 91%]
+tests/backend/test_rendering.py::test_get_format[spam.gv.pdf-None-pdf] PASSED [ 91%]
+tests/backend/test_rendering.py::test_get_format[spam.jpeg-None-jpeg] PASSED [ 91%]
+tests/backend/test_rendering.py::test_get_format[spam.SVG-None-svg] PASSED [ 92%]
+tests/backend/test_rendering.py::test_get_format[spam.pdf-None-pdf] PASSED [ 92%]
+tests/backend/test_rendering.py::test_get_format[spam.pdf-pdf-pdf] PASSED [ 92%]
+tests/backend/test_rendering.py::test_get_format_warns[spam.jpg-jpeg-jpeg-FormatSuffixMismatchWarning-expected format 'jpg' from outfile differs from given format: 'jpeg'] PASSED [ 92%]
+tests/backend/test_rendering.py::test_get_format_warns[spam.dot-plain-plain-FormatSuffixMismatchWarning-expected format 'dot' from outfile differs from given format: 'plain'] PASSED [ 93%]
+tests/backend/test_rendering.py::test_get_format_warns[spam-svg-svg-UnknownSuffixWarning-unknown outfile suffix '' \\(expected: '\\.svg'\\)] PASSED [ 93%]
+tests/backend/test_rendering.py::test_get_format_warns[spam.peng-png-png-UnknownSuffixWarning-unknown outfile suffix '.peng' \\(expected: '\\.png'\\)] PASSED [ 93%]
+tests/backend/test_rendering.py::test_get_format_warns[spam-pdf-pdf-UnknownSuffixWarning-unknown outfile suffix '' \\(expected: '\\.pdf'\\)] PASSED [ 93%]
+tests/backend/test_rendering.py::test_get_format_raises[spam-RequiredArgumentError-cannot infer rendering format from suffix '' of outfile: 'spam'] PASSED [ 94%]
+tests/backend/test_rendering.py::test_get_format_raises[spam.peng-RequiredArgumentError-cannot infer rendering format from suffix '.peng' of outfile: 'spam.peng'] PASSED [ 94%]
+tests/backend/test_rendering.py::test_get_format_raises[spam.wav-RequiredArgumentError-cannot infer rendering format from suffix '.wav' of outfile: 'spam.wav'] PASSED [ 94%]
+tests/backend/test_unflattening.py::test_unflatten_stagger_missing PASSED [ 95%]
+tests/backend/test_unflattening.py::test_unflatten[digraph {1 -> 2; 1 -> 3; 1 -> 4}-kwargs0-digraph { 1 -> 2 [minlen=1]; 1 -> 3 [minlen=2]; 1 -> 4 [minlen=3]; }] PASSED [ 95%]
+tests/backend/test_unflattening.py::test_unflatten_mocked PASSED         [ 95%]
+tests/backend/test_upstream_version.py::test_version PASSED              [ 95%]
+tests/backend/test_upstream_version.py::test_version_mocked[dot - graphviz version 1.2.3 (mocked)-expected0] PASSED [ 96%]
+tests/backend/test_upstream_version.py::test_version_mocked[dot - graphviz version 2.43.20190912.0211 (20190912.0211)\n-expected1] PASSED [ 96%]
+tests/backend/test_upstream_version.py::test_version_mocked[dot - graphviz version 2.44.2~dev.20200927.0217 (20200927.0217)\n-expected2] PASSED [ 96%]
+tests/backend/test_upstream_version.py::test_version_mocked[dot - graphviz version 2.44.1 (mocked)\n-expected3] PASSED [ 96%]
+tests/backend/test_upstream_version.py::test_version_mocked[dot - graphviz version 2.44.2~dev.20200704.1652 (mocked)\n-expected4] PASSED [ 97%]
+tests/backend/test_upstream_version.py::test_version_parsefail_mocked PASSED [ 97%]
+tests/backend/test_viewing.py::test_view_unknown_platform PASSED         [ 97%]
+tests/backend/test_viewing.py::test_view_mocked[platform='darwin'-quiet=False] PASSED [ 98%]
+tests/backend/test_viewing.py::test_view_mocked[platform='darwin'-quiet=True] PASSED [ 98%]
+tests/backend/test_viewing.py::test_view_mocked[platform='freebsd'-quiet=False] PASSED [ 98%]
+tests/backend/test_viewing.py::test_view_mocked[platform='freebsd'-quiet=True] PASSED [ 98%]
+tests/backend/test_viewing.py::test_view_mocked[platform='linux'-quiet=False] PASSED [ 99%]
+tests/backend/test_viewing.py::test_view_mocked[platform='linux'-quiet=True] PASSED [ 99%]
+tests/backend/test_viewing.py::test_view_mocked[platform='windows'-quiet=False] PASSED [ 99%]
+tests/backend/test_viewing.py::test_view_mocked[platform='windows'-quiet=True] PASSED [100%]
+
+=================================== FAILURES ===================================
+___________ test_pipe[sfdp-svg-None-None-(?s)^<\\?xml .+</svg>\\s*$] ___________
+Traceback (most recent call last):
+  File "/workdir/graphviz-0.20.1/graphviz/backend/execute.py", line 91, in run_check
+    proc.check_returncode()
+  File "/usr/local/lib/python3.10/subprocess.py", line 457, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '[PosixPath('dot'), '-Ksfdp', '-Tsvg']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/graphviz-0.20.1/tests/backend/test_piping.py", line 79, in test_pipe
+    out = graphviz.pipe(engine, format_, data,
+  File "/workdir/graphviz-0.20.1/graphviz/_tools.py", line 171, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/graphviz-0.20.1/graphviz/backend/piping.py", line 59, in pipe
+    proc = execute.run_check(cmd, capture_output=True, quiet=quiet, **kwargs)
+  File "/workdir/graphviz-0.20.1/graphviz/backend/execute.py", line 93, in run_check
+    raise CalledProcessError(*e.args)
+graphviz.backend.execute.CalledProcessError: Command '[PosixPath('dot'), '-Ksfdp', '-Tsvg']' returned non-zero exit status 1. [stderr: b'Error: remove_overlap: Graphviz not built with triangulation library\n']
+------------------------------ Captured log setup ------------------------------
+DEBUG    graphviz.backend.execute:execute.py:61 run [PosixPath('dot'), '-V']
+----------------------------- Captured stderr call -----------------------------
+Error: remove_overlap: Graphviz not built with triangulation library
+------------------------------ Captured log call -------------------------------
+DEBUG    graphviz.backend.execute:execute.py:61 run [PosixPath('dot'), '-V']
+DEBUG    graphviz.backend.execute:execute.py:61 run [PosixPath('dot'), '-Ksfdp', '-Tsvg']
+DEBUG    graphviz.backend.execute:execute.py:61 run [PosixPath('dot'), '-V']
+- generated xml file: /workdir/results/graphviz/0.20.1/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                                   Stmts   Miss  Cover
+----------------------------------------------------------
+graphviz/__init__.py                      36      0   100%
+graphviz/_compat.py                       11      0   100%
+graphviz/_defaults.py                     21      0   100%
+graphviz/_tools.py                        64      0   100%
+graphviz/backend/__init__.py               9      0   100%
+graphviz/backend/dot_command.py           20      0   100%
+graphviz/backend/execute.py               62      0   100%
+graphviz/backend/mixins.py                37      0   100%
+graphviz/backend/piping.py                26      0   100%
+graphviz/backend/rendering.py             82      0   100%
+graphviz/backend/unflattening.py          21      0   100%
+graphviz/backend/upstream_version.py      15      0   100%
+graphviz/backend/viewing.py               34      0   100%
+graphviz/base.py                           8      0   100%
+graphviz/copying.py                        7      0   100%
+graphviz/dot.py                          132      0   100%
+graphviz/encoding.py                      22      0   100%
+graphviz/exceptions.py                     7      0   100%
+graphviz/graphs.py                        28      0   100%
+graphviz/jupyter_integration.py           34      0   100%
+graphviz/parameters/__init__.py            6      0   100%
+graphviz/parameters/base.py                7      0   100%
+graphviz/parameters/engines.py            32      0   100%
+graphviz/parameters/formats.py            32      0   100%
+graphviz/parameters/formatters.py         32      0   100%
+graphviz/parameters/mixins.py             26      0   100%
+graphviz/parameters/renderers.py          32      0   100%
+graphviz/piping.py                        39      0   100%
+graphviz/quoting.py                       59      0   100%
+graphviz/rendering.py                     40      0   100%
+graphviz/saving.py                        44      0   100%
+graphviz/sources.py                       50      0   100%
+graphviz/unflattening.py                  14      0   100%
+----------------------------------------------------------
+TOTAL                                   1089      0   100%
+Coverage HTML written to dir htmlcov
+
+============================= slowest 10 durations =============================
+0.08s setup    tests/backend/test_viewing.py::test_view_mocked[platform='linux'-quiet=True]
+0.07s setup    tests/backend/test_piping.py::test_pipe_lines_mocked[quiet=True]
+0.05s call     README.rst::README.rst
+0.04s setup    tests/backend/test_viewing.py::test_view_mocked[platform='linux'-quiet=False]
+0.04s call     graphviz/jupyter_integration.py::graphviz.jupyter_integration.JupyterIntegration._repr_mimebundle_
+0.04s setup    tests/backend/test_viewing.py::test_view_mocked[platform='darwin'-quiet=False]
+0.04s setup    tests/backend/test_viewing.py::test_view_mocked[platform='freebsd'-quiet=False]
+0.04s setup    tests/backend/test_execute.py::test_run_check_input_lines_mocked
+0.04s setup    tests/backend/test_viewing.py::test_view_mocked[platform='darwin'-quiet=True]
+0.04s setup    tests/backend/test_viewing.py::test_view_mocked[platform='windows'-quiet=True]
+=========================== short test summary info ============================
+FAILED tests/backend/test_piping.py::test_pipe[sfdp-svg-None-None-(?s)^<\\?xml .+</svg>\\s*$]
+======================== 1 failed, 365 passed in 3.49s =========================
+ERROR: InvocationError for command /workdir/graphviz-0.20.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/graphviz/0.20.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

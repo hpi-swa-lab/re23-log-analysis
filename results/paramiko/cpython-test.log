@@ -1,0 +1,40 @@
+GLOB sdist-make: /workdir/paramiko-2.12.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/paramiko-2.12.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/paramiko-2.12.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Obtaining file:///workdir/paramiko-2.12.0 (from -r dev-requirements.txt (line 23))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting invoke==1.6.0 (from -r dev-requirements.txt (line 2))
+  Downloading invoke-1.6.0-py3-none-any.whl (212 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.0/212.0 kB 3.7 MB/s eta 0:00:00
+Collecting invocations==2.6.0 (from -r dev-requirements.txt (line 3))
+  Downloading invocations-2.6.0-py2.py3-none-any.whl (38 kB)
+Collecting pytest
+  Downloading pytest-4.4.2-py2.py3-none-any.whl (224 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.0/224.0 kB 11.8 MB/s eta 0:00:00
+Collecting pytest-relaxed==1.1.5 (from -r dev-requirements.txt (line 5))
+  Downloading pytest_relaxed-1.1.5-py2.py3-none-any.whl (15 kB)
+Collecting pytest-xdist==1.28.0 (from -r dev-requirements.txt (line 7))
+  Downloading pytest_xdist-1.28.0-py2.py3-none-any.whl (34 kB)
+Collecting mock
+  Using cached mock-2.0.0-py2.py3-none-any.whl (56 kB)
+Collecting flake8==3.8.3 (from -r dev-requirements.txt (line 10))
+  Using cached flake8-3.8.3-py2.py3-none-any.whl (72 kB)
+Collecting black==18.6b4 (from -r dev-requirements.txt (line 12))
+  Downloading black-18.6b4-py36-none-any.whl (81 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.4/81.4 kB 11.1 MB/s eta 0:00:00
+Collecting coverage==4.5.4 (from -r dev-requirements.txt (line 14))
+  Using cached coverage-4.5.4-cp310-cp310-linux_x86_64.whl
+ERROR: Could not find a version that satisfies the requirement codecov==2.1.11 (from versions: 2.1.13)
+ERROR: No matching distribution found for codecov==2.1.11
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/paramiko-2.12.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/paramiko-2.12.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)

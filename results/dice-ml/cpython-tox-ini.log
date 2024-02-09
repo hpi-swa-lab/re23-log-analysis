@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/dice-ml/0.9/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements-test.txt
+	-rrequirements-linting.txt
+	-rrequirements-deeplearning.txt
+	-rrequirements.txt
+

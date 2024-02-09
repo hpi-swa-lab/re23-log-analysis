@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = {envpython} -m xmlrunner --output-file /workdir/results/pyrsistent/0.19.2/1/cpython-test-results.xml
+deps = mock
+	unittest-xml-reporting
+	-rrequirements.txt
+

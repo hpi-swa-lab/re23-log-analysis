@@ -1,0 +1,29 @@
+GLOB sdist-make: /workdir/imageio-2.22.4/setup.py
+ERROR: invocation failed (exit code 1), logfile: /workdir/imageio-2.22.4/.tox/log/GLOB-0.log
+================================== log start ===================================
+running sdist
+Traceback (most recent call last):
+  File "/workdir/imageio-2.22.4/setup.py", line 219, in <module>
+    setup(
+  File "/opt/graalpy/lib/python3.10/site-packages/setuptools/__init__.py", line 87, in setup
+    return distutils.core.setup(**attrs)
+  File "/opt/graalpy/lib/python3.10/distutils/core.py", line 148, in setup
+    dist.run_commands()
+  File "/opt/graalpy/lib/python3.10/distutils/dist.py", line 966, in run_commands
+    self.run_command(cmd)
+  File "/opt/graalpy/lib/python3.10/site-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/opt/graalpy/lib/python3.10/distutils/dist.py", line 985, in run_command
+    cmd_obj.run()
+  File "/workdir/imageio-2.22.4/setup.py", line 167, in run
+    import imageio
+  File "/workdir/imageio-2.22.4/imageio/__init__.py", line 24, in <module>
+    from .core import FormatManager, RETURN_BYTES
+  File "/workdir/imageio-2.22.4/imageio/core/__init__.py", line 10, in <module>
+    from .util import Image, Array, Dict, asarray, image_as_uint, urlopen
+  File "/workdir/imageio-2.22.4/imageio/core/util.py", line 10, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError('/opt/graalpy/bin/graalpy setup.py sdist --formats=zip --dist-dir /workdir/imageio-2.22.4/.tox/dist', 1)

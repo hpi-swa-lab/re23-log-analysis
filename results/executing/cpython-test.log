@@ -1,0 +1,34 @@
+.package create: /workdir/executing-1.2.0/.tox/.package
+.package installdeps: setuptools, wheel, setuptools_scm[toml]
+/workdir/executing-1.2.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/executing-1.2.0" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+cpythonlibtest-unit-test-tests create: /workdir/executing-1.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/executing-1.2.0/.tox/.tmp/package/1/executing-1.2.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.1.3,executing @ file:///workdir/executing-1.2.0/.tox/.tmp/package/1/executing-1.2.0.tar.gz#sha256=ccb11b06e5de166701972e20162784d9e9806dd858a3518342e53b22524739b4,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3526517102'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/executing/1.2.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/executing-1.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/executing-1.2.0
+collecting ... collected 48 items / 1 error
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_pytest.py _____________________
+ImportError while importing test module '/workdir/executing-1.2.0/tests/test_pytest.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_pytest.py:8: in <module>
+    import asttokens
+E   ModuleNotFoundError: No module named 'asttokens'
+- generated xml file: /workdir/results/executing/1.2.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_pytest.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.16s ===============================
+ERROR: InvocationError for command /workdir/executing-1.2.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/executing/1.2.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

@@ -1,0 +1,75 @@
+Collecting aliyun-python-sdk-core==2.13.36
+  Downloading aliyun-python-sdk-core-2.13.36.tar.gz (440 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 440.5/440.5 kB 2.7 MB/s eta 0:00:00
+Looking for GraalPy patches for aliyun-python-sdk-core
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting jmespath<1.0.0,>=0.9.3
+  Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Collecting cryptography>=2.6.0
+  Downloading cryptography-3.4.7.tar.gz (546 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 546.9/546.9 kB 3.1 MB/s eta 0:00:00
+Looking for GraalPy patches for cryptography
+Patching package cryptography using /opt/graalpy/lib/graalpy23.1/patches/cryptography/cryptography-3.4.7.patch
+patching file setup.py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting cffi>=1.12
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: aliyun-python-sdk-core, cryptography
+  Building wheel for aliyun-python-sdk-core (setup.py): started
+  Building wheel for aliyun-python-sdk-core (setup.py): finished with status 'done'
+  Created wheel for aliyun-python-sdk-core: filename=aliyun_python_sdk_core-2.13.36-py3-none-any.whl size=533190 sha256=8d85558025666a63927677023959db1dda38810ab3d7ddebe8fdf9702fa3d765
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/d3/f4/d5/16d82e1f7f837c5c26437b908210e58946490df0ed103214ae
+  Building wheel for cryptography (pyproject.toml): started
+  Building wheel for cryptography (pyproject.toml): finished with status 'done'
+  Created wheel for cryptography: filename=cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl size=395381 sha256=c8cd895904e67b2a2ba3c7cb518160d82ca65a7dd8ce50d9f0f8784942f70efd
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/1f/40/55/766e73139190df7932ce21088de6e739f4dc8245726cdcc33a
+Successfully built aliyun-python-sdk-core cryptography
+Installing collected packages: pycparser, jmespath, cffi, cryptography, aliyun-python-sdk-core
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for jmespath
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for aliyun_python_sdk_core
+Successfully installed aliyun-python-sdk-core-2.13.36 cffi-1.15.1 cryptography-3.4.7 jmespath-0.10.0 pycparser-2.21

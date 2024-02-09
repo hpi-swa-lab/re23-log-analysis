@@ -1,0 +1,77 @@
+GLOB sdist-make: /workdir/xmltodict-0.13.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/xmltodict-0.13.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/xmltodict-0.13.0/.tox/.tmp/package/1/xmltodict-0.13.0.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1,xmltodict @ file:///workdir/xmltodict-0.13.0/.tox/.tmp/package/1/xmltodict-0.13.0.zip
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='318064722'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/xmltodict/0.13.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/xmltodict-0.13.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/xmltodict-0.13.0
+collecting ... collected 58 items
+
+tests/test_dicttoxml.py::DictToXMLTestCase::test_attr_order_roundtrip PASSED [  1%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_attrib PASSED           [  3%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_attrib_and_cdata PASSED [  5%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_boolean_unparse PASSED  [  6%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_cdata PASSED            [  8%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_encoding PASSED         [ 10%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_fulldoc PASSED          [ 12%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_generator PASSED        [ 13%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_list PASSED             [ 15%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_list_expand_iter PASSED [ 17%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_multiple_roots PASSED   [ 18%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_multiple_roots_nofulldoc PASSED [ 20%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_namespace_support PASSED [ 22%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_nested PASSED           [ 24%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_no_root PASSED          [ 25%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_no_root_nofulldoc PASSED [ 27%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_non_string_attr PASSED  [ 29%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_non_string_value PASSED [ 31%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_preprocessor PASSED     [ 32%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_preprocessor_skipkey PASSED [ 34%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_pretty_print PASSED     [ 36%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_root PASSED             [ 37%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_semistructured PASSED   [ 39%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_short_empty_elements PASSED [ 41%]
+tests/test_dicttoxml.py::DictToXMLTestCase::test_simple_cdata PASSED     [ 43%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_attrib PASSED           [ 44%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_attrib_and_cdata PASSED [ 46%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_comments PASSED         [ 48%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_custom_attrib PASSED    [ 50%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_custom_cdata PASSED     [ 51%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_disable_entities_false_returns_xmlbomb PASSED [ 53%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_disable_entities_true_attempts_external_dtd PASSED [ 55%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_disable_entities_true_ignores_external_dtd PASSED [ 56%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_disable_entities_true_ignores_xmlbomb PASSED [ 58%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_encoded_string PASSED   [ 60%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_force_cdata PASSED      [ 62%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_force_list_basic PASSED [ 63%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_force_list_callable PASSED [ 65%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_keep_whitespace PASSED  [ 67%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_list PASSED             [ 68%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_minimal PASSED          [ 70%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_namespace_collapse PASSED [ 72%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_namespace_collapse_all PASSED [ 74%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_namespace_ignore PASSED [ 75%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_namespace_support PASSED [ 77%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_nested_semi_structured PASSED [ 79%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_postprocessor PASSED    [ 81%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_postprocessor_attribute PASSED [ 82%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_postprocessor_skip PASSED [ 84%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_semi_structured PASSED  [ 86%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_simple PASSED           [ 87%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_skip_attrib PASSED      [ 89%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_skip_whitespace PASSED  [ 91%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_streaming PASSED        [ 93%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_streaming_generator PASSED [ 94%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_streaming_interrupt PASSED [ 96%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_string_vs_file PASSED   [ 98%]
+tests/test_xmltodict.py::XMLToDictTestCase::test_unicode PASSED          [100%]
+
+- generated xml file: /workdir/results/xmltodict/0.13.0/1/graalpy-test-results.xml -
+============================== 58 passed in 1.68s ==============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

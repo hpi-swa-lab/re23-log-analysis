@@ -1,0 +1,84 @@
+.package create: /workdir/pyproj-3.4.0/.tox/.package
+.package installdeps: setuptools>=61.0.0, wheel, cython>=0.28.4
+/workdir/pyproj-3.4.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching 'pyproj/*.pyd'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'pyproj/proj_dir'
+/workdir/pyproj-3.4.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching 'pyproj/*.pyd'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'pyproj/proj_dir'
+cpythonlibtest-unit-test-tests create: /workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pyproj-3.4.0/.tox/.tmp/package/1/pyproj-3.4.0.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/pyproj-3.4.0.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      <string>:10: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+      warning: pyproj/_compat.pxd:4:0: The 'IF' statement is deprecated and will be removed in a future Cython version. Consider using runtime conditions or C macros instead. See https://github.com/cython/cython/issues/4310
+      warning: pyproj/_compat.pyx:20:0: The 'IF' statement is deprecated and will be removed in a future Cython version. Consider using runtime conditions or C macros instead. See https://github.com/cython/cython/issues/4310
+      warning: pyproj/_compat.pxd:4:0: The 'IF' statement is deprecated and will be removed in a future Cython version. Consider using runtime conditions or C macros instead. See https://github.com/cython/cython/issues/4310
+      warning: pyproj/_compat.pxd:4:0: The 'IF' statement is deprecated and will be removed in a future Cython version. Consider using runtime conditions or C macros instead. See https://github.com/cython/cython/issues/4310
+      performance hint: pyproj/_datadir.pyx:81:5: Exception check on 'pyproj_log_function' will always require the GIL to be acquired.
+      Possible solutions:
+          1. Declare the function as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+          2. Use an 'int' return type on the function to allow an error code to be returned.
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      
+      cdef void pyproj_context_initialize(PJ_CONTEXT* context) except *:
+          """
+          Setup the context for pyproj
+          """
+          proj_log_func(context, NULL, pyproj_log_function)
+                                       ^
+      ------------------------------------------------------------
+      
+      pyproj/_datadir.pyx:131:33: Cannot assign type 'void (void *, int, const char *) except * nogil' to 'PJ_LOG_FUNCTION'. Exception values are incompatible. Suggest adding 'noexcept' to type 'void (void *, int, const char *) except * nogil'.
+      Traceback (most recent call last):
+        File "/workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-kzu5aur1/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-kzu5aur1/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-kzu5aur1/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 229, in <module>
+        File "<string>", line 184, in get_extension_modules
+        File "/tmp/pip-build-env-kzu5aur1/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1154, in cythonize
+          cythonize_one(*args)
+        File "/tmp/pip-build-env-kzu5aur1/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1321, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: pyproj/_datadir.pyx
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/pyproj-3.4.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/pyproj-3.4.0.tar.gz (exited with code 1)

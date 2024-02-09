@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/sphinx-gallery/0.11.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdev-requirements.txt
+	-rrequirements.txt
+	-rdoc/binder/requirements.txt
+	-rsphinx_gallery/tests/tinybuild/binder/requirements.txt
+

@@ -1,0 +1,61 @@
+GLOB sdist-make: /workdir/lizard-1.17.10/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/lizard-1.17.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev_requirements.txt, -rwebsite/static/bower/bootstrap/test-infra/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/lizard-1.17.10/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting coverage (from -r dev_requirements.txt (line 2))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting pygments==2.3.1 (from -r dev_requirements.txt (line 3))
+  Downloading Pygments-2.3.1-py2.py3-none-any.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.5/849.5 kB 11.5 MB/s eta 0:00:00
+Collecting nose (from -r dev_requirements.txt (line 4))
+  Using cached nose-1.3.7-py3-none-any.whl (154 kB)
+Collecting pycodestyle (from -r dev_requirements.txt (line 5))
+  Using cached pycodestyle-2.11.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: wheel in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r dev_requirements.txt (line 6)) (0.41.3)
+Collecting pylint (from -r dev_requirements.txt (line 7))
+  Using cached pylint-3.0.2-py3-none-any.whl.metadata (12 kB)
+Collecting twine (from -r dev_requirements.txt (line 9))
+  Using cached twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting jinja2 (from -r dev_requirements.txt (line 10))
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting boto==2.20.0 (from -r website/static/bower/bootstrap/test-infra/requirements.txt (line 1))
+  Downloading boto-2.20.0.tar.gz (6.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 7.6 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [11 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-install-ztsj1yi2/boto_01544f5d84b84f029d7346c92ab98cbd/setup.py", line 37, in <module>
+          from boto import __version__
+        File "/tmp/pip-install-ztsj1yi2/boto_01544f5d84b84f029d7346c92ab98cbd/boto/__init__.py", line 27, in <module>
+          from boto.pyami.config import Config, BotoConfigLocations
+        File "/tmp/pip-install-ztsj1yi2/boto_01544f5d84b84f029d7346c92ab98cbd/boto/pyami/config.py", line 185
+          print s.getvalue()
+          ^^^^^^^^^^^^^^^^^^
+      SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev_requirements.txt, -rwebsite/static/bower/bootstrap/test-infra/requirements.txt]; v = InvocationError('/workdir/lizard-1.17.10/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rwebsite/static/bower/bootstrap/test-infra/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev_requirements.txt, -rwebsite/static/bower/bootstrap/test-infra/requirements.txt]; v = InvocationError('/workdir/lizard-1.17.10/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rwebsite/static/bower/bootstrap/test-infra/requirements.txt', 1)

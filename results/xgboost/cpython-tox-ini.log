@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/xgboost/1.7.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdoc/requirements.txt
+	-rtests/buildkite/infrastructure/requirements.txt
+	-rrabit/doc/python-requirements.txt
+

@@ -1,0 +1,764 @@
+GLOB sdist-make: /workdir/pytest-mock-3.10.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pytest-mock-3.10.0/.tox/.tmp/package/1/pytest-mock-3.10.0.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytest-mock @ file:///workdir/pytest-mock-3.10.0/.tox/.tmp/package/1/pytest-mock-3.10.0.zip#sha256=e547e829aca9d4107acd342ad58a95abc35d35cb49aba366c7ded583fdd3c7d2,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2688902148'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytest-mock/3.10.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pytest-mock-3.10.0
+configfile: tox.ini
+plugins: mock-3.10.0
+collecting ... collected 78 items
+
+tests/test_pytest_mock.py::test_mock_patches[mock_using_patch_object] PASSED [  1%]
+tests/test_pytest_mock.py::test_mock_patches[mock_using_patch] PASSED    [  2%]
+tests/test_pytest_mock.py::test_mock_patches[mock_using_patch_multiple] PASSED [  3%]
+tests/test_pytest_mock.py::test_mock_patch_dict PASSED                   [  5%]
+tests/test_pytest_mock.py::test_mock_patch_dict_resetall PASSED          [  6%]
+tests/test_pytest_mock.py::test_mocker_aliases[ANY] PASSED               [  7%]
+tests/test_pytest_mock.py::test_mocker_aliases[call] PASSED              [  8%]
+tests/test_pytest_mock.py::test_mocker_aliases[create_autospec] PASSED   [ 10%]
+tests/test_pytest_mock.py::test_mocker_aliases[MagicMock] PASSED         [ 11%]
+tests/test_pytest_mock.py::test_mocker_aliases[Mock] PASSED              [ 12%]
+tests/test_pytest_mock.py::test_mocker_aliases[mock_open] PASSED         [ 14%]
+tests/test_pytest_mock.py::test_mocker_aliases[NonCallableMagicMock] PASSED [ 15%]
+tests/test_pytest_mock.py::test_mocker_aliases[NonCallableMock] PASSED   [ 16%]
+tests/test_pytest_mock.py::test_mocker_aliases[PropertyMock] PASSED      [ 17%]
+tests/test_pytest_mock.py::test_mocker_aliases[sentinel] PASSED          [ 19%]
+tests/test_pytest_mock.py::test_mocker_aliases[seal] PASSED              [ 20%]
+tests/test_pytest_mock.py::test_mocker_resetall PASSED                   [ 21%]
+tests/test_pytest_mock.py::TestMockerStub::test_call PASSED              [ 23%]
+tests/test_pytest_mock.py::TestMockerStub::test_repr_with_no_name PASSED [ 24%]
+tests/test_pytest_mock.py::TestMockerStub::test_repr_with_name PASSED    [ 25%]
+tests/test_pytest_mock.py::TestMockerStub::test_failure_message_with_no_name PASSED [ 26%]
+tests/test_pytest_mock.py::TestMockerStub::test_failure_message_with_name[None] PASSED [ 28%]
+tests/test_pytest_mock.py::TestMockerStub::test_failure_message_with_name[] PASSED [ 29%]
+tests/test_pytest_mock.py::TestMockerStub::test_failure_message_with_name[f] PASSED [ 30%]
+tests/test_pytest_mock.py::TestMockerStub::test_failure_message_with_name[The Castle of aaarrrrggh] PASSED [ 32%]
+tests/test_pytest_mock.py::TestMockerStub::test_async_stub_type PASSED   [ 33%]
+tests/test_pytest_mock.py::test_instance_method_spy PASSED               [ 34%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[BaseException] PASSED [ 35%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[Exception] PASSED [ 37%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[GeneratorExit] PASSED [ 38%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[KeyboardInterrupt] PASSED [ 39%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[RuntimeError] PASSED [ 41%]
+tests/test_pytest_mock.py::test_instance_method_spy_exception[SystemExit] PASSED [ 42%]
+tests/test_pytest_mock.py::test_instance_method_spy_autospec_true PASSED [ 43%]
+tests/test_pytest_mock.py::test_spy_reset PASSED                         [ 44%]
+tests/test_pytest_mock.py::test_instance_method_by_class_spy PASSED      [ 46%]
+tests/test_pytest_mock.py::test_instance_method_by_subclass_spy PASSED   [ 47%]
+tests/test_pytest_mock.py::test_class_method_spy PASSED                  [ 48%]
+tests/test_pytest_mock.py::test_class_method_spy_autospec_false PASSED   [ 50%]
+tests/test_pytest_mock.py::test_class_method_subclass_spy PASSED         [ 51%]
+tests/test_pytest_mock.py::test_class_method_with_metaclass_spy PASSED   [ 52%]
+tests/test_pytest_mock.py::test_static_method_spy PASSED                 [ 53%]
+tests/test_pytest_mock.py::test_static_method_subclass_spy PASSED        [ 55%]
+tests/test_pytest_mock.py::test_callable_like_spy PASSED                 [ 56%]
+tests/test_pytest_mock.py::test_instance_async_method_spy SKIPPED (a...) [ 57%]
+tests/test_pytest_mock.py::test_assert_not_called_wrapper PASSED         [ 58%]
+tests/test_pytest_mock.py::test_assert_called_with_wrapper PASSED        [ 60%]
+tests/test_pytest_mock.py::test_assert_called_once_with_wrapper PASSED   [ 61%]
+tests/test_pytest_mock.py::test_assert_called_once_wrapper PASSED        [ 62%]
+tests/test_pytest_mock.py::test_assert_called_wrapper PASSED             [ 64%]
+tests/test_pytest_mock.py::test_assert_called_args_with_introspection FAILED [ 65%]
+tests/test_pytest_mock.py::test_assert_called_kwargs_with_introspection FAILED [ 66%]
+tests/test_pytest_mock.py::test_assert_any_call_wrapper PASSED           [ 67%]
+tests/test_pytest_mock.py::test_assert_has_calls PASSED                  [ 69%]
+tests/test_pytest_mock.py::test_monkeypatch_ini FAILED                   [ 70%]
+tests/test_pytest_mock.py::test_parse_ini_boolean PASSED                 [ 71%]
+tests/test_pytest_mock.py::test_patched_method_parameter_name PASSED     [ 73%]
+tests/test_pytest_mock.py::test_monkeypatch_native PASSED                [ 74%]
+tests/test_pytest_mock.py::test_monkeypatch_no_terminal PASSED           [ 75%]
+tests/test_pytest_mock.py::test_standalone_mock PASSED                   [ 76%]
+tests/test_pytest_mock.py::test_detailed_introspection PASSED            [ 78%]
+tests/test_pytest_mock.py::test_detailed_introspection_async FAILED      [ 79%]
+tests/test_pytest_mock.py::test_missing_introspection PASSED             [ 80%]
+tests/test_pytest_mock.py::test_assert_called_with_unicode_arguments PASSED [ 82%]
+tests/test_pytest_mock.py::test_plain_stopall FAILED                     [ 83%]
+tests/test_pytest_mock.py::test_warn_patch_object_context_manager PASSED [ 84%]
+tests/test_pytest_mock.py::test_warn_patch_context_manager PASSED        [ 85%]
+tests/test_pytest_mock.py::test_context_manager_patch_example PASSED     [ 87%]
+tests/test_pytest_mock.py::test_patch_context_manager_with_context_manager PASSED [ 88%]
+tests/test_pytest_mock.py::test_abort_patch_context_manager_with_stale_pyc PASSED [ 89%]
+tests/test_pytest_mock.py::test_used_with_class_scope FAILED             [ 91%]
+tests/test_pytest_mock.py::test_used_with_module_scope FAILED            [ 92%]
+tests/test_pytest_mock.py::test_used_with_package_scope FAILED           [ 93%]
+tests/test_pytest_mock.py::test_used_with_session_scope FAILED           [ 94%]
+tests/test_pytest_mock.py::test_stop_patch PASSED                        [ 96%]
+tests/test_pytest_mock.py::test_stop_instance_patch PASSED               [ 97%]
+tests/test_pytest_mock.py::test_stop_spy PASSED                          [ 98%]
+tests/test_pytest_mock.py::test_stop_instance_spy PASSED                 [100%]
+
+=================================== FAILURES ===================================
+__________________ test_assert_called_args_with_introspection __________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 523, in assert_argument_introspection
+    yield
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 597, in test_assert_called_args_with_introspection
+    stub.assert_called_with(*wrong_args)
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 919, in assert_called_with
+    raise AssertionError(_error_message()) from cause
+AssertionError: expected call not found.
+Expected: mock('b', 2, {'jest'})
+Actual: mock('a', 1, {'test'})
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 596, in test_assert_called_args_with_introspection
+    with assert_argument_introspection(complex_args, wrong_args):
+  File "/usr/local/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 532, in assert_argument_introspection
+    assert expected in str(e)
+AssertionError: assert "Full diff:\n  - ('b', 2, {'jest'})\n  ?   ^   ^    ^\n  + ('a', 1, {'test'})\n  ?   ^   ^    ^" in "expected call not found.\nExpected: mock('b', 2, {'jest'})\nActual: mock('a', 1, {'test'})"
+ +  where "expected call not found.\nExpected: mock('b', 2, {'jest'})\nActual: mock('a', 1, {'test'})" = str(AssertionError("expected call not found.\nExpected: mock('b', 2, {'jest'})\nActual: mock('a', 1, {'test'})"))
+_________________ test_assert_called_kwargs_with_introspection _________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 523, in assert_argument_introspection
+    yield
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 613, in test_assert_called_kwargs_with_introspection
+    stub.assert_called_with(**wrong_kwargs)
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 919, in assert_called_with
+    raise AssertionError(_error_message()) from cause
+AssertionError: expected call not found.
+Expected: mock(foo={'goo': 1, 'baz': 'bran'})
+Actual: mock(foo={'bar': 1, 'baz': 'spam'})
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 612, in test_assert_called_kwargs_with_introspection
+    with assert_argument_introspection(complex_kwargs, wrong_kwargs):
+  File "/usr/local/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 532, in assert_argument_introspection
+    assert expected in str(e)
+AssertionError: assert "Full diff:\n  - {'foo': {'baz': 'bran', 'goo': 1}}\n  + {'foo': {'bar': 1, 'baz': 'spam'}}" in "expected call not found.\nExpected: mock(foo={'goo': 1, 'baz': 'bran'})\nActual: mock(foo={'bar': 1, 'baz': 'spam'})"
+ +  where "expected call not found.\nExpected: mock(foo={'goo': 1, 'baz': 'bran'})\nActual: mock(foo={'bar': 1, 'baz': 'spam'})" = str(AssertionError("expected call not found.\nExpected: mock(foo={'goo': 1, 'baz': 'bran'})\nActual: mock(foo={'bar': 1, 'baz': 'spam'})"))
+_____________________________ test_monkeypatch_ini _____________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 637, in test_monkeypatch_ini
+    assert stub.assert_called_with.__module__ != stub.__module__
+AssertionError: assert 'unittest.mock' != 'unittest.mock'
+ +  where 'unittest.mock' = <bound method NonCallableMock.assert_called_with of <MagicMock spec='function' id='140570649619824'>>.__module__
+ +    where <bound method NonCallableMock.assert_called_with of <MagicMock spec='function' id='140570649619824'>> = <MagicMock spec='function' id='140570649619824'>.assert_called_with
+ +  and   'unittest.mock' = <MagicMock spec='function' id='140570649619824'>.__module__
+______________________ test_detailed_introspection_async _______________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 824, in test_detailed_introspection_async
+    result.stdout.fnmatch_lines(expected_lines)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '*AssertionError: expected await not found.'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_detailed_introspection_async0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_detailed_introspection_async.py s'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: 'test_detailed_introspection_async.py::test'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:183: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.'
+    and: '  You need to install a suitable plugin for your async framework, for example:'
+    and: '    - anyio'
+    and: '    - pytest-asyncio'
+    and: '    - pytest-tornasync'
+    and: '    - pytest-trio'
+    and: '    - pytest-twisted'
+    and: '    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '======================== 1 skipped, 2 warnings in 0.00s ========================'
+remains unmatched: '*AssertionError: expected await not found.'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_detailed_introspection_async0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_detailed_introspection_async.py s
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+test_detailed_introspection_async.py::test
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:183: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.
+  You need to install a suitable plugin for your async framework, for example:
+    - anyio
+    - pytest-asyncio
+    - pytest-tornasync
+    - pytest-trio
+    - pytest-twisted
+    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 skipped, 2 warnings in 0.00s ========================
+______________________________ test_plain_stopall ______________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 873, in test_plain_stopall
+    result.stdout.fnmatch_lines("* 1 passed in *")
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* 1 passed in *'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_plain_stopall0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_plain_stopall.py .                                                  [100%]'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '========================= 1 passed, 1 warning in 0.01s ========================='
+remains unmatched: '* 1 passed in *'
+----------------------------- Captured stdout call -----------------------------
+running: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -mpytest --basetemp=/tmp/pytest-of-tester/pytest-8/test_plain_stopall0/runpytest-0
+     in: /tmp/pytest-of-tester/pytest-8/test_plain_stopall0
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_plain_stopall0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_plain_stopall.py .                                                  [100%]
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.01s =========================
+__________________________ test_used_with_class_scope __________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 1018, in test_used_with_class_scope
+    result.stdout.fnmatch_lines("* 1 passed in *")
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* 1 passed in *'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_class_scope0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_used_with_class_scope.py .                                          [100%]'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '========================= 1 passed, 1 warning in 0.01s ========================='
+remains unmatched: '* 1 passed in *'
+----------------------------- Captured stdout call -----------------------------
+running: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -mpytest --basetemp=/tmp/pytest-of-tester/pytest-8/test_used_with_class_scope0/runpytest-0
+     in: /tmp/pytest-of-tester/pytest-8/test_used_with_class_scope0
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_class_scope0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_used_with_class_scope.py .                                          [100%]
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.01s =========================
+_________________________ test_used_with_module_scope __________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 1046, in test_used_with_module_scope
+    result.stdout.fnmatch_lines("* 1 passed in *")
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* 1 passed in *'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_module_scope0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_used_with_module_scope.py .                                         [100%]'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '========================= 1 passed, 1 warning in 0.01s ========================='
+remains unmatched: '* 1 passed in *'
+----------------------------- Captured stdout call -----------------------------
+running: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -mpytest --basetemp=/tmp/pytest-of-tester/pytest-8/test_used_with_module_scope0/runpytest-0
+     in: /tmp/pytest-of-tester/pytest-8/test_used_with_module_scope0
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_module_scope0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_used_with_module_scope.py .                                         [100%]
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.01s =========================
+_________________________ test_used_with_package_scope _________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 1074, in test_used_with_package_scope
+    result.stdout.fnmatch_lines("* 1 passed in *")
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* 1 passed in *'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_package_scope0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_used_with_package_scope.py .                                        [100%]'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '========================= 1 passed, 1 warning in 0.01s ========================='
+remains unmatched: '* 1 passed in *'
+----------------------------- Captured stdout call -----------------------------
+running: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -mpytest --basetemp=/tmp/pytest-of-tester/pytest-8/test_used_with_package_scope0/runpytest-0
+     in: /tmp/pytest-of-tester/pytest-8/test_used_with_package_scope0
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_package_scope0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_used_with_package_scope.py .                                        [100%]
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.01s =========================
+_________________________ test_used_with_session_scope _________________________
+Traceback (most recent call last):
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-mock-3.10.0/tests/test_pytest_mock.py", line 1102, in test_used_with_session_scope
+    result.stdout.fnmatch_lines("* 1 passed in *")
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* 1 passed in *'
+    and: '============================= test session starts =============================='
+    and: 'platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_session_scope0'
+    and: 'configfile: tox.ini'
+    and: 'plugins: mock-3.10.0'
+    and: 'collected 1 item'
+    and: ''
+    and: 'test_used_with_session_scope.py .                                        [100%]'
+    and: ''
+    and: '=============================== warnings summary ==============================='
+    and: '../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373'
+    and: '  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode'
+    and: '  '
+    and: '    self._warn_or_fail_if_strict(f"Unknown config option: {key}\\n")'
+    and: ''
+    and: '-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html'
+    and: '========================= 1 passed, 1 warning in 0.01s ========================='
+remains unmatched: '* 1 passed in *'
+----------------------------- Captured stdout call -----------------------------
+running: /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -mpytest --basetemp=/tmp/pytest-of-tester/pytest-8/test_used_with_session_scope0/runpytest-0
+     in: /tmp/pytest-of-tester/pytest-8/test_used_with_session_scope0
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0
+rootdir: /tmp/pytest-of-tester/pytest-8/test_used_with_session_scope0
+configfile: tox.ini
+plugins: mock-3.10.0
+collected 1 item
+
+test_used_with_session_scope.py .                                        [100%]
+
+=============================== warnings summary ===============================
+../../../../workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.01s =========================
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+tests/test_pytest_mock.py::test_instance_async_method_spy
+  /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:183: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.
+  You need to install a suitable plugin for your async framework, for example:
+    - anyio
+    - pytest-asyncio
+    - pytest-tornasync
+    - pytest-trio
+    - pytest-twisted
+    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pytest-mock/3.10.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+SKIPPED [1] .tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:184: async def function and no async plugin installed (see warnings)
+FAILED tests/test_pytest_mock.py::test_assert_called_args_with_introspection
+FAILED tests/test_pytest_mock.py::test_assert_called_kwargs_with_introspection
+FAILED tests/test_pytest_mock.py::test_monkeypatch_ini - AssertionError: asse...
+FAILED tests/test_pytest_mock.py::test_detailed_introspection_async - Failed:...
+FAILED tests/test_pytest_mock.py::test_plain_stopall - Failed: nomatch: '* 1 ...
+FAILED tests/test_pytest_mock.py::test_used_with_class_scope - Failed: nomatc...
+FAILED tests/test_pytest_mock.py::test_used_with_module_scope - Failed: nomat...
+FAILED tests/test_pytest_mock.py::test_used_with_package_scope - Failed: noma...
+FAILED tests/test_pytest_mock.py::test_used_with_session_scope - Failed: noma...
+============= 9 failed, 68 passed, 1 skipped, 2 warnings in 2.09s ==============
+ERROR: InvocationError for command /workdir/pytest-mock-3.10.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pytest-mock/3.10.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

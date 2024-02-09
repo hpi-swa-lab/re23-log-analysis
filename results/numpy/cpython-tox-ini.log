@@ -1,0 +1,9 @@
+[testenv]
+commands = {envpython} -m xmlrunner --output-file /workdir/results/numpy/1.23.5/1/cpython-test-results.xml
+deps = mock
+	unittest-xml-reporting
+	-rrelease_requirements.txt
+	-rtest_requirements.txt
+	-rlinter_requirements.txt
+	-rdoc_requirements.txt
+

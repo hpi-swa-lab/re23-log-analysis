@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="19" skipped="6" tests="26" time="0.106" timestamp="2023-11-29T11:50:43.915043" hostname="be2d8ee410eb"><testcase classname="tests.test_collection.CollectionTest" name="test_all_collections" time="0.002"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_collection.CollectionTest" name="test_all_items" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_collection.CollectionTest" name="test_create_empty_item" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_collection.CollectionTest" name="test_label" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_collection.MockCollectionTest" name="test_create_collection" time="0.000"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_collection.py:82: This test should only be run with the mocked server.</skipped></testcase><testcase classname="tests.test_collection.MockCollectionTest" name="test_default_collection" time="0.000"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_collection.py:55: This test should only be run with the mocked server.</skipped></testcase><testcase classname="tests.test_collection.MockCollectionTest" name="test_deleting" time="0.000"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_collection.py:59: This test should only be run with the mocked server.</skipped></testcase><testcase classname="tests.test_collection.MockCollectionTest" name="test_deleting_item_prompt" time="0.000"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_collection.py:74: This test should only be run with the mocked server.</skipped></testcase><testcase classname="tests.test_collection.MockCollectionTest" name="test_deleting_prompt" time="0.001"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_collection.py:65: This test should only be run with the mocked server.</skipped></testcase><testcase classname="tests.test_context_manager.ContextManagerTest" name="test_closing_context_manager" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/SecretStorage-3.3.3/tests/test_context_manager.py", line 19, in test_closing_context_manager
+    with closing(dbus_init()) as connection:
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_dhcrypto.ConversionTest" name="test_int_to_bytes" time="0.001" /><testcase classname="tests.test_exceptions.ExceptionsTest" name="test_double_deleting" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_exceptions.ExceptionsTest" name="test_non_existing_collection" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_exceptions.ExceptionsTest" name="test_non_existing_item" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_attributes" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_created" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_equal" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_item_in_all_items" time="0.000"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_label" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_modified" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_searchable" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_secret" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_secret_content_type" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_secret_wrong_type" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_item.ItemTest" name="test_unlock" time="0.001"><failure message="secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset">Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/usr/local/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset</failure></testcase><testcase classname="tests.test_unlocking.LockingUnlockingTest" name="test_lock_unlock" time="0.000"><skipped type="pytest.skip" message="This test should only be run with the mocked server.">/workdir/SecretStorage-3.3.3/tests/test_unlocking.py:23: This test should only be run with the mocked server.</skipped></testcase></testsuite></testsuites>

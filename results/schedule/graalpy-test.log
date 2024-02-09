@@ -1,0 +1,189 @@
+GLOB sdist-make: /workdir/schedule-1.1.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/schedule-1.1.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+graalpylibtest-unit-test-tests inst: /workdir/schedule-1.1.0/.tox/.tmp/package/1/schedule-1.1.0.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,appdirs==1.4.4,Babel==2.13.1,black==20.8b1,certifi==2023.11.17,charset-normalizer==3.1.0,click==8.1.7,coverage==7.3.2,docutils==0.20.1,exceptiongroup==1.2.0,flake8==6.1.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,mypy==1.7.1,mypy-extensions==1.0.0,packaging==23.2,pathspec==0.11.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-flake8==1.1.1,regex==2023.10.3,requests==2.31.0,schedule @ file:///workdir/schedule-1.1.0/.tox/.tmp/package/1/schedule-1.1.0.zip,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,toml==0.10.2,tomli==2.0.1,typed-ast==1.5.5,typing_extensions==4.8.0,urllib3==2.1.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2733382617'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/schedule/1.1.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/schedule-1.1.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/schedule-1.1.0
+plugins: flake8-1.1.1, cov-4.1.0
+collecting ... collected 35 items
+
+test_schedule.py::SchedulerTests::test_at_time PASSED                    [  2%]
+test_schedule.py::SchedulerTests::test_at_time_hour PASSED               [  5%]
+test_schedule.py::SchedulerTests::test_at_time_minute PASSED             [  8%]
+test_schedule.py::SchedulerTests::test_cancel_job PASSED                 [ 11%]
+test_schedule.py::SchedulerTests::test_cancel_jobs PASSED                [ 14%]
+test_schedule.py::SchedulerTests::test_clear_by_tag PASSED               [ 17%]
+test_schedule.py::SchedulerTests::test_get_by_tag PASSED                 [ 20%]
+test_schedule.py::SchedulerTests::test_idle_seconds PASSED               [ 22%]
+test_schedule.py::SchedulerTests::test_job_func_args_are_passed_on PASSED [ 25%]
+test_schedule.py::SchedulerTests::test_misconfigured_job_wont_break_scheduler PASSED [ 28%]
+test_schedule.py::SchedulerTests::test_next_run_property FAILED          [ 31%]
+test_schedule.py::SchedulerTests::test_next_run_time PASSED              [ 34%]
+test_schedule.py::SchedulerTests::test_next_run_time_day_end PASSED      [ 37%]
+test_schedule.py::SchedulerTests::test_next_run_time_hour_end PASSED     [ 40%]
+test_schedule.py::SchedulerTests::test_next_run_time_minute_end PASSED   [ 42%]
+test_schedule.py::SchedulerTests::test_repr_functools_partial_job_func PASSED [ 45%]
+test_schedule.py::SchedulerTests::test_run_all PASSED                    [ 48%]
+test_schedule.py::SchedulerTests::test_run_all_with_decorator PASSED     [ 51%]
+test_schedule.py::SchedulerTests::test_run_all_with_decorator_args PASSED [ 54%]
+test_schedule.py::SchedulerTests::test_run_all_with_decorator_defaultargs PASSED [ 57%]
+test_schedule.py::SchedulerTests::test_run_every_n_days_at_specific_time FAILED [ 60%]
+test_schedule.py::SchedulerTests::test_run_every_weekday_at_specific_time_past_today FAILED [ 62%]
+test_schedule.py::SchedulerTests::test_run_every_weekday_at_specific_time_today FAILED [ 65%]
+test_schedule.py::SchedulerTests::test_run_pending FAILED                [ 68%]
+test_schedule.py::SchedulerTests::test_singular_time_units_match_plural_units PASSED [ 71%]
+test_schedule.py::SchedulerTests::test_tag_type_enforcement PASSED       [ 74%]
+test_schedule.py::SchedulerTests::test_time_range PASSED                 [ 77%]
+test_schedule.py::SchedulerTests::test_time_range_repr PASSED            [ 80%]
+test_schedule.py::SchedulerTests::test_time_units PASSED                 [ 82%]
+test_schedule.py::SchedulerTests::test_to_repr PASSED                    [ 85%]
+test_schedule.py::SchedulerTests::test_to_string PASSED                  [ 88%]
+test_schedule.py::SchedulerTests::test_to_string_functools_partial_job_func PASSED [ 91%]
+test_schedule.py::SchedulerTests::test_to_string_lambda_job_func PASSED  [ 94%]
+test_schedule.py::SchedulerTests::test_until_time FAILED                 [ 97%]
+test_schedule.py::SchedulerTests::test_weekday_at_todady PASSED          [100%]
+
+=================================== FAILURES ===================================
+____________________ SchedulerTests.test_next_run_property _____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 714, in test_next_run_property
+    assert schedule.next_run() == original_datetime(2010, 1, 6, 14, 16)
+AssertionError
+____________ SchedulerTests.test_run_every_n_days_at_specific_time _____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 686, in test_run_every_n_days_at_specific_time
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in <genexpr>
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() >= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'
+______ SchedulerTests.test_run_every_weekday_at_specific_time_past_today _______
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 671, in test_run_every_weekday_at_specific_time_past_today
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in <genexpr>
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() >= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'
+_________ SchedulerTests.test_run_every_weekday_at_specific_time_today _________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 660, in test_run_every_weekday_at_specific_time_today
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in <genexpr>
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() >= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'
+_______________________ SchedulerTests.test_run_pending ________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 634, in test_run_pending
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in <genexpr>
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() >= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'
+________________________ SchedulerTests.test_until_time ________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 325, in test_until_time
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in <genexpr>
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() >= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'
+- generated xml file: /workdir/results/schedule/1.1.0/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED test_schedule.py::SchedulerTests::test_next_run_property - AssertionError
+FAILED test_schedule.py::SchedulerTests::test_run_every_n_days_at_specific_time
+FAILED test_schedule.py::SchedulerTests::test_run_every_weekday_at_specific_time_past_today
+FAILED test_schedule.py::SchedulerTests::test_run_every_weekday_at_specific_time_today
+FAILED test_schedule.py::SchedulerTests::test_run_pending - TypeError: can't ...
+FAILED test_schedule.py::SchedulerTests::test_until_time - TypeError: can't c...
+======================== 6 failed, 29 passed in 17.97s =========================
+ERROR: InvocationError for command /workdir/schedule-1.1.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/schedule/1.1.0/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

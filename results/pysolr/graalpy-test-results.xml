@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="96" skipped="46" tests="152" time="6.747" timestamp="2023-11-28T22:07:15.412000" hostname="a1f8948d47fc"><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_create" time="0.062"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1408b39&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 20, in test_create
+    self.assertIn('&lt;int name="status"&gt;0&lt;/int&gt;', self.solr_admin.create("wheatley"))
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1338, in create
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1408b39&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_load" time="0.010" /><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_reload" time="0.037"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x77db5bc9&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 23, in test_reload
+    self.assertIn('&lt;int name="status"&gt;0&lt;/int&gt;', self.solr_admin.reload("wheatley"))
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1347, in reload
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x77db5bc9&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_rename" time="0.028"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3561f336&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 26, in test_rename
+    self.solr_admin.create("wheatley")
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1338, in create
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3561f336&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_status" time="0.027"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x191c5701&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 16, in test_status
+    self.assertIn('name="defaultCoreName"', self.solr_admin.status())
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1321, in status
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x191c5701&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_swap" time="0.038"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x77b215d6&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 32, in test_swap
+    self.solr_admin.create("wheatley")
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1338, in create
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x77b215d6&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_admin.SolrCoreAdminTestCase" name="test_unload" time="0.068"><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11ae4a55&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_admin.py", line 39, in test_unload
+    self.solr_admin.create("wheatley")
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1338, in create
+    return self._get_url(self.url, params=params)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1307, in _get_url
+    resp = requests.get(url, data=safe_urlencode(params), headers=headers)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/pysolr-3.9.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/admin/cores (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11ae4a55&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.UtilsTestCase" name="test_clean_xml_string" time="0.009" /><testcase classname="tests.test_client.UtilsTestCase" name="test_force_bytes" time="0.006" /><testcase classname="tests.test_client.UtilsTestCase" name="test_force_unicode" time="0.006" /><testcase classname="tests.test_client.UtilsTestCase" name="test_safe_urlencode" time="0.013" /><testcase classname="tests.test_client.UtilsTestCase" name="test_sanitize" time="0.006" /><testcase classname="tests.test_client.UtilsTestCase" name="test_unescape_html" time="0.009" /><testcase classname="tests.test_client.ResultsTestCase" name="test_init" time="0.007" /><testcase classname="tests.test_client.ResultsTestCase" name="test_iter" time="0.005" /><testcase classname="tests.test_client.ResultsTestCase" name="test_len" time="0.006" /><testcase classname="tests.test_client.SolrTestCase" name="test__build_doc" time="0.039"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7705f698&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7705f698&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__build_doc_with_sets" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7dfe3f7f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7dfe3f7f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__build_doc_with_sub_docs" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4f3095a7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4f3095a7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__create_full_url_base" time="0.055"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49cedd5b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49cedd5b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__create_full_url_with_path" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xbea751d&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xbea751d&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__create_full_url_with_path_and_querystring" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3310c07f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3310c07f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__extract_error" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7042cc48&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7042cc48&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__from_python" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x8ec6173&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x8ec6173&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__from_python_dates" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x8773be4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x8773be4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__is_null_value" time="0.032"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x571d4217&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x571d4217&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__mlt" time="0.033"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x65b24aaa&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x65b24aaa&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__scrape_response" time="0.029"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x52b116f2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x52b116f2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__scrape_response_coyote_xml" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2bc82a46&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2bc82a46&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__scrape_response_tomcat" time="0.039"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11ec3446&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11ec3446&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__select" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x34391967&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x34391967&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__send_request" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3d8622ad&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3d8622ad&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__send_request_to_bad_path" time="0.029"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x280b3fe0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x280b3fe0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__soft_commit" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b393015&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b393015&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__suggest_terms" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x429bc845&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x429bc845&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__to_python" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x612fdcf&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x612fdcf&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test__update" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2e921999&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2e921999&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_add" time="0.038"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x74a9fc80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x74a9fc80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_add_with_boost" time="0.035"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49f22014&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49f22014&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_can_handles_default_commit_policy" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x761d8f91&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x761d8f91&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_commit" time="0.036"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7df5a1c1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7df5a1c1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_cursor_traversal" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x60dc1c36&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x60dc1c36&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_custom_results_class" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3174b405&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3174b405&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_delete" time="0.029"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x78ed4d37&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x78ed4d37&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_extract" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x522966aa&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x522966aa&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_extract_special_char_in_filename" time="0.032"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x717d595c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x717d595c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_field_update_add" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4cffab&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4cffab&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_field_update_inc" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x649f9d1f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x649f9d1f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_field_update_set" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x30e722e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x30e722e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_full_url" time="0.029"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x795c04c1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x795c04c1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_init" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x156f5099&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x156f5099&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_more_like_this" time="0.045"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2c8783ba&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2c8783ba&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_multiple_search_handlers" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11c15659&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x11c15659&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_optimize" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7db3845b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7db3845b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_overwrite" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x56b2b2b1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x56b2b2b1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_ping" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5ab5be14&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5ab5be14&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_request_handler" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x13fb4ad7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x13fb4ad7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_search" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2e656840&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2e656840&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_send_request_to_bad_core" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x45396fd2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x45396fd2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrTestCase" name="test_suggest_terms" time="0.032"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4a818cb9&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4a818cb9&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrCommitByDefaultTestCase" name="test_can_handles_default_commit_policy" time="0.036"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/ (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x41b2ccb2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 1132, in test_can_handles_default_commit_policy
+    self.solr.add(self.docs, commit=arg)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1042, in add
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 568, in _update
+    return self._send_request(
+  File "/opt/graalpy/lib/python3.10/unittest/mock.py", line 1104, in __call__
+    return self._mock_call(*args, **kwargs)
+  File "/opt/graalpy/lib/python3.10/unittest/mock.py", line 1108, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+  File "/opt/graalpy/lib/python3.10/unittest/mock.py", line 1178, in _execute_mock_call
+    return self._mock_wraps(*args, **kwargs)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/ (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x41b2ccb2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_client.SolrCommitByDefaultTestCase" name="test_does_not_require_commit" time="0.029"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3ecc8564&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 1110, in test_does_not_require_commit
+    self.solr.add(self.docs)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1042, in add
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 568, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3ecc8564&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__build_doc" time="0.043"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1a632b57&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1a632b57&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__build_doc_with_sets" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x42b1a894&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x42b1a894&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__build_doc_with_sub_docs" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3071f8e4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3071f8e4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__create_full_url_base" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4f193efc&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4f193efc&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__create_full_url_with_path" time="0.030"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x110a40f6&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x110a40f6&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__create_full_url_with_path_and_querystring" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x39b0c99b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x39b0c99b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__extract_error" time="0.031"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3a991a07&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3a991a07&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__from_python" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x39549f64&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x39549f64&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__from_python_dates" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2a113b1c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2a113b1c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__is_null_value" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2b4b8be&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x2b4b8be&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__mlt" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x19af2b5e&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x19af2b5e&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__scrape_response" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7994a4a1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7994a4a1&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__scrape_response_coyote_xml" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x6a71fa4a&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x6a71fa4a&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__scrape_response_tomcat" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x37956ff7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x37956ff7&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__select" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x17155a4a&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x17155a4a&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__send_request" time="0.027"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3a6f7a03&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3a6f7a03&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__send_request_to_bad_path" time="0.028"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x38dc0cfc&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x38dc0cfc&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__soft_commit" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x17a548b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x17a548b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__suggest_terms" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1813bf1c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1813bf1c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__to_python" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5482f295&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5482f295&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test__update" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ff2de73&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ff2de73&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_add" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7541965b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7541965b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_add_with_boost" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x25467c55&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x25467c55&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_can_handles_default_commit_policy" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5c8e0660&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5c8e0660&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_commit" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x426eafb4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x426eafb4&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_cursor_traversal" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x234a0260&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x234a0260&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_custom_results_class" time="0.039"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x12fab747&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x12fab747&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_delete" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x6c65c6ea&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x6c65c6ea&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_extract" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3ebfb668&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3ebfb668&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_extract_special_char_in_filename" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1b6d6941&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1b6d6941&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_field_update_add" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4a3249f0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4a3249f0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_field_update_inc" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xda19e4d&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xda19e4d&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_field_update_set" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5f21869b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x5f21869b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_full_url" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x489ad049&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x489ad049&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_init" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3bc48d19&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x3bc48d19&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_more_like_this" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49eed269&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x49eed269&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_multiple_search_handlers" time="0.026"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x425a5260&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x425a5260&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_optimize" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xac9febb&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xac9febb&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_overwrite" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4ebf2537&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x4ebf2537&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_ping" time="0.043"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x698bbb15&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x698bbb15&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_request_handler" time="0.025"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x57e2ac5f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x57e2ac5f&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_search" time="0.023"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xf9ffe6c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0xf9ffe6c&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_send_request_to_bad_core" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x870493b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x870493b&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrTestCase" name="test_suggest_terms" time="0.024"><failure message="pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7084d4c2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/pysolr-3.9.0/tests/test_client.py", line 237, in setUp
+    self.solr.delete(q="*:*", commit=True)
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 1102, in delete
+    return self._update(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 564, in _update
+    return self._send_request(
+  File "/workdir/pysolr-3.9.0/pysolr.py", line 431, in _send_request
+    raise SolrError(error_message % (url, err))
+pysolr.SolrError: Failed to connect to server at http://localhost:8983/solr/core0/update/?commit=true: HTTPConnectionPool(host='localhost', port=8983): Max retries exceeded with url: /solr/core0/update/?commit=true (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7084d4c2&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</failure></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__build_doc" time="0.007"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:666: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__build_doc_with_sets" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:680: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__build_doc_with_sub_docs" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:691: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__create_full_url" time="0.005"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:57: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__create_full_url_base" time="0.006"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:292: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__create_full_url_with_path" time="0.005"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:295: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__create_full_url_with_path_and_querystring" time="0.005"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:300: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__extract_error" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:387: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__from_python" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:493: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__from_python_dates" time="0.005"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:502: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__is_null_value" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:557: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__mlt" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:367: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__scrape_response" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:434: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__scrape_response_coyote_xml" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:449: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__scrape_response_tomcat" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:478: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__select" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:347: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__send_request" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:308: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__send_request_to_bad_path" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:48: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__soft_commit" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:382: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__suggest_terms" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:372: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__to_python" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:537: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test__update" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:377: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_add" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:722: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_add_with_boost" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:746: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_can_handles_default_commit_policy" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:921: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_commit" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:911: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_cursor_traversal" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:282: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_custom_results_class" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:40: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_delete" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:846: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_extract" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:966: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_extract_special_char_in_filename" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:1009: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_field_update_add" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:806: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_field_update_inc" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:761: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_field_update_set" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:783: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_full_url" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:1052: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_init" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:32: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_invalid_collection" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:54: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_more_like_this" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:625: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_multiple_search_handlers" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:608: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_optimize" time="0.003"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:949: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_overwrite" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:931: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_ping" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:1093: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_request_handler" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:1059: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_search" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:564: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_send_request_to_bad_core" time="0.004"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_cloud.py:51: kazoo is not installed; skipping SolrCloud tests</skipped></testcase><testcase classname="tests.test_cloud.SolrCloudTestCase" name="test_suggest_terms" time="0.008"><skipped type="pytest.skip" message="kazoo is not installed; skipping SolrCloud tests">/workdir/pysolr-3.9.0/tests/test_client.py:638: kazoo is not installed; skipping SolrCloud tests</skipped></testcase></testsuite></testsuites>

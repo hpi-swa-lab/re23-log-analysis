@@ -1,0 +1,10 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/PySide2/5.15.2.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rexamples/external/scikit/requirements.txt
+	-rexamples/external/matplotlib/requirements.txt
+	-rexamples/external/opencv/requirements.txt
+	-rtools/missing_bindings-requirements.txt
+

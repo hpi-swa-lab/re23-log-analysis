@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.135" timestamp="2023-11-29T03:46:29.614558" hostname="a1f8948d47fc"><testcase classname="" name="qrcode.tests.test_qrcode" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/qrcode-7.3.1/qrcode/tests/test_qrcode.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+qrcode/image/pil.py:5: in &lt;module&gt;
+    from PIL import Image, ImageDraw
+E   ModuleNotFoundError: No module named 'PIL'
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+qrcode/tests/test_qrcode.py:20: in &lt;module&gt;
+    from qrcode.image.pil import Image as pil_Image
+qrcode/image/pil.py:7: in &lt;module&gt;
+    import Image
+E   ModuleNotFoundError: No module named 'Image'</error></testcase></testsuite></testsuites>

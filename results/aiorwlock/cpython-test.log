@@ -1,0 +1,132 @@
+GLOB sdist-make: /workdir/aiorwlock-1.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aiorwlock-1.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiorwlock-1.3.0/.tox/.tmp/package/1/aiorwlock-1.3.0.zip
+cpythonlibtest-unit-test-tests installed: aiorwlock @ file:///workdir/aiorwlock-1.3.0/.tox/.tmp/package/1/aiorwlock-1.3.0.zip#sha256=6a29afee012ea1ec1bc1ac9cef1e743784a908900f41d70596c29cf57ba82f86,attrs==23.1.0,bandit==1.7.1,black==21.12b0,certifi==2023.11.17,charset-normalizer==3.3.2,click==8.1.7,coverage==7.3.2,docutils==0.20.1,flake8==4.0.1,flake8-bugbear==22.1.11,flake8-quotes==3.3.1,gitdb==4.0.11,GitPython==3.1.40,idna==3.4,iniconfig==2.0.0,isort==5.10.1,mccabe==0.6.1,mock==5.1.0,mypy==0.931,mypy-extensions==1.0.0,packaging==23.2,pathspec==0.11.2,pbr==6.0.0,platformdirs==4.0.0,pluggy==1.3.0,py==1.11.0,pycodestyle==2.8.0,pyflakes==2.4.0,Pygments==2.17.1,pyroma==3.2,pytest==6.2.5,pytest-asyncio==0.17.2,pytest-cov==3.0.0,PyYAML==6.0.1,requests==2.31.0,smmap==5.0.1,stevedore==5.1.0,toml==0.10.2,tomli==1.2.3,typing_extensions==4.8.0,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3366684497'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aiorwlock/1.3.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-6.2.5, py-1.11.0, pluggy-1.3.0 -- /workdir/aiorwlock-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/aiorwlock-1.3.0, configfile: setup.cfg, testpaths: tests/
+plugins: asyncio-0.17.2, cov-3.0.0
+asyncio: mode=strict
+collecting ... collected 45 items
+
+tests/test_corner_cases.py::test_get_write_then_read PASSED              [  2%]
+tests/test_corner_cases.py::test_get_write_then_read_and_write_again PASSED [  4%]
+tests/test_corner_cases.py::test_writers_deadlock PASSED                 [  6%]
+tests/test_corner_cases.py::test_readers_cancel PASSED                   [  8%]
+tests/test_corner_cases.py::test_canceled_inside_acquire PASSED          [ 11%]
+tests/test_corner_cases.py::test_race_multiple_writers PASSED            [ 13%]
+tests/test_rwlock.py::test_ctor_loop_reader PASSED                       [ 15%]
+tests/test_rwlock.py::test_ctor_noloop_reader PASSED                     [ 17%]
+tests/test_rwlock.py::test_ctor_loop_writer PASSED                       [ 20%]
+tests/test_rwlock.py::test_ctor_noloop_writer PASSED                     [ 22%]
+tests/test_rwlock.py::test_repr PASSED                                   [ 24%]
+tests/test_rwlock.py::test_release_unlocked PASSED                       [ 26%]
+tests/test_rwlock.py::test_many_readers[fast] PASSED                     [ 28%]
+tests/test_rwlock.py::test_reader_recursion[fast] PASSED                 [ 31%]
+tests/test_rwlock.py::test_writer_recursion[fast] PASSED                 [ 33%]
+tests/test_rwlock.py::test_writer_then_reader_recursion[fast] PASSED     [ 35%]
+tests/test_rwlock.py::test_readers_writers[fast] PASSED                  [ 37%]
+tests/test_rwlock.py::test_raise_error_on_with_for_reader_lock[fast] PASSED [ 40%]
+tests/test_rwlock.py::test_raise_error_on_with_for_writer_lock[fast] PASSED [ 42%]
+tests/test_rwlock.py::test_read_locked[fast] PASSED                      [ 44%]
+tests/test_rwlock.py::test_write_locked[fast] PASSED                     [ 46%]
+tests/test_rwlock.py::test_write_read_lock_multiple_tasks[fast] PASSED   [ 48%]
+tests/test_rwlock.py::test_read_context_manager[fast] PASSED             [ 51%]
+tests/test_rwlock.py::test_write_context_manager[fast] PASSED            [ 53%]
+tests/test_rwlock.py::test_await_read_lock[fast] PASSED                  [ 55%]
+tests/test_rwlock.py::test_await_write_lock[fast] PASSED                 [ 57%]
+tests/test_rwlock.py::test_many_readers[slow] PASSED                     [ 60%]
+tests/test_rwlock.py::test_reader_recursion[slow] PASSED                 [ 62%]
+tests/test_rwlock.py::test_writer_recursion[slow] PASSED                 [ 64%]
+tests/test_rwlock.py::test_writer_then_reader_recursion[slow] PASSED     [ 66%]
+tests/test_rwlock.py::test_readers_writers[slow] PASSED                  [ 68%]
+tests/test_rwlock.py::test_raise_error_on_with_for_reader_lock[slow] PASSED [ 71%]
+tests/test_rwlock.py::test_raise_error_on_with_for_writer_lock[slow] PASSED [ 73%]
+tests/test_rwlock.py::test_read_locked[slow] PASSED                      [ 75%]
+tests/test_rwlock.py::test_write_locked[slow] PASSED                     [ 77%]
+tests/test_rwlock.py::test_write_read_lock_multiple_tasks[slow] PASSED   [ 80%]
+tests/test_rwlock.py::test_read_context_manager[slow] PASSED             [ 82%]
+tests/test_rwlock.py::test_write_context_manager[slow] PASSED            [ 84%]
+tests/test_rwlock.py::test_await_read_lock[slow] PASSED                  [ 86%]
+tests/test_rwlock.py::test_await_write_lock[slow] PASSED                 [ 88%]
+tests/test_rwlock.py::test_read_upgrade_write_release PASSED             [ 91%]
+tests/test_rwlock.py::test_writer_recursion_fail PASSED                  [ 93%]
+tests/test_rwlock.py::test_writer_success PASSED                         [ 95%]
+tests/test_rwlock.py::test_writer_success_fast PASSED                    [ 97%]
+tests/test_rwlock.py::test_writer_success_with_statement PASSED          [100%]
+
+- generated xml file: /workdir/results/aiorwlock/1.3.0/1/cpython-test-results.xml -
+============================== 45 passed in 2.99s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)
+GLOB sdist-make: /workdir/aiorwlock-1.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aiorwlock-1.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiorwlock-1.3.0/.tox/.tmp/package/1/aiorwlock-1.3.0.zip
+cpythonlibtest-unit-test-tests installed: aiorwlock @ file:///workdir/aiorwlock-1.3.0/.tox/.tmp/package/1/aiorwlock-1.3.0.zip#sha256=abedb68b8b56ff32163e01749b1c01c9162b7fa1168a03605eb271957b0aae15,attrs==23.1.0,bandit==1.7.1,black==21.12b0,certifi==2023.11.17,charset-normalizer==3.3.2,click==8.1.7,coverage==7.3.2,docutils==0.20.1,flake8==4.0.1,flake8-bugbear==22.1.11,flake8-quotes==3.3.1,gitdb==4.0.11,GitPython==3.1.40,idna==3.4,iniconfig==2.0.0,isort==5.10.1,mccabe==0.6.1,mock==5.1.0,mypy==0.931,mypy-extensions==1.0.0,packaging==23.2,pathspec==0.11.2,pbr==6.0.0,platformdirs==4.0.0,pluggy==1.3.0,py==1.11.0,pycodestyle==2.8.0,pyflakes==2.4.0,Pygments==2.17.1,pyroma==3.2,pytest==6.2.5,pytest-asyncio==0.17.2,pytest-cov==3.0.0,PyYAML==6.0.1,requests==2.31.0,smmap==5.0.1,stevedore==5.1.0,toml==0.10.2,tomli==1.2.3,typing_extensions==4.8.0,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='653115608'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aiorwlock/1.3.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-6.2.5, py-1.11.0, pluggy-1.3.0 -- /workdir/aiorwlock-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/aiorwlock-1.3.0, configfile: setup.cfg, testpaths: tests/
+plugins: asyncio-0.17.2, cov-3.0.0
+asyncio: mode=strict
+collecting ... collected 45 items
+
+tests/test_corner_cases.py::test_get_write_then_read PASSED              [  2%]
+tests/test_corner_cases.py::test_get_write_then_read_and_write_again PASSED [  4%]
+tests/test_corner_cases.py::test_writers_deadlock PASSED                 [  6%]
+tests/test_corner_cases.py::test_readers_cancel PASSED                   [  8%]
+tests/test_corner_cases.py::test_canceled_inside_acquire PASSED          [ 11%]
+tests/test_corner_cases.py::test_race_multiple_writers PASSED            [ 13%]
+tests/test_rwlock.py::test_ctor_loop_reader PASSED                       [ 15%]
+tests/test_rwlock.py::test_ctor_noloop_reader PASSED                     [ 17%]
+tests/test_rwlock.py::test_ctor_loop_writer PASSED                       [ 20%]
+tests/test_rwlock.py::test_ctor_noloop_writer PASSED                     [ 22%]
+tests/test_rwlock.py::test_repr PASSED                                   [ 24%]
+tests/test_rwlock.py::test_release_unlocked PASSED                       [ 26%]
+tests/test_rwlock.py::test_many_readers[fast] PASSED                     [ 28%]
+tests/test_rwlock.py::test_reader_recursion[fast] PASSED                 [ 31%]
+tests/test_rwlock.py::test_writer_recursion[fast] PASSED                 [ 33%]
+tests/test_rwlock.py::test_writer_then_reader_recursion[fast] PASSED     [ 35%]
+tests/test_rwlock.py::test_readers_writers[fast] PASSED                  [ 37%]
+tests/test_rwlock.py::test_raise_error_on_with_for_reader_lock[fast] PASSED [ 40%]
+tests/test_rwlock.py::test_raise_error_on_with_for_writer_lock[fast] PASSED [ 42%]
+tests/test_rwlock.py::test_read_locked[fast] PASSED                      [ 44%]
+tests/test_rwlock.py::test_write_locked[fast] PASSED                     [ 46%]
+tests/test_rwlock.py::test_write_read_lock_multiple_tasks[fast] PASSED   [ 48%]
+tests/test_rwlock.py::test_read_context_manager[fast] PASSED             [ 51%]
+tests/test_rwlock.py::test_write_context_manager[fast] PASSED            [ 53%]
+tests/test_rwlock.py::test_await_read_lock[fast] PASSED                  [ 55%]
+tests/test_rwlock.py::test_await_write_lock[fast] PASSED                 [ 57%]
+tests/test_rwlock.py::test_many_readers[slow] PASSED                     [ 60%]
+tests/test_rwlock.py::test_reader_recursion[slow] PASSED                 [ 62%]
+tests/test_rwlock.py::test_writer_recursion[slow] PASSED                 [ 64%]
+tests/test_rwlock.py::test_writer_then_reader_recursion[slow] PASSED     [ 66%]
+tests/test_rwlock.py::test_readers_writers[slow] PASSED                  [ 68%]
+tests/test_rwlock.py::test_raise_error_on_with_for_reader_lock[slow] PASSED [ 71%]
+tests/test_rwlock.py::test_raise_error_on_with_for_writer_lock[slow] PASSED [ 73%]
+tests/test_rwlock.py::test_read_locked[slow] PASSED                      [ 75%]
+tests/test_rwlock.py::test_write_locked[slow] PASSED                     [ 77%]
+tests/test_rwlock.py::test_write_read_lock_multiple_tasks[slow] PASSED   [ 80%]
+tests/test_rwlock.py::test_read_context_manager[slow] PASSED             [ 82%]
+tests/test_rwlock.py::test_write_context_manager[slow] PASSED            [ 84%]
+tests/test_rwlock.py::test_await_read_lock[slow] PASSED                  [ 86%]
+tests/test_rwlock.py::test_await_write_lock[slow] PASSED                 [ 88%]
+tests/test_rwlock.py::test_read_upgrade_write_release PASSED             [ 91%]
+tests/test_rwlock.py::test_writer_recursion_fail PASSED                  [ 93%]
+tests/test_rwlock.py::test_writer_success PASSED                         [ 95%]
+tests/test_rwlock.py::test_writer_success_fast PASSED                    [ 97%]
+tests/test_rwlock.py::test_writer_success_with_statement PASSED          [100%]
+
+- generated xml file: /workdir/results/aiorwlock/1.3.0/1/cpython-test-results.xml -
+============================== 45 passed in 2.89s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

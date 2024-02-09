@@ -1,0 +1,31 @@
+GLOB sdist-make: /workdir/requests-toolbelt-0.10.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/requests-toolbelt-0.10.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/requests-toolbelt-0.10.1/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring mock: markers 'python_version < "3.3"' don't match your environment
+Collecting git+git://github.com/sigmavirus24/betamax (from -r dev-requirements.txt (line 4))
+  Cloning git://github.com/sigmavirus24/betamax to /tmp/pip-req-build-890e4vvn
+  Running command git clone --filter=blob:none --quiet git://github.com/sigmavirus24/betamax /tmp/pip-req-build-890e4vvn
+  fatal: unable to connect to github.com:
+  github.com[0: 140.82.121.4]: errno=Connection refused
+
+  error: subprocess-exited-with-error
+  
+  × git clone --filter=blob:none --quiet git://github.com/sigmavirus24/betamax /tmp/pip-req-build-890e4vvn did not run successfully.
+  │ exit code: 128
+  ╰─> See above for output.
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× git clone --filter=blob:none --quiet git://github.com/sigmavirus24/betamax /tmp/pip-req-build-890e4vvn did not run successfully.
+│ exit code: 128
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/requests-toolbelt-0.10.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/requests-toolbelt-0.10.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)

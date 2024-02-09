@@ -1,0 +1,11 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/mypy/0.991/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rtest-requirements.txt
+	-rmypy-requirements.txt
+	-rbuild-requirements.txt
+

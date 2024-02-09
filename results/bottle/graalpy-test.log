@@ -1,0 +1,597 @@
+GLOB sdist-make: /workdir/bottle-0.12.23/setup.py
+graalpylibtest-unit-test-tests create: /workdir/bottle-0.12.23/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/bottle-0.12.23/.tox/.tmp/package/1/bottle-0.12.23.zip
+graalpylibtest-unit-test-tests installed: bottle @ file:///workdir/bottle-0.12.23/.tox/.tmp/package/1/bottle-0.12.23.zip,exceptiongroup==1.1.3,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2667422009'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/bottle/0.12.23/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/bottle-0.12.23/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/bottle-0.12.23
+collecting ... collected 315 items
+
+test/test_auth.py::TestBasicAuth::test__header PASSED                    [  0%]
+test/test_config.py::TestConfDict::test_load_dict PASSED                 [  0%]
+test/test_config.py::TestConfDict::test_meta PASSED                      [  0%]
+test/test_config.py::TestConfDict::test_namespaces PASSED                [  1%]
+test/test_config.py::TestConfDict::test_update PASSED                    [  1%]
+test/test_config.py::TestConfDict::test_write PASSED                     [  1%]
+test/test_configdict.py::TestConfigDict::test_attr_access PASSED         [  2%]
+test/test_configdict.py::TestConfigDict::test_call PASSED                [  2%]
+test/test_configdict.py::TestConfigDict::test_isadict PASSED             [  2%]
+test/test_configdict.py::TestConfigDict::test_issue588 PASSED            [  3%]
+test/test_configdict.py::TestConfigDict::test_issue720 PASSED            [  3%]
+test/test_configdict.py::TestConfigDict::test_namespaces PASSED          [  3%]
+test/test_configdict.py::TestConfigDict::test_string_key_only PASSED     [  4%]
+test/test_contextlocals.py::TestThreadLocals::test_request PASSED        [  4%]
+test/test_contextlocals.py::TestThreadLocals::test_response PASSED       [  4%]
+test/test_environ.py::TestRequest::test_app_property PASSED              [  5%]
+test/test_environ.py::TestRequest::test_auth PASSED                      [  5%]
+test/test_environ.py::TestRequest::test_bigbody PASSED                   [  5%]
+test/test_environ.py::TestRequest::test_body PASSED                      [  6%]
+test/test_environ.py::TestRequest::test_body_noclose PASSED              [  6%]
+test/test_environ.py::TestRequest::test_bodypost PASSED                  [  6%]
+test/test_environ.py::TestRequest::test_chunked PASSED                   [  6%]
+test/test_environ.py::TestRequest::test_chunked_illegal_size PASSED      [  7%]
+test/test_environ.py::TestRequest::test_chunked_meta_fields PASSED       [  7%]
+test/test_environ.py::TestRequest::test_chunked_not_chunked_at_all PASSED [  7%]
+test/test_environ.py::TestRequest::test_chunked_not_terminated PASSED    [  8%]
+test/test_environ.py::TestRequest::test_chunked_wrong_size PASSED        [  8%]
+test/test_environ.py::TestRequest::test_cookie_dict PASSED               [  8%]
+test/test_environ.py::TestRequest::test_dict_access PASSED               [  9%]
+test/test_environ.py::TestRequest::test_get PASSED                       [  9%]
+test/test_environ.py::TestRequest::test_getpostleak PASSED               [  9%]
+test/test_environ.py::TestRequest::test_header_access PASSED             [ 10%]
+test/test_environ.py::TestRequest::test_header_access_special PASSED     [ 10%]
+test/test_environ.py::TestRequest::test_isajax PASSED                    [ 10%]
+test/test_environ.py::TestRequest::test_json_empty PASSED                [ 11%]
+test/test_environ.py::TestRequest::test_json_forged_header_issue616 PASSED [ 11%]
+test/test_environ.py::TestRequest::test_json_header_empty_body PASSED    [ 11%]
+test/test_environ.py::TestRequest::test_json_noheader PASSED             [ 12%]
+test/test_environ.py::TestRequest::test_json_tobig PASSED                [ 12%]
+test/test_environ.py::TestRequest::test_json_valid PASSED                [ 12%]
+test/test_environ.py::TestRequest::test_method PASSED                    [ 13%]
+test/test_environ.py::TestRequest::test_multipart PASSED                 [ 13%]
+test/test_environ.py::TestRequest::test_params PASSED                    [ 13%]
+test/test_environ.py::TestRequest::test_path PASSED                      [ 13%]
+test/test_environ.py::TestRequest::test_pathshift PASSED                 [ 14%]
+test/test_environ.py::TestRequest::test_post PASSED                      [ 14%]
+test/test_environ.py::TestRequest::test_readonly_environ PASSED          [ 14%]
+test/test_environ.py::TestRequest::test_remote_addr PASSED               [ 15%]
+test/test_environ.py::TestRequest::test_remote_route PASSED              [ 15%]
+test/test_environ.py::TestRequest::test_route_property PASSED            [ 15%]
+test/test_environ.py::TestRequest::test_script_name PASSED               [ 16%]
+test/test_environ.py::TestRequest::test_tobigbody PASSED                 [ 16%]
+test/test_environ.py::TestRequest::test_url PASSED                       [ 16%]
+test/test_environ.py::TestRequest::test_url_for_property PASSED          [ 17%]
+test/test_environ.py::TestRequest::test_user_defined_attributes PASSED   [ 17%]
+test/test_environ.py::TestResponse::test_append_header PASSED            [ 17%]
+test/test_environ.py::TestResponse::test_charset PASSED                  [ 18%]
+test/test_environ.py::TestResponse::test_constructor_body PASSED         [ 18%]
+test/test_environ.py::TestResponse::test_constructor_headerlist PASSED   [ 18%]
+test/test_environ.py::TestResponse::test_constructor_status PASSED       [ 19%]
+test/test_environ.py::TestResponse::test_content_type PASSED             [ 19%]
+test/test_environ.py::TestResponse::test_delete_cookie PASSED            [ 19%]
+test/test_environ.py::TestResponse::test_delete_header PASSED            [ 20%]
+test/test_environ.py::TestResponse::test_expires_header PASSED           [ 20%]
+test/test_environ.py::TestResponse::test_non_string_header PASSED        [ 20%]
+test/test_environ.py::TestResponse::test_prevent_control_characters_in_headers PASSED [ 20%]
+test/test_environ.py::TestResponse::test_set_cookie PASSED               [ 21%]
+test/test_environ.py::TestResponse::test_set_cookie_expires PASSED       [ 21%]
+test/test_environ.py::TestResponse::test_set_cookie_maxage PASSED        [ 21%]
+test/test_environ.py::TestResponse::test_set_header PASSED               [ 22%]
+test/test_environ.py::TestResponse::test_set_status PASSED               [ 22%]
+test/test_environ.py::TestRedirect::test_absolute_path PASSED            [ 22%]
+test/test_environ.py::TestRedirect::test_host_http_1_0 PASSED            [ 23%]
+test/test_environ.py::TestRedirect::test_host_http_1_1 PASSED            [ 23%]
+test/test_environ.py::TestRedirect::test_host_http_proxy PASSED          [ 23%]
+test/test_environ.py::TestRedirect::test_redirect_preserve_cookies PASSED [ 24%]
+test/test_environ.py::TestRedirect::test_relative_path PASSED            [ 24%]
+test/test_environ.py::TestRedirect::test_sheme PASSED                    [ 24%]
+test/test_environ.py::TestRedirect::test_specialchars PASSED             [ 25%]
+test/test_environ.py::TestWSGIHeaderDict::test_bytes PASSED              [ 25%]
+test/test_environ.py::TestWSGIHeaderDict::test_dict PASSED               [ 25%]
+test/test_environ.py::TestWSGIHeaderDict::test_empty PASSED              [ 26%]
+test/test_environ.py::TestWSGIHeaderDict::test_native PASSED             [ 26%]
+test/test_environ.py::TestWSGIHeaderDict::test_unicode PASSED            [ 26%]
+test/test_fileupload.py::TestFileUpload::test_content_type PASSED        [ 26%]
+test/test_fileupload.py::TestFileUpload::test_filename PASSED            [ 27%]
+test/test_fileupload.py::TestFileUpload::test_name PASSED                [ 27%]
+test/test_fileupload.py::TestFileUpload::test_preserve_case_issue_582 PASSED [ 27%]
+test/test_fileupload.py::TestFileUpload::test_raw_filename PASSED        [ 28%]
+test/test_fileupload.py::TestFileUpload::test_save_buffer PASSED         [ 28%]
+test/test_fileupload.py::TestFileUpload::test_save_dir PASSED            [ 28%]
+test/test_fileupload.py::TestFileUpload::test_save_file PASSED           [ 29%]
+test/test_fileupload.py::TestFileUpload::test_save_overwrite_lock PASSED [ 29%]
+test/test_formsdict.py::TestFormsDict::test_attr_access PASSED           [ 29%]
+test/test_formsdict.py::TestFormsDict::test_attr_missing PASSED          [ 30%]
+test/test_formsdict.py::TestFormsDict::test_attr_unicode_error PASSED    [ 30%]
+test/test_formsdict.py::TestFormsDict::test_decode_method PASSED         [ 30%]
+test/test_importhook.py::TestImportHooks::test_data_import PASSED        [ 31%]
+test/test_importhook.py::TestImportHooks::test_direkt_import PASSED      [ 31%]
+test/test_importhook.py::TestImportHooks::test_ext_isfile PASSED         [ 31%]
+test/test_importhook.py::TestImportHooks::test_from_import PASSED        [ 32%]
+test/test_importhook.py::TestImportHooks::test_import_fail PASSED        [ 32%]
+test/test_mdict.py::TestMultiDict::test_headergetbug PASSED              [ 32%]
+test/test_mdict.py::TestMultiDict::test_isadict PASSED                   [ 33%]
+test/test_mdict.py::TestMultiDict::test_isheader PASSED                  [ 33%]
+test/test_mdict.py::TestMultiDict::test_ismulti PASSED                   [ 33%]
+test/test_mount.py::TestAppMounting::test_mount PASSED                   [ 33%]
+test/test_mount.py::TestAppMounting::test_mount_json_bug PASSED          [ 34%]
+test/test_mount.py::TestAppMounting::test_mount_meta PASSED              [ 34%]
+test/test_mount.py::TestAppMounting::test_mount_no_plugins PASSED        [ 34%]
+test/test_mount.py::TestAppMounting::test_mount_order_bug581 PASSED      [ 35%]
+test/test_mount.py::TestAppMounting::test_mount_wsgi PASSED              [ 35%]
+test/test_mount.py::TestAppMounting::test_mount_wsgi_ctype_bug PASSED    [ 35%]
+test/test_mount.py::TestAppMounting::test_no_slash_prefix PASSED         [ 36%]
+test/test_mount.py::TestAppMerging::test_merge PASSED                    [ 36%]
+test/test_outputfilter.py::TestOutputFilter::test_bytearray PASSED       [ 36%]
+test/test_outputfilter.py::TestOutputFilter::test_bytes PASSED           [ 37%]
+test/test_outputfilter.py::TestOutputFilter::test_cookie PASSED          [ 37%]
+test/test_outputfilter.py::TestOutputFilter::test_empty_generator_callback PASSED [ 37%]
+test/test_outputfilter.py::TestOutputFilter::test_emptylist PASSED       [ 38%]
+test/test_outputfilter.py::TestOutputFilter::test_error PASSED           [ 38%]
+test/test_outputfilter.py::TestOutputFilter::test_error_in_generator_callback PASSED [ 38%]
+test/test_outputfilter.py::TestOutputFilter::test_fatal_error PASSED     [ 39%]
+test/test_outputfilter.py::TestOutputFilter::test_fatal_error_in_generator_callback PASSED [ 39%]
+test/test_outputfilter.py::TestOutputFilter::test_file PASSED            [ 39%]
+test/test_outputfilter.py::TestOutputFilter::test_generator_callback PASSED [ 40%]
+test/test_outputfilter.py::TestOutputFilter::test_httperror_in_generator_callback PASSED [ 40%]
+test/test_outputfilter.py::TestOutputFilter::test_httpresponse_in_generator_callback PASSED [ 40%]
+test/test_outputfilter.py::TestOutputFilter::test_illegal PASSED         [ 40%]
+test/test_outputfilter.py::TestOutputFilter::test_invalid_generator_callback PASSED [ 41%]
+test/test_outputfilter.py::TestOutputFilter::test_iterator_with_close PASSED [ 41%]
+test/test_outputfilter.py::TestOutputFilter::test_json PASSED            [ 41%]
+test/test_outputfilter.py::TestOutputFilter::test_json_HTTPError PASSED  [ 42%]
+test/test_outputfilter.py::TestOutputFilter::test_json_HTTPResponse PASSED [ 42%]
+test/test_outputfilter.py::TestOutputFilter::test_json_serialization_error PASSED [ 42%]
+test/test_outputfilter.py::TestOutputFilter::test_none PASSED            [ 43%]
+test/test_outputfilter.py::TestOutputFilter::test_tuple PASSED           [ 43%]
+test/test_outputfilter.py::TestOutputFilter::test_unicode PASSED         [ 43%]
+test/test_outputfilter.py::TestOutputFilter::test_unicode_generator_callback PASSED [ 44%]
+test/test_plugins.py::TestPluginManagement::test_install_decorator PASSED [ 44%]
+test/test_plugins.py::TestPluginManagement::test_install_non_plugin PASSED [ 44%]
+test/test_plugins.py::TestPluginManagement::test_install_plugin PASSED   [ 45%]
+test/test_plugins.py::TestPluginManagement::test_plugin_oder PASSED      [ 45%]
+test/test_plugins.py::TestPluginManagement::test_route_plugin PASSED     [ 45%]
+test/test_plugins.py::TestPluginManagement::test_skip_all PASSED         [ 46%]
+test/test_plugins.py::TestPluginManagement::test_skip_by_class PASSED    [ 46%]
+test/test_plugins.py::TestPluginManagement::test_skip_by_instance PASSED [ 46%]
+test/test_plugins.py::TestPluginManagement::test_skip_by_name PASSED     [ 46%]
+test/test_plugins.py::TestPluginManagement::test_skip_nonlist PASSED     [ 47%]
+test/test_plugins.py::TestPluginManagement::test_uninstall_all PASSED    [ 47%]
+test/test_plugins.py::TestPluginManagement::test_uninstall_by_instance PASSED [ 47%]
+test/test_plugins.py::TestPluginManagement::test_uninstall_by_name PASSED [ 48%]
+test/test_plugins.py::TestPluginManagement::test_uninstall_by_type PASSED [ 48%]
+test/test_plugins.py::TestPluginAPI::test_apply PASSED                   [ 48%]
+test/test_plugins.py::TestPluginAPI::test_callable PASSED                [ 49%]
+test/test_plugins.py::TestPluginAPI::test_close PASSED                   [ 49%]
+test/test_plugins.py::TestPluginAPI::test_instance_method_wrapper PASSED [ 49%]
+test/test_plugins.py::TestPluginAPI::test_setup PASSED                   [ 50%]
+test/test_resources.py::TestResourceManager::test_get PASSED             [ 50%]
+test/test_resources.py::TestResourceManager::test_open PASSED            [ 50%]
+test/test_resources.py::TestResourceManager::test_path_absolutize PASSED [ 51%]
+test/test_resources.py::TestResourceManager::test_path_create PASSED     [ 51%]
+test/test_resources.py::TestResourceManager::test_path_normalize PASSED  [ 51%]
+test/test_resources.py::TestResourceManager::test_path_order PASSED      [ 52%]
+test/test_resources.py::TestResourceManager::test_path_unique PASSED     [ 52%]
+test/test_resources.py::TestResourceManager::test_root_path PASSED       [ 52%]
+test/test_route.py::TestRoute::test_callback_inspection PASSED           [ 53%]
+test/test_router.py::TestRouter::testBasic PASSED                        [ 53%]
+test/test_router.py::TestRouter::testBuild PASSED                        [ 53%]
+test/test_router.py::TestRouter::testBuildAnon PASSED                    [ 53%]
+test/test_router.py::TestRouter::testBuildFilter PASSED                  [ 54%]
+test/test_router.py::TestRouter::testErrorInPattern PASSED               [ 54%]
+test/test_router.py::TestRouter::testFloatFilter PASSED                  [ 54%]
+test/test_router.py::TestRouter::testIntFilter PASSED                    [ 55%]
+test/test_router.py::TestRouter::testNewSyntax PASSED                    [ 55%]
+test/test_router.py::TestRouter::testParentheses PASSED                  [ 55%]
+test/test_router.py::TestRouter::testPathFilter PASSED                   [ 56%]
+test/test_router.py::TestRouter::testValueErrorInFilter PASSED           [ 56%]
+test/test_router.py::TestRouter::testWildcardNames PASSED                [ 56%]
+test/test_router.py::TestRouter::test_any_static_before_dynamic PASSED   [ 57%]
+test/test_router.py::TestRouter::test_dynamic_any_if_method_exists PASSED [ 57%]
+test/test_router.py::TestRouter::test_dynamic_before_static_any PASSED   [ 57%]
+test/test_router.py::TestRouter::test_lots_of_routes PASSED              [ 58%]
+test/test_router.py::TestRouterInCGIMode::testBasic PASSED               [ 58%]
+test/test_router.py::TestRouterInCGIMode::testBuild PASSED               [ 58%]
+test/test_router.py::TestRouterInCGIMode::testBuildAnon PASSED           [ 59%]
+test/test_router.py::TestRouterInCGIMode::testBuildFilter PASSED         [ 59%]
+test/test_router.py::TestRouterInCGIMode::testErrorInPattern PASSED      [ 59%]
+test/test_router.py::TestRouterInCGIMode::testFloatFilter PASSED         [ 60%]
+test/test_router.py::TestRouterInCGIMode::testIntFilter PASSED           [ 60%]
+test/test_router.py::TestRouterInCGIMode::testNewSyntax PASSED           [ 60%]
+test/test_router.py::TestRouterInCGIMode::testParentheses PASSED         [ 60%]
+test/test_router.py::TestRouterInCGIMode::testPathFilter PASSED          [ 61%]
+test/test_router.py::TestRouterInCGIMode::testValueErrorInFilter PASSED  [ 61%]
+test/test_router.py::TestRouterInCGIMode::testWildcardNames PASSED       [ 61%]
+test/test_router.py::TestRouterInCGIMode::test_any_static_before_dynamic PASSED [ 62%]
+test/test_router.py::TestRouterInCGIMode::test_dynamic_any_if_method_exists PASSED [ 62%]
+test/test_router.py::TestRouterInCGIMode::test_dynamic_before_static_any PASSED [ 62%]
+test/test_router.py::TestRouterInCGIMode::test_lots_of_routes PASSED     [ 63%]
+test/test_securecookies.py::TestSecureCookies::testDeEncode PASSED       [ 63%]
+test/test_securecookies.py::TestSecureCookies::testIsEncoded PASSED      [ 63%]
+test/test_securecookies.py::TestSecureCookiesInBottle::testValid PASSED  [ 64%]
+test/test_securecookies.py::TestSecureCookiesInBottle::testWrongKey PASSED [ 64%]
+test/test_sendfile.py::TestDateParser::test_asctime PASSED               [ 64%]
+test/test_sendfile.py::TestDateParser::test_bad PASSED                   [ 65%]
+test/test_sendfile.py::TestDateParser::test_rfc1123 PASSED               [ 65%]
+test/test_sendfile.py::TestDateParser::test_rfc850 PASSED                [ 65%]
+test/test_sendfile.py::TestSendFile::test_download PASSED                [ 66%]
+test/test_sendfile.py::TestSendFile::test_ims PASSED                     [ 66%]
+test/test_sendfile.py::TestSendFile::test_invalid PASSED                 [ 66%]
+test/test_sendfile.py::TestSendFile::test_mime PASSED                    [ 66%]
+test/test_sendfile.py::TestSendFile::test_range PASSED                   [ 67%]
+test/test_sendfile.py::TestSendFile::test_range_parser PASSED            [ 67%]
+test/test_sendfile.py::TestSendFile::test_valid PASSED                   [ 67%]
+test/test_server.py::TestServer::test_simple PASSED                      [ 68%]
+test/test_server.py::TestCherryPyServer::test_simple PASSED              [ 68%]
+test/test_server.py::TestPasteServer::test_simple PASSED                 [ 68%]
+test/test_server.py::TestTornadoServer::test_simple PASSED               [ 69%]
+test/test_server.py::TestTwistedServer::test_simple PASSED               [ 69%]
+test/test_server.py::TestDieselServer::test_simple PASSED                [ 69%]
+test/test_server.py::TestGunicornServer::test_simple PASSED              [ 70%]
+test/test_server.py::TestGeventServer::test_simple PASSED                [ 70%]
+test/test_server.py::TestEventletServer::test_simple PASSED              [ 70%]
+test/test_server.py::TestRocketServer::test_simple PASSED                [ 71%]
+test/test_server.py::TestFapwsServer::test_simple PASSED                 [ 71%]
+test/test_server.py::MeinheldServer::test_simple PASSED                  [ 71%]
+test/test_server.py::TestBjoernServer::test_simple PASSED                [ 72%]
+test/test_stpl.py::TestSimpleTemplate::test_blocks PASSED                [ 72%]
+test/test_stpl.py::TestSimpleTemplate::test_bug_block_keywords_eat_prefixed_code PASSED [ 72%]
+test/test_stpl.py::TestSimpleTemplate::test_bug_no_whitespace_before_stmt PASSED [ 73%]
+test/test_stpl.py::TestSimpleTemplate::test_coding_stress PASSED         [ 73%]
+test/test_stpl.py::TestSimpleTemplate::test_commentbug PASSED            [ 73%]
+test/test_stpl.py::TestSimpleTemplate::test_commentonly PASSED           [ 73%]
+test/test_stpl.py::TestSimpleTemplate::test_data PASSED                  [ 74%]
+test/test_stpl.py::TestSimpleTemplate::test_dedentbug PASSED             [ 74%]
+test/test_stpl.py::TestSimpleTemplate::test_defnied PASSED               [ 74%]
+test/test_stpl.py::TestSimpleTemplate::test_detect_pep263 PASSED         [ 75%]
+test/test_stpl.py::TestSimpleTemplate::test_elsebug PASSED               [ 75%]
+test/test_stpl.py::TestSimpleTemplate::test_error PASSED                 [ 75%]
+test/test_stpl.py::TestSimpleTemplate::test_escape PASSED                [ 76%]
+test/test_stpl.py::TestSimpleTemplate::test_escaped_codelines PASSED     [ 76%]
+test/test_stpl.py::TestSimpleTemplate::test_file PASSED                  [ 76%]
+test/test_stpl.py::TestSimpleTemplate::test_get PASSED                   [ 77%]
+test/test_stpl.py::TestSimpleTemplate::test_global_config PASSED         [ 77%]
+test/test_stpl.py::TestSimpleTemplate::test_htmlutils_quote PASSED       [ 77%]
+test/test_stpl.py::TestSimpleTemplate::test_ignore_late_pep263 PASSED    [ 78%]
+test/test_stpl.py::TestSimpleTemplate::test_ignore_pep263_in_textline PASSED [ 78%]
+test/test_stpl.py::TestSimpleTemplate::test_import PASSED                [ 78%]
+test/test_stpl.py::TestSimpleTemplate::test_include PASSED               [ 79%]
+test/test_stpl.py::TestSimpleTemplate::test_multiline PASSED             [ 79%]
+test/test_stpl.py::TestSimpleTemplate::test_name PASSED                  [ 79%]
+test/test_stpl.py::TestSimpleTemplate::test_newline_in_parameterlist PASSED [ 80%]
+test/test_stpl.py::TestSimpleTemplate::test_nobreak PASSED               [ 80%]
+test/test_stpl.py::TestSimpleTemplate::test_noescape PASSED              [ 80%]
+test/test_stpl.py::TestSimpleTemplate::test_noescape_setting PASSED      [ 80%]
+test/test_stpl.py::TestSimpleTemplate::test_nonobreak PASSED             [ 81%]
+test/test_stpl.py::TestSimpleTemplate::test_notfound PASSED              [ 81%]
+test/test_stpl.py::TestSimpleTemplate::test_onelineblocks PASSED         [ 81%]
+test/test_stpl.py::TestSimpleTemplate::test_onelinebugs PASSED           [ 82%]
+test/test_stpl.py::TestSimpleTemplate::test_rebase PASSED                [ 82%]
+test/test_stpl.py::TestSimpleTemplate::test_self_as_variable_name PASSED [ 82%]
+test/test_stpl.py::TestSimpleTemplate::test_setdefault PASSED            [ 83%]
+test/test_stpl.py::TestSimpleTemplate::test_string PASSED                [ 83%]
+test/test_stpl.py::TestSimpleTemplate::test_template_shortcut PASSED     [ 83%]
+test/test_stpl.py::TestSimpleTemplate::test_unicode PASSED               [ 84%]
+test/test_stpl.py::TestSimpleTemplate::test_unicode_code PASSED          [ 84%]
+test/test_stpl.py::TestSimpleTemplate::test_view_decorator PASSED        [ 84%]
+test/test_stpl.py::TestSimpleTemplate::test_view_decorator_issue_407 PASSED [ 85%]
+test/test_stpl.py::TestSimpleTemplate::test_winbreaks PASSED             [ 85%]
+test/test_stpl.py::TestSimpleTemplate::test_winbreaks_end_bug PASSED     [ 85%]
+test/test_stpl.py::TestSTPLDir::test_defect_coding PASSED                [ 86%]
+test/test_stpl.py::TestSTPLDir::test_multiline_block PASSED              [ 86%]
+test/test_stpl.py::TestSTPLDir::test_multiline_comprehensions_in_code_line PASSED [ 86%]
+test/test_stpl.py::TestSTPLDir::test_multiline_eob_after_end PASSED      [ 86%]
+test/test_stpl.py::TestSTPLDir::test_multiline_eob_in_single_line_code PASSED [ 87%]
+test/test_stpl.py::TestSTPLDir::test_multiline_find_eob_in_comments PASSED [ 87%]
+test/test_stpl.py::TestSTPLDir::test_multiline_ignore_eob_in_string FAILED [ 87%]
+test/test_stpl.py::TestSTPLDir::test_multiline_indention PASSED          [ 88%]
+test/test_stpl.py::TestSTPLDir::test_multiline_strings_in_code_line PASSED [ 88%]
+test/test_stpl.py::TestSTPLDir::test_old_include PASSED                  [ 88%]
+test/test_stpl.py::TestSTPLDir::test_old_include_with_args PASSED        [ 89%]
+test/test_wsgi.py::TestWsgi::test_303 PASSED                             [ 89%]
+test/test_wsgi.py::TestWsgi::test_401 PASSED                             [ 89%]
+test/test_wsgi.py::TestWsgi::test_500 PASSED                             [ 90%]
+test/test_wsgi.py::TestWsgi::test_500_unicode PASSED                     [ 90%]
+test/test_wsgi.py::TestWsgi::test_anymethod PASSED                       [ 90%]
+test/test_wsgi.py::TestWsgi::test_cookie PASSED                          [ 91%]
+test/test_wsgi.py::TestWsgi::test_generator_callback PASSED              [ 91%]
+test/test_wsgi.py::TestWsgi::test_get PASSED                             [ 91%]
+test/test_wsgi.py::TestWsgi::test_headget PASSED                         [ 92%]
+test/test_wsgi.py::TestWsgi::test_post PASSED                            [ 92%]
+test/test_wsgi.py::TestWsgi::test_request_attrs PASSED                   [ 92%]
+test/test_wsgi.py::TestWsgi::test_utf8_404 PASSED                        [ 93%]
+test/test_wsgi.py::TestWsgi::test_utf8_url PASSED                        [ 93%]
+test/test_wsgi.py::TestRouteDecorator::test_apply PASSED                 [ 93%]
+test/test_wsgi.py::TestRouteDecorator::test_apply_list PASSED            [ 93%]
+test/test_wsgi.py::TestRouteDecorator::test_callback PASSED              [ 94%]
+test/test_wsgi.py::TestRouteDecorator::test_decorators PASSED            [ 94%]
+test/test_wsgi.py::TestRouteDecorator::test_hooks PASSED                 [ 94%]
+test/test_wsgi.py::TestRouteDecorator::test_method PASSED                [ 95%]
+test/test_wsgi.py::TestRouteDecorator::test_method_list PASSED           [ 95%]
+test/test_wsgi.py::TestRouteDecorator::test_name PASSED                  [ 95%]
+test/test_wsgi.py::TestRouteDecorator::test_no_params_at_all PASSED      [ 96%]
+test/test_wsgi.py::TestRouteDecorator::test_no_path PASSED               [ 96%]
+test/test_wsgi.py::TestRouteDecorator::test_path_list PASSED             [ 96%]
+test/test_wsgi.py::TestRouteDecorator::test_single_path PASSED           [ 97%]
+test/test_wsgi.py::TestRouteDecorator::test_template FAILED              [ 97%]
+test/test_wsgi.py::TestRouteDecorator::test_template_opts FAILED         [ 97%]
+test/test_wsgi.py::TestDecorators::test_autoroute PASSED                 [ 98%]
+test/test_wsgi.py::TestDecorators::test_routebuild PASSED                [ 98%]
+test/test_wsgi.py::TestDecorators::test_truncate_body PASSED             [ 98%]
+test/test_wsgi.py::TestDecorators::test_view PASSED                      [ 99%]
+test/test_wsgi.py::TestDecorators::test_view_error PASSED                [ 99%]
+test/test_wsgi.py::TestAppShortcuts::test_module_shortcuts PASSED        [ 99%]
+test/test_wsgi.py::TestAppShortcuts::test_module_shortcuts_with_different_name PASSED [100%]
+
+=================================== FAILURES ===================================
+_______________ TestSTPLDir.test_multiline_ignore_eob_in_string ________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/bottle-0.12.23/test/test_stpl.py", line 322, in test_multiline_ignore_eob_in_string
+    self.assertRenders(source, result)
+  File "/workdir/bottle-0.12.23/test/test_stpl.py", line 281, in assertRenders
+    self.fail('Syntax error in template:\n%s\n\nTemplate code:\n##########\n%s\n##########' %
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: Syntax error in template:
+Traceback (most recent call last):
+  File "/workdir/bottle-0.12.23/test/test_stpl.py", line 278, in assertRenders
+    tpl.co
+  File "/workdir/bottle-0.12.23/bottle.py", line 201, in __get__
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/workdir/bottle-0.12.23/bottle.py", line 3399, in co
+    return compile(self.code, self.filename or '<string>', 'exec')
+  File "<string>", line 5
+    _printlist((_escape(x}}{{!y), '\n',))
+                         ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+
+
+Template code:
+##########
+x=5# a comment
+y = '%>'# a string
+# this is still code
+# lets end this %>
+_printlist((_escape(x}}{{!y), '\n',))
+
+##########
+_______________________ TestRouteDecorator.test_template _______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/bottle-0.12.23/test/test_wsgi.py", line 250, in test_template
+    self.assertBody('test 5 6', '/test')
+  File "/workdir/bottle-0.12.23/test/tools.py", line 98, in assertBody
+    self.assertEqual(tob(body), self.urlopen(route, **kargs)['body'])
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: b'test 5 6' != b'\n    <!DOCTYPE HTML PUBLIC "-//IETF//DTD[2181 chars]l>\n'
+____________________ TestRouteDecorator.test_template_opts _____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/bottle-0.12.23/test/test_wsgi.py", line 255, in test_template_opts
+    self.assertBody('test 5 6', '/test')
+  File "/workdir/bottle-0.12.23/test/tools.py", line 98, in assertBody
+    self.assertEqual(tob(body), self.urlopen(route, **kargs)['body'])
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: b'test 5 6' != b'\n    <!DOCTYPE HTML PUBLIC "-//IETF//DTD[2181 chars]l>\n'
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+
+<frozen importlib._bootstrap>:914
+  <frozen importlib._bootstrap>:914: ImportWarning: _ImportRedirect.find_spec() not found; falling back to find_module()
+
+test/test_server.py:53
+test/test_server.py:53
+  /workdir/bottle-0.12.23/test/test_server.py:53: SyntaxWarning: "is" with a literal. Did you mean "=="?
+    if rv is 128: # Import error
+
+test/test_server.py:57
+test/test_server.py:57
+  /workdir/bottle-0.12.23/test/test_server.py:57: SyntaxWarning: "is" with a literal. Did you mean "=="?
+    if rv is 3: # Port in use
+
+test/test_config.py::TestConfDict::test_load_dict
+  /workdir/bottle-0.12.23/test/test_config.py:39: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(c['a.b.foo'], 5)
+
+test/test_config.py::TestConfDict::test_load_dict
+  /workdir/bottle-0.12.23/test/test_config.py:40: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(c['a.b.bar'], 6)
+
+test/test_config.py::TestConfDict::test_load_dict
+  /workdir/bottle-0.12.23/test/test_config.py:41: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(c['a.baz'], 7)
+
+test/test_config.py::TestConfDict::test_meta
+  /workdir/bottle-0.12.23/test/test_config.py:32: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(c['int'], 6)
+
+test/test_configdict.py::TestConfigDict::test_attr_access
+  /workdir/bottle-0.12.23/test/test_configdict.py:30: DeprecationWarning: Attribute assignment is deprecated.
+    c.test = 5
+
+test/test_configdict.py::TestConfigDict::test_attr_access
+  /workdir/bottle-0.12.23/test/test_configdict.py:31: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(5, c.test)
+
+test/test_configdict.py::TestConfigDict::test_attr_access
+  /workdir/bottle-0.12.23/test/test_configdict.py:34: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(6, c.test)
+
+test/test_configdict.py::TestConfigDict::test_attr_access
+  /workdir/bottle-0.12.23/test/test_configdict.py:38: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(None, c.test)
+
+test/test_configdict.py::TestConfigDict::test_call
+  /workdir/bottle-0.12.23/test/test_configdict.py:61: DeprecationWarning: Calling ConfDict is deprecated. Use the update() method.
+    self.assertEqual(c, c(a=1))
+
+test/test_configdict.py::TestConfigDict::test_call
+  /workdir/bottle-0.12.23/test/test_configdict.py:63: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(1, c.a)
+
+test/test_configdict.py::TestConfigDict::test_isadict
+  /workdir/bottle-0.12.23/test/test_configdict.py:12: DeprecationWarning: Constructor does no longer accept parameters.
+    d, m = dict(a=5), ConfigDict(a=5)
+
+test/test_configdict.py::TestConfigDict::test_issue588
+  /workdir/bottle-0.12.23/test/test_configdict.py:70: DeprecationWarning: Accessing namespaces as dicts is discouraged. Only use flat item access: cfg["names"]["pace"]["key"] -> cfg["name.space.key"]
+    self.assertEqual('c', c['a']['b'])
+
+test/test_configdict.py::TestConfigDict::test_issue588
+  /opt/graalpy/lib/python3.10/_collections_abc.py:907: DeprecationWarning: Accessing namespaces as dicts is discouraged. Only use flat item access: cfg["names"]["pace"]["key"] -> cfg["name.space.key"]
+    yield (key, self._mapping[key])
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:43: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(ConfigDict.Namespace, c.Name.Space.__class__)
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /opt/graalpy/lib/python3.10/_collections_abc.py:820: DeprecationWarning: Accessing namespaces as dicts is discouraged. Only use flat item access: cfg["names"]["pace"]["key"] -> cfg["name.space.key"]
+    return self[key]
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:44: DeprecationWarning: Attribute access is deprecated.
+    c.Name.Space.value = 5
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:44: DeprecationWarning: Attribute assignment is deprecated.
+    c.Name.Space.value = 5
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:45: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(5, c.Name.Space.value)
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:46: DeprecationWarning: Attribute access is deprecated.
+    self.assertTrue('value' in c.Name.Space)
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:47: DeprecationWarning: Attribute access is deprecated.
+    self.assertTrue('Space' in c.Name)
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:51: DeprecationWarning: Attribute assignment is deprecated.
+    self.assertRaises(AttributeError, lambda: setattr(c, 'Name', 5))
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:53: DeprecationWarning: Attribute assignment is deprecated.
+    self.assertRaises(AttributeError, lambda: setattr(c, 'keys', 5))
+
+test/test_configdict.py::TestConfigDict::test_namespaces
+  /workdir/bottle-0.12.23/test/test_configdict.py:56: DeprecationWarning: Attribute access is deprecated.
+    self.assertEqual(5, c.Name)
+
+test/test_environ.py::TestRequest::test_chunked
+test/test_environ.py::TestRequest::test_chunked
+test/test_environ.py::TestRequest::test_chunked
+test/test_environ.py::TestRequest::test_chunked_meta_fields
+test/test_environ.py::TestRequest::test_chunked_meta_fields
+test/test_environ.py::TestRequest::test_chunked_meta_fields
+  /workdir/bottle-0.12.23/test/test_environ.py:302: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(tob(expect), BaseRequest(e).body.read())
+
+test/test_environ.py::TestResponse::test_content_type
+  /workdir/bottle-0.12.23/test/test_environ.py:581: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals('test/some', rs.headers.get('Content-Type'))
+
+test/test_plugins.py: 15 warnings
+  /workdir/bottle-0.12.23/bottle.py:539: DeprecationWarning: Switch to Plugin API v2 and access the Route object directly.
+    context = self if api > 1 else self._context
+
+test/test_plugins.py::TestPluginAPI::test_setup
+  /workdir/bottle-0.12.23/test/test_plugins.py:197: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals(getattr(plugin, 'app', None), self.app)
+
+test/test_router.py::TestRouter::testFloatFilter
+test/test_router.py::TestRouterInCGIMode::testFloatFilter
+  /workdir/bottle-0.12.23/bottle.py:392: RuntimeWarning: Route <GET /object/<id:float>> overwrites a previously defined route
+    warnings.warn(msg % (method, rule), RuntimeWarning)
+
+test/test_router.py::TestRouter::testParentheses
+test/test_router.py::TestRouterInCGIMode::testParentheses
+  /workdir/bottle-0.12.23/bottle.py:392: RuntimeWarning: Route <GET /func2(:param#(foo|bar)#)> overwrites a previously defined route
+    warnings.warn(msg % (method, rule), RuntimeWarning)
+
+test/test_stpl.py::TestSimpleTemplate::test_coding_stress
+test/test_stpl.py::TestSimpleTemplate::test_detect_pep263
+test/test_stpl.py::TestSimpleTemplate::test_detect_pep263
+  /workdir/bottle-0.12.23/bottle.py:3619: DeprecationWarning: PEP263 encoding strings in templates are deprecated.
+    line, comment = self.fix_backward_compatibility(line, comment)
+
+test/test_stpl.py::TestSimpleTemplate::test_detect_pep263
+  /workdir/bottle-0.12.23/bottle.py:201: DeprecationWarning: Template encodings other than utf8 are no longer supported.
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+
+test/test_stpl.py::TestSimpleTemplate::test_escaped_codelines
+test/test_stpl.py::TestSimpleTemplate::test_escaped_codelines
+  /workdir/bottle-0.12.23/bottle.py:3413: DeprecationWarning: Escape code lines with a backslash.
+    code = parser.translate()
+
+test/test_stpl.py::TestSimpleTemplate::test_file
+test/test_stpl.py::TestSimpleTemplate::test_notfound
+  /workdir/bottle-0.12.23/bottle.py:3265: DeprecationWarning: The template lookup path list should not be empty.
+    self.filename = self.search(self.name, self.lookup)
+
+test/test_stpl.py::TestSimpleTemplate::test_file
+  /workdir/bottle-0.12.23/bottle.py:3265: DeprecationWarning: Absolute template path names are deprecated.
+    self.filename = self.search(self.name, self.lookup)
+
+test/test_stpl.py::TestSimpleTemplate::test_htmlutils_quote
+  /workdir/bottle-0.12.23/test/test_stpl.py:57: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals('"&lt;&#039;&#13;&#10;&#9;&quot;\\&gt;"', html_quote('<\'\r\n\t"\\>'));
+
+test/test_stpl.py: 7 warnings
+test/test_wsgi.py: 8 warnings
+  /workdir/bottle-0.12.23/bottle.py:3619: DeprecationWarning: The include and rebase keywords are functions now.
+    line, comment = self.fix_backward_compatibility(line, comment)
+
+test/test_wsgi.py::TestRouteDecorator::test_name
+  /workdir/bottle-0.12.23/test/test_wsgi.py:260: DeprecationWarning: Please use assertEqual instead.
+    self.assertEquals('/test/6', bottle.url('foo', x=6))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/bottle/0.12.23/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED test/test_stpl.py::TestSTPLDir::test_multiline_ignore_eob_in_string - ...
+FAILED test/test_wsgi.py::TestRouteDecorator::test_template - AssertionError:...
+FAILED test/test_wsgi.py::TestRouteDecorator::test_template_opts - AssertionE...
+================= 3 failed, 312 passed, 91 warnings in 23.13s ==================
+ERROR: InvocationError for command /workdir/bottle-0.12.23/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/bottle/0.12.23/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

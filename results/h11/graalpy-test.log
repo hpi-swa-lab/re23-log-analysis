@@ -1,0 +1,98 @@
+GLOB sdist-make: /workdir/h11-0.14.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/h11-0.14.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/h11-0.14.0/.tox/.tmp/package/1/h11-0.14.0.zip
+graalpylibtest-unit-test-tests installed: coverage==7.3.2,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,h11 @ file:///workdir/h11-0.14.0/.tox/.tmp/package/1/h11-0.14.0.zip,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytest-cov==4.1.0,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2938512883'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/h11/0.14.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/h11-0.14.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/h11-0.14.0
+plugins: cov-4.1.0
+collecting ... collected 78 items
+
+h11/tests/test_against_stdlib_http.py::test_h11_as_client PASSED         [  1%]
+h11/tests/test_against_stdlib_http.py::test_h11_as_server PASSED         [  2%]
+h11/tests/test_connection.py::test__keep_alive PASSED                    [  3%]
+h11/tests/test_connection.py::test__body_framing PASSED                  [  5%]
+h11/tests/test_connection.py::test_Connection_basics_and_content_length PASSED [  6%]
+h11/tests/test_connection.py::test_chunked PASSED                        [  7%]
+h11/tests/test_connection.py::test_chunk_boundaries PASSED               [  8%]
+h11/tests/test_connection.py::test_client_talking_to_http10_server PASSED [ 10%]
+h11/tests/test_connection.py::test_server_talking_to_http10_client PASSED [ 11%]
+h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response PASSED [ 12%]
+h11/tests/test_connection.py::test_automagic_connection_close_handling PASSED [ 14%]
+h11/tests/test_connection.py::test_100_continue PASSED                   [ 15%]
+h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure PASSED [ 16%]
+h11/tests/test_connection.py::test_reuse_simple PASSED                   [ 17%]
+h11/tests/test_connection.py::test_pipelining PASSED                     [ 19%]
+h11/tests/test_connection.py::test_protocol_switch PASSED                [ 20%]
+h11/tests/test_connection.py::test_close_simple PASSED                   [ 21%]
+h11/tests/test_connection.py::test_close_different_states PASSED         [ 23%]
+h11/tests/test_connection.py::test_pipelined_close PASSED                [ 24%]
+h11/tests/test_connection.py::test_sendfile PASSED                       [ 25%]
+h11/tests/test_connection.py::test_errors PASSED                         [ 26%]
+h11/tests/test_connection.py::test_idle_receive_nothing PASSED           [ 28%]
+h11/tests/test_connection.py::test_connection_drop PASSED                [ 29%]
+h11/tests/test_connection.py::test_408_request_timeout PASSED            [ 30%]
+h11/tests/test_connection.py::test_empty_request PASSED                  [ 32%]
+h11/tests/test_connection.py::test_empty_response PASSED                 [ 33%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_request[\x00] PASSED [ 34%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_request[ ] PASSED [ 35%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_request[\x16\x03\x01\x00\xa5] PASSED [ 37%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_response[\x00] PASSED [ 38%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_response[ ] PASSED [ 39%]
+h11/tests/test_connection.py::test_early_detection_of_invalid_response[\x16\x03\x03\x001] PASSED [ 41%]
+h11/tests/test_connection.py::test_HEAD_framing_headers PASSED           [ 42%]
+h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body PASSED [ 43%]
+h11/tests/test_events.py::test_events PASSED                             [ 44%]
+h11/tests/test_events.py::test_intenum_status_code PASSED                [ 46%]
+h11/tests/test_events.py::test_header_casing PASSED                      [ 47%]
+h11/tests/test_headers.py::test_normalize_and_validate PASSED            [ 48%]
+h11/tests/test_headers.py::test_get_set_comma_header PASSED              [ 50%]
+h11/tests/test_headers.py::test_has_100_continue PASSED                  [ 51%]
+h11/tests/test_helpers.py::test_normalize_data_events PASSED             [ 52%]
+h11/tests/test_io.py::test_writers_simple PASSED                         [ 53%]
+h11/tests/test_io.py::test_readers_simple PASSED                         [ 55%]
+h11/tests/test_io.py::test_writers_unusual PASSED                        [ 56%]
+h11/tests/test_io.py::test_readers_unusual PASSED                        [ 57%]
+h11/tests/test_io.py::test__obsolete_line_fold_bytes PASSED              [ 58%]
+h11/tests/test_io.py::test_ContentLengthReader PASSED                    [ 60%]
+h11/tests/test_io.py::test_Http10Reader PASSED                           [ 61%]
+h11/tests/test_io.py::test_ChunkedReader PASSED                          [ 62%]
+h11/tests/test_io.py::test_ContentLengthWriter PASSED                    [ 64%]
+h11/tests/test_io.py::test_ChunkedWriter PASSED                          [ 65%]
+h11/tests/test_io.py::test_Http10Writer PASSED                           [ 66%]
+h11/tests/test_io.py::test_reject_garbage_after_request_line PASSED      [ 67%]
+h11/tests/test_io.py::test_reject_garbage_after_response_line PASSED     [ 69%]
+h11/tests/test_io.py::test_reject_garbage_in_header_line PASSED          [ 70%]
+h11/tests/test_io.py::test_reject_non_vchar_in_path PASSED               [ 71%]
+h11/tests/test_io.py::test_allow_some_garbage_in_cookies PASSED          [ 73%]
+h11/tests/test_io.py::test_host_comes_first PASSED                       [ 74%]
+h11/tests/test_receivebuffer.py::test_receivebuffer PASSED               [ 75%]
+h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_crlf_delimiter] PASSED [ 76%]
+h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_lf_only_delimiter] PASSED [ 78%]
+h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_mixed_crlf_and_lf] PASSED [ 79%]
+h11/tests/test_state.py::test_ConnectionState PASSED                     [ 80%]
+h11/tests/test_state.py::test_ConnectionState_keep_alive PASSED          [ 82%]
+h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE PASSED  [ 83%]
+h11/tests/test_state.py::test_ConnectionState_switch_denied PASSED       [ 84%]
+h11/tests/test_state.py::test_ConnectionState_protocol_switch_accepted PASSED [ 85%]
+h11/tests/test_state.py::test_ConnectionState_double_protocol_switch PASSED [ 87%]
+h11/tests/test_state.py::test_ConnectionState_inconsistent_protocol_switch PASSED [ 88%]
+h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction PASSED [ 89%]
+h11/tests/test_state.py::test_ConnectionState_reuse PASSED               [ 91%]
+h11/tests/test_state.py::test_server_request_is_illegal PASSED           [ 92%]
+h11/tests/test_util.py::test_ProtocolError PASSED                        [ 93%]
+h11/tests/test_util.py::test_LocalProtocolError PASSED                   [ 94%]
+h11/tests/test_util.py::test_validate PASSED                             [ 96%]
+h11/tests/test_util.py::test_validate_formatting PASSED                  [ 97%]
+h11/tests/test_util.py::test_make_sentinel PASSED                        [ 98%]
+h11/tests/test_util.py::test_bytesify PASSED                             [100%]
+
+-- generated xml file: /workdir/results/h11/0.14.0/1/graalpy-test-results.xml --
+============================== 78 passed in 2.71s ==============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

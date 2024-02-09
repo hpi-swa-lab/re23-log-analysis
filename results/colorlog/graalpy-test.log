@@ -1,0 +1,51 @@
+GLOB sdist-make: /workdir/colorlog-6.7.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/colorlog-6.7.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/colorlog-6.7.0/.tox/.tmp/package/1/colorlog-6.7.0.zip
+graalpylibtest-unit-test-tests installed: colorlog @ file:///workdir/colorlog-6.7.0/.tox/.tmp/package/1/colorlog-6.7.0.zip,exceptiongroup==1.1.3,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3217244836'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/colorlog/6.7.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/colorlog-6.7.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/colorlog-6.7.0
+configfile: setup.cfg
+collecting ... collected 31 items
+
+colorlog/tests/test_colorlog.py::test_colored_formatter PASSED           [  3%]
+colorlog/tests/test_colorlog.py::test_custom_colors PASSED               [  6%]
+colorlog/tests/test_colorlog.py::test_reset PASSED                       [  9%]
+colorlog/tests/test_colorlog.py::test_no_reset PASSED                    [ 12%]
+colorlog/tests/test_colorlog.py::test_secondary_colors PASSED            [ 16%]
+colorlog/tests/test_colorlog.py::test_some_secondary_colors PASSED       [ 19%]
+colorlog/tests/test_colorlog.py::test_percent_style PASSED               [ 22%]
+colorlog/tests/test_colorlog.py::test_braces_style PASSED                [ 25%]
+colorlog/tests/test_colorlog.py::test_template_style PASSED              [ 29%]
+colorlog/tests/test_colorlog.py::TestLevelFormatter::test_level_formatter PASSED [ 32%]
+colorlog/tests/test_colorlog.py::test_ttycolorlog PASSED                 [ 35%]
+colorlog/tests/test_colorlog.py::test_ttycolorlog_notty PASSED           [ 38%]
+colorlog/tests/test_config.py::test_build_from_file PASSED               [ 41%]
+colorlog/tests/test_config.py::test_build_from_dictionary PASSED         [ 45%]
+colorlog/tests/test_escape_codes.py::test_esc PASSED                     [ 48%]
+colorlog/tests/test_escape_codes.py::test_reset PASSED                   [ 51%]
+colorlog/tests/test_escape_codes.py::test_bold_color PASSED              [ 54%]
+colorlog/tests/test_escape_codes.py::test_fg_color PASSED                [ 58%]
+colorlog/tests/test_escape_codes.py::test_bg_color PASSED                [ 61%]
+colorlog/tests/test_escape_codes.py::test_rainbow PASSED                 [ 64%]
+colorlog/tests/test_escape_codes.py::test_parse_colors PASSED            [ 67%]
+colorlog/tests/test_escape_codes.py::test_parse_multiple_colors PASSED   [ 70%]
+colorlog/tests/test_escape_codes.py::test_parse_invalid_colors PASSED    [ 74%]
+colorlog/tests/test_escape_codes.py::test_256_colors PASSED              [ 77%]
+colorlog/tests/test_example.py::test_example PASSED                      [ 80%]
+colorlog/tests/test_exports.py::test_exports PASSED                      [ 83%]
+colorlog/tests/test_wrappers.py::test_logging_module PASSED              [ 87%]
+colorlog/tests/test_wrappers.py::test_colorlog_module PASSED             [ 90%]
+colorlog/tests/test_wrappers.py::test_colorlog_basicConfig PASSED        [ 93%]
+colorlog/tests/test_wrappers.py::test_reexports PASSED                   [ 96%]
+colorlog/tests/test_wrappers.py::test_wrappers PASSED                    [100%]
+
+- generated xml file: /workdir/results/colorlog/6.7.0/1/graalpy-test-results.xml -
+============================== 31 passed in 1.18s ==============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

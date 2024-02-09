@@ -1,0 +1,57 @@
+GLOB sdist-make: /workdir/Flask-OpenTracing-1.1.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/Flask-OpenTracing-1.1.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/Flask-OpenTracing-1.1.0/.tox/.tmp/package/1/Flask-OpenTracing-1.1.0.zip
+cpythonlibtest-unit-test-tests installed: blinker==1.7.0,click==8.1.7,coverage==7.3.2,exceptiongroup==1.2.0,flake8==6.1.0,flake8-quotes==3.3.2,Flask==3.0.0,Flask-OpenTracing @ file:///workdir/Flask-OpenTracing-1.1.0/.tox/.tmp/package/1/Flask-OpenTracing-1.1.0.zip#sha256=5fd514da6d5342133cdfa720771316754631f46de948838fd0867899d41d5fa9,iniconfig==2.0.0,itsdangerous==2.1.2,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,opentracing==2.4.0,packaging==23.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,pytest==7.4.3,pytest-cov==4.1.0,tomli==2.0.1,Werkzeug==3.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='456682313'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/Flask-OpenTracing/1.1.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/Flask-OpenTracing-1.1.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/Flask-OpenTracing-1.1.0
+configfile: setup.cfg
+plugins: cov-4.1.0
+collecting ... collected 0 items / 2 errors
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_flask_api.py ___________________
+ImportError while importing test module '/workdir/Flask-OpenTracing-1.1.0/tests/test_flask_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_flask_api.py:7: in <module>
+    from flask_opentracing import FlaskTracing
+flask_opentracing/__init__.py:1: in <module>
+    from .tracing import FlaskTracing  # noqa
+flask_opentracing/tracing.py:3: in <module>
+    from flask import _request_ctx_stack as stack
+E   ImportError: cannot import name '_request_ctx_stack' from 'flask' (/workdir/Flask-OpenTracing-1.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+_________________ ERROR collecting tests/test_flask_tracing.py _________________
+ImportError while importing test module '/workdir/Flask-OpenTracing-1.1.0/tests/test_flask_tracing.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_flask_tracing.py:8: in <module>
+    from flask_opentracing import FlaskTracing
+flask_opentracing/__init__.py:1: in <module>
+    from .tracing import FlaskTracing  # noqa
+flask_opentracing/tracing.py:3: in <module>
+    from flask import _request_ctx_stack as stack
+E   ImportError: cannot import name '_request_ctx_stack' from 'flask' (/workdir/Flask-OpenTracing-1.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+- generated xml file: /workdir/results/Flask-OpenTracing/1.1.0/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                            Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------
+flask_opentracing/__init__.py       2      1      0      0    50%   2
+flask_opentracing/tracing.py      104    101     36      0     2%   6-169
+---------------------------------------------------------------------------
+TOTAL                             106    102     36      0     3%
+
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 2 errors in 0.29s ===============================
+ERROR: InvocationError for command /workdir/Flask-OpenTracing-1.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/Flask-OpenTracing/1.1.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

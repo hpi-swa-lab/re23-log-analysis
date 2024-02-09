@@ -1,0 +1,19 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/ansible-core/2.14.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rtest/integration/network-integration.requirements.txt
+	-rtest/integration/targets/ansible-test-units-constraints/ansible_collections/ns/col/tests/unit/requirements.txt
+	-rtest/integration/targets/ansible-test-integration-constraints/ansible_collections/ns/col/tests/integration/requirements.txt
+	-rtest/sanity/code-smell/update-bundled.requirements.txt
+	-rtest/sanity/code-smell/botmeta.requirements.txt
+	-rtest/sanity/code-smell/rstcheck.requirements.txt
+	-rtest/sanity/code-smell/release-names.requirements.txt
+	-rtest/sanity/code-smell/deprecated-config.requirements.txt
+	-rtest/sanity/code-smell/package-data.requirements.txt
+	-rtest/units/requirements.txt
+

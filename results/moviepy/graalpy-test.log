@@ -1,0 +1,1086 @@
+GLOB sdist-make: /workdir/moviepy-1.0.3/setup.py
+graalpylibtest-unit-test-tests create: /workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/moviepy-1.0.3/.tox/.tmp/package/1/moviepy-1.0.3.zip
+graalpylibtest-unit-test-tests installed: certifi==2023.11.17,charset-normalizer==3.1.0,decorator==4.4.2,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.4,imageio==2.33.0,imageio-ffmpeg==0.4.9,iniconfig==2.0.0,mock==5.1.0,moviepy @ file:///workdir/moviepy-1.0.3/.tox/.tmp/package/1/moviepy-1.0.3.zip,numpy==1.23.5,packaging==23.2,Pillow==10.1.0,pluggy==1.3.0,proglog==0.1.10,pytest==7.4.3,requests==2.31.0,tomli==2.0.1,tqdm==4.66.1,urllib3==2.1.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3828811362'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/moviepy/1.0.3/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/moviepy-1.0.3
+collecting ... collected 110 items
+
+tests/test_AudioClips.py::test_audio_coreader PASSED                     [  0%]
+tests/test_AudioClips.py::test_audioclip PASSED                          [  1%]
+tests/test_AudioClips.py::test_audioclip_concat PASSED                   [  2%]
+tests/test_AudioClips.py::test_audioclip_with_file_concat PASSED         [  3%]
+tests/test_AudioClips.py::test_audiofileclip_concat PASSED               [  4%]
+tests/test_ImageSequenceClip.py::test_1 PASSED                           [  5%]
+tests/test_ImageSequenceClip.py::test_2 PASSED                           [  6%]
+tests/test_PR.py::test_PR_306 FAILED                                     [  7%]
+tests/test_PR.py::test_PR_339 FAILED                                     [  8%]
+tests/test_PR.py::test_PR_373 PASSED                                     [  9%]
+tests/test_PR.py::test_PR_424 PASSED                                     [ 10%]
+tests/test_PR.py::test_PR_458 PASSED                                     [ 10%]
+tests/test_PR.py::test_PR_515 PASSED                                     [ 11%]
+tests/test_PR.py::test_PR_528 PASSED                                     [ 12%]
+tests/test_PR.py::test_PR_529 PASSED                                     [ 13%]
+tests/test_PR.py::test_PR_610 PASSED                                     [ 14%]
+tests/test_TextClip.py::test_fontlist FAILED                             [ 15%]
+tests/test_TextClip.py::test_duration FAILED                             [ 16%]
+tests/test_TextClip.py::test_if_textclip_crashes_in_caption_mode FAILED  [ 17%]
+tests/test_TextClip.py::test_if_textclip_crashes_in_label_mode FAILED    [ 18%]
+tests/test_VideoClip.py::test_check_codec PASSED                         [ 19%]
+tests/test_VideoClip.py::test_save_frame PASSED                          [ 20%]
+tests/test_VideoClip.py::test_write_image_sequence PASSED                [ 20%]
+tests/test_VideoClip.py::test_write_gif_imageio PASSED                   [ 21%]
+tests/test_VideoClip.py::test_write_gif_ffmpeg PASSED                    [ 22%]
+tests/test_VideoClip.py::test_write_gif_ffmpeg_tmpfiles PASSED           [ 23%]
+tests/test_VideoClip.py::test_write_gif_ImageMagick FAILED               [ 24%]
+tests/test_VideoClip.py::test_write_gif_ImageMagick_tmpfiles FAILED      [ 25%]
+tests/test_VideoClip.py::test_subfx PASSED                               [ 26%]
+tests/test_VideoClip.py::test_oncolor PASSED                             [ 27%]
+tests/test_VideoClip.py::test_setaudio PASSED                            [ 28%]
+tests/test_VideoClip.py::test_setaudio_with_audiofile PASSED             [ 29%]
+tests/test_VideoClip.py::test_setopacity PASSED                          [ 30%]
+tests/test_VideoClip.py::test_toimageclip PASSED                         [ 30%]
+tests/test_VideoClip.py::test_withoutaudio PASSED                        [ 31%]
+tests/test_VideoFileClip.py::test_setup PASSED                           [ 32%]
+tests/test_VideoFileClip.py::test_ffmpeg_resizing PASSED                 [ 33%]
+tests/test_VideoFileClip.py::test_shallow_copy PASSED                    [ 34%]
+tests/test_Videos.py::test_afterimage PASSED                             [ 35%]
+tests/test_compositing.py::test_clips_array FAILED                       [ 36%]
+tests/test_compositing.py::test_clips_array_duration PASSED              [ 37%]
+tests/test_examples.py::test_matplotlib SKIPPED (no mpl)                 [ 38%]
+tests/test_ffmpeg_reader.py::test_ffmpeg_parse_infos PASSED              [ 39%]
+tests/test_ffmpeg_reader.py::test_ffmpeg_parse_infos_for_i926 PASSED     [ 40%]
+tests/test_fx.py::test_blackwhite PASSED                                 [ 40%]
+tests/test_fx.py::test_colorx PASSED                                     [ 41%]
+tests/test_fx.py::test_crop PASSED                                       [ 42%]
+tests/test_fx.py::test_fadein PASSED                                     [ 43%]
+tests/test_fx.py::test_fadeout PASSED                                    [ 44%]
+tests/test_fx.py::test_invert_colors PASSED                              [ 45%]
+tests/test_fx.py::test_loop PASSED                                       [ 46%]
+tests/test_fx.py::test_lum_contrast PASSED                               [ 47%]
+tests/test_fx.py::test_make_loopable PASSED                              [ 48%]
+tests/test_fx.py::test_margin PASSED                                     [ 49%]
+tests/test_fx.py::test_mask_and PASSED                                   [ 50%]
+tests/test_fx.py::test_mask_color PASSED                                 [ 50%]
+tests/test_fx.py::test_mask_or PASSED                                    [ 51%]
+tests/test_fx.py::test_mirror_x PASSED                                   [ 52%]
+tests/test_fx.py::test_mirror_y PASSED                                   [ 53%]
+tests/test_fx.py::test_painting PASSED                                   [ 54%]
+tests/test_fx.py::test_resize FAILED                                     [ 55%]
+tests/test_fx.py::test_rotate PASSED                                     [ 56%]
+tests/test_fx.py::test_scroll PASSED                                     [ 57%]
+tests/test_fx.py::test_speedx PASSED                                     [ 58%]
+tests/test_fx.py::test_supersample PASSED                                [ 59%]
+tests/test_fx.py::test_time_mirror PASSED                                [ 60%]
+tests/test_fx.py::test_time_symmetrize PASSED                            [ 60%]
+tests/test_fx.py::test_normalize PASSED                                  [ 61%]
+tests/test_issues.py::test_issue_145 PASSED                              [ 62%]
+tests/test_issues.py::test_issue_190 PASSED                              [ 63%]
+tests/test_issues.py::test_issue_285 PASSED                              [ 64%]
+tests/test_issues.py::test_issue_334 FAILED                              [ 65%]
+tests/test_issues.py::test_issue_354 PASSED                              [ 66%]
+tests/test_issues.py::test_issue_359 PASSED                              [ 67%]
+tests/test_issues.py::test_issue_407 PASSED                              [ 68%]
+tests/test_issues.py::test_issue_416 PASSED                              [ 69%]
+tests/test_issues.py::test_issue_417 FAILED                              [ 70%]
+tests/test_issues.py::test_issue_467 PASSED                              [ 70%]
+tests/test_issues.py::test_issue_470 PASSED                              [ 71%]
+tests/test_issues.py::test_issue_246 PASSED                              [ 72%]
+tests/test_issues.py::test_issue_547 PASSED                              [ 73%]
+tests/test_issues.py::test_issue_636 PASSED                              [ 74%]
+tests/test_issues.py::test_issue_655 PASSED                              [ 75%]
+tests/test_misc.py::test_cuts1 FAILED                                    [ 76%]
+tests/test_misc.py::test_subtitles FAILED                                [ 77%]
+tests/test_misc.py::test_file_to_subtitles PASSED                        [ 78%]
+tests/test_resourcerelease.py::test_release_of_file_via_close PASSED     [ 79%]
+tests/test_resourcereleasedemo.py::test_failure_to_release_file PASSED   [ 80%]
+tests/test_tools.py::test_find_extensions[libx264-mp4] PASSED            [ 80%]
+tests/test_tools.py::test_find_extensions[libmpeg4-mp4] PASSED           [ 81%]
+tests/test_tools.py::test_find_extensions[libtheora-ogv] PASSED          [ 82%]
+tests/test_tools.py::test_find_extensions[libvpx-webm] PASSED            [ 83%]
+tests/test_tools.py::test_find_extensions_not_found PASSED               [ 84%]
+tests/test_tools.py::test_cvsecs[15.4-15.4] PASSED                       [ 85%]
+tests/test_tools.py::test_cvsecs[given1-81.5] PASSED                     [ 86%]
+tests/test_tools.py::test_cvsecs[given2-3662] PASSED                     [ 87%]
+tests/test_tools.py::test_cvsecs[given3-3662] PASSED                     [ 88%]
+tests/test_tools.py::test_cvsecs[01:01:33.5-3693.5] PASSED               [ 89%]
+tests/test_tools.py::test_cvsecs[01:01:33.045-3693.045] PASSED           [ 90%]
+tests/test_tools.py::test_cvsecs[01:01:33,5-3693.5] PASSED               [ 90%]
+tests/test_tools.py::test_cvsecs[1:33-93.0] PASSED                       [ 91%]
+tests/test_tools.py::test_cvsecs[33.4-33.4] PASSED                       [ 92%]
+tests/test_tools.py::test_cvsecs[None-None] PASSED                       [ 93%]
+tests/test_tools.py::test_is_string[hello straight string-True] PASSED   [ 94%]
+tests/test_tools.py::test_is_string[hello raw string-True] PASSED        [ 95%]
+tests/test_tools.py::test_is_string[42-False] PASSED                     [ 96%]
+tests/test_tools.py::test_is_string[True-False] PASSED                   [ 97%]
+tests/test_tools.py::test_is_string[hello bytes-False] PASSED            [ 98%]
+tests/test_tools.py::test_sys_write_flush FAILED                         [ 99%]
+tests/test_videotools.py::test_credits FAILED                            [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_PR_306 __________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_PR.py", line 20, in test_PR_306
+    assert TextClip.list('font') != []
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1171, in list
+    process = sp.Popen([get_setting("IMAGEMAGICK_BINARY"),
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+_________________________________ test_PR_339 __________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_PR.py", line 29, in test_PR_339
+    TextClip(txt='foo', color='white', font=FONT, size=(640, 480),
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+________________________________ test_fontlist _________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_TextClip.py", line 13, in test_fontlist
+    TextClip.list('font')
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1171, in list
+    process = sp.Popen([get_setting("IMAGEMAGICK_BINARY"),
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+________________________________ test_duration _________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_TextClip.py", line 17, in test_duration
+    clip = TextClip('hello world', size=(1280,720), color='white', font=FONT)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+___________________ test_if_textclip_crashes_in_caption_mode ___________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_TextClip.py", line 30, in test_if_textclip_crashes_in_caption_mode
+    TextClip(txt='foo', color='white', size=(640, 480), method='caption',
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+____________________ test_if_textclip_crashes_in_label_mode ____________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_TextClip.py", line 35, in test_if_textclip_crashes_in_label_mode
+    TextClip(txt='foo', method='label', font=FONT).close()
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+__________________________ test_write_gif_ImageMagick __________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_VideoClip.py", line 72, in test_write_gif_ImageMagick
+    clip.write_gif(location, program="ImageMagick")
+  File "<decorator-gen-60>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-59>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 22, in convert_masks_to_RGB
+    return f(clip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 448, in write_gif
+    write_gif(self, filename, fps=fps, program=program,
+  File "<decorator-gen-49>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-48>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 135, in use_clip_fps_by_default
+    return f(clip, *new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/video/io/gif_writers.py", line 203, in write_gif
+    proc2 = sp.Popen(cmd2+['gif:-'], **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+_____________________ test_write_gif_ImageMagick_tmpfiles ______________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/io/gif_writers.py", line 73, in write_gif_with_tempfiles
+    subprocess_call(cmd, logger=logger)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_VideoClip.py", line 81, in test_write_gif_ImageMagick_tmpfiles
+    clip.write_gif(location, program="ImageMagick", tempfiles=True)
+  File "<decorator-gen-60>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-59>", line 2, in write_gif
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 22, in convert_masks_to_RGB
+    return f(clip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 439, in write_gif
+    write_gif_with_tempfiles(self, filename, fps=fps,
+  File "<decorator-gen-47>", line 2, in write_gif_with_tempfiles
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-46>", line 2, in write_gif_with_tempfiles
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 135, in use_clip_fps_by_default
+    return f(clip, *new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/video/io/gif_writers.py", line 87, in write_gif_with_tempfiles
+    raise IOError(error)
+OSError: MoviePy Error: creation of /tmp/imagemagick_tmpfiles_gif.gif failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file config_defaults.py.
+----------------------------- Captured stdout call -----------------------------
+MoviePy - Building file /tmp/imagemagick_tmpfiles_gif.gif
+
+MoviePy - - Generating GIF frames
+MoviePy - - Optimizing GIF with ImageMagick...
+Moviepy - Running:
+>>> "+ " ".join(cmd)
+----------------------------- Captured stderr call -----------------------------
+t:   0%|          | 0/8 [00:00<?, ?it/s, now=None]t:  25%|██▌       | 2/8 [00:00<00:02,  2.54it/s, now=None]t:  38%|███▊      | 3/8 [00:01<00:02,  1.95it/s, now=None]t:  50%|█████     | 4/8 [00:02<00:02,  1.77it/s, now=None]t:  62%|██████▎   | 5/8 [00:02<00:01,  1.67it/s, now=None]t:  75%|███████▌  | 6/8 [00:03<00:01,  1.58it/s, now=None]t:  88%|████████▊ | 7/8 [00:04<00:00,  1.45it/s, now=None]t: 100%|██████████| 8/8 [00:05<00:00,  1.41it/s, now=None]                                                          
+_______________________________ test_clips_array _______________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_compositing.py", line 22, in test_clips_array
+    video.resize(width=480).write_videofile(
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 152, in resize
+    newclip = clip.fl_image(fl)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in fl_image
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in fl
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "<decorator-gen-61>", line 2, in set_make_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 14, in outplace
+    f(newclip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 644, in set_make_frame
+    self.size = self.get_frame(0).shape[:2][::-1]
+  File "<decorator-gen-11>", line 2, in get_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 89, in wrapper
+    return f(*new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 93, in get_frame
+    return self.make_frame(t)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in <lambda>
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in <lambda>
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 150, in <lambda>
+    fl = lambda pic: resizer(pic.astype('uint8'), newsize)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 37, in resizer
+    resized_pil = pilim.resize(newsize[::-1], Image.ANTIALIAS)
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+_________________________________ test_resize __________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_fx.py", line 178, in test_resize
+    clip1 = resize(clip, (460, 720))  # New resolution: (460,720)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 152, in resize
+    newclip = clip.fl_image(fl)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in fl_image
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in fl
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "<decorator-gen-61>", line 2, in set_make_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 14, in outplace
+    f(newclip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 644, in set_make_frame
+    self.size = self.get_frame(0).shape[:2][::-1]
+  File "<decorator-gen-11>", line 2, in get_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 89, in wrapper
+    return f(*new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 93, in get_frame
+    return self.make_frame(t)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in <lambda>
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in <lambda>
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 150, in <lambda>
+    fl = lambda pic: resizer(pic.astype('uint8'), newsize)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 37, in resizer
+    resized_pil = pilim.resize(newsize[::-1], Image.ANTIALIAS)
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+________________________________ test_issue_334 ________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_issues.py", line 141, in test_issue_334
+    [tt, concatenated.set_position(posi).resize(size)])
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 116, in resize
+    return clip.fl(fun, keep_duration=True,
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in fl
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "<decorator-gen-61>", line 2, in set_make_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 14, in outplace
+    f(newclip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 644, in set_make_frame
+    self.size = self.get_frame(0).shape[:2][::-1]
+  File "<decorator-gen-11>", line 2, in get_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 89, in wrapper
+    return f(*new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 93, in get_frame
+    return self.make_frame(t)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in <lambda>
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 113, in <lambda>
+    fun = lambda gf,t: resizer(gf(t).astype('uint8'),
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 37, in resizer
+    resized_pil = pilim.resize(newsize[::-1], Image.ANTIALIAS)
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+________________________________ test_issue_417 ________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_issues.py", line 247, in test_issue_417
+    myclip = ImageClip(cad).fx(resize, newsize=[1280, 660])
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 212, in fx
+    return func(self, *args, **kwargs)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 152, in resize
+    newclip = clip.fl_image(fl)
+  File "<decorator-gen-72>", line 2, in fl_image
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 14, in outplace
+    f(newclip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 936, in fl_image
+    arr = image_func(self.get_frame(0))
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 150, in <lambda>
+    fl = lambda pic: resizer(pic.astype('uint8'), newsize)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 37, in resizer
+    resized_pil = pilim.resize(newsize[::-1], Image.ANTIALIAS)
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+__________________________________ test_cuts1 __________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_misc.py", line 18, in test_cuts1
+    clip = VideoFileClip("media/big_buck_bunny_432_433.webm").resize(0.2)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 152, in resize
+    newclip = clip.fl_image(fl)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in fl_image
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in fl
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "<decorator-gen-61>", line 2, in set_make_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 14, in outplace
+    f(newclip, *a, **k)
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 644, in set_make_frame
+    self.size = self.get_frame(0).shape[:2][::-1]
+  File "<decorator-gen-11>", line 2, in get_frame
+  File "/workdir/moviepy-1.0.3/moviepy/decorators.py", line 89, in wrapper
+    return f(*new_a, **new_kw)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 93, in get_frame
+    return self.make_frame(t)
+  File "/workdir/moviepy-1.0.3/moviepy/Clip.py", line 136, in <lambda>
+    newclip = self.set_make_frame(lambda t: fun(self.get_frame, t))
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 490, in <lambda>
+    return self.fl(lambda gf, t: image_func(gf(t)), apply_to)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 150, in <lambda>
+    fl = lambda pic: resizer(pic.astype('uint8'), newsize)
+  File "/workdir/moviepy-1.0.3/moviepy/video/fx/resize.py", line 37, in resizer
+    resized_pil = pilim.resize(newsize[::-1], Image.ANTIALIAS)
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+________________________________ test_subtitles ________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_misc.py", line 35, in test_subtitles
+    subtitles = SubtitlesClip("media/subtitles1.srt", generator)
+  File "/workdir/moviepy-1.0.3/moviepy/video/tools/subtitles.py", line 86, in __init__
+    hasmask = bool(self.make_textclip('T').mask)
+  File "/workdir/moviepy-1.0.3/tests/test_misc.py", line 30, in <lambda>
+    generator = lambda txt: TextClip(txt, font=FONT,
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+_____________________________ test_sys_write_flush _____________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_tools.py", line 62, in test_sys_write_flush
+    assert file == b""
+AssertionError
+----------------------------- Captured stdout call -----------------------------
+hello world
+_________________________________ test_credits _________________________________
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1137, in __init__
+    subprocess_call(cmd, logger=None)
+  File "/workdir/moviepy-1.0.3/moviepy/tools.py", line 46, in subprocess_call
+    proc = sp.Popen(cmd, **popen_params)
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/graalpy/lib/python3.10/subprocess.py", line 1879, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/moviepy-1.0.3/tests/test_videotools.py", line 33, in test_credits
+    image = credits1(file_location, 600, gap=100, stroke_color="blue",
+  File "/workdir/moviepy-1.0.3/moviepy/video/tools/credits.py", line 100, in credits1
+    left, right = [TextClip(txt, color=color, stroke_color=stroke_color,
+  File "/workdir/moviepy-1.0.3/moviepy/video/tools/credits.py", line 100, in <listcomp>
+    left, right = [TextClip(txt, color=color, stroke_color=stroke_color,
+  File "/workdir/moviepy-1.0.3/moviepy/video/VideoClip.py", line 1146, in __init__
+    raise IOError(error)
+OSError: MoviePy Error: creation of None failed because of the following error:
+
+[Errno 2] No such file or directory: 'unset'.
+
+.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect
+=============================== warnings summary ===============================
+moviepy/config_defaults.py:1
+  /workdir/moviepy-1.0.3/moviepy/config_defaults.py:1: DeprecationWarning: invalid escape sequence '\P'
+    """
+
+moviepy/video/io/ffmpeg_reader.py:294
+  /workdir/moviepy-1.0.3/moviepy/video/io/ffmpeg_reader.py:294: DeprecationWarning: invalid escape sequence '\d'
+    lines_video = [l for l in lines if ' Video: ' in l and re.search('\d+x\d+', l)]
+
+moviepy/video/io/ffmpeg_reader.py:367
+  /workdir/moviepy-1.0.3/moviepy/video/io/ffmpeg_reader.py:367: DeprecationWarning: invalid escape sequence '\d'
+    rotation_lines = [l for l in lines if 'rotate          :' in l and re.search('\d+$', l)]
+
+moviepy/video/io/ffmpeg_reader.py:370
+  /workdir/moviepy-1.0.3/moviepy/video/io/ffmpeg_reader.py:370: DeprecationWarning: invalid escape sequence '\d'
+    match = re.search('\d+$', rotation_line)
+
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_2
+  /workdir/moviepy-1.0.3/moviepy/video/io/ImageSequenceClip.py:82: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    size = imread(sequence[0]).shape
+
+tests/test_ImageSequenceClip.py: 12 warnings
+  /workdir/moviepy-1.0.3/moviepy/video/io/ImageSequenceClip.py:89: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    image1=imread(image)
+
+tests/test_ImageSequenceClip.py::test_1
+  /workdir/moviepy-1.0.3/moviepy/video/io/ImageSequenceClip.py:124: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    if with_mask and (imread(self.sequence[0]).shape[2]==4):
+
+tests/test_ImageSequenceClip.py::test_1
+  /workdir/moviepy-1.0.3/moviepy/video/io/ImageSequenceClip.py:134: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    frame = imread(self.sequence[index])[:,:,3]
+
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+tests/test_ImageSequenceClip.py::test_1
+  /workdir/moviepy-1.0.3/moviepy/video/io/ImageSequenceClip.py:119: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    self.lastimage = imread(self.sequence[index])[:,:,:3]
+
+tests/test_PR.py::test_PR_424
+  /workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:194: PytestRemovedIn8Warning: Passing None has been deprecated.
+  See https://docs.pytest.org/en/latest/how-to/capture-warnings.html#additional-use-cases-of-warnings-in-tests for alternatives in common use cases.
+    result = testfunction(**testargs)
+
+tests/test_PR.py::test_PR_528
+tests/test_Videos.py::test_afterimage
+tests/test_issues.py::test_issue_285
+tests/test_issues.py::test_issue_285
+tests/test_issues.py::test_issue_285
+tests/test_issues.py::test_issue_334
+tests/test_issues.py::test_issue_354
+tests/test_issues.py::test_issue_417
+tests/test_issues.py::test_issue_467
+  /workdir/moviepy-1.0.3/moviepy/video/VideoClip.py:889: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+    img = imread(img)
+
+tests/test_VideoClip.py::test_write_gif_ffmpeg
+tests/test_VideoClip.py::test_write_gif_ffmpeg
+tests/test_VideoClip.py::test_write_gif_ffmpeg
+tests/test_VideoClip.py::test_write_gif_ffmpeg
+tests/test_VideoClip.py::test_write_gif_ffmpeg
+  /workdir/moviepy-1.0.3/moviepy/video/io/gif_writers.py:225: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+    proc1.stdin.write(frame.tostring())
+
+tests/test_fx.py::test_time_mirror
+tests/test_fx.py::test_time_symmetrize
+  /workdir/moviepy-1.0.3/moviepy/video/io/ffmpeg_reader.py:123: UserWarning: Warning: in file media/big_buck_bunny_432_433.webm, 2764800 bytes wanted but 0 bytes read,at frame 24/25, at time 1.00/1.00 sec. Using the last valid frame instead.
+    warnings.warn("Warning: in file %s, "%(self.filename)+
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/moviepy/1.0.3/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_PR.py::test_PR_306 - FileNotFoundError: [Errno 2] No such f...
+FAILED tests/test_PR.py::test_PR_339 - OSError: MoviePy Error: creation of No...
+FAILED tests/test_TextClip.py::test_fontlist - FileNotFoundError: [Errno 2] N...
+FAILED tests/test_TextClip.py::test_duration - OSError: MoviePy Error: creati...
+FAILED tests/test_TextClip.py::test_if_textclip_crashes_in_caption_mode - OSE...
+FAILED tests/test_TextClip.py::test_if_textclip_crashes_in_label_mode - OSErr...
+FAILED tests/test_VideoClip.py::test_write_gif_ImageMagick - FileNotFoundErro...
+FAILED tests/test_VideoClip.py::test_write_gif_ImageMagick_tmpfiles - OSError...
+FAILED tests/test_compositing.py::test_clips_array - AttributeError: module '...
+FAILED tests/test_fx.py::test_resize - AttributeError: module 'PIL.Image' has...
+FAILED tests/test_issues.py::test_issue_334 - AttributeError: module 'PIL.Ima...
+FAILED tests/test_issues.py::test_issue_417 - AttributeError: module 'PIL.Ima...
+FAILED tests/test_misc.py::test_cuts1 - AttributeError: module 'PIL.Image' ha...
+FAILED tests/test_misc.py::test_subtitles - OSError: MoviePy Error: creation ...
+FAILED tests/test_tools.py::test_sys_write_flush - AssertionError
+FAILED tests/test_videotools.py::test_credits - OSError: MoviePy Error: creat...
+====== 16 failed, 93 passed, 1 skipped, 45 warnings in 338.37s (0:05:38) =======
+ERROR: InvocationError for command /workdir/moviepy-1.0.3/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/moviepy/1.0.3/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

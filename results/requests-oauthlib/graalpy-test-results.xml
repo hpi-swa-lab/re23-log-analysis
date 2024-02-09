@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="tests.test_compliance_fixes.EbayComplianceFixTest-20231129041902" tests="1" file="tests/test_compliance_fixes.py" time="0.053" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.EbayComplianceFixTest" name="test_fetch_access_token" time="0.053" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="329"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.FacebookComplianceFixTest-20231129041902" tests="1" file="tests/test_compliance_fixes.py" time="0.036" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.FacebookComplianceFixTest" name="test_fetch_access_token" time="0.036" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="39"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.FitbitComplianceFixTest-20231129041902" tests="2" file="tests/test_compliance_fixes.py" time="0.124" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.FitbitComplianceFixTest" name="test_fetch_access_token" time="0.034" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="61"/>
+		<testcase classname="tests.test_compliance_fixes.FitbitComplianceFixTest" name="test_refresh_token" time="0.090" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="80"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.InstagramComplianceFixTest-20231129041902" tests="2" file="tests/test_compliance_fixes.py" time="0.034" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.InstagramComplianceFixTest" name="test_protected_request" time="0.017" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="250"/>
+		<testcase classname="tests.test_compliance_fixes.InstagramComplianceFixTest" name="test_protected_request_dont_override" time="0.017" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="258">
+			<!--check that if the access_token param
+        already exist we don't override it-->
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.MailChimpComplianceFixTest-20231129041902" tests="1" file="tests/test_compliance_fixes.py" time="0.019" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.MailChimpComplianceFixTest" name="test_fetch_access_token" time="0.019" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="115"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.PlentymarketsComplianceFixTest-20231129041902" tests="1" file="tests/test_compliance_fixes.py" time="0.022" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.PlentymarketsComplianceFixTest" name="test_fetch_access_token" time="0.022" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="290"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.SlackComplianceFixTest-20231129041902" tests="4" file="tests/test_compliance_fixes.py" time="0.075" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.SlackComplianceFixTest" name="test_protected_request" time="0.024" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="180"/>
+		<testcase classname="tests.test_compliance_fixes.SlackComplianceFixTest" name="test_protected_request_override_token_get" time="0.016" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="190"/>
+		<testcase classname="tests.test_compliance_fixes.SlackComplianceFixTest" name="test_protected_request_override_token_post" time="0.020" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="202"/>
+		<testcase classname="tests.test_compliance_fixes.SlackComplianceFixTest" name="test_protected_request_override_token_url" time="0.015" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="214"/>
+	</testsuite>
+	<testsuite name="tests.test_compliance_fixes.WeiboComplianceFixTest-20231129041902" tests="1" file="tests/test_compliance_fixes.py" time="0.016" timestamp="2023-11-29T04:19:03" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_compliance_fixes.WeiboComplianceFixTest" name="test_fetch_access_token" time="0.016" timestamp="2023-11-29T04:19:03" file="tests/test_compliance_fixes.py" line="145"/>
+	</testsuite>
+	<testsuite name="tests.test_core.OAuth1Test-20231129041902" tests="6" file="tests/test_core.py" time="1.554" timestamp="2023-11-29T04:19:04" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_core.OAuth1Test" name="testCanPostBinaryData" time="0.567" timestamp="2023-11-29T04:19:03" file="tests/test_core.py" line="87">
+			<!--
+        Test we can post binary data. Should prevent regression of the
+        UnicodeDecodeError issue.
+        -->
+		</testcase>
+		<testcase classname="tests.test_core.OAuth1Test" name="testFormEncoded" time="0.078" timestamp="2023-11-29T04:19:04" file="tests/test_core.py" line="19">
+			<!--OAuth1 assumes form encoded if content type is not specified.-->
+		</testcase>
+		<testcase classname="tests.test_core.OAuth1Test" name="testNonFormEncoded" time="0.037" timestamp="2023-11-29T04:19:04" file="tests/test_core.py" line="56">
+			<!--OAuth signature only depend on body if it is form encoded.-->
+		</testcase>
+		<testcase classname="tests.test_core.OAuth1Test" name="test_content_type_override" time="0.593" timestamp="2023-11-29T04:19:04" file="tests/test_core.py" line="119">
+			<!--
+        Content type should only be guessed if none is given.
+        -->
+		</testcase>
+		<testcase classname="tests.test_core.OAuth1Test" name="test_register_client_class" time="0.013" timestamp="2023-11-29T04:19:04" file="tests/test_core.py" line="139"/>
+		<testcase classname="tests.test_core.OAuth1Test" name="test_url_is_native_str" time="0.266" timestamp="2023-11-29T04:19:04" file="tests/test_core.py" line="108">
+			<!--
+        Test that the URL is always a native string.
+        -->
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_oauth1_session.OAuth1SessionTest-20231129041902" tests="19" file="tests/test_oauth1_session.py" time="1.038" timestamp="2023-11-29T04:19:05" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_authorization_url" time="0.007" timestamp="2023-11-29T04:19:04" file="tests/test_oauth1_session.py" line="154"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_authorized_false" time="0.003" timestamp="2023-11-29T04:19:04" file="tests/test_oauth1_session.py" line="278"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_authorized_false_rsa" time="0.005" timestamp="2023-11-29T04:19:04" file="tests/test_oauth1_session.py" line="282"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_authorized_true" time="0.024" timestamp="2023-11-29T04:19:04" file="tests/test_oauth1_session.py" line="295"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_authorized_true_rsa" time="0.596" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="303"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_binary_upload" time="0.029" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="134"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_access_token" time="0.022" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="191"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_access_token_has_verifier_is_none" time="0.004" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="237"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_access_token_missing_verifier" time="0.004" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="234"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_access_token_with_optional_arguments" time="0.021" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="200"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_request_token" time="0.021" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="171"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_request_token_with_optional_arguments" time="0.018" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="180"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_fetch_token_invalid_response" time="0.059" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="220"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_nonascii" time="0.081" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="146"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_parse_response_url" time="0.007" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="161"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_signature_methods" time="0.070" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="101"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_signature_types" time="0.052" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="73"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_token_proxy_get" time="0.007" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="259"/>
+		<testcase classname="tests.test_oauth1_session.OAuth1SessionTest" name="test_token_proxy_set" time="0.008" timestamp="2023-11-29T04:19:05" file="tests/test_oauth1_session.py" line="242"/>
+	</testsuite>
+	<testsuite name="tests.test_oauth2_auth.OAuth2AuthTest-20231129041902" tests="4" file="tests/test_oauth2_auth.py" time="0.055" timestamp="2023-11-29T04:19:06" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_oauth2_auth.OAuth2AuthTest" name="test_add_nonexisting_token" time="0.014" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_auth.py" line="50"/>
+		<testcase classname="tests.test_oauth2_auth.OAuth2AuthTest" name="test_add_token_to_body" time="0.014" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_auth.py" line="41"/>
+		<testcase classname="tests.test_oauth2_auth.OAuth2AuthTest" name="test_add_token_to_headers" time="0.013" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_auth.py" line="34"/>
+		<testcase classname="tests.test_oauth2_auth.OAuth2AuthTest" name="test_add_token_to_url" time="0.014" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_auth.py" line="25"/>
+	</testsuite>
+	<testsuite name="tests.test_oauth2_session.OAuth2SessionNetrcTest-20231129041902" tests="13" file="tests/test_oauth2_session.py" time="0.868" timestamp="2023-11-29T04:19:06" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_access_token_proxy" time="0.012" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="437"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_add_token" time="0.041" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="66"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_authorization_url" time="0.014" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="110"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_authorized_false" time="0.006" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="464"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_authorized_true" time="0.100" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="469"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_cleans_previous_token_before_fetching_new_one" time="0.075" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="378">
+			<!--Makes sure the previous token is cleaned before fetching a new one.
+
+        The reason behind it is that, if the previous token is expired, this
+        method shouldn't fail with a TokenExpiredError, since it's attempting
+        to get a new one (which shouldn't be expired).
+
+        -->
+		</testcase>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_client_id_proxy" time="0.008" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="427"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_fetch_token" time="0.303" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="205"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_mtls" time="0.068" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="81"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_refresh_token_request" time="0.211" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="128"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_token_from_fragment" time="0.010" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="198"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_token_proxy" time="0.011" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="447"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionNetrcTest" name="test_web_app_fetch_token" time="0.009" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="417"/>
+	</testsuite>
+	<testsuite name="tests.test_oauth2_session.OAuth2SessionTest-20231129041902" tests="13" file="tests/test_oauth2_session.py" time="0.819" timestamp="2023-11-29T04:19:07" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_access_token_proxy" time="0.006" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="437"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_add_token" time="0.035" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="66"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_authorization_url" time="0.012" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="110"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_authorized_false" time="0.004" timestamp="2023-11-29T04:19:06" file="tests/test_oauth2_session.py" line="464"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_authorized_true" time="0.082" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="469"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_cleans_previous_token_before_fetching_new_one" time="0.071" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="378">
+			<!--Makes sure the previous token is cleaned before fetching a new one.
+
+        The reason behind it is that, if the previous token is expired, this
+        method shouldn't fail with a TokenExpiredError, since it's attempting
+        to get a new one (which shouldn't be expired).
+
+        -->
+		</testcase>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_client_id_proxy" time="0.006" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="427"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_fetch_token" time="0.314" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="205"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_mtls" time="0.068" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="81"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_refresh_token_request" time="0.199" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="128"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_token_from_fragment" time="0.008" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="198"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_token_proxy" time="0.009" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="447"/>
+		<testcase classname="tests.test_oauth2_session.OAuth2SessionTest" name="test_web_app_fetch_token" time="0.005" timestamp="2023-11-29T04:19:07" file="tests/test_oauth2_session.py" line="417"/>
+	</testsuite>
+</testsuites>

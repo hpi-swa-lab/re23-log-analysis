@@ -1,0 +1,13 @@
+GLOB sdist-make: /workdir/googleapis-common-protos-1.57.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/googleapis-common-protos-1.57.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -r.kokoro/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/googleapis-common-protos-1.57.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+ERROR: In --require-hashes mode, all requirements must have their versions pinned with ==. These do not:
+    mock from https://files.pythonhosted.org/packages/6b/20/471f41173930550f279ccb65596a5ac19b9ac974a8d93679bcd3e0c31498/mock-5.1.0-py3-none-any.whl
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -r.kokoro/requirements.txt]; v = InvocationError('/workdir/googleapis-common-protos-1.57.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -r.kokoro/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -r.kokoro/requirements.txt]; v = InvocationError('/workdir/googleapis-common-protos-1.57.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -r.kokoro/requirements.txt', 1)

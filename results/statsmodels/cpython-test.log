@@ -1,0 +1,109 @@
+.package create: /workdir/statsmodels-0.13.5/.tox/.package
+.package installdeps: setuptools>=59.2.0, wheel>=0.37.1, cython>=0.29.32,<3, oldest-supported-numpy; python_version!='3.10' or platform_system!='Windows' or platform_python_implementation=='PyPy', numpy==1.22.3; python_version=='3.10' and platform_system=='Windows' and platform_python_implementation != 'PyPy', numpy; python_version>='3.11', scipy>=1.3,<1.8; python_version=='3.7', scipy>=1.3,<1.9; python_version=='3.8' and platform_system=='Windows' and platform_machine=='x86', scipy>=1.3,<1.9; python_version=='3.9' and platform_system=='Windows' and platform_machine=='x86', scipy>=1.3,<1.10; (python_version>'3.9' or platform_system!='Windows' or platform_machine!='x86') and python_version<'3.12', scipy>=1.9; python_version>='3.12', setuptools_scm[toml]>=7.0,<8
+ERROR: invocation failed (exit code 1), logfile: /workdir/statsmodels-0.13.5/.tox/.package/log/.package-1.log
+================================== log start ===================================
+Ignoring numpy: markers 'python_version == "3.10" and platform_system == "Windows" and platform_python_implementation != "PyPy"' don't match your environment
+Ignoring numpy: markers 'python_version >= "3.11"' don't match your environment
+Ignoring scipy: markers 'python_version == "3.7"' don't match your environment
+Ignoring scipy: markers 'python_version == "3.8" and platform_system == "Windows" and platform_machine == "x86"' don't match your environment
+Ignoring scipy: markers 'python_version == "3.9" and platform_system == "Windows" and platform_machine == "x86"' don't match your environment
+Ignoring scipy: markers 'python_version >= "3.12"' don't match your environment
+Requirement already satisfied: setuptools>=59.2.0 in ./.tox/.package/lib/python3.10/site-packages (63.2.0)
+Requirement already satisfied: wheel>=0.37.1 in ./.tox/.package/lib/python3.10/site-packages (0.41.2)
+Collecting cython<3,>=0.29.32
+  Using cached Cython-0.29.32-py2.py3-none-any.whl (986 kB)
+Collecting oldest-supported-numpy
+  Using cached oldest_supported_numpy-2023.10.25-py3-none-any.whl (4.9 kB)
+Collecting scipy<1.10,>=1.3
+  Using cached scipy-1.9.3.tar.gz (42.1 MB)
+auto-patching C API usages in /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/scipy/_lib/boost/boost/python/detail/wrap_python.hpp
+auto-patching C API usages in /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/scipy/_lib/boost/boost/python/suite/indexing/detail/indexing_suite_detail.hpp
+auto-patching C API usages in /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/scipy/_lib/boost/boost/mpi/python/serialize.hpp
+auto-patching C API usages in /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/scipy/_lib/boost/boost/mpi/python/skeleton_and_content.hpp
+Looking for GraalPy patches for scipy
+Patching package scipy using /opt/graalpy/lib/graalpy23.1/patches/scipy/scipy-1.9.3.patch
+patching file meson.build
+patching file mesonpy_wrapper.py
+patching file pyproject.toml
+patching file scipy/_lib/_ccallback_c.pyx
+patching file scipy/_lib/setup.py
+patching file scipy/_lib/src/messagestream_config.h.in
+patching file scipy/sparse/linalg/meson.build
+patching file scipy/special/meson.build
+patching file tools/cythonize.py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [35 lines of output]
+      + meson setup /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284 /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/.mesonpy-919io9ue -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=/tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/.mesonpy-919io9ue/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.0.0
+      Source dir: /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284
+      Build dir: /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/.mesonpy-919io9ue
+      Build type: native build
+      Project name: SciPy
+      Project version: 1.9.3
+      C compiler for the host machine: cc (gcc 8.5.0 "cc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      C linker for the host machine: cc ld.bfd 2.30-119
+      C++ compiler for the host machine: c++ (gcc 8.5.0 "c++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      C++ linker for the host machine: c++ ld.bfd 2.30-119
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+      Compiler for C supports arguments -Wno-unused-function: YES
+      Compiler for C supports arguments -Wno-conversion: YES
+      Compiler for C supports arguments -Wno-misleading-indentation: YES
+      Compiler for C supports arguments -Wno-incompatible-pointer-types: YES
+      Library m found: YES
+      Fortran compiler for the host machine: gfortran (gcc 8.5.0 "GNU Fortran (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+      Fortran linker for the host machine: gfortran ld.bfd 2.30-119
+      Compiler for Fortran supports arguments -Wno-conversion: YES
+      Program cython found: YES (/tmp/pip-build-env-kxwg3gzz/overlay/bin/cython)
+      Program pythran found: YES (/tmp/pip-build-env-kxwg3gzz/overlay/bin/pythran)
+      Program cp found: YES (/usr/bin/cp)
+      Program python found: YES (/workdir/statsmodels-0.13.5/.tox/.package/bin/python)
+      Run-time dependency threads found: YES
+      Library npymath found: YES
+      Library npyrandom found: YES
+      
+      ../scipy/meson.build:82:2: ERROR: Command "/workdir/statsmodels-0.13.5/.tox/.package/bin/python -c import os; os.chdir(".."); import pythran; print(os.path.dirname(pythran.__file__));" failed with status 1.
+      
+      A full log can be found at /tmp/pip-install-2m8lyikf/scipy_e09db0151fc449c7b300baf4345ad284/.mesonpy-919io9ue/meson-logs/meson-log.txt
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+ERROR: could not install deps [setuptools>=59.2.0, wheel>=0.37.1, cython>=0.29.32,<3, oldest-supported-numpy; python_version!='3.10' or platform_system!='Windows' or platform_python_implementation=='PyPy', numpy==1.22.3; python_version=='3.10' and platform_system=='Windows' and platform_python_implementation != 'PyPy', numpy; python_version>='3.11', scipy>=1.3,<1.8; python_version=='3.7', scipy>=1.3,<1.9; python_version=='3.8' and platform_system=='Windows' and platform_machine=='x86', scipy>=1.3,<1.9; python_version=='3.9' and platform_system=='Windows' and platform_machine=='x86', scipy>=1.3,<1.10; (python_version>'3.9' or platform_system!='Windows' or platform_machine!='x86') and python_version<'3.12', scipy>=1.9; python_version>='3.12', setuptools_scm[toml]>=7.0,<8]; v = InvocationError('/workdir/statsmodels-0.13.5/.tox/.package/bin/python -m pip install \'setuptools>=59.2.0\' \'wheel>=0.37.1\' \'cython>=0.29.32,<3\' \'oldest-supported-numpy; python_version!=\'"\'"\'3.10\'"\'"\' or platform_system!=\'"\'"\'Windows\'"\'"\' or platform_python_implementation==\'"\'"\'PyPy\'"\'"\'\' \'numpy==1.22.3; python_version==\'"\'"\'3.10\'"\'"\' and platform_system==\'"\'"\'Windows\'"\'"\' and platform_python_implementation != \'"\'"\'PyPy\'"\'"\'\' \'numpy; python_version>=\'"\'"\'3.11\'"\'"\'\' \'scipy>=1.3,<1.8; python_version==\'"\'"\'3.7\'"\'"\'\' \'scipy>=1.3,<1.9; python_version==\'"\'"\'3.8\'"\'"\' and platform_system==\'"\'"\'Windows\'"\'"\' and platform_machine==\'"\'"\'x86\'"\'"\'\' \'scipy>=1.3,<1.9; python_version==\'"\'"\'3.9\'"\'"\' and platform_system==\'"\'"\'Windows\'"\'"\' and platform_machine==\'"\'"\'x86\'"\'"\'\' \'scipy>=1.3,<1.10; (python_version>\'"\'"\'3.9\'"\'"\' or platform_system!=\'"\'"\'Windows\'"\'"\' or platform_machine!=\'"\'"\'x86\'"\'"\') and python_version<\'"\'"\'3.12\'"\'"\'\' \'scipy>=1.9; python_version>=\'"\'"\'3.12\'"\'"\'\' \'setuptools_scm[toml]>=7.0,<8\'', 1)
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/site-packages/tox/helper/build_requires.py", line 16, in <module>
+    for_build_requires = backend.get_requires_for_build_sdist(None)
+  File "/workdir/statsmodels-0.13.5/.tox/.package/lib/python3.10/site-packages/setuptools/build_meta.py", line 181, in get_requires_for_build_sdist
+    return self._get_build_requires(config_settings, requirements=[])
+  File "/workdir/statsmodels-0.13.5/.tox/.package/lib/python3.10/site-packages/setuptools/build_meta.py", line 159, in _get_build_requires
+    self.run_setup()
+  File "/workdir/statsmodels-0.13.5/.tox/.package/lib/python3.10/site-packages/setuptools/build_meta.py", line 174, in run_setup
+    exec(code, locals())
+  File "<string>", line 305, in <module>
+  File "<string>", line 276, in check_source
+OSError: C source not found.  You must have Cython installed to build if the C source files have not been generated.
+ERROR: invocation failed (exit code 1), logfile: /workdir/statsmodels-0.13.5/.tox/.package/log/.package-2.log
+================================== log start ===================================
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError("/workdir/statsmodels-0.13.5/.tox/.package/bin/python /opt/graalpy/lib/python3.10/site-packages/tox/helper/build_requires.py setuptools.build_meta '' ''", 1)

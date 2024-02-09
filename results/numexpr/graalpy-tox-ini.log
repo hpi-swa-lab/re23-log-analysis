@@ -1,0 +1,10 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/numexpr/2.8.4/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rdoc/requirements.txt
+

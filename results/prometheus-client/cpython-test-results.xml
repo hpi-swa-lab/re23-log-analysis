@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="tests.openmetrics.test_exposition.TestGenerateText-20231123004528" tests="20" file="tests/openmetrics/test_exposition.py" time="0.010" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_counter" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="31"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_counter_exemplar" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="127"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_counter_non_total_exemplar" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="161"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_counter_total" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="37"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_counter_unit" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="43"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_enum" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="206"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_escaping" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="226"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="49"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_gaugehistogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="173"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_gaugehistogram_negative_buckets" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="185"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_histogram" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="65"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_histogram_exemplar" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="107">
+			<system-out><![CDATA[b'# HELP hh A histogram\n# TYPE hh histogram\nhh_bucket{le="1.0"} 1.0 # {a="b"} 0.5 123.456\nhh_bucket{le="2.0"} 2.0 # {le="7"} 1.5 123.456\nhh_bucket{le="3.0"} 3.0 # {a="b"} 2.5 123.456\nhh_bucket{le="4.0"} 4.0 # {a="\\n\\"\\\\"} 3.5 123.456\nhh_bucket{le="+Inf"} 4.0\nhh_count 4.0\nhh_sum 8.0\nhh_created 123.456\n# EOF\n'
+]]></system-out>
+		</testcase>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_histogram_negative_buckets" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="91"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_histogram_non_bucket_exemplar" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="149"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_info" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="197"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_nonnumber" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="236"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_summary" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="54"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_timestamp" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="254"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_unicode" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="216"/>
+		<testcase classname="tests.openmetrics.test_exposition.TestGenerateText" name="test_untyped_exemplar" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_exposition.py" line="137"/>
+	</testsuite>
+	<testsuite name="tests.openmetrics.test_parser.TestParse-20231123004528" tests="45" file="tests/openmetrics/test_parser.py" time="0.031" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_counter_exemplars" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="218"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_counter_exemplars_empty_brackets" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="228"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_duplicate_timestamps" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="267"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_empty_brackets" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="352"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_empty_help" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="332"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_empty_label" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="373"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_empty_metadata" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="291"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_escaping" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="421"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_exemplars_with_hash_in_label_values" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="480"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_fallback_to_state_machine_label_parsing" time="0.006" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="494"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_float_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="40"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_gaugehistogram_exemplars" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="204"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_hash_in_label_value" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="468"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_help_escaping" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="399"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_histogram_exemplars" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="163"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_histogram_noncanonical" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="131"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_info_timestamps" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="246"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_invalid_input" time="0.006" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="626"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_label_escaping" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="385"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_labels_and_infinite" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="340"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_labels_with_curly_braces" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="322"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_leading_zeros_float_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="56"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_leading_zeros_simple_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="48"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_nan" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="360"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_nan_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="64"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_negative_bucket_gaugehistogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="191"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_negative_bucket_histogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="152"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_no_metadata" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="283"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_no_newline_after_eof" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="366"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_null_byte" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="437"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_roundtrip" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="555"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_counter" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="16"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="32"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_gaugehistogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="179"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_histogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="107"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_histogram_float_values" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="119"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_info" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="238"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_stateset" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="258"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_simple_summary" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="81"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_summary_quantiles" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="91"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_timestamps" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="445"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_type_help_switched" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="314"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_uint64_counter" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="24"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_unit_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="72"/>
+		<testcase classname="tests.openmetrics.test_parser.TestParse" name="test_untyped" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/openmetrics/test_parser.py" line="299"/>
+	</testsuite>
+	<testsuite name="tests.test_gc_collector.TestGCCollector-20231123004528" tests="2" file="tests/test_gc_collector.py" time="0.012" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_gc_collector.TestGCCollector" name="test_empty" time="0.007" timestamp="2023-11-23T00:45:28" file="tests/test_gc_collector.py" line="42"/>
+		<testcase classname="tests.test_gc_collector.TestGCCollector" name="test_working" time="0.005" timestamp="2023-11-23T00:45:28" file="tests/test_gc_collector.py" line="17"/>
+	</testsuite>
+	<testsuite name="tests.test_graphite_bridge.TestGraphiteBridge-20231123004528" tests="7" file="tests/test_graphite_bridge.py" time="0.009" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_labels" time="0.003" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="49"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_labels_tags" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="58"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_nolabels" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="40"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_prefix" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="68"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_prefix_tags" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="77"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_sanitizing" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="87"/>
+		<testcase classname="tests.test_graphite_bridge.TestGraphiteBridge" name="test_sanitizing_tags" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_graphite_bridge.py" line="96"/>
+	</testsuite>
+	<testsuite name="tests.test_multiprocess.TestMmapedDict-20231123004528" tests="4" file="tests/test_multiprocess.py" time="0.022" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_multiprocess.TestMmapedDict" name="test_corruption_detected" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="367"/>
+		<testcase classname="tests.test_multiprocess.TestMmapedDict" name="test_expansion" time="0.005" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="353"/>
+		<testcase classname="tests.test_multiprocess.TestMmapedDict" name="test_multi_expansion" time="0.015" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="358"/>
+		<testcase classname="tests.test_multiprocess.TestMmapedDict" name="test_process_restart" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="346"/>
+	</testsuite>
+	<testsuite name="tests.test_multiprocess.TestMultiProcess-20231123004528" tests="17" file="tests/test_multiprocess.py" time="0.034" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_collect" time="0.005" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="224"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_counter_across_forks" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="193"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_counter_adds" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="67"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_all" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="100"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_liveall" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="112"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_livemax" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="155"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_livemin" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="135"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_livesum" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="177"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_max" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="146"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_min" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="126"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_gauge_sum" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="166"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_histogram_adds" time="0.004" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="87"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_initialization_detects_pid_change" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="205"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_merge_no_accumulate" time="0.003" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="284"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_missing_gauge_file_during_merge" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="329"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_namespace_subsystem" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="188"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcess" name="test_summary_adds" time="0.002" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="76"/>
+	</testsuite>
+	<testsuite name="tests.test_multiprocess.TestMultiProcessDeprecation-20231123004528" tests="2" file="tests/test_multiprocess.py" time="0.002" timestamp="2023-11-23T00:45:28" failures="1" errors="0" skipped="0">
+		<testcase classname="tests.test_multiprocess.TestMultiProcessDeprecation" name="test_mark_process_dead_respects_lowercase" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="43"/>
+		<testcase classname="tests.test_multiprocess.TestMultiProcessDeprecation" name="test_deprecation_warning" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="30">
+			<failure type="AssertionError" message=""><![CDATA[Traceback (most recent call last):
+  File "/workdir/prometheus-client-0.15.0/tests/test_multiprocess.py", line 39, in test_deprecation_warning
+    assert len(w) == 1
+AssertionError
+]]></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_multiprocess.TestUnsetEnv-20231123004528" tests="2" file="tests/test_multiprocess.py" time="0.001" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_multiprocess.TestUnsetEnv" name="test_file_syncpath" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="388"/>
+		<testcase classname="tests.test_multiprocess.TestUnsetEnv" name="test_unset_syncdir_env" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_multiprocess.py" line="384"/>
+	</testsuite>
+	<testsuite name="tests.test_parser.TestParse-20231123004528" tests="24" file="tests/test_parser.py" time="0.010" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_parser.TestParse" name="test_blank_lines_and_comments" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="96"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_commas" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="158"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_empty_brackets" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="189"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_empty_help" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="123"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_empty_label" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="202"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_escaping" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="257"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_help_escaping" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="235"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_label_escaping" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="213"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_labels_and_infinite" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="130"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_labels_with_curly_braces" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="114"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_multiple_trailing_commas" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="181"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_nan" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="196"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_no_metadata" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="68"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_roundtrip" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="284"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_simple_counter" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="21"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_simple_gauge" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="28"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_simple_histogram" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="57"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_simple_summary" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="35"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_spaces" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="141"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_summary_quantiles" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="44"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_tabs" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="107"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_timestamps" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="268"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_type_help_switched" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="89"/>
+		<testcase classname="tests.test_parser.TestParse" name="test_untyped" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_parser.py" line="75"/>
+	</testsuite>
+	<testsuite name="tests.test_platform_collector.TestPlatformCollector-20231123004528" tests="2" file="tests/test_platform_collector.py" time="0.001" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_platform_collector.TestPlatformCollector" name="test_python_info" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_platform_collector.py" line="11"/>
+		<testcase classname="tests.test_platform_collector.TestPlatformCollector" name="test_system_info_java" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_platform_collector.py" line="21"/>
+	</testsuite>
+	<testsuite name="tests.test_process_collector.TestProcessCollector-20231123004528" tests="4" file="tests/test_process_collector.py" time="0.004" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_process_collector.TestProcessCollector" name="test_namespace" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_process_collector.py" line="25"/>
+		<testcase classname="tests.test_process_collector.TestProcessCollector" name="test_working" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_process_collector.py" line="12"/>
+		<testcase classname="tests.test_process_collector.TestProcessCollector" name="test_working_584" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_process_collector.py" line="38"/>
+		<testcase classname="tests.test_process_collector.TestProcessCollector" name="test_working_fake_pid" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_process_collector.py" line="50"/>
+	</testsuite>
+	<testsuite name="tests.test_wsgi.WSGITest-20231123004528" tests="7" file="tests/test_wsgi.py" time="0.004" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_favicon_path" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="69"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_gzip" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="87"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_gzip_disabled" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="101"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_report_metrics_1" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="57"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_report_metrics_2" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="60"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_report_metrics_3" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="63"/>
+		<testcase classname="tests.test_wsgi.WSGITest" name="test_report_metrics_4" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_wsgi.py" line="66"/>
+	</testsuite>
+	<testsuite name="unittest.loader._FailedTest-20231123004528" tests="3" file="unittest/loader.py" time="0.004" timestamp="2023-11-23T00:45:28" failures="0" errors="3" skipped="0">
+		<testcase classname="unittest.loader._FailedTest.prometheus_client" name="twisted" time="0.003" timestamp="2023-11-23T00:45:28" file="/usr/local/lib/python3.10/unittest/loader.py" line="33">
+			<error type="ImportError" message="Failed to import test module: prometheus_client.twisted
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;/workdir/prometheus-client-0.15.0/prometheus_client/twisted/__init__.py&quot;, line 1, in &lt;module&gt;
+    from ._exposition import MetricsResource
+  File &quot;/workdir/prometheus-client-0.15.0/prometheus_client/twisted/_exposition.py&quot;, line 1, in &lt;module&gt;
+    from twisted.internet import reactor
+ModuleNotFoundError: No module named 'twisted'
+"><![CDATA[ImportError: Failed to import test module: prometheus_client.twisted
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/prometheus_client/twisted/__init__.py", line 1, in <module>
+    from ._exposition import MetricsResource
+  File "/workdir/prometheus-client-0.15.0/prometheus_client/twisted/_exposition.py", line 1, in <module>
+    from twisted.internet import reactor
+ModuleNotFoundError: No module named 'twisted'
+
+]]></error>
+		</testcase>
+		<testcase classname="unittest.loader._FailedTest.tests" name="test_core" time="0.000" timestamp="2023-11-23T00:45:28" file="/usr/local/lib/python3.10/unittest/loader.py" line="33">
+			<error type="ImportError" message="Failed to import test module: tests.test_core
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;/workdir/prometheus-client-0.15.0/tests/test_core.py&quot;, line 6, in &lt;module&gt;
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+"><![CDATA[ImportError: Failed to import test module: tests.test_core
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/tests/test_core.py", line 6, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+]]></error>
+		</testcase>
+		<testcase classname="unittest.loader._FailedTest.tests" name="test_exposition" time="0.000" timestamp="2023-11-23T00:45:28" file="/usr/local/lib/python3.10/unittest/loader.py" line="33">
+			<error type="ImportError" message="Failed to import test module: tests.test_exposition
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;/workdir/prometheus-client-0.15.0/tests/test_exposition.py&quot;, line 7, in &lt;module&gt;
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+"><![CDATA[ImportError: Failed to import test module: tests.test_exposition
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/tests/test_exposition.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+]]></error>
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_asgi.ASGITest-20231123004528" tests="6" file="tests/test_asgi.py" time="0.002" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="6">
+		<testcase classname="tests.test_asgi.ASGITest" name="test_gzip" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="131">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+		<testcase classname="tests.test_asgi.ASGITest" name="test_gzip_disabled" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="146">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+		<testcase classname="tests.test_asgi.ASGITest" name="test_report_metrics_1" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="119">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+		<testcase classname="tests.test_asgi.ASGITest" name="test_report_metrics_2" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="122">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+		<testcase classname="tests.test_asgi.ASGITest" name="test_report_metrics_3" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="125">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+		<testcase classname="tests.test_asgi.ASGITest" name="test_report_metrics_4" time="0.000" timestamp="2023-11-23T00:45:28" file="tests/test_asgi.py" line="128">
+			<skipped type="skip" message="Don't have asyncio/asgi installed."/>
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_twisted.MetricsResourceTest-20231123004528" tests="1" file="tests/test_twisted.py" time="0.001" timestamp="2023-11-23T00:45:28" failures="0" errors="0" skipped="1">
+		<testcase classname="tests.test_twisted.MetricsResourceTest" name="test_reports_metrics" time="0.001" timestamp="2023-11-23T00:45:28" file="tests/test_twisted.py" line="26">
+			<!--
+        ``MetricsResource`` serves the metrics from the provided registry.
+        -->
+			<skipped type="skip" message="Don't have twisted installed."/>
+		</testcase>
+	</testsuite>
+</testsuites>

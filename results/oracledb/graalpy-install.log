@@ -1,0 +1,89 @@
+Collecting oracledb==1.3.2
+  Downloading oracledb-1.3.2.tar.gz (481 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 481.3/481.3 kB 2.0 MB/s eta 0:00:00
+Looking for GraalPy patches for oracledb
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting cryptography>=3.2.1
+  Using cached cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting cffi>=1.12
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: oracledb
+  Building wheel for oracledb (pyproject.toml): started
+  Building wheel for oracledb (pyproject.toml): still running...
+  Building wheel for oracledb (pyproject.toml): still running...
+  Building wheel for oracledb (pyproject.toml): still running...
+  Building wheel for oracledb (pyproject.toml): finished with status 'done'
+  Created wheel for oracledb: filename=oracledb-1.3.2-graalpy310-graalpy231_310_native-linux_x86_64.whl size=1245792 sha256=3c006931602c1578cad7cd95c864bd97a19b5a9970812ac74cc77969fc1999a3
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/3c/53/3c/1b7f8d41990d12d9bc5c2bcc8200a3d52e63c03c1543945a6f
+Successfully built oracledb
+Installing collected packages: pycparser, cffi, cryptography, oracledb
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for cryptography
+Patching package cryptography using /opt/graalpy/lib/graalpy23.1/patches/cryptography/cryptography-3.4.7.patch
+can't find file to patch at input line 14
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|From 48c48e16800c6331598aa63849873f121122a3b0 Mon Sep 17 00:00:00 2001
+|From: Michael Simacek <michael.simacek@oracle.com>
+|Date: Mon, 24 Jan 2022 10:09:39 +0100
+|Subject: [PATCH] Disable rust
+|
+|---
+| setup.py | 2 +-
+| 1 file changed, 1 insertion(+), 1 deletion(-)
+|
+|diff --git a/setup.py b/setup.py
+|index 74f69e7..f24c626 100644
+|--- a/setup.py
+|+++ b/setup.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cryptography. The package may still work.
+Looking for GraalPy patches for oracledb
+Successfully installed cffi-1.15.1 cryptography-3.4.7 oracledb-1.3.2 pycparser-2.21

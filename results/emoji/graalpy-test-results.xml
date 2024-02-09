@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="38" time="24.214" timestamp="2023-11-21T04:52:53.781000" hostname="b80581c01e0f"><testcase classname="tests.test_core" name="test_emojize_name_only" time="2.769" /><testcase classname="tests.test_core" name="test_regular_expression_minimal" time="5.128" /><testcase classname="tests.test_core" name="test_emojize_complicated_string" time="0.006" /><testcase classname="tests.test_core" name="test_emojize_languages" time="0.704" /><testcase classname="tests.test_core" name="test_demojize_languages" time="0.313" /><testcase classname="tests.test_core" name="test_emojize_variant" time="0.010" /><testcase classname="tests.test_core" name="test_demojize_removes_variant" time="0.005" /><testcase classname="tests.test_core" name="test_emojize_invalid_emoji" time="0.004" /><testcase classname="tests.test_core" name="test_emojize_version" time="0.006"><failure message="TypeError: sequence item 1: expected str instance, NoneType found">Traceback (most recent call last):
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/emoji-2.2.0/tests/test_core.py", line 213, in test_emojize_version
+    assert emoji.emojize(':bowl_with_spoon:', version=-
+  File "/workdir/emoji-2.2.0/emoji/core.py", line 127, in emojize
+    return pattern.sub(replace, string)
+TypeError: sequence item 1: expected str instance, NoneType found</failure></testcase><testcase classname="tests.test_core" name="test_alias" time="0.158" /><testcase classname="tests.test_core" name="test_invalid_alias" time="0.005" /><testcase classname="tests.test_core" name="test_demojize_name_only" time="0.868" /><testcase classname="tests.test_core" name="test_demojize_complicated_string" time="0.004" /><testcase classname="tests.test_core" name="test_demojize_delimiters" time="0.015"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/emoji-2.2.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/emoji-2.2.0/tests/test_core.py", line 310, in test_demojize_delimiters
+    assert emoji.emojize(demojized_text, delimiters=d) == text_with_unicode
+AssertionError</failure></testcase><testcase classname="tests.test_core" name="test_emoji_list" time="0.005" /><testcase classname="tests.test_core" name="test_distinct_emoji_list" time="0.005" /><testcase classname="tests.test_core" name="test_emoji_count" time="0.005" /><testcase classname="tests.test_core" name="test_replace_emoji" time="0.005" /><testcase classname="tests.test_core" name="test_is_emoji" time="0.005" /><testcase classname="tests.test_core" name="test_long_emoji" time="0.005" /><testcase classname="tests.test_core" name="test_untranslated" time="0.263" /><testcase classname="tests.test_core" name="test_text" time="0.074" /><testcase classname="tests.test_core" name="test_text_multiple_times" time="6.863" /><testcase classname="tests.test_core" name="test_invalid_chars" time="0.005" /><testcase classname="tests.test_core" name="test_combine_with_component" time="0.005" /><testcase classname="tests.test_dict" name="test_all_languages_list" time="0.014" /><testcase classname="tests.test_dict" name="test_emoji_versions" time="0.012" /><testcase classname="tests.test_dict" name="test_duplicate_names" time="0.074" /><testcase classname="tests.test_dict" name="test_name_valid" time="0.238" /><testcase classname="tests.test_nfkc" name="test_database_normalized" time="0.126" /><testcase classname="tests.test_nfkc" name="test_normalized_and_not_normalized" time="0.007" /><testcase classname="tests.test_unicode_codes" name="test_emoji_english_names" time="0.309" /><testcase classname="tests.test_unicode_codes" name="test_compare_normal_and_aliases" time="0.005" /><testcase classname="tests.test_unicode_codes" name="test_no_alias_duplicates" time="0.012" /><testcase classname="tests.test_versions" name="test_emoji_versions_complete_emojize" time="0.902" /><testcase classname="tests.test_versions" name="test_emoji_versions_complete_demojize" time="1.518" /><testcase classname="tests.test_versions" name="test_method_version" time="0.008" /><testcase classname="tests.test_versions" name="test_method_replace_version" time="0.005" /></testsuite></testsuites>

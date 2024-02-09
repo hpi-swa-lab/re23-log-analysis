@@ -1,0 +1,116 @@
+Collecting transformers==4.25.1
+  Downloading transformers-4.25.1-py3-none-any.whl (5.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 3.3 MB/s eta 0:00:00
+Collecting filelock
+  Using cached filelock-3.13.1-py3-none-any.whl (11 kB)
+Collecting huggingface-hub<1.0,>=0.10.0
+  Using cached huggingface_hub-0.19.4-py3-none-any.whl (311 kB)
+Collecting numpy>=1.17
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting packaging>=20.0
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pyyaml>=5.1
+  Using cached PyYAML-6.0.1-py3-none-any.whl
+Collecting regex!=2019.12.17
+  Using cached regex-2023.10.3.tar.gz (394 kB)
+auto-patching C API usages in /tmp/pip-install-xiq1d8r4/regex_23e62f8ea78445fda7b1ed6584cd4cfd/regex_3/_regex.c
+Looking for GraalPy patches for regex
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting requests
+  Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1
+  Using cached tokenizers-0.13.3.tar.gz (314 kB)
+Looking for GraalPy patches for tokenizers
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tqdm>=4.27
+  Using cached tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting fsspec>=2023.5.0
+  Using cached fsspec-2023.10.0-py3-none-any.whl (166 kB)
+Collecting typing-extensions>=3.7.4.3
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-py3-none-any.whl (46 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.6-py3-none-any.whl (61 kB)
+Collecting urllib3<3,>=1.21.1
+  Using cached urllib3-2.1.0-py3-none-any.whl (104 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Building wheels for collected packages: regex, tokenizers
+  Building wheel for regex (pyproject.toml): started
+  Building wheel for regex (pyproject.toml): finished with status 'done'
+  Created wheel for regex: filename=regex-2023.10.3-graalpy310-graalpy231_310_native-linux_x86_64.whl size=282016 sha256=df2a3e56871f4b35de08a39f8ca747f7849465c878a51d13e85350d5952161e9
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/d4/e9/70/b1c56fbe8563990c7616bf6ef393bd74abbfd893b0d48ef5ea
+  Building wheel for tokenizers (pyproject.toml): started
+  Building wheel for tokenizers (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for tokenizers (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [47 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib
+      creating build/lib/tokenizers
+      copying py_src/tokenizers/__init__.py -> build/lib/tokenizers
+      creating build/lib/tokenizers/models
+      copying py_src/tokenizers/models/__init__.py -> build/lib/tokenizers/models
+      creating build/lib/tokenizers/decoders
+      copying py_src/tokenizers/decoders/__init__.py -> build/lib/tokenizers/decoders
+      creating build/lib/tokenizers/normalizers
+      copying py_src/tokenizers/normalizers/__init__.py -> build/lib/tokenizers/normalizers
+      creating build/lib/tokenizers/pre_tokenizers
+      copying py_src/tokenizers/pre_tokenizers/__init__.py -> build/lib/tokenizers/pre_tokenizers
+      creating build/lib/tokenizers/processors
+      copying py_src/tokenizers/processors/__init__.py -> build/lib/tokenizers/processors
+      creating build/lib/tokenizers/trainers
+      copying py_src/tokenizers/trainers/__init__.py -> build/lib/tokenizers/trainers
+      creating build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/char_level_bpe.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/sentencepiece_bpe.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/__init__.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/byte_level_bpe.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/base_tokenizer.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/bert_wordpiece.py -> build/lib/tokenizers/implementations
+      copying py_src/tokenizers/implementations/sentencepiece_unigram.py -> build/lib/tokenizers/implementations
+      creating build/lib/tokenizers/tools
+      copying py_src/tokenizers/tools/__init__.py -> build/lib/tokenizers/tools
+      copying py_src/tokenizers/tools/visualizer.py -> build/lib/tokenizers/tools
+      copying py_src/tokenizers/__init__.pyi -> build/lib/tokenizers
+      copying py_src/tokenizers/models/__init__.pyi -> build/lib/tokenizers/models
+      copying py_src/tokenizers/decoders/__init__.pyi -> build/lib/tokenizers/decoders
+      copying py_src/tokenizers/normalizers/__init__.pyi -> build/lib/tokenizers/normalizers
+      copying py_src/tokenizers/pre_tokenizers/__init__.pyi -> build/lib/tokenizers/pre_tokenizers
+      copying py_src/tokenizers/processors/__init__.pyi -> build/lib/tokenizers/processors
+      copying py_src/tokenizers/trainers/__init__.pyi -> build/lib/tokenizers/trainers
+      copying py_src/tokenizers/tools/visualizer-styles.css -> build/lib/tokenizers/tools
+      running build_ext
+      running build_rust
+          Updating crates.io index
+      cargo rustc --lib --message-format=json-render-diagnostics --manifest-path Cargo.toml --release -v --features pyo3/extension-module -- --crate-type cdylib
+      error: package `clap_builder v4.4.9` cannot be built because it requires rustc 1.70.0 or newer, while the currently active rustc version is 1.62.1
+      Either upgrade to rustc 1.70.0 or newer, or use
+      cargo update -p clap_builder@4.4.9 --precise ver
+      where `ver` is the latest version of `clap_builder` supporting rustc 1.62.1
+      error: `cargo rustc --lib --message-format=json-render-diagnostics --manifest-path Cargo.toml --release -v --features pyo3/extension-module -- --crate-type cdylib` failed with code 101
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for tokenizers
+Successfully built regex
+Failed to build tokenizers
+ERROR: Could not build wheels for tokenizers, which is required to install pyproject.toml-based projects

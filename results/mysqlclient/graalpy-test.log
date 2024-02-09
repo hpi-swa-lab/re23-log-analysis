@@ -1,0 +1,129 @@
+GLOB sdist-make: /workdir/mysqlclient-2.1.1/setup.py
+graalpylibtest-unit-test-tests create: /workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/mysqlclient-2.1.1/.tox/.tmp/package/1/mysqlclient-2.1.1.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,mysqlclient @ file:///workdir/mysqlclient-2.1.1/.tox/.tmp/package/1/mysqlclient-2.1.1.zip,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2598713417'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/mysqlclient/2.1.1/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/mysqlclient-2.1.1
+collecting ... collected 2 items / 6 errors
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting tests/test_MySQLdb_capabilities.py ______________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_capabilities.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_MySQLdb_capabilities.py:6: in <module>
+    import MySQLdb
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+________________ ERROR collecting tests/test_MySQLdb_dbapi20.py ________________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_dbapi20.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_MySQLdb_dbapi20.py:4: in <module>
+    import MySQLdb
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+______________ ERROR collecting tests/test_MySQLdb_nonstandard.py ______________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_MySQLdb_nonstandard.py:3: in <module>
+    from MySQLdb import _mysql
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+_________________ ERROR collecting tests/test_MySQLdb_times.py _________________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_times.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_MySQLdb_times.py:7: in <module>
+    from MySQLdb import times
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+____________________ ERROR collecting tests/test__mysql.py _____________________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test__mysql.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test__mysql.py:2: in <module>
+    from MySQLdb import _mysql
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+____________________ ERROR collecting tests/test_cursor.py _____________________
+ImportError while importing test module '/workdir/mysqlclient-2.1.1/tests/test_cursor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:20: in <module>
+    assert version_info == _mysql.version_info
+E   AssertionError
+
+During handling of the above exception, another exception occurred:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_cursor.py:2: in <module>
+    import MySQLdb.cursors
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py:22: in <module>
+    raise ImportError(
+E   ImportError: this is MySQLdb version (2, 1, 1, 'final', 0), but _mysql is version None
+E   _mysql: '/workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/_mysql.graalpy231-310-native-x86_64-linux.so'
+- generated xml file: /workdir/results/mysqlclient/2.1.1/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_MySQLdb_capabilities.py
+ERROR tests/test_MySQLdb_dbapi20.py
+ERROR tests/test_MySQLdb_nonstandard.py
+ERROR tests/test_MySQLdb_times.py
+ERROR tests/test__mysql.py
+ERROR tests/test_cursor.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 6 errors in 1.52s ===============================
+ERROR: InvocationError for command /workdir/mysqlclient-2.1.1/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/mysqlclient/2.1.1/1/graalpy-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

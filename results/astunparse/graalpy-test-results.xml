@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="tests.test_dump.DumpTestCase-20231120214712" tests="47" file="tests/test_dump.py" time="0.723" timestamp="2023-11-20T21:47:13" failures="37" errors="0" skipped="4">
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_class_decorators" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="369"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_del_statement" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="198"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_dict_with_unpacking" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="350"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_elifs" time="0.006" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="376"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_files" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="182"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_parser_modes" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="194"/>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_annotations" time="0.045" timestamp="2023-11-20T21:47:12" file="tests/test_dump.py" line="330">
+			<failure type="AssertionError" message="&quot;Modu[113 chars]ad()), type_comment=None)], vararg=None, kwonl[133 chars]=[])&quot; != &quot;Modu[113 chars]ad()))], kwonlyargs=[], kw_defaults=[], defaul[56 chars]=[])&quot;
+Diff is 1031 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 331, in test_annotations
+    self.check_roundtrip("def f(a : int): pass")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[113 chars]ad()), type_comment=None)], vararg=None, kwonl[133 chars]=[])" != "Modu[113 chars]ad()))], kwonlyargs=[], kw_defaults=[], defaul[56 chars]=[])"
+Diff is 1031 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_comp_and_gen_in_async_function" time="0.098" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="355">
+			<failure type="AssertionError" message="&quot;Modu[84 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[1944 chars]=[])&quot; != &quot;Modu[84 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[1725 chars]=[])&quot;
+Diff is 3952 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 356, in test_async_comp_and_gen_in_async_function
+    self.check_roundtrip(async_comprehensions_and_generators)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[84 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[1944 chars]=[])" != "Modu[84 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[1725 chars]=[])"
+Diff is 3952 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_comprehension" time="0.015" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="359">
+			<failure type="AssertionError" message="&quot;Modu[247 chars]stant(value=2, kind=None))], is_async=1)]))], type_ignores=[])&quot; != &quot;Modu[247 chars]stant(value=2))], is_async=1)]))], type_ignores=[])&quot;
+Diff is 1175 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 360, in test_async_comprehension
+    self.check_roundtrip("{i async for i in aiter() if i % 2}")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[247 chars]stant(value=2, kind=None))], is_async=1)]))], type_ignores=[])" != "Modu[247 chars]stant(value=2))], is_async=1)]))], type_ignores=[])"
+Diff is 1175 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_for" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="417">
+			<failure type="AssertionError" message="&quot;Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[262 chars]=[])&quot; != &quot;Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[185 chars]=[])&quot;
+Diff is 704 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 418, in test_async_for
+    self.check_roundtrip(async_for)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[262 chars]=[])" != "Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[185 chars]=[])"
+Diff is 704 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_function_def" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="413">
+			<failure type="AssertionError" message="&quot;Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[145 chars]=[])&quot; != &quot;Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[87 chars]=[])&quot;
+Diff is 949 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 414, in test_async_function_def
+    self.check_roundtrip(async_function_def)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[145 chars]=[])" != "Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[87 chars]=[])"
+Diff is 949 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_generator_expression" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="365">
+			<failure type="AssertionError" message="&quot;Modu[101 chars]lue=2, kind=None)), generators=[comprehension([138 chars]=[])&quot; != &quot;Modu[101 chars]lue=2)), generators=[comprehension(target=Name[127 chars]=[])&quot;
+- Module(body=[Expr(value=GeneratorExp(elt=BinOp(left=Name(id='i', ctx=Load()), op=Pow(), right=Constant(value=2, kind=None)), generators=[comprehension(target=Name(id='i', ctx=Store()), iter=Call(func=Name(id='agen', ctx=Load()), args=[], keywords=[]), ifs=[], is_async=1)]))], type_ignores=[])
++ Module(body=[Expr(value=GeneratorExp(elt=BinOp(left=Name(id='i', ctx=Load()), op=Pow(), right=Constant(value=2)), generators=[comprehension(target=Name(id='i', ctx=Store()), iter=Call(func=Name(id='agen', ctx=Load()), args=[], keywords=[]), ifs=[], is_async=1)]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 366, in test_async_generator_expression
+    self.check_roundtrip("(i ** 2 async for i in agen())")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[101 chars]lue=2, kind=None)), generators=[comprehension([138 chars]=[])" != "Modu[101 chars]lue=2)), generators=[comprehension(target=Name[127 chars]=[])"
+- Module(body=[Expr(value=GeneratorExp(elt=BinOp(left=Name(id='i', ctx=Load()), op=Pow(), right=Constant(value=2, kind=None)), generators=[comprehension(target=Name(id='i', ctx=Store()), iter=Call(func=Name(id='agen', ctx=Load()), args=[], keywords=[]), ifs=[], is_async=1)]))], type_ignores=[])
++ Module(body=[Expr(value=GeneratorExp(elt=BinOp(left=Name(id='i', ctx=Load()), op=Pow(), right=Constant(value=2)), generators=[comprehension(target=Name(id='i', ctx=Store()), iter=Call(func=Name(id='agen', ctx=Load()), args=[], keywords=[]), ifs=[], is_async=1)]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_with" time="0.015" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="421">
+			<failure type="AssertionError" message="&quot;Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[292 chars]=[])&quot; != &quot;Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[195 chars]=[])&quot;
+Diff is 744 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 422, in test_async_with
+    self.check_roundtrip(async_with)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[292 chars]=[])" != "Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[195 chars]=[])"
+Diff is 744 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_async_with_as" time="0.107" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="425">
+			<failure type="AssertionError" message="&quot;Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[313 chars]=[])&quot; != &quot;Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[236 chars]=[])&quot;
+Diff is 806 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 426, in test_async_with_as
+    self.check_roundtrip(async_with_as)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[71 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[313 chars]=[])" != "Modu[71 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[236 chars]=[])"
+Diff is 806 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_bytes" time="0.007" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="293">
+			<failure type="AssertionError" message="&quot;Module(body=[Expr(value=Constant(value=b'123', kind=None))], type_ignores=[])&quot; != &quot;Module(body=[Expr(value=Constant(value=b'123'))], type_ignores=[])&quot;
+- Module(body=[Expr(value=Constant(value=b'123', kind=None))], type_ignores=[])
+?                                              -----------
++ Module(body=[Expr(value=Constant(value=b'123'))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 294, in test_bytes
+    self.check_roundtrip("b'123'")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Module(body=[Expr(value=Constant(value=b'123', kind=None))], type_ignores=[])" != "Module(body=[Expr(value=Constant(value=b'123'))], type_ignores=[])"
+- Module(body=[Expr(value=Constant(value=b'123', kind=None))], type_ignores=[])
+?                                              -----------
++ Module(body=[Expr(value=Constant(value=b'123'))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_chained_comparisons" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="260">
+			<failure type="AssertionError" message="'Modu[44 chars]lue=1, kind=None), ops=[Lt(), LtE()], comparat[81 chars]=[])' != 'Modu[44 chars]lue=1), ops=[Lt(), LtE()], comparators=[Consta[48 chars]=[])'
+- Module(body=[Expr(value=Compare(left=Constant(value=1, kind=None), ops=[Lt(), LtE()], comparators=[Constant(value=4, kind=None), Constant(value=5, kind=None)]))], type_ignores=[])
+?                                                      -----------                                                   -----------                   -----------
++ Module(body=[Expr(value=Compare(left=Constant(value=1), ops=[Lt(), LtE()], comparators=[Constant(value=4), Constant(value=5)]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 261, in test_chained_comparisons
+    self.check_roundtrip("1 < 4 <= 5")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Modu[44 chars]lue=1, kind=None), ops=[Lt(), LtE()], comparat[81 chars]=[])' != 'Modu[44 chars]lue=1), ops=[Lt(), LtE()], comparators=[Consta[48 chars]=[])'
+- Module(body=[Expr(value=Compare(left=Constant(value=1, kind=None), ops=[Lt(), LtE()], comparators=[Constant(value=4, kind=None), Constant(value=5, kind=None)]))], type_ignores=[])
+?                                                      -----------                                                   -----------                   -----------
++ Module(body=[Expr(value=Compare(left=Constant(value=1), ops=[Lt(), LtE()], comparators=[Constant(value=4), Constant(value=5)]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_class_definition" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="373">
+			<failure type="AssertionError" message="&quot;Modu[164 chars]word(arg=None, value=Dict(keys=[], values=[]))[51 chars]=[])&quot; != &quot;Modu[164 chars]word(value=Dict(keys=[], values=[]))], body=[P[41 chars]=[])&quot;
+Diff is 721 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 374, in test_class_definition
+    self.check_roundtrip("class A(metaclass=type, *[], **{}): pass")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[164 chars]word(arg=None, value=Dict(keys=[], values=[]))[51 chars]=[])" != "Modu[164 chars]word(value=Dict(keys=[], values=[]))], body=[P[41 chars]=[])"
+Diff is 721 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_complex_f_string" time="0.018" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="326">
+			<failure type="AssertionError" message="&quot;Modu[51 chars]e='-', kind=None), FormattedValue(value=Joined[519 chars]=[])&quot; != &quot;Modu[51 chars]e='-'), FormattedValue(value=JoinedStr(values=[359 chars]=[])&quot;
+Diff is 1095 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 327, in test_complex_f_string
+    self.check_roundtrip(complex_f_string)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[51 chars]e='-', kind=None), FormattedValue(value=Joined[519 chars]=[])" != "Modu[51 chars]e='-'), FormattedValue(value=JoinedStr(values=[359 chars]=[])"
+Diff is 1095 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_dict_comprehension" time="0.014" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="346">
+			<failure type="AssertionError" message="&quot;Modu[269 chars]ue=10, kind=None)], keywords=[]), ifs=[], is_a[25 chars]=[])&quot; != &quot;Modu[269 chars]ue=10)], keywords=[]), ifs=[], is_async=0)]))][14 chars]=[])&quot;
+Diff is 1273 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 347, in test_dict_comprehension
+    self.check_roundtrip("{x: x*x for x in range(10)}")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[269 chars]ue=10, kind=None)], keywords=[]), ifs=[], is_a[25 chars]=[])" != "Modu[269 chars]ue=10)], keywords=[]), ifs=[], is_async=0)]))][14 chars]=[])"
+Diff is 1273 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_for_else" time="0.018" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="205">
+			<failure type="AssertionError" message="&quot;Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[482 chars]=[])&quot; != &quot;Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[334 chars]=[])&quot;
+Diff is 1063 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 206, in test_for_else
+    self.check_roundtrip(for_else)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[482 chars]=[])" != "Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[334 chars]=[])"
+Diff is 1063 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_formatted_value" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="297">
+			<failure type="AssertionError" message="&quot;Modu[81 chars]oad()), conversion=-1, format_spec=None)]))], type_ignores=[])&quot; != &quot;Modu[81 chars]oad()), conversion=-1)]))], type_ignores=[])&quot;
+- Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='value', ctx=Load()), conversion=-1, format_spec=None)]))], type_ignores=[])
+?                                                                                                           ------------------
++ Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='value', ctx=Load()), conversion=-1)]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 298, in test_formatted_value
+    self.check_roundtrip('f"{value}"')
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[81 chars]oad()), conversion=-1, format_spec=None)]))], type_ignores=[])" != "Modu[81 chars]oad()), conversion=-1)]))], type_ignores=[])"
+- Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='value', ctx=Load()), conversion=-1, format_spec=None)]))], type_ignores=[])
+?                                                                                                           ------------------
++ Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='value', ctx=Load()), conversion=-1)]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_function_arguments" time="0.019" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="264">
+			<failure type="AssertionError" message="&quot;Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[110 chars]=[])&quot; != &quot;Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[52 chars]=[])&quot;
+- Module(body=[FunctionDef(name='f', args=arguments(posonlyargs=[], args=[], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=[Pass()], decorator_list=[], returns=None, type_comment=None)], type_ignores=[])
+?                                                                           -------------                                ------------                                              ---------------------------------
++ Module(body=[FunctionDef(name='f', args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=[Pass()], decorator_list=[])], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 265, in test_function_arguments
+    self.check_roundtrip("def f(): pass")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[110 chars]=[])" != "Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[52 chars]=[])"
+- Module(body=[FunctionDef(name='f', args=arguments(posonlyargs=[], args=[], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=[Pass()], decorator_list=[], returns=None, type_comment=None)], type_ignores=[])
+?                                                                           -------------                                ------------                                              ---------------------------------
++ Module(body=[FunctionDef(name='f', args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=[Pass()], decorator_list=[])], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_huge_float" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="222">
+			<failure type="AssertionError" message="'Module(body=[Expr(value=Constant(value=inf, kind=None))], type_ignores=[])' != 'Module(body=[Expr(value=Constant(value=inf))], type_ignores=[])'
+- Module(body=[Expr(value=Constant(value=inf, kind=None))], type_ignores=[])
+?                                           -----------
++ Module(body=[Expr(value=Constant(value=inf))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 223, in test_huge_float
+    self.check_roundtrip("1e1000")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Module(body=[Expr(value=Constant(value=inf, kind=None))], type_ignores=[])' != 'Module(body=[Expr(value=Constant(value=inf))], type_ignores=[])'
+- Module(body=[Expr(value=Constant(value=inf, kind=None))], type_ignores=[])
+?                                           -----------
++ Module(body=[Expr(value=Constant(value=inf))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_imaginary_literals" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="238">
+			<failure type="AssertionError" message="'Module(body=[Expr(value=Constant(value=7j, kind=None))], type_ignores=[])' != 'Module(body=[Expr(value=Constant(value=7j))], type_ignores=[])'
+- Module(body=[Expr(value=Constant(value=7j, kind=None))], type_ignores=[])
+?                                          -----------
++ Module(body=[Expr(value=Constant(value=7j))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 239, in test_imaginary_literals
+    self.check_roundtrip("7j")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Module(body=[Expr(value=Constant(value=7j, kind=None))], type_ignores=[])' != 'Module(body=[Expr(value=Constant(value=7j))], type_ignores=[])'
+- Module(body=[Expr(value=Constant(value=7j, kind=None))], type_ignores=[])
+?                                          -----------
++ Module(body=[Expr(value=Constant(value=7j))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_import_many" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="282">
+			<failure type="AssertionError" message="&quot;Modu[35 chars]fred', asname=None), alias(name='barney', asna[25 chars]=[])&quot; != &quot;Modu[35 chars]fred'), alias(name='barney')])], type_ignores=[])&quot;
+- Module(body=[Import(names=[alias(name='fred', asname=None), alias(name='barney', asname=None)])], type_ignores=[])
+?                                             -------------                      -------------
++ Module(body=[Import(names=[alias(name='fred'), alias(name='barney')])], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 283, in test_import_many
+    self.check_roundtrip(import_many)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[35 chars]fred', asname=None), alias(name='barney', asna[25 chars]=[])" != "Modu[35 chars]fred'), alias(name='barney')])], type_ignores=[])"
+- Module(body=[Import(names=[alias(name='fred', asname=None), alias(name='barney', asname=None)])], type_ignores=[])
+?                                             -------------                      -------------
++ Module(body=[Import(names=[alias(name='fred'), alias(name='barney')])], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_joined_str" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="304">
+			<failure type="AssertionError" message="&quot;Modu[95 chars]on=-1, format_spec=None), Constant(value='=', [114 chars]=[])&quot; != &quot;Modu[95 chars]on=-1), Constant(value='='), FormattedValue(va[67 chars]=[])&quot;
+- Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='key', ctx=Load()), conversion=-1, format_spec=None), Constant(value='=', kind=None), FormattedValue(value=Name(id='value', ctx=Load()), conversion=115, format_spec=None)]))], type_ignores=[])
++ Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='key', ctx=Load()), conversion=-1), Constant(value='='), FormattedValue(value=Name(id='value', ctx=Load()), conversion=115)]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 305, in test_joined_str
+    self.check_roundtrip('f"{key}={value!s}"')
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[95 chars]on=-1, format_spec=None), Constant(value='=', [114 chars]=[])" != "Modu[95 chars]on=-1), Constant(value='='), FormattedValue(va[67 chars]=[])"
+- Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='key', ctx=Load()), conversion=-1, format_spec=None), Constant(value='=', kind=None), FormattedValue(value=Name(id='value', ctx=Load()), conversion=115, format_spec=None)]))], type_ignores=[])
++ Module(body=[Expr(value=JoinedStr(values=[FormattedValue(value=Name(id='key', ctx=Load()), conversion=-1), Constant(value='='), FormattedValue(value=Name(id='value', ctx=Load()), conversion=115)]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_lambda_parentheses" time="0.010" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="257">
+			<failure type="AssertionError" message="&quot;Modu[72 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[100 chars]=[])&quot; != &quot;Modu[72 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[75 chars]=[])&quot;
+- Module(body=[Expr(value=Call(func=Lambda(args=arguments(posonlyargs=[], args=[], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=Name(id='int', ctx=Load())), args=[], keywords=[]))], type_ignores=[])
+?                                                                                 -------------                                ------------
++ Module(body=[Expr(value=Call(func=Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Name(id='int', ctx=Load())), args=[], keywords=[]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 258, in test_lambda_parentheses
+    self.check_roundtrip("(lambda: int)()")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[72 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[100 chars]=[])" != "Modu[72 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[75 chars]=[])"
+- Module(body=[Expr(value=Call(func=Lambda(args=arguments(posonlyargs=[], args=[], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=Name(id='int', ctx=Load())), args=[], keywords=[]))], type_ignores=[])
+?                                                                                 -------------                                ------------
++ Module(body=[Expr(value=Call(func=Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Name(id='int', ctx=Load())), args=[], keywords=[]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_min_int30" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="234">
+			<failure type="AssertionError" message="'Modu[43 chars]and=Constant(value=2147483648, kind=None)))], type_ignores=[])' != 'Modu[43 chars]and=Constant(value=2147483648)))], type_ignores=[])'
+- Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=2147483648, kind=None)))], type_ignores=[])
+?                                                                             -----------
++ Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=2147483648)))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 235, in test_min_int30
+    self.check_roundtrip(str(-2**31))
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Modu[43 chars]and=Constant(value=2147483648, kind=None)))], type_ignores=[])' != 'Modu[43 chars]and=Constant(value=2147483648)))], type_ignores=[])'
+- Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=2147483648, kind=None)))], type_ignores=[])
+?                                                                             -----------
++ Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=2147483648)))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_negative_zero" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="247">
+			<failure type="AssertionError" message="'Modu[34 chars]b(), operand=Constant(value=0, kind=None)))], type_ignores=[])' != 'Modu[34 chars]b(), operand=Constant(value=0)))], type_ignores=[])'
+- Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=0, kind=None)))], type_ignores=[])
+?                                                                    -----------
++ Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=0)))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 248, in test_negative_zero
+    self.check_roundtrip("-0")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Modu[34 chars]b(), operand=Constant(value=0, kind=None)))], type_ignores=[])' != 'Modu[34 chars]b(), operand=Constant(value=0)))], type_ignores=[])'
+- Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=0, kind=None)))], type_ignores=[])
+?                                                                    -----------
++ Module(body=[Expr(value=UnaryOp(op=USub(), operand=Constant(value=0)))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_nonlocal" time="0.022" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="286">
+			<failure type="AssertionError" message="&quot;Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[837 chars]=[])&quot; != &quot;Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[573 chars]=[])&quot;
+Diff is 1657 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 287, in test_nonlocal
+    self.check_roundtrip(nonlocal_ex)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[837 chars]=[])" != "Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[573 chars]=[])"
+Diff is 1657 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_raise_from" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="290">
+			<failure type="AssertionError" message="&quot;Modu[52 chars]lue=1, kind=None), op=Div(), right=Constant(va[234 chars]=[])&quot; != &quot;Modu[52 chars]lue=1), op=Div(), right=Constant(value=0)))], [212 chars]=[])&quot;
+Diff is 665 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 291, in test_raise_from
+    self.check_roundtrip(raise_from)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[52 chars]lue=1, kind=None), op=Div(), right=Constant(va[234 chars]=[])" != "Modu[52 chars]lue=1), op=Div(), right=Constant(value=0)))], [212 chars]=[])"
+Diff is 665 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_relative_import" time="0.026" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="279">
+			<failure type="AssertionError" message="&quot;Modu[15 chars]From(module=None, names=[alias(name='fred', as[201 chars]=[])&quot; != &quot;Modu[15 chars]From(names=[alias(name='fred')], level=1), Imp[149 chars]=[])&quot;
+- Module(body=[ImportFrom(module=None, names=[alias(name='fred', asname=None)], level=1), ImportFrom(module=None, names=[alias(name='barney', asname=None)], level=2), ImportFrom(module='australia', names=[alias(name='shrimp', asname='prawns')], level=1)], type_ignores=[])
++ Module(body=[ImportFrom(names=[alias(name='fred')], level=1), ImportFrom(names=[alias(name='barney')], level=2), ImportFrom(module='australia', names=[alias(name='shrimp', asname='prawns')], level=1)], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 280, in test_relative_import
+    self.check_roundtrip(relative_import)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[15 chars]From(module=None, names=[alias(name='fred', as[201 chars]=[])" != "Modu[15 chars]From(names=[alias(name='fred')], level=1), Imp[149 chars]=[])"
+- Module(body=[ImportFrom(module=None, names=[alias(name='fred', asname=None)], level=1), ImportFrom(module=None, names=[alias(name='barney', asname=None)], level=2), ImportFrom(module='australia', names=[alias(name='shrimp', asname='prawns')], level=1)], type_ignores=[])
++ Module(body=[ImportFrom(names=[alias(name='fred')], level=1), ImportFrom(names=[alias(name='barney')], level=2), ImportFrom(module='australia', names=[alias(name='shrimp', asname='prawns')], level=1)], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_set_comprehension" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="342">
+			<failure type="AssertionError" message="&quot;Modu[180 chars]lue=5, kind=None)], keywords=[]), ifs=[], is_a[25 chars]=[])&quot; != &quot;Modu[180 chars]lue=5)], keywords=[]), ifs=[], is_async=0)]))][14 chars]=[])&quot;
+Diff is 917 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 343, in test_set_comprehension
+    self.check_roundtrip("{x for x in range(5)}")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[180 chars]lue=5, kind=None)], keywords=[]), ifs=[], is_a[25 chars]=[])" != "Modu[180 chars]lue=5)], keywords=[]), ifs=[], is_async=0)]))][14 chars]=[])"
+Diff is 917 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_set_literal" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="338">
+			<failure type="AssertionError" message="&quot;Modu[43 chars]e='a', kind=None), Constant(value='b', kind=No[53 chars]=[])&quot; != &quot;Modu[43 chars]e='a'), Constant(value='b'), Constant(value='c[20 chars]=[])&quot;
+- Module(body=[Expr(value=Set(elts=[Constant(value='a', kind=None), Constant(value='b', kind=None), Constant(value='c', kind=None)]))], type_ignores=[])
+?                                                     -----------                     -----------                     -----------
++ Module(body=[Expr(value=Set(elts=[Constant(value='a'), Constant(value='b'), Constant(value='c')]))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 339, in test_set_literal
+    self.check_roundtrip("{'a', 'b', 'c'}")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[43 chars]e='a', kind=None), Constant(value='b', kind=No[53 chars]=[])" != "Modu[43 chars]e='a'), Constant(value='b'), Constant(value='c[20 chars]=[])"
+- Module(body=[Expr(value=Set(elts=[Constant(value='a', kind=None), Constant(value='b', kind=None), Constant(value='c', kind=None)]))], type_ignores=[])
+?                                                     -----------                     -----------                     -----------
++ Module(body=[Expr(value=Set(elts=[Constant(value='a'), Constant(value='b'), Constant(value='c')]))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_shifts" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="201">
+			<failure type="AssertionError" message="'Modu[43 chars]ue=45, kind=None), op=LShift(), right=Constant[37 chars]=[])' != 'Modu[43 chars]ue=45), op=LShift(), right=Constant(value=2)))[15 chars]=[])'
+- Module(body=[Expr(value=BinOp(left=Constant(value=45, kind=None), op=LShift(), right=Constant(value=2, kind=None)))], type_ignores=[])
+?                                                     -----------                                      -----------
++ Module(body=[Expr(value=BinOp(left=Constant(value=45), op=LShift(), right=Constant(value=2)))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 202, in test_shifts
+    self.check_roundtrip("45 << 2")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Modu[43 chars]ue=45, kind=None), op=LShift(), right=Constant[37 chars]=[])' != 'Modu[43 chars]ue=45), op=LShift(), right=Constant(value=2)))[15 chars]=[])'
+- Module(body=[Expr(value=BinOp(left=Constant(value=45, kind=None), op=LShift(), right=Constant(value=2, kind=None)))], type_ignores=[])
+?                                                     -----------                                      -----------
++ Module(body=[Expr(value=BinOp(left=Constant(value=45), op=LShift(), right=Constant(value=2)))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_starred_assignment" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="384">
+			<failure type="AssertionError" message="&quot;Modu[171 chars]e(id='seq', ctx=Load()), type_comment=None)], type_ignores=[])&quot; != &quot;Modu[171 chars]e(id='seq', ctx=Load()))], type_ignores=[])&quot;
+Diff is 895 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 385, in test_starred_assignment
+    self.check_roundtrip("a, *b, c = seq")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[171 chars]e(id='seq', ctx=Load()), type_comment=None)], type_ignores=[])" != "Modu[171 chars]e(id='seq', ctx=Load()))], type_ignores=[])"
+Diff is 895 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_try_except_finally" time="0.014" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="380">
+			<failure type="AssertionError" message="&quot;Modu[115 chars]()), name=None, body=[Expr(value=Name(id='suit[252 chars]=[])&quot; != &quot;Modu[115 chars]()), body=[Expr(value=Name(id='suite2', ctx=Lo[230 chars]=[])&quot;
+Diff is 827 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 381, in test_try_except_finally
+    self.check_roundtrip(try_except_finally)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[115 chars]()), name=None, body=[Expr(value=Name(id='suit[252 chars]=[])" != "Modu[115 chars]()), body=[Expr(value=Name(id='suite2', ctx=Lo[230 chars]=[])"
+Diff is 827 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_unary_parens" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="211">
+			<failure type="AssertionError" message="'Modu[69 chars]lue=1, kind=None)), op=Pow(), right=Constant(v[35 chars]=[])' != 'Modu[69 chars]lue=1)), op=Pow(), right=Constant(value=7)))],[13 chars]=[])'
+- Module(body=[Expr(value=BinOp(left=UnaryOp(op=USub(), operand=Constant(value=1, kind=None)), op=Pow(), right=Constant(value=7, kind=None)))], type_ignores=[])
+?                                                                               -----------                                    -----------
++ Module(body=[Expr(value=BinOp(left=UnaryOp(op=USub(), operand=Constant(value=1)), op=Pow(), right=Constant(value=7)))], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 212, in test_unary_parens
+    self.check_roundtrip("(-1)**7")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: 'Modu[69 chars]lue=1, kind=None)), op=Pow(), right=Constant(v[35 chars]=[])' != 'Modu[69 chars]lue=1)), op=Pow(), right=Constant(value=7)))],[13 chars]=[])'
+- Module(body=[Expr(value=BinOp(left=UnaryOp(op=USub(), operand=Constant(value=1, kind=None)), op=Pow(), right=Constant(value=7, kind=None)))], type_ignores=[])
+?                                                                               -----------                                    -----------
++ Module(body=[Expr(value=BinOp(left=UnaryOp(op=USub(), operand=Constant(value=1)), op=Pow(), right=Constant(value=7)))], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_variable_annotation" time="0.010" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="391">
+			<failure type="AssertionError" message="&quot;Modu[70 chars]d='int', ctx=Load()), value=None, simple=1)], type_ignores=[])&quot; != &quot;Modu[70 chars]d='int', ctx=Load()), simple=1)], type_ignores=[])&quot;
+- Module(body=[AnnAssign(target=Name(id='a', ctx=Store()), annotation=Name(id='int', ctx=Load()), value=None, simple=1)], type_ignores=[])
+?                                                                                                 ------------
++ Module(body=[AnnAssign(target=Name(id='a', ctx=Store()), annotation=Name(id='int', ctx=Load()), simple=1)], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 392, in test_variable_annotation
+    self.check_roundtrip("a: int")
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[70 chars]d='int', ctx=Load()), value=None, simple=1)], type_ignores=[])" != "Modu[70 chars]d='int', ctx=Load()), simple=1)], type_ignores=[])"
+- Module(body=[AnnAssign(target=Name(id='a', ctx=Store()), annotation=Name(id='int', ctx=Load()), value=None, simple=1)], type_ignores=[])
+?                                                                                                 ------------
++ Module(body=[AnnAssign(target=Name(id='a', ctx=Store()), annotation=Name(id='int', ctx=Load()), simple=1)], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_while_else" time="0.016" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="208">
+			<failure type="AssertionError" message="&quot;Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[372 chars]=[])&quot; != &quot;Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[243 chars]=[])&quot;
+Diff is 862 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 209, in test_while_else
+    self.check_roundtrip(while_else)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[66 chars]=[], vararg=None, kwonlyargs=[], kw_defaults=[[372 chars]=[])" != "Modu[66 chars]=[], kwonlyargs=[], kw_defaults=[], defaults=[[243 chars]=[])"
+Diff is 862 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_with_as" time="0.010" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="405">
+			<failure type="AssertionError" message="&quot;Modu[170 chars]'suite1', ctx=Load()))], type_comment=None)], type_ignores=[])&quot; != &quot;Modu[170 chars]'suite1', ctx=Load()))])], type_ignores=[])&quot;
+Diff is 891 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 406, in test_with_as
+    self.check_roundtrip(with_as)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[170 chars]'suite1', ctx=Load()))], type_comment=None)], type_ignores=[])" != "Modu[170 chars]'suite1', ctx=Load()))])], type_ignores=[])"
+Diff is 891 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_with_simple" time="0.011" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="402">
+			<failure type="AssertionError" message="&quot;Modu[95 chars]s=[]), optional_vars=None)], body=[Expr(value=[66 chars]=[])&quot; != &quot;Modu[95 chars]s=[]))], body=[Expr(value=Name(id='suite1', ct[27 chars]=[])&quot;
+- Module(body=[With(items=[withitem(context_expr=Call(func=Name(id='f', ctx=Load()), args=[], keywords=[]), optional_vars=None)], body=[Expr(value=Name(id='suite1', ctx=Load()))], type_comment=None)], type_ignores=[])
+?                                                                                                         --------------------                                                    -------------------
++ Module(body=[With(items=[withitem(context_expr=Call(func=Name(id='f', ctx=Load()), args=[], keywords=[]))], body=[Expr(value=Name(id='suite1', ctx=Load()))])], type_ignores=[])
+"><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 403, in test_with_simple
+    self.check_roundtrip(with_simple)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[95 chars]s=[]), optional_vars=None)], body=[Expr(value=[66 chars]=[])" != "Modu[95 chars]s=[]))], body=[Expr(value=Name(id='suite1', ct[27 chars]=[])"
+- Module(body=[With(items=[withitem(context_expr=Call(func=Name(id='f', ctx=Load()), args=[], keywords=[]), optional_vars=None)], body=[Expr(value=Name(id='suite1', ctx=Load()))], type_comment=None)], type_ignores=[])
+?                                                                                                         --------------------                                                    -------------------
++ Module(body=[With(items=[withitem(context_expr=Call(func=Name(id='f', ctx=Load()), args=[], keywords=[]))], body=[Expr(value=Name(id='suite1', ctx=Load()))])], type_ignores=[])
+
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_with_two_items" time="0.015" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="409">
+			<failure type="AssertionError" message="&quot;Modu[293 chars]'suite1', ctx=Load()))], type_comment=None)], type_ignores=[])&quot; != &quot;Modu[293 chars]'suite1', ctx=Load()))])], type_ignores=[])&quot;
+Diff is 1377 characters long. Set self.maxDiff to None to see it."><![CDATA[Traceback (most recent call last):
+  File "/workdir/astunparse-1.6.3/tests/common.py", line 410, in test_with_two_items
+    self.check_roundtrip(with_two_items)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 24, in check_roundtrip
+    self.assertASTEqual(dump1, dump2)
+  File "/workdir/astunparse-1.6.3/tests/test_dump.py", line 18, in assertASTEqual
+    self.assertEqual(dump1, dump2)
+AssertionError: "Modu[293 chars]'suite1', ctx=Load()))], type_comment=None)], type_ignores=[])" != "Modu[293 chars]'suite1', ctx=Load()))])], type_ignores=[])"
+Diff is 1377 characters long. Set self.maxDiff to None to see it.
+]]></failure>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_integer_parens" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="219">
+			<skipped type="skip" message="Only works for Python &lt; 3.6"/>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_joined_str_361" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="310">
+			<skipped type="skip" message="Only supported on 3.6.0"/>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_min_int27" time="0.003" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="229">
+			<skipped type="skip" message="Only works for Python 2"/>
+		</testcase>
+		<testcase classname="tests.test_dump.DumpTestCase" name="test_repr" time="0.002" timestamp="2023-11-20T21:47:13" file="tests/test_dump.py" line="322">
+			<skipped type="skip" message="Only for Python 2"/>
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_unparse.UnparseTestCase-20231120214712" tests="47" file="tests/test_unparse.py" time="0.274" timestamp="2023-11-20T21:47:13" failures="0" errors="0" skipped="4">
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_annotations" time="0.012" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="330"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_comp_and_gen_in_async_function" time="0.010" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="355"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_comprehension" time="0.007" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="359"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_for" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="417"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_function_def" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="413"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_generator_expression" time="0.006" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="365"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_with" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="421"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_async_with_as" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="425"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_bytes" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="293"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_chained_comparisons" time="0.006" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="260"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_class_decorators" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="369"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_class_definition" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="373"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_complex_f_string" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="326"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_del_statement" time="0.003" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="198"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_dict_comprehension" time="0.003" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="346"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_dict_with_unpacking" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="350"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_elifs" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="376"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_files" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="182"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_for_else" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="205"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_formatted_value" time="0.008" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="297"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_function_arguments" time="0.020" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="264"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_huge_float" time="0.007" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="222"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_imaginary_literals" time="0.006" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="238"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_import_many" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="282"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_joined_str" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="304"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_lambda_parentheses" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="257"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_min_int30" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="234"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_negative_zero" time="0.017" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="247"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_nonlocal" time="0.006" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="286"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_parser_modes" time="0.007" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="194"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_raise_from" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="290"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_relative_import" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="279"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_set_comprehension" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="342"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_set_literal" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="338"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_shifts" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="201"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_starred_assignment" time="0.007" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="384"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_try_except_finally" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="380"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_unary_parens" time="0.009" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="211"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_variable_annotation" time="0.013" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="391"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_while_else" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="208"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_with_as" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="405"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_with_simple" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="402"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_with_two_items" time="0.005" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="409"/>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_integer_parens" time="0.002" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="219">
+			<skipped type="skip" message="Only works for Python &lt; 3.6"/>
+		</testcase>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_joined_str_361" time="0.004" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="310">
+			<skipped type="skip" message="Only supported on 3.6.0"/>
+		</testcase>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_min_int27" time="0.003" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="229">
+			<skipped type="skip" message="Only works for Python 2"/>
+		</testcase>
+		<testcase classname="tests.test_unparse.UnparseTestCase" name="test_repr" time="0.002" timestamp="2023-11-20T21:47:13" file="tests/test_unparse.py" line="322">
+			<skipped type="skip" message="Only for Python 2"/>
+		</testcase>
+	</testsuite>
+</testsuites>

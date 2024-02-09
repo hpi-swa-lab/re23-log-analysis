@@ -1,0 +1,519 @@
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+graalpylibtest-unit-test-tests create: /workdir/GitPython-3.1.29/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements-dev.txt, -rrequirements.txt, -rdoc/requirements.txt, -rgit/ext/gitdb/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/GitPython-3.1.29/.tox/.tmp/package/1/GitPython-3.1.29.tar.gz
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,Babel==2.13.1,black==23.11.0,certifi==2023.11.17,charset-normalizer==3.1.0,classify-imports==4.2.0,click==8.1.7,coverage==7.3.2,ddt==1.7.0,distlib==0.3.7,docutils==0.17.1,exceptiongroup==1.2.0,filelock==3.13.1,flake8==6.1.0,flake8-bugbear==23.9.16,flake8-comprehensions==3.14.0,flake8-type-checking==2.5.1,flake8-typing-imports==1.15.0,gitdb==4.0.11,GitPython @ file:///workdir/GitPython-3.1.29/.tox/.tmp/package/1/GitPython-3.1.29.tar.gz,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,icdiff==2.0.7,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,mypy==1.7.0,mypy-extensions==1.0.0,packaging==23.2,pathspec==0.11.2,platformdirs==4.0.0,pluggy==1.3.0,pprintpp==0.4.0,py==1.11.0,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-icdiff==0.8,pytest-sugar==0.9.7,requests==2.31.0,six==1.16.0,smmap==5.0.1,snowballstemmer==2.2.0,Sphinx==4.3.0,sphinx-autodoc-typehints==1.17.1,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.4,sphinxcontrib-devhelp==1.0.2,sphinxcontrib-htmlhelp==2.0.1,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.3,sphinxcontrib-serializinghtml==1.1.5,termcolor==2.3.0,tomli==2.0.1,tox==3.28.0,typing_extensions==4.8.0,urllib3==2.1.0,virtualenv==20.24.7
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2487579547'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/GitPython/3.1.29/1/graalpy-test-results.xml
+Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.7)
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/GitPython-3.1.29
+configfile: pyproject.toml
+testpaths: test
+plugins: icdiff-0.8, sugar-0.9.7, cov-4.1.0
+collecting ... collected 453 items
+
+ test/test_actor.py::TestActor.test_from_string_should_handle_just_name ✓0%           
+ test/test_actor.py::TestActor.test_from_string_should_separate_name_and_email ✓0% ▏         
+ test/test_actor.py::TestActor.test_should_display_representation ✓1% ▏         
+ test/test_actor.py::TestActor.test_str_should_alias_name ✓        1% ▏         
+
+―――――――――――――――――――――――――― TestBase.test_add_unicode ―――――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/lib/helper.py", line 144, in repo_creator
+    rw_repo.head.reference.checkout()
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '9a4b1d4d11eee3c5362a4152216376e634bd14cf'
+
+ test/test_base.py::TestBase.test_add_unicode ⨯                    1% ▎         
+ test/test_base.py::TestBase.test_base_object ✓                    1% ▎         
+ test/test_base.py::TestBase.test_get_object_type_by_name ✓        2% ▎         
+
+――――――――――――――――――――――― TestBase.test_object_resolution ――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/test_base.py", line 95, in test_object_resolution
+    self.assertEqual(self.rorepo.head.reference.object, self.rorepo.active_branch.object)
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '19aaa74aafc06663644d634f33bb8af871d58536'
+
+ test/test_base.py::TestBase.test_object_resolution ⨯              2% ▎         
+ test/test_base.py::TestBase.test_with_bare_rw_repo ✓              2% ▎         
+
+――――――――――――――――――― TestBase.test_with_rw_remote_and_rw_repo ―――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 284, in _get_reference
+    object = object.object  # @ReservedAssignment
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '9a4b1d4d11eee3c5362a4152216376e634bd14cf'
+
+ test/test_base.py::TestBase.test_with_rw_remote_and_rw_repo ⨯     2% ▎         
+
+―――――――――――――――――――――――――― TestBase.test_with_rw_repo ――――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/lib/helper.py", line 144, in repo_creator
+    rw_repo.head.reference.checkout()
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '9a4b1d4d11eee3c5362a4152216376e634bd14cf'
+
+ test/test_base.py::TestBase.test_with_rw_repo ⨯                   2% ▎         
+ test/test_blob.py::TestBlob.test_mime_type_should_return_mime_type_for_known_types ✓3% ▍         
+ test/test_blob.py::TestBlob.test_mime_type_should_return_text_plain_for_unknown_types ✓3% ▍         
+ test/test_blob.py::TestBlob.test_nodict ✓                         3% ▍         
+ test/test_blob_filter.py::test_blob_filter[paths0-path0-True] ✓   3% ▍         
+ test/test_blob_filter.py::test_blob_filter[paths1-path1-True] ✓   4% ▍         
+ test/test_blob_filter.py::test_blob_filter[paths2-path2-False] ✓  4% ▍         
+ test/test_blob_filter.py::test_blob_filter[paths3-path3-True] ✓   4% ▌         
+ test/test_clone.py::TestClone.test_checkout_in_non_empty_dir ✓    4% ▌         
+ test/test_commit.py::TestCommit.test_ambiguous_arg_iteration ✓    4% ▌         
+ test/test_commit.py::TestCommit.test_bake ✓                       5% ▌         
+ test/test_commit.py::TestCommit.test_commit_co_authors ✓          5% ▌         
+ test/test_commit.py::TestCommit.test_count ✓                      5% ▌         
+ test/test_commit.py::TestCommit.test_datetimes ✓                  5% ▌         
+ test/test_commit.py::TestCommit.test_equality ✓                   6% ▋         
+ test/test_commit.py::TestCommit.test_gpgsig ✓                     6% ▋         
+ test/test_commit.py::TestCommit.test_invalid_commit ✓             6% ▋         
+ test/test_commit.py::TestCommit.test_iter_items ✓                 6% ▋         
+ test/test_commit.py::TestCommit.test_iter_parents ✓               6% ▋         
+
+―――――――――――――――――――――――――― TestCommit.test_iteration ―――――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/cmd.py", line 591, in wait
+    # assure we don't try to read past our limit
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/test_commit.py", line 242, in test_iteration
+    less_ltd_commits = list(Commit.iter_items(self.rorepo, "master", paths=("CHANGES", "AUTHORS")))
+  File "/workdir/GitPython-3.1.29/git/objects/commit.py", line 426, in _iter_from_process_or_stream
+    finalize_process(proc_or_stream)
+  File "/workdir/GitPython-3.1.29/git/util.py", line 419, in finalize_process
+    proc.wait(**kwargs)
+  File "/workdir/GitPython-3.1.29/git/cmd.py", line 559, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git rev-list master -- CHANGES AUTHORS
+  stderr: 'fatal: bad revision 'master'
+'
+
+ test/test_commit.py::TestCommit.test_iteration ⨯                  7% ▋         
+ test/test_commit.py::TestCommit.test_list ✓                       7% ▊         
+ test/test_commit.py::TestCommit.test_name_rev ✓                   7% ▊         
+ test/test_commit.py::TestCommit.test_replace_invalid_attribute ✓  7% ▊         
+ test/test_commit.py::TestCommit.test_replace_new_sha ✓            8% ▊         
+ test/test_commit.py::TestCommit.test_replace_no_changes ✓         8% ▊         
+ test/test_commit.py::TestCommit.test_repr ✓                       8% ▊         
+ test/test_commit.py::TestCommit.test_rev_list_bisect_all ✓        8% ▊         
+ test/test_commit.py::TestCommit.test_serialization ✓              8% ▉         
+ test/test_commit.py::TestCommit.test_serialization_unicode_support ✓9% ▉         
+ test/test_commit.py::TestCommit.test_stats ✓                      9% ▉         
+ test/test_commit.py::TestCommit.test_str ✓                        9% ▉         
+
+――――――――――――――――――――――――――― TestCommit.test_trailers ―――――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/repo/fun.py", line 591, in name_to_object
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/test_commit.py", line 482, in test_trailers
+    commit = self.rorepo.commit("master")
+  File "/workdir/GitPython-3.1.29/git/repo/base.py", line 590, in commit
+    return self.rev_parse(str(rev) + "^0")
+  File "/workdir/GitPython-3.1.29/git/repo/fun.py", line 249, in rev_parse
+    obj = cast(Commit_ish, name_to_object(repo, rev[:start]))
+  File "/workdir/GitPython-3.1.29/git/repo/fun.py", line 183, in name_to_object
+    raise BadName(name)
+gitdb.exc.BadName: Ref 'master' did not resolve to an object
+
+ test/test_commit.py::TestCommit.test_trailers ⨯                   9% ▉         
+ test/test_commit.py::TestCommit.test_traversal ✓                  9% ▉         
+ test/test_commit.py::TestCommit.test_unicode_actor ✓             10% █         
+ test/test_config.py::TestBase.test_add_to_multiple ✓             10% █         
+ test/test_config.py::TestBase.test_base ✓                        10% █         
+ test/test_config.py::TestBase.test_complex_aliases ✓             10% █▏        
+ test/test_config.py::TestBase.test_conditional_includes_from_branch_name ✓11% █▏        
+ test/test_config.py::TestBase.test_conditional_includes_from_branch_name_error ✓11% █▏        
+ test/test_config.py::TestBase.test_conditional_includes_from_git_dir ✓11% █▏        
+ test/test_config.py::TestBase.test_config_include ✓              11% █▎        
+ test/test_config.py::TestBase.test_empty_config_value ✓          11% █▎        
+ test/test_config.py::TestBase.test_includes_order s              12% █▎        
+ test/test_config.py::TestBase.test_lock_reentry ✓                12% █▎        
+ test/test_config.py::TestBase.test_multi_line_config ✓           12% █▎        
+ test/test_config.py::TestBase.test_multiple_to_single ✓          12% █▎        
+ test/test_config.py::TestBase.test_multiple_values ✓             13% █▍        
+ test/test_config.py::TestBase.test_multiple_values_rename ✓      13% █▍        
+ test/test_config.py::TestBase.test_read_write ✓                  13% █▍        
+ test/test_config.py::TestBase.test_rename ✓                      13% █▍        
+ test/test_config.py::TestBase.test_setlast ✓                     13% █▍        
+ test/test_config.py::TestBase.test_single_to_multiple ✓          14% █▍        
+ test/test_db.py::TestDB.test_base ✓                              14% █▍        
+ test/test_diff.py::TestDiff.test_binary_diff_1 ✓                 14% █▌        
+ test/test_diff.py::TestDiff.test_binary_diff_2 ✓                 14% █▌        
+ test/test_diff.py::TestDiff.test_diff_file_with_colon ✓          15% █▌        
+ test/test_diff.py::TestDiff.test_diff_index ✓                    15% █▌        
+ test/test_diff.py::TestDiff.test_diff_index_raw_format ✓         15% █▌        
+ test/test_diff.py::TestDiff.test_diff_initial_commit ✓           15% █▌        
+ test/test_diff.py::TestDiff.test_diff_interface ✓                15% █▋        
+ test/test_diff.py::TestDiff.test_diff_of_modified_files_not_added_to_the_index ✓16% █▋        
+ test/test_diff.py::TestDiff.test_diff_patch_format ✓             16% █▋        
+ test/test_diff.py::TestDiff.test_diff_submodule ✓                16% █▋        
+ test/test_diff.py::TestDiff.test_diff_unsafe_paths ✓             16% █▋        
+ test/test_diff.py::TestDiff.test_diff_with_change_in_type ✓      17% █▋        
+ test/test_diff.py::TestDiff.test_diff_with_copied_file ✓         17% █▋        
+ test/test_diff.py::TestDiff.test_diff_with_rename ✓              17% █▊        
+ test/test_diff.py::TestDiff.test_diff_with_spaces ✓              17% █▊        
+ test/test_diff.py::TestDiff.test_diff_with_staged_file ✓         17% █▊        
+ test/test_diff.py::TestDiff.test_empty_diff ✓                    18% █▊        
+ test/test_diff.py::TestDiff.test_list_from_string_new_mode ✓     18% █▊        
+ test/test_docs.py::Tutorials.test_add_file_and_commit ✓          18% █▊        
+
+――――――――――――――――――――――― Tutorials.test_init_repo_object ――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 98, in _get_reference
+    :return:
+  File "/workdir/GitPython-3.1.29/test/test_docs.py", line 78, in test_init_repo_object
+    repo.head.ref,
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '19aaa74aafc06663644d634f33bb8af871d58536'
+
+ test/test_docs.py::Tutorials.test_init_repo_object ⨯             18% █▉        
+ test/test_docs.py::Tutorials.test_references_and_objects ✓       19% █▉        
+ test/test_docs.py::Tutorials.test_submodules ✓                   19% █▉        
+ test/test_exc.py::TExc.test_CommandError_unicode_001____cmd______None__None___None_ ✓19% █▉        
+ test/test_exc.py::TExc.test_CommandError_unicode_002____cmd______None__None____steram__ ✓19% █▉        
+ test/test_exc.py::TExc.test_CommandError_unicode_003____cmd______None__None____ομορφο_stream__ ✓19% █▉        
+ test/test_exc.py::TExc.test_CommandError_unicode_004____cmd______7___exit_code_7_____None_ ✓20% ██        
+ test/test_exc.py::TExc.test_CommandError_unicode_005____cmd______7___exit_code_7______steram__ ✓20% ██        
+ test/test_exc.py::TExc.test_CommandError_unicode_006____cmd______7___exit_code_7______ομορφο_stream__ ✓20% ██        
+ test/test_exc.py::TExc.test_CommandError_unicode_007____cmd_______Some_string_____Some_string_____None_ ✓20% ██        
+ test/test_exc.py::TExc.test_CommandError_unicode_008____cmd_______Some_string_____Some_string______steram__ ✓21% ██▏       
+ test/test_exc.py::TExc.test_CommandError_unicode_009____cmd_______Some_string_____Some_string______ομορφο_stream__ ✓21% ██▏       
+ test/test_exc.py::TExc.test_CommandError_unicode_010____cmd_______παλιο_string_____παλιο_string_____None_ ✓21% ██▏       
+ test/test_exc.py::TExc.test_CommandError_unicode_011____cmd_______παλιο_string_____παλιο_string______steram__ ✓21% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_012____cmd_______παλιο_string_____παλιο_string______ομορφο_stream__ ✓21% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_013 ✓           22% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_014 ✓           22% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_015 ✓           22% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_016 ✓           22% ██▎       
+ test/test_exc.py::TExc.test_CommandError_unicode_017 ✓           23% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_018 ✓           23% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_019 ✓           23% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_020 ✓           23% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_021 ✓           23% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_022____θνιψοδε______None__None___None_ ✓24% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_023____θνιψοδε______None__None____steram__ ✓24% ██▍       
+ test/test_exc.py::TExc.test_CommandError_unicode_024____θνιψοδε______None__None____ομορφο_stream__ ✓24% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_025____θνιψοδε______7___exit_code_7_____None_ ✓24% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_026____θνιψοδε______7___exit_code_7______steram__ ✓25% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_027____θνιψοδε______7___exit_code_7______ομορφο_stream__ ✓25% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_028____θνιψοδε_______Some_string_____Some_string_____None_ ✓25% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_029____θνιψοδε_______Some_string_____Some_string______steram__ ✓25% ██▌       
+ test/test_exc.py::TExc.test_CommandError_unicode_030____θνιψοδε_______Some_string_____Some_string______ομορφο_stream__ ✓25% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_031____θνιψοδε_______παλιο_string_____παλιο_string_____None_ ✓26% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_032____θνιψοδε_______παλιο_string_____παλιο_string______steram__ ✓26% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_033____θνιψοδε_______παλιο_string_____παλιο_string______ομορφο_stream__ ✓26% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_034 ✓           26% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_035 ✓           26% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_036 ✓           27% ██▋       
+ test/test_exc.py::TExc.test_CommandError_unicode_037 ✓           27% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_038 ✓           27% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_039 ✓           27% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_040 ✓           28% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_041 ✓           28% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_042 ✓           28% ██▊       
+ test/test_exc.py::TExc.test_CommandError_unicode_043____θνιψοδε____normal____argvs_____None__None___None_ ✓28% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_044____θνιψοδε____normal____argvs_____None__None____steram__ ✓28% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_045____θνιψοδε____normal____argvs_____None__None____ομορφο_stream__ ✓29% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_046____θνιψοδε____normal____argvs_____7___exit_code_7_____None_ ✓29% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_047____θνιψοδε____normal____argvs_____7___exit_code_7______steram__ ✓29% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_048____θνιψοδε____normal____argvs_____7___exit_code_7______ομορφο_stream__ ✓29% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_049____θνιψοδε____normal____argvs______Some_string_____Some_string_____None_ ✓30% ██▉       
+ test/test_exc.py::TExc.test_CommandError_unicode_050____θνιψοδε____normal____argvs______Some_string_____Some_string______steram__ ✓30% ███       
+ test/test_exc.py::TExc.test_CommandError_unicode_051____θνιψοδε____normal____argvs______Some_string_____Some_string______ομορφο_stream__ ✓30% ███       
+ test/test_exc.py::TExc.test_CommandError_unicode_052____θνιψοδε____normal____argvs______παλιο_string_____παλιο_string_____None_ ✓30% ███       
+ test/test_exc.py::TExc.test_CommandError_unicode_053____θνιψοδε____normal____argvs______παλιο_string_____παλιο_string______steram__ ✓30% ███▏      
+ test/test_exc.py::TExc.test_CommandError_unicode_054____θνιψοδε____normal____argvs______παλιο_string_____παλιο_string______ομορφο_stream__ ✓31% ███▏      
+ test/test_exc.py::TExc.test_CommandError_unicode_055 ✓           31% ███▏      
+ test/test_exc.py::TExc.test_CommandError_unicode_056 ✓           31% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_057 ✓           31% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_058 ✓           32% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_059 ✓           32% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_060 ✓           32% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_061 ✓           32% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_062 ✓           32% ███▎      
+ test/test_exc.py::TExc.test_CommandError_unicode_063 ✓           33% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_064____cmd____ελληνικα____args_____None__None___None_ ✓33% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_065____cmd____ελληνικα____args_____None__None____steram__ ✓33% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_066____cmd____ελληνικα____args_____None__None____ομορφο_stream__ ✓33% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_067____cmd____ελληνικα____args_____7___exit_code_7_____None_ ✓34% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_068____cmd____ελληνικα____args_____7___exit_code_7______steram__ ✓34% ███▍      
+ test/test_exc.py::TExc.test_CommandError_unicode_069____cmd____ελληνικα____args_____7___exit_code_7______ομορφο_stream__ ✓34% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_070____cmd____ελληνικα____args______Some_string_____Some_string_____None_ ✓34% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_071____cmd____ελληνικα____args______Some_string_____Some_string______steram__ ✓34% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_072____cmd____ελληνικα____args______Some_string_____Some_string______ομορφο_stream__ ✓35% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_073____cmd____ελληνικα____args______παλιο_string_____παλιο_string_____None_ ✓35% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_074____cmd____ελληνικα____args______παλιο_string_____παλιο_string______steram__ ✓35% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_075____cmd____ελληνικα____args______παλιο_string_____παλιο_string______ομορφο_stream__ ✓35% ███▌      
+ test/test_exc.py::TExc.test_CommandError_unicode_076 ✓           36% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_077 ✓           36% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_078 ✓           36% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_079 ✓           36% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_080 ✓           36% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_081 ✓           37% ███▋      
+ test/test_exc.py::TExc.test_CommandError_unicode_082 ✓           37% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_083 ✓           37% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_084 ✓           37% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_085____θνιψοδε____κι____αλλα____strange____args_____None__None___None_ ✓38% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_086____θνιψοδε____κι____αλλα____strange____args_____None__None____steram__ ✓38% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_087____θνιψοδε____κι____αλλα____strange____args_____None__None____ομορφο_stream__ ✓38% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_088____θνιψοδε____κι____αλλα____strange____args_____7___exit_code_7_____None_ ✓38% ███▊      
+ test/test_exc.py::TExc.test_CommandError_unicode_089____θνιψοδε____κι____αλλα____strange____args_____7___exit_code_7______steram__ ✓38% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_090____θνιψοδε____κι____αλλα____strange____args_____7___exit_code_7______ομορφο_stream__ ✓39% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_091____θνιψοδε____κι____αλλα____strange____args______Some_string_____Some_string_____None_ ✓39% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_092____θνιψοδε____κι____αλλα____strange____args______Some_string_____Some_string______steram__ ✓39% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_093____θνιψοδε____κι____αλλα____strange____args______Some_string_____Some_string______ομορφο_stream__ ✓39% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_094____θνιψοδε____κι____αλλα____strange____args______παλιο_string_____παλιο_string_____None_ ✓40% ███▉      
+ test/test_exc.py::TExc.test_CommandError_unicode_095____θνιψοδε____κι____αλλα____strange____args______παλιο_string_____παλιο_string______steram__ ✓40% ████      
+ test/test_exc.py::TExc.test_CommandError_unicode_096____θνιψοδε____κι____αλλα____strange____args______παλιο_string_____παλιο_string______ομορφο_stream__ ✓40% ████      
+ test/test_exc.py::TExc.test_CommandError_unicode_097 ✓           40% ████      
+ test/test_exc.py::TExc.test_CommandError_unicode_098 ✓           40% ████▏     
+ test/test_exc.py::TExc.test_CommandError_unicode_099 ✓           41% ████▏     
+ test/test_exc.py::TExc.test_CommandError_unicode_100 ✓           41% ████▏     
+ test/test_exc.py::TExc.test_CommandError_unicode_101 ✓           41% ████▏     
+ test/test_exc.py::TExc.test_CommandError_unicode_102 ✓           41% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_103 ✓           42% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_104 ✓           42% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_105 ✓           42% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_106____θνιψοδε____κι____αλλα____non_unicode____args_____None__None___None_ ✓42% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_107____θνιψοδε____κι____αλλα____non_unicode____args_____None__None____steram__ ✓42% ████▎     
+ test/test_exc.py::TExc.test_CommandError_unicode_108____θνιψοδε____κι____αλλα____non_unicode____args_____None__None____ομορφο_stream__ ✓43% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_109____θνιψοδε____κι____αλλα____non_unicode____args_____7___exit_code_7_____None_ ✓43% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_110____θνιψοδε____κι____αλλα____non_unicode____args_____7___exit_code_7______steram__ ✓43% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_111____θνιψοδε____κι____αλλα____non_unicode____args_____7___exit_code_7______ομορφο_stream__ ✓43% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_112____θνιψοδε____κι____αλλα____non_unicode____args______Some_string_____Some_string_____None_ ✓43% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_113____θνιψοδε____κι____αλλα____non_unicode____args______Some_string_____Some_string______steram__ ✓44% ████▍     
+ test/test_exc.py::TExc.test_CommandError_unicode_114____θνιψοδε____κι____αλλα____non_unicode____args______Some_string_____Some_string______ομορφο_stream__ ✓44% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_115____θνιψοδε____κι____αλλα____non_unicode____args______παλιο_string_____παλιο_string_____None_ ✓44% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_116____θνιψοδε____κι____αλλα____non_unicode____args______παλιο_string_____παλιο_string______steram__ ✓44% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_117____θνιψοδε____κι____αλλα____non_unicode____args______παλιο_string_____παλιο_string______ομορφο_stream__ ✓45% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_118 ✓           45% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_119 ✓           45% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_120 ✓           45% ████▌     
+ test/test_exc.py::TExc.test_CommandError_unicode_121 ✓           45% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_122 ✓           46% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_123 ✓           46% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_124 ✓           46% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_125 ✓           46% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_126 ✓           47% ████▋     
+ test/test_exc.py::TExc.test_CommandError_unicode_127____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____None__None___None_ ✓47% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_128____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____None__None____steram__ ✓47% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_129____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____None__None____ομορφο_stream__ ✓47% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_130____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____7___exit_code_7_____None_ ✓47% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_131____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____7___exit_code_7______steram__ ✓48% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_132____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo_____7___exit_code_7______ομορφο_stream__ ✓48% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_133____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______Some_string_____Some_string_____None_ ✓48% ████▊     
+ test/test_exc.py::TExc.test_CommandError_unicode_134____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______Some_string_____Some_string______steram__ ✓48% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_135____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______Some_string_____Some_string______ομορφο_stream__ ✓49% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_136____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______παλιο_string_____παλιο_string_____None_ ✓49% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_137____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______παλιο_string_____παλιο_string______steram__ ✓49% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_138____git____clone_____v____https___fakeuser_fakepassword1234_fakerepo_example_com_testrepo______παλιο_string_____παλιο_string______ομορφο_stream__ ✓49% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_139 ✓           49% ████▉     
+ test/test_exc.py::TExc.test_CommandError_unicode_140 ✓           50% █████     
+ test/test_exc.py::TExc.test_CommandError_unicode_141 ✓           50% █████     
+ test/test_exc.py::TExc.test_CommandError_unicode_142 ✓           50% █████     
+ test/test_exc.py::TExc.test_CommandError_unicode_143 ✓           50% █████     
+ test/test_exc.py::TExc.test_CommandError_unicode_144 ✓           51% █████▏    
+ test/test_exc.py::TExc.test_CommandError_unicode_145 ✓           51% █████▏    
+ test/test_exc.py::TExc.test_CommandError_unicode_146 ✓           51% █████▏    
+ test/test_exc.py::TExc.test_CommandError_unicode_147 ✓           51% █████▎    
+ test/test_exc.py::TExc.test_ExceptionsHaveBaseClass ✓            51% █████▎    
+ test/test_exc.py::TExc.test_GitCommandError_1____cmd1____None_ ✓ 52% █████▎    
+ test/test_exc.py::TExc.test_GitCommandError_2____cmd1_____some_cause__ ✓52% █████▎    
+ test/test_exc.py::TExc.test_GitCommandError_3 ✓                  52% █████▎    
+ test/test_exc.py::TExc.test_GitCommandNotFound_1____cmd1____None_ ✓52% █████▎    
+ test/test_exc.py::TExc.test_GitCommandNotFound_2____cmd1_____some_cause__ ✓53% █████▍    
+ test/test_exc.py::TExc.test_GitCommandNotFound_3 ✓               53% █████▍    
+ test/test_exc.py::TExc.test_HookExecutionError_1____cmd1____None_ ✓53% █████▍    
+ test/test_exc.py::TExc.test_HookExecutionError_2____cmd1_____some_cause__ ✓53% █████▍    
+ test/test_exc.py::TExc.test_HookExecutionError_3 ✓               53% █████▍    
+ test/test_fun.py::TestFun.test_aggressive_tree_merge ✓           54% █████▍    
+ test/test_fun.py::TestFun.test_linked_worktree_traversal ✓       54% █████▍    
+ test/test_fun.py::TestFun.test_stat_mode_to_index_mode ✓         54% █████▌    
+
+――――――――――――――――――――――――― TestFun.test_three_way_merge ―――――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/lib/helper.py", line 144, in repo_creator
+    rw_repo.head.reference.checkout()
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '9a4b1d4d11eee3c5362a4152216376e634bd14cf'
+
+ test/test_fun.py::TestFun.test_three_way_merge ⨯                 54% █████▌    
+ test/test_fun.py::TestFun.test_tree_entries_from_data_with_failing_name_decode_py3 ✓55% █████▌    
+ test/test_fun.py::TestFun.test_tree_traversal ✓                  55% █████▌    
+ test/test_fun.py::TestFun.test_tree_traversal_single ✓           55% █████▌    
+ test/test_git.py::TestGit.test_call_process_calls_execute ✓      55% █████▌    
+ test/test_git.py::TestGit.test_call_unpack_args ✓                55% █████▋    
+ test/test_git.py::TestGit.test_call_unpack_args_unicode ✓        56% █████▋    
+ test/test_git.py::TestGit.test_change_to_transform_kwargs_does_not_break_command_options ✓56% █████▋    
+ test/test_git.py::TestGit.test_cmd_override ✓                    56% █████▋    
+ test/test_git.py::TestGit.test_env_vars_passed_to_git ✓          56% █████▋    
+ test/test_git.py::TestGit.test_environment ✓                     57% █████▋    
+ test/test_git.py::TestGit.test_handle_process_output ✓           57% █████▋    
+ test/test_git.py::TestGit.test_insert_after_kwarg_raises ✓       57% █████▊    
+ test/test_git.py::TestGit.test_it_accepts_environment_variables ✓57% █████▊    
+ test/test_git.py::TestGit.test_it_accepts_stdin ✓                57% █████▊    
+ test/test_git.py::TestGit.test_it_executes_git_to_shell_and_returns_result ✓58% █████▊    
+ test/test_git.py::TestGit.test_it_ignores_false_kwargs ✓         58% █████▊    
+ test/test_git.py::TestGit.test_it_raises_errors ✓                58% █████▊    
+ test/test_git.py::TestGit.test_it_raises_proper_exception_with_output_stream ✓58% █████▉    
+ test/test_git.py::TestGit.test_it_transforms_kwargs_into_git_command_arguments ✓58% █████▉    
+ test/test_git.py::TestGit.test_options_are_passed_to_git ✓       59% █████▉    
+ test/test_git.py::TestGit.test_persistent_cat_file_command ✓     59% █████▉    
+ test/test_git.py::TestGit.test_persistent_options ✓              59% █████▉    
+ test/test_git.py::TestGit.test_refresh ✓                         59% █████▉    
+ test/test_git.py::TestGit.test_single_char_git_options_are_passed_to_git ✓60% █████▉    
+ test/test_git.py::TestGit.test_version ✓                         60% ██████    
+ test/test_index.py::TestIndex.test__to_relative_path_at_root ✓   60% ██████    
+ test/test_index.py::TestIndex.test_add_a_file_with_wildcard_chars ✓60% ██████    
+ test/test_index.py::TestIndex.test_add_utf8P_path ✓              60% ██████▏   
+ test/test_index.py::TestIndex.test_commit_msg_hook_fail ✓        61% ██████▏   
+ test/test_index.py::TestIndex.test_commit_msg_hook_success ✓     61% ██████▏   
+
+―――――――――――――――――――――― TestIndex.test_compare_write_tree ―――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/lib/helper.py", line 144, in repo_creator
+    rw_repo.head.reference.checkout()
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '19aaa74aafc06663644d634f33bb8af871d58536'
+
+ test/test_index.py::TestIndex.test_compare_write_tree ⨯          61% ██████▎   
+
+―――――――――――――――――――――― TestIndex.test_index_add_pathlike ―――――――――――――――――――――――
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 591, in _get_reference
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/GitPython-3.1.29/test/lib/helper.py", line 144, in repo_creator
+    rw_repo.head.reference.checkout()
+  File "/workdir/GitPython-3.1.29/git/refs/symbolic.py", line 309, in _get_reference
+    raise TypeError("%s is a detached symbolic reference as it points to %r" % (self, sha))
+TypeError: HEAD is a detached symbolic reference as it points to '19aaa74aafc06663644d634f33bb8af871d58536'
+
+ test/test_index.py::TestIndex.test_index_add_pathlike ⨯          61% ██████▎   
+- generated xml file: /workdir/results/GitPython/3.1.29/1/graalpy-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-alpha-0 -----------
+Name                                Stmts   Miss  Cover
+-------------------------------------------------------
+git/__init__.py                        42      8    81%
+git/cmd.py                            554    154    72%
+git/compat.py                          52     21    60%
+git/config.py                         439     49    89%
+git/db.py                              27      1    96%
+git/diff.py                           272     11    96%
+git/exc.py                             64      9    86%
+git/index/__init__.py                   2      0   100%
+git/index/base.py                     492    232    53%
+git/index/fun.py                      186     32    83%
+git/index/typ.py                       76      8    89%
+git/index/util.py                      50      6    88%
+git/objects/__init__.py                13      0   100%
+git/objects/base.py                    91     11    88%
+git/objects/blob.py                    17      0   100%
+git/objects/commit.py                 299     44    85%
+git/objects/fun.py                    101      5    95%
+git/objects/submodule/__init__.py       0      0   100%
+git/objects/submodule/base.py         585    335    43%
+git/objects/submodule/root.py         137    109    20%
+git/objects/submodule/util.py          51     14    73%
+git/objects/tag.py                     47     12    74%
+git/objects/tree.py                   181     89    51%
+git/objects/util.py                   232     78    66%
+git/refs/__init__.py                    6      0   100%
+git/refs/head.py                       98     29    70%
+git/refs/log.py                       150     43    71%
+git/refs/reference.py                  55      3    95%
+git/refs/remote.py                     32     13    59%
+git/refs/symbolic.py                  338     98    71%
+git/refs/tag.py                        48     10    79%
+git/remote.py                         439    149    66%
+git/repo/__init__.py                    1      0   100%
+git/repo/base.py                      566    267    53%
+git/repo/fun.py                       201     60    70%
+git/types.py                           42      8    81%
+git/util.py                           542    173    68%
+-------------------------------------------------------
+TOTAL                                6528   2081    68%
+
+=========================== short test summary info ============================
+FAILED test/test_base.py::TestBase::test_add_unicode - TypeError: HEAD is a d...
+FAILED test/test_base.py::TestBase::test_object_resolution - TypeError: HEAD ...
+FAILED test/test_base.py::TestBase::test_with_rw_remote_and_rw_repo - TypeErr...
+FAILED test/test_base.py::TestBase::test_with_rw_repo - TypeError: HEAD is a ...
+FAILED test/test_commit.py::TestCommit::test_iteration - git.exc.GitCommandEr...
+FAILED test/test_commit.py::TestCommit::test_trailers - gitdb.exc.BadName: Re...
+FAILED test/test_docs.py::Tutorials::test_init_repo_object - TypeError: HEAD ...
+FAILED test/test_fun.py::TestFun::test_three_way_merge - TypeError: HEAD is a...
+FAILED test/test_index.py::TestIndex::test_compare_write_tree - TypeError: HE...
+FAILED test/test_index.py::TestIndex::test_index_add_pathlike - TypeError: HE...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 10 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Results (491.10s (0:08:11)):
+     267 passed
+      10 failed
+         - test/test_base.py:115 TestBase.test_add_unicode
+         - test/test_base.py:93 TestBase.test_object_resolution
+         - test/test_base.py:109 TestBase.test_with_rw_remote_and_rw_repo
+         - test/test_base.py:103 TestBase.test_with_rw_repo
+         - test/test_commit.py:227 TestCommit.test_iteration
+         - test/test_commit.py:464 TestCommit.test_trailers
+         - test/test_docs.py:28 Tutorials.test_init_repo_object
+         - test/test_fun.py:77 TestFun.test_three_way_merge
+         - test/test_index.py:787 TestIndex.test_compare_write_tree
+         - test/test_index.py:950 TestIndex.test_index_add_pathlike
+       1 skipped
+ERROR: InvocationError for command /workdir/GitPython-3.1.29/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/GitPython/3.1.29/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

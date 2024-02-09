@@ -1,0 +1,10 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/types-requests/2.28.11.5/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements-tests.txt
+	-rstubs/humanfriendly/@tests/requirements-stubtest.txt
+	-rstubs/tqdm/@tests/requirements-stubtest.txt
+	-rstubs/Pygments/@tests/requirements-stubtest.txt
+	-rstubs/google-cloud-ndb/@tests/requirements-stubtest.txt
+

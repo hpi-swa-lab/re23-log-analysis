@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="9" failures="0" skipped="0" tests="9" time="0.689" timestamp="2023-11-21T04:11:22.391107" hostname="b80581c01e0f"><testcase classname="" name="tests.test_filtering" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_filtering.py", line 34, in &lt;module&gt;
+    from .models import (
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.test_filters" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_filters.py", line 50, in &lt;module&gt;
+    from tests.models import Book, User
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.test_filterset" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_filterset.py", line 25, in &lt;module&gt;
+    from .models import (
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.test_forms" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_forms.py", line 7, in &lt;module&gt;
+    from .models import MANAGER, REGULAR, STATUS_CHOICES, Book, ManagerGroup, User
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.test_utils" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_utils.py", line 27, in &lt;module&gt;
+    from .models import Article, Book, Business, Company, HiredWorker, NetworkSetting, User
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.test_views" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/test_views.py", line 9, in &lt;module&gt;
+    from .models import Book
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.rest_framework.test_backends" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/rest_framework/test_backends.py", line 7, in &lt;module&gt;
+    from rest_framework import generics, serializers
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/generics.py", line 9, in &lt;module&gt;
+    from rest_framework import mixins, views
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/views.py", line 17, in &lt;module&gt;
+    from rest_framework.schemas import DefaultSchema
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/schemas/__init__.py", line 25, in &lt;module&gt;
+    from . import coreapi, openapi
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/schemas/openapi.py", line 15, in &lt;module&gt;
+    from rest_framework import (
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/renderers.py", line 52, in &lt;module&gt;
+    class JSONRenderer(BaseRenderer):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/renderers.py", line 59, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/settings.py", line 218, in __getattr__
+    val = self.user_settings[attr]
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/settings.py", line 209, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.rest_framework.test_filterset" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/rest_framework/test_filterset.py", line 11, in &lt;module&gt;
+    from ..models import Article, User
+  File "/workdir/django-filter-22.1/tests/models.py", line 42, in &lt;module&gt;
+    class User(models.Model):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/db/models/base.py", line 129, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase><testcase classname="" name="tests.rest_framework.test_integration" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/django-filter-22.1/tests/rest_framework/test_integration.py", line 8, in &lt;module&gt;
+    from rest_framework import generics, serializers, status
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/generics.py", line 9, in &lt;module&gt;
+    from rest_framework import mixins, views
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/views.py", line 17, in &lt;module&gt;
+    from rest_framework.schemas import DefaultSchema
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/schemas/__init__.py", line 25, in &lt;module&gt;
+    from . import coreapi, openapi
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/schemas/openapi.py", line 15, in &lt;module&gt;
+    from rest_framework import (
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/renderers.py", line 52, in &lt;module&gt;
+    class JSONRenderer(BaseRenderer):
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/renderers.py", line 59, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/settings.py", line 218, in __getattr__
+    val = self.user_settings[attr]
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/rest_framework/settings.py", line 209, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 102, in __getattr__
+    self._setup(name)
+  File "/workdir/django-filter-22.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase></testsuite></testsuites>

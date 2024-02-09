@@ -1,0 +1,74 @@
+GLOB sdist-make: /workdir/psycopg2-2.9.5/setup.py
+graalpylibtest-unit-test-tests create: /workdir/psycopg2-2.9.5/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rdoc/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/psycopg2-2.9.5/.tox/.tmp/package/1/psycopg2-2.9.5.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.12,Babel==2.9.1,certifi==2021.10.8,charset-normalizer==2.0.12,docutils==0.17.1,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.3,imagesize==1.3.0,importlib-metadata==4.11.3,iniconfig==2.0.0,Jinja2==3.1.1,MarkupSafe==2.1.1,mock==5.1.0,packaging==21.3,pluggy==1.3.0,psycopg2 @ file:///workdir/psycopg2-2.9.5/.tox/.tmp/package/1/psycopg2-2.9.5.zip,Pygments==2.11.2,pyparsing==3.0.7,pytest==7.4.3,pytz==2022.1,requests==2.27.1,snowballstemmer==2.2.0,Sphinx==4.4.0,sphinx-better-theme==0.1.5,sphinxcontrib-applehelp==1.0.2,sphinxcontrib-devhelp==1.0.2,sphinxcontrib-htmlhelp==2.0.0,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.3,sphinxcontrib-serializinghtml==1.1.5,tomli==2.0.1,urllib3==1.26.9,zipp==3.7.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2160600745'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/psycopg2/2.9.5/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/psycopg2-2.9.5/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/psycopg2-2.9.5
+collecting ... collected 767 items
+
+tests/test_async.py::AsyncTests::test_async_after_async FAILED           [  0%]
+tests/test_async.py::AsyncTests::test_async_callproc FAILED              [  0%]
+tests/test_async.py::AsyncTests::test_async_connection_error_message FAILED [  0%]
+tests/test_async.py::AsyncTests::test_async_cursor_gone FAILED           [  0%]
+tests/test_async.py::AsyncTests::test_async_dont_read_all FAILED         [  0%]
+tests/test_async.py::AsyncTests::test_async_executemany FAILED           [  0%]
+tests/test_async.py::AsyncTests::test_async_fetch_wrong_cursor FAILED    [  0%]
+tests/test_async.py::AsyncTests::test_async_iter FAILED                  [  1%]
+tests/test_async.py::AsyncTests::test_async_named_cursor FAILED          [  1%]
+tests/test_async.py::AsyncTests::test_async_scroll FAILED                [  1%]
+tests/test_async.py::AsyncTests::test_async_select FAILED                [  1%]
+tests/test_async.py::AsyncTests::test_async_subclass FAILED              [  1%]
+tests/test_async.py::AsyncTests::test_close FAILED                       [  1%]
+tests/test_async.py::AsyncTests::test_commit_while_async FAILED          [  1%]
+tests/test_async.py::AsyncTests::test_connection_setup FAILED            [  1%]
+tests/test_async.py::AsyncTests::test_copy_no_hang FAILED                [  2%]
+tests/test_async.py::AsyncTests::test_copy_while_async FAILED            [  2%]
+tests/test_async.py::AsyncTests::test_error FAILED                       [  2%]
+tests/test_async.py::AsyncTests::test_error_two_cursors FAILED           [  2%]
+tests/test_async.py::AsyncTests::test_fetch_after_async FAILED           [  2%]
+tests/test_async.py::AsyncTests::test_flush_on_write FAILED              [  2%]
+tests/test_async.py::AsyncTests::test_lobject_while_async FAILED         [  2%]
+tests/test_async.py::AsyncTests::test_non_block_after_notification FAILED [  2%]
+tests/test_async.py::AsyncTests::test_notices FAILED                     [  3%]
+tests/test_async.py::AsyncTests::test_notify FAILED                      [  3%]
+tests/test_async.py::AsyncTests::test_poll_conn_for_notification FAILED  [  3%]
+tests/test_async.py::AsyncTests::test_poll_noop FAILED                   [  3%]
+tests/test_async.py::AsyncTests::test_reset_while_async FAILED           [  3%]
+tests/test_async.py::AsyncTests::test_rollback_while_async FAILED        [  3%]
+tests/test_async.py::AsyncTests::test_scroll FAILED                      [  3%]
+tests/test_async.py::AsyncTests::test_set_parameters_while_async FAILED  [  4%]
+tests/test_async.py::AsyncTests::test_stop_on_first_error FAILED         [  4%]
+tests/test_async.py::AsyncTests::test_sync_poll FAILED                   [  4%]
+tests/test_async.py::test_suite PASSED                                   [  4%]
+tests/test_bugX000.py::DateTimeAllocationBugTestCase::test_date_time_allocation_bug PASSED [  4%]
+tests/test_bugX000.py::test_suite PASSED                                 [  4%]
+tests/test_bug_gc.py::StolenReferenceTestCase::test_stolen_reference_bug FAILED [  4%]
+tests/test_bug_gc.py::test_suite PASSED                                  [  4%]
+tests/test_cancel.py::CancelTests::test_async_cancel FAILED              [  5%]
+tests/test_cancel.py::CancelTests::test_cancel FAILED                    [  5%]
+tests/test_cancel.py::CancelTests::test_empty_cancel FAILED              [  5%]
+tests/test_cancel.py::test_suite PASSED                                  [  5%]
+tests/test_connection.py::ConnectionTests::test_cleanup_on_badconn_close FAILED [  5%]
+tests/test_connection.py::ConnectionTests::test_close_idempotent FAILED  [  5%]
+tests/test_connection.py::ConnectionTests::test_closed_attribute FAILED  [  5%]
+tests/test_connection.py::ConnectionTests::test_commit_concurrency FAILED [  5%]
+tests/test_connection.py::ConnectionTests::test_concurrent_execution FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_connect_cursor_factory FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_connect_no_string FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_connect_nonnormal_envvar FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_cursor_closed_attribute FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_cursor_factory FAILED    [  6%]
+tests/test_connection.py::ConnectionTests::test_cursor_factory_none FAILED [  6%]
+tests/test_connection.py::ConnectionTests::test_encoding_name FAILED     [  7%]
+tests/test_connection.py::ConnectionTests::test_failed_init_status FAILED [  7%]
+tests/test_connection.py::ConnectionTests::test_get_native_connection FAILED [  7%]
+tests/test_connection.py::ConnectionTests::test_multiprocess_close 
+********************************************************************************
+Timeout exceeded, sending SIGINT to process
+********************************************************************************
+*** Timed out after 3:00:00

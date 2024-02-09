@@ -1,0 +1,97 @@
+.tox create: /workdir/anyio-3.7.0/.tox/.tox
+.tox installdeps: tox >= 4.4.3
+cpythonlibtest-unit-test-tests: internal error
+Traceback (most recent call last):
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/session/cmd/run/single.py", line 46, in _evaluate
+    tox_env.setup()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/api.py", line 248, in setup
+    self._setup_with_env()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/runner.py", line 145, in _setup_with_env
+    self._setup_pkg()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/runner.py", line 168, in _setup_pkg
+    self._packages = self._build_packages()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/runner.py", line 119, in _build_packages
+    packages = package_env.perform_packaging(self.conf)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/package/pyproject.py", line 249, in perform_packaging
+    return w_env.perform_packaging(for_env)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/package/pyproject.py", line 251, in perform_packaging
+    self.setup()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/api.py", line 247, in setup
+    self._setup_env()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/package/pyproject.py", line 179, in _setup_env
+    super()._setup_env()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/package.py", line 58, in _setup_env
+    super()._setup_env()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/api.py", line 199, in _setup_env
+    self.ensure_python_env()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/api.py", line 203, in ensure_python_env
+    conf = self.python_cache()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/api.py", line 77, in python_cache
+    base = super().python_cache()
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/api.py", line 240, in python_cache
+    "version_info": list(self.base_python.version_info),
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 62, in __getattribute__
+    obj = object.__getattribute__(self, name)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/api.py", line 250, in base_python
+    self._base_python = self._get_python(base_pythons)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 45, in _func
+    return meth(*args, **kwargs)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/api.py", line 134, in _get_python
+    interpreter = self.creator.interpreter
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 62, in __getattribute__
+    obj = object.__getattribute__(self, name)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/api.py", line 126, in creator
+    return self.session.creator
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/package.py", line 62, in __getattribute__
+    obj = object.__getattribute__(self, name)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/tox/tox_env/python/virtual_env/api.py", line 107, in session
+    self._virtualenv_session = session_via_cli(env_dir, options=None, setup_logging=False, env=env)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/virtualenv/run/__init__.py", line 49, in session_via_cli
+    parser, elements = build_parser(args, options, setup_logging, env)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/virtualenv/run/__init__.py", line 83, in build_parser
+    SeederSelector(interpreter, parser),
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/virtualenv/run/plugin/seeders.py", line 9, in __init__
+    super().__init__(interpreter, parser, "seeder", possible)
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/virtualenv/run/plugin/base.py", line 40, in __init__
+    self.add_selector_arg_parse(name, list(self.possible))
+  File "/workdir/anyio-3.7.0/.tox/.tox/lib/python3.10/site-packages/virtualenv/run/plugin/seeders.py", line 15, in add_selector_arg_parse
+    default=self._get_default(),
+  File "/opt/graalpy/lib/graalpy23.1/modules/graalpy_virtualenv/graalpy.py", line 98, in _seeder_selector_get_default_override
+    return _get_default_orig(self)
+  File "/opt/graalpy/lib/graalpy23.1/modules/graalpy_virtualenv/graalpy.py", line 98, in _seeder_selector_get_default_override
+    return _get_default_orig(self)
+  File "/opt/graalpy/lib/graalpy23.1/modules/graalpy_virtualenv/graalpy.py", line 98, in _seeder_selector_get_default_override
+    return _get_default_orig(self)
+  [Previous line repeated 1 more time]
+TypeError: SeederSelector._get_default() takes 0 positional arguments but 1 was given
+  cpythonlibtest-unit-test-tests: FAIL code 2 (2.10 seconds)
+  evaluation failed :( (10.47 seconds)
+ERROR: java.lang.IllegalStateException: The language did not complete all polyglot threads but should have: [Thread[#121,Polyglot-python-2,5,GRAALPYTHON_THREADS]]
+org.graalvm.polyglot.PolyglotException: java.lang.IllegalStateException: The language did not complete all polyglot threads but should have: [Thread[#121,Polyglot-python-2,5,GRAALPYTHON_THREADS]]
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotLanguageContext.dispose(PolyglotLanguageContext.java:473)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextImpl.disposeContext(PolyglotContextImpl.java:3133)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextImpl.finishClose(PolyglotContextImpl.java:2757)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextImpl.closeImpl(PolyglotContextImpl.java:2666)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextImpl.closeAndMaybeWait(PolyglotContextImpl.java:1835)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextImpl.close(PolyglotContextImpl.java:1768)
+	at org.graalvm.truffle/com.oracle.truffle.polyglot.PolyglotContextDispatch.close(PolyglotContextDispatch.java:70)
+	at org.graalvm.polyglot/org.graalvm.polyglot.Context.close(Context.java:834)
+	at org.graalvm.polyglot/org.graalvm.polyglot.Context.close(Context.java:860)
+	at com.oracle.graal.python.shell.GraalPythonMain.launch(GraalPythonMain.java:727)
+	at org.graalvm.launcher.AbstractLanguageLauncher.launch(AbstractLanguageLauncher.java:296)
+	at org.graalvm.launcher.AbstractLanguageLauncher.launch(AbstractLanguageLauncher.java:121)
+	at org.graalvm.launcher.AbstractLanguageLauncher.runLauncher(AbstractLanguageLauncher.java:168)
+	Suppressed: Attached Guest Language Frames (0)
+Internal GraalVM error, please report at https://github.com/oracle/graal/issues/.

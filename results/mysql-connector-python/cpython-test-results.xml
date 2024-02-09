@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="1.501" timestamp="2023-11-22T08:25:29.136457" hostname="80ac3eb7f7f2"><testcase classname="" name="tests.test_django" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/test_django.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_django.py:104: in &lt;module&gt;
+    import django.db  # pylint: disable=W0611
+E   ModuleNotFoundError: No module named 'django'</error></testcase><testcase classname="" name="tests.cext.test_cext_connection" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/cext/test_cext_connection.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/cext/test_cext_connection.py:38: in &lt;module&gt;
+    from mysql.connector import cursor, cursor_cext, errors
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/cursor_cext.py:38: in &lt;module&gt;
+    from _mysql_connector import MySQLInterfaceError
+E   ModuleNotFoundError: No module named '_mysql_connector'</error></testcase><testcase classname="" name="tests.cext.test_cext_cursor" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/cext/test_cext_cursor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/connection_cext.py:50: in &lt;module&gt;
+    import _mysql_connector
+E   ModuleNotFoundError: No module named '_mysql_connector'
+
+The above exception was the direct cause of the following exception:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/cext/test_cext_cursor.py:51: in &lt;module&gt;
+    from mysql.connector.connection_cext import CMySQLConnection
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/connection_cext.py:66: in &lt;module&gt;
+    raise ImportError(
+E   ImportError: MySQL Connector/Python C Extension not available (No module named '_mysql_connector')</error></testcase></testsuite></testsuites>

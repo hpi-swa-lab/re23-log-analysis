@@ -1,0 +1,133 @@
+GLOB sdist-make: /workdir/sphinx-click-4.4.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/sphinx-click-4.4.0/.tox/.tmp/package/1/sphinx-click-4.4.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,click==8.1.7,docutils==0.20.1,exceptiongroup==1.2.0,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,requests==2.31.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-click @ file:///workdir/sphinx-click-4.4.0/.tox/.tmp/package/1/sphinx-click-4.4.0.zip#sha256=6fb725d2f9674589507cfbb6fa8af36450eec94d01315638f4adcfc7133448ef,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1852101395'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/sphinx-click/4.4.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/sphinx-click-4.4.0
+collecting ... collected 22 items
+
+tests/test_extension.py::test_basics FAILED                              [  4%]
+tests/test_extension.py::test_nested_full FAILED                         [  9%]
+tests/test_formatter.py::CommandTestCase::test_ansi_escape_sequences PASSED [ 13%]
+tests/test_formatter.py::CommandTestCase::test_basic_parameters PASSED   [ 18%]
+tests/test_formatter.py::CommandTestCase::test_defaults PASSED           [ 22%]
+tests/test_formatter.py::CommandTestCase::test_help_epilog PASSED        [ 27%]
+tests/test_formatter.py::CommandTestCase::test_hidden PASSED             [ 31%]
+tests/test_formatter.py::CommandTestCase::test_no_line_wrapping PASSED   [ 36%]
+tests/test_formatter.py::CommandTestCase::test_no_parameters PASSED      [ 40%]
+tests/test_formatter.py::CommandTestCase::test_no_truncation PASSED      [ 45%]
+tests/test_formatter.py::CommandTestCase::test_titles PASSED             [ 50%]
+tests/test_formatter.py::GroupTestCase::test_basic_parameters PASSED     [ 54%]
+tests/test_formatter.py::GroupTestCase::test_no_parameters PASSED        [ 59%]
+tests/test_formatter.py::NestedCommandsTestCase::test_nested_full PASSED [ 63%]
+tests/test_formatter.py::NestedCommandsTestCase::test_nested_none PASSED [ 68%]
+tests/test_formatter.py::NestedCommandsTestCase::test_nested_short PASSED [ 72%]
+tests/test_formatter.py::CommandFilterTestCase::test_no_commands PASSED  [ 77%]
+tests/test_formatter.py::CommandFilterTestCase::test_order_of_commands PASSED [ 81%]
+tests/test_formatter.py::CustomMultiCommandTestCase::test_basics PASSED  [ 86%]
+tests/test_formatter.py::CustomMultiCommandTestCase::test_hidden PASSED  [ 90%]
+tests/test_formatter.py::CommandCollectionTestCase::test_basics PASSED   [ 95%]
+tests/test_formatter.py::AutoEnvvarPrefixTestCase::test_basics PASSED    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_basics __________________________________
+Traceback (most recent call last):
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-click-4.4.0/tests/test_extension.py", line 9, in test_basics
+    app = make_app('xml', srcdir=srcdir)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+---------------------------- Captured stdout setup -----------------------------
+/tmp/pytest-of-tester/pytest-5/test_basics0/roots
+_______________________________ test_nested_full _______________________________
+Traceback (most recent call last):
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-click-4.4.0/tests/test_extension.py", line 53, in test_nested_full
+    app = make_app('xml', srcdir=srcdir)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+---------------------------- Captured stdout setup -----------------------------
+/tmp/pytest-of-tester/pytest-5/test_nested_full0/roots
+=============================== warnings summary ===============================
+tests/conftest.py:4
+  /workdir/sphinx-click-4.4.0/tests/conftest.py:4: RemovedInSphinx90Warning: 'sphinx.testing.path' is deprecated. Use 'os.path' or 'pathlib' instead.
+    from sphinx.testing import path
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/sphinx-click/4.4.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_extension.py::test_basics - AttributeError: 'path' object h...
+FAILED tests/test_extension.py::test_nested_full - AttributeError: 'path' obj...
+=================== 2 failed, 20 passed, 1 warning in 0.20s ====================
+ERROR: InvocationError for command /workdir/sphinx-click-4.4.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/sphinx-click/4.4.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

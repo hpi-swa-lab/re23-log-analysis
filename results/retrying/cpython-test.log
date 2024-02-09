@@ -1,0 +1,100 @@
+GLOB sdist-make: /workdir/retrying-1.3.4/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/retrying-1.3.4/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/retrying-1.3.4/.tox/.tmp/package/1/retrying-1.3.4.zip
+cpythonlibtest-unit-test-tests installed: lxml==4.9.3,mock==5.1.0,retrying @ file:///workdir/retrying-1.3.4/.tox/.tmp/package/1/retrying-1.3.4.zip#sha256=251ee393ba7003090eccf88ab3f7b95b45390b7f9ca87dae96e406a706f994e5,six==1.16.0,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='460882937'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/retrying-1.3.4/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/retrying/1.3.4/1/cpython-test-results.xml
+/workdir/retrying-1.3.4/test_retrying.py:464: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.assertTrue(TestBeforeAfterAttempts._attempt_number is 1)
+/workdir/retrying-1.3.4/test_retrying.py:481: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.assertTrue(TestBeforeAfterAttempts._attempt_number is 2)
+
+Running tests...
+----------------------------------------------------------------------
+...Hi there, I'm a NameError
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 271, in _retryable_test_with_exception_type_io_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 168, in go
+    raise IOError("Hi there, I'm an IOError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'NameError'>
+Hi there, I'm a NameError
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 308, in _retryable_test_with_exception_type_custom_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 224, in go
+    raise CustomError(derived_message)
+]
+.Hi there, I'm an IOError
+.RetryError[Attempts: 3, Value: None]
+..Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'NameError'>
+RetryError[Attempts: 1, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 261, in _retryable_test_with_exception_type_io_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 187, in go
+    raise NameError("Hi there, I'm a NameError")
+]
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 271, in _retryable_test_with_exception_type_io_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 168, in go
+    raise IOError("Hi there, I'm an IOError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'NameError'>
+RetryError[Attempts: 1, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 291, in _retryable_test_with_exception_type_custom_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 187, in go
+    raise NameError("Hi there, I'm a NameError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 308, in _retryable_test_with_exception_type_custom_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 224, in go
+    raise CustomError(derived_message)
+]
+................
+----------------------------------------------------------------------
+Ran 23 tests in 0.471s
+
+OK
+
+Generating XML reports...
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

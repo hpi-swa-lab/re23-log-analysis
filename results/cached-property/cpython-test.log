@@ -1,0 +1,57 @@
+GLOB sdist-make: /workdir/cached-property-1.5.2/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/cached-property-1.5.2/.tox/.tmp/package/1/cached-property-1.5.2.zip
+cpythonlibtest-unit-test-tests installed: atomicwrites==1.4.1,attrs==23.1.0,cached-property @ file:///workdir/cached-property-1.5.2/.tox/.tmp/package/1/cached-property-1.5.2.zip#sha256=449a69a979298e0279bf2034c2877657f82b4a3474c5087cb0eb737fe7e6d1f6,coverage==4.4.2,freezegun==0.3.10,mock==5.1.0,more-itertools==10.1.0,pluggy==1.3.0,py==1.11.0,pytest==3.8.2,pytest-cov==2.6.0,python-dateutil==2.8.2,six==1.16.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1848749491'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/cached-property/1.5.2/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 939, in _find_spec
+AttributeError: 'AssertionRewritingHook' object has no attribute 'find_spec'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 8, in <module>
+    sys.exit(main())
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 58, in main
+    config = _prepareconfig(args, plugins)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 184, in _prepareconfig
+    return pluginmanager.hook.pytest_cmdline_parse(
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 130, in _multicall
+    teardown[0].send(outcome)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/helpconfig.py", line 89, in pytest_cmdline_parse
+    config = outcome.get_result()
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 653, in pytest_cmdline_parse
+    self.parse(args)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 825, in parse
+    self._preparse(args, addopts=addopts)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 777, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 398, in load_setuptools_entrypoints
+    plugin = ep.load()
+  File "/usr/local/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
+    module = import_module(match.group('module'))
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 941, in _find_spec
+  File "<frozen importlib._bootstrap>", line 915, in _find_spec_legacy
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 158, in find_module
+    source_stat, co = _rewrite_test(self.config, fn_pypath)
+  File "/workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 408, in _rewrite_test
+    co = compile(tree, fn.strpath, "exec", dont_inherit=True)
+TypeError: required field "lineno" missing from alias
+ERROR: InvocationError for command /workdir/cached-property-1.5.2/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/cached-property/1.5.2/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

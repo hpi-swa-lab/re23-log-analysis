@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/jsii/1.72.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rgh-pages/requirements-dev.txt
+	-rpackages/jsii-pacmak/test/generated-code/requirements-dev.txt
+	-rpackages/jsii-pacmak/lib/targets/python/requirements-dev.txt
+	-rpackages/@jsii/python-runtime/requirements.txt
+

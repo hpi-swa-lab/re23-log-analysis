@@ -1,0 +1,38 @@
+GLOB sdist-make: /workdir/pydocstyle-6.1.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rrequirements/tests.txt, -rrequirements/runtime.txt, -rrequirements/test_env.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pydocstyle-6.1.1/.tox/.tmp/package/1/pydocstyle-6.1.1.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,appdirs==1.4.4,Babel==2.13.1,black==20.8b1,cachetools==5.3.2,certifi==2023.11.17,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,distlib==0.3.7,docutils==0.18.1,execnet==2.0.2,filelock==3.13.1,idna==3.4,imagesize==1.4.1,isort==5.4.2,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,mypy==0.782,mypy-extensions==0.4.4,packaging==23.2,pathspec==0.11.2,pep8==1.7.1,platformdirs==4.0.0,pluggy==1.3.0,py==1.11.0,pydocstyle @ file:///workdir/pydocstyle-6.1.1/.tox/.tmp/package/1/pydocstyle-6.1.1.zip#sha256=b31dc340126b909ae81fd635a8478541fb5d691b7562cfe57ad4259dfbef6213,Pygments==2.17.2,pyproject-api==1.6.1,pytest==3.0.2,pytest-cache==1.0,pytest-pep8==1.0.6,regex==2023.10.3,requests==2.31.0,six==1.16.0,snowballstemmer==1.2.1,Sphinx==1.6.2,sphinx-rtd-theme==1.2.1,sphinxcontrib-jquery==2.0.0,sphinxcontrib-serializinghtml==1.1.5,sphinxcontrib-websupport==1.2.4,toml==0.10.2,tomli==2.0.1,tox==4.11.3,typed-ast==1.4.3,typing_extensions==4.8.0,urllib3==2.1.0,virtualenv==20.24.7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2070586228'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pydocstyle/6.1.1/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 10, in <module>
+    from collections import MutableMapping as MappingMixin
+ImportError: cannot import name 'MutableMapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 407, in import_plugin
+    __import__(importspec)
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 12, in <module>
+    from UserDict import DictMixin as MappingMixin
+ModuleNotFoundError: No module named 'UserDict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 5, in <module>
+    from pytest import main
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 27, in <module>
+    _preloadplugins() # to populate pytest.* namespace so help(pytest) works
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 85, in _preloadplugins
+    _preinit.append(get_config())
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 94, in get_config
+    pluginmanager.import_plugin(spec)
+  File "/workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 414, in import_plugin
+    raise new_exc
+ImportError: Error importing plugin "main": No module named 'UserDict'
+ERROR: InvocationError for command /workdir/pydocstyle-6.1.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pydocstyle/6.1.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

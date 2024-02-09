@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="1.431" timestamp="2023-11-20T22:23:53.202988" hostname="b80581c01e0f"><testcase classname="" name="tests.test_dates" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/Babel-2.11.0/tests/test_dates.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_dates.py:17: in &lt;module&gt;
+    import freezegun
+E   ModuleNotFoundError: No module named 'freezegun'</error></testcase><testcase classname="" name="tests.messages.test_frontend" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/Babel-2.11.0/tests/messages/test_frontend.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/messages/test_frontend.py:14: in &lt;module&gt;
+    from freezegun import freeze_time
+E   ModuleNotFoundError: No module named 'freezegun'</error></testcase><testcase classname="" name="tests.messages.test_plurals" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/Babel-2.11.0/tests/messages/test_plurals.py", line 19, in &lt;module&gt;
+    (Locale('en'), 2, '(n != 1)'),
+  File "/workdir/Babel-2.11.0/babel/core.py", line 167, in __init__
+    raise UnknownLocaleError(identifier)
+babel.core.UnknownLocaleError: unknown locale 'en'</error></testcase></testsuite></testsuites>

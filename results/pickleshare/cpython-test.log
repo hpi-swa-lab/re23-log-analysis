@@ -1,0 +1,21 @@
+GLOB sdist-make: /workdir/pickleshare-0.7.5/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pickleshare-0.7.5/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pickleshare-0.7.5/.tox/.tmp/package/1/pickleshare-0.7.5.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pickleshare @ file:///workdir/pickleshare-0.7.5/.tox/.tmp/package/1/pickleshare-0.7.5.zip#sha256=3ee9bb1350f6531103fe35dec59838052a2397772cf98d75ce218ea34076e9d0,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1641212587'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pickleshare/0.7.5/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pickleshare-0.7.5/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pickleshare-0.7.5
+collecting ... collected 2 items
+
+test_pickleshare.py::test_pickleshare PASSED                             [ 50%]
+test_pickleshare.py::test_stress PASSED                                  [100%]
+
+- generated xml file: /workdir/results/pickleshare/0.7.5/1/cpython-test-results.xml -
+============================== 2 passed in 44.19s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

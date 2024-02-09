@@ -1,0 +1,14 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/celery/5.2.7/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rexamples/django/requirements.txt
+	-rrequirements/test-ci-default.txt
+	-rrequirements/security.txt
+	-rrequirements/default.txt
+	-rrequirements/pkgutils.txt
+	-rrequirements/test-ci-base.txt
+	-rrequirements/dev.txt
+	-rrequirements/test.txt
+	-rrequirements/test-integration.txt
+

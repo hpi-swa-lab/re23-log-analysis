@@ -1,0 +1,89 @@
+GLOB sdist-make: /workdir/cliff-4.3.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements.txt, -rdoc/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/cliff-4.3.0/.tox/.tmp/package/1/cliff-4.3.0.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,autopage==0.5.2,Babel==2.13.1,bandit==1.7.5,certifi==2023.11.17,charset-normalizer==3.1.0,cliff @ file:///workdir/cliff-4.3.0/.tox/.tmp/package/1/cliff-4.3.0.zip,cmd2==2.4.3,coverage==7.3.2,docutils==0.20.1,dulwich==0.21.6,exceptiongroup==1.1.3,extras==1.0.0,fixtures==4.1.0,gitdb==4.0.11,GitPython==3.1.40,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,iso8601==2.1.0,Jinja2==3.1.2,markdown-it-py==3.0.0,MarkupSafe==2.1.3,mdurl==0.1.2,mock==5.1.0,openstackdocstheme==3.2.0,packaging==23.2,pbr==6.0.0,pluggy==1.3.0,prettytable==3.9.0,Pygments==2.17.1,pyperclip==1.8.2,pytest==7.4.3,python-subunit==1.4.4,PyYAML==6.0.1,requests==2.31.0,rich==13.7.0,smmap==5.0.1,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,stestr==4.1.0,stevedore==5.1.0,testscenarios==0.5.0,testtools==2.7.1,tomli==2.0.1,tomlkit==0.12.3,urllib3==2.1.0,voluptuous==0.14.1,wcwidth==0.2.10,zipp==3.17.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3013899134'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/cliff/4.3.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/cliff-4.3.0
+collecting ... collected 201 items / 1 error
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting cliff/tests/test_interactive.py _______________
+Traceback (most recent call last):
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/cliff-4.3.0/cliff/tests/test_interactive.py", line 15, in <module>
+    import cmd2
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/cmd2/__init__.py", line 53, in <module>
+    from .cmd2 import Cmd
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/cmd2/cmd2.py", line 125, in <module>
+    from .rl_utils import (
+  File "/workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/cmd2/rl_utils.py", line 144, in <module>
+    if 'libedit' not in readline.__doc__:
+TypeError: 'NoneType' object is not iterable
+=============================== warnings summary ===============================
+cliff/tests/test_command.py:20
+  /workdir/cliff-4.3.0/cliff/tests/test_command.py:20: PytestCollectionWarning: cannot collect test class 'TestCommand' because it has a __init__ constructor (from: cliff/tests/test_command.py)
+    class TestCommand(command.Command):
+
+cliff/tests/test_command.py:58
+  /workdir/cliff-4.3.0/cliff/tests/test_command.py:58: PytestCollectionWarning: cannot collect test class 'TestCommandNoDocstring' because it has a __init__ constructor (from: cliff/tests/test_command.py)
+    class TestCommandNoDocstring(command.Command):
+
+cliff/tests/test_command_hooks.py:53
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:53: PytestCollectionWarning: cannot collect test class 'TestCommand' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestCommand(command.Command):
+
+cliff/tests/test_command_hooks.py:65
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:65: PytestCollectionWarning: cannot collect test class 'TestShowCommand' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestShowCommand(show.ShowOne):
+
+cliff/tests/test_command_hooks.py:73
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:73: PytestCollectionWarning: cannot collect test class 'TestListerCommand' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestListerCommand(lister.Lister):
+
+cliff/tests/test_command_hooks.py:81
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:81: PytestCollectionWarning: cannot collect test class 'TestHook' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestHook(hooks.CommandHook):
+
+cliff/tests/test_command_hooks.py:100
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:100: PytestCollectionWarning: cannot collect test class 'TestChangeHook' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestChangeHook(hooks.CommandHook):
+
+cliff/tests/test_command_hooks.py:123
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:123: PytestCollectionWarning: cannot collect test class 'TestDisplayChangeHook' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestDisplayChangeHook(hooks.CommandHook):
+
+cliff/tests/test_command_hooks.py:146
+  /workdir/cliff-4.3.0/cliff/tests/test_command_hooks.py:146: PytestCollectionWarning: cannot collect test class 'TestListerChangeHook' because it has a __init__ constructor (from: cliff/tests/test_command_hooks.py)
+    class TestListerChangeHook(hooks.CommandHook):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/cliff/4.3.0/1/graalpy-test-results.xml --
+=========================== short test summary info ============================
+ERROR cliff/tests/test_interactive.py - TypeError: 'NoneType' object is not i...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+========================= 9 warnings, 1 error in 4.18s =========================
+ERROR: InvocationError for command /workdir/cliff-4.3.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/cliff/4.3.0/1/graalpy-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

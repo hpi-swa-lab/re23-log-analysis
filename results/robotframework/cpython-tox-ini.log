@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/robotframework/6.0.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements-dev.txt
+	-ratest/requirements.txt
+	-ratest/requirements-run.txt
+	-rutest/requirements.txt
+

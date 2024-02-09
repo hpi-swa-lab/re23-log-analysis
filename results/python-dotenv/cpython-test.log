@@ -1,0 +1,477 @@
+GLOB sdist-make: /workdir/python-dotenv-0.21.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/python-dotenv-0.21.0/.tox/.tmp/package/1/python-dotenv-0.21.0.zip
+cpythonlibtest-unit-test-tests installed: asttokens==2.4.1,black==22.3.0,bump2version==1.0.1,bumpversion==0.6.0,cachetools==5.3.2,certifi==2023.11.17,cffi==1.16.0,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,coverage==7.3.2,cryptography==41.0.7,decorator==5.1.1,distlib==0.3.7,docutils==0.20.1,exceptiongroup==1.2.0,executing==2.0.1,filelock==3.13.1,flake8==6.1.0,idna==3.6,importlib-metadata==6.8.0,iniconfig==2.0.0,ipython==8.18.1,jaraco.classes==3.3.0,jedi==0.19.1,jeepney==0.8.0,keyring==24.3.0,markdown-it-py==3.0.0,matplotlib-inline==0.1.6,mccabe==0.7.0,mdurl==0.1.2,mock==5.1.0,more-itertools==10.1.0,mypy-extensions==1.0.0,nh3==0.2.14,packaging==23.2,parso==0.8.3,pathspec==0.11.2,pexpect==4.9.0,pkginfo==1.9.6,platformdirs==4.0.0,pluggy==1.3.0,prompt-toolkit==3.0.41,ptyprocess==0.7.0,pure-eval==0.2.2,pycodestyle==2.11.1,pycparser==2.21,pyflakes==3.1.0,Pygments==2.17.2,pyproject-api==1.6.1,pytest==7.4.3,pytest-cov==4.1.0,python-dotenv @ file:///workdir/python-dotenv-0.21.0/.tox/.tmp/package/1/python-dotenv-0.21.0.zip#sha256=e58624087eca4c850af8d0978a35344ea7e9aad60967ef87a66615d174576f9c,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,SecretStorage==3.3.3,sh==2.0.6,six==1.16.0,stack-data==0.6.3,tomli==2.0.1,tox==4.11.4,traitlets==5.14.0,twine==4.0.2,urllib3==2.1.0,virtualenv==20.24.7,wcwidth==0.2.12,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2964836582'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/python-dotenv/0.21.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/python-dotenv-0.21.0
+configfile: setup.cfg
+testpaths: tests
+plugins: cov-4.1.0
+collecting ... collected 147 items
+
+tests/test_cli.py::test_list[None-x='a b c'-x=a b c\n] PASSED            [  0%]
+tests/test_cli.py::test_list[simple-x='a b c'-x=a b c\n] PASSED          [  1%]
+tests/test_cli.py::test_list[simple-x='"a b c"'-x="a b c"\n] PASSED      [  2%]
+tests/test_cli.py::test_list[simple-x="'a b c'"-x='a b c'\n] PASSED      [  2%]
+tests/test_cli.py::test_list[json-x='a b c'-{\n  "x": "a b c"\n}\n] PASSED [  3%]
+tests/test_cli.py::test_list[shell-x='a b c'-x='a b c'\n] PASSED         [  4%]
+tests/test_cli.py::test_list[shell-x='"a b c"'-x='"a b c"'\n] PASSED     [  4%]
+tests/test_cli.py::test_list[shell-x="'a b c'"-x=''"'"'a b c'"'"''\n] PASSED [  5%]
+tests/test_cli.py::test_list[shell-x='a\nb\nc'-x='a\nb\nc'\n] PASSED     [  6%]
+tests/test_cli.py::test_list[export-x='a b c'-export x='a b c'\n] PASSED [  6%]
+tests/test_cli.py::test_list_non_existent_file PASSED                    [  7%]
+tests/test_cli.py::test_list_no_file PASSED                              [  8%]
+tests/test_cli.py::test_get_existing_value PASSED                        [  8%]
+tests/test_cli.py::test_get_non_existent_value PASSED                    [  9%]
+tests/test_cli.py::test_get_no_file PASSED                               [ 10%]
+tests/test_cli.py::test_unset_existing_value PASSED                      [ 10%]
+tests/test_cli.py::test_unset_non_existent_value PASSED                  [ 11%]
+tests/test_cli.py::test_set_quote_options[always-a-x-a='x'\n] PASSED     [ 12%]
+tests/test_cli.py::test_set_quote_options[never-a-x-a=x\n] PASSED        [ 12%]
+tests/test_cli.py::test_set_quote_options[auto-a-x-a=x\n] PASSED         [ 13%]
+tests/test_cli.py::test_set_quote_options[auto-a-x y-a='x y'\n] PASSED   [ 14%]
+tests/test_cli.py::test_set_quote_options[auto-a-$-a='$'\n] PASSED       [ 14%]
+tests/test_cli.py::test_set_export[.nx_file-true-a-x-export a='x'\n] PASSED [ 15%]
+tests/test_cli.py::test_set_export[.nx_file-false-a-x-a='x'\n] PASSED    [ 16%]
+tests/test_cli.py::test_set_non_existent_file PASSED                     [ 17%]
+tests/test_cli.py::test_set_no_file PASSED                               [ 17%]
+tests/test_cli.py::test_get_default_path FAILED                          [ 18%]
+tests/test_cli.py::test_run FAILED                                       [ 19%]
+tests/test_cli.py::test_run_with_existing_variable FAILED                [ 19%]
+tests/test_cli.py::test_run_with_existing_variable_not_overridden FAILED [ 20%]
+tests/test_cli.py::test_run_with_none_value FAILED                       [ 21%]
+tests/test_cli.py::test_run_with_other_env PASSED                        [ 21%]
+tests/test_cli.py::test_run_without_cmd PASSED                           [ 22%]
+tests/test_cli.py::test_run_with_invalid_cmd PASSED                      [ 23%]
+tests/test_cli.py::test_run_with_version PASSED                          [ 23%]
+tests/test_ipython.py::test_ipython_existing_variable_no_override PASSED [ 24%]
+tests/test_ipython.py::test_ipython_existing_variable_override PASSED    [ 25%]
+tests/test_ipython.py::test_ipython_new_variable PASSED                  [ 25%]
+tests/test_main.py::test_set_key_no_file PASSED                          [ 26%]
+tests/test_main.py::test_set_key[-a--expected0-a=''\n] PASSED            [ 27%]
+tests/test_main.py::test_set_key[-a-b-expected1-a='b'\n] PASSED          [ 27%]
+tests/test_main.py::test_set_key[-a-'b'-expected2-a='\\'b\\''\n] PASSED  [ 28%]
+tests/test_main.py::test_set_key[-a-"b"-expected3-a='"b"'\n] PASSED      [ 29%]
+tests/test_main.py::test_set_key[-a-b'c-expected4-a='b\\'c'\n] PASSED    [ 29%]
+tests/test_main.py::test_set_key[-a-b"c-expected5-a='b"c'\n] PASSED      [ 30%]
+tests/test_main.py::test_set_key[a=b-a-c-expected6-a='c'\n] PASSED       [ 31%]
+tests/test_main.py::test_set_key[a=b\n-a-c-expected7-a='c'\n] PASSED     [ 31%]
+tests/test_main.py::test_set_key[a=b\n\n-a-c-expected8-a='c'\n\n] PASSED [ 32%]
+tests/test_main.py::test_set_key[a=b\nc=d-a-e-expected9-a='e'\nc=d] PASSED [ 33%]
+tests/test_main.py::test_set_key[a=b\nc=d\ne=f-c-g-expected10-a=b\nc='g'\ne=f] PASSED [ 34%]
+tests/test_main.py::test_set_key[a=b\n-c-d-expected11-a=b\nc='d'\n] PASSED [ 34%]
+tests/test_main.py::test_set_key[a=b-c-d-expected12-a=b\nc='d'\n] PASSED [ 35%]
+tests/test_main.py::test_set_key_encoding PASSED                         [ 36%]
+tests/test_main.py::test_set_key_permission_error PASSED                 [ 36%]
+tests/test_main.py::test_get_key_no_file PASSED                          [ 37%]
+tests/test_main.py::test_get_key_not_found PASSED                        [ 38%]
+tests/test_main.py::test_get_key_ok PASSED                               [ 38%]
+tests/test_main.py::test_get_key_encoding PASSED                         [ 39%]
+tests/test_main.py::test_get_key_none PASSED                             [ 40%]
+tests/test_main.py::test_unset_with_value PASSED                         [ 40%]
+tests/test_main.py::test_unset_no_value PASSED                           [ 41%]
+tests/test_main.py::test_unset_encoding PASSED                           [ 42%]
+tests/test_main.py::test_unset_non_existent_file PASSED                  [ 42%]
+tests/test_main.py::test_find_dotenv_no_file_raise PASSED                [ 43%]
+tests/test_main.py::test_find_dotenv_no_file_no_raise PASSED             [ 44%]
+tests/test_main.py::test_find_dotenv_found PASSED                        [ 44%]
+tests/test_main.py::test_load_dotenv_existing_file PASSED                [ 45%]
+tests/test_main.py::test_load_dotenv_no_file_verbose PASSED              [ 46%]
+tests/test_main.py::test_load_dotenv_existing_variable_no_override PASSED [ 46%]
+tests/test_main.py::test_load_dotenv_existing_variable_override PASSED   [ 47%]
+tests/test_main.py::test_load_dotenv_redefine_var_used_in_file_no_override PASSED [ 48%]
+tests/test_main.py::test_load_dotenv_redefine_var_used_in_file_with_override PASSED [ 48%]
+tests/test_main.py::test_load_dotenv_string_io_utf_8 PASSED              [ 49%]
+tests/test_main.py::test_load_dotenv_file_stream PASSED                  [ 50%]
+tests/test_main.py::test_load_dotenv_in_current_dir PASSED               [ 51%]
+tests/test_main.py::test_dotenv_values_file PASSED                       [ 51%]
+tests/test_main.py::test_dotenv_values_string_io[env0-a=$b-False-expected0] PASSED [ 52%]
+tests/test_main.py::test_dotenv_values_string_io[env1-a=$b-True-expected1] PASSED [ 53%]
+tests/test_main.py::test_dotenv_values_string_io[env2-a=${b}-False-expected2] PASSED [ 53%]
+tests/test_main.py::test_dotenv_values_string_io[env3-a=${b}-True-expected3] PASSED [ 54%]
+tests/test_main.py::test_dotenv_values_string_io[env4-a=${b:-d}-False-expected4] PASSED [ 55%]
+tests/test_main.py::test_dotenv_values_string_io[env5-a=${b:-d}-True-expected5] PASSED [ 55%]
+tests/test_main.py::test_dotenv_values_string_io[env6-b=c\na=${b}-True-expected6] PASSED [ 56%]
+tests/test_main.py::test_dotenv_values_string_io[env7-a=${b}-True-expected7] PASSED [ 57%]
+tests/test_main.py::test_dotenv_values_string_io[env8-a=${b:-d}-True-expected8] PASSED [ 57%]
+tests/test_main.py::test_dotenv_values_string_io[env9-a="${b}"-True-expected9] PASSED [ 58%]
+tests/test_main.py::test_dotenv_values_string_io[env10-a='${b}'-True-expected10] PASSED [ 59%]
+tests/test_main.py::test_dotenv_values_string_io[env11-a=x${b}y-True-expected11] PASSED [ 59%]
+tests/test_main.py::test_dotenv_values_string_io[env12-a=${a}-True-expected12] PASSED [ 60%]
+tests/test_main.py::test_dotenv_values_string_io[env13-a=${a}-True-expected13] PASSED [ 61%]
+tests/test_main.py::test_dotenv_values_string_io[env14-a=${a:-c}-True-expected14] PASSED [ 61%]
+tests/test_main.py::test_dotenv_values_string_io[env15-a=${a:-c}-True-expected15] PASSED [ 62%]
+tests/test_main.py::test_dotenv_values_string_io[env16-a=${b}${b}-True-expected16] PASSED [ 63%]
+tests/test_main.py::test_dotenv_values_string_io[env17-b=d\na=${b}-True-expected17] PASSED [ 63%]
+tests/test_main.py::test_dotenv_values_string_io[env18-a=b\na=c\nd=${a}-True-expected18] PASSED [ 64%]
+tests/test_main.py::test_dotenv_values_string_io[env19-a=b\nc=${a}\nd=e\nc=${d}-True-expected19] PASSED [ 65%]
+tests/test_main.py::test_dotenv_values_file_stream PASSED                [ 65%]
+tests/test_parser.py::test_parse_stream[-expected0] PASSED               [ 66%]
+tests/test_parser.py::test_parse_stream[a=b-expected1] PASSED            [ 67%]
+tests/test_parser.py::test_parse_stream['a'=b-expected2] PASSED          [ 68%]
+tests/test_parser.py::test_parse_stream[[=b-expected3] PASSED            [ 68%]
+tests/test_parser.py::test_parse_stream[ a = b -expected4] PASSED        [ 69%]
+tests/test_parser.py::test_parse_stream[export a=b-expected5] PASSED     [ 70%]
+tests/test_parser.py::test_parse_stream[ export 'a'=b-expected6] PASSED  [ 70%]
+tests/test_parser.py::test_parse_stream[# a=b-expected7] PASSED          [ 71%]
+tests/test_parser.py::test_parse_stream[a=b#c-expected8] PASSED          [ 72%]
+tests/test_parser.py::test_parse_stream[a=b #c-expected9] PASSED         [ 72%]
+tests/test_parser.py::test_parse_stream[a=b\t#c-expected10] PASSED       [ 73%]
+tests/test_parser.py::test_parse_stream[a=b c-expected11] PASSED         [ 74%]
+tests/test_parser.py::test_parse_stream[a=b\tc-expected12] PASSED        [ 74%]
+tests/test_parser.py::test_parse_stream[a=b  c-expected13] PASSED        [ 75%]
+tests/test_parser.py::test_parse_stream[a=b\xa0 c-expected14] PASSED     [ 76%]
+tests/test_parser.py::test_parse_stream[a=b c -expected15] PASSED        [ 76%]
+tests/test_parser.py::test_parse_stream[a='b c '-expected16] PASSED      [ 77%]
+tests/test_parser.py::test_parse_stream[a="b c "-expected17] PASSED      [ 78%]
+tests/test_parser.py::test_parse_stream[export export_a=1-expected18] PASSED [ 78%]
+tests/test_parser.py::test_parse_stream[export port=8000-expected19] PASSED [ 79%]
+tests/test_parser.py::test_parse_stream[a="b\nc"-expected20] PASSED      [ 80%]
+tests/test_parser.py::test_parse_stream[a='b\nc'-expected21] PASSED      [ 80%]
+tests/test_parser.py::test_parse_stream[a="b\nc"-expected22] PASSED      [ 81%]
+tests/test_parser.py::test_parse_stream[a="b\\nc"-expected23] PASSED     [ 82%]
+tests/test_parser.py::test_parse_stream[a='b\\nc'-expected24] PASSED     [ 82%]
+tests/test_parser.py::test_parse_stream[a="b\\"c"-expected25] PASSED     [ 83%]
+tests/test_parser.py::test_parse_stream[a='b\\'c'-expected26] PASSED     [ 84%]
+tests/test_parser.py::test_parse_stream[a=\xe0-expected27] PASSED        [ 85%]
+tests/test_parser.py::test_parse_stream[a="\xe0"-expected28] PASSED      [ 85%]
+tests/test_parser.py::test_parse_stream[no_value_var-expected29] PASSED  [ 86%]
+tests/test_parser.py::test_parse_stream[a: b-expected30] PASSED          [ 87%]
+tests/test_parser.py::test_parse_stream[a=b\nc=d-expected31] PASSED      [ 87%]
+tests/test_parser.py::test_parse_stream[a=b\rc=d-expected32] PASSED      [ 88%]
+tests/test_parser.py::test_parse_stream[a=b\r\nc=d-expected33] PASSED    [ 89%]
+tests/test_parser.py::test_parse_stream[a=\nb=c-expected34] PASSED       [ 89%]
+tests/test_parser.py::test_parse_stream[\n\n-expected35] PASSED          [ 90%]
+tests/test_parser.py::test_parse_stream[a=b\n\n-expected36] PASSED       [ 91%]
+tests/test_parser.py::test_parse_stream[a=b\n\nc=d-expected37] PASSED    [ 91%]
+tests/test_parser.py::test_parse_stream[a="\nb=c-expected38] PASSED      [ 92%]
+tests/test_parser.py::test_parse_stream[# comment\na="b\nc"\nd=e\n-expected39] PASSED [ 93%]
+tests/test_parser.py::test_parse_stream[a=b\n# comment 1-expected40] PASSED [ 93%]
+tests/test_parser.py::test_parse_stream[# comment 1\n# comment 2-expected41] PASSED [ 94%]
+tests/test_parser.py::test_parse_stream[uglyKey[%$="S3cr3t_P4ssw#rD" #\na=b-expected42] PASSED [ 95%]
+tests/test_utils.py::test_to_cli_string PASSED                           [ 95%]
+tests/test_variables.py::test_parse_variables[-expected0] PASSED         [ 96%]
+tests/test_variables.py::test_parse_variables[a-expected1] PASSED        [ 97%]
+tests/test_variables.py::test_parse_variables[${a}-expected2] PASSED     [ 97%]
+tests/test_variables.py::test_parse_variables[${a:-b}-expected3] PASSED  [ 98%]
+tests/test_variables.py::test_parse_variables[${a}${b}-expected4] PASSED [ 99%]
+tests/test_variables.py::test_parse_variables[a${b}c${d}e-expected5] PASSED [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_get_default_path _____________________________
+Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 146, in test_get_default_path
+    result = sh.dotenv("get", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv get a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv get [OPTIONS] KEY
+Try 'dotenv get --help' for help.
+
+Error: Invalid value: Path "/workdir/python-dotenv-0.21.0/.env" does not exist.
+
+___________________________________ test_run ___________________________________
+Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 157, in test_run
+    result = sh.dotenv("run", "printenv", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.
+
+_______________________ test_run_with_existing_variable ________________________
+Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 170, in test_run_with_existing_variable
+    result = sh.dotenv("run", "printenv", "a", _env=env)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.
+
+________________ test_run_with_existing_variable_not_overridden ________________
+Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 183, in test_run_with_existing_variable_not_overridden
+    result = sh.dotenv("run", "--no-override", "printenv", "a", _env=env)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run --no-override printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.
+
+___________________________ test_run_with_none_value ___________________________
+Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 194, in test_run_with_none_value
+    result = sh.dotenv("run", "printenv", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.
+
+=============================== warnings summary ===============================
+tests/test_ipython.py::test_ipython_existing_variable_no_override
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:20: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("load_ext dotenv")
+
+tests/test_ipython.py::test_ipython_existing_variable_no_override
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:21: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("dotenv")
+
+tests/test_ipython.py::test_ipython_existing_variable_override
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:36: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("load_ext dotenv")
+
+tests/test_ipython.py::test_ipython_existing_variable_override
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:37: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("dotenv -o")
+
+tests/test_ipython.py::test_ipython_new_variable
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:51: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("load_ext dotenv")
+
+tests/test_ipython.py::test_ipython_new_variable
+  /workdir/python-dotenv-0.21.0/tests/test_ipython.py:52: DeprecationWarning: `magic(...)` is deprecated since IPython 0.13 (warning added in 8.1), use run_line_magic(magic_name, parameter_s).
+    ipshell.magic("dotenv")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/python-dotenv/0.21.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_cli.py::test_get_default_path - sh.ErrorReturnCode_2: 
+FAILED tests/test_cli.py::test_run - sh.ErrorReturnCode_2: 
+FAILED tests/test_cli.py::test_run_with_existing_variable - sh.ErrorReturnCod...
+FAILED tests/test_cli.py::test_run_with_existing_variable_not_overridden - sh...
+FAILED tests/test_cli.py::test_run_with_none_value - sh.ErrorReturnCode_2: 
+================== 5 failed, 142 passed, 6 warnings in 1.19s ===================
+ERROR: InvocationError for command /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/python-dotenv/0.21.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

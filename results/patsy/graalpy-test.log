@@ -1,0 +1,212 @@
+GLOB sdist-make: /workdir/patsy-0.5.3/setup.py
+graalpylibtest-unit-test-tests create: /workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rdoc/sphinxext/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/patsy-0.5.3/.tox/.tmp/package/1/patsy-0.5.3.zip
+graalpylibtest-unit-test-tests installed: asttokens==2.4.1,attrs==23.1.0,decorator==5.1.1,exceptiongroup==1.2.0,executing==2.0.1,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,ipython==8.17.2,jedi==0.19.1,jsonschema==4.17.3,matplotlib-inline==0.1.6,mistune==3.0.2,mock==5.1.0,numpy==1.23.5,packaging==23.2,pandas==1.5.2,parso==0.8.3,patsy @ file:///workdir/patsy-0.5.3/.tox/.tmp/package/1/patsy-0.5.3.zip,pexpect==4.8.0,pluggy==1.3.0,prompt-toolkit==3.0.41,ptyprocess==0.7.0,pure-eval==0.2.2,Pygments==2.17.2,pyrsistent==0.20.0,pytest==7.4.3,python-dateutil==2.8.2,pytz==2022.2.1,scipy==1.10.1,six==1.16.0,stack-data==0.6.3,tomli==2.0.1,traitlets==5.13.0,wcwidth==0.2.12
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2585283378'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/patsy/0.5.3/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/patsy-0.5.3
+configfile: setup.cfg
+testpaths: patsy
+collecting ... collected 148 items
+
+patsy/build.py::test__max_allowed_dim PASSED                             [  0%]
+patsy/build.py::test__eval_factor_numerical PASSED                       [  1%]
+patsy/build.py::test__eval_factor_categorical PASSED                     [  2%]
+patsy/build.py::test__column_combinations PASSED                         [  2%]
+patsy/build.py::test__subterm_column_names_iter_and__build_subterm PASSED [  3%]
+patsy/build.py::test__factors_memorize PASSED                            [  4%]
+patsy/build.py::test__examine_factor_types PASSED                        [  4%]
+patsy/builtins.py::test_I PASSED                                         [  5%]
+patsy/builtins.py::test_Q PASSED                                         [  6%]
+patsy/categorical.py::test_C PASSED                                      [  6%]
+patsy/categorical.py::test_guess_categorical PASSED                      [  7%]
+patsy/categorical.py::test_CategoricalSniffer PASSED                     [  8%]
+patsy/categorical.py::test_categorical_to_int PASSED                     [  8%]
+patsy/constraint.py::test_LinearConstraint PASSED                        [  9%]
+patsy/constraint.py::test_LinearConstraint_combine PASSED                [ 10%]
+patsy/constraint.py::test__tokenize_constraint PASSED                    [ 10%]
+patsy/constraint.py::test_linear_constraint PASSED                       [ 11%]
+patsy/constraint.py::test_eval_errors PASSED                             [ 12%]
+patsy/contrasts.py::test_ContrastMatrix PASSED                           [ 12%]
+patsy/contrasts.py::test__obj_to_readable_str PASSED                     [ 13%]
+patsy/contrasts.py::test__name_levels PASSED                             [ 14%]
+patsy/contrasts.py::test__get_level PASSED                               [ 14%]
+patsy/contrasts.py::test_Treatment PASSED                                [ 15%]
+patsy/contrasts.py::test_Poly PASSED                                     [ 16%]
+patsy/contrasts.py::test_Sum PASSED                                      [ 16%]
+patsy/contrasts.py::test_Helmert PASSED                                  [ 17%]
+patsy/contrasts.py::test_diff PASSED                                     [ 18%]
+patsy/desc.py::test_Term PASSED                                          [ 18%]
+patsy/desc.py::test_ModelDesc PASSED                                     [ 19%]
+patsy/desc.py::test_ModelDesc_from_formula PASSED                        [ 20%]
+patsy/desc.py::test_eval_formula PASSED                                  [ 20%]
+patsy/desc.py::test_eval_formula_error_reporting PASSED                  [ 21%]
+patsy/desc.py::test_formula_factor_origin PASSED                         [ 22%]
+patsy/design_info.py::test_FactorInfo PASSED                             [ 22%]
+patsy/design_info.py::test_SubtermInfo PASSED                            [ 23%]
+patsy/design_info.py::test_DesignInfo PASSED                             [ 24%]
+patsy/design_info.py::test_DesignInfo_from_array PASSED                  [ 25%]
+patsy/design_info.py::test_DesignInfo_linear_constraint PASSED           [ 25%]
+patsy/design_info.py::test_DesignInfo_deprecated_attributes PASSED       [ 26%]
+patsy/design_info.py::test__format_float_column PASSED                   [ 27%]
+patsy/design_info.py::test_design_matrix PASSED                          [ 27%]
+patsy/eval.py::test_VarLookupDict PASSED                                 [ 28%]
+patsy/eval.py::test_ast_names PASSED                                     [ 29%]
+patsy/eval.py::test_ast_names_disallowed_nodes PASSED                    [ 29%]
+patsy/eval.py::test_EvalEnvironment_capture_namespace PASSED             [ 30%]
+patsy/eval.py::test_EvalEnvironment_capture_flags PASSED                 [ 31%]
+patsy/eval.py::test_EvalEnvironment_eval_namespace PASSED                [ 31%]
+patsy/eval.py::test_EvalEnvironment_eval_flags FAILED                    [ 32%]
+patsy/eval.py::test_EvalEnvironment_subset PASSED                        [ 33%]
+patsy/eval.py::test_EvalEnvironment_eq PASSED                            [ 33%]
+patsy/eval.py::test_EvalFactor_basics PASSED                             [ 34%]
+patsy/eval.py::test_EvalFactor_memorize_passes_needed PASSED             [ 35%]
+patsy/eval.py::test_EvalFactor_end_to_end PASSED                         [ 35%]
+patsy/eval.py::test_annotated_tokens PASSED                              [ 36%]
+patsy/eval.py::test_replace_bare_funcalls PASSED                         [ 37%]
+patsy/eval.py::test_capture_obj_method_calls PASSED                      [ 37%]
+patsy/infix_parser.py::test_infix_parse PASSED                           [ 38%]
+patsy/mgcv_cubic_splines.py::test__map_cyclic PASSED                     [ 39%]
+patsy/mgcv_cubic_splines.py::test__map_cyclic_errors PASSED              [ 39%]
+patsy/mgcv_cubic_splines.py::test__row_tensor_product_errors PASSED      [ 40%]
+patsy/mgcv_cubic_splines.py::test__row_tensor_product PASSED             [ 41%]
+patsy/mgcv_cubic_splines.py::test__get_all_sorted_knots PASSED           [ 41%]
+patsy/mgcv_cubic_splines.py::test_crs_errors PASSED                      [ 42%]
+patsy/mgcv_cubic_splines.py::test_crs_compat PASSED                      [ 43%]
+patsy/mgcv_cubic_splines.py::test_crs_with_specific_constraint PASSED    [ 43%]
+patsy/mgcv_cubic_splines.py::test_te_errors PASSED                       [ 44%]
+patsy/mgcv_cubic_splines.py::test_te_1smooth PASSED                      [ 45%]
+patsy/mgcv_cubic_splines.py::test_te_2smooths PASSED                     [ 45%]
+patsy/mgcv_cubic_splines.py::test_te_3smooths PASSED                     [ 46%]
+patsy/missing.py::test_NAAction_basic PASSED                             [ 47%]
+patsy/missing.py::test_NAAction_NA_types_numerical PASSED                [ 47%]
+patsy/missing.py::test_NAAction_NA_types_categorical PASSED              [ 48%]
+patsy/missing.py::test_NAAction_drop PASSED                              [ 49%]
+patsy/missing.py::test_NAAction_raise PASSED                             [ 50%]
+patsy/origin.py::test_Origin PASSED                                      [ 50%]
+patsy/parse_formula.py::test__tokenize_formula PASSED                    [ 51%]
+patsy/parse_formula.py::test_parse_formula PASSED                        [ 52%]
+patsy/parse_formula.py::test_parse_origin PASSED                         [ 52%]
+patsy/parse_formula.py::test_parse_errors PASSED                         [ 53%]
+patsy/parse_formula.py::test_parse_extra_op PASSED                       [ 54%]
+patsy/redundancy.py::test__Subterm PASSED                                [ 54%]
+patsy/redundancy.py::test__subsets_sorted PASSED                         [ 55%]
+patsy/redundancy.py::test__simplify_subterms PASSED                      [ 56%]
+patsy/redundancy.py::test_pick_contrasts_for_term PASSED                 [ 56%]
+patsy/splines.py::test__R_compat_quantile PASSED                         [ 57%]
+patsy/splines.py::test_bs_compat PASSED                                  [ 58%]
+patsy/splines.py::test_bs_0degree PASSED                                 [ 58%]
+patsy/splines.py::test_bs_errors PASSED                                  [ 59%]
+patsy/test_build.py::test_assert_full_rank PASSED                        [ 60%]
+patsy/test_build.py::test_simple PASSED                                  [ 60%]
+patsy/test_build.py::test_R_bugs PASSED                                  [ 61%]
+patsy/test_build.py::test_redundancy_thoroughly PASSED                   [ 62%]
+patsy/test_build.py::test_data_types PASSED                              [ 62%]
+patsy/test_build.py::test_build_design_matrices_dtype PASSED             [ 63%]
+patsy/test_build.py::test_return_type PASSED                             [ 64%]
+patsy/test_build.py::test_NA_action PASSED                               [ 64%]
+patsy/test_build.py::test_NA_drop_preserves_levels PASSED                [ 65%]
+patsy/test_build.py::test_return_type_pandas PASSED                      [ 66%]
+patsy/test_build.py::test_data_mismatch PASSED                           [ 66%]
+patsy/test_build.py::test_data_independent_builder PASSED                [ 67%]
+patsy/test_build.py::test_same_factor_in_two_matrices PASSED             [ 68%]
+patsy/test_build.py::test_eval_env_type_builder PASSED                   [ 68%]
+patsy/test_build.py::test_categorical PASSED                             [ 69%]
+patsy/test_build.py::test_contrast PASSED                                [ 70%]
+patsy/test_build.py::test_DesignInfo_subset PASSED                       [ 70%]
+patsy/test_highlevel.py::test_formula_likes PASSED                       [ 71%]
+patsy/test_highlevel.py::test_return_pandas PASSED                       [ 72%]
+patsy/test_highlevel.py::test_term_info PASSED                           [ 72%]
+patsy/test_highlevel.py::test_data_types PASSED                          [ 73%]
+patsy/test_highlevel.py::test_categorical PASSED                         [ 74%]
+patsy/test_highlevel.py::test_builtins PASSED                            [ 75%]
+patsy/test_highlevel.py::test_incremental PASSED                         [ 75%]
+patsy/test_highlevel.py::test_env_transform PASSED                       [ 76%]
+patsy/test_highlevel.py::test_term_order PASSED                          [ 77%]
+patsy/test_highlevel.py::test_future PASSED                              [ 77%]
+patsy/test_highlevel.py::test_multicolumn PASSED                         [ 78%]
+patsy/test_highlevel.py::test_dmatrix_dmatrices_no_data PASSED           [ 79%]
+patsy/test_highlevel.py::test_designinfo_describe PASSED                 [ 79%]
+patsy/test_highlevel.py::test_evalfactor_reraise PASSED                  [ 80%]
+patsy/test_highlevel.py::test_dmatrix_NA_action PASSED                   [ 81%]
+patsy/test_highlevel.py::test_0d_data PASSED                             [ 81%]
+patsy/test_highlevel.py::test_env_not_saved_in_builder PASSED            [ 82%]
+patsy/test_highlevel.py::test_C_and_pandas_categorical PASSED            [ 83%]
+patsy/test_regressions.py::test_issue_11 PASSED                          [ 83%]
+patsy/test_state.py::test_Center PASSED                                  [ 84%]
+patsy/test_state.py::test_stateful_transform_wrapper PASSED              [ 85%]
+patsy/test_state.py::test_Standardize PASSED                             [ 85%]
+patsy/tokens.py::test_python_tokenize PASSED                             [ 86%]
+patsy/tokens.py::test_pretty_untokenize_and_normalize_token_spacing PASSED [ 87%]
+patsy/user_util.py::test_balanced PASSED                                 [ 87%]
+patsy/user_util.py::test_demo_data PASSED                                [ 88%]
+patsy/user_util.py::test_LookupFactor PASSED                             [ 89%]
+patsy/util.py::test_asarray_or_pandas PASSED                             [ 89%]
+patsy/util.py::test_atleast_2d_column_default PASSED                     [ 90%]
+patsy/util.py::test_pandas_friendly_reshape PASSED                       [ 91%]
+patsy/util.py::test_to_uniqueify_list PASSED                             [ 91%]
+patsy/util.py::test_wide_dtype_for_and_widen PASSED                      [ 92%]
+patsy/util.py::test_PushbackAdapter PASSED                               [ 93%]
+patsy/util.py::test_repr_pretty PASSED                                   [ 93%]
+patsy/util.py::test_SortAnythingKey PASSED                               [ 94%]
+patsy/util.py::test_safe_scalar_isnan PASSED                             [ 95%]
+patsy/util.py::test_safe_isnan PASSED                                    [ 95%]
+patsy/util.py::test_iterable PASSED                                      [ 96%]
+patsy/util.py::test_pandas_Categorical_from_codes PASSED                 [ 97%]
+patsy/util.py::test_pandas_Categorical_accessors PASSED                  [ 97%]
+patsy/util.py::test_safe_is_pandas_categorical PASSED                    [ 98%]
+patsy/util.py::test_safe_issubdtype PASSED                               [ 99%]
+patsy/util.py::test_safe_string_eq PASSED                                [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_EvalEnvironment_eval_flags ________________________
+Traceback (most recent call last):
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/patsy-0.5.3/patsy/eval.py", line 378, in test_EvalEnvironment_eval_flags
+    assert env2.eval("a <> 0") == True
+  File "/workdir/patsy-0.5.3/patsy/eval.py", line 168, in eval
+    code = compile(expr, source_name, "eval", self.flags, False)
+  File "<string>", line 1
+    a <> 0
+      ^^
+SyntaxError: invalid syntax
+- generated xml file: /workdir/results/patsy/0.5.3/1/graalpy-test-results.xml --
+=========================== short test summary info ============================
+FAILED patsy/eval.py::test_EvalEnvironment_eval_flags -   File "<string>", li...
+================== 1 failed, 147 passed in 548.75s (0:09:08) ===================
+ERROR: InvocationError for command /workdir/patsy-0.5.3/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/patsy/0.5.3/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

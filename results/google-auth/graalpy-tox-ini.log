@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/google-auth/2.15.0/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt
+	-rsamples/cloud-client/snippets/requirements.txt
+	-r.kokoro/requirements.txt
+	-rtesting/requirements.txt
+

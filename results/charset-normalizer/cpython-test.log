@@ -1,0 +1,32 @@
+GLOB sdist-make: /workdir/charset-normalizer-3.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/charset-normalizer-3.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt, -rbuild-requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/charset-normalizer-3.0.1/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring black: markers 'python_version < "3.7"' don't match your environment
+Ignoring mypy: markers 'python_version < "3.7"' don't match your environment
+Ignoring Flask: markers 'python_version < "3.7"' don't match your environment
+Ignoring pytest: markers 'python_version < "3.7"' don't match your environment
+Ignoring requests: markers 'python_version < "3.7"' don't match your environment
+Ignoring wheel: markers 'python_version < "3.7"' don't match your environment
+Ignoring mypy: markers 'python_version < "3.7"' don't match your environment
+Ignoring wheel: markers 'python_version < "3.7"' don't match your environment
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting flake8==5.0.4 (from -r dev-requirements.txt (line 1))
+  Downloading flake8-5.0.4-py2.py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.9/61.9 kB 3.0 MB/s eta 0:00:00
+Collecting chardet==5.0.0 (from -r dev-requirements.txt (line 2))
+  Downloading chardet-5.0.0-py3-none-any.whl (193 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.6/193.6 kB 10.5 MB/s eta 0:00:00
+Collecting isort==5.10.1 (from -r dev-requirements.txt (line 3))
+  Using cached isort-5.10.1-py3-none-any.whl (103 kB)
+ERROR: Could not find a version that satisfies the requirement codecov==2.1.12 (from versions: 2.1.13)
+ERROR: No matching distribution found for codecov==2.1.12
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev-requirements.txt, -rbuild-requirements.txt]; v = InvocationError('/workdir/charset-normalizer-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt -rbuild-requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev-requirements.txt, -rbuild-requirements.txt]; v = InvocationError('/workdir/charset-normalizer-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt -rbuild-requirements.txt', 1)

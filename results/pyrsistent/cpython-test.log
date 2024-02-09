@@ -1,0 +1,21 @@
+.package create: /workdir/pyrsistent-0.19.2/.tox/.package
+.package installdeps: setuptools>=42, wheel
+cpythonlibtest-unit-test-tests create: /workdir/pyrsistent-0.19.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pyrsistent-0.19.2/.tox/.tmp/package/1/pyrsistent-0.19.2.tar.gz
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,Babel==2.13.1,cachetools==5.3.2,certifi==2023.11.17,cffi==1.16.0,chardet==5.2.0,charset-normalizer==3.3.2,colorama==0.4.6,cryptography==41.0.7,distlib==0.3.7,docutils==0.20.1,exceptiongroup==1.2.0,filelock==3.13.1,hypothesis==6.91.0,idna==3.6,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,jaraco.classes==3.3.0,jeepney==0.8.0,Jinja2==3.1.2,keyring==24.3.0,lxml==4.9.3,markdown-it-py==3.0.0,MarkupSafe==2.1.3,mdurl==0.1.2,memory-profiler==0.57.0,mock==5.1.0,more-itertools==10.1.0,nh3==0.2.14,packaging==23.2,pkginfo==1.9.6,platformdirs==4.0.0,pluggy==1.3.0,psutil==5.7.0,pycparser==2.21,Pygments==2.17.2,pyperform==1.86,pyproject-api==1.6.1,pyrsistent @ file:///workdir/pyrsistent-0.19.2/.tox/.tmp/package/1/pyrsistent-0.19.2.tar.gz#sha256=5051390bcebe886be1d537b4f3816357705212b7d84a92d5938a8c49a17e66d1,pytest==7.4.3,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,SecretStorage==3.3.3,snowballstemmer==2.2.0,sortedcontainers==2.4.0,Sphinx==7.2.6,sphinx-rtd-theme==0.1.5,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,tox==4.11.4,twine==4.0.2,unittest-xml-reporting==3.2.0,urllib3==2.1.0,virtualenv==20.24.7,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2186209145'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/pyrsistent-0.19.2/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/pyrsistent/0.19.2/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Generating XML reports...
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

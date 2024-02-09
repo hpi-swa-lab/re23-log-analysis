@@ -1,0 +1,25 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/torch/1.13.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rscripts/release_notes/requirements.txt
+	-rthird_party/pybind11/tests/requirements.txt
+	-rthird_party/benchmark/requirements.txt
+	-rthird_party/benchmark/tools/requirements.txt
+	-rthird_party/benchmark/bindings/python/requirements.txt
+	-rthird_party/onnx/requirements-release.txt
+	-rthird_party/onnx/requirements-dev.txt
+	-rthird_party/onnx/requirements.txt
+	-rthird_party/onnx/third_party/pybind11/tests/requirements.txt
+	-rthird_party/onnx/third_party/benchmark/requirements.txt
+	-rthird_party/onnx/third_party/benchmark/tools/requirements.txt
+	-rthird_party/onnx/third_party/benchmark/bindings/python/requirements.txt
+	-rthird_party/python-peachpy/requirements.txt
+	-rthird_party/python-peachpy/test/requirements.txt
+	-rthird_party/nlohmann/tools/serve_header/requirements.txt
+	-rthird_party/fbgemm/fbgemm_gpu/requirements.txt
+

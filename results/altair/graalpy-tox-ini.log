@@ -1,0 +1,11 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/altair/4.2.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements_dev.txt
+	-rrequirements.txt
+	-rdoc/requirements.txt
+

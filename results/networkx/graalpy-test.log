@@ -1,0 +1,1969 @@
+GLOB sdist-make: /workdir/networkx-2.8.8/setup.py
+graalpylibtest-unit-test-tests create: /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements/release.txt, -rrequirements/doc.txt, -rrequirements/example.txt, -rrequirements/default.txt, -rrequirements/extra.txt, -rrequirements/test.txt, -rrequirements/developer.txt
+GLOB sdist-make: /workdir/networkx-2.8.8/setup.py
+graalpylibtest-unit-test-tests create: /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements/release.txt, -rrequirements/doc.txt, -rrequirements/example.txt, -rrequirements/default.txt, -rrequirements/extra.txt, -rrequirements/test.txt, -rrequirements/developer.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/log/graalpylibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting build>=0.8
+  Using cached build-1.0.3-py3-none-any.whl (18 kB)
+Collecting twine>=4.0
+  Using cached twine-4.0.2-py3-none-any.whl (36 kB)
+Requirement already satisfied: wheel>=0.37 in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/release.txt (line 3)) (0.41.2)
+Collecting sphinx>=5.2
+  Using cached sphinx-7.2.6-py3-none-any.whl (3.2 MB)
+Collecting pydata-sphinx-theme>=0.11
+  Using cached pydata_sphinx_theme-0.14.3-py3-none-any.whl (4.7 MB)
+Collecting sphinx-gallery>=0.11
+  Using cached sphinx_gallery-0.15.0-py3-none-any.whl (164 kB)
+Collecting numpydoc>=1.5
+  Using cached numpydoc-1.6.0-py3-none-any.whl (61 kB)
+Collecting pillow>=9.2
+  Using cached Pillow-10.1.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting nb2plots>=0.6
+  Using cached nb2plots-0.7.2.tar.gz (126 kB)
+Looking for GraalPy patches for nb2plots
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting texext>=0.6.6
+  Using cached texext-0.6.7-py3-none-any.whl (24 kB)
+Collecting osmnx>=1.1
+  Using cached osmnx-1.7.1-py3-none-any.whl (102 kB)
+Collecting momepy>=0.5
+  Using cached momepy-0.6.0-py3-none-any.whl (275 kB)
+Collecting contextily>=1.2
+  Using cached contextily-1.4.0-py3-none-any.whl (16 kB)
+Collecting seaborn>=0.11
+  Using cached seaborn-0.13.0-py3-none-any.whl (294 kB)
+Collecting cairocffi>=1.3
+  Using cached cairocffi-1.6.1-py3-none-any.whl (75 kB)
+Collecting igraph>=0.9.8
+  Using cached igraph-0.11.3.tar.gz (4.5 MB)
+auto-patching C API usages in /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/src/_igraph/common.h
+Looking for GraalPy patches for igraph
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting numpy>=1.19
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting scipy>=1.8
+  Using cached scipy-1.10.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting matplotlib>=3.4
+  Using cached matplotlib-3.7.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pandas>=1.3
+  Using cached pandas-1.5.2-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting lxml>=4.6
+  Using cached lxml-4.9.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pygraphviz>=1.9
+  Using cached pygraphviz-1.11.zip (120 kB)
+auto-patching C API usages in /tmp/pip-install-701zt82c/pygraphviz_c1fa842bb8004a1c9835a7e910342fbf/pygraphviz/graphviz_wrap.c
+Looking for GraalPy patches for pygraphviz
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pydot>=1.4.2
+  Using cached pydot-1.4.2-py2.py3-none-any.whl (21 kB)
+Collecting sympy>=1.10
+  Using cached sympy-1.12-py3-none-any.whl (5.7 MB)
+Collecting pytest-cov>=4.0
+  Using cached pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Collecting codecov>=2.1
+  Using cached codecov-2.1.13-py2.py3-none-any.whl (16 kB)
+Collecting pre-commit>=2.20
+  Using cached pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
+Collecting mypy>=0.982
+  Using cached mypy-1.7.0-py3-none-any.whl (2.5 MB)
+Collecting iniconfig
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pluggy<2.0,>=0.12
+  Using cached pluggy-1.3.0-py3-none-any.whl (18 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting tomli>=1.0.0
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting pyproject_hooks
+  Using cached pyproject_hooks-1.0.0-py3-none-any.whl (9.3 kB)
+Collecting pkginfo>=1.8.1
+  Using cached pkginfo-1.9.6-py3-none-any.whl (30 kB)
+Collecting readme-renderer>=35.0
+  Using cached readme_renderer-42.0-py3-none-any.whl (13 kB)
+Collecting requests>=2.20
+  Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting requests-toolbelt!=0.9.0,>=0.8.0
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Collecting urllib3>=1.26.0
+  Using cached urllib3-2.1.0-py3-none-any.whl (104 kB)
+Collecting importlib-metadata>=3.6
+  Using cached importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+Collecting keyring>=15.1
+  Using cached keyring-24.3.0-py3-none-any.whl (38 kB)
+Collecting rfc3986>=1.4.0
+  Using cached rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+Collecting rich>=12.0.0
+  Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Collecting sphinxcontrib-applehelp
+  Using cached sphinxcontrib_applehelp-1.0.7-py3-none-any.whl (120 kB)
+Collecting sphinxcontrib-devhelp
+  Using cached sphinxcontrib_devhelp-1.0.5-py3-none-any.whl (83 kB)
+Collecting sphinxcontrib-jsmath
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting sphinxcontrib-htmlhelp>=2.0.0
+  Using cached sphinxcontrib_htmlhelp-2.0.4-py3-none-any.whl (99 kB)
+Collecting sphinxcontrib-serializinghtml>=1.1.9
+  Using cached sphinxcontrib_serializinghtml-1.1.9-py3-none-any.whl (92 kB)
+Collecting sphinxcontrib-qthelp
+  Using cached sphinxcontrib_qthelp-1.0.6-py3-none-any.whl (89 kB)
+Collecting Jinja2>=3.0
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting Pygments>=2.14
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting docutils<0.21,>=0.18.1
+  Using cached docutils-0.20.1-py3-none-any.whl (572 kB)
+Collecting snowballstemmer>=2.0
+  Using cached snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+Collecting babel>=2.9
+  Using cached Babel-2.13.1-py3-none-any.whl (10.1 MB)
+Collecting alabaster<0.8,>=0.7
+  Using cached alabaster-0.7.13-py3-none-any.whl (13 kB)
+Collecting imagesize>=1.3
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Collecting beautifulsoup4
+  Using cached beautifulsoup4-4.12.2-py3-none-any.whl (142 kB)
+Collecting accessible-pygments
+  Using cached accessible_pygments-0.0.4-py2.py3-none-any.whl (29 kB)
+Collecting typing-extensions
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting tabulate>=0.8.10
+  Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting ipython[notebook]>=7.16.3
+  Using cached ipython-8.17.2-py3-none-any.whl (808 kB)
+Collecting sphinxtesters>=0.2.3
+  Using cached sphinxtesters-0.2.3.tar.gz (29 kB)
+Looking for GraalPy patches for sphinxtesters
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting nbconvert>=6.0.7
+  Using cached nbconvert-7.11.0-py3-none-any.whl (256 kB)
+Collecting geopandas>=0.12
+  Using cached geopandas-0.14.1-py3-none-any.whl (1.1 MB)
+Collecting networkx>=2.5
+  Using cached networkx-3.2.1-py3-none-any.whl (1.6 MB)
+Collecting shapely>=2.0
+  Using cached shapely-2.0.2-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting libpysal>=4.6.0
+  Using cached libpysal-4.9.2-py3-none-any.whl (2.8 MB)
+Collecting tqdm>=4.27.0
+  Using cached tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting geopy
+  Using cached geopy-2.4.0-py3-none-any.whl (125 kB)
+Collecting mercantile
+  Using cached mercantile-1.2.1-py3-none-any.whl (14 kB)
+Collecting rasterio
+  Using cached rasterio-1.3.9.tar.gz (411 kB)
+Looking for GraalPy patches for rasterio
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting joblib
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting xyzservices
+  Downloading xyzservices-2023.10.1-py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 kB 485.5 kB/s eta 0:00:00
+Collecting cffi>=1.1.0
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting texttable>=1.6.2
+  Downloading texttable-1.7.0-py2.py3-none-any.whl (10 kB)
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.2.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting cycler>=0.10
+  Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.45.0-py3-none-any.whl (1.0 MB)
+Collecting kiwisolver>=1.0.1
+  Using cached kiwisolver-1.4.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyparsing>=2.3.1
+  Using cached pyparsing-3.0.8-py3-none-any.whl (98 kB)
+Collecting python-dateutil>=2.7
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1
+  Using cached pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+Collecting mpmath>=0.19
+  Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Collecting coverage[toml]>=5.2.1
+  Using cached coverage-7.3.2-py3-none-any.whl
+Collecting cfgv>=2.0.0
+  Using cached cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Collecting identify>=1.0.0
+  Using cached identify-2.5.32-py2.py3-none-any.whl (98 kB)
+Collecting nodeenv>=0.11.1
+  Using cached nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Collecting pyyaml>=5.1
+  Using cached PyYAML-6.0.1-py3-none-any.whl
+Collecting virtualenv>=20.10.0
+  Using cached virtualenv-20.24.7-py3-none-any.whl (3.8 MB)
+Collecting mypy-extensions>=1.0.0
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting fiona>=1.8.21
+  Using cached fiona-1.9.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyproj>=3.3.0
+  Using cached pyproj-3.6.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting zipp>=0.5
+  Using cached zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Collecting decorator
+  Using cached decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting jedi>=0.16
+  Using cached jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+Collecting matplotlib-inline
+  Using cached matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30
+  Using cached prompt_toolkit-3.0.41-py3-none-any.whl (385 kB)
+Collecting stack-data
+  Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting traitlets>=5
+  Using cached traitlets-5.13.0-py3-none-any.whl (84 kB)
+Collecting pexpect>4.3
+  Using cached pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting ipywidgets
+  Downloading ipywidgets-8.1.1-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.4/139.4 kB 212.3 kB/s eta 0:00:00
+Collecting notebook
+  Downloading notebook-7.0.6-py3-none-any.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 423.3 kB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.3-py3-none-any.whl
+Collecting jaraco.classes
+  Using cached jaraco.classes-3.3.0-py3-none-any.whl (5.9 kB)
+Collecting SecretStorage>=3.2
+  Using cached SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2
+  Using cached jeepney-0.8.0-py3-none-any.whl (48 kB)
+Collecting platformdirs>=2.0.2
+  Using cached platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Collecting soupsieve>1.2
+  Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Collecting bleach!=5.0.0
+  Using cached bleach-6.1.0-py3-none-any.whl (162 kB)
+Collecting defusedxml
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jupyter-core>=4.7
+  Using cached jupyter_core-5.5.0-py3-none-any.whl (28 kB)
+Collecting jupyterlab-pygments
+  Using cached jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+Collecting mistune<4,>=2.0.3
+  Using cached mistune-3.0.2-py3-none-any.whl (47 kB)
+Collecting nbclient>=0.5.0
+  Using cached nbclient-0.9.0-py3-none-any.whl (24 kB)
+Collecting nbformat>=5.7
+  Using cached nbformat-5.9.2-py3-none-any.whl (77 kB)
+Collecting pandocfilters>=1.4.1
+  Using cached pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Collecting tinycss2
+  Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Requirement already satisfied: setuptools in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from nodeenv>=0.11.1->pre-commit>=2.20->-r requirements/developer.txt (line 1)) (63.2.0)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting nh3>=0.2.14
+  Using cached nh3-0.2.14-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-py3-none-any.whl (46 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Collecting markdown-it-py>=2.2.0
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Collecting distlib<1,>=0.3.7
+  Using cached distlib-0.3.7-py2.py3-none-any.whl (468 kB)
+Collecting filelock<4,>=3.12.2
+  Using cached filelock-3.13.1-py3-none-any.whl (11 kB)
+Collecting geographiclib<3,>=1.52
+  Using cached geographiclib-2.0-py3-none-any.whl (40 kB)
+Collecting click>=3.0
+  Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Collecting affine
+  Downloading affine-2.4.0-py3-none-any.whl (15 kB)
+Collecting attrs
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting cligj>=0.5
+  Using cached cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting snuggs>=1.4.1
+  Downloading snuggs-1.4.7-py3-none-any.whl (5.4 kB)
+Collecting click-plugins
+  Using cached click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Collecting webencodings
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Using cached parso-0.8.3-py2.py3-none-any.whl (100 kB)
+Collecting mdurl~=0.1
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting jupyter-client>=6.1.12
+  Using cached jupyter_client-8.6.0-py3-none-any.whl (105 kB)
+Collecting fastjsonschema
+  Using cached fastjsonschema-2.19.0-py3-none-any.whl (23 kB)
+Collecting jsonschema>=2.6
+  Using cached jsonschema-4.17.3-py3-none-any.whl (90 kB)
+Collecting ptyprocess>=0.5
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting wcwidth
+  Using cached wcwidth-0.2.12-py2.py3-none-any.whl (34 kB)
+Collecting cryptography>=2.0
+  Using cached cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting comm>=0.1.3
+  Using cached comm-0.2.0-py3-none-any.whl (7.0 kB)
+Collecting widgetsnbextension~=4.0.9
+  Using cached widgetsnbextension-4.0.9-py3-none-any.whl (2.3 MB)
+Collecting jupyterlab-widgets~=3.0.9
+  Using cached jupyterlab_widgets-3.0.9-py3-none-any.whl (214 kB)
+Collecting more-itertools
+  Using cached more_itertools-10.1.0-py3-none-any.whl (55 kB)
+Collecting jupyter-server<3,>=2.4.0
+  Using cached jupyter_server-2.11.0-py3-none-any.whl (379 kB)
+Collecting jupyterlab-server<3,>=2.22.1
+  Using cached jupyterlab_server-2.25.2-py3-none-any.whl (58 kB)
+Collecting jupyterlab<5,>=4.0.2
+  Downloading jupyterlab-4.0.9-py3-none-any.whl (9.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 2.8 MB/s eta 0:00:00
+Collecting notebook-shim<0.3,>=0.2
+  Using cached notebook_shim-0.2.3-py3-none-any.whl (13 kB)
+Collecting tornado>=6.2.0
+  Using cached tornado-6.3.3-py3-none-any.whl
+Collecting executing>=1.2.0
+  Using cached executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting asttokens>=2.1.0
+  Using cached asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting pure-eval
+  Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Using cached pyrsistent-0.20.0-py3-none-any.whl (58 kB)
+Collecting pyzmq>=23.0
+  Using cached pyzmq-25.1.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting anyio>=3.1.0
+  Using cached anyio-4.0.0-py3-none-any.whl (83 kB)
+Collecting argon2-cffi
+  Using cached argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+Collecting jupyter-events>=0.9.0
+  Using cached jupyter_events-0.9.0-py3-none-any.whl (18 kB)
+Collecting jupyter-server-terminals
+  Using cached jupyter_server_terminals-0.4.4-py3-none-any.whl (13 kB)
+Collecting overrides
+  Using cached overrides-7.4.0-py3-none-any.whl (17 kB)
+Collecting prometheus-client
+  Using cached prometheus_client-0.19.0-py3-none-any.whl (54 kB)
+Collecting send2trash>=1.8.2
+  Using cached Send2Trash-1.8.2-py3-none-any.whl (18 kB)
+Collecting terminado>=0.8.3
+  Using cached terminado-0.18.0-py3-none-any.whl (14 kB)
+Collecting websocket-client
+  Using cached websocket_client-1.6.4-py3-none-any.whl (57 kB)
+Collecting async-lru>=1.0.0
+  Downloading async_lru-2.0.4-py3-none-any.whl (6.1 kB)
+Collecting ipykernel
+  Using cached ipykernel-6.27.0-py3-none-any.whl (114 kB)
+Collecting jupyter-lsp>=2.0.0
+  Downloading jupyter_lsp-2.2.0-py3-none-any.whl (65 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.0/66.0 kB 2.2 MB/s eta 0:00:00
+Collecting json5>=0.9.0
+  Using cached json5-0.9.14-py2.py3-none-any.whl (19 kB)
+Collecting jsonschema>=2.6
+  Using cached jsonschema-4.20.0-py3-none-any.whl (84 kB)
+Collecting jsonschema-specifications>=2023.03.6
+  Using cached jsonschema_specifications-2023.11.1-py3-none-any.whl (17 kB)
+Collecting referencing>=0.28.4
+  Using cached referencing-0.31.0-py3-none-any.whl (25 kB)
+Collecting rpds-py>=0.7.1
+  Using cached rpds_py-0.13.1.tar.gz (17 kB)
+Looking for GraalPy patches for rpds_py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting sniffio>=1.1
+  Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting python-json-logger>=2.0.4
+  Using cached python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Collecting rfc3339-validator
+  Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Collecting rfc3986-validator>=0.1.1
+  Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Collecting argon2-cffi-bindings
+  Using cached argon2_cffi_bindings-21.2.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting debugpy>=1.6.5
+  Using cached debugpy-1.8.0-py2.py3-none-any.whl (5.0 MB)
+Collecting nest-asyncio
+  Using cached nest_asyncio-1.5.8-py3-none-any.whl (5.3 kB)
+Collecting psutil
+  Using cached psutil-5.9.6-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting fqdn
+  Using cached fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Collecting isoduration
+  Using cached isoduration-20.11.0-py3-none-any.whl (11 kB)
+Collecting jsonpointer>1.13
+  Using cached jsonpointer-2.4-py2.py3-none-any.whl (7.8 kB)
+Collecting uri-template
+  Using cached uri_template-1.3.0-py3-none-any.whl (11 kB)
+Collecting webcolors>=1.11
+  Using cached webcolors-1.13-py3-none-any.whl (14 kB)
+Collecting arrow>=0.15.0
+  Using cached arrow-1.3.0-py3-none-any.whl (66 kB)
+Collecting types-python-dateutil>=2.8.10
+  Using cached types_python_dateutil-2.8.19.14-py3-none-any.whl (9.4 kB)
+Building wheels for collected packages: nb2plots, igraph, pygraphviz, sphinxtesters, rasterio, rpds-py
+  Building wheel for nb2plots (setup.py): started
+  Building wheel for nb2plots (setup.py): finished with status 'done'
+  Created wheel for nb2plots: filename=nb2plots-0.7.2-py3-none-any.whl size=142048 sha256=a2a7d97f1365a193410ebbdb5f3fc258f8132efa1ab403da930926c650449238
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/5c/44/bd/3027127512a3ce7aa822d2e2e5114f8426f2dc8a8e717dad9f
+  Building wheel for igraph (pyproject.toml): started
+  Building wheel for igraph (pyproject.toml): still running...
+  Building wheel for igraph (pyproject.toml): still running...
+  Building wheel for igraph (pyproject.toml): still running...
+  Building wheel for igraph (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for igraph (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [1199 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-3.10
+      creating build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/automorphisms.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/community.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/__init__.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/basic.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/layout.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/formula.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/datatypes.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/adjacency.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/sparse_matrix.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/seq.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/clustering.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/version.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/matching.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/configuration.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/utils.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/bipartite.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/statistics.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/summary.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/structural.py -> build/lib.linux-x86_64-3.10/igraph
+      copying src/igraph/cut.py -> build/lib.linux-x86_64-3.10/igraph
+      creating build/lib.linux-x86_64-3.10/igraph/operators
+      copying src/igraph/operators/__init__.py -> build/lib.linux-x86_64-3.10/igraph/operators
+      copying src/igraph/operators/functions.py -> build/lib.linux-x86_64-3.10/igraph/operators
+      copying src/igraph/operators/methods.py -> build/lib.linux-x86_64-3.10/igraph/operators
+      creating build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/__init__.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/random.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/adjacency.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/images.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/objects.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/utils.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/bipartite.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/libraries.py -> build/lib.linux-x86_64-3.10/igraph/io
+      copying src/igraph/io/files.py -> build/lib.linux-x86_64-3.10/igraph/io
+      creating build/lib.linux-x86_64-3.10/igraph/app
+      copying src/igraph/app/__init__.py -> build/lib.linux-x86_64-3.10/igraph/app
+      copying src/igraph/app/shell.py -> build/lib.linux-x86_64-3.10/igraph/app
+      creating build/lib.linux-x86_64-3.10/igraph/remote
+      copying src/igraph/remote/gephi.py -> build/lib.linux-x86_64-3.10/igraph/remote
+      copying src/igraph/remote/__init__.py -> build/lib.linux-x86_64-3.10/igraph/remote
+      creating build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/text.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/__init__.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/shapes.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/metamagic.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/graph.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/baseclasses.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/utils.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      copying src/igraph/drawing/colors.py -> build/lib.linux-x86_64-3.10/igraph/drawing
+      creating build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/vertex.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/__init__.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/polygon.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/graph.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/edge.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      copying src/igraph/drawing/plotly/utils.py -> build/lib.linux-x86_64-3.10/igraph/drawing/plotly
+      creating build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/vertex.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/text.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/coord.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/__init__.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/histogram.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/polygon.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/base.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/graph.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/plot.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/edge.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/utils.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/dendrogram.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/matrix.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      copying src/igraph/drawing/cairo/palette.py -> build/lib.linux-x86_64-3.10/igraph/drawing/cairo
+      creating build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/vertex.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/__init__.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/histogram.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/polygon.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/graph.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/edge.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/utils.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/dendrogram.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/matrix.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      copying src/igraph/drawing/matplotlib/palette.py -> build/lib.linux-x86_64-3.10/igraph/drawing/matplotlib
+      running build_ext
+      running build_c_core
+      We are going to build the C core of igraph.
+        Source folder: vendor/source/igraph
+        Build folder: vendor/build/igraph
+        Install folder: vendor/install/igraph
+      
+      Configuring build...
+      -- Setting build type to 'Release' as none was specified.
+      -- Version number: 0.10.7-201-g4e04d3943
+      -- The C compiler identification is GNU 8.5.0
+      -- The CXX compiler identification is GNU 8.5.0
+      -- Detecting C compiler ABI info
+      -- Detecting C compiler ABI info - done
+      -- Check for working C compiler: /usr/bin/cc - skipped
+      -- Detecting C compile features
+      -- Detecting C compile features - done
+      -- Detecting CXX compiler ABI info
+      -- Detecting CXX compiler ABI info - done
+      -- Check for working CXX compiler: /usr/bin/c++ - skipped
+      -- Detecting CXX compile features
+      -- Detecting CXX compile features - done
+      -- Performing Test COMPILER_SUPPORTS_UNKNOWN_WARNING_OPTION_FLAG
+      -- Performing Test COMPILER_SUPPORTS_UNKNOWN_WARNING_OPTION_FLAG - Failed
+      -- Performing Test COMPILER_HAS_DEPRECATED_ENUMVAL_ATTR
+      -- Performing Test COMPILER_HAS_DEPRECATED_ENUMVAL_ATTR - Success
+      -- Thread-local storage: supported (__thread)
+      -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+      -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+      -- Looking for pthread_create in pthreads
+      -- Looking for pthread_create in pthreads - not found
+      -- Looking for pthread_create in pthread
+      -- Looking for pthread_create in pthread - found
+      -- Found Threads: TRUE
+      -- Could NOT find FLEX (missing: FLEX_EXECUTABLE)
+      -- Could NOT find BISON (missing: BISON_EXECUTABLE)
+      -- Looking for strcasecmp
+      -- Looking for strcasecmp - found
+      -- Looking for strncasecmp
+      -- Looking for strncasecmp - found
+      -- Looking for _stricmp
+      -- Looking for _stricmp - not found
+      -- Looking for _strnicmp
+      -- Looking for _strnicmp - not found
+      -- Looking for strdup
+      -- Looking for strdup - found
+      -- Looking for strndup
+      -- Looking for strndup - found
+      -- Looking for include file xlocale.h
+      -- Looking for include file xlocale.h - not found
+      -- Looking for uselocale
+      -- Looking for uselocale - found
+      -- Looking for _configthreadlocale
+      -- Looking for _configthreadlocale - not found
+      -- Performing Test HAVE__UMUL128
+      -- Performing Test HAVE__UMUL128 - Failed
+      -- Performing Test HAVE___UMULH
+      -- Performing Test HAVE___UMULH - Failed
+      -- Looking for C++ include sys/types.h
+      -- Looking for C++ include sys/types.h - found
+      -- Looking for C++ include stdint.h
+      -- Looking for C++ include stdint.h - found
+      -- Looking for C++ include stddef.h
+      -- Looking for C++ include stddef.h - found
+      -- Check size of __uint128_t
+      -- Check size of __uint128_t - done
+      -- Performing Test HAVE_BUILTIN_OVERFLOW
+      -- Performing Test HAVE_BUILTIN_OVERFLOW - Success
+      -- Looking for _LIBCPP_VERSION
+      -- Looking for _LIBCPP_VERSION - not found
+      -- Looking for __GLIBCXX__
+      -- Looking for __GLIBCXX__ - found
+      -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+      -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+      -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+      -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+      -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+      -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+      -- Found Python3: /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python3.10 (found version "3.10.8") found components: Interpreter
+      --
+      -- -----[ Build configuration ]----
+      -- Version:   0.10.7-201-g4e04d3943
+      -- CMake build type:        Release
+      -- Library type:             static
+      -- igraph_integer_t size:   64 bits
+      --
+      -- ----------[ Features ]----------
+      -- GLPK for optimization:       yes
+      -- Reading GraphML files:       yes
+      -- Thread-local storage:        yes
+      -- Link-time optimization:       no
+      --
+      -- --------[ Dependencies ]--------
+      -- ARPACK:                 vendored
+      -- BISON:                        no
+      -- BLAS:                   vendored
+      -- FLEX:                         no
+      -- GLPK:                   vendored
+      -- GMP:                    vendored
+      -- LAPACK:                 vendored
+      -- LibXml2:                     yes
+      -- OpenMP:                      yes
+      -- PLFIT:                  vendored
+      --
+      -- -----------[ Testing ]----------
+      -- Diff tool:             not found
+      -- Sanitizers:                 none
+      -- Code coverage:                no
+      -- Verify 'finally' stack:       no
+      --
+      -- --------[ Documentation ]-------
+      -- HTML:                         no
+      -- PDF:                          no
+      --
+      -- igraph configured successfully.
+      --
+      -- Configuring done
+      -- Generating done
+      -- Build files have been written to: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/build/igraph
+      Running build...
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/defs.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/graph.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/heap.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/orbit.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/partition.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/uintseqhash.cc.o
+      [  0%] Building CXX object src/isomorphism/bliss/CMakeFiles/bliss.dir/utils.cc.o
+      [  0%] Built target bliss
+      [  0%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_add.c.o
+      [  0%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_amd.c.o
+      [  0%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_chol.c.o
+      [  0%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_cholsol.c.o
+      [  0%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_compress.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_counts.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_cumsum.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_dfs.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_dmperm.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_droptol.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_dropzeros.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_dupl.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_entry.c.o
+      [  1%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_ereach.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_etree.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_fkeep.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_gaxpy.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_happly.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_house.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_ipvec.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_leaf.c.o
+      [  2%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_load.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_lsolve.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_ltsolve.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_lu.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_lusol.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_malloc.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_maxtrans.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_multiply.c.o
+      [  3%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_norm.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_permute.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_pinv.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_post.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_pvec.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_qr.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_qrsol.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_randperm.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_reach.c.o
+      [  4%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_scatter.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_scc.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_schol.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_spsolve.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_sqr.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_symperm.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_tdfs.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_transpose.c.o
+      [  5%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_updown.c.o
+      [  6%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_usolve.c.o
+      [  6%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_util.c.o
+      [  6%] Building C object vendor/cs/CMakeFiles/cxsparse_vendored.dir/cs_utsolve.c.o
+      [  6%] Built target cxsparse_vendored
+      [  6%] Building C object vendor/f2c/CMakeFiles/arithchk.dir/arithchk.c.o
+      [  6%] Linking C executable arithchk
+      [  6%] Built target arithchk
+      [  6%] Generating arith.h for f2c...
+      [  6%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/abort_.c.o
+      [  6%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/dolio.c.o
+      [  6%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_sin.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/dummy.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/dtime_.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/iio.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_sinh.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/backspac.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/due.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/ilnw.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_sqrt.c.o
+      [  7%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_abs.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/ef1asc_.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/inquire.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_tan.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_cos.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/ef1cmc_.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/l_ge.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_tanh.c.o
+      [  8%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_div.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/endfile.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/l_gt.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/rdfmt.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_exp.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/erf_.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/l_le.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/rewind.c.o
+      [  9%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_log.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/erfc_.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/l_lt.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/rsfe.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_sin.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/err.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/lbitbits.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/rsli.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/c_sqrt.c.o
+      [ 10%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/etime_.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/lbitshft.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/rsne.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/cabs.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/exit_.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/lread.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_cat.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/close.c.o
+      [ 11%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/f77_aloc.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/lwrite.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_cmp.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/ctype.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/f77vers.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_copy.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_abs.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/fmt.c.o
+      [ 12%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/open.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_paus.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_acos.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/fmtlib.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_ci.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_rnge.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_asin.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/ftell_.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_dd.c.o
+      [ 13%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/s_stop.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_atan.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_di.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/sfe.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_atn2.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/getenv_.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_hh.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/sig_die.c.o
+      [ 14%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_cnjg.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_abs.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_ii.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/signal_.c.o
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/vendor/f2c/signal_.c: In function ‘signal_’:
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/vendor/f2c/signal_.c:17:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+        return (ftnint)signal(sig, proc);
+               ^
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_cos.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_dim.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_ri.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/signbit.c.o
+      [ 15%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_cosh.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_dnnt.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_zi.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/sue.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_dim.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_indx.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/pow_zz.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/system_.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_exp.c.o
+      [ 16%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_len.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_abs.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/typesize.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_imag.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_mod.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_acos.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/uio.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_int.c.o
+      [ 17%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_nint.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_asin.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/uninit.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_lg10.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/h_sign.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_atan.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/util.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_log.c.o
+      [ 18%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/hl_ge.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_atn2.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/wref.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_mod.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/hl_gt.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_cnjg.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/wrtfmt.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_nint.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/hl_le.c.o
+      [ 19%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_cos.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/wsfe.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_prod.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/hl_lt.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_cosh.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/wsle.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_sign.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i77vers.c.o
+      [ 20%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_dim.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/wsne.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_sin.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_abs.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_exp.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/xwsne.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_sinh.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_dim.c.o
+      [ 21%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_imag.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_abs.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_sqrt.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_dnnt.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_int.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_cos.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_tan.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_indx.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_lg10.c.o
+      [ 22%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_div.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/d_tanh.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_len.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_log.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_exp.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/derf_.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_mod.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_mod.c.o
+      [ 23%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_log.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/derfc_.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_nint.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_nint.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_sin.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/dfe.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/i_sign.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/r_sign.c.o
+      [ 24%] Building C object vendor/f2c/CMakeFiles/f2c_vendored.dir/z_sqrt.c.o
+      [ 24%] Built target f2c_vendored
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_1.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_2.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_aat.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_control.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_defaults.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_info.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_order.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_post_tree.c.o
+      [ 25%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_postorder.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_preprocess.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/amd/amd_valid.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/advbas.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/asnhall.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/asnlp.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/asnokalg.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/ckasn.c.o
+      [ 26%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/ckcnf.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/cplex.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/cpp.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/cpxbas.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/graph.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/gridgen.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/intfeas1.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/maxffalg.c.o
+      [ 27%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/maxflp.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/mcflp.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/mcfokalg.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/mcfrelax.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/minisat1.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/mpl.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/mps.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/netgen.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/npp.c.o
+      [ 28%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/pript.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prmip.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prob1.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prob2.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prob3.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prob4.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prob5.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prrngs.c.o
+      [ 29%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/prsol.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdasn.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdcc.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdcnf.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdipt.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdmaxf.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdmcf.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdmip.c.o
+      [ 30%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdprob.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rdsol.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/rmfgen.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/strong.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/topsort.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wcliqex.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/weak.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrasn.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrcc.c.o
+      [ 31%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrcnf.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wript.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrmaxf.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrmcf.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrmip.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrprob.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/api/wrsol.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/btf.c.o
+      [ 32%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/btfint.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/fhv.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/fhvint.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/ifu.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/luf.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/lufint.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/scf.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/scfint.c.o
+      [ 33%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/sgf.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/bflib/sva.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/colamd/colamd.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/bfd.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/bfx.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi06.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi07.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi08.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi09.c.o
+      [ 34%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi10.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi12.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpapi13.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios01.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios02.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios03.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios07.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios09.c.o
+      [ 35%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios11.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpios12.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpipm.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpmat.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpscl.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpssx01.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/glpssx02.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/draft/lux.c.o
+      [ 36%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/alloc.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/dlsup.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/env.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/error.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/stdc.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/stdout.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/stream.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/time.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/env/tls.c.o
+      [ 37%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/cfg.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/cfg1.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/cfg2.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/clqcut.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/covgen.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/fpump.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/gmicut.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/gmigen.c.o
+      [ 38%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/mirgen.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/intopt/spv.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/minisat/minisat.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/avl.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/bignum.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/dimacs.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/dmp.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/ffalg.c.o
+      [ 39%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/fp2rat.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/fvs.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/gcd.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/hbm.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/jd.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/keller.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/ks.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/mc13d.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/mc21a.c.o
+      [ 40%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/mt1.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/mygmp.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/okalg.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/qmd.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/relax4.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/rgr.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/rng.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/rng1.c.o
+      [ 41%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/round2n.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/spm.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/str2int.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/str2num.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/strspx.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/strtrim.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/triang.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/wclique.c.o
+      [ 42%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/misc/wclique1.c.o
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/vendor/glpk/misc/wclique1.c: In function ‘_glp_wclique1’:
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/vendor/glpk/misc/wclique1.c:111:7: warning: ‘memset’ specified size between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+             memset(&skip[1], 0, sizeof(char) * n);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/vendor/glpk/misc/wclique1.c:113:7: warning: ‘memset’ specified size between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+             memset(&d_flag[1], 0, sizeof(char) * n);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl1.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl2.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl3.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl4.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl5.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mpl6.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/mpl/mplsql.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp1.c.o
+      [ 43%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp2.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp3.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp4.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp5.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/npp/npp6.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/proxy/proxy.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/proxy/proxy1.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxat.c.o
+      [ 44%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxchuzc.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxchuzr.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxlp.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxnt.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxprim.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spxprob.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spychuzc.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spychuzr.c.o
+      [ 45%] Building C object vendor/glpk/CMakeFiles/glpk_vendored.dir/simplex/spydual.c.o
+      [ 45%] Built target glpk_vendored
+      [ 45%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dscal.c.o
+      [ 45%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dswap.c.o
+      [ 45%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/lsame.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dnrm2.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/daxpy.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dgemv.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dger.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dgemm.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dcopy.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dtrmm.c.o
+      [ 46%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dtrmv.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/drot.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/ddot.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dasum.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dsymv.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dsyr2k.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dsyr2.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dtrsm.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dsyrk.c.o
+      [ 47%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/dtrsv.c.o
+      [ 48%] Building C object vendor/lapack/CMakeFiles/blas_vendored.dir/idamax.c.o
+      [ 48%] Built target blas_vendored
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgeev.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgebak.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgebal.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/disnan.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaisnan.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgehrd.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgehd2.c.o
+      [ 49%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarf.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/iladlc.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/iladlr.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarfg.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlapy2.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlahr2.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlacpy.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarfb.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/ilaenv.c.o
+      [ 50%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/ieeeck.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/iparmq.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dhseqr.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlahqr.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlabad.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlanv2.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr0.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr3.c.o
+      [ 51%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr4.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr2.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaset.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dormhr.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dormqr.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarft.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dorm2r.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dtrexc.c.o
+      [ 52%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaexc.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlange.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlassq.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarfx.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlartg.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasy2.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr5.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqr1.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlascl.c.o
+      [ 53%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dorghr.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dorgqr.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dorg2r.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dtrevc.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaln2.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dladiv.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dsyevr.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlansy.c.o
+      [ 54%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dormtr.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dormql.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dorm2l.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dstebz.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaebz.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dstein.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlagtf.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlagts.c.o
+      [ 55%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarnv.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaruv.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dstemr.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlae2.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaev2.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlanst.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrc.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarre.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarra.c.o
+      [ 56%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrb.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaneg.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrd.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrk.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasq2.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasq3.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasq4.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasq5.c.o
+      [ 57%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasq6.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasrt.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrj.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrr.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrv.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlar1v.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlarrf.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dsterf.c.o
+      [ 58%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dsytrd.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlatrd.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dsytd2.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlanhs.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgeqr2.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dtrsen.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlacn2.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dtrsyl.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlasr.c.o
+      [ 59%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dsteqr.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgeevx.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dtrsna.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaqtr.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgetrf.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgetf2.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlaswp.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgetrs.c.o
+      [ 60%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dgesv.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dpotrf.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dpotf2.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/xerbla.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/len_trim.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/dlamch.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/lapack_vendored.dir/fortran_intrinsics.c.o
+      [ 61%] Built target lapack_vendored
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dnaupd.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dnaup2.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dgetv0.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dvout.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/second.c.o
+      [ 61%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dmout.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dnaitr.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/ivout.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dnapps.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dnconv.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dneigh.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dlaqrb.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dngets.c.o
+      [ 62%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsortc.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dstatn.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dneupd.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsaupd.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsaup2.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsaitr.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsapps.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsconv.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dseigt.c.o
+      [ 63%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dstqrb.c.o
+      [ 64%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsgets.c.o
+      [ 64%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsortr.c.o
+      [ 64%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dstats.c.o
+      [ 64%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dseupd.c.o
+      [ 64%] Building C object vendor/lapack/CMakeFiles/arpack_vendored.dir/dsesrt.c.o
+      [ 64%] Built target arpack_vendored
+      [ 64%] Building C object vendor/mini-gmp/CMakeFiles/gmp_vendored.dir/mini-gmp.c.o
+      [ 64%] Built target gmp_vendored
+      [ 64%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-advance-64.c.o
+      [ 64%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-advance-128.c.o
+      [ 65%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-output-32.c.o
+      [ 65%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-output-64.c.o
+      [ 65%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-output-128.c.o
+      [ 65%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-rngs-64.c.o
+      [ 65%] Building C object vendor/pcg/CMakeFiles/pcg.dir/pcg-rngs-128.c.o
+      [ 65%] Built target pcg
+      [ 65%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/gss.c.o
+      [ 65%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/hzeta.c.o
+      [ 65%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/kolmogorov.c.o
+      [ 65%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/lbfgs.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/mt.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/options.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/platform.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/plfit.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/plfit_error.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/rbinom.c.o
+      [ 66%] Building C object vendor/plfit/CMakeFiles/plfit_vendored.dir/sampling.c.o
+      [ 66%] Built target plfit_vendored
+      [ 66%] Built target parsersources
+      [ 66%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_base_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_igraph_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_preprocessed_ge_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_preprocessed_gs_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_preprocessed_scc_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_preprocessed_schur_graph.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_result.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_solver.cpp.o
+      [ 67%] Building CXX object src/centrality/prpack/CMakeFiles/prpack.dir/prpack_utils.cpp.o
+      [ 67%] Built target prpack
+      [ 68%] Building C object src/cliques/cliquer/CMakeFiles/cliquer.dir/cliquer.c.o
+      [ 68%] Building C object src/cliques/cliquer/CMakeFiles/cliquer.dir/cliquer_graph.c.o
+      [ 68%] Building C object src/cliques/cliquer/CMakeFiles/cliquer.dir/reorder.c.o
+      [ 68%] Built target cliquer
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/array.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/buckets.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/cutheap.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/dqueue.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/error.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/estack.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/fixed_vectorlist.c.o
+      [ 69%] Building C object src/CMakeFiles/igraph.dir/core/genheap.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/grid.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/heap.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/indheap.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/interruption.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/marked_queue.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/matrix.c.o
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/src/core/matrix.c: In function ‘igraph_matrix_all_e_tol’:
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/src/core/matrix.c:234:13: warning: ‘igraph_vector_e_tol’ is deprecated [-Wdeprecated-declarations]
+                   igraph_vector_e_tol(&lhs->data, &rhs->data, tol);
+                   ^~~~~~~~~~~~~~~~~~~
+      In file included from /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/include/igraph_matrix.h:29,
+                       from /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/src/core/matrix.c:24:
+      /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/source/igraph/include/igraph_vector.h:135:47: note: declared here
+       IGRAPH_DEPRECATED IGRAPH_EXPORT igraph_bool_t igraph_vector_e_tol(const igraph_vector_t *lhs,
+                                                     ^~~~~~~~~~~~~~~~~~~
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/matrix_list.c.o
+      [ 70%] Building C object src/CMakeFiles/igraph.dir/core/memory.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/printing.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/progress.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/psumtree.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/set.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/sparsemat.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/stack.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/statusbar.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/strvector.c.o
+      [ 71%] Building C object src/CMakeFiles/igraph.dir/core/trie.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/core/vector.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/core/vector_list.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/core/vector_ptr.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/math/complex.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/math/safe_intop.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/math/utils.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/linalg/arpack.c.o
+      [ 72%] Building C object src/CMakeFiles/igraph.dir/linalg/blas.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/linalg/eigen.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/linalg/lapack.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/random/random.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/random/rng_glibc2.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/random/rng_mt19937.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/random/rng_pcg32.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/random/rng_pcg64.c.o
+      [ 73%] Building C object src/CMakeFiles/igraph.dir/graph/adjlist.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/attributes.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/basic_query.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/caching.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/cattributes.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/graph_list.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/iterators.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/type_common.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/type_indexededgelist.c.o
+      [ 74%] Building C object src/CMakeFiles/igraph.dir/graph/visitors.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/adjacency.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/atlas.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/basic_constructors.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/circulant.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/de_bruijn.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/famous.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/full.c.o
+      [ 75%] Building C object src/CMakeFiles/igraph.dir/constructors/generalized_petersen.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/kautz.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/lattices.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/lcf.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/linegraph.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/prufer.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/regular.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/constructors/trees.c.o
+      [ 76%] Building C object src/CMakeFiles/igraph.dir/games/barabasi.c.o
+      [ 77%] Building C object src/CMakeFiles/igraph.dir/games/callaway_traits.c.o
+      [ 77%] Building C object src/CMakeFiles/igraph.dir/games/citations.c.o
+      [ 77%] Building C object src/CMakeFiles/igraph.dir/games/correlated.c.o
+      [ 77%] Building CXX object src/CMakeFiles/igraph.dir/games/degree_sequence_vl/gengraph_degree_sequence.cpp.o
+      [ 77%] Building CXX object src/CMakeFiles/igraph.dir/games/degree_sequence_vl/gengraph_graph_molloy_hash.cpp.o
+      [ 77%] Building CXX object src/CMakeFiles/igraph.dir/games/degree_sequence_vl/gengraph_graph_molloy_optimized.cpp.o
+      [ 77%] Building CXX object src/CMakeFiles/igraph.dir/games/degree_sequence_vl/gengraph_mr-connected.cpp.o
+      [ 77%] Building C object src/CMakeFiles/igraph.dir/games/degree_sequence.c.o
+      [ 77%] Building C object src/CMakeFiles/igraph.dir/games/dotproduct.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/erdos_renyi.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/establishment.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/forestfire.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/grg.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/growing_random.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/islands.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/k_regular.c.o
+      [ 78%] Building C object src/CMakeFiles/igraph.dir/games/preference.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/games/recent_degree.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/games/sbm.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/games/static_fitness.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/games/tree.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/games/watts_strogatz.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/centrality/betweenness.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/centrality/centrality_other.c.o
+      [ 79%] Building C object src/CMakeFiles/igraph.dir/centrality/centralization.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/centrality/closeness.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/centrality/coreness.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/centrality/eigenvector.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/centrality/hub_authority.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/centrality/pagerank.c.o
+      [ 80%] Building CXX object src/CMakeFiles/igraph.dir/centrality/truss.cpp.o
+      [ 80%] Building CXX object src/CMakeFiles/igraph.dir/centrality/prpack.cpp.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/cliques/cliquer_wrapper.c.o
+      [ 80%] Building C object src/CMakeFiles/igraph.dir/cliques/cliques.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/cliques/maximal_cliques.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/cliques/glet.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/community/community_misc.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/community/edge_betweenness.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/community/fast_modularity.c.o
+      [ 81%] Building C object src/CMakeFiles/igraph.dir/community/fluid.c.o
+      [ 81%] Building CXX object src/CMakeFiles/igraph.dir/community/infomap/infomap_FlowGraph.cc.o
+      [ 81%] Building CXX object src/CMakeFiles/igraph.dir/community/infomap/infomap_Greedy.cc.o
+      [ 82%] Building CXX object src/CMakeFiles/igraph.dir/community/infomap/infomap.cc.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/label_propagation.c.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/leading_eigenvector.c.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/leiden.c.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/louvain.c.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/modularity.c.o
+      [ 82%] Building C object src/CMakeFiles/igraph.dir/community/optimal_modularity.c.o
+      [ 82%] Building CXX object src/CMakeFiles/igraph.dir/community/spinglass/clustertool.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/spinglass/NetDataTypes.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/spinglass/NetRoutines.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/spinglass/pottsmodel_2.cpp.o
+      [ 83%] Building C object src/CMakeFiles/igraph.dir/community/voronoi.c.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/walktrap/walktrap_communities.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/walktrap/walktrap_graph.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/walktrap/walktrap_heap.cpp.o
+      [ 83%] Building CXX object src/CMakeFiles/igraph.dir/community/walktrap/walktrap.cpp.o
+      [ 83%] Building C object src/CMakeFiles/igraph.dir/connectivity/cohesive_blocks.c.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/connectivity/components.c.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/connectivity/separators.c.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/flow/flow.c.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/flow/flow_conversion.c.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/flow/st-cuts.c.o
+      [ 84%] Building CXX object src/CMakeFiles/igraph.dir/hrg/hrg_types.cc.o
+      [ 84%] Building CXX object src/CMakeFiles/igraph.dir/hrg/hrg.cc.o
+      [ 84%] Building C object src/CMakeFiles/igraph.dir/io/dimacs.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/dl.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/dot.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/edgelist.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/graphml.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/gml-tree.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/gml.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/graphdb.c.o
+      [ 85%] Building C object src/CMakeFiles/igraph.dir/io/leda.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/lgl.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/ncol.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/pajek.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parse_utils.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parsers/dl-lexer.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parsers/dl-parser.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parsers/gml-lexer.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parsers/gml-parser.c.o
+      [ 86%] Building C object src/CMakeFiles/igraph.dir/io/parsers/lgl-lexer.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/io/parsers/lgl-parser.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/io/parsers/ncol-lexer.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/io/parsers/ncol-parser.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/io/parsers/pajek-lexer.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/io/parsers/pajek-parser.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/layout/circular.c.o
+      [ 87%] Building C object src/CMakeFiles/igraph.dir/layout/davidson_harel.c.o
+      [ 87%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/DensityGrid.cpp.o
+      [ 88%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/DensityGrid_3d.cpp.o
+      [ 88%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/drl_graph.cpp.o
+      [ 88%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/drl_graph_3d.cpp.o
+      [ 88%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/drl_layout.cpp.o
+      [ 88%] Building CXX object src/CMakeFiles/igraph.dir/layout/drl/drl_layout_3d.cpp.o
+      [ 88%] Building C object src/CMakeFiles/igraph.dir/layout/fruchterman_reingold.c.o
+      [ 88%] Building C object src/CMakeFiles/igraph.dir/layout/gem.c.o
+      [ 88%] Building C object src/CMakeFiles/igraph.dir/layout/graphopt.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/kamada_kawai.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/large_graph.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/layout_bipartite.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/layout_grid.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/layout_random.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/mds.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/merge_dla.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/merge_grid.c.o
+      [ 89%] Building C object src/CMakeFiles/igraph.dir/layout/reingold_tilford.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/layout/sugiyama.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/layout/umap.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/add_edge.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/complementer.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/compose.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/connect_neighborhood.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/contract.c.o
+      [ 90%] Building C object src/CMakeFiles/igraph.dir/operators/difference.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/disjoint_union.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/intersection.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/misc_internal.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/permute.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/reverse.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/rewire.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/rewire_edges.c.o
+      [ 91%] Building C object src/CMakeFiles/igraph.dir/operators/simplify.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/operators/subgraph.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/operators/union.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/all_shortest_paths.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/astar.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/bellman_ford.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/dijkstra.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/distances.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/eulerian.c.o
+      [ 92%] Building C object src/CMakeFiles/igraph.dir/paths/floyd_warshall.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/histogram.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/johnson.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/random_walk.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/shortest_paths.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/simple_paths.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/sparsifier.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/unweighted.c.o
+      [ 93%] Building C object src/CMakeFiles/igraph.dir/paths/voronoi.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/paths/widest_paths.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/basic_properties.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/constraint.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/convergence_degree.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/dag.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/degrees.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/ecc.c.o
+      [ 94%] Building C object src/CMakeFiles/igraph.dir/properties/girth.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/loops.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/multiplicity.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/neighborhood.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/perfect.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/spectral.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/trees.c.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/properties/triangles.c.o
+      [ 95%] Building CXX object src/CMakeFiles/igraph.dir/isomorphism/bliss.cc.o
+      [ 95%] Building C object src/CMakeFiles/igraph.dir/isomorphism/isoclasses.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/isomorphism/lad.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/isomorphism/isomorphism_misc.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/isomorphism/queries.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/isomorphism/vf2.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/misc/bipartite.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/misc/chordality.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/misc/cocitation.c.o
+      [ 96%] Building C object src/CMakeFiles/igraph.dir/misc/coloring.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/conversion.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/cycle_bases.c.o
+      [ 97%] Building CXX object src/CMakeFiles/igraph.dir/misc/degree_sequence.cpp.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/embedding.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/feedback_arc_set.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/graphicality.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/matching.c.o
+      [ 97%] Building C object src/CMakeFiles/igraph.dir/misc/microscopic_update.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/mixing.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/motifs.c.o
+      [ 98%] Building CXX object src/CMakeFiles/igraph.dir/misc/order_cycle.cpp.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/other.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/power_law_fit.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/scan.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/sir.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/misc/spanning_trees.c.o
+      [ 98%] Building C object src/CMakeFiles/igraph.dir/internal/glpk_support.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/hacks.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/lsap.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/qsort_r.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/qsort.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/utils.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/internal/zeroin.c.o
+      [100%] Building C object src/CMakeFiles/igraph.dir/version.c.o
+      [100%] Linking CXX static library libigraph.a
+      [100%] Built target igraph
+      Installing build...
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/libigraph.a
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_embedding.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_types.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_neighborhood.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_array.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_vector_list.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_statusbar.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_centrality.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_eigen.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_separators.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_coloring.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_hrg.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_cycles.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_mixing.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_strvector.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_graphlets.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_matrix.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_progress.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_matching.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_microscopic_update.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_constants.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_cocitation.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_qsort.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_visitor.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_transitivity.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_flow.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_arpack.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_structural.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_eulerian.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_bipartite.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_typed_list_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_interrupt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_scan.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_random.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_matrix_list.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_games.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_nongraph.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_pmt_off.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_dqueue_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_adjlist.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_foreign.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_vector_ptr.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_sparsemat.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_interface.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_layout.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_paths.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_operators.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_community.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_psumtree.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_vector.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_vector_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_dqueue.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_motifs.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_stack.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_graphicality.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_decls.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_complex.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_conversion.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_heap_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_vector_type.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_attributes.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_cohesive_blocks.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_matrix_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_lapack.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_error.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_cliques.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_epidemics.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_graph_list.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_datatype.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_topology.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_iterators.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_array_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_constructors.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_stack_pmt.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_components.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_memory.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_lsap.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_blas.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_heap.h
+      -- Up-to-date: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_version.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_threading.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_export.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/include/igraph/igraph_config.h
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/pkgconfig/igraph.pc
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/cmake/igraph/igraph-config.cmake
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/cmake/igraph/igraph-config-version.cmake
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/cmake/igraph/igraph-targets.cmake
+      -- Installing: /tmp/pip-install-701zt82c/igraph_f3badab883834576a54b48b59eca4ae1/vendor/install/igraph/lib64/cmake/igraph/igraph-targets-release.cmake
+      Found igraph as static library in vendor/install/igraph/lib64/libigraph.a.
+      Build type: dynamic extension with vendored igraph source
+      Include path: vendor/install/igraph/include/igraph
+      Library path: vendor/install/igraph/lib64 /usr/local/lib64 /usr/local/lib /usr/lib64 /usr/lib /lib64 /lib
+      Runtime library path:
+      Linked dynamic libraries: m gomp pthread xml2
+      Linked static libraries: vendor/install/igraph/lib64/libigraph.a
+      Extra compiler options:
+      Extra linker options:
+      building 'igraph._igraph' extension
+      creating build/temp.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-3.10/src
+      creating build/temp.linux-x86_64-3.10/src/_igraph
+      gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -Ivendor/install/igraph/include/igraph -I/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/include -I/opt/graalpy/include/python3.10 -c src/_igraph/arpackobject.c -o build/temp.linux-x86_64-3.10/src/_igraph/arpackobject.o
+      In file included from /opt/graalpy/include/python3.10/Python.h:113,
+                       from src/_igraph/preamble.h:33,
+                       from src/_igraph/arpackobject.h:26,
+                       from src/_igraph/arpackobject.c:23:
+      /opt/graalpy/include/python3.10/sliceobject.h:61:37: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+       PyAPI_FUNC(PyObject*) PySlice_Start(PySliceObject *slice);
+                                           ^~~~~~~~~~~~~
+                                           PyFrameObject
+      /opt/graalpy/include/python3.10/sliceobject.h:62:36: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+       PyAPI_FUNC(PyObject*) PySlice_Stop(PySliceObject *slice);
+                                          ^~~~~~~~~~~~~
+                                          PyFrameObject
+      /opt/graalpy/include/python3.10/sliceobject.h:63:36: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+       PyAPI_FUNC(PyObject*) PySlice_Step(PySliceObject *slice);
+                                          ^~~~~~~~~~~~~
+                                          PyFrameObject
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for igraph
+  Building wheel for pygraphviz (setup.py): started
+  Building wheel for pygraphviz (setup.py): finished with status 'done'
+  Created wheel for pygraphviz: filename=pygraphviz-1.11-graalpy310-graalpy231_310_native-linux_x86_64.whl size=108925 sha256=56c30c2433d3e75599711a714546166baea0168780ce66f622623d54ebd6b2ac
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/07/c0/18/e437f07ad62cda9307b487f8ee2ad28e274e1f2dec2fd0ee54
+  Building wheel for sphinxtesters (setup.py): started
+  Building wheel for sphinxtesters (setup.py): finished with status 'done'
+  Created wheel for sphinxtesters: filename=sphinxtesters-0.2.3-py3-none-any.whl size=16319 sha256=7f22213dee368b9417279f81ba99034b45510e2efda805993c161643c3ebf619
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/a8/20/8a/ea7a4c42218e3c69457ef73c7cc59ad2abc1432f9a0fe54ebf
+  Building wheel for rasterio (pyproject.toml): started
+  Building wheel for rasterio (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for rasterio (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [242 lines of output]
+      INFO:root:GDAL API version obtained from gdal-config: 3.6.1
+      INFO:root:GDAL API version obtained from environment: 3.6.1
+      /opt/graalpy/lib/python3.10/distutils/extension.py:132: UserWarning: Unknown Extension options: 'cython_compile_time_env'
+        warnings.warn(msg)
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-3.10
+      creating build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/dtypes.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/_path.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/enums.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/warp.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/drivers.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/__init__.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/env.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/profiles.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/errors.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/session.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/path.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/tools.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/rpc.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/plot.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/io.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/control.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/mask.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/vrt.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/coords.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/_show_versions.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/sample.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/features.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/windows.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/merge.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/transform.py -> build/lib.linux-x86_64-3.10/rasterio
+      copying ./rasterio/fill.py -> build/lib.linux-x86_64-3.10/rasterio
+      creating build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/warp.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/bounds.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/convert.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/options.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/rm.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/__init__.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/calc.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/insp.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/blocks.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/env.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/overview.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/main.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/info.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/shapes.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/clip.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/stack.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/helpers.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/mask.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/gcps.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/sample.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/rasterize.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/edit_info.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/merge.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      copying ./rasterio/rio/transform.py -> build/lib.linux-x86_64-3.10/rasterio/rio
+      running egg_info
+      writing rasterio.egg-info/PKG-INFO
+      writing dependency_links to rasterio.egg-info/dependency_links.txt
+      writing entry points to rasterio.egg-info/entry_points.txt
+      writing requirements to rasterio.egg-info/requires.txt
+      writing top-level names to rasterio.egg-info/top_level.txt
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_geometry.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_spatialref.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+      dependency /tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_conv.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_error.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_progress.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_string.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/cpl_vsi_virtual.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdal_alg.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/gdalwarper.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_api.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_core.h won't be automatically included in the manifest: the path must be relative
+      dependency /usr/local/include/ogr_srs_api.h won't be automatically included in the manifest: the path must be relative
+      reading manifest file 'rasterio.egg-info/SOURCES.txt'
+      adding license file 'LICENSE.txt'
+      adding license file 'AUTHORS.txt'
+      writing manifest file 'rasterio.egg-info/SOURCES.txt'
+      running build_ext
+      building 'rasterio._base' extension
+      creating build/temp.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-3.10/rasterio
+      gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -I/tmp/pip-build-env-4m5182jm/overlay/lib/python3.10/site-packages/numpy/core/include -I/usr/local/include -I/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/include -I/opt/graalpy/include/python3.10 -c rasterio/_base.c -o build/temp.linux-x86_64-3.10/rasterio/_base.o -Wno-unused-parameter -Wno-unused-function
+      rasterio/_base.c:1254:47: warning: missing terminating " character
+       #define __PYX_DEFAULT_STRING_ENCODING "utf8""""
+                                                     ^
+      rasterio/_base.c: In function ‘__Pyx_PyUnicode_FromString’:
+      rasterio/_base.c:1254:47: error: missing terminating " character
+       #define __PYX_DEFAULT_STRING_ENCODING "utf8""""
+                                                     ^
+      rasterio/_base.c:1456:86: note: in expansion of macro ‘__PYX_DEFAULT_STRING_ENCODING’
+       #define __Pyx_PyUnicode_FromStringAndSize(c_str, size) PyUnicode_Decode(c_str, size, __PYX_DEFAULT_STRING_ENCODING, NULL)
+                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      rasterio/_base.c:43603:12: note: in expansion of macro ‘__Pyx_PyUnicode_FromStringAndSize’
+           return __Pyx_PyUnicode_FromStringAndSize(c_str, len);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for rasterio
+  Building wheel for rpds-py (pyproject.toml): started
+  Building wheel for rpds-py (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for rpds-py (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [41 lines of output]
+      Running `maturin pep517 build-wheel -i /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python --compatibility off`
+      📦 Including license file "/tmp/pip-install-701zt82c/rpds-py_591d01213c684099badf3460272861e6/LICENSE"
+      🔗 Found pyo3 bindings
+      🐍 Found GraalPy 3.10 at /workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python
+      📡 Using build options features from pyproject.toml
+         Compiling target-lexicon v0.12.9
+         Compiling autocfg v1.1.0
+         Compiling once_cell v1.18.0
+         Compiling proc-macro2 v1.0.66
+         Compiling unicode-ident v1.0.11
+         Compiling libc v0.2.147
+         Compiling lock_api v0.4.10
+         Compiling parking_lot_core v0.9.8
+         Compiling pyo3-build-config v0.20.0
+         Compiling quote v1.0.31
+         Compiling syn v2.0.32
+         Compiling memoffset v0.9.0
+         Compiling cfg-if v1.0.0
+         Compiling smallvec v1.11.0
+         Compiling scopeguard v1.1.0
+         Compiling heck v0.4.1
+         Compiling static_assertions v1.1.0
+         Compiling triomphe v0.1.9
+         Compiling parking_lot v0.12.1
+      error: failed to run custom build command for `pyo3-build-config v0.20.0`
+      
+      Caused by:
+        process didn't exit successfully: `/tmp/pip-install-701zt82c/rpds-py_591d01213c684099badf3460272861e6/target/release/build/pyo3-build-config-2dd999090c931a94/build-script-build` (exit status: 1)
+        --- stdout
+        cargo:rerun-if-env-changed=PYO3_CONFIG_FILE
+        cargo:rerun-if-env-changed=PYO3_NO_PYTHON
+        cargo:rerun-if-env-changed=PYO3_ENVIRONMENT_SIGNATURE
+        cargo:rerun-if-env-changed=PYO3_PYTHON
+      
+        --- stderr
+        error: unknown interpreter: GraalVM
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `PYO3_ENVIRONMENT_SIGNATURE="graalpy-3.10-64bit" PYO3_PYTHON="/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python" PYTHON_SYS_EXECUTABLE="/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python" "cargo" "rustc" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "/tmp/pip-install-701zt82c/rpds-py_591d01213c684099badf3460272861e6/Cargo.toml" "--release" "--lib"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for rpds-py
+Successfully built nb2plots pygraphviz sphinxtesters
+Failed to build igraph rasterio rpds-py
+ERROR: Could not build wheels for igraph, rasterio, rpds-py, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements/release.txt, -rrequirements/doc.txt, -rrequirements/example.txt, -rrequirements/default.txt, -rrequirements/extra.txt, -rrequirements/test.txt, -rrequirements/developer.txt]; v = InvocationError('/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements/release.txt -rrequirements/doc.txt -rrequirements/example.txt -rrequirements/default.txt -rrequirements/extra.txt -rrequirements/test.txt -rrequirements/developer.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements/release.txt, -rrequirements/doc.txt, -rrequirements/example.txt, -rrequirements/default.txt, -rrequirements/extra.txt, -rrequirements/test.txt, -rrequirements/developer.txt]; v = InvocationError('/workdir/networkx-2.8.8/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements/release.txt -rrequirements/doc.txt -rrequirements/example.txt -rrequirements/default.txt -rrequirements/extra.txt -rrequirements/test.txt -rrequirements/developer.txt', 1)

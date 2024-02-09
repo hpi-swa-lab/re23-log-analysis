@@ -1,0 +1,158 @@
+GLOB sdist-make: /workdir/kubernetes-25.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/kubernetes-25.3.0/.tox/.tmp/package/1/kubernetes-25.3.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,autopep8==2.0.4,Babel==2.13.1,cachetools==5.3.2,certifi==2023.11.17,charset-normalizer==3.3.2,commonmark==0.9.1,coverage==7.3.2,docutils==0.20.1,exceptiongroup==1.2.0,google-auth==2.23.4,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,isort==5.12.0,Jinja2==3.1.2,kubernetes @ file:///workdir/kubernetes-25.3.0/.tox/.tmp/package/1/kubernetes-25.3.0.zip#sha256=f53cc373379f78dcf1b9df208bcb52583beb6808b69a401c0390046da0d4db18,Markdown==3.5.1,MarkupSafe==2.1.3,mock==5.1.0,nose==1.3.7,oauthlib==3.2.2,packaging==23.2,pluggy==1.3.0,py==1.11.0,pyasn1==0.5.1,pyasn1-modules==0.3.0,pycodestyle==2.11.1,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,python-dateutil==2.8.2,PyYAML==6.0.1,randomize==0.14,recommonmark==0.7.1,requests==2.31.0,requests-oauthlib==1.3.1,rsa==4.9,six==1.16.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-markdown-tables==0.0.17,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0,websocket-client==1.6.4
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='445879796'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/kubernetes/25.3.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/kubernetes-25.3.0
+plugins: cov-4.1.0
+collecting ... collected 118 items / 16 errors
+
+==================================== ERRORS ====================================
+___________ ERROR collecting kubernetes/base/dynamic/test_client.py ____________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/base/dynamic/test_client.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+kubernetes/base/dynamic/test_client.py:19: in <module>
+    from kubernetes.e2e_test import base
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+__________ ERROR collecting kubernetes/base/dynamic/test_discovery.py __________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/base/dynamic/test_discovery.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+kubernetes/base/dynamic/test_discovery.py:18: in <module>
+    from kubernetes.e2e_test import base
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+_____________ ERROR collecting kubernetes/config/dateutil_test.py ______________
+import file mismatch:
+imported module 'kubernetes.config.dateutil_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/config/dateutil_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/config/dateutil_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting kubernetes/config/exec_provider_test.py ___________
+import file mismatch:
+imported module 'kubernetes.config.exec_provider_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/config/exec_provider_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/config/exec_provider_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_________ ERROR collecting kubernetes/config/incluster_config_test.py __________
+import file mismatch:
+imported module 'kubernetes.config.incluster_config_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/config/incluster_config_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/config/incluster_config_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+____________ ERROR collecting kubernetes/config/kube_config_test.py ____________
+import file mismatch:
+imported module 'kubernetes.config.kube_config_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/config/kube_config_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/config/kube_config_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________ ERROR collecting kubernetes/dynamic/test_client.py ______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/dynamic/test_client.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/dynamic/test_client.py:19: in <module>
+    from kubernetes.e2e_test import base
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+____________ ERROR collecting kubernetes/dynamic/test_discovery.py _____________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/dynamic/test_discovery.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/dynamic/test_discovery.py:18: in <module>
+    from kubernetes.e2e_test import base
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+______________ ERROR collecting kubernetes/e2e_test/test_apps.py _______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/e2e_test/test_apps.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+______________ ERROR collecting kubernetes/e2e_test/test_batch.py ______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/e2e_test/test_batch.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+_____________ ERROR collecting kubernetes/e2e_test/test_client.py ______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/e2e_test/test_client.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+______________ ERROR collecting kubernetes/e2e_test/test_utils.py ______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/e2e_test/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+______________ ERROR collecting kubernetes/e2e_test/test_watch.py ______________
+ImportError while importing test module '/workdir/kubernetes-25.3.0/kubernetes/e2e_test/test_watch.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+E   ModuleNotFoundError: No module named 'kubernetes.e2e_test'
+______ ERROR collecting kubernetes/leaderelection/leaderelection_test.py _______
+import file mismatch:
+imported module 'kubernetes.leaderelection.leaderelection_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/leaderelection/leaderelection_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/leaderelection/leaderelection_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________ ERROR collecting kubernetes/stream/ws_client_test.py _____________
+import file mismatch:
+imported module 'kubernetes.stream.ws_client_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/stream/ws_client_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/stream/ws_client_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_______________ ERROR collecting kubernetes/watch/watch_test.py ________________
+import file mismatch:
+imported module 'kubernetes.watch.watch_test' has this __file__ attribute:
+  /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/kubernetes/watch/watch_test.py
+which is not the same as the test file we want to collect:
+  /workdir/kubernetes-25.3.0/kubernetes/watch/watch_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+- generated xml file: /workdir/results/kubernetes/25.3.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR kubernetes/base/dynamic/test_client.py
+ERROR kubernetes/base/dynamic/test_discovery.py
+ERROR kubernetes/config/dateutil_test.py
+ERROR kubernetes/config/exec_provider_test.py
+ERROR kubernetes/config/incluster_config_test.py
+ERROR kubernetes/config/kube_config_test.py
+ERROR kubernetes/dynamic/test_client.py
+ERROR kubernetes/dynamic/test_discovery.py
+ERROR kubernetes/e2e_test/test_apps.py
+ERROR kubernetes/e2e_test/test_batch.py
+ERROR kubernetes/e2e_test/test_client.py
+ERROR kubernetes/e2e_test/test_utils.py
+ERROR kubernetes/e2e_test/test_watch.py
+ERROR kubernetes/leaderelection/leaderelection_test.py
+ERROR kubernetes/stream/ws_client_test.py
+ERROR kubernetes/watch/watch_test.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 16 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 16 errors in 0.83s ==============================
+ERROR: InvocationError for command /workdir/kubernetes-25.3.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/kubernetes/25.3.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

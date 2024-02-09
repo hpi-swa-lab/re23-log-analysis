@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="tests.test_cli.TestConvert-20231122062612" tests="9" file="tests/test_cli.py" time="3.401" timestamp="2023-11-22T06:26:15" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_cli.TestConvert" name="test_anonymous_reference_option" time="0.096" timestamp="2023-11-22T06:26:12" file="tests/test_cli.py" line="129"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_disable_inline_math" time="0.035" timestamp="2023-11-22T06:26:12" file="tests/test_cli.py" line="135"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_dryrun" time="0.028" timestamp="2023-11-22T06:26:12" file="tests/test_cli.py" line="69"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_no_file" time="2.932" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="51"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_overwrite_file" time="0.029" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="89"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_overwrite_option" time="0.227" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="104"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_parse_file" time="0.015" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="63"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_underscore_option" time="0.024" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="122"/>
+		<testcase classname="tests.test_cli.TestConvert" name="test_write_file" time="0.015" timestamp="2023-11-22T06:26:15" file="tests/test_cli.py" line="81"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestBasic-20231122062612" tests="6" file="tests/test_renderer.py" time="0.359" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestBasic" name="test_fail_rst" time="0.085" timestamp="2023-11-22T06:26:15" file="tests/test_renderer.py" line="51">
+			<system-err><![CDATA[<string>:1: (WARNING/2) Inline literal start-string without end-string.
+<string>:1: (WARNING/2) Inline interpreted text or phrase reference start-string without end-string.
+]]></system-err>
+		</testcase>
+		<testcase classname="tests.test_renderer.TestBasic" name="test_hr" time="0.043" timestamp="2023-11-22T06:26:15" file="tests/test_renderer.py" line="71"/>
+		<testcase classname="tests.test_renderer.TestBasic" name="test_linebreak" time="0.141" timestamp="2023-11-22T06:26:15" file="tests/test_renderer.py" line="76"/>
+		<testcase classname="tests.test_renderer.TestBasic" name="test_multi_paragraph" time="0.030" timestamp="2023-11-22T06:26:15" file="tests/test_renderer.py" line="66"/>
+		<testcase classname="tests.test_renderer.TestBasic" name="test_multiline_paragraph" time="0.028" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="61"/>
+		<testcase classname="tests.test_renderer.TestBasic" name="test_simple_paragraph" time="0.032" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="56"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestBlockQuote-20231122062612" tests="3" file="tests/test_renderer.py" time="0.083" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="1">
+		<testcase classname="tests.test_renderer.TestBlockQuote" name="test_block_quote" time="0.037" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="288"/>
+		<testcase classname="tests.test_renderer.TestBlockQuote" name="test_block_quote_nested" time="0.043" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="293"/>
+		<testcase classname="tests.test_renderer.TestBlockQuote" name="test_block_quote_nested_2" time="0.003" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="300">
+			<skipped type="skip" message="markdown does not support dedent in block quote"/>
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestCodeBlock-20231122062612" tests="6" file="tests/test_renderer.py" time="0.319" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_code_block_math" time="0.049" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="317"/>
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_plain_code_block" time="0.033" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="307"/>
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_plain_code_block_indent" time="0.031" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="322"/>
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_plain_code_block_tilda" time="0.030" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="312"/>
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_python_code_block" time="0.135" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="329"/>
+		<testcase classname="tests.test_renderer.TestCodeBlock" name="test_python_code_block_indent" time="0.041" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="334"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestConplexText-20231122062612" tests="1" file="tests/test_renderer.py" time="0.055" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestConplexText" name="test_code" time="0.055" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="615"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestDirective-20231122062612" tests="4" file="tests/test_renderer.py" time="0.126" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestDirective" name="test_comment_indented" time="0.033" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="704"/>
+		<testcase classname="tests.test_renderer.TestDirective" name="test_comment_multiline" time="0.033" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="714"/>
+		<testcase classname="tests.test_renderer.TestDirective" name="test_comment_newline" time="0.031" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="709"/>
+		<testcase classname="tests.test_renderer.TestDirective" name="test_comment_oneline" time="0.029" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="699"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestFootNote-20231122062612" tests="2" file="tests/test_renderer.py" time="0.108" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestFootNote" name="test_footnote" time="0.070" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="662"/>
+		<testcase classname="tests.test_renderer.TestFootNote" name="test_sphinx_ref" time="0.038" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="692"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestHeading-20231122062612" tests="2" file="tests/test_renderer.py" time="0.064" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestHeading" name="test_heading" time="0.032" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="358"/>
+		<testcase classname="tests.test_renderer.TestHeading" name="test_heading_multibyte" time="0.032" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="363"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestImage-20231122062612" tests="2" file="tests/test_renderer.py" time="0.084" timestamp="2023-11-22T06:26:16" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestImage" name="test_image" time="0.045" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="343"/>
+		<testcase classname="tests.test_renderer.TestImage" name="test_image_title" time="0.039" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="351"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestInlineMarkdown-20231122062612" tests="36" file="tests/test_renderer.py" time="1.126" timestamp="2023-11-22T06:26:18" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_anchor" time="0.007" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="162"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_anonymous_link" time="0.031" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="145"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_anonymous_link_with_rel_link_enabled" time="0.008" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="155"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_autolink" time="0.043" timestamp="2023-11-22T06:26:16" file="tests/test_renderer.py" line="135"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_block_html" time="0.033" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="281"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_code_with_rest_link" time="0.033" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="261"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_code_with_rest_role" time="0.033" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="246"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_code_with_rest_role2" time="0.032" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="251"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_disable_inline_math" time="0.030" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="271"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_double_emphasis" time="0.034" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="120"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_double_emphasis__" time="0.034" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="125"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_emphasis" time="0.030" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="105"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_emphasis_" time="0.029" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="110"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_emphasis_no_" time="0.042" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="115"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_emphasis_no__" time="0.029" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="130"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_image_link" time="0.041" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="188"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_inline_code" time="0.044" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="85"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_inline_code_with_backticks" time="0.063" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="90"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_inline_html" time="0.038" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="276"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_inline_math" time="0.027" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="266"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_link" time="0.032" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="140"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_link_title" time="0.039" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="177"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_link_with_rel_link_enabled" time="0.006" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="150"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_relative_link" time="0.006" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="167"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_relative_link_with_anchor" time="0.007" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="172"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest2_role_with_code" time="0.045" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="241"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_link" time="0.033" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="207"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_link_and_role" time="0.036" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="212"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_link_and_role2" time="0.032" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="217"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_link_with_code" time="0.031" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="256"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_role" time="0.029" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="197"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_role2" time="0.029" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="202"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_role_incomplete" time="0.030" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="222"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_role_incomplete2" time="0.031" timestamp="2023-11-22T06:26:17" file="tests/test_renderer.py" line="229"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_rest_role_with_code" time="0.043" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="236"/>
+		<testcase classname="tests.test_renderer.TestInlineMarkdown" name="test_strikethrough" time="0.036" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="101"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestList-20231122062612" tests="10" file="tests/test_renderer.py" time="0.524" timestamp="2023-11-22T06:26:18" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_mixed_1" time="0.075" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="465"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_multiline_1" time="0.062" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="496"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_multiline_2" time="0.065" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="535"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_multiline_3" time="0.084" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="574"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_ol" time="0.043" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="418"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_ol_2" time="0.050" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="434"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_ul" time="0.041" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="380"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_nested_ul_2" time="0.047" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="394"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_ol" time="0.029" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="375"/>
+		<testcase classname="tests.test_renderer.TestList" name="test_ul" time="0.028" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="370"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestRestCode-20231122062612" tests="3" file="tests/test_renderer.py" time="0.097" timestamp="2023-11-22T06:26:18" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestRestCode" name="test_eol_marker" time="0.049" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="734"/>
+		<testcase classname="tests.test_renderer.TestRestCode" name="test_eol_marker_remove" time="0.027" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="739"/>
+		<testcase classname="tests.test_renderer.TestRestCode" name="test_rest_code_block_empty" time="0.021" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="729"/>
+	</testsuite>
+	<testsuite name="tests.test_renderer.TestTable-20231122062612" tests="1" file="tests/test_renderer.py" time="0.073" timestamp="2023-11-22T06:26:18" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_renderer.TestTable" name="test_table" time="0.073" timestamp="2023-11-22T06:26:18" file="tests/test_renderer.py" line="634"/>
+	</testsuite>
+</testsuites>

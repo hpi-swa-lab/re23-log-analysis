@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="test_retrying.TestBeforeAfterAttempts-20231129042406" tests="2" file="test_retrying.py" time="0.207" timestamp="2023-11-29T04:24:06" failures="0" errors="0" skipped="0">
+		<testcase classname="test_retrying.TestBeforeAfterAttempts" name="test_after_attempts" time="0.207" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="466"/>
+		<testcase classname="test_retrying.TestBeforeAfterAttempts" name="test_before_attempts" time="0.000" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="452"/>
+	</testsuite>
+	<testsuite name="test_retrying.TestDecoratorWrapper-20231129042406" tests="6" file="test_retrying.py" time="0.258" timestamp="2023-11-29T04:24:07" failures="0" errors="0" skipped="0">
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_defaults" time="0.000" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="442"/>
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_retry_if_exception_of_type" time="0.002" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="337">
+			<system-out><![CDATA[Hi there, I'm a NameError
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 271, in _retryable_test_with_exception_type_io_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 168, in go
+    raise IOError("Hi there, I'm an IOError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'NameError'>
+Hi there, I'm a NameError
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 308, in _retryable_test_with_exception_type_custom_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 224, in go
+    raise CustomError(derived_message)
+]
+]]></system-out>
+		</testcase>
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_with_stop_on_exception" time="0.001" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="329">
+			<system-out><![CDATA[Hi there, I'm an IOError
+]]></system-out>
+		</testcase>
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_with_stop_on_return_value" time="0.001" timestamp="2023-11-29T04:24:06" file="test_retrying.py" line="319">
+			<system-out><![CDATA[RetryError[Attempts: 3, Value: None]
+]]></system-out>
+		</testcase>
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_with_wait" time="0.252" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="312"/>
+		<testcase classname="test_retrying.TestDecoratorWrapper" name="test_wrapped_exception" time="0.002" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="384">
+			<system-out><![CDATA[Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'OSError'>
+Detected Exception of type: <class 'NameError'>
+RetryError[Attempts: 1, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 261, in _retryable_test_with_exception_type_io_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 187, in go
+    raise NameError("Hi there, I'm a NameError")
+]
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 271, in _retryable_test_with_exception_type_io_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 168, in go
+    raise IOError("Hi there, I'm an IOError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'NameError'>
+RetryError[Attempts: 1, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 291, in _retryable_test_with_exception_type_custom_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 187, in go
+    raise NameError("Hi there, I'm a NameError")
+]
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+Detected Exception of type: <class 'test_retrying.CustomError'>
+RetryError[Attempts: 3, Error:
+  File "/workdir/retrying-1.3.4/retrying.py", line 251, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 308, in _retryable_test_with_exception_type_custom_attempt_limit_wrap
+    return thing.go()
+  File "/workdir/retrying-1.3.4/test_retrying.py", line 224, in go
+    raise CustomError(derived_message)
+]
+]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="test_retrying.TestStopConditions-20231129042406" tests="5" file="test_retrying.py" time="0.001" timestamp="2023-11-29T04:24:07" failures="0" errors="0" skipped="0">
+		<testcase classname="test_retrying.TestStopConditions" name="test_legacy_explicit_stop_type" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="40"/>
+		<testcase classname="test_retrying.TestStopConditions" name="test_never_stop" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="24"/>
+		<testcase classname="test_retrying.TestStopConditions" name="test_stop_after_attempt" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="28"/>
+		<testcase classname="test_retrying.TestStopConditions" name="test_stop_after_delay" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="34"/>
+		<testcase classname="test_retrying.TestStopConditions" name="test_stop_func" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="43"/>
+	</testsuite>
+	<testsuite name="test_retrying.TestWaitConditions-20231129042406" tests="10" file="test_retrying.py" time="0.004" timestamp="2023-11-29T04:24:07" failures="0" errors="0" skipped="0">
+		<testcase classname="test_retrying.TestWaitConditions" name="test_exponential" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="93"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_exponential_with_max_wait" time="0.001" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="102"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_exponential_with_max_wait_and_multiplier" time="0.001" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="113"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_fixed_sleep" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="55"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_incrementing_sleep" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="59"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_legacy_explicit_wait_type" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="124"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_no_sleep" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="51"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_random_sleep" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="65"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_random_sleep_without_min" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="79"/>
+		<testcase classname="test_retrying.TestWaitConditions" name="test_wait_func" time="0.000" timestamp="2023-11-29T04:24:07" file="test_retrying.py" line="127"/>
+	</testsuite>
+</testsuites>

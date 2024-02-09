@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="23" skipped="0" tests="338" time="8.065" timestamp="2023-11-30T23:28:45.770000" hostname="be2d8ee410eb"><testcase classname="tests.test_csrf.TestDummyCSRF" name="test_base_class" time="0.040" /><testcase classname="tests.test_csrf.TestDummyCSRF" name="test_basic_impl" time="0.016" /><testcase classname="tests.test_csrf.TestDummyCSRF" name="test_csrf_off" time="0.008" /><testcase classname="tests.test_csrf.TestDummyCSRF" name="test_rename" time="0.008" /><testcase classname="tests.test_csrf.TestDummyCSRF" name="test_no_populate" time="0.007" /><testcase classname="tests.test_csrf.TestSessionCSRF" name="test_various_failures" time="0.010" /><testcase classname="tests.test_csrf.TestSessionCSRF" name="test_no_time_limit" time="0.013" /><testcase classname="tests.test_csrf.TestSessionCSRF" name="test_with_time_limit" time="0.021" /><testcase classname="tests.test_csrf.TestSessionCSRF" name="test_detailed_expected_values" time="0.020" /><testcase classname="tests.test_form.TestBaseForm" name="test_data_proxy" time="0.007" /><testcase classname="tests.test_form.TestBaseForm" name="test_errors_proxy" time="0.009" /><testcase classname="tests.test_form.TestBaseForm" name="test_contains" time="0.006" /><testcase classname="tests.test_form.TestBaseForm" name="test_field_removal" time="0.006" /><testcase classname="tests.test_form.TestBaseForm" name="test_field_adding" time="0.008" /><testcase classname="tests.test_form.TestBaseForm" name="test_populate_obj" time="0.006" /><testcase classname="tests.test_form.TestBaseForm" name="test_prefixes" time="0.009" /><testcase classname="tests.test_form.TestBaseForm" name="test_formdata_wrapper_error" time="0.008" /><testcase classname="tests.test_form.TestFormMeta" name="test_monkeypatch" time="0.012" /><testcase classname="tests.test_form.TestFormMeta" name="test_subclassing" time="0.010" /><testcase classname="tests.test_form.TestFormMeta" name="test_class_meta_reassign" time="0.007" /><testcase classname="tests.test_form.TestForm" name="test_validate" time="0.009" /><testcase classname="tests.test_form.TestForm" name="test_validate_with_extra" time="0.011" /><testcase classname="tests.test_form.TestForm" name="test_form_level_errors" time="0.011" /><testcase classname="tests.test_form.TestForm" name="test_field_adding_disabled" time="0.007" /><testcase classname="tests.test_form.TestForm" name="test_field_removal" time="0.008" /><testcase classname="tests.test_form.TestForm" name="test_delattr_idempotency" time="0.007" /><testcase classname="tests.test_form.TestForm" name="test_ordered_fields" time="0.014" /><testcase classname="tests.test_form.TestForm" name="test_data_arg" time="0.008" /><testcase classname="tests.test_form.TestForm" name="test_empty_formdata" time="0.010" /><testcase classname="tests.test_form.TestForm" name="test_errors_access_during_validation" time="0.008" /><testcase classname="tests.test_form.TestMeta" name="test_basic" time="0.008" /><testcase classname="tests.test_form.TestMeta" name="test_missing_diamond" time="0.007" /><testcase classname="tests.test_i18n.TestI18N" name="test_failure" time="0.006" /><testcase classname="tests.test_i18n.TestI18N" name="test_us_translation" time="0.016" /><testcase classname="tests.test_i18n.TestI18N" name="test_python3_nowrap" time="0.005" /><testcase classname="tests.test_i18n.TestCoreForm" name="test_defaults" time="0.012" /><testcase classname="tests.test_i18n.TestCoreForm" name="test_fallback" time="0.008" /><testcase classname="tests.test_i18n.TestCoreForm" name="test_override_languages" time="0.015" /><testcase classname="tests.test_i18n.TestCoreForm" name="test_ngettext" time="0.024" /><testcase classname="tests.test_i18n.TestCoreForm" name="test_cache" time="0.013" /><testcase classname="tests.test_i18n.TestTranslations" name="test_gettext" time="0.008" /><testcase classname="tests.test_i18n.TestTranslations" name="test_ngettext" time="0.009" /><testcase classname="tests.test_i18n.TestTranslations" name="test_validator_translation" time="0.009" /><testcase classname="tests.test_locale_babel.TestLocaleDecimal" name="test_typeerror" time="0.010"><failure message="ImportError: Using locale-aware decimals requires the babel library.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 38, in test_typeerror
+    build(places=2)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 28, in build
+    form = self.F()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.</failure></testcase><testcase classname="tests.test_locale_babel.TestLocaleDecimal" name="test_formatting" time="0.010"><failure message="ImportError: Using locale-aware decimals requires the babel library.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 46, in test_formatting
+    self._format_test("1,23,456.789", val)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 23, in _format_test
+    form = self.F(meta=meta, a=Decimal(val))
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.</failure></testcase><testcase classname="tests.test_locale_babel.TestLocaleDecimal" name="test_parsing" time="0.008"><failure message="ImportError: Using locale-aware decimals requires the babel library.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 77, in test_parsing
+    self._parse_test("1,23,456.789", expected)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 59, in _parse_test
+    form = self.F(DummyPostData(a=raw_val), meta=meta)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.</failure></testcase><testcase classname="tests.test_webob" name="test_automatic_wrapping" time="0.013" /><testcase classname="tests.test_webob" name="test_empty" time="0.007" /><testcase classname="tests.test_webob" name="test_filled" time="0.008" /><testcase classname="tests.test_widgets.TestHTMLParams" name="test_basic" time="0.006" /><testcase classname="tests.test_widgets.TestHTMLParams" name="test_data_prefix" time="0.005" /><testcase classname="tests.test_widgets.TestHTMLParams" name="test_aria_prefix" time="0.006" /><testcase classname="tests.test_widgets.TestHTMLParams" name="test_quoting" time="0.006" /><testcase classname="tests.test_widgets.TestListWidget" name="test_listwidget" time="0.009" /><testcase classname="tests.test_widgets.TestTableWidget" name="test_tablewidget" time="0.007" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_input_type" time="0.006" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_html_marking" time="0.009" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_text_input" time="0.009" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_password_input" time="0.009" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_hidden_input" time="0.008" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_checkbox_input" time="0.010" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_radio_input" time="0.010" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_textarea" time="0.009" /><testcase classname="tests.test_widgets.TestBasicWidgets" name="test_file" time="0.008" /><testcase classname="tests.test_widgets.TestSelect" name="test_select" time="0.010" /><testcase classname="tests.test_widgets.TestSelect" name="test_render_option" time="0.007" /><testcase classname="tests.test_widgets.TestHTML5" name="test_number" time="0.012" /><testcase classname="tests.test_widgets.TestHTML5" name="test_range" time="0.010" /><testcase classname="tests.fields.test_boolean" name="test_defaults" time="0.012" /><testcase classname="tests.fields.test_boolean" name="test_rendering" time="0.009" /><testcase classname="tests.fields.test_boolean" name="test_with_postdata" time="0.008" /><testcase classname="tests.fields.test_boolean" name="test_with_model_data" time="0.007" /><testcase classname="tests.fields.test_boolean" name="test_with_postdata_and_model" time="0.007" /><testcase classname="tests.fields.test_custom" name="test_processing_failure" time="0.230" /><testcase classname="tests.fields.test_custom" name="test_default_impls" time="0.007" /><testcase classname="tests.fields.test_date" name="test_basic" time="0.039" /><testcase classname="tests.fields.test_date" name="test_failure" time="0.010" /><testcase classname="tests.fields.test_datetime" name="test_basic" time="0.021" /><testcase classname="tests.fields.test_datetime" name="test_microseconds" time="0.011" /><testcase classname="tests.fields.test_datetime" name="test_multiple_formats" time="0.013" /><testcase classname="tests.fields.test_datetimelocal" name="test_basic" time="0.020" /><testcase classname="tests.fields.test_datetimelocal" name="test_microseconds" time="0.009" /><testcase classname="tests.fields.test_datetimelocal" name="test_separators" time="0.012" /><testcase classname="tests.fields.test_decimal" name="test_decimal_field" time="0.016" /><testcase classname="tests.fields.test_decimal" name="test_quantize" time="0.012" /><testcase classname="tests.fields.test_defaults" name="test_defaults" time="0.008" /><testcase classname="tests.fields.test_defaults" name="test_unset_value" time="0.005" /><testcase classname="tests.fields.test_field" name="test_unbound_field" time="0.008" /><testcase classname="tests.fields.test_field" name="test_htmlstring" time="0.014" /><testcase classname="tests.fields.test_field" name="test_str_coerce" time="0.012" /><testcase classname="tests.fields.test_field" name="test_unicode_coerce" time="0.012" /><testcase classname="tests.fields.test_field" name="test_process_formdata" time="0.009" /><testcase classname="tests.fields.test_field" name="test_meta_attribute" time="0.009" /><testcase classname="tests.fields.test_field" name="test_render_kw" time="0.068" /><testcase classname="tests.fields.test_field" name="test_render_special" time="0.016" /><testcase classname="tests.fields.test_field" name="test_required_flag" time="0.008" /><testcase classname="tests.fields.test_field" name="test_check_validators" time="0.008" /><testcase classname="tests.fields.test_field" name="test_custom_name" time="0.013" /><testcase classname="tests.fields.test_field" name="test_pre_stop" time="0.014" /><testcase classname="tests.fields.test_field" name="test_post" time="0.011" /><testcase classname="tests.fields.test_file" name="test_file_field" time="0.009" /><testcase classname="tests.fields.test_file" name="test_multiple_file_field" time="0.009" /><testcase classname="tests.fields.test_file" name="test_file_field_without_file_input" time="0.009" /><testcase classname="tests.fields.test_filters" name="test_working" time="0.009" /><testcase classname="tests.fields.test_filters" name="test_failure" time="0.008" /><testcase classname="tests.fields.test_filters" name="test_extra" time="0.009" /><testcase classname="tests.fields.test_filters" name="test_inline" time="0.013" /><testcase classname="tests.fields.test_flags" name="test_existing_values" time="0.009" /><testcase classname="tests.fields.test_flags" name="test_assignment" time="0.007" /><testcase classname="tests.fields.test_flags" name="test_unset" time="0.008" /><testcase classname="tests.fields.test_flags" name="test_repr" time="0.008" /><testcase classname="tests.fields.test_flags" name="test_underscore_property" time="0.008" /><testcase classname="tests.fields.test_float" name="test_float_field" time="0.012" /><testcase classname="tests.fields.test_form" name="test_formdata" time="0.012" /><testcase classname="tests.fields.test_form" name="test_iteration" time="0.011" /><testcase classname="tests.fields.test_form" name="test_with_obj" time="0.011" /><testcase classname="tests.fields.test_form" name="test_widget" time="0.013" /><testcase classname="tests.fields.test_form" name="test_separator" time="0.011" /><testcase classname="tests.fields.test_form" name="test_no_validators_or_filters" time="0.013" /><testcase classname="tests.fields.test_form" name="test_populate_missing_obj" time="0.010" /><testcase classname="tests.fields.test_form" name="test_populate_property" time="0.011" /><testcase classname="tests.fields.test_hidden" name="test_hidden_field" time="0.008" /><testcase classname="tests.fields.test_html5" name="test_simple" time="0.025" /><testcase classname="tests.fields.test_html5" name="test_minlength_maxlength" time="0.031" /><testcase classname="tests.fields.test_html5" name="test_min_max" time="0.013" /><testcase classname="tests.fields.test_integer" name="test_integer_field" time="0.013" /><testcase classname="tests.fields.test_label" name="test_label" time="0.008" /><testcase classname="tests.fields.test_label" name="test_auto_label" time="0.007" /><testcase classname="tests.fields.test_label" name="test_override_for" time="0.006" /><testcase classname="tests.fields.test_label" name="test_escaped_label_text" time="0.006" /><testcase classname="tests.fields.test_list" name="test_form" time="0.016" /><testcase classname="tests.fields.test_list" name="test_enclosed_subform" time="0.017" /><testcase classname="tests.fields.test_list" name="test_enclosed_subform_custom_name" time="0.014" /><testcase classname="tests.fields.test_list" name="test_custom_separator" time="0.008" /><testcase classname="tests.fields.test_list" name="test_enclosed_subform_list_separator" time="0.012" /><testcase classname="tests.fields.test_list" name="test_enclosed_subform_uniform_separators" time="0.013" /><testcase classname="tests.fields.test_list" name="test_enclosed_subform_mixed_separators" time="0.011" /><testcase classname="tests.fields.test_list" name="test_entry_management" time="0.008" /><testcase classname="tests.fields.test_list" name="test_min_max_entries" time="0.012" /><testcase classname="tests.fields.test_list" name="test_validators" time="0.012" /><testcase classname="tests.fields.test_list" name="test_no_filters" time="0.007" /><testcase classname="tests.fields.test_list" name="test_process_prefilled" time="0.010" /><testcase classname="tests.fields.test_list" name="test_errors" time="0.009" /><testcase classname="tests.fields.test_month" name="test_basic" time="0.012" /><testcase classname="tests.fields.test_month" name="test_failure" time="0.008" /><testcase classname="tests.fields.test_password" name="test_password_field" time="0.008" /><testcase classname="tests.fields.test_radio" name="test_radio_field" time="0.016" /><testcase classname="tests.fields.test_radio" name="test_text_coercion" time="0.009" /><testcase classname="tests.fields.test_radio" name="test_callable_choices" time="0.009" /><testcase classname="tests.fields.test_radio" name="test_required_flag" time="0.009" /><testcase classname="tests.fields.test_radio" name="test_required_validator" time="0.010" /><testcase classname="tests.fields.test_radio" name="test_render_kw_preserved" time="0.010" /><testcase classname="tests.fields.test_select" name="test_select_field_copies_choices" time="0.009" /><testcase classname="tests.fields.test_select" name="test_defaults" time="0.030" /><testcase classname="tests.fields.test_select" name="test_with_data" time="0.007" /><testcase classname="tests.fields.test_select" name="test_value_coercion" time="0.008" /><testcase classname="tests.fields.test_select" name="test_iterable_options" time="0.009" /><testcase classname="tests.fields.test_select" name="test_default_coerce" time="0.008" /><testcase classname="tests.fields.test_select" name="test_validate_choices" time="0.008" /><testcase classname="tests.fields.test_select" name="test_validate_choices_when_empty" time="0.008" /><testcase classname="tests.fields.test_select" name="test_validate_choices_when_none" time="0.007" /><testcase classname="tests.fields.test_select" name="test_dont_validate_choices" time="0.007" /><testcase classname="tests.fields.test_select" name="test_choice_shortcut" time="0.008" /><testcase classname="tests.fields.test_select" name="test_choice_shortcut_post" time="0.007" /><testcase classname="tests.fields.test_select" name="test_empty_choice[choices0]" time="0.010" /><testcase classname="tests.fields.test_select" name="test_empty_choice[None]" time="0.011" /><testcase classname="tests.fields.test_select" name="test_empty_choice[choices2]" time="0.011" /><testcase classname="tests.fields.test_select" name="test_callable_choices" time="0.009" /><testcase classname="tests.fields.test_select" name="test_requried_flag" time="0.008" /><testcase classname="tests.fields.test_select" name="test_required_validator" time="0.008" /><testcase classname="tests.fields.test_select" name="test_render_kw_preserved" time="0.007" /><testcase classname="tests.fields.test_select" name="test_optgroup" time="0.008" /><testcase classname="tests.fields.test_select" name="test_optgroup_shortcut" time="0.008" /><testcase classname="tests.fields.test_select" name="test_empty_optgroup[choices0]" time="0.009" /><testcase classname="tests.fields.test_select" name="test_empty_optgroup[choices1]" time="0.010" /><testcase classname="tests.fields.test_selectmultiple" name="test_defaults" time="0.009" /><testcase classname="tests.fields.test_selectmultiple" name="test_with_data" time="0.012" /><testcase classname="tests.fields.test_selectmultiple" name="test_coerce_fail" time="0.008" /><testcase classname="tests.fields.test_selectmultiple" name="test_callable_choices" time="0.008" /><testcase classname="tests.fields.test_selectmultiple" name="test_choice_shortcut" time="0.007" /><testcase classname="tests.fields.test_selectmultiple" name="test_empty_choice[choices0]" time="0.008" /><testcase classname="tests.fields.test_selectmultiple" name="test_empty_choice[None]" time="0.010" /><testcase classname="tests.fields.test_selectmultiple" name="test_validate_choices_when_empty" time="0.009" /><testcase classname="tests.fields.test_selectmultiple" name="test_validate_choices_when_none" time="0.008" /><testcase classname="tests.fields.test_selectmultiple" name="test_dont_validate_choices" time="0.007" /><testcase classname="tests.fields.test_selectmultiple" name="test_requried_flag" time="0.009" /><testcase classname="tests.fields.test_selectmultiple" name="test_required_validator" time="0.009" /><testcase classname="tests.fields.test_selectmultiple" name="test_render_kw_preserved" time="0.007" /><testcase classname="tests.fields.test_string" name="test_string_field" time="0.009" /><testcase classname="tests.fields.test_submit" name="test_submit_field" time="0.008" /><testcase classname="tests.fields.test_textarea" name="test_textarea_field" time="0.030" /><testcase classname="tests.fields.test_time" name="test_basic" time="0.016" /><testcase classname="tests.validators.test_anyof" name="test_anyof_passes[b-test_list0]" time="0.012" /><testcase classname="tests.validators.test_anyof" name="test_anyof_passes[2-test_list1]" time="0.009" /><testcase classname="tests.validators.test_anyof" name="test_anyof_raisses[d-test_list0]" time="0.009" /><testcase classname="tests.validators.test_anyof" name="test_anyof_raisses[6-test_list1]" time="0.008" /><testcase classname="tests.validators.test_anyof" name="test_any_of_values_formatter" time="0.007" /><testcase classname="tests.validators.test_data_required" name="test_data_required" time="0.006" /><testcase classname="tests.validators.test_data_required" name="test_data_required_raises[None]" time="0.007" /><testcase classname="tests.validators.test_data_required" name="test_data_required_raises[]" time="0.007" /><testcase classname="tests.validators.test_data_required" name="test_data_required_raises[ ]" time="0.008" /><testcase classname="tests.validators.test_data_required" name="test_data_required_raises[\t\t]" time="0.007" /><testcase classname="tests.validators.test_data_required" name="test_data_required_clobber" time="0.006" /><testcase classname="tests.validators.test_data_required" name="test_data_required_messages[validator0-This field is required.]" time="0.009" /><testcase classname="tests.validators.test_data_required" name="test_data_required_messages[validator1-foo]" time="0.008" /><testcase classname="tests.validators.test_data_required" name="test_required_passes" time="0.007" /><testcase classname="tests.validators.test_data_required" name="test_required_stops_validation" time="0.007" /><testcase classname="tests.validators.test_email" name="test_valid_email_passes[foo@bar.dk]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_valid_email_passes[123@bar.dk]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_valid_email_passes[foo@456.dk]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_valid_email_passes[foo@bar456.info]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_valid_email_passes[foo@b\xfccher.\u4e2d\u56fd]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[None]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[  ]" time="0.007"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[bar.dk]" time="0.031"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo@]" time="0.009"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[@bar.dk]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo@bar]" time="0.007"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo@bar.ab12]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo@.bar.ab]" time="0.009"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo.@bar.co]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[foo@foo@bar.co]" time="0.009"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises[fo o@bar.co]" time="0.010"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_email" name="test_invalid_email_raises_granular_message[foo@]" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 55, in test_invalid_email_raises_granular_message
+    validator = email(granular_message=True)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_equal_to" name="test_equal_to_passes" time="0.008" /><testcase classname="tests.validators.test_equal_to" name="test_equal_to_raises[test-invalid_field_name]" time="0.009" /><testcase classname="tests.validators.test_equal_to" name="test_equal_to_raises[bad_value-foo]" time="0.009" /><testcase classname="tests.validators.test_input_required" name="test_input_required" time="0.006" /><testcase classname="tests.validators.test_input_required" name="test_input_required_raises" time="0.006" /><testcase classname="tests.validators.test_input_required" name="test_input_required_error_message[validator0-This field is required.]" time="0.008" /><testcase classname="tests.validators.test_input_required" name="test_input_required_error_message[validator1-foo]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_ip4address_passes[147.230.23.25]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_ip4address_passes[147.230.23.0]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_ip4address_passes[127.0.0.1]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_good_ip6address_passes[2001:718:1C01:1111::1111]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_good_ip6address_passes[2001:718:1C01:1111::]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_good_ip6address_passes[::1]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_good_ip6address_passes[dead:beef:0:0:0:0:42:1]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_good_ip6address_passes[abcd:ef::42:1]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[2001:718:1C01:1111::1111]" time="0.032" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[2001:718:1C01:1111::]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[abc.0.0.1]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[abcd:1234::123::1]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[1:2:3:4:5:6:7:8:9]" time="0.008" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip6address_raises[abcd::1ffff]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[147.230.1000.25]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[2001:718::::]" time="0.007" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[abc.0.0.1]" time="0.007" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[1278.0.0.1]" time="0.009" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[127.0.0.abc]" time="0.010" /><testcase classname="tests.validators.test_ipaddress" name="test_bad_ip4address_raises[900.200.100.75]" time="0.010" /><testcase classname="tests.validators.test_ipaddress" name="test_ip_address_raises_on_bad_init" time="0.006" /><testcase classname="tests.validators.test_lazy_proxy" name="test_lazy_proxy_raises" time="0.007" /><testcase classname="tests.validators.test_lazy_proxy" name="test_lazy_proxy_fixture" time="0.008"><failure message="Exception: Install 'email_validator' for email validation support.">Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_lazy_proxy.py", line 30, in test_lazy_proxy_fixture
+    email(message=really_lazy_proxy)
+  File "/workdir/WTForms-3.0.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.</failure></testcase><testcase classname="tests.validators.test_length" name="test_correct_length_passes[2-6]" time="0.009" /><testcase classname="tests.validators.test_length" name="test_correct_length_passes[6--1]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_correct_length_passes[-1-6]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_correct_length_passes[6-6]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_bad_length_raises[7--1]" time="0.009" /><testcase classname="tests.validators.test_length" name="test_bad_length_raises[-1-5]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_bad_length_init_raises[-1--1]" time="0.007" /><testcase classname="tests.validators.test_length" name="test_bad_length_init_raises[5-2]" time="0.007" /><testcase classname="tests.validators.test_length" name="test_length_messages[validator0-2 and 5]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_length_messages[validator1-at least 8]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_length_messages[validator2-longer than 5]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_length_messages[validator3-between 2 and 5]" time="0.008" /><testcase classname="tests.validators.test_length" name="test_length_messages[validator4-exactly 5]" time="0.007" /><testcase classname="tests.validators.test_mac_address" name="test_valid_mac_passes[01:23:45:67:ab:CD]" time="0.007" /><testcase classname="tests.validators.test_mac_address" name="test_bad_mac_raises[00:00:00:00:00]" time="0.007" /><testcase classname="tests.validators.test_mac_address" name="test_bad_mac_raises[01:23:45:67:89:]" time="0.008" /><testcase classname="tests.validators.test_mac_address" name="test_bad_mac_raises[01:23:45:67:89:gh]" time="0.007" /><testcase classname="tests.validators.test_mac_address" name="test_bad_mac_raises[123:23:45:67:89:00]" time="0.007" /><testcase classname="tests.validators.test_noneof" name="test_none_of_passes" time="0.007" /><testcase classname="tests.validators.test_noneof" name="test_none_of_raises" time="0.007" /><testcase classname="tests.validators.test_number_range" name="test_number_range_passes[5-10-7]" time="0.033" /><testcase classname="tests.validators.test_number_range" name="test_number_range_passes[5-None-7]" time="0.007" /><testcase classname="tests.validators.test_number_range" name="test_number_range_passes[None-100-70]" time="0.007" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[5-10-None]" time="0.007" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[5-10-0]" time="0.008" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[5-10-12]" time="0.008" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[5-10--5]" time="0.008" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[5-None-4]" time="0.008" /><testcase classname="tests.validators.test_number_range" name="test_number_range_raises[None-100-500]" time="0.009" /><testcase classname="tests.validators.test_number_range" name="test_number_range_nan[nan]" time="0.008" /><testcase classname="tests.validators.test_number_range" name="test_number_range_nan[nan1]" time="0.007" /><testcase classname="tests.validators.test_optional" name="test_input_optional_passes" time="0.006" /><testcase classname="tests.validators.test_optional" name="test_input_optional_raises[-]" time="0.008" /><testcase classname="tests.validators.test_optional" name="test_input_optional_raises[   -   ]" time="0.008" /><testcase classname="tests.validators.test_optional" name="test_input_optional_raises[\t-\t]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_passes[^a-None-abcd-a0]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_passes[^a-re.IGNORECASE-ABcd-A]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_passes[^a-None-abcd-a1]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_passes[^a-None-ABcd-A]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_raises[^a-None-ABC]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_raises[^a-re.IGNORECASE-foo]" time="0.007" /><testcase classname="tests.validators.test_regexp" name="test_regex_raises[^a-None-None0]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regex_raises[^a-None-foo]" time="0.007" /><testcase classname="tests.validators.test_regexp" name="test_regex_raises[^a-None-None1]" time="0.008" /><testcase classname="tests.validators.test_regexp" name="test_regexp_message" time="0.006" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.dk]" time="0.019" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.dk/]" time="0.008" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foo-bar.dk/]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foo--bar.dk/]" time="0.008" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foo_bar.dk/]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.dk?query=param]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.dk/path?query=param]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.dk/path?query=param&amp;foo=faa]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://foobar.museum/foobar]" time="0.036" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://192.168.0.1/foobar]" time="0.008" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://192.168.0.1:9000/fake]" time="0.007" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://\u0645\u062b\u0627\u0644.\u0625\u062e\u062a\u0628\u0627\u0631/foo.com]" time="0.018" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://\u0909\u0926\u093e\u0939\u0930\u0923.\u092a\u0930\u0940\u0915\u094d\u0937\u093e/]" time="0.012" /><testcase classname="tests.validators.test_url" name="test_valid_url_passes[http://\uc2e4\ub840.\ud14c\uc2a4\ud2b8]" time="0.014" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://localhost/foobar]" time="0.012" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://foobar]" time="0.013" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://foobar?query=param&amp;foo=faa]" time="0.042" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://foobar:5000?query=param&amp;foo=faa]" time="0.031" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://foobar/path?query=param&amp;foo=faa]" time="0.015" /><testcase classname="tests.validators.test_url" name="test_valid_url_notld_passes[http://foobar:1234/path?query=param&amp;foo=faa]" time="0.013" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://foobar]" time="0.012" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://-foobar.dk/]" time="0.009" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://foobar-.dk/]" time="0.011" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[foobar.dk]" time="0.008" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://127.0.0/asdf]" time="0.009" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://foobar.d]" time="0.010" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://foobar.12]" time="0.009" /><testcase classname="tests.validators.test_url" name="test_bad_url_raises[http://localhost:abc/a]" time="0.007" /><testcase classname="tests.validators.test_uuid" name="test_valid_uuid_passes[2bc1c94f-0deb-43e9-92a1-4775189ec9f8]" time="0.007" /><testcase classname="tests.validators.test_uuid" name="test_valid_uuid_passes[2bc1c94f0deb43e992a14775189ec9f8]" time="0.007" /><testcase classname="tests.validators.test_uuid" name="test_bad_uuid_raises[2bc1c94f-deb-43e9-92a1-4775189ec9f8]" time="0.008" /><testcase classname="tests.validators.test_uuid" name="test_bad_uuid_raises[2bc1c94f-0deb-43e9-92a1-4775189ec9f]" time="0.007" /><testcase classname="tests.validators.test_uuid" name="test_bad_uuid_raises[gbc1c94f-0deb-43e9-92a1-4775189ec9f8]" time="0.007" /><testcase classname="tests.validators.test_uuid" name="test_bad_uuid_raises[2bc1c94f 0deb-43e9-92a1-4775189ec9f8]" time="0.007" /><testcase classname="tests.validators.test_validators" name="test_raise_exceptions[IndexError]" time="0.008" /><testcase classname="tests.validators.test_validators" name="test_raise_exceptions[ZeroDivisionError]" time="0.009" /><testcase classname="tests.validators.test_validators" name="test_raise_exceptions[ValueError]" time="0.010" /></testsuite></testsuites>

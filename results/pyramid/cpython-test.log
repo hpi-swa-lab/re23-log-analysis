@@ -1,0 +1,81 @@
+.package create: /workdir/pyramid-2.0/.tox/.package
+.package installdeps: setuptools, wheel
+/workdir/pyramid-2.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+no previously-included directories found matching 'docs/_build'
+warning: no files found matching 'appveyor.yml'
+warning: no files found matching '.travis.yml'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+/workdir/pyramid-2.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+no previously-included directories found matching 'docs/_build'
+warning: no files found matching 'appveyor.yml'
+warning: no files found matching '.travis.yml'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+cpythonlibtest-unit-test-tests create: /workdir/pyramid-2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/pyramid-2.0/.tox/.tmp/package/1/pyramid-2.0.tar.gz
+cpythonlibtest-unit-test-tests installed: hupper==1.12,lxml==4.9.3,mock==5.1.0,PasteDeploy==3.1.0,plaster==1.1.2,plaster-pastedeploy==1.0.1,pyramid @ file:///workdir/pyramid-2.0/.tox/.tmp/package/1/pyramid-2.0.tar.gz#sha256=f8a7bc1e5f9d32bccfc03422127009d47708ce9d4d61f5dda5419ac22e1654d0,translationstring==1.4,unittest-xml-reporting==3.2.0,venusian==3.1.0,WebOb==1.8.7,zope.deprecation==5.0,zope.interface==6.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3369009592'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/pyramid-2.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/pyramid/2.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................E.............................................E..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................E.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................E.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+======================================================================
+ERROR [0.001s]: test_hook_zca (tests.test_config.test_init.ConfiguratorTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pyramid-2.0/tests/test_config/test_init.py", line 1179, in test_hook_zca
+    from zope.component import getSiteManager
+ModuleNotFoundError: No module named 'zope.component'
+
+======================================================================
+ERROR [0.002s]: test_unhook_zca (tests.test_config.test_init.ConfiguratorTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pyramid-2.0/tests/test_config/test_init.py", line 1194, in test_unhook_zca
+    from zope.component import getSiteManager
+ModuleNotFoundError: No module named 'zope.component'
+
+======================================================================
+ERROR [0.001s]: tests.test_integration (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_integration
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/pyramid-2.0/tests/test_integration.py", line 7, in <module>
+    from webtest import TestApp
+ModuleNotFoundError: No module named 'webtest'
+
+
+======================================================================
+ERROR [0.001s]: tests.test_testing (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_testing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/pyramid-2.0/tests/test_testing.py", line 2, in <module>
+    from zope.component import getSiteManager
+ModuleNotFoundError: No module named 'zope.component'
+
+
+----------------------------------------------------------------------
+Ran 2435 tests in 12.087s
+
+FAILED (errors=4)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/pyramid-2.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/pyramid/2.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

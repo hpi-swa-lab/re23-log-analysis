@@ -1,0 +1,41 @@
+.package create: /workdir/myst-parser-0.18.1/.tox/.package
+.package installdeps: flit_core >=3.4,<4
+cpythonlibtest-unit-test-tests create: /workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/myst-parser-0.18.1/.tox/.tmp/package/1/myst_parser-0.18.1.tar.gz
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,docutils==0.19,exceptiongroup==1.2.0,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,markdown-it-py==2.2.0,MarkupSafe==2.1.3,mdit-py-plugins==0.3.5,mdurl==0.1.2,mock==5.1.0,myst-parser @ file:///workdir/myst-parser-0.18.1/.tox/.tmp/package/1/myst_parser-0.18.1.tar.gz#sha256=97cbde1703d71ebfc8ec7fef5c81bbee691175c5969851dd8a35561b8bb5b234,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,PyYAML==6.0.1,requests==2.31.0,snowballstemmer==2.2.0,Sphinx==5.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,typing_extensions==4.8.0,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='508353300'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/myst-parser/0.18.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/myst-parser-0.18.1
+configfile: tox.ini
+collecting ... collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test session _________________________
+Traceback (most recent call last):
+  File "/workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 641, in _importconftest
+    mod = import_path(conftestpath, mode=importmode, root=rootpath)
+  File "/workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/myst-parser-0.18.1/tests/test_sphinx/conftest.py", line 39, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+- generated xml file: /workdir/results/myst-parser/0.18.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR  - ModuleNotFoundError: No module named 'bs4'
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.08s ===============================
+ERROR: InvocationError for command /workdir/myst-parser-0.18.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/myst-parser/0.18.1/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

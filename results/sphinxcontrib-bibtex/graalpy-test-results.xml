@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="3" failures="5" skipped="0" tests="92" time="128.669" timestamp="2023-11-29T19:12:19.509000" hostname="be2d8ee410eb"><testcase classname="test.test_autodoc" name="test_some_module" time="0.014" /><testcase classname="test.test_autodoc" name="test_autodoc" time="10.469"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/test/test_autodoc.py", line 48, in test_autodoc
+    assert len(html_footnotes(text=text).findall(output2)) == 1
+AssertionError</failure></testcase><testcase classname="test.test_autodoc" name="test_autodoc_viewcode" time="3.149" /><testcase classname="test.test_backrefs" name="test_backrefs" time="3.529" /><testcase classname="test.test_bibfiles" name="test_bibfiles_out_of_date" time="8.403" /><testcase classname="test.test_bibfiles" name="test_bibfiles_not_found" time="1.556" /><testcase classname="test.test_bibfiles" name="test_bibfiles_missing_conf" time="0.307" /><testcase classname="test.test_bibfiles" name="test_bibfiles_encoding" time="2.645" /><testcase classname="test.test_bibfiles" name="test_bibfiles_encoding_bad" time="0.302" /><testcase classname="test.test_bibfiles" name="test_bibfiles_encoding_invalid" time="0.232" /><testcase classname="test.test_bibfiles" name="test_bibfiles_subfolder" time="1.770" /><testcase classname="test.test_bibfiles" name="test_bibfiles_multiple_macros" time="1.442" /><testcase classname="test.test_bibfiles" name="test_bibfiles_multiple_keys" time="1.353" /><testcase classname="test.test_bibliography" name="test_bibliography_empty" time="1.375" /><testcase classname="test.test_bibliography" name="test_bibliography_header" time="1.529" /><testcase classname="test.test_bibliography" name="test_bibliography_empty_no_header" time="0.448" /><testcase classname="test.test_bibliography" name="test_bibliography_style_default" time="1.265" /><testcase classname="test.test_bibliography" name="test_bibliography_style_label_1" time="1.402" /><testcase classname="test.test_bibliography" name="test_bibliography_style_label_2" time="1.411" /><testcase classname="test.test_bibliography" name="test_bibliography_style_nowebref" time="2.149" /><testcase classname="test.test_bibliography" name="test_bibliography_bad_option" time="1.049" /><testcase classname="test.test_bibliography" name="test_bibliography_key_prefix" time="2.078" /><testcase classname="test.test_bibliography" name="test_bibliography_label_prefix_1" time="1.777" /><testcase classname="test.test_bibliography" name="test_bibliography_label_prefix_2" time="3.015" /><testcase classname="test.test_bibliography" name="test_bibliography_order_unsorted" time="1.147" /><testcase classname="test.test_bibliography" name="test_bibliography_multi_foot" time="1.334"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/test/test_bibliography.py", line 167, in test_bibliography_multi_foot
+    assert len(re.findall(
+AssertionError</failure></testcase><testcase classname="test.test_bibliography" name="test_bibliography_missing_field" time="0.980" /><testcase classname="test.test_bibliography" name="test_bibliography_content" time="1.587" /><testcase classname="test.test_bibliography" name="test_bibliography_bad_key" time="0.953" /><testcase classname="test.test_bibliography" name="test_bibliography_url" time="1.065" /><testcase classname="test.test_bibliography" name="test_bibliography_custom_ids" time="1.407"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/test/test_bibliography.py", line 265, in test_bibliography_custom_ids
+    assert match1 is not None
+AssertionError</failure></testcase><testcase classname="test.test_citation" name="test_citation_not_found" time="1.923" /><testcase classname="test.test_citation" name="test_citation_mixed" time="1.439" /><testcase classname="test.test_citation" name="test_citation_multiple_keys" time="1.103" /><testcase classname="test.test_citation" name="test_citation_any_role" time="1.047" /><testcase classname="test.test_citation" name="test_citation_no_author_no_key" time="1.180" /><testcase classname="test.test_citation" name="test_citation_whitespace" time="1.264" /><testcase classname="test.test_citation" name="test_citation_from_orphan" time="0.373" /><testcase classname="test.test_citation" name="test_citation_roles_label" time="2.404" /><testcase classname="test.test_citation" name="test_citation_roles_authoryear" time="2.279" /><testcase classname="test.test_citation" name="test_citation_roles_super" time="3.731" /><testcase classname="test.test_citation" name="test_citation_style_invalid" time="0.146" /><testcase classname="test.test_citation" name="test_citation_style_custom" time="2.030" /><testcase classname="test.test_citation" name="test_citation_style_round_brackets" time="0.622" /><testcase classname="test.test_citation" name="test_citation_toctree" time="2.129" /><testcase classname="test.test_citation" name="test_citation_tooltip" time="1.532" /><testcase classname="test.test_citation" name="test_citation_tooltip2" time="1.282" /><testcase classname="test.test_citation" name="test_citation_tooltip3" time="1.281" /><testcase classname="test.test_citation_rinoh" name="test_citation_rinoh" time="0.145"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Could not import extension rinoh.frontend.sphinx (exception: No module named 'rinoh')&quot;">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 447, in load_extension
+    mod = import_module(extname)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ModuleNotFoundError: No module named 'rinoh'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1795, in setup
+    self._request._fillfixtures()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 566, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 585, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 607, in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1069, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1123, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 895, in call_fixture_func
+    fixture_result = next(generator)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 139, in app
+    app_ = make_app(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 120, in __init__
+    super().__init__(srcdir, confdir, outdir, doctreedir,
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 233, in __init__
+    self.setup_extension(extension)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 406, in setup_extension
+    self.registry.load_extension(self, extname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 450, in load_extension
+    raise ExtensionError(__('Could not import extension %s') % extname,
+sphinx.errors.ExtensionError: Could not import extension rinoh.frontend.sphinx (exception: No module named 'rinoh')</error></testcase><testcase classname="test.test_citation_rinoh" name="test_citation_rinoh_multidoc" time="0.179"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Could not import extension rinoh.frontend.sphinx (exception: No module named 'rinoh')&quot;">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 447, in load_extension
+    mod = import_module(extname)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ModuleNotFoundError: No module named 'rinoh'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1795, in setup
+    self._request._fillfixtures()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 566, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 585, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 607, in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1069, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1123, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 895, in call_fixture_func
+    fixture_result = next(generator)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 139, in app
+    app_ = make_app(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 120, in __init__
+    super().__init__(srcdir, confdir, outdir, doctreedir,
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 233, in __init__
+    self.setup_extension(extension)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 406, in setup_extension
+    self.registry.load_extension(self, extname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 450, in load_extension
+    raise ExtensionError(__('Could not import extension %s') % extname,
+sphinx.errors.ExtensionError: Could not import extension rinoh.frontend.sphinx (exception: No module named 'rinoh')</error></testcase><testcase classname="test.test_debug" name="test_debug_docutils_citation" time="0.332" /><testcase classname="test.test_debug" name="test_debug_bibtex_citation" time="0.334" /><testcase classname="test.test_debug" name="test_rebuild_empty_outdir" time="0.411"><failure message="AttributeError: 'PosixPath' has no attribute 'rmtree'">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/test/test_debug.py", line 61, in test_rebuild_empty_outdir
+    app0.outdir.rmtree()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/util/_pathlib.py", line 82, in __getattr__
+    raise AttributeError(msg)
+AttributeError: 'PosixPath' has no attribute 'rmtree'</failure></testcase><testcase classname="test.test_debug" name="test_debug_minimal_example" time="0.588" /><testcase classname="test.test_duplicate" name="test_duplicate_label" time="1.726" /><testcase classname="test.test_duplicate" name="test_duplicate_citation" time="1.277" /><testcase classname="test.test_duplicate" name="test_duplicate_nearly_identical_entries" time="2.345" /><testcase classname="test.test_duplicate" name="test_duplicate_nearly_identical_keys_1" time="1.170" /><testcase classname="test.test_duplicate" name="test_duplicate_nearly_identical_keys_2" time="1.077" /><testcase classname="test.test_duplicate" name="test_duplicate_citation_id" time="1.059" /><testcase classname="test.test_filter" name="test_filter" time="3.421" /><testcase classname="test.test_filter" name="test_filter_fix_author_keyerror" time="0.925" /><testcase classname="test.test_filter" name="test_filter_option_clash" time="0.853" /><testcase classname="test.test_filter" name="test_filter_syntax_error" time="0.977" /><testcase classname="test.test_footcite" name="test_footcite_roles" time="1.378" /><testcase classname="test.test_footcite" name="test_footcite_style_custom" time="1.262" /><testcase classname="test.test_latex" name="test_latex_refs" time="3.028" /><testcase classname="test.test_latex" name="test_latex_multidoc" time="0.561" /><testcase classname="test.test_list" name="test_list_citation" time="1.026" /><testcase classname="test.test_list" name="test_list_bullet" time="0.942" /><testcase classname="test.test_list" name="test_list_enumerated" time="1.172" /><testcase classname="test.test_list" name="test_list_invalid" time="2.035" /><testcase classname="test.test_natbib" name="test_natbib" time="2.491" /><testcase classname="test.test_natbib" name="test_natbib_latex" time="1.619" /><testcase classname="test.test_natbib" name="test_natbib_keynotfound" time="0.872" /><testcase classname="test.test_natbib" name="test_natbib_norefs" time="0.797" /><testcase classname="test.test_natbib" name="test_natbib_citation_transform_str_repr" time="0.006" /><testcase classname="test.test_natbib" name="test_natbib_conf" time="0.266" /><testcase classname="test.test_numpydoc" name="test_numpydoc" time="0.097"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Could not import extension numpydoc (exception: No module named 'numpydoc')&quot;">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 447, in load_extension
+    mod = import_module(extname)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ModuleNotFoundError: No module named 'numpydoc'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1795, in setup
+    self._request._fillfixtures()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 566, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 585, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 607, in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1069, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1123, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 895, in call_fixture_func
+    fixture_result = next(generator)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 139, in app
+    app_ = make_app(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 120, in __init__
+    super().__init__(srcdir, confdir, outdir, doctreedir,
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 233, in __init__
+    self.setup_extension(extension)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 406, in setup_extension
+    self.registry.load_extension(self, extname)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/registry.py", line 450, in load_extension
+    raise ExtensionError(__('Could not import extension %s') % extname,
+sphinx.errors.ExtensionError: Could not import extension numpydoc (exception: No module named 'numpydoc')</error></testcase><testcase classname="test.test_parallel" name="test_parallel" time="0.469"><failure message="NotImplementedError: 'fork' not supported in graalpython">Traceback (most recent call last):
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/test/test_parallel.py", line 14, in test_parallel
+    app0.build()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 147, in build
+    super().build(force_all, filenames)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/application.py", line 355, in build
+    self.builder.build_update()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 293, in build_update
+    self.build(to_build,
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 313, in build
+    updated_docnames = set(self.read())
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 418, in read
+    self._read_parallel(docnames, nproc=self.app.parallel)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 471, in _read_parallel
+    tasks.add_task(read_process, chunk, merge)
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/util/parallel.py", line 97, in add_task
+    self._join_one()
+  File "/workdir/sphinxcontrib-bibtex-2.5.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/util/parallel.py", line 135, in _join_one
+    self._procs[newtid].start()
+  File "/opt/graalpy/lib/python3.10/multiprocessing/process.py", line 132, in start
+    self._popen = self._Popen(self)
+  File "/opt/graalpy/lib/python3.10/multiprocessing/context.py", line 283, in _Popen
+    raise NotImplementedError("'fork' not supported in graalpython")
+NotImplementedError: 'fork' not supported in graalpython</failure></testcase><testcase classname="test.test_plugin" name="test_plugin_bad_group" time="0.007" /><testcase classname="test.test_plugin" name="test_plugin_register_not_forced" time="0.040" /><testcase classname="test.test_plugin" name="test_plugin_register_forced" time="0.040" /><testcase classname="test.test_root_doc" name="test_root_doc" time="0.351" /><testcase classname="test.test_sphinx" name="test_sphinx" time="2.809" /><testcase classname="test.test_style" name="test_style_names_last" time="0.038" /><testcase classname="test.test_style" name="test_style_names" time="0.026" /><testcase classname="test.test_style" name="test_style_names_no_author" time="0.007" /><testcase classname="test.test_style" name="test_simple_reference_style" time="0.055" /><testcase classname="test.test_style" name="test_super_coverage" time="0.026" /><testcase classname="test.test_template" name="test_join" time="0.010" /><testcase classname="test.test_template" name="test_sentence" time="0.060" /></testsuite></testsuites>

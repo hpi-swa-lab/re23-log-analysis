@@ -1,0 +1,31 @@
+GLOB sdist-make: /workdir/tifffile-2022.10.10/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/tifffile-2022.10.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/tifffile-2022.10.10/.tox/.tmp/package/1/tifffile-2022.10.10.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,numpy==1.26.2,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tifffile @ file:///workdir/tifffile-2022.10.10/.tox/.tmp/package/1/tifffile-2022.10.10.zip#sha256=55df615dbfd8c8d4424752f445e22597ceeb83c6c763fd52e8b5bd83c1b53830,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='125012973'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/tifffile/2022.10.10/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/tifffile-2022.10.10/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/tifffile-2022.10.10
+collecting ... collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_tifffile.py ____________________
+ImportError while importing test module '/workdir/tifffile-2022.10.10/tests/test_tifffile.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_tifffile.py:59: in <module>
+    import fsspec
+E   ModuleNotFoundError: No module named 'fsspec'
+- generated xml file: /workdir/results/tifffile/2022.10.10/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_tifffile.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 5.20s ===============================
+ERROR: InvocationError for command /workdir/tifffile-2022.10.10/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/tifffile/2022.10.10/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

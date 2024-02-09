@@ -1,0 +1,12 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/onnx/1.12.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements-release.txt
+	-rrequirements-dev.txt
+	-rrequirements.txt
+	-rthird_party/pybind11/tests/requirements.txt
+	-rthird_party/benchmark/requirements.txt
+	-rthird_party/benchmark/tools/requirements.txt
+	-rthird_party/benchmark/bindings/python/requirements.txt
+

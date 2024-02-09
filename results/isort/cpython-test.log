@@ -1,0 +1,17 @@
+.package create: /workdir/isort-5.10.1/.tox/.package
+.package installdeps: poetry-core>=1.0.0
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/site-packages/tox/helper/build_isolated.py", line 41, in <module>
+    basename = backend.build_sdist(dist_folder, {})
+  File "/workdir/isort-5.10.1/.tox/.package/lib/python3.10/site-packages/poetry/core/masonry/api.py", line 67, in build_sdist
+    poetry = Factory().create_poetry(Path(".").resolve(), with_groups=False)
+  File "/workdir/isort-5.10.1/.tox/.package/lib/python3.10/site-packages/poetry/core/factory.py", line 58, in create_poetry
+    raise RuntimeError("The Poetry configuration is invalid:\n" + message)
+RuntimeError: The Poetry configuration is invalid:
+  - data.extras.pipfile_deprecated_finder[2] must match pattern ^[a-zA-Z-_.0-9]+$
+
+ERROR: invocation failed (exit code 1), logfile: /workdir/isort-5.10.1/.tox/.package/log/.package-3.log
+================================== log start ===================================
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError("/workdir/isort-5.10.1/.tox/.package/bin/python /opt/graalpy/lib/python3.10/site-packages/tox/helper/build_isolated.py .tox/dist poetry.core.masonry.api '' ''", 1)

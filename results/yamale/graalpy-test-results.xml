@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="149" time="19.514" timestamp="2023-11-30T23:57:25.570000" hostname="be2d8ee410eb"><testcase classname="yamale.readers.tests.test_bad_file" name="test_reader_error[pyyaml]" time="0.021" /><testcase classname="yamale.readers.tests.test_bad_file" name="test_reader_error[PyYAML]" time="0.012" /><testcase classname="yamale.readers.tests.test_bad_file" name="test_reader_error[ruamel]" time="0.010" /><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[True-pyyaml]" time="0.017" /><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[True-PyYAML]" time="0.015" /><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[True-ruamel]" time="0.011"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/readers/tests/test_yaml.py", line 18, in test_parse
+    a = yaml_reader.parse_yaml(parser=parser, content=content)[0]
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 37, in parse_yaml
+    return parse(StringIO(content))
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[False-pyyaml]" time="0.015" /><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[False-PyYAML]" time="0.016" /><testcase classname="yamale.readers.tests.test_yaml" name="test_parse[False-ruamel]" time="0.012"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/readers/tests/test_yaml.py", line 20, in test_parse
+    a = yaml_reader.parse_yaml(TYPES, parser)[0]
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.readers.tests.test_yaml" name="test_parse_validates_arguments" time="0.006" /><testcase classname="yamale.readers.tests.test_yaml" name="test_types[pyyaml]" time="0.015" /><testcase classname="yamale.readers.tests.test_yaml" name="test_types[PyYAML]" time="0.014" /><testcase classname="yamale.readers.tests.test_yaml" name="test_types[ruamel]" time="0.010"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/readers/tests/test_yaml.py", line 33, in test_types
+    t = yaml_reader.parse_yaml(TYPES, parser)[0]
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.readers.tests.test_yaml" name="test_keywords[pyyaml]" time="0.016" /><testcase classname="yamale.readers.tests.test_yaml" name="test_keywords[PyYAML]" time="0.014" /><testcase classname="yamale.readers.tests.test_yaml" name="test_keywords[ruamel]" time="0.010"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/readers/tests/test_yaml.py", line 42, in test_keywords
+    t = yaml_reader.parse_yaml(KEYWORDS, parser)[0]
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.readers.tests.test_yaml" name="test_nested[pyyaml]" time="0.019" /><testcase classname="yamale.readers.tests.test_yaml" name="test_nested[PyYAML]" time="0.052" /><testcase classname="yamale.readers.tests.test_yaml" name="test_nested[ruamel]" time="0.011"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/readers/tests/test_yaml.py", line 48, in test_nested
+    t = yaml_reader.parse_yaml(NESTED, parser)[0]
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.syntax.tests.test_parser" name="test_eval" time="0.009" /><testcase classname="yamale.syntax.tests.test_parser" name="test_types" time="0.018" /><testcase classname="yamale.syntax.tests.test_parser" name="test_custom_type" time="0.007" /><testcase classname="yamale.syntax.tests.test_parser" name="test_required" time="0.009" /><testcase classname="yamale.syntax.tests.test_parser" name="test_syntax_error" time="0.007" /><testcase classname="yamale.tests.test_command_line" name="test_bad_yaml[pyyaml]" time="0.033" /><testcase classname="yamale.tests.test_command_line" name="test_bad_yaml[PyYAML]" time="0.020" /><testcase classname="yamale.tests.test_command_line" name="test_bad_yaml[ruamel]" time="0.012"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/tests/test_command_line.py", line 16, in test_bad_yaml
+    command_line._router(
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 104, in _router
+    _validate_single(root, schema_name, parser, strict)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 69, in _validate_single
+    _validate(s, yaml_path, parser, strict, True)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 35, in _validate
+    data = yamale.make_data(data_path, parser)
+  File "/workdir/yamale-4.0.4/yamale/yamale.py", line 29, in make_data
+    raw_data = readers.parse_yaml(path, parser, content=content)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.tests.test_command_line" name="test_required_keys_yaml[pyyaml]" time="0.022" /><testcase classname="yamale.tests.test_command_line" name="test_required_keys_yaml[PyYAML]" time="0.014" /><testcase classname="yamale.tests.test_command_line" name="test_required_keys_yaml[ruamel]" time="0.011"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/tests/test_command_line.py", line 25, in test_required_keys_yaml
+    command_line._router(
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 104, in _router
+    _validate_single(root, schema_name, parser, strict)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 69, in _validate_single
+    _validate(s, yaml_path, parser, strict, True)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 35, in _validate
+    data = yamale.make_data(data_path, parser)
+  File "/workdir/yamale-4.0.4/yamale/yamale.py", line 29, in make_data
+    raw_data = readers.parse_yaml(path, parser, content=content)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.tests.test_command_line" name="test_good_yaml[pyyaml]" time="0.016" /><testcase classname="yamale.tests.test_command_line" name="test_good_yaml[PyYAML]" time="0.241" /><testcase classname="yamale.tests.test_command_line" name="test_good_yaml[ruamel]" time="0.012"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/tests/test_command_line.py", line 33, in test_good_yaml
+    command_line._router(
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 104, in _router
+    _validate_single(root, schema_name, parser, strict)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 69, in _validate_single
+    _validate(s, yaml_path, parser, strict, True)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 35, in _validate
+    data = yamale.make_data(data_path, parser)
+  File "/workdir/yamale-4.0.4/yamale/yamale.py", line 29, in make_data
+    raw_data = readers.parse_yaml(path, parser, content=content)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.tests.test_command_line" name="test_good_relative_yaml[pyyaml]" time="0.021" /><testcase classname="yamale.tests.test_command_line" name="test_good_relative_yaml[PyYAML]" time="0.014" /><testcase classname="yamale.tests.test_command_line" name="test_good_relative_yaml[ruamel]" time="0.010"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/tests/test_command_line.py", line 40, in test_good_relative_yaml
+    command_line._router(
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 104, in _router
+    _validate_single(root, schema_name, parser, strict)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 69, in _validate_single
+    _validate(s, yaml_path, parser, strict, True)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 35, in _validate
+    data = yamale.make_data(data_path, parser)
+  File "/workdir/yamale-4.0.4/yamale/yamale.py", line 29, in make_data
+    raw_data = readers.parse_yaml(path, parser, content=content)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.tests.test_command_line" name="test_external_glob_schema[pyyaml]" time="0.023" /><testcase classname="yamale.tests.test_command_line" name="test_external_glob_schema[PyYAML]" time="0.014" /><testcase classname="yamale.tests.test_command_line" name="test_external_glob_schema[ruamel]" time="0.011"><failure message="ModuleNotFoundError: No module named 'ruamel'">Traceback (most recent call last):
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/yamale-4.0.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/yamale-4.0.4/yamale/tests/test_command_line.py", line 47, in test_external_glob_schema
+    command_line._router(
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 104, in _router
+    _validate_single(root, schema_name, parser, strict)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 69, in _validate_single
+    _validate(s, yaml_path, parser, strict, True)
+  File "/workdir/yamale-4.0.4/yamale/command_line.py", line 35, in _validate
+    data = yamale.make_data(data_path, parser)
+  File "/workdir/yamale-4.0.4/yamale/yamale.py", line 29, in make_data
+    raw_data = readers.parse_yaml(path, parser, content=content)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 35, in parse_yaml
+    return parse(f)
+  File "/workdir/yamale-4.0.4/yamale/readers/yaml_reader.py", line 15, in _ruamel
+    from ruamel.yaml import YAML
+ModuleNotFoundError: No module named 'ruamel'</failure></testcase><testcase classname="yamale.tests.test_command_line" name="test_empty_schema_file" time="0.012" /><testcase classname="yamale.tests.test_command_line" name="test_external_schema" time="0.035" /><testcase classname="yamale.tests.test_command_line" name="test_bad_dir" time="10.105" /><testcase classname="yamale.tests.test_command_line" name="test_bad_strict" time="0.013" /><testcase classname="yamale.tests.test_command_line" name="test_bad_issue_54" time="0.037" /><testcase classname="yamale.tests.test_command_line" name="test_nested_schema_issue_69" time="3.336" /><testcase classname="yamale.tests.test_functional" name="test_tests" time="0.006" /><testcase classname="yamale.tests.test_functional" name="test_flat_make_schema" time="0.005" /><testcase classname="yamale.tests.test_functional" name="test_nested_schema" time="0.005" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map0]" time="0.017" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map1]" time="0.014" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map2]" time="0.012" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map3]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map4]" time="0.014" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map5]" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map6]" time="0.012" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map7]" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map8]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map9]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map10]" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map11]" time="0.069" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map12]" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map13]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map14]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map15]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map16]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map17]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map18]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map19]" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map20]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map21]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map22]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map23]" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map24]" time="0.013" /><testcase classname="yamale.tests.test_functional" name="test_good[data_map25]" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_validate" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_nested" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_nested_issue_54" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_custom" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_lists" time="0.011" /><testcase classname="yamale.tests.test_functional" name="test_bad2_lists" time="0.011" /><testcase classname="yamale.tests.test_functional" name="test_bad_maps" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_bad_maps2" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_bad_keywords" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_anys" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_regexes" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_bad_include_validator" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_schema" time="0.018" /><testcase classname="yamale.tests.test_functional" name="test_empty_schema" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_vulnerable_schema[bad_schema_rce.yaml]" time="0.015" /><testcase classname="yamale.tests.test_functional" name="test_vulnerable_schema[bad_schema_rce2.yaml]" time="0.016" /><testcase classname="yamale.tests.test_functional" name="test_vulnerable_schema[bad_schema_rce3.yaml]" time="0.014" /><testcase classname="yamale.tests.test_functional" name="test_vulnerable_schema[bad_schema_rce4.yaml]" time="0.015" /><testcase classname="yamale.tests.test_functional" name="test_list_is_not_a_map" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_strict_map" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_strict_list" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_mixed_strict_map" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_nested_map2" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_static_list" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_map_key_constraint_base" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_map_key_constraint_nest" time="0.010" /><testcase classname="yamale.tests.test_functional" name="test_bad_map_key_constraint_nest_con" time="0.009" /><testcase classname="yamale.tests.test_functional" name="test_bad_numeric_bool_coercion" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_subset" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_bad_subset2" time="0.007" /><testcase classname="yamale.tests.test_functional" name="test_bad_subset3" time="0.008" /><testcase classname="yamale.tests.test_functional" name="test_nodef_subset_schema" time="0.012" /><testcase classname="yamale.tests.test_functional" name="test_validate_errors[False-False-^Error validating data '.*?' with schema '.*?'\n\t]" time="0.039" /><testcase classname="yamale.tests.test_functional" name="test_validate_errors[True-False-^Error validating data '.*?'\n\t]" time="0.041" /><testcase classname="yamale.tests.test_functional" name="test_validate_errors[False-True-^Error validating data with schema '.*?'\n\t]" time="0.039" /><testcase classname="yamale.tests.test_functional" name="test_validate_errors[True-True-^Error validating data\n\t]" time="0.037" /><testcase classname="yamale.tests.test_meta_test.TestAllYaml" name="runTest" time="0.030" /><testcase classname="yamale.tests.test_meta_test.TestBadYaml" name="runTest" time="0.110" /><testcase classname="yamale.tests.test_meta_test.TestMapYaml" name="runTest" time="0.032" /><testcase classname="yamale.tests.test_meta_test.TestCustomValidator" name="runTest" time="0.025" /><testcase classname="yamale.tests.test_meta_test.TestCustomValidatorWithIncludes" name="runTest" time="0.028" /><testcase classname="yamale.tests.test_meta_test.TestBadRequiredYaml" name="runTest" time="0.031" /><testcase classname="yamale.tests.test_meta_test.TestGoodRequiredYaml" name="runTest" time="0.027" /><testcase classname="yamale.validators.tests.test_constraint" name="test_length_min" time="0.011" /><testcase classname="yamale.validators.tests.test_constraint" name="test_length_max" time="0.008" /><testcase classname="yamale.validators.tests.test_constraint" name="test_number_max" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_number_min" time="0.006" /><testcase classname="yamale.validators.tests.test_constraint" name="test_timestamp_min" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_timestamp_max" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_day_min" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_day_max" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_equals" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_equals_ignore_case" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_starts_with" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_starts_with_ignore_case" time="0.006" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_ends_with" time="0.006" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_ends_with_ignore_case" time="0.006" /><testcase classname="yamale.validators.tests.test_constraint" name="test_str_matches" time="0.012" /><testcase classname="yamale.validators.tests.test_constraint" name="test_char_exclude" time="0.006" /><testcase classname="yamale.validators.tests.test_constraint" name="test_char_exclude_igonre_case" time="0.007" /><testcase classname="yamale.validators.tests.test_constraint" name="test_ip4" time="0.010" /><testcase classname="yamale.validators.tests.test_constraint" name="test_ip6" time="0.009" /><testcase classname="yamale.validators.tests.test_validate" name="test_validator_defaults" time="0.006" /><testcase classname="yamale.validators.tests.test_validate" name="test_equality" time="0.008" /><testcase classname="yamale.validators.tests.test_validate" name="test_integer" time="0.007" /><testcase classname="yamale.validators.tests.test_validate" name="test_string" time="0.006" /><testcase classname="yamale.validators.tests.test_validate" name="test_regex" time="0.008" /><testcase classname="yamale.validators.tests.test_validate" name="test_number" time="0.006" /><testcase classname="yamale.validators.tests.test_validate" name="test_boolean" time="0.006" /><testcase classname="yamale.validators.tests.test_validate" name="test_date" time="0.006" /><testcase classname="yamale.validators.tests.test_validate" name="test_datetime" time="0.007" /><testcase classname="yamale.validators.tests.test_validate" name="test_list" time="0.007" /><testcase classname="yamale.validators.tests.test_validate" name="test_null" time="0.007" /><testcase classname="yamale.validators.tests.test_validate" name="test_ip" time="0.012" /><testcase classname="yamale.validators.tests.test_validate" name="test_mac" time="0.007" /></testsuite></testsuites>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="22" skipped="0" tests="91" time="0.235" timestamp="2023-11-21T02:03:26.082355" hostname="b80581c01e0f"><testcase classname="tests.BaseTests" name="test_allow_expansion" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 177, in test_allow_expansion
+    self.parse(self.xml_bomb2, forbid_entities=False)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_dtd_forbidden" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 130, in test_dtd_forbidden
+    self.assertRaises(DTDForbidden, self.parse, self.xml_bomb, forbid_dtd=True)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_dtd_with_external_ref" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 158, in test_dtd_with_external_ref
+    self.parse(self.xml_dtd)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_entities_forbidden" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 109, in test_entities_forbidden
+    self.assertRaises(EntitiesForbidden, self.parse, self.xml_bomb)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_entity_cycle" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 127, in test_entity_cycle
+    self.assertRaises(self.cyclic_error, self.parse, self.xml_cyclic, forbid_entities=False)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_external_file_ref" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parseString'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 173, in test_external_file_ref
+    self.external_ref_exception, self.parseString, content, forbid_entities=False
+AttributeError: 'BaseTests' object has no attribute 'parseString'</failure></testcase><testcase classname="tests.BaseTests" name="test_external_ref" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 162, in test_external_ref
+    self.external_ref_exception, self.parse, self.xml_external, forbid_entities=False
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_simple_parse" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 97, in test_simple_parse
+    self.parse(self.xml_simple)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.BaseTests" name="test_simple_parse_ns" time="0.001"><failure message="AttributeError: 'BaseTests' object has no attribute 'parse'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 103, in test_simple_parse_ns
+    self.parse(self.xml_simple_ns)
+AttributeError: 'BaseTests' object has no attribute 'parse'</failure></testcase><testcase classname="tests.TestDefusedElementTree" name="test_aliases" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_allow_expansion" time="0.002" /><testcase classname="tests.TestDefusedElementTree" name="test_dtd_forbidden" time="0.002" /><testcase classname="tests.TestDefusedElementTree" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_entities_forbidden" time="0.003" /><testcase classname="tests.TestDefusedElementTree" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_external_file_ref" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_html_arg" time="0.001"><failure message="AssertionError: DeprecationWarning not raised">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 201, in test_html_arg
+    with self.assertRaises(DeprecationWarning):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 226, in __exit__
+    self._raiseFailure("{} not raised".format(exc_name))
+  File "/usr/local/lib/python3.10/unittest/case.py", line 163, in _raiseFailure
+    raise self.test_case.failureException(msg)
+AssertionError: DeprecationWarning not raised</failure></testcase><testcase classname="tests.TestDefusedElementTree" name="test_import_order" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_orig_parseerror" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedElementTree" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_aliases" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_allow_expansion" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_celementtree_warnings" time="0.000" /><testcase classname="tests.TestDefusedcElementTree" name="test_dtd_forbidden" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_entities_forbidden" time="0.002" /><testcase classname="tests.TestDefusedcElementTree" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_external_file_ref" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_html_arg" time="0.001"><failure message="AssertionError: DeprecationWarning not raised">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 201, in test_html_arg
+    with self.assertRaises(DeprecationWarning):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 226, in __exit__
+    self._raiseFailure("{} not raised".format(exc_name))
+  File "/usr/local/lib/python3.10/unittest/case.py", line 163, in _raiseFailure
+    raise self.test_case.failureException(msg)
+AssertionError: DeprecationWarning not raised</failure></testcase><testcase classname="tests.TestDefusedcElementTree" name="test_import_order" time="0.000" /><testcase classname="tests.TestDefusedcElementTree" name="test_orig_parseerror" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedcElementTree" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_allow_expansion" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_dtd_forbidden" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_entities_forbidden" time="0.002" /><testcase classname="tests.TestDefusedMinidom" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_external_file_ref" time="0.002" /><testcase classname="tests.TestDefusedMinidom" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedMinidom" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_allow_expansion" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_dtd_forbidden" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_entities_forbidden" time="0.002" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_external_file_ref" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedMinidomWithParser" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_allow_expansion" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_dtd_forbidden" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_entities_forbidden" time="0.002" /><testcase classname="tests.TestDefusedPulldom" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_external_file_ref" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedPulldom" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_allow_expansion" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_dtd_forbidden" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_dtd_with_external_ref" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_entities_forbidden" time="0.002" /><testcase classname="tests.TestDefusedSax" name="test_entity_cycle" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_exceptions" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_external_file_ref" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_external_ref" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_simple_parse" time="0.001" /><testcase classname="tests.TestDefusedSax" name="test_simple_parse_ns" time="0.001" /><testcase classname="tests.TestDefusedLxml" name="test_allow_expansion" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 177, in test_allow_expansion
+    self.parse(self.xml_bomb2, forbid_entities=False)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_dtd_forbidden" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 130, in test_dtd_forbidden
+    self.assertRaises(DTDForbidden, self.parse, self.xml_bomb, forbid_dtd=True)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 738, in assertRaises
+    return context.handle('assertRaises', args, kwargs)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 201, in handle
+    callable_obj(*args, **kwargs)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_dtd_with_external_ref" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 359, in test_dtd_with_external_ref
+    self.assertRaises(NotSupportedError, self.parse, self.xml_dtd)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 738, in assertRaises
+    return context.handle('assertRaises', args, kwargs)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 201, in handle
+    callable_obj(*args, **kwargs)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_entities_forbidden" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 356, in test_entities_forbidden
+    self.assertRaises(NotSupportedError, self.parse, self.xml_bomb)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 738, in assertRaises
+    return context.handle('assertRaises', args, kwargs)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 201, in handle
+    callable_obj(*args, **kwargs)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_entity_cycle" time="0.001"><failure message="TypeError: assertRaises() arg 1 must be an exception type or tuple of exception types">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 127, in test_entity_cycle
+    self.assertRaises(self.cyclic_error, self.parse, self.xml_cyclic, forbid_entities=False)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 738, in assertRaises
+    return context.handle('assertRaises', args, kwargs)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 186, in handle
+    raise TypeError('%s() arg 1 must be %s' %
+TypeError: assertRaises() arg 1 must be an exception type or tuple of exception types</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_external_file_ref" time="0.000" /><testcase classname="tests.TestDefusedLxml" name="test_external_ref" time="0.000" /><testcase classname="tests.TestDefusedLxml" name="test_lxml_warnings" time="0.001"><failure message="AssertionError: None is not true">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 432, in test_lxml_warnings
+    self.assertTrue(lxml_warnings)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: None is not true</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_restricted_element1" time="0.000"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 369, in test_restricted_element1
+    tree = self.module.parse(self.xml_bomb, forbid_dtd=False, forbid_entities=False)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 370, in test_restricted_element1
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_restricted_element2" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 386, in test_restricted_element2
+    tree = self.module.parse(self.xml_bomb2, forbid_dtd=False, forbid_entities=False)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 387, in test_restricted_element2
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_simple_parse" time="0.001"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 97, in test_simple_parse
+    self.parse(self.xml_simple)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_simple_parse_ns" time="0.000"><failure message="TypeError: catching classes that do not inherit from BaseException is not allowed">Traceback (most recent call last):
+  File "/workdir/defusedxml-0.7.1/tests.py", line 341, in parse
+    tree = self.module.parse(xmlfile, **kwargs)
+AttributeError: 'NoneType' object has no attribute 'parse'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 103, in test_simple_parse_ns
+    self.parse(self.xml_simple_ns)
+  File "/workdir/defusedxml-0.7.1/tests.py", line 342, in parse
+    except XMLSyntaxError:
+TypeError: catching classes that do not inherit from BaseException is not allowed</failure></testcase><testcase classname="tests.TestDefusedLxml" name="test_xpath_injection" time="0.001"><failure message="AttributeError: 'NoneType' object has no attribute 'fromstring'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/defusedxml-0.7.1/tests.py", line 413, in test_xpath_injection
+    root = lxml.fromstring(xml)
+AttributeError: 'NoneType' object has no attribute 'fromstring'</failure></testcase><testcase classname="tests.TestXmlRpc" name="test_monkeypatch" time="0.001" /><testcase classname="tests.TestXmlRpc" name="test_xmlrpc" time="0.001" /><testcase classname="tests.TestDefusedGzip" name="test_defused_gzip_decode" time="0.001" /><testcase classname="tests.TestDefusedGzip" name="test_defused_gzip_response" time="0.001" /><testcase classname="tests" name="test_main" time="0.001" /></testsuite></testsuites>

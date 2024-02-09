@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="3" tests="28" time="19.596" timestamp="2023-11-29T01:51:31.263000" hostname="a1f8948d47fc"><testcase classname="test_sugar.TestTerminalReporter" name="test_new_summary" time="0.652" /><testcase classname="test_sugar.TestTerminalReporter" name="test_old_summary" time="0.493"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 80, in test_old_summary
+    assert 'test_old_summary.py:4: assert False' in strip_colors(output)
+AssertionError</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_xfail_true" time="0.794" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xfail_false" time="0.928" /><testcase classname="test_sugar.TestTerminalReporter" name="test_report_header" time="0.608" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xfail_strict_true" time="0.758" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xfail_strict_false" time="0.779" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xpass_true" time="0.807" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xpass_false" time="0.818" /><testcase classname="test_sugar.TestTerminalReporter" name="test_flaky_test" time="0.016"><skipped type="pytest.skip" message="could not import 'pytest_rerunfailures': No module named 'pytest_rerunfailures'">/workdir/pytest-sugar-0.9.6/test_sugar.py:171: could not import 'pytest_rerunfailures': No module named 'pytest_rerunfailures'</skipped></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_xpass_strict" time="0.614" /><testcase classname="test_sugar.TestTerminalReporter" name="test_teardown_errors" time="1.143" /><testcase classname="test_sugar.TestTerminalReporter" name="test_skipping_tests" time="0.853" /><testcase classname="test_sugar.TestTerminalReporter" name="test_deselecting_tests" time="0.775" /><testcase classname="test_sugar.TestTerminalReporter" name="test_item_count_after_pytest_collection_modifyitems" time="0.535" /><testcase classname="test_sugar.TestTerminalReporter" name="test_fail" time="0.382"><failure message="Failed: nomatch: '* test_func *'&#10;    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'&#10;    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail0'&#10;    and: 'plugins: sugar-0.9.6'&#10;    and: ''&#10;    and: ''&#10;fnmatch: '* test_func *'&#10;   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'&#10;nomatch: '    def test_func():'&#10;    and: ''&#10;    and: '&gt;   ???'&#10;    and: 'E   AssertionError'&#10;    and: ''&#10;    and: 'test_fail.py:3: AssertionError'&#10;    and: ''&#10;    and: ''&#10;    and: ' test_fail.py ⨯                                                  100% ██████████'&#10;    and: '=========================== short test summary info ============================'&#10;    and: 'FAILED test_fail.py::test_func - AssertionError'&#10;    and: ''&#10;    and: 'Results (0.10s):'&#10;    and: '       1 failed'&#10;    and: '         - test_fail.py:2 test_func'&#10;remains unmatched: '    def test_func():'">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 287, in test_fail
+    result.stdout.fnmatch_lines([
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* test_func *'
+    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail0'
+    and: 'plugins: sugar-0.9.6'
+    and: ''
+    and: ''
+fnmatch: '* test_func *'
+   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'
+nomatch: '    def test_func():'
+    and: ''
+    and: '&gt;   ???'
+    and: 'E   AssertionError'
+    and: ''
+    and: 'test_fail.py:3: AssertionError'
+    and: ''
+    and: ''
+    and: ' test_fail.py ⨯                                                  100% ██████████'
+    and: '=========================== short test summary info ============================'
+    and: 'FAILED test_fail.py::test_func - AssertionError'
+    and: ''
+    and: 'Results (0.10s):'
+    and: '       1 failed'
+    and: '         - test_fail.py:2 test_func'
+remains unmatched: '    def test_func():'</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_fail_unicode_crashline" time="0.305"><failure message="Failed: nomatch: '* test_func *'&#10;    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'&#10;    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail_unicode_crashline0'&#10;    and: 'plugins: sugar-0.9.6'&#10;    and: ''&#10;    and: ''&#10;fnmatch: '* test_func *'&#10;   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'&#10;nomatch: '    def test_func():'&#10;    and: ''&#10;    and: '&gt;   ???'&#10;    and: 'E   AssertionError'&#10;    and: ''&#10;    and: 'test_fail_unicode_crashline.py:4: AssertionError'&#10;    and: ''&#10;    and: ''&#10;    and: ' test_fail_unicode_crashline.py ⨯                                100% ██████████'&#10;    and: '=========================== short test summary info ============================'&#10;    and: 'FAILED test_fail_unicode_crashline.py::test_func - AssertionError'&#10;    and: ''&#10;    and: 'Results (0.08s):'&#10;    and: '       1 failed'&#10;    and: '         - test_fail_unicode_crashline.py:3 test_func'&#10;remains unmatched: '    def test_func():'">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 304, in test_fail_unicode_crashline
+    result.stdout.fnmatch_lines([
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* test_func *'
+    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail_unicode_crashline0'
+    and: 'plugins: sugar-0.9.6'
+    and: ''
+    and: ''
+fnmatch: '* test_func *'
+   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'
+nomatch: '    def test_func():'
+    and: ''
+    and: '&gt;   ???'
+    and: 'E   AssertionError'
+    and: ''
+    and: 'test_fail_unicode_crashline.py:4: AssertionError'
+    and: ''
+    and: ''
+    and: ' test_fail_unicode_crashline.py ⨯                                100% ██████████'
+    and: '=========================== short test summary info ============================'
+    and: 'FAILED test_fail_unicode_crashline.py::test_func - AssertionError'
+    and: ''
+    and: 'Results (0.08s):'
+    and: '       1 failed'
+    and: '         - test_fail_unicode_crashline.py:3 test_func'
+remains unmatched: '    def test_func():'</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_fail_in_fixture_and_test" time="1.055" /><testcase classname="test_sugar.TestTerminalReporter" name="test_fail_fail" time="0.968"><failure message="Failed: nomatch: '* test_func *'&#10;    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'&#10;    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail_fail0'&#10;    and: 'plugins: sugar-0.9.6'&#10;    and: ''&#10;    and: ''&#10;fnmatch: '* test_func *'&#10;   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'&#10;nomatch: '    def test_func():'&#10;    and: ''&#10;exact match: '    def test_func():'&#10;exact match: '&gt;       assert 0'&#10;nomatch: 'E       assert 0'&#10;    and: '    def test_func2():'&#10;    and: 'E   AssertionError'&#10;    and: ''&#10;    and: 'test_fail_fail.py:3: AssertionError'&#10;    and: ''&#10;    and: ''&#10;    and: ' test_fail_fail.py ⨯                                              50% █████     '&#10;    and: ''&#10;    and: '―――――――――――――――――――――――――――――――――― test_func2 ――――――――――――――――――――――――――――――――――'&#10;    and: ''&#10;    and: '&gt;   ???'&#10;    and: 'E   AssertionError'&#10;    and: ''&#10;    and: 'test_fail_fail.py:5: AssertionError'&#10;    and: ''&#10;    and: ''&#10;    and: ' test_fail_fail.py ⨯                                             100% ██████████'&#10;    and: '=========================== short test summary info ============================'&#10;    and: 'FAILED test_fail_fail.py::test_func - AssertionError'&#10;    and: 'FAILED test_fail_fail.py::test_func2 - AssertionError'&#10;    and: ''&#10;    and: 'Results (0.09s):'&#10;    and: '       2 failed'&#10;    and: '         - test_fail_fail.py:2 test_func'&#10;    and: '         - test_fail_fail.py:4 test_func2'&#10;remains unmatched: 'E       assert 0'">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 345, in test_fail_fail
+    result.stdout.fnmatch_lines([
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '* test_func *'
+    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_fail_fail0'
+    and: 'plugins: sugar-0.9.6'
+    and: ''
+    and: ''
+fnmatch: '* test_func *'
+   with: '―――――――――――――――――――――――――――――――――― test_func ―――――――――――――――――――――――――――――――――――'
+nomatch: '    def test_func():'
+    and: ''
+exact match: '    def test_func():'
+exact match: '&gt;       assert 0'
+nomatch: 'E       assert 0'
+    and: '    def test_func2():'
+    and: 'E   AssertionError'
+    and: ''
+    and: 'test_fail_fail.py:3: AssertionError'
+    and: ''
+    and: ''
+    and: ' test_fail_fail.py ⨯                                              50% █████     '
+    and: ''
+    and: '―――――――――――――――――――――――――――――――――― test_func2 ――――――――――――――――――――――――――――――――――'
+    and: ''
+    and: '&gt;   ???'
+    and: 'E   AssertionError'
+    and: ''
+    and: 'test_fail_fail.py:5: AssertionError'
+    and: ''
+    and: ''
+    and: ' test_fail_fail.py ⨯                                             100% ██████████'
+    and: '=========================== short test summary info ============================'
+    and: 'FAILED test_fail_fail.py::test_func - AssertionError'
+    and: 'FAILED test_fail_fail.py::test_func2 - AssertionError'
+    and: ''
+    and: 'Results (0.09s):'
+    and: '       2 failed'
+    and: '         - test_fail_fail.py:2 test_func'
+    and: '         - test_fail_fail.py:4 test_func2'
+remains unmatched: 'E       assert 0'</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_error_in_setup_then_pass" time="0.940" /><testcase classname="test_sugar.TestTerminalReporter" name="test_error_in_teardown_then_pass" time="1.283"><failure message="Failed: nomatch: '*ERROR at teardown of test_nada*'&#10;    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'&#10;    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_error_in_teardown_then_pass0'&#10;    and: 'plugins: sugar-0.9.6'&#10;    and: ''&#10;    and: ''&#10;    and: ''&#10;fnmatch: '*ERROR at teardown of test_nada*'&#10;   with: '―――――――――――――――――――――――― ERROR at teardown of test_nada ――――――――――――――――――――――――'&#10;exact match: ''&#10;fnmatch: 'function = &lt;function test_nada at*'&#10;   with: 'function = &lt;function test_nada at 0x2b84c6d3&gt;'&#10;exact match: ''&#10;fnmatch: '*def teardown_function(function):*'&#10;   with: '    def teardown_function(function):'&#10;fnmatch: '*teardown func*'&#10;   with: '        print (&quot;teardown func&quot;)'&#10;fnmatch: '*if function is test_nada*'&#10;   with: '        if function is test_nada:'&#10;fnmatch: '&gt;*assert 0*'&#10;   with: '&gt;           assert 0'&#10;nomatch: 'E*assert 0*'&#10;    and: '    def test_nada():'&#10;    and: '        pass'&#10;    and: '    def test_zip():'&#10;    and: 'E   AssertionError'&#10;    and: ''&#10;    and: 'test_error_in_teardown_then_pass.py:4: AssertionError'&#10;    and: '--------------------------- Captured stdout teardown ---------------------------'&#10;    and: 'teardown func'&#10;    and: ''&#10;    and: '                                                                  50% █████     '&#10;    and: ''&#10;    and: ' test_error_in_teardown_then_pass.py ✓                           100% ██████████'&#10;    and: '=========================== short test summary info ============================'&#10;    and: 'FAILED test_error_in_teardown_then_pass.py::test_nada - AssertionError'&#10;    and: ''&#10;    and: 'Results (0.10s):'&#10;    and: '       2 passed'&#10;    and: '       1 error'&#10;remains unmatched: 'E*assert 0*'">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 404, in test_error_in_teardown_then_pass
+    result.stdout.fnmatch_lines([
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '*ERROR at teardown of test_nada*'
+    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_error_in_teardown_then_pass0'
+    and: 'plugins: sugar-0.9.6'
+    and: ''
+    and: ''
+    and: ''
+fnmatch: '*ERROR at teardown of test_nada*'
+   with: '―――――――――――――――――――――――― ERROR at teardown of test_nada ――――――――――――――――――――――――'
+exact match: ''
+fnmatch: 'function = &lt;function test_nada at*'
+   with: 'function = &lt;function test_nada at 0x2b84c6d3&gt;'
+exact match: ''
+fnmatch: '*def teardown_function(function):*'
+   with: '    def teardown_function(function):'
+fnmatch: '*teardown func*'
+   with: '        print ("teardown func")'
+fnmatch: '*if function is test_nada*'
+   with: '        if function is test_nada:'
+fnmatch: '&gt;*assert 0*'
+   with: '&gt;           assert 0'
+nomatch: 'E*assert 0*'
+    and: '    def test_nada():'
+    and: '        pass'
+    and: '    def test_zip():'
+    and: 'E   AssertionError'
+    and: ''
+    and: 'test_error_in_teardown_then_pass.py:4: AssertionError'
+    and: '--------------------------- Captured stdout teardown ---------------------------'
+    and: 'teardown func'
+    and: ''
+    and: '                                                                  50% █████     '
+    and: ''
+    and: ' test_error_in_teardown_then_pass.py ✓                           100% ██████████'
+    and: '=========================== short test summary info ============================'
+    and: 'FAILED test_error_in_teardown_then_pass.py::test_nada - AssertionError'
+    and: ''
+    and: 'Results (0.10s):'
+    and: '       2 passed'
+    and: '       1 error'
+remains unmatched: 'E*assert 0*'</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_collect_error" time="1.519"><failure message="Failed: nomatch: '*ERROR collecting test_collect_error.py*'&#10;    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'&#10;    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_collect_error0'&#10;    and: 'plugins: sugar-0.9.6'&#10;    and: ''&#10;fnmatch: '*ERROR collecting test_collect_error.py*'&#10;   with: '―――――――――――――――――――― ERROR collecting test_collect_error.py ――――――――――――――――――――'&#10;nomatch: 'test_collect_error.py:1: in &lt;module&gt;'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py:341: in from_call'&#10;    and: '    result: Optional[TResult] = func()'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py:372: in &lt;lambda&gt;'&#10;    and: '    call = CallInfo.from_call(lambda: list(collector.collect()), &quot;collect&quot;)'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:531: in collect'&#10;    and: '    self._inject_setup_module_fixture()'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:545: in _inject_setup_module_fixture'&#10;    and: '    self.obj, (&quot;setUpModule&quot;, &quot;setup_module&quot;)'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:310: in obj'&#10;    and: '    self._obj = obj = self._getobj()'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:528: in _getobj'&#10;    and: '    return self._importtestmodule()'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:617: in _importtestmodule'&#10;    and: '    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)'&#10;    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:567: in import_path'&#10;    and: '    importlib.import_module(module_name)'&#10;    and: '/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module'&#10;    and: '    return _bootstrap._gcd_import(name[level:], package, level)'&#10;exact match: 'test_collect_error.py:1: in &lt;module&gt;'&#10;nomatch: '    raise ValueError(0)'&#10;    and: '    ???'&#10;    and: 'E   ValueError: 0'&#10;    and: ''&#10;    and: '=========================== short test summary info ============================'&#10;    and: 'FAILED test_collect_error.py - ValueError: 0'&#10;    and: '!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!'&#10;    and: ''&#10;    and: 'Results (0.29s):'&#10;remains unmatched: '    raise ValueError(0)'">Traceback (most recent call last):
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytest-sugar-0.9.6/test_sugar.py", line 425, in test_collect_error
+    result.stdout.fnmatch_lines([
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1650, in fnmatch_lines
+    self._match_lines(lines2, fnmatch, "fnmatch", consecutive=consecutive)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1737, in _match_lines
+    self._fail(msg)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pytester.py", line 1785, in _fail
+    fail(log_text)
+  File "/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: nomatch: '*ERROR collecting test_collect_error.py*'
+    and: 'Test session starts (platform: linux, Python 3.10.8, pytest 7.4.3, pytest-sugar 0.9.6)'
+    and: 'rootdir: /tmp/pytest-of-tester/pytest-11/test_collect_error0'
+    and: 'plugins: sugar-0.9.6'
+    and: ''
+fnmatch: '*ERROR collecting test_collect_error.py*'
+   with: '―――――――――――――――――――― ERROR collecting test_collect_error.py ――――――――――――――――――――'
+nomatch: 'test_collect_error.py:1: in &lt;module&gt;'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py:341: in from_call'
+    and: '    result: Optional[TResult] = func()'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py:372: in &lt;lambda&gt;'
+    and: '    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:531: in collect'
+    and: '    self._inject_setup_module_fixture()'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:545: in _inject_setup_module_fixture'
+    and: '    self.obj, ("setUpModule", "setup_module")'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:310: in obj'
+    and: '    self._obj = obj = self._getobj()'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:528: in _getobj'
+    and: '    return self._importtestmodule()'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:617: in _importtestmodule'
+    and: '    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)'
+    and: '/workdir/pytest-sugar-0.9.6/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:567: in import_path'
+    and: '    importlib.import_module(module_name)'
+    and: '/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module'
+    and: '    return _bootstrap._gcd_import(name[level:], package, level)'
+exact match: 'test_collect_error.py:1: in &lt;module&gt;'
+nomatch: '    raise ValueError(0)'
+    and: '    ???'
+    and: 'E   ValueError: 0'
+    and: ''
+    and: '=========================== short test summary info ============================'
+    and: 'FAILED test_collect_error.py - ValueError: 0'
+    and: '!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!'
+    and: ''
+    and: 'Results (0.29s):'
+remains unmatched: '    raise ValueError(0)'</failure></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_verbose" time="0.721" /><testcase classname="test_sugar.TestTerminalReporter" name="test_verbose_has_double_colon" time="0.275" /><testcase classname="test_sugar.TestTerminalReporter" name="test_xdist" time="0.016"><skipped type="pytest.skip" message="could not import 'xdist': No module named 'xdist'">/workdir/pytest-sugar-0.9.6/test_sugar.py:509: could not import 'xdist': No module named 'xdist'</skipped></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_xdist_verbose" time="0.021"><skipped type="pytest.skip" message="could not import 'xdist': No module named 'xdist'">/workdir/pytest-sugar-0.9.6/test_sugar.py:523: could not import 'xdist': No module named 'xdist'</skipped></testcase><testcase classname="test_sugar.TestTerminalReporter" name="test_doctest" time="0.395" /><testcase classname="test_sugar.TestTerminalReporter" name="test_doctest_lineno" time="0.349" /></testsuite></testsuites>

@@ -1,0 +1,359 @@
+GLOB sdist-make: /workdir/watchdog-2.2.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-tests.txt
+cpythonlibtest-unit-test-tests inst: /workdir/watchdog-2.2.0/.tox/.tmp/package/1/watchdog-2.2.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,coverage==7.3.2,dnspython==2.4.2,docutils==0.20.1,eventlet==0.33.3,exceptiongroup==1.2.0,flake8==6.1.0,flaky==3.7.0,greenlet==3.0.1,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-timeout==2.2.0,PyYAML==6.0.1,requests==2.31.0,six==1.16.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0,watchdog @ file:///workdir/watchdog-2.2.0/.tox/.tmp/package/1/watchdog-2.2.0.zip#sha256=2edbfe7691df49878aed347a127516425510e5dcb165ffd545b5126f82bdd16e
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='742534041'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/watchdog/2.2.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/watchdog-2.2.0
+configfile: setup.cfg
+plugins: timeout-2.2.0, flaky-3.7.0, cov-4.1.0
+collecting ... collected 163 items / 2 skipped
+
+tests/test_0_watchmedo.py::test_load_config_valid PASSED                 [  0%]
+tests/test_0_watchmedo.py::test_load_config_invalid PASSED               [  1%]
+tests/test_0_watchmedo.py::test_kill_auto_restart PASSED                 [  1%]
+tests/test_0_watchmedo.py::test_shell_command_wait_for_completion PASSED [  2%]
+tests/test_0_watchmedo.py::test_shell_command_subprocess_termination_nowait PASSED [  3%]
+tests/test_0_watchmedo.py::test_auto_restart_subprocess_termination PASSED [  3%]
+tests/test_0_watchmedo.py::test_auto_restart_arg_parsing_basic PASSED    [  4%]
+tests/test_0_watchmedo.py::test_auto_restart_arg_parsing PASSED          [  4%]
+tests/test_0_watchmedo.py::test_shell_command_arg_parsing PASSED         [  5%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity0-cmdline0] PASSED [  6%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity0-cmdline1] PASSED [  6%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity1-cmdline0] PASSED [  7%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity1-cmdline1] PASSED [  7%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity2-cmdline0] PASSED [  8%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity2-cmdline1] PASSED [  9%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity3-cmdline0] PASSED [  9%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity3-cmdline1] PASSED [ 10%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity4-cmdline0] PASSED [ 11%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity4-cmdline1] PASSED [ 11%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity5-cmdline0] PASSED [ 12%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity5-cmdline1] PASSED [ 12%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity6-cmdline0] PASSED [ 13%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity6-cmdline1] PASSED [ 14%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity7-cmdline0] PASSED [ 14%]
+tests/test_0_watchmedo.py::test_valid_verbosity[verbosity7-cmdline1] PASSED [ 15%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args0-cmdline0] PASSED [ 15%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args0-cmdline1] PASSED [ 16%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args1-cmdline0] PASSED [ 17%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args1-cmdline1] PASSED [ 17%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args2-cmdline0] PASSED [ 18%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args2-cmdline1] PASSED [ 19%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args3-cmdline0] PASSED [ 19%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args3-cmdline1] PASSED [ 20%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args4-cmdline0] PASSED [ 20%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args4-cmdline1] PASSED [ 21%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args5-cmdline0] PASSED [ 22%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args5-cmdline1] PASSED [ 22%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args6-cmdline0] PASSED [ 23%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args6-cmdline1] PASSED [ 23%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args7-cmdline0] PASSED [ 24%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args7-cmdline1] PASSED [ 25%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args8-cmdline0] PASSED [ 25%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args8-cmdline1] PASSED [ 26%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args9-cmdline0] PASSED [ 26%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args9-cmdline1] PASSED [ 27%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args10-cmdline0] PASSED [ 28%]
+tests/test_0_watchmedo.py::test_invalid_verbosity[verbosity_cmdline_args10-cmdline1] PASSED [ 28%]
+tests/test_0_watchmedo.py::test_tricks_from_file[tricks-from] PASSED     [ 29%]
+tests/test_0_watchmedo.py::test_tricks_from_file[tricks] PASSED          [ 30%]
+tests/test_delayed_queue.py::test_delayed_get PASSED                     [ 30%]
+tests/test_delayed_queue.py::test_nondelayed_get PASSED                  [ 31%]
+tests/test_emitter.py::test_create PASSED                                [ 31%]
+tests/test_emitter.py::test_close PASSED                                 [ 32%]
+tests/test_emitter.py::test_create_wrong_encoding PASSED                 [ 33%]
+tests/test_emitter.py::test_delete PASSED                                [ 33%]
+tests/test_emitter.py::test_modify PASSED                                [ 34%]
+tests/test_emitter.py::test_chmod PASSED                                 [ 34%]
+tests/test_emitter.py::test_move PASSED                                  [ 35%]
+tests/test_emitter.py::test_case_change PASSED                           [ 36%]
+tests/test_emitter.py::test_move_to PASSED                               [ 36%]
+tests/test_emitter.py::test_move_to_full PASSED                          [ 37%]
+tests/test_emitter.py::test_move_from PASSED                             [ 38%]
+tests/test_emitter.py::test_move_from_full PASSED                        [ 38%]
+tests/test_emitter.py::test_separate_consecutive_moves PASSED            [ 39%]
+tests/test_emitter.py::test_delete_self PASSED                           [ 39%]
+tests/test_emitter.py::test_fast_subdirectory_creation_deletion PASSED   [ 40%]
+tests/test_emitter.py::test_passing_unicode_should_give_unicode PASSED   [ 41%]
+tests/test_emitter.py::test_passing_bytes_should_give_bytes PASSED       [ 41%]
+tests/test_emitter.py::test_recursive_on PASSED                          [ 42%]
+tests/test_emitter.py::test_recursive_off PASSED                         [ 42%]
+tests/test_emitter.py::test_renaming_top_level_directory PASSED          [ 43%]
+tests/test_emitter.py::test_renaming_top_level_directory_on_windows SKIPPED [ 44%]
+tests/test_emitter.py::test_move_nested_subdirectories PASSED            [ 44%]
+tests/test_emitter.py::test_move_nested_subdirectories_on_windows SKIPPED [ 45%]
+tests/test_emitter.py::test_file_lifecyle PASSED                         [ 46%]
+tests/test_events.py::test_file_deleted_event PASSED                     [ 46%]
+tests/test_events.py::test_file_delete_event_is_directory PASSED         [ 47%]
+tests/test_events.py::test_file_modified_event PASSED                    [ 47%]
+tests/test_events.py::test_file_modified_event_is_directory PASSED       [ 48%]
+tests/test_events.py::test_file_created_event PASSED                     [ 49%]
+tests/test_events.py::test_file_moved_event PASSED                       [ 49%]
+tests/test_events.py::test_file_closed_event PASSED                      [ 50%]
+tests/test_events.py::test_dir_deleted_event PASSED                      [ 50%]
+tests/test_events.py::test_dir_modified_event PASSED                     [ 51%]
+tests/test_events.py::test_dir_created_event PASSED                      [ 52%]
+tests/test_events.py::test_file_system_event_handler_dispatch PASSED     [ 52%]
+tests/test_inotify_buffer.py::test_move_from PASSED                      [ 53%]
+tests/test_inotify_buffer.py::test_move_to PASSED                        [ 53%]
+tests/test_inotify_buffer.py::test_move_internal PASSED                  [ 54%]
+tests/test_inotify_buffer.py::test_move_internal_batch PASSED            [ 55%]
+tests/test_inotify_buffer.py::test_delete_watched_directory PASSED       [ 55%]
+tests/test_inotify_buffer.py::test_unmount_watched_directory_filesystem FAILED [ 56%]
+tests/test_inotify_buffer.py::test_unmount_watched_directory_filesystem ERROR [ 56%]
+tests/test_inotify_buffer.py::test_close_should_terminate_thread[InotifyBuffer] PASSED [ 57%]
+tests/test_inotify_buffer.py::test_close_should_terminate_thread[InotifyBufferDelayedRead] PASSED [ 57%]
+tests/test_inotify_c.py::test_late_double_deletion PASSED                [ 58%]
+tests/test_inotify_c.py::test_raise_error[28-patterns0] PASSED           [ 58%]
+tests/test_inotify_c.py::test_raise_error[24-patterns1] PASSED           [ 59%]
+tests/test_inotify_c.py::test_raise_error[2-patterns2] PASSED            [ 60%]
+tests/test_inotify_c.py::test_raise_error[-1-patterns3] PASSED           [ 60%]
+tests/test_inotify_c.py::test_non_ascii_path PASSED                      [ 61%]
+tests/test_inotify_c.py::test_watch_file PASSED                          [ 61%]
+tests/test_inotify_c.py::test_event_equality PASSED                      [ 62%]
+tests/test_logging_event_handler.py::test_logging_event_handler_dispatch PASSED [ 63%]
+tests/test_observer.py::test_schedule_should_start_emitter_if_running PASSED [ 63%]
+tests/test_observer.py::test_schedule_should_not_start_emitter_if_not_running PASSED [ 64%]
+tests/test_observer.py::test_start_should_start_emitter PASSED           [ 65%]
+tests/test_observer.py::test_stop_should_stop_emitter PASSED             [ 65%]
+tests/test_observer.py::test_unschedule_self PASSED                      [ 66%]
+tests/test_observer.py::test_schedule_after_unschedule_all PASSED        [ 66%]
+tests/test_observer.py::test_2_observers_on_the_same_path PASSED         [ 67%]
+tests/test_observer.py::test_start_failure_should_not_prevent_further_try PASSED [ 68%]
+tests/test_observer.py::test_schedule_failure_should_not_prevent_future_schedules PASSED [ 68%]
+tests/test_observers_api.py::test_observer_constructor PASSED            [ 69%]
+tests/test_observers_api.py::test_observer__eq__ PASSED                  [ 69%]
+tests/test_observers_api.py::test_observer__ne__ PASSED                  [ 70%]
+tests/test_observers_api.py::test_observer__repr__ PASSED                [ 71%]
+tests/test_observers_api.py::test_event_emitter PASSED                   [ 71%]
+tests/test_observers_api.py::test_event_dispatcher PASSED                [ 72%]
+tests/test_observers_api.py::test_observer_basic PASSED                  [ 73%]
+tests/test_observers_polling.py::test___init__ PASSED                    [ 73%]
+tests/test_observers_polling.py::test_delete_watched_dir PASSED          [ 74%]
+tests/test_pattern_matching_event_handler.py::test_dispatch PASSED       [ 74%]
+tests/test_pattern_matching_event_handler.py::test_handler PASSED        [ 75%]
+tests/test_pattern_matching_event_handler.py::test_ignore_directories PASSED [ 76%]
+tests/test_pattern_matching_event_handler.py::test_ignore_patterns PASSED [ 76%]
+tests/test_pattern_matching_event_handler.py::test_patterns PASSED       [ 77%]
+tests/test_patterns.py::test_match_path[/users/gorakhargosh/foobar.py-included_patterns0-excluded_patterns0-True-True] PASSED [ 77%]
+tests/test_patterns.py::test_match_path[/users/gorakhargosh/foobar.py-included_patterns1-excluded_patterns1-True-True] PASSED [ 78%]
+tests/test_patterns.py::test_match_path[/users/gorakhargosh/-included_patterns2-excluded_patterns2-False-False] PASSED [ 79%]
+tests/test_patterns.py::test_match_path[/users/gorakhargosh/foobar.py-included_patterns3-excluded_patterns3-False-ValueError] PASSED [ 79%]
+tests/test_patterns.py::test_filter_paths[None-None-True-None] PASSED    [ 80%]
+tests/test_patterns.py::test_filter_paths[None-None-False-None] PASSED   [ 80%]
+tests/test_patterns.py::test_filter_paths[included_patterns2-excluded_patterns2-True-expected2] PASSED [ 81%]
+tests/test_patterns.py::test_match_any_paths[None-None-True-True] PASSED [ 82%]
+tests/test_patterns.py::test_match_any_paths[None-None-False-True] PASSED [ 82%]
+tests/test_patterns.py::test_match_any_paths[included_patterns2-excluded_patterns2-True-True] PASSED [ 83%]
+tests/test_patterns.py::test_match_any_paths[included_patterns3-None-False-False] PASSED [ 84%]
+tests/test_patterns.py::test_match_any_paths[included_patterns4-None-True-False] PASSED [ 84%]
+tests/test_regex_matching_event_handler.py::test_dispatch PASSED         [ 85%]
+tests/test_regex_matching_event_handler.py::test_handler PASSED          [ 85%]
+tests/test_regex_matching_event_handler.py::test_ignore_directories PASSED [ 86%]
+tests/test_regex_matching_event_handler.py::test_ignore_regexes PASSED   [ 87%]
+tests/test_regex_matching_event_handler.py::test_regexes PASSED          [ 87%]
+tests/test_regex_matching_event_handler.py::test_str_regexes PASSED      [ 88%]
+tests/test_regex_matching_event_handler.py::test_logging_event_handler_dispatch PASSED [ 88%]
+tests/test_skip_repeats_queue.py::test_basic_queue PASSED                [ 89%]
+tests/test_skip_repeats_queue.py::test_allow_nonconsecutive PASSED       [ 90%]
+tests/test_skip_repeats_queue.py::test_put_with_watchdog_events PASSED   [ 90%]
+tests/test_skip_repeats_queue.py::test_prevent_consecutive PASSED        [ 91%]
+tests/test_skip_repeats_queue.py::test_consecutives_allowed_across_empties PASSED [ 92%]
+tests/test_skip_repeats_queue.py::test_eventlet_monkey_patching PASSED   [ 92%]
+tests/test_snapshot_diff.py::test_pickle PASSED                          [ 93%]
+tests/test_snapshot_diff.py::test_move_to PASSED                         [ 93%]
+tests/test_snapshot_diff.py::test_move_from PASSED                       [ 94%]
+tests/test_snapshot_diff.py::test_move_internal PASSED                   [ 95%]
+tests/test_snapshot_diff.py::test_move_replace PASSED                    [ 95%]
+tests/test_snapshot_diff.py::test_dir_modify_on_create PASSED            [ 96%]
+tests/test_snapshot_diff.py::test_dir_modify_on_move PASSED              [ 96%]
+tests/test_snapshot_diff.py::test_detect_modify_for_moved_files PASSED   [ 97%]
+tests/test_snapshot_diff.py::test_replace_dir_with_file PASSED           [ 98%]
+tests/test_snapshot_diff.py::test_permission_error PASSED                [ 98%]
+tests/test_snapshot_diff.py::test_ignore_device PASSED                   [ 99%]
+tests/test_snapshot_diff.py::test_empty_snapshot PASSED                  [100%]
+
+==================================== ERRORS ====================================
+________ ERROR at teardown of test_unmount_watched_directory_filesystem ________
+Traceback (most recent call last):
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 182, in pytest_runtest_teardown
+    item.session._setupstate.teardown_exact(nextitem)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 537, in teardown_exact
+    raise exceptions[0]
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 526, in teardown_exact
+    fin()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 701, in <lambda>
+    subrequest.node.addfinalizer(lambda: fixturedef.finish(request=subrequest))
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1031, in finish
+    raise exc
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1024, in finish
+    func()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 911, in _teardown_yield_fixture
+    next(it)
+  File "/workdir/watchdog-2.2.0/tests/conftest.py", line 34, in no_thread_leaks
+    assert threading.active_count() == old_thread_count  # Only previously existing threads
+AssertionError: assert 2 == 1
+ +  where 2 = <function active_count at 0x7fc233bcb520>()
+ +    where <function active_count at 0x7fc233bcb520> = threading.active_count
+----------------------------- Captured stderr call -----------------------------
+sh: sudo: command not found
+sh: sudo: command not found
+
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+
+~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-61 (140471957583616) ~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_buffer.py", line 88, in run
+    inotify_events = self._inotify.read_events()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_c.py", line 285, in read_events
+    event_buffer = os.read(self._inotify_fd, event_buffer_size)
+
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+--------------------------- Captured stdout teardown ---------------------------
+[]
+=================================== FAILURES ===================================
+__________________ test_unmount_watched_directory_filesystem ___________________
+Traceback (most recent call last):
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/watchdog-2.2.0/tests/test_inotify_buffer.py", line 129, in test_unmount_watched_directory_filesystem
+    inotify.read_event()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_buffer.py", line 43, in read_event
+    return self._queue.get()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/delayed_queue.py", line 54, in get
+    self._not_empty.wait()
+  File "/usr/local/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_timeout.py", line 264, in handler
+    timeout_sigalrm(item, settings)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_timeout.py", line 448, in timeout_sigalrm
+    pytest.fail("Timeout >%ss" % settings.timeout)
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: Timeout >5.0s
+----------------------------- Captured stderr call -----------------------------
+sh: sudo: command not found
+sh: sudo: command not found
+
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+
+~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-61 (140471957583616) ~~~~~~~~~~~~~~~~~~~~~
+  File "/usr/local/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_buffer.py", line 88, in run
+    inotify_events = self._inotify.read_events()
+  File "/workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_c.py", line 285, in read_events
+    event_buffer = os.read(self._inotify_fd, event_buffer_size)
+
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+- generated xml file: /workdir/results/watchdog/2.2.0/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                                                                                                            Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------------------------------------------------------------------
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/__init__.py                               0      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/events.py                               191     17    91%   137, 158, 186, 416, 420, 422-423, 461, 560-568
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/__init__.py                    29     21    28%   62-87
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/api.py                        162      5    97%   180-181, 206-207, 252
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/fsevents2.py                  132    132     0%   17-251
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/fsevents.py                   164    164     0%   18-347
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify.py                     85      4    95%   155-156, 161-162
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_buffer.py              52      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/inotify_c.py                  292     45    85%   33, 155, 175, 190, 194, 222-223, 232-236, 266-273, 275-279, 288, 292, 299, 364, 371, 404, 463, 467, 487, 491, 548, 552-559, 562-564
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/kqueue.py                     232    232     0%   18-706
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/polling.py                     52      4    92%   86, 128, 143-144
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/read_directory_changes.py      63     63     0%   19-143
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/observers/winapi.py                     179    179     0%   38-393
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/tricks/__init__.py                      109     22    80%   65-79, 87, 91, 95, 99, 103, 127, 130, 142-146, 149, 199, 209, 223-227, 232
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/__init__.py                        48      6    88%   56, 60, 101-102, 136-139
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/bricks.py                          16      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/delayed_queue.py                   46      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/dirsnapshot.py                    141      8    94%   139, 267, 275-276, 327, 336, 339, 342
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/echo.py                            64     41    36%   40, 45, 50-54, 60, 69-72, 81-82, 104-111, 122-129, 135-144, 150-153, 157-161
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/patterns.py                        24      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/platform.py                        25      5    80%   30, 32, 35-38
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/utils/process_watcher.py                 18      2    89%   24-25
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/version.py                                6      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/watchdog/watchmedo.py                            226    117    48%   59-60, 158-162, 178-186, 248, 250, 252, 255, 257, 269, 275-276, 280, 284, 323-347, 404-432, 507-526, 594-641, 659-673, 677
+---------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                            2356   1067    55%
+
+===Flaky Test Report===
+
+test_delayed_get passed 1 out of the required 1 times. Success!
+test_nondelayed_get passed 1 out of the required 1 times. Success!
+test_create passed 1 out of the required 1 times. Success!
+test_close passed 1 out of the required 1 times. Success!
+test_create_wrong_encoding passed 1 out of the required 1 times. Success!
+test_delete passed 1 out of the required 1 times. Success!
+test_modify passed 1 out of the required 1 times. Success!
+test_chmod passed 1 out of the required 1 times. Success!
+test_move passed 1 out of the required 1 times. Success!
+test_case_change passed 1 out of the required 1 times. Success!
+test_move_to passed 1 out of the required 1 times. Success!
+test_move_from passed 1 out of the required 1 times. Success!
+test_separate_consecutive_moves passed 1 out of the required 1 times. Success!
+test_delete_self passed 1 out of the required 1 times. Success!
+test_passing_unicode_should_give_unicode passed 1 out of the required 1 times. Success!
+test_recursive_on passed 1 out of the required 1 times. Success!
+test_recursive_off passed 1 out of the required 1 times. Success!
+test_file_lifecyle passed 1 out of the required 1 times. Success!
+
+===End Flaky Test Report===
+=========================== short test summary info ============================
+FAILED tests/test_inotify_buffer.py::test_unmount_watched_directory_filesystem
+ERROR tests/test_inotify_buffer.py::test_unmount_watched_directory_filesystem
+============== 1 failed, 160 passed, 4 skipped, 1 error in 51.59s ==============
+ERROR: InvocationError for command /workdir/watchdog-2.2.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/watchdog/2.2.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

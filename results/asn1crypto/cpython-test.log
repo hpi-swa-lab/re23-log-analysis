@@ -1,0 +1,36 @@
+GLOB sdist-make: /workdir/asn1crypto-1.5.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/asn1crypto-1.5.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/asn1crypto-1.5.1/.tox/.tmp/package/1/asn1crypto-1.5.1.zip
+ERROR: invocation failed (exit code 1), logfile: /workdir/asn1crypto-1.5.1/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/asn1crypto-1.5.1.zip
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-req-build-kr3o6x4g/setup.py", line 98, in <module>
+          with codecs.open(os.path.join(PACKAGE_ROOT, 'readme.md'), 'r', 'utf-8') as f:
+        File "/usr/local/lib/python3.10/codecs.py", line 905, in open
+          file = builtins.open(filename, mode, buffering)
+      FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pip-req-build-kr3o6x4g/readme.md'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/asn1crypto-1.5.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/asn1crypto-1.5.1.zip (exited with code 1)

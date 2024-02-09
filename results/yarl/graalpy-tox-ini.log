@@ -1,0 +1,13 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/yarl/1.8.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/doc.txt
+	-rrequirements/towncrier.txt
+	-rrequirements/cython.txt
+	-rrequirements/lint.txt
+	-rrequirements/ci.txt
+	-rrequirements/dev.txt
+	-rrequirements/test.txt
+	-rrequirements/doc-spelling.txt
+

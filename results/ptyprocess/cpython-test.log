@@ -1,0 +1,34 @@
+.package create: /workdir/ptyprocess-0.7.0/.tox/.package
+.package installdeps: flit_core >=2,<4
+cpythonlibtest-unit-test-tests create: /workdir/ptyprocess-0.7.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/ptyprocess-0.7.0/.tox/.tmp/package/1/ptyprocess-0.7.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,ptyprocess @ file:///workdir/ptyprocess-0.7.0/.tox/.tmp/package/1/ptyprocess-0.7.0.tar.gz#sha256=9ec2ed12ca23e15182afc5de525fcb88ef8cc212f84b8f4406a94fda15845701,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='805275520'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/ptyprocess/0.7.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/ptyprocess-0.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/ptyprocess-0.7.0
+collecting ... collected 14 items
+
+tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_forever PASSED      [  7%]
+tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_timeout PASSED      [ 14%]
+tests/test_invalid_binary.py::InvalidBinaryChars::test_invalid_binary PASSED [ 21%]
+tests/test_preexec_fn.py::PreexecFns::test_preexec PASSED                [ 28%]
+tests/test_preexec_fn.py::PreexecFns::test_preexec_error PASSED          [ 35%]
+tests/test_spawn.py::PtyTestCase::test_interactive_repl_unicode_echo SKIPPED [ 42%]
+tests/test_spawn.py::PtyTestCase::test_interactive_repl_unicode_noecho SKIPPED [ 50%]
+tests/test_spawn.py::PtyTestCase::test_pass_fds PASSED                   [ 57%]
+tests/test_spawn.py::PtyTestCase::test_quick_spawn PASSED                [ 64%]
+tests/test_spawn.py::PtyTestCase::test_spawn_sh PASSED                   [ 71%]
+tests/test_spawn.py::PtyTestCase::test_spawn_sh_unicode PASSED           [ 78%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_false_shortproc PASSED [ 85%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_true_shortproc PASSED [ 92%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_twice_longproc PASSED [100%]
+
+- generated xml file: /workdir/results/ptyprocess/0.7.0/1/cpython-test-results.xml -
+======================== 12 passed, 2 skipped in 5.39s =========================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

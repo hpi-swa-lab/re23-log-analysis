@@ -1,0 +1,80 @@
+GLOB sdist-make: /workdir/Babel-2.11.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/Babel-2.11.0/.tox/.tmp/package/1/Babel-2.11.0.zip
+cpythonlibtest-unit-test-tests installed: Babel @ file:///workdir/Babel-2.11.0/.tox/.tmp/package/1/Babel-2.11.0.zip#sha256=b93baad06b1be9fa583eab6c4cbc35be7c8d14b1cc64e871a8a068317639e623,exceptiongroup==1.1.3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytz==2023.3.post1,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2597426224'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/Babel/2.11.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/Babel-2.11.0
+configfile: setup.cfg
+collecting ... collected 621 items / 3 errors
+
+==================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_dates.py _____________________
+ImportError while importing test module '/workdir/Babel-2.11.0/tests/test_dates.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_dates.py:17: in <module>
+    import freezegun
+E   ModuleNotFoundError: No module named 'freezegun'
+_______________ ERROR collecting tests/messages/test_frontend.py _______________
+ImportError while importing test module '/workdir/Babel-2.11.0/tests/messages/test_frontend.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/messages/test_frontend.py:14: in <module>
+    from freezegun import freeze_time
+E   ModuleNotFoundError: No module named 'freezegun'
+_______________ ERROR collecting tests/messages/test_plurals.py ________________
+Traceback (most recent call last):
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/Babel-2.11.0/tests/messages/test_plurals.py", line 19, in <module>
+    (Locale('en'), 2, '(n != 1)'),
+  File "/workdir/Babel-2.11.0/babel/core.py", line 167, in __init__
+    raise UnknownLocaleError(identifier)
+babel.core.UnknownLocaleError: unknown locale 'en'
+=============================== warnings summary ===============================
+babel/messages/checkers.py:158
+  /workdir/Babel-2.11.0/babel/messages/checkers.py:158: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import working_set
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/Babel/2.11.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_dates.py
+ERROR tests/messages/test_frontend.py
+ERROR tests/messages/test_plurals.py - babel.core.UnknownLocaleError: unknown...
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 3 errors in 1.42s =========================
+ERROR: InvocationError for command /workdir/Babel-2.11.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/Babel/2.11.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

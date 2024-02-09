@@ -1,0 +1,110 @@
+GLOB sdist-make: /workdir/tensorflow-io-gcs-filesystem-0.32.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtools/lint/requirements.txt, -rtests/test_gcloud/testbench/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting black==21.10b0 (from -r tools/lint/requirements.txt (line 1))
+  Downloading black-21.10b0-py3-none-any.whl (150 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.1/150.1 kB 3.2 MB/s eta 0:00:00
+Collecting pyupgrade==2.29.0 (from -r tools/lint/requirements.txt (line 2))
+  Downloading pyupgrade-2.29.0-py2.py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.2/53.2 kB 9.0 MB/s eta 0:00:00
+Collecting crc32c==2.1 (from -r tests/test_gcloud/testbench/requirements.txt (line 1))
+  Downloading crc32c-2.1.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting flask==1.1.2 (from -r tests/test_gcloud/testbench/requirements.txt (line 2))
+  Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.6/94.6 kB 12.5 MB/s eta 0:00:00
+Collecting greenlet==0.4.17 (from -r tests/test_gcloud/testbench/requirements.txt (line 3))
+  Downloading greenlet-0.4.17.tar.gz (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.4/61.4 kB 8.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting gevent==20.9.0 (from -r tests/test_gcloud/testbench/requirements.txt (line 4))
+  Downloading gevent-20.9.0.tar.gz (5.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 27.5 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [56 lines of output]
+      Compiling src/gevent/resolver/cares.pyx because it changed.
+      [1/1] Cythonizing src/gevent/resolver/cares.pyx
+      performance hint: src/gevent/libev/corecext.pyx:1299:5: Exception check on '_syserr_cb' will always require the GIL to be acquired.
+      Possible solutions:
+          1. Declare the function as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+          2. Use an 'int' return type on the function to allow an error code to be returned.
+      Compiling src/gevent/libev/corecext.pyx because it changed.
+      [1/1] Cythonizing src/gevent/libev/corecext.pyx
+      Compiling src/gevent/_greenlet_primitives.py because it changed.
+      [1/1] Cythonizing src/gevent/_greenlet_primitives.py
+      Compiling src/gevent/_hub_primitives.py because it changed.
+      [1/1] Cythonizing src/gevent/_hub_primitives.py
+      Compiling src/gevent/_hub_local.py because it changed.
+      [1/1] Cythonizing src/gevent/_hub_local.py
+      Compiling src/gevent/_waiter.py because it changed.
+      [1/1] Cythonizing src/gevent/_waiter.py
+      warning: src/gevent/_gevent_cgreenlet.pxd:112:33: Declarations should not be declared inline.
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      cdef load_traceback
+      cdef Waiter
+      cdef wait
+      cdef iwait
+      cdef reraise
+      cpdef GEVENT_CONFIG
+            ^
+      ------------------------------------------------------------
+      
+      src/gevent/_gevent_cgreenlet.pxd:181:6: Variables cannot be declared with 'cpdef'. Use 'cdef' instead.
+      Compiling src/gevent/greenlet.py because it changed.
+      [1/1] Cythonizing src/gevent/greenlet.py
+      Traceback (most recent call last):
+        File "/workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 480, in run_setup
+          super(_BuildMetaLegacyBackend, self).run_setup(setup_script=setup_script)
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 287, in <module>
+        File "/tmp/pip-install-txsz1n13/gevent_20e7791c34dc43feb0d8780f6e6a650a/_setuputils.py", line 236, in cythonize1
+          new_ext = cythonize(
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1154, in cythonize
+          cythonize_one(*args)
+        File "/tmp/pip-build-env-6hbv7wz_/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1321, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: src/gevent/greenlet.py
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rtools/lint/requirements.txt, -rtests/test_gcloud/testbench/requirements.txt]; v = InvocationError('/workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rtools/lint/requirements.txt -rtests/test_gcloud/testbench/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rtools/lint/requirements.txt, -rtests/test_gcloud/testbench/requirements.txt]; v = InvocationError('/workdir/tensorflow-io-gcs-filesystem-0.32.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rtools/lint/requirements.txt -rtests/test_gcloud/testbench/requirements.txt', 1)

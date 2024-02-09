@@ -1,0 +1,7 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/azure-identity/1.12.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdev_requirements.txt
+	-rtests/managed-identity-live/requirements.txt
+

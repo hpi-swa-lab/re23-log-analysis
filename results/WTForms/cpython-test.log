@@ -1,0 +1,1304 @@
+GLOB sdist-make: /workdir/WTForms-3.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/WTForms-3.0.1/.tox/.tmp/package/1/WTForms-3.0.1.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1,WTForms @ file:///workdir/WTForms-3.0.1/.tox/.tmp/package/1/WTForms-3.0.1.zip#sha256=ec84e162b588e5d31e4ded1dad7efc3098fc21841de1dc4e81097b13eea8ccb7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1557257739'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/WTForms/3.0.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/WTForms-3.0.1
+configfile: setup.cfg
+testpaths: tests
+collecting ... collected 338 items
+
+tests/test_csrf.py::TestDummyCSRF::test_base_class PASSED                [  0%]
+tests/test_csrf.py::TestDummyCSRF::test_basic_impl PASSED                [  0%]
+tests/test_csrf.py::TestDummyCSRF::test_csrf_off PASSED                  [  0%]
+tests/test_csrf.py::TestDummyCSRF::test_rename PASSED                    [  1%]
+tests/test_csrf.py::TestDummyCSRF::test_no_populate PASSED               [  1%]
+tests/test_csrf.py::TestSessionCSRF::test_various_failures PASSED        [  1%]
+tests/test_csrf.py::TestSessionCSRF::test_no_time_limit PASSED           [  2%]
+tests/test_csrf.py::TestSessionCSRF::test_with_time_limit PASSED         [  2%]
+tests/test_csrf.py::TestSessionCSRF::test_detailed_expected_values PASSED [  2%]
+tests/test_form.py::TestBaseForm::test_data_proxy PASSED                 [  2%]
+tests/test_form.py::TestBaseForm::test_errors_proxy PASSED               [  3%]
+tests/test_form.py::TestBaseForm::test_contains PASSED                   [  3%]
+tests/test_form.py::TestBaseForm::test_field_removal PASSED              [  3%]
+tests/test_form.py::TestBaseForm::test_field_adding PASSED               [  4%]
+tests/test_form.py::TestBaseForm::test_populate_obj PASSED               [  4%]
+tests/test_form.py::TestBaseForm::test_prefixes PASSED                   [  4%]
+tests/test_form.py::TestBaseForm::test_formdata_wrapper_error PASSED     [  5%]
+tests/test_form.py::TestFormMeta::test_monkeypatch PASSED                [  5%]
+tests/test_form.py::TestFormMeta::test_subclassing PASSED                [  5%]
+tests/test_form.py::TestFormMeta::test_class_meta_reassign PASSED        [  5%]
+tests/test_form.py::TestForm::test_validate PASSED                       [  6%]
+tests/test_form.py::TestForm::test_validate_with_extra PASSED            [  6%]
+tests/test_form.py::TestForm::test_form_level_errors PASSED              [  6%]
+tests/test_form.py::TestForm::test_field_adding_disabled PASSED          [  7%]
+tests/test_form.py::TestForm::test_field_removal PASSED                  [  7%]
+tests/test_form.py::TestForm::test_delattr_idempotency PASSED            [  7%]
+tests/test_form.py::TestForm::test_ordered_fields PASSED                 [  7%]
+tests/test_form.py::TestForm::test_data_arg PASSED                       [  8%]
+tests/test_form.py::TestForm::test_empty_formdata PASSED                 [  8%]
+tests/test_form.py::TestForm::test_errors_access_during_validation PASSED [  8%]
+tests/test_form.py::TestMeta::test_basic PASSED                          [  9%]
+tests/test_form.py::TestMeta::test_missing_diamond PASSED                [  9%]
+tests/test_i18n.py::TestI18N::test_failure PASSED                        [  9%]
+tests/test_i18n.py::TestI18N::test_us_translation PASSED                 [ 10%]
+tests/test_i18n.py::TestI18N::test_python3_nowrap PASSED                 [ 10%]
+tests/test_i18n.py::TestCoreForm::test_defaults PASSED                   [ 10%]
+tests/test_i18n.py::TestCoreForm::test_fallback PASSED                   [ 10%]
+tests/test_i18n.py::TestCoreForm::test_override_languages PASSED         [ 11%]
+tests/test_i18n.py::TestCoreForm::test_ngettext PASSED                   [ 11%]
+tests/test_i18n.py::TestCoreForm::test_cache PASSED                      [ 11%]
+tests/test_i18n.py::TestTranslations::test_gettext PASSED                [ 12%]
+tests/test_i18n.py::TestTranslations::test_ngettext PASSED               [ 12%]
+tests/test_i18n.py::TestTranslations::test_validator_translation PASSED  [ 12%]
+tests/test_locale_babel.py::TestLocaleDecimal::test_typeerror FAILED     [ 13%]
+tests/test_locale_babel.py::TestLocaleDecimal::test_formatting FAILED    [ 13%]
+tests/test_locale_babel.py::TestLocaleDecimal::test_parsing FAILED       [ 13%]
+tests/test_webob.py::test_automatic_wrapping PASSED                      [ 13%]
+tests/test_webob.py::test_empty PASSED                                   [ 14%]
+tests/test_webob.py::test_filled PASSED                                  [ 14%]
+tests/test_widgets.py::TestHTMLParams::test_basic PASSED                 [ 14%]
+tests/test_widgets.py::TestHTMLParams::test_data_prefix PASSED           [ 15%]
+tests/test_widgets.py::TestHTMLParams::test_aria_prefix PASSED           [ 15%]
+tests/test_widgets.py::TestHTMLParams::test_quoting PASSED               [ 15%]
+tests/test_widgets.py::TestListWidget::test_listwidget PASSED            [ 15%]
+tests/test_widgets.py::TestTableWidget::test_tablewidget PASSED          [ 16%]
+tests/test_widgets.py::TestBasicWidgets::test_input_type PASSED          [ 16%]
+tests/test_widgets.py::TestBasicWidgets::test_html_marking PASSED        [ 16%]
+tests/test_widgets.py::TestBasicWidgets::test_text_input PASSED          [ 17%]
+tests/test_widgets.py::TestBasicWidgets::test_password_input PASSED      [ 17%]
+tests/test_widgets.py::TestBasicWidgets::test_hidden_input PASSED        [ 17%]
+tests/test_widgets.py::TestBasicWidgets::test_checkbox_input PASSED      [ 18%]
+tests/test_widgets.py::TestBasicWidgets::test_radio_input PASSED         [ 18%]
+tests/test_widgets.py::TestBasicWidgets::test_textarea PASSED            [ 18%]
+tests/test_widgets.py::TestBasicWidgets::test_file PASSED                [ 18%]
+tests/test_widgets.py::TestSelect::test_select PASSED                    [ 19%]
+tests/test_widgets.py::TestSelect::test_render_option PASSED             [ 19%]
+tests/test_widgets.py::TestHTML5::test_number PASSED                     [ 19%]
+tests/test_widgets.py::TestHTML5::test_range PASSED                      [ 20%]
+tests/fields/test_boolean.py::test_defaults PASSED                       [ 20%]
+tests/fields/test_boolean.py::test_rendering PASSED                      [ 20%]
+tests/fields/test_boolean.py::test_with_postdata PASSED                  [ 21%]
+tests/fields/test_boolean.py::test_with_model_data PASSED                [ 21%]
+tests/fields/test_boolean.py::test_with_postdata_and_model PASSED        [ 21%]
+tests/fields/test_custom.py::test_processing_failure PASSED              [ 21%]
+tests/fields/test_custom.py::test_default_impls PASSED                   [ 22%]
+tests/fields/test_date.py::test_basic PASSED                             [ 22%]
+tests/fields/test_date.py::test_failure PASSED                           [ 22%]
+tests/fields/test_datetime.py::test_basic PASSED                         [ 23%]
+tests/fields/test_datetime.py::test_microseconds PASSED                  [ 23%]
+tests/fields/test_datetime.py::test_multiple_formats PASSED              [ 23%]
+tests/fields/test_datetimelocal.py::test_basic PASSED                    [ 23%]
+tests/fields/test_datetimelocal.py::test_microseconds PASSED             [ 24%]
+tests/fields/test_datetimelocal.py::test_separators PASSED               [ 24%]
+tests/fields/test_decimal.py::test_decimal_field PASSED                  [ 24%]
+tests/fields/test_decimal.py::test_quantize PASSED                       [ 25%]
+tests/fields/test_defaults.py::test_defaults PASSED                      [ 25%]
+tests/fields/test_defaults.py::test_unset_value PASSED                   [ 25%]
+tests/fields/test_field.py::test_unbound_field PASSED                    [ 26%]
+tests/fields/test_field.py::test_htmlstring PASSED                       [ 26%]
+tests/fields/test_field.py::test_str_coerce PASSED                       [ 26%]
+tests/fields/test_field.py::test_unicode_coerce PASSED                   [ 26%]
+tests/fields/test_field.py::test_process_formdata PASSED                 [ 27%]
+tests/fields/test_field.py::test_meta_attribute PASSED                   [ 27%]
+tests/fields/test_field.py::test_render_kw PASSED                        [ 27%]
+tests/fields/test_field.py::test_render_special PASSED                   [ 28%]
+tests/fields/test_field.py::test_required_flag PASSED                    [ 28%]
+tests/fields/test_field.py::test_check_validators PASSED                 [ 28%]
+tests/fields/test_field.py::test_custom_name PASSED                      [ 28%]
+tests/fields/test_field.py::test_pre_stop PASSED                         [ 29%]
+tests/fields/test_field.py::test_post PASSED                             [ 29%]
+tests/fields/test_file.py::test_file_field PASSED                        [ 29%]
+tests/fields/test_file.py::test_multiple_file_field PASSED               [ 30%]
+tests/fields/test_file.py::test_file_field_without_file_input PASSED     [ 30%]
+tests/fields/test_filters.py::test_working PASSED                        [ 30%]
+tests/fields/test_filters.py::test_failure PASSED                        [ 31%]
+tests/fields/test_filters.py::test_extra PASSED                          [ 31%]
+tests/fields/test_filters.py::test_inline PASSED                         [ 31%]
+tests/fields/test_flags.py::test_existing_values PASSED                  [ 31%]
+tests/fields/test_flags.py::test_assignment PASSED                       [ 32%]
+tests/fields/test_flags.py::test_unset PASSED                            [ 32%]
+tests/fields/test_flags.py::test_repr PASSED                             [ 32%]
+tests/fields/test_flags.py::test_underscore_property PASSED              [ 33%]
+tests/fields/test_float.py::test_float_field PASSED                      [ 33%]
+tests/fields/test_form.py::test_formdata PASSED                          [ 33%]
+tests/fields/test_form.py::test_iteration PASSED                         [ 34%]
+tests/fields/test_form.py::test_with_obj PASSED                          [ 34%]
+tests/fields/test_form.py::test_widget PASSED                            [ 34%]
+tests/fields/test_form.py::test_separator PASSED                         [ 34%]
+tests/fields/test_form.py::test_no_validators_or_filters PASSED          [ 35%]
+tests/fields/test_form.py::test_populate_missing_obj PASSED              [ 35%]
+tests/fields/test_form.py::test_populate_property PASSED                 [ 35%]
+tests/fields/test_hidden.py::test_hidden_field PASSED                    [ 36%]
+tests/fields/test_html5.py::test_simple PASSED                           [ 36%]
+tests/fields/test_html5.py::test_minlength_maxlength PASSED              [ 36%]
+tests/fields/test_html5.py::test_min_max PASSED                          [ 36%]
+tests/fields/test_integer.py::test_integer_field PASSED                  [ 37%]
+tests/fields/test_label.py::test_label PASSED                            [ 37%]
+tests/fields/test_label.py::test_auto_label PASSED                       [ 37%]
+tests/fields/test_label.py::test_override_for PASSED                     [ 38%]
+tests/fields/test_label.py::test_escaped_label_text PASSED               [ 38%]
+tests/fields/test_list.py::test_form PASSED                              [ 38%]
+tests/fields/test_list.py::test_enclosed_subform PASSED                  [ 39%]
+tests/fields/test_list.py::test_enclosed_subform_custom_name PASSED      [ 39%]
+tests/fields/test_list.py::test_custom_separator PASSED                  [ 39%]
+tests/fields/test_list.py::test_enclosed_subform_list_separator PASSED   [ 39%]
+tests/fields/test_list.py::test_enclosed_subform_uniform_separators PASSED [ 40%]
+tests/fields/test_list.py::test_enclosed_subform_mixed_separators PASSED [ 40%]
+tests/fields/test_list.py::test_entry_management PASSED                  [ 40%]
+tests/fields/test_list.py::test_min_max_entries PASSED                   [ 41%]
+tests/fields/test_list.py::test_validators PASSED                        [ 41%]
+tests/fields/test_list.py::test_no_filters PASSED                        [ 41%]
+tests/fields/test_list.py::test_process_prefilled PASSED                 [ 42%]
+tests/fields/test_list.py::test_errors PASSED                            [ 42%]
+tests/fields/test_month.py::test_basic PASSED                            [ 42%]
+tests/fields/test_month.py::test_failure PASSED                          [ 42%]
+tests/fields/test_password.py::test_password_field PASSED                [ 43%]
+tests/fields/test_radio.py::test_radio_field PASSED                      [ 43%]
+tests/fields/test_radio.py::test_text_coercion PASSED                    [ 43%]
+tests/fields/test_radio.py::test_callable_choices PASSED                 [ 44%]
+tests/fields/test_radio.py::test_required_flag PASSED                    [ 44%]
+tests/fields/test_radio.py::test_required_validator PASSED               [ 44%]
+tests/fields/test_radio.py::test_render_kw_preserved PASSED              [ 44%]
+tests/fields/test_select.py::test_select_field_copies_choices PASSED     [ 45%]
+tests/fields/test_select.py::test_defaults PASSED                        [ 45%]
+tests/fields/test_select.py::test_with_data PASSED                       [ 45%]
+tests/fields/test_select.py::test_value_coercion PASSED                  [ 46%]
+tests/fields/test_select.py::test_iterable_options PASSED                [ 46%]
+tests/fields/test_select.py::test_default_coerce PASSED                  [ 46%]
+tests/fields/test_select.py::test_validate_choices PASSED                [ 47%]
+tests/fields/test_select.py::test_validate_choices_when_empty PASSED     [ 47%]
+tests/fields/test_select.py::test_validate_choices_when_none PASSED      [ 47%]
+tests/fields/test_select.py::test_dont_validate_choices PASSED           [ 47%]
+tests/fields/test_select.py::test_choice_shortcut PASSED                 [ 48%]
+tests/fields/test_select.py::test_choice_shortcut_post PASSED            [ 48%]
+tests/fields/test_select.py::test_empty_choice[choices0] PASSED          [ 48%]
+tests/fields/test_select.py::test_empty_choice[None] PASSED              [ 49%]
+tests/fields/test_select.py::test_empty_choice[choices2] PASSED          [ 49%]
+tests/fields/test_select.py::test_callable_choices PASSED                [ 49%]
+tests/fields/test_select.py::test_requried_flag PASSED                   [ 50%]
+tests/fields/test_select.py::test_required_validator PASSED              [ 50%]
+tests/fields/test_select.py::test_render_kw_preserved PASSED             [ 50%]
+tests/fields/test_select.py::test_optgroup PASSED                        [ 50%]
+tests/fields/test_select.py::test_optgroup_shortcut PASSED               [ 51%]
+tests/fields/test_select.py::test_empty_optgroup[choices0] PASSED        [ 51%]
+tests/fields/test_select.py::test_empty_optgroup[choices1] PASSED        [ 51%]
+tests/fields/test_selectmultiple.py::test_defaults PASSED                [ 52%]
+tests/fields/test_selectmultiple.py::test_with_data PASSED               [ 52%]
+tests/fields/test_selectmultiple.py::test_coerce_fail PASSED             [ 52%]
+tests/fields/test_selectmultiple.py::test_callable_choices PASSED        [ 52%]
+tests/fields/test_selectmultiple.py::test_choice_shortcut PASSED         [ 53%]
+tests/fields/test_selectmultiple.py::test_empty_choice[choices0] PASSED  [ 53%]
+tests/fields/test_selectmultiple.py::test_empty_choice[None] PASSED      [ 53%]
+tests/fields/test_selectmultiple.py::test_validate_choices_when_empty PASSED [ 54%]
+tests/fields/test_selectmultiple.py::test_validate_choices_when_none PASSED [ 54%]
+tests/fields/test_selectmultiple.py::test_dont_validate_choices PASSED   [ 54%]
+tests/fields/test_selectmultiple.py::test_requried_flag PASSED           [ 55%]
+tests/fields/test_selectmultiple.py::test_required_validator PASSED      [ 55%]
+tests/fields/test_selectmultiple.py::test_render_kw_preserved PASSED     [ 55%]
+tests/fields/test_string.py::test_string_field PASSED                    [ 55%]
+tests/fields/test_submit.py::test_submit_field PASSED                    [ 56%]
+tests/fields/test_textarea.py::test_textarea_field PASSED                [ 56%]
+tests/fields/test_time.py::test_basic PASSED                             [ 56%]
+tests/validators/test_anyof.py::test_anyof_passes[b-test_list0] PASSED   [ 57%]
+tests/validators/test_anyof.py::test_anyof_passes[2-test_list1] PASSED   [ 57%]
+tests/validators/test_anyof.py::test_anyof_raisses[d-test_list0] PASSED  [ 57%]
+tests/validators/test_anyof.py::test_anyof_raisses[6-test_list1] PASSED  [ 57%]
+tests/validators/test_anyof.py::test_any_of_values_formatter PASSED      [ 58%]
+tests/validators/test_data_required.py::test_data_required PASSED        [ 58%]
+tests/validators/test_data_required.py::test_data_required_raises[None] PASSED [ 58%]
+tests/validators/test_data_required.py::test_data_required_raises[] PASSED [ 59%]
+tests/validators/test_data_required.py::test_data_required_raises[ ] PASSED [ 59%]
+tests/validators/test_data_required.py::test_data_required_raises[\t\t] PASSED [ 59%]
+tests/validators/test_data_required.py::test_data_required_clobber PASSED [ 60%]
+tests/validators/test_data_required.py::test_data_required_messages[validator0-This field is required.] PASSED [ 60%]
+tests/validators/test_data_required.py::test_data_required_messages[validator1-foo] PASSED [ 60%]
+tests/validators/test_data_required.py::test_required_passes PASSED      [ 60%]
+tests/validators/test_data_required.py::test_required_stops_validation PASSED [ 61%]
+tests/validators/test_email.py::test_valid_email_passes[foo@bar.dk] FAILED [ 61%]
+tests/validators/test_email.py::test_valid_email_passes[123@bar.dk] FAILED [ 61%]
+tests/validators/test_email.py::test_valid_email_passes[foo@456.dk] FAILED [ 62%]
+tests/validators/test_email.py::test_valid_email_passes[foo@bar456.info] FAILED [ 62%]
+tests/validators/test_email.py::test_valid_email_passes[foo@b\xfccher.\u4e2d\u56fd] FAILED [ 62%]
+tests/validators/test_email.py::test_invalid_email_raises[None] FAILED   [ 63%]
+tests/validators/test_email.py::test_invalid_email_raises[] FAILED       [ 63%]
+tests/validators/test_email.py::test_invalid_email_raises[  ] FAILED     [ 63%]
+tests/validators/test_email.py::test_invalid_email_raises[foo] FAILED    [ 63%]
+tests/validators/test_email.py::test_invalid_email_raises[bar.dk] FAILED [ 64%]
+tests/validators/test_email.py::test_invalid_email_raises[foo@] FAILED   [ 64%]
+tests/validators/test_email.py::test_invalid_email_raises[@bar.dk] FAILED [ 64%]
+tests/validators/test_email.py::test_invalid_email_raises[foo@bar] FAILED [ 65%]
+tests/validators/test_email.py::test_invalid_email_raises[foo@bar.ab12] FAILED [ 65%]
+tests/validators/test_email.py::test_invalid_email_raises[foo@.bar.ab] FAILED [ 65%]
+tests/validators/test_email.py::test_invalid_email_raises[foo.@bar.co] FAILED [ 65%]
+tests/validators/test_email.py::test_invalid_email_raises[foo@foo@bar.co] FAILED [ 66%]
+tests/validators/test_email.py::test_invalid_email_raises[fo o@bar.co] FAILED [ 66%]
+tests/validators/test_email.py::test_invalid_email_raises_granular_message[foo@] FAILED [ 66%]
+tests/validators/test_equal_to.py::test_equal_to_passes PASSED           [ 67%]
+tests/validators/test_equal_to.py::test_equal_to_raises[test-invalid_field_name] PASSED [ 67%]
+tests/validators/test_equal_to.py::test_equal_to_raises[bad_value-foo] PASSED [ 67%]
+tests/validators/test_input_required.py::test_input_required PASSED      [ 68%]
+tests/validators/test_input_required.py::test_input_required_raises PASSED [ 68%]
+tests/validators/test_input_required.py::test_input_required_error_message[validator0-This field is required.] PASSED [ 68%]
+tests/validators/test_input_required.py::test_input_required_error_message[validator1-foo] PASSED [ 68%]
+tests/validators/test_ipaddress.py::test_ip4address_passes[147.230.23.25] PASSED [ 69%]
+tests/validators/test_ipaddress.py::test_ip4address_passes[147.230.23.0] PASSED [ 69%]
+tests/validators/test_ipaddress.py::test_ip4address_passes[127.0.0.1] PASSED [ 69%]
+tests/validators/test_ipaddress.py::test_good_ip6address_passes[2001:718:1C01:1111::1111] PASSED [ 70%]
+tests/validators/test_ipaddress.py::test_good_ip6address_passes[2001:718:1C01:1111::] PASSED [ 70%]
+tests/validators/test_ipaddress.py::test_good_ip6address_passes[::1] PASSED [ 70%]
+tests/validators/test_ipaddress.py::test_good_ip6address_passes[dead:beef:0:0:0:0:42:1] PASSED [ 71%]
+tests/validators/test_ipaddress.py::test_good_ip6address_passes[abcd:ef::42:1] PASSED [ 71%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[2001:718:1C01:1111::1111] PASSED [ 71%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[2001:718:1C01:1111::] PASSED [ 71%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[abc.0.0.1] PASSED [ 72%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[abcd:1234::123::1] PASSED [ 72%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[1:2:3:4:5:6:7:8:9] PASSED [ 72%]
+tests/validators/test_ipaddress.py::test_bad_ip6address_raises[abcd::1ffff] PASSED [ 73%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[147.230.1000.25] PASSED [ 73%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[2001:718::::] PASSED [ 73%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[abc.0.0.1] PASSED [ 73%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[1278.0.0.1] PASSED [ 74%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[127.0.0.abc] PASSED [ 74%]
+tests/validators/test_ipaddress.py::test_bad_ip4address_raises[900.200.100.75] PASSED [ 74%]
+tests/validators/test_ipaddress.py::test_ip_address_raises_on_bad_init PASSED [ 75%]
+tests/validators/test_lazy_proxy.py::test_lazy_proxy_raises PASSED       [ 75%]
+tests/validators/test_lazy_proxy.py::test_lazy_proxy_fixture FAILED      [ 75%]
+tests/validators/test_length.py::test_correct_length_passes[2-6] PASSED  [ 76%]
+tests/validators/test_length.py::test_correct_length_passes[6--1] PASSED [ 76%]
+tests/validators/test_length.py::test_correct_length_passes[-1-6] PASSED [ 76%]
+tests/validators/test_length.py::test_correct_length_passes[6-6] PASSED  [ 76%]
+tests/validators/test_length.py::test_bad_length_raises[7--1] PASSED     [ 77%]
+tests/validators/test_length.py::test_bad_length_raises[-1-5] PASSED     [ 77%]
+tests/validators/test_length.py::test_bad_length_init_raises[-1--1] PASSED [ 77%]
+tests/validators/test_length.py::test_bad_length_init_raises[5-2] PASSED [ 78%]
+tests/validators/test_length.py::test_length_messages[validator0-2 and 5] PASSED [ 78%]
+tests/validators/test_length.py::test_length_messages[validator1-at least 8] PASSED [ 78%]
+tests/validators/test_length.py::test_length_messages[validator2-longer than 5] PASSED [ 78%]
+tests/validators/test_length.py::test_length_messages[validator3-between 2 and 5] PASSED [ 79%]
+tests/validators/test_length.py::test_length_messages[validator4-exactly 5] PASSED [ 79%]
+tests/validators/test_mac_address.py::test_valid_mac_passes[01:23:45:67:ab:CD] PASSED [ 79%]
+tests/validators/test_mac_address.py::test_bad_mac_raises[00:00:00:00:00] PASSED [ 80%]
+tests/validators/test_mac_address.py::test_bad_mac_raises[01:23:45:67:89:] PASSED [ 80%]
+tests/validators/test_mac_address.py::test_bad_mac_raises[01:23:45:67:89:gh] PASSED [ 80%]
+tests/validators/test_mac_address.py::test_bad_mac_raises[123:23:45:67:89:00] PASSED [ 81%]
+tests/validators/test_noneof.py::test_none_of_passes PASSED              [ 81%]
+tests/validators/test_noneof.py::test_none_of_raises PASSED              [ 81%]
+tests/validators/test_number_range.py::test_number_range_passes[5-10-7] PASSED [ 81%]
+tests/validators/test_number_range.py::test_number_range_passes[5-None-7] PASSED [ 82%]
+tests/validators/test_number_range.py::test_number_range_passes[None-100-70] PASSED [ 82%]
+tests/validators/test_number_range.py::test_number_range_raises[5-10-None] PASSED [ 82%]
+tests/validators/test_number_range.py::test_number_range_raises[5-10-0] PASSED [ 83%]
+tests/validators/test_number_range.py::test_number_range_raises[5-10-12] PASSED [ 83%]
+tests/validators/test_number_range.py::test_number_range_raises[5-10--5] PASSED [ 83%]
+tests/validators/test_number_range.py::test_number_range_raises[5-None-4] PASSED [ 84%]
+tests/validators/test_number_range.py::test_number_range_raises[None-100-500] PASSED [ 84%]
+tests/validators/test_number_range.py::test_number_range_nan[nan] PASSED [ 84%]
+tests/validators/test_number_range.py::test_number_range_nan[nan1] PASSED [ 84%]
+tests/validators/test_optional.py::test_input_optional_passes PASSED     [ 85%]
+tests/validators/test_optional.py::test_input_optional_raises[-] PASSED  [ 85%]
+tests/validators/test_optional.py::test_input_optional_raises[   -   ] PASSED [ 85%]
+tests/validators/test_optional.py::test_input_optional_raises[\t-\t] PASSED [ 86%]
+tests/validators/test_regexp.py::test_regex_passes[^a-None-abcd-a0] PASSED [ 86%]
+tests/validators/test_regexp.py::test_regex_passes[^a-re.IGNORECASE-ABcd-A] PASSED [ 86%]
+tests/validators/test_regexp.py::test_regex_passes[^a-None-abcd-a1] PASSED [ 86%]
+tests/validators/test_regexp.py::test_regex_passes[^a-None-ABcd-A] PASSED [ 87%]
+tests/validators/test_regexp.py::test_regex_raises[^a-None-ABC] PASSED   [ 87%]
+tests/validators/test_regexp.py::test_regex_raises[^a-re.IGNORECASE-foo] PASSED [ 87%]
+tests/validators/test_regexp.py::test_regex_raises[^a-None-None0] PASSED [ 88%]
+tests/validators/test_regexp.py::test_regex_raises[^a-None-foo] PASSED   [ 88%]
+tests/validators/test_regexp.py::test_regex_raises[^a-None-None1] PASSED [ 88%]
+tests/validators/test_regexp.py::test_regexp_message PASSED              [ 89%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.dk] PASSED [ 89%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.dk/] PASSED [ 89%]
+tests/validators/test_url.py::test_valid_url_passes[http://foo-bar.dk/] PASSED [ 89%]
+tests/validators/test_url.py::test_valid_url_passes[http://foo--bar.dk/] PASSED [ 90%]
+tests/validators/test_url.py::test_valid_url_passes[http://foo_bar.dk/] PASSED [ 90%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.dk?query=param] PASSED [ 90%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.dk/path?query=param] PASSED [ 91%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.dk/path?query=param&foo=faa] PASSED [ 91%]
+tests/validators/test_url.py::test_valid_url_passes[http://foobar.museum/foobar] PASSED [ 91%]
+tests/validators/test_url.py::test_valid_url_passes[http://192.168.0.1/foobar] PASSED [ 92%]
+tests/validators/test_url.py::test_valid_url_passes[http://192.168.0.1:9000/fake] PASSED [ 92%]
+tests/validators/test_url.py::test_valid_url_passes[http://\u0645\u062b\u0627\u0644.\u0625\u062e\u062a\u0628\u0627\u0631/foo.com] PASSED [ 92%]
+tests/validators/test_url.py::test_valid_url_passes[http://\u0909\u0926\u093e\u0939\u0930\u0923.\u092a\u0930\u0940\u0915\u094d\u0937\u093e/] PASSED [ 92%]
+tests/validators/test_url.py::test_valid_url_passes[http://\uc2e4\ub840.\ud14c\uc2a4\ud2b8] PASSED [ 93%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://localhost/foobar] PASSED [ 93%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://foobar] PASSED [ 93%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://foobar?query=param&foo=faa] PASSED [ 94%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://foobar:5000?query=param&foo=faa] PASSED [ 94%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://foobar/path?query=param&foo=faa] PASSED [ 94%]
+tests/validators/test_url.py::test_valid_url_notld_passes[http://foobar:1234/path?query=param&foo=faa] PASSED [ 94%]
+tests/validators/test_url.py::test_bad_url_raises[http://foobar] PASSED  [ 95%]
+tests/validators/test_url.py::test_bad_url_raises[http://-foobar.dk/] PASSED [ 95%]
+tests/validators/test_url.py::test_bad_url_raises[http://foobar-.dk/] PASSED [ 95%]
+tests/validators/test_url.py::test_bad_url_raises[foobar.dk] PASSED      [ 96%]
+tests/validators/test_url.py::test_bad_url_raises[http://127.0.0/asdf] PASSED [ 96%]
+tests/validators/test_url.py::test_bad_url_raises[http://foobar.d] PASSED [ 96%]
+tests/validators/test_url.py::test_bad_url_raises[http://foobar.12] PASSED [ 97%]
+tests/validators/test_url.py::test_bad_url_raises[http://localhost:abc/a] PASSED [ 97%]
+tests/validators/test_uuid.py::test_valid_uuid_passes[2bc1c94f-0deb-43e9-92a1-4775189ec9f8] PASSED [ 97%]
+tests/validators/test_uuid.py::test_valid_uuid_passes[2bc1c94f0deb43e992a14775189ec9f8] PASSED [ 97%]
+tests/validators/test_uuid.py::test_bad_uuid_raises[2bc1c94f-deb-43e9-92a1-4775189ec9f8] PASSED [ 98%]
+tests/validators/test_uuid.py::test_bad_uuid_raises[2bc1c94f-0deb-43e9-92a1-4775189ec9f] PASSED [ 98%]
+tests/validators/test_uuid.py::test_bad_uuid_raises[gbc1c94f-0deb-43e9-92a1-4775189ec9f8] PASSED [ 98%]
+tests/validators/test_uuid.py::test_bad_uuid_raises[2bc1c94f 0deb-43e9-92a1-4775189ec9f8] PASSED [ 99%]
+tests/validators/test_validators.py::test_raise_exceptions[IndexError] PASSED [ 99%]
+tests/validators/test_validators.py::test_raise_exceptions[ZeroDivisionError] PASSED [ 99%]
+tests/validators/test_validators.py::test_raise_exceptions[ValueError] PASSED [100%]
+
+=================================== FAILURES ===================================
+_______________________ TestLocaleDecimal.test_typeerror _______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 38, in test_typeerror
+    build(places=2)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 28, in build
+    form = self.F()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.
+______________________ TestLocaleDecimal.test_formatting _______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 46, in test_formatting
+    self._format_test("1,23,456.789", val)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 23, in _format_test
+    form = self.F(meta=meta, a=Decimal(val))
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.
+________________________ TestLocaleDecimal.test_parsing ________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 40, in _init_babel
+    from babel import numbers
+ModuleNotFoundError: No module named 'babel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 77, in test_parsing
+    self._parse_test("1,23,456.789", expected)
+  File "/workdir/WTForms-3.0.1/tests/test_locale_babel.py", line 59, in _parse_test
+    form = self.F(DummyPostData(a=raw_val), meta=meta)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 119, in __init__
+    super().__init__(label, validators, **kwargs)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 36, in __init__
+    self._init_babel()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/fields/numeric.py", line 44, in _init_babel
+    raise ImportError(
+ImportError: Using locale-aware decimals requires the babel library.
+_____________________ test_valid_email_passes[foo@bar.dk] ______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_____________________ test_valid_email_passes[123@bar.dk] ______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_____________________ test_valid_email_passes[foo@456.dk] ______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+___________________ test_valid_email_passes[foo@bar456.info] ___________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_____________ test_valid_email_passes[foo@b\xfccher.\u4e2d\u56fd] ______________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 15, in test_valid_email_passes
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_______________________ test_invalid_email_raises[None] ________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_________________________ test_invalid_email_raises[] __________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+________________________ test_invalid_email_raises[  ] _________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+________________________ test_invalid_email_raises[foo] ________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+______________________ test_invalid_email_raises[bar.dk] _______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_______________________ test_invalid_email_raises[foo@] ________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+______________________ test_invalid_email_raises[@bar.dk] ______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+______________________ test_invalid_email_raises[foo@bar] ______________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+___________________ test_invalid_email_raises[foo@bar.ab12] ____________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+____________________ test_invalid_email_raises[foo@.bar.ab] ____________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+____________________ test_invalid_email_raises[foo.@bar.co] ____________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+__________________ test_invalid_email_raises[foo@foo@bar.co] ___________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+____________________ test_invalid_email_raises[fo o@bar.co] ____________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 42, in test_invalid_email_raises
+    validator = email()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+_______________ test_invalid_email_raises_granular_message[foo@] _______________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_email.py", line 55, in test_invalid_email_raises_granular_message
+    validator = email(granular_message=True)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+___________________________ test_lazy_proxy_fixture ____________________________
+Traceback (most recent call last):
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/WTForms-3.0.1/tests/validators/test_lazy_proxy.py", line 30, in test_lazy_proxy_fixture
+    email(message=really_lazy_proxy)
+  File "/workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/wtforms/validators.py", line 393, in __init__
+    raise Exception("Install 'email_validator' for email validation support.")
+Exception: Install 'email_validator' for email validation support.
+- generated xml file: /workdir/results/WTForms/3.0.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_locale_babel.py::TestLocaleDecimal::test_typeerror - Import...
+FAILED tests/test_locale_babel.py::TestLocaleDecimal::test_formatting - Impor...
+FAILED tests/test_locale_babel.py::TestLocaleDecimal::test_parsing - ImportEr...
+FAILED tests/validators/test_email.py::test_valid_email_passes[foo@bar.dk] - ...
+FAILED tests/validators/test_email.py::test_valid_email_passes[123@bar.dk] - ...
+FAILED tests/validators/test_email.py::test_valid_email_passes[foo@456.dk] - ...
+FAILED tests/validators/test_email.py::test_valid_email_passes[foo@bar456.info]
+FAILED tests/validators/test_email.py::test_valid_email_passes[foo@b\xfccher.\u4e2d\u56fd]
+FAILED tests/validators/test_email.py::test_invalid_email_raises[None] - Exce...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[] - Exceptio...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[  ] - Except...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo] - Excep...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[bar.dk] - Ex...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo@] - Exce...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[@bar.dk] - E...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo@bar] - E...
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo@bar.ab12]
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo@.bar.ab]
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo.@bar.co]
+FAILED tests/validators/test_email.py::test_invalid_email_raises[foo@foo@bar.co]
+FAILED tests/validators/test_email.py::test_invalid_email_raises[fo o@bar.co]
+FAILED tests/validators/test_email.py::test_invalid_email_raises_granular_message[foo@]
+FAILED tests/validators/test_lazy_proxy.py::test_lazy_proxy_fixture - Excepti...
+======================== 23 failed, 315 passed in 0.97s ========================
+ERROR: InvocationError for command /workdir/WTForms-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/WTForms/3.0.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

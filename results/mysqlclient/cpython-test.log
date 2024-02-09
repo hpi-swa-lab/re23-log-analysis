@@ -1,0 +1,1934 @@
+GLOB sdist-make: /workdir/mysqlclient-2.1.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/mysqlclient-2.1.1/.tox/.tmp/package/1/mysqlclient-2.1.1.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,mysqlclient @ file:///workdir/mysqlclient-2.1.1/.tox/.tmp/package/1/mysqlclient-2.1.1.zip#sha256=444ca0e34467c198f1be03d15f1d4e862ba4c1c941b0a6cc99003b090b5cca64,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2260831518'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/mysqlclient/2.1.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/mysqlclient-2.1.1
+collecting ... collected 93 items
+
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_BIT FAILED        [  1%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_BLOB FAILED       [  2%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_CHAR FAILED       [  3%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DATE FAILED       [  4%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DATETIME FAILED   [  5%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DECIMAL FAILED    [  6%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DOUBLE FAILED     [  7%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_INT FAILED        [  8%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_LONG FAILED       [  9%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_LONG_BYTE FAILED  [ 10%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_MULTIPOLYGON FAILED [ 11%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TEXT FAILED       [ 12%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TIME FAILED       [ 13%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TIMESTAMP FAILED  [ 15%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TINYINT FAILED    [ 16%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_binary_prefix FAILED [ 17%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_bug_2671682 FAILED [ 18%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_bug_3514287 FAILED [ 19%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_fractional_TIMESTAMP FAILED [ 20%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_ping FAILED       [ 21%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_reraise_exception FAILED [ 22%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_small_CHAR FAILED [ 23%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_stored_procedures FAILED [ 24%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_transactions FAILED [ 25%]
+tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_truncation FAILED [ 26%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_BINARY FAILED          [ 27%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Binary FAILED          [ 29%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_DATETIME FAILED        [ 30%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Date FAILED            [ 31%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Exceptions FAILED      [ 32%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ExceptionsAsConnectionAttributes FAILED [ 33%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ExceptionsAsConnectionAttributes ERROR [ 33%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_NUMBER FAILED          [ 34%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_None FAILED            [ 35%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_None ERROR             [ 35%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ROWID FAILED           [ 36%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_STRING FAILED          [ 37%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Time FAILED            [ 38%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Timestamp FAILED       [ 39%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_apilevel FAILED        [ 40%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_arraysize FAILED       [ 41%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_arraysize ERROR        [ 41%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_callproc FAILED        [ 43%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_close FAILED           [ 44%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_close ERROR            [ 44%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_commit FAILED          [ 45%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_commit ERROR           [ 45%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_connect FAILED         [ 46%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_connect ERROR          [ 46%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor FAILED          [ 47%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor ERROR           [ 47%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor_isolation FAILED [ 48%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor_isolation ERROR [ 48%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_description FAILED     [ 49%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_description ERROR      [ 49%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_execute FAILED         [ 50%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_execute ERROR          [ 50%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_executemany FAILED     [ 51%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_executemany ERROR      [ 51%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchall FAILED        [ 52%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchall ERROR         [ 52%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchmany FAILED       [ 53%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchmany ERROR        [ 53%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchone FAILED        [ 54%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchone ERROR         [ 54%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_mixedfetch FAILED      [ 55%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_mixedfetch ERROR       [ 55%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_nextset FAILED         [ 56%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_nextset ERROR          [ 56%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_paramstyle FAILED      [ 58%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rollback FAILED        [ 59%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rollback ERROR         [ 59%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rowcount FAILED        [ 60%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rowcount ERROR         [ 60%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setinputsizes FAILED   [ 61%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setinputsizes ERROR    [ 61%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setoutputsize FAILED   [ 62%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setoutputsize_basic FAILED [ 63%]
+tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_threadsafety FAILED    [ 64%]
+tests/test_MySQLdb_nonstandard.py::TestDBAPISet::test_set_equality PASSED [ 65%]
+tests/test_MySQLdb_nonstandard.py::TestDBAPISet::test_set_equality_membership PASSED [ 66%]
+tests/test_MySQLdb_nonstandard.py::TestDBAPISet::test_set_inequality PASSED [ 67%]
+tests/test_MySQLdb_nonstandard.py::TestDBAPISet::test_set_inequality_membership PASSED [ 68%]
+tests/test_MySQLdb_nonstandard.py::TestCoreModule::test_client_info PASSED [ 69%]
+tests/test_MySQLdb_nonstandard.py::TestCoreModule::test_escape_string PASSED [ 70%]
+tests/test_MySQLdb_nonstandard.py::TestCoreModule::test_version PASSED   [ 72%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_affected_rows FAILED    [ 73%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_charset_name FAILED     [ 74%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_client_flag FAILED      [ 75%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_context_manager FAILED  [ 76%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_fileno FAILED           [ 77%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_host_info FAILED        [ 78%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_proto_info FAILED       [ 79%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_server_info FAILED      [ 80%]
+tests/test_MySQLdb_nonstandard.py::CoreAPI::test_thread_id FAILED        [ 81%]
+tests/test_MySQLdb_times.py::TestX_or_None::test_date_or_none PASSED     [ 82%]
+tests/test_MySQLdb_times.py::TestX_or_None::test_datetime_or_none PASSED [ 83%]
+tests/test_MySQLdb_times.py::TestX_or_None::test_time_or_none PASSED     [ 84%]
+tests/test_MySQLdb_times.py::TestX_or_None::test_timedelta_or_none PASSED [ 86%]
+tests/test_MySQLdb_times.py::TestTicks::test_date_from_ticks PASSED      [ 87%]
+tests/test_MySQLdb_times.py::TestTicks::test_time_from_ticks PASSED      [ 88%]
+tests/test_MySQLdb_times.py::TestTicks::test_timestamp_from_ticks PASSED [ 89%]
+tests/test_MySQLdb_times.py::TestToLiteral::test_datetime_to_literal PASSED [ 90%]
+tests/test_MySQLdb_times.py::TestToLiteral::test_datetimedelta_to_literal PASSED [ 91%]
+tests/test_MySQLdb_times.py::TestFormat::test_format_timedelta PASSED    [ 92%]
+tests/test_MySQLdb_times.py::TestFormat::test_format_timestamp PASSED    [ 93%]
+tests/test__mysql.py::test_result_type PASSED                            [ 94%]
+tests/test_connection.py::test_multi_statements_default_true FAILED      [ 95%]
+tests/test_connection.py::test_multi_statements_false FAILED             [ 96%]
+tests/test_cursor.py::test_executemany FAILED                            [ 97%]
+tests/test_cursor.py::test_pyparam FAILED                                [ 98%]
+tests/test_cursor.py::test_dictcursor FAILED                             [100%]
+
+==================================== ERRORS ====================================
+___ ERROR at teardown of test_MySQLdb.test_ExceptionsAsConnectionAttributes ____
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________ ERROR at teardown of test_MySQLdb.test_None __________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_arraysize _______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________ ERROR at teardown of test_MySQLdb.test_close _________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________ ERROR at teardown of test_MySQLdb.test_commit _________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________ ERROR at teardown of test_MySQLdb.test_connect ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________ ERROR at teardown of test_MySQLdb.test_cursor _________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________ ERROR at teardown of test_MySQLdb.test_cursor_isolation ____________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________ ERROR at teardown of test_MySQLdb.test_description ______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________ ERROR at teardown of test_MySQLdb.test_execute ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________ ERROR at teardown of test_MySQLdb.test_executemany ______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_fetchall ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_fetchmany _______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_fetchone ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________ ERROR at teardown of test_MySQLdb.test_mixedfetch _______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________ ERROR at teardown of test_MySQLdb.test_nextset ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_rollback ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________ ERROR at teardown of test_MySQLdb.test_rowcount ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_____________ ERROR at teardown of test_MySQLdb.test_setinputsizes _____________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+=================================== FAILURES ===================================
+____________________________ test_MySQLdb.test_BIT _____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_BLOB ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_CHAR ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_DATE ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_DATETIME __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_DECIMAL ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_DOUBLE ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_INT _____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_LONG ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_LONG_BYTE __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_MULTIPOLYGON ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_TEXT ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_TIME ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_TIMESTAMP __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_TINYINT ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________________ test_MySQLdb.test_binary_prefix ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_bug_2671682 _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_bug_3514287 _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________ test_MySQLdb.test_fractional_TIMESTAMP ____________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_ping ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_____________________ test_MySQLdb.test_reraise_exception ______________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_small_CHAR _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_____________________ test_MySQLdb.test_stored_procedures ______________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_transactions ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_truncation _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/capabilities.py", line 24, in setUp
+    db = connection_factory(**self.connect_kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_BINARY ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_Binary ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_DATETIME __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_Date ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_Exceptions _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________ test_MySQLdb.test_ExceptionsAsConnectionAttributes ______________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 196, in test_ExceptionsAsConnectionAttributes
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_NUMBER ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_None ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 800, in test_None
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_ROWID ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_STRING ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ test_MySQLdb.test_Time ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_Timestamp __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_apilevel __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_arraysize __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 766, in test_arraysize
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_callproc __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_close ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 347, in test_close
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_commit ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 209, in test_commit
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_connect ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 144, in test_connect
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ test_MySQLdb.test_cursor ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 227, in test_cursor
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________________ test_MySQLdb.test_cursor_isolation ______________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 234, in test_cursor_isolation
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_description _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 253, in test_description
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_execute ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 365, in test_execute
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_executemany _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 422, in test_executemany
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_fetchall __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_dbapi20.py", line 30, in test_fetchall
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_fetchmany __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 534, in test_fetchmany
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_fetchone __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_dbapi20.py", line 84, in test_fetchone
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_mixedfetch _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 680, in test_mixedfetch
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_nextset ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_dbapi20.py", line 187, in test_nextset
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_MySQLdb.test_paramstyle _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_rollback __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 217, in test_rollback
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ test_MySQLdb.test_rowcount __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_dbapi20.py", line 131, in test_rowcount
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________________ test_MySQLdb.test_setinputsizes ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 776, in test_setinputsizes
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________________ test_MySQLdb.test_setoutputsize ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________ test_MySQLdb.test_setoutputsize_basic _____________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+________________________ test_MySQLdb.test_threadsafety ________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 123, in tearDown
+    con = self._connect()
+  File "/workdir/mysqlclient-2.1.1/tests/dbapi20.py", line 139, in _connect
+    return self.driver.connect(*self.connect_args, **self.connect_kw_args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ CoreAPI.test_affected_rows __________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+__________________________ CoreAPI.test_charset_name ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ CoreAPI.test_client_flag ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ CoreAPI.test_context_manager _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_____________________________ CoreAPI.test_fileno ______________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ CoreAPI.test_host_info ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ CoreAPI.test_proto_info ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+___________________________ CoreAPI.test_server_info ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+____________________________ CoreAPI.test_thread_id ____________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/usr/local/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/mysqlclient-2.1.1/tests/test_MySQLdb_nonstandard.py", line 52, in setUp
+    self.conn = connection_factory(use_unicode=True)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+______________________ test_multi_statements_default_true ______________________
+Traceback (most recent call last):
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/mysqlclient-2.1.1/tests/test_connection.py", line 9, in test_multi_statements_default_true
+    conn = connection_factory()
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________ test_multi_statements_false __________________________
+Traceback (most recent call last):
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/mysqlclient-2.1.1/tests/test_connection.py", line 18, in test_multi_statements_false
+    conn = connection_factory(multi_statements=False)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________________________ test_executemany _______________________________
+Traceback (most recent call last):
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 31, in test_executemany
+    conn = connect()
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 11, in connect
+    conn = connection_factory(**kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_________________________________ test_pyparam _________________________________
+Traceback (most recent call last):
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 107, in test_pyparam
+    conn = connect()
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 11, in connect
+    conn = connection_factory(**kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+_______________________________ test_dictcursor ________________________________
+Traceback (most recent call last):
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 117, in test_dictcursor
+    conn = connect()
+  File "/workdir/mysqlclient-2.1.1/tests/test_cursor.py", line 11, in connect
+    conn = connection_factory(**kwargs)
+  File "/workdir/mysqlclient-2.1.1/tests/configdb.py", line 24, in connection_factory
+    db = MySQLdb.connect(**db_kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+- generated xml file: /workdir/results/mysqlclient/2.1.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_BIT - MySQLdb.O...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_BLOB - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_CHAR - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DATE - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DATETIME - MySQ...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DECIMAL - MySQL...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_DOUBLE - MySQLd...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_INT - MySQLdb.O...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_LONG - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_LONG_BYTE - MyS...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_MULTIPOLYGON - ...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TEXT - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TIME - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TIMESTAMP - MyS...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_TINYINT - MySQL...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_binary_prefix
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_bug_2671682 - M...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_bug_3514287 - M...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_fractional_TIMESTAMP
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_ping - MySQLdb....
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_reraise_exception
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_small_CHAR - My...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_stored_procedures
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_transactions - ...
+FAILED tests/test_MySQLdb_capabilities.py::test_MySQLdb::test_truncation - My...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_BINARY - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Binary - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_DATETIME - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Date - MySQLdb.Opera...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Exceptions - MySQLdb...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ExceptionsAsConnectionAttributes
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_NUMBER - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_None - MySQLdb.Opera...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ROWID - MySQLdb.Oper...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_STRING - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Time - MySQLdb.Opera...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_Timestamp - MySQLdb....
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_apilevel - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_arraysize - MySQLdb....
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_callproc - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_close - MySQLdb.Oper...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_commit - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_connect - MySQLdb.Op...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor - MySQLdb.Ope...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor_isolation - M...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_description - MySQLd...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_execute - MySQLdb.Op...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_executemany - MySQLd...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchall - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchmany - MySQLdb....
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchone - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_mixedfetch - MySQLdb...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_nextset - MySQLdb.Op...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_paramstyle - MySQLdb...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rollback - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rowcount - MySQLdb.O...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setinputsizes - MySQ...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setoutputsize - MySQ...
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setoutputsize_basic
+FAILED tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_threadsafety - MySQL...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_affected_rows - MySQL...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_charset_name - MySQLd...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_client_flag - MySQLdb...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_context_manager - MyS...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_fileno - MySQLdb.Oper...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_host_info - MySQLdb.O...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_proto_info - MySQLdb....
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_server_info - MySQLdb...
+FAILED tests/test_MySQLdb_nonstandard.py::CoreAPI::test_thread_id - MySQLdb.O...
+FAILED tests/test_connection.py::test_multi_statements_default_true - MySQLdb...
+FAILED tests/test_connection.py::test_multi_statements_false - MySQLdb.Operat...
+FAILED tests/test_cursor.py::test_executemany - MySQLdb.OperationalError: (20...
+FAILED tests/test_cursor.py::test_pyparam - MySQLdb.OperationalError: (2003, ...
+FAILED tests/test_cursor.py::test_dictcursor - MySQLdb.OperationalError: (200...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_ExceptionsAsConnectionAttributes
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_None - MySQLdb.Operat...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_arraysize - MySQLdb.O...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_close - MySQLdb.Opera...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_commit - MySQLdb.Oper...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_connect - MySQLdb.Ope...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor - MySQLdb.Oper...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_cursor_isolation - My...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_description - MySQLdb...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_execute - MySQLdb.Ope...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_executemany - MySQLdb...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchall - MySQLdb.Op...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchmany - MySQLdb.O...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_fetchone - MySQLdb.Op...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_mixedfetch - MySQLdb....
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_nextset - MySQLdb.Ope...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rollback - MySQLdb.Op...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_rowcount - MySQLdb.Op...
+ERROR tests/test_MySQLdb_dbapi20.py::test_MySQLdb::test_setinputsizes - MySQL...
+=================== 74 failed, 19 passed, 19 errors in 0.39s ===================
+ERROR: InvocationError for command /workdir/mysqlclient-2.1.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/mysqlclient/2.1.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

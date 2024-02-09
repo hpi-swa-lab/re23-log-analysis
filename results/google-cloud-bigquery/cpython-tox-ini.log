@@ -1,0 +1,12 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/google-cloud-bigquery/3.4.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rsamples/geography/requirements-test.txt
+	-rsamples/geography/requirements.txt
+	-rsamples/snippets/requirements-test.txt
+	-rsamples/snippets/requirements.txt
+	-rsamples/magics/requirements-test.txt
+	-rsamples/magics/requirements.txt
+	-r.kokoro/requirements.txt
+

@@ -1,0 +1,303 @@
+GLOB sdist-make: /workdir/nltk-3.7/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt, -rrequirements-ci.txt
+cpythonlibtest-unit-test-tests inst: /workdir/nltk-3.7/.tox/.tmp/package/1/nltk-3.7.zip
+cpythonlibtest-unit-test-tests installed: astroid==3.0.1,cachetools==5.3.2,certifi==2023.11.17,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,contourpy==1.2.0,coverage==7.3.2,cycler==0.12.1,dill==0.3.7,distlib==0.3.7,exceptiongroup==1.2.0,execnet==2.0.2,filelock==3.13.1,fonttools==4.45.0,gensim==4.3.2,idna==3.4,iniconfig==2.0.0,isort==5.12.0,joblib==1.3.2,kiwisolver==1.4.5,matplotlib==3.8.2,mccabe==0.7.0,mock==5.1.0,nltk @ file:///workdir/nltk-3.7/.tox/.tmp/package/1/nltk-3.7.zip#sha256=0199a7a712202785a5ba3235ab5e326f25133e58668762d3dfb0e5affb1f08ac,numpy==1.26.2,oauthlib==3.2.2,packaging==23.2,Pillow==10.1.0,platformdirs==4.0.0,pluggy==1.3.0,psutil==5.9.6,pylint==3.0.2,pyparsing==3.1.1,pyproject-api==1.6.1,pytest==7.4.3,pytest-cov==4.1.0,pytest-mock==3.12.0,pytest-xdist==3.5.0,python-dateutil==2.8.2,regex==2023.10.3,requests==2.31.0,requests-oauthlib==1.3.1,scikit-learn==1.3.2,scipy==1.11.4,six==1.16.0,smart-open==6.4.0,threadpoolctl==3.2.0,tomli==2.0.1,tomlkit==0.12.3,tox==4.11.3,tqdm==4.66.1,twython==3.9.1,typing_extensions==4.8.0,urllib3==2.1.0,virtualenv==20.24.7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2913179192'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/nltk/3.7/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/nltk-3.7
+plugins: xdist-3.5.0, mock-3.12.0, cov-4.1.0
+collecting ... collected 424 items / 3 errors
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting nltk/test/unit/test_corpora.py ________________
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mptb[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('ptb')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/ptb.zip/ptb/[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nltk-3.7/nltk/test/unit/test_corpora.py", line 186, in <module>
+    not ptb.fileids(),
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mptb[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('ptb')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/ptb[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+_______________ ERROR collecting nltk/test/unit/test_nombank.py ________________
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mnombank.1.0[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('nombank.1.0')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/nombank.1.0.zip/nombank.1.0/[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nltk-3.7/nltk/test/unit/test_nombank.py", line 10, in <module>
+    nombank.nouns()
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mnombank.1.0[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('nombank.1.0')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/nombank.1.0[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+_______________ ERROR collecting nltk/test/unit/test_wordnet.py ________________
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nltk-3.7/nltk/test/unit/test_wordnet.py", line 10, in <module>
+    wn.ensure_loaded()
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/workdir/nltk-3.7/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "/workdir/nltk-3.7/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - '/workdir/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/share/nltk_data'
+    - '/workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+=============================== warnings summary ===============================
+nltk/test/unit/test_tokenize.py:22
+  /workdir/nltk-3.7/nltk/test/unit/test_tokenize.py:22: DeprecationWarning: 
+  The StanfordTokenizer will be deprecated in version 3.2.5.
+  Please use [91mnltk.parse.corenlp.CoreNLPTokenizer[0m instead.'
+    seg = StanfordSegmenter()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--- generated xml file: /workdir/results/nltk/3.7/1/cpython-test-results.xml ---
+=========================== short test summary info ============================
+ERROR nltk/test/unit/test_corpora.py - LookupError: 
+ERROR nltk/test/unit/test_nombank.py - LookupError: 
+ERROR nltk/test/unit/test_wordnet.py - LookupError: 
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 3 errors in 4.42s =========================
+ERROR: InvocationError for command /workdir/nltk-3.7/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/nltk/3.7/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

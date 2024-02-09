@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = {envpython} -m xmlrunner --output-file /workdir/results/gevent/22.10.2/1/graalpy-test-results.xml
+deps = mock
+	unittest-xml-reporting
+	-rdev-requirements.txt
+

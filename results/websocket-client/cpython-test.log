@@ -1,0 +1,86 @@
+GLOB sdist-make: /workdir/websocket-client-1.4.2/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/websocket-client-1.4.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/websocket-client-1.4.2/.tox/.tmp/package/1/websocket-client-1.4.2.zip
+cpythonlibtest-unit-test-tests installed: lxml==4.9.3,mock==5.1.0,unittest-xml-reporting==3.2.0,websocket-client @ file:///workdir/websocket-client-1.4.2/.tox/.tmp/package/1/websocket-client-1.4.2.zip#sha256=0b5e38e1e6065ec437618203f2a5368c73ffd598abb8d0e32de7649457709ba6
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1363911504'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/websocket-client-1.4.2/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/websocket-client/1.4.2/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+.....ssssssssssss...ss..s............sss.s++Rcv raw: b'\x88\x80\x17\x14\xfb\xff'
+++Rcv decoded: fin=1 opcode=8 data=b''
+++Sent raw: b'\x88\x82B-v\x85A\xc5'
+++Sent decoded: fin=1 opcode=8 data=b'\x03\xe8'
+...ss.s--- response header ---
+HTTP/1.1 101 WebSocket Protocol Handshake
+Connection: Upgrade
+Upgrade: WebSocket
+Sec-WebSocket-Accept: Kxep+hNu9n51529fGidYu7a3wO0=
+some_header: something
+-----------------------
+--- response header ---
+HTTP/1.1 101 WebSocket Protocol Handshake
+Connection: Upgrade, Keep-Alive
+Upgrade: WebSocket
+Sec-WebSocket-Accept: Kxep+hNu9n51529fGidYu7a3wO0=
+Set-Cookie: Token=ABCDE
+Set-Cookie: Token=FGHIJ
+some_header: something
+-----------------------
+--- response header ---
+HTTP/1.1 101 WebSocket Protocol Handshake
+Connection: Upgrade
+Upgrade WebSocket
+.++Rcv raw: b'\x81\x8f\x84m.Dg\xec\xbd\xa7\x06\xfe\xcd\xc5/\x8e\xaf\xe5g\xec\x81'
+++Rcv decoded: fin=1 opcode=1 data=b'\xe3\x81\x93\xe3\x82\x93\xe3\x81\xab\xe3\x81\xa1\xe3\x81\xaf'
+++Rcv raw: b'\x81\x85m\xea\x91\x00%\x8f\xfdl\x02'
+++Rcv decoded: fin=1 opcode=1 data=b'Hello'
+.++Rcv raw: b'\x80\x8f{\xd8\x8f\xc6\x0f\xb0\xea\xe6\x08\xb7\xfa\xaa[\xb7\xe9\xe6\x0c\xb1\xfb'
+++Rcv decoded: fin=1 opcode=0 data=b'the soul of wit'
+.++Rcv raw: b'\x81\x8d\xc2C;\x89\x8a&W\xe5\xado\x1b\xde\xad1W\xed\xe3'
+++Rcv decoded: fin=1 opcode=1 data=b'Hello, World!'
+.++Rcv raw: b"\x01\x8b\xc6\x90\x07\xdf\x84\xe2b\xa9\xaf\xe4~\xff\xaf\xe3'"
+++Rcv decoded: fin=0 opcode=1 data=b'Brevity is '
+++Rcv raw: b'\x00\x8b\xa6LvZ\xe4>\x13,\xcf8\x0fz\xcf?V'
+++Rcv decoded: fin=0 opcode=0 data=b'Brevity is '
+++Rcv raw: b'\x80\x8f\x18n\x19Rl\x06|rk\x01l>8\x01\x7fro\x07m'
+++Rcv decoded: fin=1 opcode=0 data=b'the soul of wit'
+++Rcv raw: b'\x80\x8b\xadI\xc5\xe7\xef;\xa0\x91\xc4=\xbc\xc7\xc4:\xe5'
+++Rcv decoded: fin=1 opcode=0 data=b'Brevity is '
+.++Rcv raw: b'\x01\x89\xd0\xa1\xc2\xd3\x84\xce\xad\xf3\xbd\xd4\xa1\xbb\xf0'
+++Rcv decoded: fin=0 opcode=1 data=b'Too much '
+++Rcv raw: b'\x89\x90Z1T\xce\n]1\xaf)Tt\x9e\x15\x7f\x13\xee.Y=\xbd'
+++Rcv decoded: fin=1 opcode=9 data=b'Please PONG this'
+++Sent raw: b'\x8a\x90abcd1\x0e\x06\x05\x12\x07C4.,$D\x15\n\n\x17'
+++Sent decoded: fin=1 opcode=10 data=b'Please PONG this'
+++Rcv raw: b'\x80\x8f\xe1\xb5\x8a"\x8e\xd3\xaaC\xc1\xd2\xe5M\x85\x95\xfeJ\x88\xdb\xed'
+++Rcv decoded: fin=1 opcode=0 data=b'of a good thing'
+.++Rcv raw: b'\x01\x9bo\x1a\xbb: t\xd8_Ow\xd4H\n:\xceT\x1bu\x9bN\x07\x7f\x9bX\x1d\x7f\xdaY\x076\x9b'
+++Rcv decoded: fin=0 opcode=1 data=b'Once more unto the breach, '
+++Rcv raw: b'\x00\x8e\xbfTO\x13\xdb1.a\x9f2=z\xda:+`\x93t'
+++Rcv decoded: fin=0 opcode=0 data=b'dear friends, '
+++Rcv raw: b'\x80\x89g\x8d\x9f\xa1\x08\xe3\xfc\xc4G\xe0\xf0\xd3\x02'
+++Rcv decoded: fin=1 opcode=0 data=b'once more'
+.++Rcv raw: b'\x01\x8b\xbd\x11E\x88\xffc \xfe\xd4e<\xa8\xd4be'
+++Rcv decoded: fin=0 opcode=1 data=b'Brevity is '
+++Rcv raw: b'\x80\x8f\x12\xe9g\x95f\x81\x02\xb5a\x86\x12\xf92\x86\x01\xb5e\x80\x13'
+++Rcv decoded: fin=1 opcode=0 data=b'the soul of wit'
+.s++Sent raw: b'\x81\x85abcd)\x07\x0f\x08\x0e'
+++Sent decoded: fin=1 opcode=1 data=b'Hello'
+++Sent raw: b'\x81\x8fabcd\x82\xe3\xf0\x87\xe3\xf1\x80\xe5\xca\x81\xe2\xc5\x82\xe3\xcc'
+++Sent decoded: fin=1 opcode=1 data=b'\xe3\x81\x93\xe3\x82\x93\xe3\x81\xab\xe3\x81\xa1\xe3\x81\xaf'
+++Sent raw: b'\x82\x8dabcdPSRUPSRUPSRTP'
+++Sent decoded: fin=1 opcode=2 data=b'1111111111101'
+.s.ssInvalid subprotocol: ['sub2', 'sub3']
+Invalid subprotocol: ['Sub1', 'suB2']
+.
+----------------------------------------------------------------------
+Ran 64 tests in 8.067s
+
+OK (skipped=26)
+
+Generating XML reports...
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

@@ -1,0 +1,944 @@
+GLOB sdist-make: /workdir/Werkzeug-2.2.2/setup.py
+graalpylibtest-unit-test-tests create: /workdir/Werkzeug-2.2.2/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements/tests.txt, -rrequirements/dev.txt, -rrequirements/typing.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/Werkzeug-2.2.2/.tox/graalpylibtest-unit-test-tests/log/graalpylibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting attrs==21.4.0
+  Downloading attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 1.7 MB/s eta 0:00:00
+Collecting cffi==1.15.1
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting cryptography==37.0.4
+  Downloading cryptography-37.0.4.tar.gz (585 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 585.9/585.9 kB 5.2 MB/s eta 0:00:00
+Looking for GraalPy patches for cryptography
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+cryptography == 3.4.7
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting ephemeral-port-reserve==1.1.4
+  Downloading ephemeral_port_reserve-1.1.4-py2.py3-none-any.whl (4.4 kB)
+Collecting greenlet==1.1.2
+  Downloading greenlet-1.1.2.tar.gz (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.8 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-cuoyepit/greenlet_701ebee3f8a54b3fa733b6489f1ae5ee/src/greenlet/greenlet.c
+Looking for GraalPy patches for greenlet
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting iniconfig==1.1.1
+  Using cached iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)
+Collecting packaging==21.3
+  Using cached packaging-21.3-py3-none-any.whl (40 kB)
+Collecting pluggy==1.0.0
+  Using cached pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting psutil==5.9.1
+  Downloading psutil-5.9.1.tar.gz (479 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 479.1/479.1 kB 7.4 MB/s eta 0:00:00
+Looking for GraalPy patches for psutil
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting py==1.11.0
+  Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Collecting pycparser==2.21
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting pyparsing==3.0.9
+  Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+Collecting pytest
+  Using cached pytest-7.1.2-py3-none-any.whl (297 kB)
+Collecting pytest-timeout==2.1.0
+  Downloading pytest_timeout-2.1.0-py3-none-any.whl (12 kB)
+Collecting pytest-xprocess==0.19.0
+  Downloading pytest_xprocess-0.19.0-py3-none-any.whl (9.3 kB)
+Collecting tomli==2.0.1
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting watchdog==2.1.9
+  Downloading watchdog-2.1.9-py3-none-manylinux2014_x86_64.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 5.4 MB/s eta 0:00:00
+Collecting alabaster==0.7.12
+  Downloading alabaster-0.7.12-py2.py3-none-any.whl (14 kB)
+Collecting babel==2.10.3
+  Downloading Babel-2.10.3-py3-none-any.whl (9.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 7.5 MB/s eta 0:00:00
+Collecting certifi==2022.6.15
+  Downloading certifi-2022.6.15-py3-none-any.whl (160 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.2/160.2 kB 9.9 MB/s eta 0:00:00
+Collecting charset-normalizer==2.1.0
+  Downloading charset_normalizer-2.1.0-py3-none-any.whl (39 kB)
+Collecting docutils==0.18.1
+  Downloading docutils-0.18.1-py2.py3-none-any.whl (570 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.0/570.0 kB 12.9 MB/s eta 0:00:00
+Collecting idna==3.3
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 5.1 MB/s eta 0:00:00
+Collecting imagesize==1.4.1
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Collecting jinja2==3.1.2
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting markupsafe==2.1.1
+  Downloading MarkupSafe-2.1.1.tar.gz (18 kB)
+Looking for GraalPy patches for MarkupSafe
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pallets-sphinx-themes==2.0.2
+  Downloading Pallets_Sphinx_Themes-2.0.2-py3-none-any.whl (26 kB)
+Collecting pygments==2.12.0
+  Using cached Pygments-2.12.0-py3-none-any.whl (1.1 MB)
+Collecting pytz==2022.1
+  Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 13.8 MB/s eta 0:00:00
+Collecting requests==2.28.1
+  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 5.2 MB/s eta 0:00:00
+Collecting snowballstemmer==2.2.0
+  Using cached snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+Collecting sphinx==5.0.2
+  Downloading Sphinx-5.0.2-py3-none-any.whl (3.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 16.2 MB/s eta 0:00:00
+Collecting sphinx-issues==3.0.1
+  Downloading sphinx_issues-3.0.1-py3-none-any.whl (8.2 kB)
+Collecting sphinxcontrib-applehelp==1.0.2
+  Downloading sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.2/121.2 kB 8.5 MB/s eta 0:00:00
+Collecting sphinxcontrib-devhelp==1.0.2
+  Downloading sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.7/84.7 kB 7.0 MB/s eta 0:00:00
+Collecting sphinxcontrib-htmlhelp==2.0.0
+  Downloading sphinxcontrib_htmlhelp-2.0.0-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.5/100.5 kB 8.5 MB/s eta 0:00:00
+Collecting sphinxcontrib-jsmath==1.0.1
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting sphinxcontrib-log-cabinet==1.0.1
+  Downloading sphinxcontrib_log_cabinet-1.0.1-py2.py3-none-any.whl (4.9 kB)
+Collecting sphinxcontrib-qthelp==1.0.3
+  Downloading sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 7.5 MB/s eta 0:00:00
+Collecting sphinxcontrib-serializinghtml==1.1.5
+  Downloading sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.0/94.0 kB 8.0 MB/s eta 0:00:00
+Collecting urllib3==1.26.10
+  Downloading urllib3-1.26.10-py2.py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.2/139.2 kB 7.6 MB/s eta 0:00:00
+Collecting mypy==0.961
+  Downloading mypy-0.961-py3-none-any.whl (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 10.6 MB/s eta 0:00:00
+Collecting mypy-extensions==0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting types-contextvars==2.4.7
+  Using cached types_contextvars-2.4.7-py3-none-any.whl (2.6 kB)
+Collecting types-dataclasses==0.6.6
+  Using cached types_dataclasses-0.6.6-py3-none-any.whl (2.9 kB)
+Collecting types-setuptools==62.6.1
+  Downloading types_setuptools-62.6.1-py3-none-any.whl (26 kB)
+Collecting typing-extensions==4.3.0
+  Downloading typing_extensions-4.3.0-py3-none-any.whl (25 kB)
+Collecting build==0.8.0
+  Using cached build-0.8.0-py3-none-any.whl (17 kB)
+Collecting cfgv==3.3.1
+  Downloading cfgv-3.3.1-py2.py3-none-any.whl (7.3 kB)
+Collecting click==8.1.3
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting distlib==0.3.4
+  Downloading distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 461.2/461.2 kB 12.8 MB/s eta 0:00:00
+Collecting filelock==3.7.1
+  Downloading filelock-3.7.1-py3-none-any.whl (10 kB)
+Collecting identify==2.5.1
+  Downloading identify-2.5.1-py2.py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.6/98.6 kB 7.2 MB/s eta 0:00:00
+Collecting nodeenv==1.7.0
+  Downloading nodeenv-1.7.0-py2.py3-none-any.whl (21 kB)
+Collecting pep517==0.12.0
+  Downloading pep517-0.12.0-py2.py3-none-any.whl (19 kB)
+Collecting pip-compile-multi==2.4.5
+  Downloading pip_compile_multi-2.4.5-py2.py3-none-any.whl (38 kB)
+Collecting pip-tools==6.8.0
+  Downloading pip_tools-6.8.0-py3-none-any.whl (51 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.5/51.5 kB 4.5 MB/s eta 0:00:00
+Collecting platformdirs==2.5.2
+  Using cached platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Collecting pre-commit==2.20.0
+  Downloading pre_commit-2.20.0-py2.py3-none-any.whl (199 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.5/199.5 kB 9.1 MB/s eta 0:00:00
+Collecting pyyaml==6.0
+  Downloading PyYAML-6.0.tar.gz (124 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 8.7 MB/s eta 0:00:00
+Looking for GraalPy patches for PyYAML
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting six==1.16.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting toml==0.10.2
+  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting toposort==1.7
+  Downloading toposort-1.7-py2.py3-none-any.whl (9.0 kB)
+Collecting tox==3.25.1
+  Downloading tox-3.25.1-py2.py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.0/86.0 kB 7.0 MB/s eta 0:00:00
+Collecting virtualenv==20.15.1
+  Downloading virtualenv-20.15.1-py2.py3-none-any.whl (10.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 15.3 MB/s eta 0:00:00
+Collecting wheel==0.37.1
+  Using cached wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+Requirement already satisfied: setuptools in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from nodeenv==1.7.0->-r requirements/dev.txt (line 29)) (63.2.0)
+Requirement already satisfied: pip>=21.2 in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from pip-tools==6.8.0->-r requirements/dev.txt (line 35)) (22.2.2)
+Building wheels for collected packages: cryptography, greenlet, psutil, markupsafe, pyyaml
+  Building wheel for cryptography (pyproject.toml): started
+  Building wheel for cryptography (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for cryptography (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [708 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-3.10
+      creating build/lib.linux-x86_64-3.10/cryptography
+      copying src/cryptography/fernet.py -> build/lib.linux-x86_64-3.10/cryptography
+      copying src/cryptography/__init__.py -> build/lib.linux-x86_64-3.10/cryptography
+      copying src/cryptography/exceptions.py -> build/lib.linux-x86_64-3.10/cryptography
+      copying src/cryptography/utils.py -> build/lib.linux-x86_64-3.10/cryptography
+      copying src/cryptography/__about__.py -> build/lib.linux-x86_64-3.10/cryptography
+      creating build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/name.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/general_name.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/base.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/extensions.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/oid.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/ocsp.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      copying src/cryptography/x509/certificate_transparency.py -> build/lib.linux-x86_64-3.10/cryptography/x509
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat
+      copying src/cryptography/hazmat/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat
+      copying src/cryptography/hazmat/_oid.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/constant_time.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/_cipheralgorithm.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/keywrap.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/poly1305.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/cmac.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/hashes.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/hmac.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/_asymmetric.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/_serialization.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      copying src/cryptography/hazmat/primitives/padding.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/backends
+      copying src/cryptography/hazmat/backends/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings
+      copying src/cryptography/hazmat/bindings/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      copying src/cryptography/hazmat/primitives/serialization/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      copying src/cryptography/hazmat/primitives/serialization/base.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      copying src/cryptography/hazmat/primitives/serialization/pkcs7.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      copying src/cryptography/hazmat/primitives/serialization/ssh.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      copying src/cryptography/hazmat/primitives/serialization/pkcs12.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/serialization
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      copying src/cryptography/hazmat/primitives/ciphers/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      copying src/cryptography/hazmat/primitives/ciphers/base.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      copying src/cryptography/hazmat/primitives/ciphers/algorithms.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      copying src/cryptography/hazmat/primitives/ciphers/aead.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      copying src/cryptography/hazmat/primitives/ciphers/modes.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/ciphers
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/kbkdf.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/concatkdf.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/scrypt.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/pbkdf2.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/hkdf.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      copying src/cryptography/hazmat/primitives/kdf/x963kdf.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/kdf
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/twofactor
+      copying src/cryptography/hazmat/primitives/twofactor/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/twofactor
+      copying src/cryptography/hazmat/primitives/twofactor/totp.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/twofactor
+      copying src/cryptography/hazmat/primitives/twofactor/hotp.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/twofactor
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/rsa.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/x25519.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/dsa.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/ed25519.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/dh.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/ed448.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/x448.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/utils.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/padding.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/types.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      copying src/cryptography/hazmat/primitives/asymmetric/ec.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/primitives/asymmetric
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/rsa.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/x25519.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/dsa.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/poly1305.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/cmac.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/ed25519.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/hashes.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/dh.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/x509.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/hmac.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/aead.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/encode_asn1.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/ed448.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/x448.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/utils.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/ciphers.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/decode_asn1.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/backend.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      copying src/cryptography/hazmat/backends/openssl/ec.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/backends/openssl
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/openssl
+      copying src/cryptography/hazmat/bindings/openssl/__init__.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/openssl
+      copying src/cryptography/hazmat/bindings/openssl/_conditional.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/openssl
+      copying src/cryptography/hazmat/bindings/openssl/binding.py -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/openssl
+      running egg_info
+      writing src/cryptography.egg-info/PKG-INFO
+      writing dependency_links to src/cryptography.egg-info/dependency_links.txt
+      writing requirements to src/cryptography.egg-info/requires.txt
+      writing top-level names to src/cryptography.egg-info/top_level.txt
+      reading manifest file 'src/cryptography.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      no previously-included directories found matching 'docs/_build'
+      warning: no previously-included files found matching 'vectors'
+      warning: no previously-included files matching '*' found under directory 'vectors'
+      warning: no previously-included files matching '*' found under directory '.github'
+      warning: no previously-included files found matching 'release.py'
+      warning: no previously-included files found matching '.coveragerc'
+      warning: no previously-included files found matching 'codecov.yml'
+      warning: no previously-included files found matching '.readthedocs.yml'
+      warning: no previously-included files found matching 'dev-requirements.txt'
+      warning: no previously-included files found matching 'tox.ini'
+      warning: no previously-included files found matching 'mypy.ini'
+      warning: no previously-included files matching '*' found under directory '.circleci'
+      adding license file 'LICENSE'
+      adding license file 'LICENSE.APACHE'
+      adding license file 'LICENSE.BSD'
+      adding license file 'LICENSE.PSF'
+      writing manifest file 'src/cryptography.egg-info/SOURCES.txt'
+      /tmp/pip-build-env-erqq4n6a/overlay/lib/python3.10/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'cryptography.hazmat.bindings._rust' is absent from the `packages` configuration.
+      !!
+      
+              ********************************************************************************
+              ############################
+              # Package would be ignored #
+              ############################
+              Python recognizes 'cryptography.hazmat.bindings._rust' as an importable package[^1],
+              but it is absent from setuptools' `packages` configuration.
+      
+              This leads to an ambiguous overall configuration. If you want to distribute this
+              package, please make sure that 'cryptography.hazmat.bindings._rust' is explicitly added
+              to the `packages` configuration field.
+      
+              Alternatively, you can also rely on setuptools' discovery methods
+              (for example by using `find_namespace_packages(...)`/`find_namespace:`
+              instead of `find_packages(...)`/`find:`).
+      
+              You can read more about "package discovery" on setuptools documentation page:
+      
+              - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+      
+              If you don't want 'cryptography.hazmat.bindings._rust' to be distributed and are
+              already explicitly excluding 'cryptography.hazmat.bindings._rust' via
+              `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+              you can try to use `exclude_package_data`, or `include-package-data=False` in
+              combination with a more fine grained `package-data` configuration.
+      
+              You can read more about "package data files" on setuptools documentation page:
+      
+              - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+      
+      
+              [^1]: For Python, any directory (with suitable naming) can be imported,
+                    even if it does not contain any `.py` files.
+                    On the other hand, currently there is no concept of package data
+                    directory, all directories are treated like packages.
+              ********************************************************************************
+      
+      !!
+        check.warn(importable)
+      copying src/cryptography/py.typed -> build/lib.linux-x86_64-3.10/cryptography
+      creating build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_rust
+      copying src/cryptography/hazmat/bindings/_rust/__init__.pyi -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_rust
+      copying src/cryptography/hazmat/bindings/_rust/asn1.pyi -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_rust
+      copying src/cryptography/hazmat/bindings/_rust/ocsp.pyi -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_rust
+      copying src/cryptography/hazmat/bindings/_rust/x509.pyi -> build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_rust
+      running build_ext
+      generating cffi module 'build/temp.linux-x86_64-3.10/_openssl.c'
+      creating build/temp.linux-x86_64-3.10
+      building '_openssl' extension
+      creating build/temp.linux-x86_64-3.10/build
+      creating build/temp.linux-x86_64-3.10/build/temp.linux-x86_64-3.10
+      gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -I/workdir/Werkzeug-2.2.2/.tox/graalpylibtest-unit-test-tests/include -I/opt/graalpy/include/python3.10 -c build/temp.linux-x86_64-3.10/_openssl.c -o build/temp.linux-x86_64-3.10/build/temp.linux-x86_64-3.10/_openssl.o -Wconversion -Wno-error=sign-conversion
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘Cryptography_pem_password_cb’:
+      build/temp.linux-x86_64-3.10/_openssl.c:2400:37: warning: conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+               memcpy(buf, st->password, st->length);
+                                         ~~^~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_ASN1_STRING_data’:
+      build/temp.linux-x86_64-3.10/_openssl.c:7907:3: warning: ‘ASN1_STRING_data’ is deprecated [-Wdeprecated-declarations]
+         return ASN1_STRING_data(x0);
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/asn1.h:554:1: note: declared here
+       DEPRECATEDIN_1_1_0(unsigned char *ASN1_STRING_data(ASN1_STRING *x))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_ASN1_STRING_data’:
+      build/temp.linux-x86_64-3.10/_openssl.c:7930:3: warning: ‘ASN1_STRING_data’ is deprecated [-Wdeprecated-declarations]
+         { result = ASN1_STRING_data(x0); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/asn1.h:554:1: note: declared here
+       DEPRECATEDIN_1_1_0(unsigned char *ASN1_STRING_data(ASN1_STRING *x))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_DTLSv1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:13855:3: warning: ‘DTLSv1_client_method’ is deprecated [-Wdeprecated-declarations]
+         return DTLSv1_client_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1897:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_DTLSv1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:13866:3: warning: ‘DTLSv1_client_method’ is deprecated [-Wdeprecated-declarations]
+         { result = DTLSv1_client_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1897:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_DTLSv1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:13972:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
+         return DTLSv1_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1895:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_DTLSv1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:13983:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
+         { result = DTLSv1_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1895:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_DTLSv1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:13998:3: warning: ‘DTLSv1_server_method’ is deprecated [-Wdeprecated-declarations]
+         return DTLSv1_server_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1896:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_DTLSv1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:14009:3: warning: ‘DTLSv1_server_method’ is deprecated [-Wdeprecated-declarations]
+         { result = DTLSv1_server_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1896:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_OPENSSL_config’:
+      build/temp.linux-x86_64-3.10/_openssl.c:22697:3: warning: ‘OPENSSL_config’ is deprecated [-Wdeprecated-declarations]
+         OPENSSL_config(x0);
+         ^~~~~~~~~~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/conf.h:91:1: note: declared here
+       DEPRECATEDIN_1_1_0(void OPENSSL_config(const char *config_name))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_OPENSSL_config’:
+      build/temp.linux-x86_64-3.10/_openssl.c:22718:3: warning: ‘OPENSSL_config’ is deprecated [-Wdeprecated-declarations]
+         { OPENSSL_config(x0); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/conf.h:91:1: note: declared here
+       DEPRECATEDIN_1_1_0(void OPENSSL_config(const char *config_name))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_add_extra_chain_cert’:
+      build/temp.linux-x86_64-3.10/_openssl.c:26991:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_add_extra_chain_cert(x0, x1);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_add_extra_chain_cert’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27029:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_add_extra_chain_cert(x0, x1); }
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_clear_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27170:10: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_clear_mode(x0, x1);
+                ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:27170:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_clear_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27203:14: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_clear_mode(x0, x1); }
+                    ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:27203:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_get_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27578:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_get_mode(x0);
+                ^~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_get_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27601:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_get_mode(x0); }
+                    ^~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_get_session_cache_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27692:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_get_session_cache_mode(x0);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_get_session_cache_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:27715:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_get_session_cache_mode(x0); }
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_set_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:29404:10: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_set_mode(x0, x1);
+                ^~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:29404:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_set_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:29437:14: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_set_mode(x0, x1); }
+                    ^~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:29437:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      In file included from build/temp.linux-x86_64-3.10/_openssl.c:832:
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_set_session_cache_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:29778:45: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_set_session_cache_mode(x0, x1);
+                                                   ^~
+      build/temp.linux-x86_64-3.10/_openssl.c:29778:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_set_session_cache_mode(x0, x1);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      In file included from build/temp.linux-x86_64-3.10/_openssl.c:832:
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_set_session_cache_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:29811:49: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_set_session_cache_mode(x0, x1); }
+                                                       ^~
+      build/temp.linux-x86_64-3.10/_openssl.c:29811:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_set_session_cache_mode(x0, x1); }
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_set_tmp_dh’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30184:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_set_tmp_dh(x0, x1);
+                ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_set_tmp_dh’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30222:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_set_tmp_dh(x0, x1); }
+                    ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_CTX_set_tmp_ecdh’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30237:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_CTX_set_tmp_ecdh(x0, x1);
+                ^~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_CTX_set_tmp_ecdh’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30275:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_CTX_set_tmp_ecdh(x0, x1); }
+                    ^~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_SESSION_get_ticket_lifetime_hint’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30904:10: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_SESSION_get_ticket_lifetime_hint(x0);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_SESSION_get_ticket_lifetime_hint’:
+      build/temp.linux-x86_64-3.10/_openssl.c:30927:14: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_SESSION_get_ticket_lifetime_hint(x0); }
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_clear_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:31275:10: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_clear_mode(x0, x1);
+                ^~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:31275:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_clear_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:31308:14: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_clear_mode(x0, x1); }
+                    ^~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:31308:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_get_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:32180:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_get_mode(x0);
+                ^~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_get_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:32203:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_get_mode(x0); }
+                    ^~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_SSL_set_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:33870:10: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         return SSL_set_mode(x0, x1);
+                ^~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:33870:10: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_SSL_set_mode’:
+      build/temp.linux-x86_64-3.10/_openssl.c:33903:14: warning: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+         { result = SSL_set_mode(x0, x1); }
+                    ^~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c:33903:14: warning: conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35107:3: warning: ‘TLSv1_1_client_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_1_client_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1885:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35118:3: warning: ‘TLSv1_1_client_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_1_client_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1885:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35133:3: warning: ‘TLSv1_1_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_1_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1883:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_method(void)) /* TLSv1.1 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35144:3: warning: ‘TLSv1_1_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_1_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1883:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_method(void)) /* TLSv1.1 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35159:3: warning: ‘TLSv1_1_server_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_1_server_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1884:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35170:3: warning: ‘TLSv1_1_server_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_1_server_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1884:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_2_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35185:3: warning: ‘TLSv1_2_client_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_2_client_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1891:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_2_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35196:3: warning: ‘TLSv1_2_client_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_2_client_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1891:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_2_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35211:3: warning: ‘TLSv1_2_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_2_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1889:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_method(void)) /* TLSv1.2 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_2_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35222:3: warning: ‘TLSv1_2_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_2_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1889:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_method(void)) /* TLSv1.2 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_2_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35237:3: warning: ‘TLSv1_2_server_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_2_server_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1890:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_2_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35248:3: warning: ‘TLSv1_2_server_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_2_server_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1890:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_2_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35263:3: warning: ‘TLSv1_client_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_client_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1879:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_client_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35274:3: warning: ‘TLSv1_client_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_client_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1879:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_client_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35289:3: warning: ‘TLSv1_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1877:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_method(void)) /* TLSv1.0 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35300:3: warning: ‘TLSv1_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1877:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_method(void)) /* TLSv1.0 */
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_TLSv1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35315:3: warning: ‘TLSv1_server_method’ is deprecated [-Wdeprecated-declarations]
+         return TLSv1_server_method();
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1878:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_TLSv1_server_method’:
+      build/temp.linux-x86_64-3.10/_openssl.c:35326:3: warning: ‘TLSv1_server_method’ is deprecated [-Wdeprecated-declarations]
+         { result = TLSv1_server_method(); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/ssl.h:1878:1: note: declared here
+       DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *TLSv1_server_method(void))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_X509_CRL_get_lastUpdate’:
+      build/temp.linux-x86_64-3.10/_openssl.c:36038:3: warning: ‘X509_CRL_get_lastUpdate’ is deprecated [-Wdeprecated-declarations]
+         return X509_CRL_get_lastUpdate(x0);
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/x509.h:730:1: note: declared here
+       DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_lastUpdate(X509_CRL *crl))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_X509_CRL_get_lastUpdate’:
+      build/temp.linux-x86_64-3.10/_openssl.c:36061:3: warning: ‘X509_CRL_get_lastUpdate’ is deprecated [-Wdeprecated-declarations]
+         { result = X509_CRL_get_lastUpdate(x0); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/x509.h:730:1: note: declared here
+       DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_lastUpdate(X509_CRL *crl))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_d_X509_CRL_get_nextUpdate’:
+      build/temp.linux-x86_64-3.10/_openssl.c:36076:3: warning: ‘X509_CRL_get_nextUpdate’ is deprecated [-Wdeprecated-declarations]
+         return X509_CRL_get_nextUpdate(x0);
+         ^~~~~~
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/x509.h:731:1: note: declared here
+       DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_nextUpdate(X509_CRL *crl))
+       ^~~~~~~~~~~~~~~~~~
+      build/temp.linux-x86_64-3.10/_openssl.c: In function ‘_cffi_f_X509_CRL_get_nextUpdate’:
+      build/temp.linux-x86_64-3.10/_openssl.c:36099:3: warning: ‘X509_CRL_get_nextUpdate’ is deprecated [-Wdeprecated-declarations]
+         { result = X509_CRL_get_nextUpdate(x0); }
+         ^
+      In file included from /usr/include/openssl/opensslconf.h:42,
+                       from /usr/include/openssl/e_os2.h:13,
+                       from build/temp.linux-x86_64-3.10/_openssl.c:595:
+      /usr/include/openssl/x509.h:731:1: note: declared here
+       DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_nextUpdate(X509_CRL *crl))
+       ^~~~~~~~~~~~~~~~~~
+      gcc -shared -fPIC build/temp.linux-x86_64-3.10/build/temp.linux-x86_64-3.10/_openssl.o -lssl -lcrypto -lpthread -o build/lib.linux-x86_64-3.10/cryptography/hazmat/bindings/_openssl.pyd
+      running build_rust
+       Downloading crates ...
+        Downloaded proc-macro2 v1.0.37
+        Downloaded ouroboros v0.15.0
+        Downloaded asn1_derive v0.8.7
+        Downloaded stable_deref_trait v1.2.0
+        Downloaded unicode-xid v0.2.2
+        Downloaded ouroboros_macro v0.15.0
+        Downloaded redox_syscall v0.2.13
+        Downloaded quote v1.0.18
+        Downloaded lock_api v0.4.7
+        Downloaded smallvec v1.8.0
+        Downloaded unindent v0.1.8
+        Downloaded once_cell v1.10.0
+        Downloaded num-traits v0.2.14
+        Downloaded pem v1.0.2
+        Downloaded num-integer v0.1.44
+        Downloaded asn1 v0.8.7
+        Downloaded syn v1.0.91
+        Downloaded chrono v0.4.19
+        Downloaded libc v0.2.124
+      cargo rustc --lib --message-format=json-render-diagnostics --manifest-path src/rust/Cargo.toml --release -v --features pyo3/abi3-py36 pyo3/extension-module -- --crate-type cdylib
+         Compiling proc-macro2 v1.0.37
+         Compiling unicode-xid v0.2.2
+         Compiling autocfg v1.1.0
+         Compiling syn v1.0.91
+           Running `rustc --crate-name unicode_xid /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-xid-0.2.2/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' -C metadata=f29600b1b5ddc774 -C extra-filename=-f29600b1b5ddc774 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name autocfg /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/autocfg-1.1.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=0be9fa6b385e030e -C extra-filename=-0be9fa6b385e030e --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.37/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=d08e0c2e36ff2bc8 -C extra-filename=-d08e0c2e36ff2bc8 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro2-d08e0c2e36ff2bc8 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/syn-1.0.91/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="clone-impls"' --cfg 'feature="default"' --cfg 'feature="derive"' --cfg 'feature="extra-traits"' --cfg 'feature="full"' --cfg 'feature="parsing"' --cfg 'feature="printing"' --cfg 'feature="proc-macro"' --cfg 'feature="quote"' -C metadata=06f1f9f02c385803 -C extra-filename=-06f1f9f02c385803 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/syn-06f1f9f02c385803 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+         Compiling version_check v0.9.4
+           Running `rustc --crate-name version_check /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=97f039c81b6445fe -C extra-filename=-97f039c81b6445fe --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro2-d08e0c2e36ff2bc8/build-script-build`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/syn-06f1f9f02c385803/build-script-build`
+           Running `rustc --crate-name proc_macro2 --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.37/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=8b762785dbf4044d -C extra-filename=-8b762785dbf4044d --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern unicode_xid=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libunicode_xid-f29600b1b5ddc774.rmeta --cap-lints allow --cfg use_proc_macro --cfg wrap_proc_macro`
+         Compiling proc-macro-hack v0.5.19
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-hack-0.5.19/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=c93e7e637f4a0854 -C extra-filename=-c93e7e637f4a0854 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro-hack-c93e7e637f4a0854 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+         Compiling libc v0.2.124
+           Running `rustc --crate-name build_script_build /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/libc-0.2.124/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=e057e7889caadbfd -C extra-filename=-e057e7889caadbfd --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/libc-e057e7889caadbfd -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+         Compiling pyo3-build-config v0.15.2
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/pyo3-build-config-0.15.2/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="abi3"' --cfg 'feature="abi3-py310"' --cfg 'feature="abi3-py36"' --cfg 'feature="abi3-py37"' --cfg 'feature="abi3-py38"' --cfg 'feature="abi3-py39"' --cfg 'feature="default"' --cfg 'feature="resolve-config"' -C metadata=b7d89eaca00ba789 -C extra-filename=-b7d89eaca00ba789 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/pyo3-build-config-b7d89eaca00ba789 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro-hack-c93e7e637f4a0854/build-script-build`
+         Compiling quote v1.0.18
+           Running `rustc --crate-name quote --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=70ab30c33c2a615b -C extra-filename=-70ab30c33c2a615b --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern proc_macro2=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libproc_macro2-8b762785dbf4044d.rmeta --cap-lints allow`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/libc-e057e7889caadbfd/build-script-build`
+         Compiling once_cell v1.10.0
+           Running `rustc --crate-name once_cell --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/once_cell-1.10.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="alloc"' --cfg 'feature="default"' --cfg 'feature="race"' --cfg 'feature="std"' -C metadata=36def4706db2aabb -C extra-filename=-36def4706db2aabb --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name syn --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/syn-1.0.91/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="clone-impls"' --cfg 'feature="default"' --cfg 'feature="derive"' --cfg 'feature="extra-traits"' --cfg 'feature="full"' --cfg 'feature="parsing"' --cfg 'feature="printing"' --cfg 'feature="proc-macro"' --cfg 'feature="quote"' -C metadata=13bd074dbd720984 -C extra-filename=-13bd074dbd720984 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern proc_macro2=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libproc_macro2-8b762785dbf4044d.rmeta --extern quote=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libquote-70ab30c33c2a615b.rmeta --extern unicode_xid=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libunicode_xid-f29600b1b5ddc774.rmeta --cap-lints allow --cfg syn_disable_nightly_tests`
+           Running `rustc --crate-name libc /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/libc-0.2.124/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=b70a9f5651c342c3 -C extra-filename=-b70a9f5651c342c3 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --cap-lints allow --cfg freebsd11 --cfg libc_priv_mod_use --cfg libc_union --cfg libc_const_size_of --cfg libc_align --cfg libc_int128 --cfg libc_core_cvoid --cfg libc_packedN --cfg libc_cfg_target_vendor --cfg libc_non_exhaustive --cfg libc_ptr_addr_of --cfg libc_underscore_const_names`
+           Running `rustc --crate-name proc_macro_hack --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-hack-0.5.19/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type proc-macro --emit=dep-info,link -C prefer-dynamic -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=3644a1a2faae173f -C extra-filename=-3644a1a2faae173f --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern proc_macro --cap-lints allow`
+         Compiling proc-macro-error-attr v1.0.4
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-attr-1.0.4/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=0d386069084d0e4b -C extra-filename=-0d386069084d0e4b --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro-error-attr-0d386069084d0e4b -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern version_check=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libversion_check-97f039c81b6445fe.rlib --cap-lints allow`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/pyo3-build-config-b7d89eaca00ba789/build-script-build`
+         Compiling num-traits v0.2.14
+           Running `rustc --crate-name build_script_build /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/num-traits-0.2.14/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=07834b8cca4e5c05 -C extra-filename=-07834b8cca4e5c05 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/num-traits-07834b8cca4e5c05 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern autocfg=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libautocfg-0be9fa6b385e030e.rlib --cap-lints allow`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/num-traits-07834b8cca4e5c05/build-script-build`
+           Running `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro-error-attr-0d386069084d0e4b/build-script-build`
+         Compiling proc-macro-error v1.0.4
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="syn"' --cfg 'feature="syn-error"' -C metadata=b1c1bac7251b4940 -C extra-filename=-b1c1bac7251b4940 --out-dir /tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/proc-macro-error-b1c1bac7251b4940 -L dependency=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps --extern version_check=/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/deps/libversion_check-97f039c81b6445fe.rlib --cap-lints allow`
+      error: failed to run custom build command for `pyo3-build-config v0.15.2`
+      
+      Caused by:
+        process didn't exit successfully: `/tmp/pip-install-cuoyepit/cryptography_cdc40c875098466ca30e84266c67446e/src/rust/target/release/build/pyo3-build-config-b7d89eaca00ba789/build-script-build` (exit status: 1)
+        --- stdout
+        cargo:rerun-if-env-changed=PYO3_CONFIG_FILE
+        cargo:rerun-if-env-changed=PYO3_NO_PYTHON
+        cargo:rerun-if-env-changed=PYO3_PYTHON
+      
+        --- stderr
+        error: unknown interpreter: GraalVM
+      warning: build failed, waiting for other jobs to finish...
+      
+          =============================DEBUG ASSISTANCE=============================
+          If you are seeing a compilation error please try the following steps to
+          successfully install cryptography:
+          1) Upgrade to the latest pip and try again. This will fix errors for most
+             users. See: https://pip.pypa.io/en/stable/installing/#upgrading-pip
+          2) Read https://cryptography.io/en/latest/installation/ for specific
+             instructions for your platform.
+          3) Check our frequently asked questions for more information:
+             https://cryptography.io/en/latest/faq/
+          4) Ensure you have a recent Rust toolchain installed:
+             https://cryptography.io/en/latest/installation/#rust
+      
+          Python: 3.10.8
+          platform: Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.16
+          pip: n/a
+          setuptools: 69.0.2
+          setuptools_rust: 1.8.1
+          =============================DEBUG ASSISTANCE=============================
+      
+      error: `cargo rustc --lib --message-format=json-render-diagnostics --manifest-path src/rust/Cargo.toml --release -v --features 'pyo3/abi3-py36 pyo3/extension-module' -- --crate-type cdylib` failed with code 101
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for cryptography
+  Building wheel for greenlet (setup.py): started
+  Building wheel for greenlet (setup.py): finished with status 'done'
+  Created wheel for greenlet: filename=greenlet-1.1.2-graalpy310-graalpy231_310_native-linux_x86_64.whl size=98795 sha256=92a7007a655c22090d1e7feb211032a9b1275a781866f766af3422ae1124db19
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/bf/d5/c2/43d3d82f84a72ef5e8a60c8576270f55cf60f50b3c3753a4ef
+  Building wheel for psutil (pyproject.toml): started
+  Building wheel for psutil (pyproject.toml): finished with status 'done'
+  Created wheel for psutil: filename=psutil-5.9.1-graalpy310-graalpy231_310_native-linux_x86_64.whl size=232084 sha256=13f2b6d9dedfde4f5d81f47d3918876b4bf3bc0683fa68ecf31ab0d04ec4eec1
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/61/04/11/7c39a3bebf6bf69b0144d40094414647fa13af38573ca59684
+  Building wheel for markupsafe (setup.py): started
+  Building wheel for markupsafe (setup.py): finished with status 'done'
+  Created wheel for markupsafe: filename=MarkupSafe-2.1.1-py3-none-any.whl size=9667 sha256=5e5038d165ec16307aaa7f2762441a52767221ae07b11591c925176a0cf5a7c4
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/21/3e/d4/0bb679b50ec3445285c73b49b1718cd20292205ecb8152b6f2
+  Building wheel for pyyaml (pyproject.toml): started
+  Building wheel for pyyaml (pyproject.toml): finished with status 'done'
+  Created wheel for pyyaml: filename=PyYAML-6.0-py3-none-any.whl size=46211 sha256=6d72fb761390b4fd839ef3bfb007c0f6a0b4f1b5bf47322efa45e925192455fd
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/30/56/43/fcbda5f5883148fc5775600493b991f8aa78b9c17f540b00c5
+Successfully built greenlet psutil markupsafe pyyaml
+Failed to build cryptography
+ERROR: Could not build wheels for cryptography, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements/tests.txt, -rrequirements/dev.txt, -rrequirements/typing.txt]; v = InvocationError('/workdir/Werkzeug-2.2.2/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements/tests.txt -rrequirements/dev.txt -rrequirements/typing.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements/tests.txt, -rrequirements/dev.txt, -rrequirements/typing.txt]; v = InvocationError('/workdir/Werkzeug-2.2.2/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements/tests.txt -rrequirements/dev.txt -rrequirements/typing.txt', 1)

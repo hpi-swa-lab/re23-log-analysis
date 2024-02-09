@@ -1,0 +1,87 @@
+GLOB sdist-make: /workdir/blinker-1.5/setup.py
+graalpylibtest-unit-test-tests create: /workdir/blinker-1.5/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/blinker-1.5/.tox/.tmp/package/1/blinker-1.5.zip
+graalpylibtest-unit-test-tests installed: attrs==21.4.0,blinker @ file:///workdir/blinker-1.5/.tox/.tmp/package/1/blinker-1.5.zip,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==1.1.1,mock==5.1.0,packaging==21.3,pluggy==1.0.0,py==1.11.0,pyparsing==3.0.9,pytest==7.1.2,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1999492481'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/blinker/1.5/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.1.2, pluggy-1.0.0 -- /workdir/blinker-1.5/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/blinker-1.5, configfile: setup.cfg, testpaths: tests
+collecting ... collected 28 items
+
+tests/test_context.py::test_temp_connection PASSED                       [  3%]
+tests/test_context.py::test_temp_connection_for_sender PASSED            [  7%]
+tests/test_context.py::test_temp_connection_failure PASSED               [ 10%]
+tests/test_saferef.py::TestSaferef::test_In PASSED                       [ 14%]
+tests/test_saferef.py::TestSaferef::test_Representation PASSED           [ 17%]
+tests/test_saferef.py::TestSaferef::test_ShortCircuit PASSED             [ 21%]
+tests/test_saferef.py::TestSaferef::test_Valid PASSED                    [ 25%]
+tests/test_signals.py::test_meta_connect PASSED                          [ 28%]
+tests/test_signals.py::test_signal_signals_any_sender PASSED             [ 32%]
+tests/test_signals.py::test_signal_signals_strong_sender PASSED          [ 35%]
+tests/test_signals.py::test_signal_weak_receiver_vanishes FAILED         [ 39%]
+tests/test_signals.py::test_signal_signals_weak_sender PASSED            [ 42%]
+tests/test_signals.py::test_empty_bucket_growth PASSED                   [ 46%]
+tests/test_signals.py::test_meta_connect_failure PASSED                  [ 50%]
+tests/test_signals.py::test_weak_namespace FAILED                        [ 53%]
+tests/test_signals.py::test_namespace PASSED                             [ 57%]
+tests/test_signals.py::test_weak_receiver FAILED                         [ 60%]
+tests/test_signals.py::test_strong_receiver PASSED                       [ 64%]
+tests/test_signals.py::test_instancemethod_receiver FAILED               [ 67%]
+tests/test_signals.py::test_filtered_receiver PASSED                     [ 71%]
+tests/test_signals.py::test_filtered_receiver_weakref FAILED             [ 75%]
+tests/test_signals.py::test_decorated_receiver PASSED                    [ 78%]
+tests/test_signals.py::test_no_double_send PASSED                        [ 82%]
+tests/test_signals.py::test_has_receivers FAILED                         [ 85%]
+tests/test_signals.py::test_instance_doc PASSED                          [ 89%]
+tests/test_signals.py::test_named_blinker PASSED                         [ 92%]
+tests/test_utilities.py::test_symbols PASSED                             [ 96%]
+tests/test_utilities.py::test_pickled_symbols PASSED                     [100%]
+
+=================================== FAILURES ===================================
+______________________ test_signal_weak_receiver_vanishes ______________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 142, in test_signal_weak_receiver_vanishes
+    assert len(sentinel) == 0
+AssertionError
+_____________________________ test_weak_namespace ______________________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 248, in test_weak_namespace
+    assert 'def' not in ns
+AssertionError
+______________________________ test_weak_receiver ______________________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 290, in test_weak_receiver
+    assert not sentinel
+AssertionError
+_________________________ test_instancemethod_receiver _________________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 335, in test_instancemethod_receiver
+    assert len(sentinel) == 1
+AssertionError
+________________________ test_filtered_receiver_weakref ________________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 390, in test_filtered_receiver_weakref
+    values_are_empty_sets_(sig._by_receiver)
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 488, in values_are_empty_sets_
+    assert val == set()
+AssertionError
+______________________________ test_has_receivers ______________________________
+Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 461, in test_has_receivers
+    assert not sig.has_receivers_for('xyz')
+AssertionError
+- generated xml file: /workdir/results/blinker/1.5/1/graalpy-test-results.xml --
+=========================== short test summary info ============================
+FAILED tests/test_signals.py::test_signal_weak_receiver_vanishes - AssertionE...
+FAILED tests/test_signals.py::test_weak_namespace - AssertionError
+FAILED tests/test_signals.py::test_weak_receiver - AssertionError
+FAILED tests/test_signals.py::test_instancemethod_receiver - AssertionError
+FAILED tests/test_signals.py::test_filtered_receiver_weakref - AssertionError
+FAILED tests/test_signals.py::test_has_receivers - AssertionError
+========================= 6 failed, 22 passed in 1.05s =========================
+ERROR: InvocationError for command /workdir/blinker-1.5/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/blinker/1.5/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

@@ -1,0 +1,274 @@
+GLOB sdist-make: /workdir/pytesseract-0.3.10/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pytesseract-0.3.10/.tox/.tmp/package/1/pytesseract-0.3.10.zip
+cpythonlibtest-unit-test-tests installed: cfgv==3.4.0,distlib==0.3.7,exceptiongroup==1.2.0,filelock==3.13.1,identify==2.5.32,iniconfig==2.0.0,mock==5.1.0,nodeenv==1.8.0,packaging==23.2,Pillow==10.1.0,platformdirs==4.0.0,pluggy==1.3.0,pre-commit==3.5.0,pytesseract @ file:///workdir/pytesseract-0.3.10/.tox/.tmp/package/1/pytesseract-0.3.10.zip#sha256=6d264bc9b066ebf73f7e4bc9920f03dd39b5de6b3a0c5364b18f13b73d3f1776,pytest==7.4.3,PyYAML==6.0.1,tomli==2.0.1,virtualenv==20.24.7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2187449063'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytesseract/0.3.10/1/cpython-test-results.xml
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pytesseract-0.3.10
+configfile: tox.ini
+[1mcollecting ... [0mcollected 48 items
+
+tests/pytesseract_test.py::test_image_to_string_with_image_type[jpg] [32mPASSED[0m[32m [  2%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[jpeg2000] [31mFAILED[0m[31m [  4%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[pgm] [32mPASSED[0m[31m [  6%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[png] [32mPASSED[0m[31m [  8%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[ppm] [32mPASSED[0m[31m [ 10%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[tiff] [32mPASSED[0m[31m [ 12%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[gif] [32mPASSED[0m[31m [ 14%][0m
+tests/pytesseract_test.py::test_image_to_string_with_image_type[webp] [32mPASSED[0m[31m [ 16%][0m
+tests/pytesseract_test.py::test_image_to_string_with_args_type[path_str] [32mPASSED[0m[31m [ 18%][0m
+tests/pytesseract_test.py::test_image_to_string_with_args_type[image_object] [32mPASSED[0m[31m [ 20%][0m
+tests/pytesseract_test.py::test_image_to_string_with_numpy_array [33mSKIPPED[0m[31m [ 22%][0m
+tests/pytesseract_test.py::test_image_to_string_european [31mFAILED[0m[31m          [ 25%][0m
+tests/pytesseract_test.py::test_image_to_string_batch [32mPASSED[0m[31m             [ 27%][0m
+tests/pytesseract_test.py::test_image_to_string_multiprocessing [32mPASSED[0m[31m   [ 29%][0m
+tests/pytesseract_test.py::test_image_to_string_timeout [32mPASSED[0m[31m           [ 31%][0m
+tests/pytesseract_test.py::test_la_image_to_string [32mPASSED[0m[31m                [ 33%][0m
+tests/pytesseract_test.py::test_image_to_boxes [32mPASSED[0m[31m                    [ 35%][0m
+tests/pytesseract_test.py::test_image_to_osd [31mFAILED[0m[31m                      [ 37%][0m
+tests/pytesseract_test.py::test_image_to_pdf_or_hocr[pdf] [32mPASSED[0m[31m         [ 39%][0m
+tests/pytesseract_test.py::test_image_to_pdf_or_hocr[hocr] [32mPASSED[0m[31m        [ 41%][0m
+tests/pytesseract_test.py::test_image_to_alto_xml [32mPASSED[0m[31m                 [ 43%][0m
+tests/pytesseract_test.py::test_image_to_alto_xml_support [33mSKIPPED[0m[31m        [ 45%][0m
+tests/pytesseract_test.py::test_image_to_data__pandas_support [33mSKIPPED[0m[31m    [ 47%][0m
+tests/pytesseract_test.py::test_image_to_data__pandas_output [33mSKIPPED[0m[31m     [ 50%][0m
+tests/pytesseract_test.py::test_image_to_data_common_output[bytes] [32mPASSED[0m[31m [ 52%][0m
+tests/pytesseract_test.py::test_image_to_data_common_output[dict] [32mPASSED[0m[31m [ 54%][0m
+tests/pytesseract_test.py::test_image_to_data_common_output[string] [32mPASSED[0m[31m [ 56%][0m
+tests/pytesseract_test.py::test_wrong_prepare_type[int] [32mPASSED[0m[31m           [ 58%][0m
+tests/pytesseract_test.py::test_wrong_prepare_type[float] [32mPASSED[0m[31m         [ 60%][0m
+tests/pytesseract_test.py::test_wrong_prepare_type[none] [32mPASSED[0m[31m          [ 62%][0m
+tests/pytesseract_test.py::test_wrong_tesseract_cmd[executable_name] [32mPASSED[0m[31m [ 64%][0m
+tests/pytesseract_test.py::test_wrong_tesseract_cmd[absolute_path] [32mPASSED[0m[31m [ 66%][0m
+tests/pytesseract_test.py::test_main_not_found_cases [32mPASSED[0m[31m              [ 68%][0m
+tests/pytesseract_test.py::test_proper_oserror_exception_handling[permission_error_path] [32mPASSED[0m[31m [ 70%][0m
+tests/pytesseract_test.py::test_proper_oserror_exception_handling[invalid_path] [32mPASSED[0m[31m [ 72%][0m
+tests/pytesseract_test.py::test_get_languages[default_empty_config] [31mFAILED[0m[31m [ 75%][0m
+tests/pytesseract_test.py::test_get_languages[custom_tessdata_dir] [32mPASSED[0m[31m [ 77%][0m
+tests/pytesseract_test.py::test_get_languages[incorrect_tessdata_dir] [32mPASSED[0m[31m [ 79%][0m
+tests/pytesseract_test.py::test_get_languages[invalid_tessdata_dir] [32mPASSED[0m[31m [ 81%][0m
+tests/pytesseract_test.py::test_get_languages[invalid_config] [31mFAILED[0m[31m     [ 83%][0m
+tests/pytesseract_test.py::test_file_to_dict[input_args0-expected0] [32mPASSED[0m[31m [ 85%][0m
+tests/pytesseract_test.py::test_file_to_dict[input_args1-expected1] [32mPASSED[0m[31m [ 87%][0m
+tests/pytesseract_test.py::test_file_to_dict[input_args2-expected2] [32mPASSED[0m[31m [ 89%][0m
+tests/pytesseract_test.py::test_get_tesseract_version[3.5.0-3.5.0] [32mPASSED[0m[31m [ 91%][0m
+tests/pytesseract_test.py::test_get_tesseract_version[4.1-a8s6f8d3f-4.1] [32mPASSED[0m[31m [ 93%][0m
+tests/pytesseract_test.py::test_get_tesseract_version[v4.0.0-beta1.9-4.0.0] [32mPASSED[0m[31m [ 95%][0m
+tests/pytesseract_test.py::test_get_tesseract_version_invalid[-Invalid tesseract version: ""] [32mPASSED[0m[31m [ 97%][0m
+tests/pytesseract_test.py::test_get_tesseract_version_invalid[invalid-Invalid tesseract version: "invalid"] [32mPASSED[0m[31m [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m________________ test_image_to_string_with_image_type[jpeg2000] ________________[0m
+Traceback (most recent call last):
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytesseract-0.3.10/tests/pytesseract_test.py", line 108, in test_image_to_string_with_image_type
+    assert 'The quick brown dog' in image_to_string(test_file_path, 'eng')
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Tesseract Open Source OCR Engine v4.1.1 with Leptonica Error in pixReadStreamJp2k: function not present Error in pixReadStream: jp2: no pix returned Error in pixRead: pix not read Error during processing.')
+[31m[1m________________________ test_image_to_string_european _________________________[0m
+Traceback (most recent call last):
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytesseract-0.3.10/tests/pytesseract_test.py", line 134, in test_image_to_string_european
+    assert 'La volpe marrone' in image_to_string(test_file_european, 'fra')
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract//tessdata/fra.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'fra\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+[31m[1m______________________________ test_image_to_osd _______________________________[0m
+Traceback (most recent call last):
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytesseract-0.3.10/tests/pytesseract_test.py", line 194, in test_image_to_osd
+    result = image_to_osd(test_file)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 552, in image_to_osd
+    return {
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 555, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract//tessdata/osd.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'osd\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+[31m[1m___________________ test_get_languages[default_empty_config] ___________________[0m
+Traceback (most recent call last):
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytesseract-0.3.10/tests/pytesseract_test.py", line 434, in test_get_languages
+    assert lang in result
+AssertionError: assert 'fra' in ['eng']
+[31m[1m______________________ test_get_languages[invalid_config] ______________________[0m
+Traceback (most recent call last):
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pytesseract-0.3.10/tests/pytesseract_test.py", line 434, in test_get_languages
+    assert lang in result
+AssertionError: assert 'fra' in ['eng']
+- generated xml file: /workdir/results/pytesseract/0.3.10/1/cpython-test-results.xml -
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/pytesseract_test.py::[1mtest_image_to_string_with_image_type[jpeg2000][0m - pytesseract.pytesseract.TesseractError: (1, 'Tesseract Open Source OCR Engi...
+[31mFAILED[0m tests/pytesseract_test.py::[1mtest_image_to_string_european[0m - pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/s...
+[31mFAILED[0m tests/pytesseract_test.py::[1mtest_image_to_osd[0m - pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/s...
+[31mFAILED[0m tests/pytesseract_test.py::[1mtest_get_languages[default_empty_config][0m - AssertionError: assert 'fra' in ['eng']
+[31mFAILED[0m tests/pytesseract_test.py::[1mtest_get_languages[invalid_config][0m - AssertionError: assert 'fra' in ['eng']
+[31m============== [31m[1m5 failed[0m, [32m39 passed[0m, [33m4 skipped[0m[31m in 66.68s (0:01:06)[0m[31m ==============[0m
+ERROR: InvocationError for command /workdir/pytesseract-0.3.10/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pytesseract/0.3.10/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

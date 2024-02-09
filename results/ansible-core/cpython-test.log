@@ -1,0 +1,580 @@
+.package create: /workdir/ansible-core-2.14.2/.tox/.package
+.package installdeps: setuptools >= 39.2.0, wheel
+warning: no files found matching 'SYMLINK_CACHE.json'
+warning: no previously-included files found matching 'docs/docsite/rst_warnings'
+warning: no previously-included files found matching 'docs/docsite/rst/conf.py'
+warning: no previously-included files found matching 'docs/docsite/rst/index.rst'
+warning: no previously-included files found matching 'docs/docsite/rst/dev_guide/index.rst'
+warning: no previously-included files matching '*' found under directory 'docs/docsite/_build'
+warning: no previously-included files matching '*.pyc' found under directory 'docs/docsite/_extensions'
+warning: no previously-included files matching '*.pyo' found under directory 'docs/docsite/_extensions'
+warning: no files found matching '*.ps1' under directory 'lib/ansible/modules/windows'
+warning: no files found matching '*.yml' under directory 'lib/ansible/modules'
+warning: no files found matching 'validate-modules' under directory 'test/lib/ansible_test/_util/controller/sanity/validate-modules'
+warning: no files found matching 'SYMLINK_CACHE.json'
+warning: no previously-included files found matching 'docs/docsite/rst_warnings'
+warning: no previously-included files found matching 'docs/docsite/rst/conf.py'
+warning: no previously-included files found matching 'docs/docsite/rst/index.rst'
+warning: no previously-included files found matching 'docs/docsite/rst/dev_guide/index.rst'
+warning: no previously-included files matching '*' found under directory 'docs/docsite/_build'
+warning: no previously-included files matching '*.pyc' found under directory 'docs/docsite/_extensions'
+warning: no previously-included files matching '*.pyo' found under directory 'docs/docsite/_extensions'
+warning: no files found matching '*.ps1' under directory 'lib/ansible/modules/windows'
+warning: no files found matching '*.yml' under directory 'lib/ansible/modules'
+warning: no files found matching 'validate-modules' under directory 'test/lib/ansible_test/_util/controller/sanity/validate-modules'
+cpythonlibtest-unit-test-tests create: /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rtest/integration/network-integration.requirements.txt, -rtest/integration/targets/ansible-test-units-constraints/ansible_collections/ns/col/tests/unit/requirements.txt, -rtest/integration/targets/ansible-test-integration-constraints/ansible_collections/ns/col/tests/integration/requirements.txt, -rtest/sanity/code-smell/update-bundled.requirements.txt, -rtest/sanity/code-smell/botmeta.requirements.txt, -rtest/sanity/code-smell/rstcheck.requirements.txt, -rtest/sanity/code-smell/release-names.requirements.txt, -rtest/sanity/code-smell/deprecated-config.requirements.txt, -rtest/sanity/code-smell/package-data.requirements.txt, -rtest/units/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/ansible-core-2.14.2/.tox/.tmp/package/1/ansible-core-2.14.2.tar.gz
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.12,ansible-core @ file:///workdir/ansible-core-2.14.2/.tox/.tmp/package/1/ansible-core-2.14.2.tar.gz#sha256=d66cf8a7097c2d007949860ab64b88b0255e51ef98fa2dbaed685f43767e3a76,antsibull-changelog==0.16.0,Babel==2.10.3,bcrypt==4.0.1,botocore==1.32.3,certifi==2022.9.14,cffi==1.16.0,charset-normalizer==2.1.1,cryptography==41.0.5,docutils==0.17.1,exceptiongroup==1.1.3,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,jmespath==1.0.1,MarkupSafe==2.1.1,mock==5.1.0,packaging==21.3,paramiko==3.3.1,passlib==1.7.4,pexpect==4.8.0,pluggy==1.3.0,ptyprocess==0.7.0,pycparser==2.21,Pygments==2.13.0,PyNaCl==1.5.0,pyparsing==3.0.9,pyspnego==0.10.2,pytest==7.4.3,python-dateutil==2.8.2,pytz==2022.2.1,pywinrm==0.4.3,PyYAML==6.0,requests==2.28.1,requests-ntlm==1.2.0,resolvelib==0.8.1,rstcheck==3.5.0,scp==0.14.5,semantic-version==2.10.0,six==1.16.0,snowballstemmer==2.2.0,Sphinx==4.2.0,sphinxcontrib-applehelp==1.0.2,sphinxcontrib-devhelp==1.0.2,sphinxcontrib-htmlhelp==2.0.0,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.3,sphinxcontrib-serializinghtml==1.1.5,straight.plugin==1.5.0,tomli==2.0.1,urllib3==1.26.12,voluptuous==0.13.1,xmltodict==0.13.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3246676174'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/ansible-core/2.14.2/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/ansible-core-2.14.2
+collecting ... collected 3746 items / 23 errors
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting test/ansible_test/unit/test_diff.py _____________
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/ansible_test/unit/test_diff.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/ansible_test/unit/test_diff.py:9: in <module>
+    from ansible_test._internal.util import (
+E   ImportError: cannot import name 'to_text' from 'ansible_test._internal.util' (/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible_test/_internal/util.py)
+_ ERROR collecting test/ansible_test/validate-modules-unit/test_validate_modules_regex.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/ansible_test/validate-modules-unit/test_validate_modules_regex.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/ansible_test/validate-modules-unit/test_validate_modules_regex.py:7: in <module>
+    from validate_modules.main import TYPE_REGEX
+E   ModuleNotFoundError: No module named 'validate_modules'
+_ ERROR collecting test/integration/targets/ansible-test-config/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py _
+import file mismatch:
+imported module 'test_test' has this __file__ attribute:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-doc/collections/ansible_collections/testns/testcol/plugins/test/test_test.py
+which is not the same as the test file we want to collect:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-config/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_ ERROR collecting test/integration/targets/ansible-test-config-invalid/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py _
+import file mismatch:
+imported module 'test_test' has this __file__ attribute:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-doc/collections/ansible_collections/testns/testcol/plugins/test/test_test.py
+which is not the same as the test file we want to collect:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-config-invalid/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_ ERROR collecting test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py:4: in <module>
+    from .....plugins.module_utils.my_util import hello
+E   ImportError: attempted relative import with no known parent package
+_ ERROR collecting test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py:4: in <module>
+    from .....plugins.modules.hello import say_hello
+E   ImportError: attempted relative import with no known parent package
+_ ERROR collecting test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py:4: in <module>
+    from .....plugins.module_utils.my_util import hello
+E   ImportError: attempted relative import with no known parent package
+_ ERROR collecting test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py:4: in <module>
+    from .....plugins.modules.hello import say_hello
+E   ImportError: attempted relative import with no known parent package
+____ ERROR collecting test/integration/targets/async/library/async_test.py _____
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 402, in _load_params
+    params = json.loads(buffer.decode('utf-8'))
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/async/library/async_test.py", line 49, in <module>
+    main()
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/async/library/async_test.py", line 19, in main
+    module = AnsibleModule(
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 491, in __init__
+    self._load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 1287, in _load_params
+    self.params = _load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 406, in _load_params
+    sys.exit(1)
+SystemExit: 1
+------------------------------- Captured stdout --------------------------------
+
+{"msg": "Error: Module unable to decode valid JSON on stdin.  Unable to figure out what parameters were passed", "failed": true}
+__ ERROR collecting test/integration/targets/async_fail/library/async_test.py __
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 402, in _load_params
+    params = json.loads(buffer.decode('utf-8'))
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/async_fail/library/async_test.py", line 53, in <module>
+    main()
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/async_fail/library/async_test.py", line 20, in main
+    module = AnsibleModule(
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 491, in __init__
+    self._load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 1287, in _load_params
+    self.params = _load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 406, in _load_params
+    sys.exit(1)
+SystemExit: 1
+------------------------------- Captured stdout --------------------------------
+
+{"msg": "Error: Module unable to decode valid JSON on stdin.  Unable to figure out what parameters were passed", "failed": true}
+________ ERROR collecting test/integration/targets/cli/test_k_and_K.py _________
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/cli/test_k_and_K.py", line 27, in <module>
+    assert b'cliuser2' in out
+AssertionError: assert b'cliuser2' in b"SSH password: \r\nBECOME password[defaults to SSH password]: \r\nlocalhost | FAILED | rc=-1 >>\r\nto use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program\r\n"
+------------------------------- Captured stdout --------------------------------
+b"SSH password: \r\nBECOME password[defaults to SSH password]: \r\nlocalhost | FAILED | rc=-1 >>\r\nto use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program\r\n"
+_ ERROR collecting test/integration/targets/collections_plugin_namespace/collection_root/ansible_collections/my_ns/my_col/plugins/test/test_test.py _
+import file mismatch:
+imported module 'test_test' has this __file__ attribute:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-doc/collections/ansible_collections/testns/testcol/plugins/test/test_test.py
+which is not the same as the test file we want to collect:
+  /workdir/ansible-core-2.14.2/test/integration/targets/collections_plugin_namespace/collection_root/ansible_collections/my_ns/my_col/plugins/test/test_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____ ERROR collecting test/integration/targets/debugger/test_run_once.py ______
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/debugger/test_run_once.py", line 28, in <module>
+    debugger_test_test.expect_exact('TASK: Task 1 (debug)> ')
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pexpect/spawnbase.py", line 421, in expect_exact
+    return exp.expect_loop(timeout)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pexpect/expect.py", line 179, in expect_loop
+    return self.eof(e)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pexpect/expect.py", line 122, in eof
+    raise exc
+pexpect.exceptions.EOF: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x7fecc283d630>
+command: /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/bin/ansible-playbook
+args: ['/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/bin/ansible-playbook', 'test_run_once_playbook.yml', '-v', '--tb=native', '--junitxml', '/workdir/results/ansible-core/2.14.2/1/cpython-test-results.xml']
+buffer (last 100 chars): b''
+before (last 100 chars): b'e          run operations with become (does not imply password\r\n                        prompting)\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: True
+pid: 4673
+child_fd: 13
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: <_io.BytesIO object at 0x7fecbe7a9d50>
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_string:
+    0: b'TASK: Task 1 (debug)> '
+____ ERROR collecting test/integration/targets/expect/files/test_command.py ____
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/expect/files/test_command.py", line 24, in <module>
+    user_input = input_function(prompt)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/capture.py", line 202, in read
+    raise OSError(
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+------------------------------- Captured stdout --------------------------------
+premi�re is first
+premie?re is slightly different
+????????? is Cyrillic
+? am Deseret
+
+-v
+_ ERROR collecting test/integration/targets/module_utils/library/test_alias_deprecation.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_alias_deprecation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/module_utils/library/test_alias_deprecation.py:8: in <module>
+    from ansible.module_utils.ansible_release import data
+E   ImportError: cannot import name 'data' from 'ansible.module_utils.ansible_release' (/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/ansible_release.py)
+_ ERROR collecting test/integration/targets/module_utils/library/test_datetime.py _
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 402, in _load_params
+    params = json.loads(buffer.decode('utf-8'))
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_datetime.py", line 11, in <module>
+    module = AnsibleModule(argument_spec=dict(
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 491, in __init__
+    self._load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 1287, in _load_params
+    self.params = _load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 406, in _load_params
+    sys.exit(1)
+SystemExit: 1
+------------------------------- Captured stdout --------------------------------
+
+{"msg": "Error: Module unable to decode valid JSON on stdin.  Unable to figure out what parameters were passed", "failed": true}
+_ ERROR collecting test/integration/targets/module_utils/library/test_env_override.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_env_override.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/module_utils/library/test_env_override.py:9: in <module>
+    from ansible.module_utils.json_utils import data
+E   ImportError: cannot import name 'data' from 'ansible.module_utils.json_utils' (/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/json_utils.py)
+_ ERROR collecting test/integration/targets/module_utils/library/test_failure.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_failure.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/module_utils/library/test_failure.py:9: in <module>
+    from ansible.module_utils.zebra import foo
+E   ModuleNotFoundError: No module named 'ansible.module_utils.zebra'
+_ ERROR collecting test/integration/targets/module_utils/library/test_optional.py _
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 402, in _load_params
+    params = json.loads(buffer.decode('utf-8'))
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_optional.py", line 76, in <module>
+    module = AnsibleModule(argument_spec={})
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 491, in __init__
+    self._load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 1287, in _load_params
+    self.params = _load_params()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/basic.py", line 406, in _load_params
+    sys.exit(1)
+SystemExit: 1
+------------------------------- Captured stdout --------------------------------
+
+{"msg": "Error: Module unable to decode valid JSON on stdin.  Unable to figure out what parameters were passed", "failed": true}
+_ ERROR collecting test/integration/targets/module_utils/library/test_override.py _
+ImportError while importing test module '/workdir/ansible-core-2.14.2/test/integration/targets/module_utils/library/test_override.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/integration/targets/module_utils/library/test_override.py:7: in <module>
+    from ansible.module_utils.ansible_release import data
+E   ImportError: cannot import name 'data' from 'ansible.module_utils.ansible_release' (/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/module_utils/ansible_release.py)
+_ ERROR collecting test/integration/targets/plugin_namespace/filter_plugins/test_filter.py _
+import file mismatch:
+imported module 'test_filter' has this __file__ attribute:
+  /workdir/ansible-core-2.14.2/test/integration/targets/collections_plugin_namespace/collection_root/ansible_collections/my_ns/my_col/plugins/filter/test_filter.py
+which is not the same as the test file we want to collect:
+  /workdir/ansible-core-2.14.2/test/integration/targets/plugin_namespace/filter_plugins/test_filter.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_ ERROR collecting test/integration/targets/plugin_namespace/test_plugins/test_test.py _
+import file mismatch:
+imported module 'test_test' has this __file__ attribute:
+  /workdir/ansible-core-2.14.2/test/integration/targets/ansible-doc/collections/ansible_collections/testns/testcol/plugins/test/test_test.py
+which is not the same as the test file we want to collect:
+  /workdir/ansible-core-2.14.2/test/integration/targets/plugin_namespace/test_plugins/test_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____ ERROR collecting test/integration/targets/throttle/test_throttle.py ______
+Traceback (most recent call last):
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/ansible-core-2.14.2/test/integration/targets/throttle/test_throttle.py", line 11, in <module>
+    throttledir, inventory_hostname, max_throttle = sys.argv[1:]
+ValueError: too many values to unpack (expected 3)
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/modules/pip.py:280
+  /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/ansible/modules/pip.py:280: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import Requirement
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+  /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+  /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('straight')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/ansible-core/2.14.2/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR test/ansible_test/unit/test_diff.py
+ERROR test/ansible_test/validate-modules-unit/test_validate_modules_regex.py
+ERROR test/integration/targets/ansible-test-config/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py
+ERROR test/integration/targets/ansible-test-config-invalid/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_test.py
+ERROR test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py
+ERROR test/integration/targets/ansible-test-docker/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py
+ERROR test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/module_utils/test_my_util.py
+ERROR test/integration/targets/ansible-test-units/ansible_collections/ns/col/tests/unit/plugins/modules/test_hello.py
+ERROR test/integration/targets/async/library/async_test.py - SystemExit: 1
+ERROR test/integration/targets/async_fail/library/async_test.py - SystemExit: 1
+ERROR test/integration/targets/cli/test_k_and_K.py - assert b'cliuser2' in b"...
+ERROR test/integration/targets/collections_plugin_namespace/collection_root/ansible_collections/my_ns/my_col/plugins/test/test_test.py
+ERROR test/integration/targets/debugger/test_run_once.py - pexpect.exceptions...
+ERROR test/integration/targets/expect/files/test_command.py - OSError: pytest...
+ERROR test/integration/targets/module_utils/library/test_alias_deprecation.py
+ERROR test/integration/targets/module_utils/library/test_datetime.py - System...
+ERROR test/integration/targets/module_utils/library/test_env_override.py
+ERROR test/integration/targets/module_utils/library/test_failure.py
+ERROR test/integration/targets/module_utils/library/test_optional.py - System...
+ERROR test/integration/targets/module_utils/library/test_override.py
+ERROR test/integration/targets/plugin_namespace/filter_plugins/test_filter.py
+ERROR test/integration/targets/plugin_namespace/test_plugins/test_test.py
+ERROR test/integration/targets/throttle/test_throttle.py - ValueError: too ma...
+!!!!!!!!!!!!!!!!!!! Interrupted: 23 errors during collection !!!!!!!!!!!!!!!!!!!
+======================== 8 warnings, 23 errors in 8.47s ========================
+ERROR: InvocationError for command /workdir/ansible-core-2.14.2/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/ansible-core/2.14.2/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

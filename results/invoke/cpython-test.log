@@ -1,0 +1,25 @@
+GLOB sdist-make: /workdir/invoke-1.7.3/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/invoke-1.7.3/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/invoke-1.7.3/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Obtaining file:///workdir/invoke-1.7.3 (from -r dev-requirements.txt (line 2))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting invocations==2.4.0 (from -r dev-requirements.txt (line 4))
+  Downloading invocations-2.4.0-py2.py3-none-any.whl (37 kB)
+Collecting coverage==4.5.4 (from -r dev-requirements.txt (line 6))
+  Using cached coverage-4.5.4.tar.gz (385 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+ERROR: Could not find a version that satisfies the requirement codecov==2.1.11 (from versions: 2.1.13)
+ERROR: No matching distribution found for codecov==2.1.11
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/invoke-1.7.3/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev-requirements.txt]; v = InvocationError('/workdir/invoke-1.7.3/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev-requirements.txt', 1)

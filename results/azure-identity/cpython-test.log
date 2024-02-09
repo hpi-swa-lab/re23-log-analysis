@@ -1,0 +1,12 @@
+GLOB sdist-make: /workdir/azure-identity-1.12.0/sdk/identity/azure-identity/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/azure-identity-1.12.0/sdk/identity/azure-identity/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev_requirements.txt, -rtests/managed-identity-live/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/azure-identity-1.12.0/sdk/identity/azure-identity/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+ERROR: Invalid requirement: '../../../../core/azure-core' (from line 1 of tests/managed-identity-live/requirements.txt)
+Hint: It looks like a path. File '../../../../core/azure-core' does not exist.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev_requirements.txt, -rtests/managed-identity-live/requirements.txt]; v = InvocationError('/workdir/azure-identity-1.12.0/sdk/identity/azure-identity/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rtests/managed-identity-live/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev_requirements.txt, -rtests/managed-identity-live/requirements.txt]; v = InvocationError('/workdir/azure-identity-1.12.0/sdk/identity/azure-identity/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rtests/managed-identity-live/requirements.txt', 1)

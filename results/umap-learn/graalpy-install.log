@@ -1,0 +1,91 @@
+Collecting umap-learn==0.5.3
+  Downloading umap-learn-0.5.3.tar.gz (88 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.2/88.2 kB 691.0 kB/s eta 0:00:00
+Looking for GraalPy patches for umap-learn
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting numpy>=1.17
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting scikit-learn>=0.22
+  Using cached scikit_learn-1.1.3-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting scipy>=1.0
+  Using cached scipy-1.10.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting numba>=0.49
+  Using cached numba-0.58.1.tar.gz (2.6 MB)
+Looking for GraalPy patches for numba
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pynndescent>=0.5
+  Downloading pynndescent-0.5.11-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 894.5 kB/s eta 0:00:00
+Collecting tqdm
+  Using cached tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting llvmlite<0.42,>=0.41.0dev0
+  Using cached llvmlite-0.41.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting joblib>=0.11
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
+Building wheels for collected packages: umap-learn, numba
+  Building wheel for umap-learn (setup.py): started
+  Building wheel for umap-learn (setup.py): finished with status 'done'
+  Created wheel for umap-learn: filename=umap_learn-0.5.3-py3-none-any.whl size=82823 sha256=6ee5d167d2732cf1355f2e6963f2b49fb243b81ca6a49518b30f9f69964dfceb
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/19/be/94/24c246f460e67217c56249993a89adb6056b616612a12eb30e
+  Building wheel for numba (setup.py): started
+  Building wheel for numba (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-install-gb5hxwoz/numba_1462154444ad40018601293920bf9a53/setup.py", line 424, in <module>
+          metadata['ext_modules'] = get_ext_modules()
+        File "/tmp/pip-install-gb5hxwoz/numba_1462154444ad40018601293920bf9a53/setup.py", line 138, in get_ext_modules
+          import numpy as np
+      ModuleNotFoundError: No module named 'numpy'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for numba
+  Running setup.py clean for numba
+Successfully built umap-learn
+Failed to build numba
+Installing collected packages: tqdm, threadpoolctl, numpy, llvmlite, joblib, scipy, numba, scikit-learn, pynndescent, umap-learn
+Looking for GraalPy patches for tqdm
+Looking for GraalPy patches for threadpoolctl
+Looking for GraalPy patches for numpy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+numpy == 1.16.4
+numpy == 1.19.5
+numpy == 1.21.6
+numpy == 1.22.4
+numpy == 1.23.4
+numpy == 1.23.1
+numpy == 1.23.5
+Looking for GraalPy patches for llvmlite
+Looking for GraalPy patches for joblib
+Looking for GraalPy patches for scipy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+scipy == 1.4.1
+scipy == 1.7.3
+scipy == 1.8.1
+scipy == 1.9.3
+scipy == 1.10.1
+  Running setup.py install for numba: started
+  Running setup.py install for numba: still running...
+  Running setup.py install for numba: finished with status 'done'
+  DEPRECATION: numba was installed using the legacy 'setup.py install' method, because a wheel could not be built for it. A possible replacement is to fix the wheel build issue reported above. Discussion can be found at https://github.com/pypa/pip/issues/8368
+Looking for GraalPy patches for scikit_learn
+Patching package scikit_learn using /opt/graalpy/lib/graalpy23.1/patches/scikit-learn/scikit-learn-1.1.3.patch
+patching file sklearn/_build_utils/__init__.py
+Hunk #1 FAILED at 61.
+1 out of 1 hunk FAILED -- saving rejects to file sklearn/_build_utils/__init__.py.rej
+Applying GraalPy patch failed for scikit_learn. The package may still work.
+Looking for GraalPy patches for pynndescent
+Looking for GraalPy patches for umap_learn
+Successfully installed joblib-1.3.2 llvmlite-0.41.1 numba-0.58.1 numpy-1.23.5 pynndescent-0.5.11 scikit-learn-1.1.3 scipy-1.10.1 threadpoolctl-3.2.0 tqdm-4.66.1 umap-learn-0.5.3

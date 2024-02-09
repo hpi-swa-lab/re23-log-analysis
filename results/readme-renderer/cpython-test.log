@@ -1,0 +1,106 @@
+.package create: /workdir/readme-renderer-37.3/.tox/.package
+.package installdeps: setuptools>=40.8.0
+cpythonlibtest-unit-test-tests create: /workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/readme-renderer-37.3/.tox/.tmp/package/1/readme_renderer-37.3.tar.gz
+cpythonlibtest-unit-test-tests installed: bleach==6.1.0,docutils==0.20.1,exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,readme-renderer @ file:///workdir/readme-renderer-37.3/.tox/.tmp/package/1/readme_renderer-37.3.tar.gz#sha256=5c5de341d8d6754fa330f3124875161f85df17996f2cafb15a00f41ae6ad859d,six==1.16.0,tomli==2.0.1,webencodings==0.5.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2074287946'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/readme-renderer/37.3/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/readme-renderer-37.3
+collecting ... collected 31 items
+
+tests/test_clean.py::test_invalid_link PASSED                            [  3%]
+tests/test_markdown.py::test_md_fixtures[md_filename0-html_filename0-variant0] SKIPPED [  6%]
+tests/test_markdown.py::test_missing_variant PASSED                      [  9%]
+tests/test_noextra.py::test_no_extra[GFM] PASSED                         [ 12%]
+tests/test_noextra.py::test_no_extra[CommonMark] PASSED                  [ 16%]
+tests/test_rst.py::test_rst_fixtures[test_rst_003.rst] PASSED            [ 19%]
+tests/test_rst.py::test_rst_fixtures[test_rst_figure.rst] PASSED         [ 22%]
+tests/test_rst.py::test_rst_fixtures[test_rst_007.rst] PASSED            [ 25%]
+tests/test_rst.py::test_rst_fixtures[test_rst_contents.rst] PASSED       [ 29%]
+tests/test_rst.py::test_rst_fixtures[test_rst_admonitions.rst] PASSED    [ 32%]
+tests/test_rst.py::test_rst_fixtures[test_rst_008.rst] FAILED            [ 35%]
+tests/test_rst.py::test_rst_fixtures[test_rst_svg_attrs.rst] PASSED      [ 38%]
+tests/test_rst.py::test_rst_fixtures[test_rst_005.rst] PASSED            [ 41%]
+tests/test_rst.py::test_rst_fixtures[test_rst_png_attrs.rst] PASSED      [ 45%]
+tests/test_rst.py::test_rst_fixtures[test_rst_math.rst] PASSED           [ 48%]
+tests/test_rst.py::test_rst_fixtures[test_rst_caption.rst] PASSED        [ 51%]
+tests/test_rst.py::test_rst_fixtures[test_rst_tables.rst] PASSED         [ 54%]
+tests/test_rst.py::test_rst_fixtures[test_rst_bibtex.rst] PASSED         [ 58%]
+tests/test_rst.py::test_rst_fixtures[test_rst_006.rst] PASSED            [ 61%]
+tests/test_rst.py::test_rst_fixtures[test_rst_svg.rst] PASSED            [ 64%]
+tests/test_rst.py::test_rst_fixtures[test_rst_linkify.rst] PASSED        [ 67%]
+tests/test_rst.py::test_rst_fixtures[test_rst_004.rst] PASSED            [ 70%]
+tests/test_rst.py::test_rst_fixtures[test_rst_png.rst] PASSED            [ 74%]
+tests/test_rst.py::test_rst_fixtures[test_rst_docinfo.rst] PASSED        [ 77%]
+tests/test_rst.py::test_rst_001 PASSED                                   [ 80%]
+tests/test_rst.py::test_rst_002 PASSED                                   [ 83%]
+tests/test_rst.py::test_rst_raw PASSED                                   [ 87%]
+tests/test_rst.py::test_rst_empty_file PASSED                            [ 90%]
+tests/test_rst.py::test_rst_header_only PASSED                           [ 93%]
+tests/test_rst.py::test_header_and_malformed_emits_docutils_warning_only PASSED [ 96%]
+tests/test_txt.py::test_txt_fixtures[test_txt_001.txt] PASSED            [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_rst_fixtures[test_rst_008.rst] ______________________
+Traceback (most recent call last):
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/readme-renderer-37.3/tests/test_rst.py", line 28, in test_rst_fixtures
+    assert out == expected
+AssertionError: assert '<p>Here is s...code></pre>\n' == '<p>Here is s...code></pre>\n'
+    <p>Here is some Python code for a <span class="docutils literal">Dog</span>:</p>
+  - <pre><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+  + <pre><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span><span class="w">
+  ?                                                                                                                                                  ++++++++++++++++
+  -     <span class="k"...
+  
+  ...Full output truncated (28 lines hidden), use '-vv' to show
+=============================== warnings summary ===============================
+readme_renderer/markdown.py:44
+  /workdir/readme-renderer-37.3/readme_renderer/markdown.py:44: UserWarning: Markdown renderers are not available. Install 'readme_renderer[md]' to enable Markdown rendering.
+    warnings.warn(_EXTRA_WARNING)
+
+tests/test_markdown.py::test_missing_variant
+  /workdir/readme-renderer-37.3/readme_renderer/markdown.py:60: UserWarning: Markdown renderers are not available. Install 'readme_renderer[md]' to enable Markdown rendering.
+    warnings.warn(_EXTRA_WARNING)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/readme-renderer/37.3/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_rst.py::test_rst_fixtures[test_rst_008.rst] - assert '<p>He...
+============= 1 failed, 29 passed, 1 skipped, 2 warnings in 0.43s ==============
+ERROR: InvocationError for command /workdir/readme-renderer-37.3/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/readme-renderer/37.3/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

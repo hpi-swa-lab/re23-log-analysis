@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="13" failures="0" skipped="0" tests="13" time="5.656" timestamp="2023-11-22T04:47:06.354371" hostname="80ac3eb7f7f2"><testcase classname="" name="test.test.txt" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 427, in collect
+    text = self.path.read_text(encoding)
+  File "/usr/local/lib/python3.10/pathlib.py", line 1135, in read_text
+    return f.read()
+  File "/usr/local/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xce in position 0: invalid continuation byte</error></testcase><testcase classname="" name="test.test_file" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/test_file.py", line 8, in &lt;module&gt;
+    content = open(url,"rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '-v'</error></testcase><testcase classname="" name="test.test_paddle" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/test_paddle.py", line 5, in &lt;module&gt;
+    jieba.enable_paddle()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jieba/_compat.py", line 39, in enable_paddle
+    if paddle.__version__ &lt; '1.6.1':
+UnboundLocalError: local variable 'paddle' referenced before assignment</error></testcase><testcase classname="" name="test.test_paddle_postag" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/test_paddle_postag.py", line 6, in &lt;module&gt;
+    jieba.enable_paddle()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jieba/_compat.py", line 39, in enable_paddle
+    if paddle.__version__ &lt; '1.6.1':
+UnboundLocalError: local variable 'paddle' referenced before assignment</error></testcase><testcase classname="" name="test.test_pos_file" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/test_pos_file.py", line 10, in &lt;module&gt;
+    content = open(url,"rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '-v'</error></testcase><testcase classname="" name="test.test_userdict" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/test_userdict.py", line 6, in &lt;module&gt;
+    jieba.load_userdict("userdict.txt")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jieba/__init__.py", line 398, in load_userdict
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'userdict.txt'</error></testcase><testcase classname="" name="test.test_whoosh" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/jieba-0.42.1/test/test_whoosh.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/test_whoosh.py:5: in &lt;module&gt;
+    from whoosh.index import create_in,open_dir
+E   ModuleNotFoundError: No module named 'whoosh'</error></testcase><testcase classname="" name="test.test_whoosh_file" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/jieba-0.42.1/test/test_whoosh_file.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/test_whoosh_file.py:6: in &lt;module&gt;
+    from whoosh.index import create_in
+E   ModuleNotFoundError: No module named 'whoosh'</error></testcase><testcase classname="" name="test.test_whoosh_file_read" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/jieba-0.42.1/test/test_whoosh_file_read.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test/test_whoosh_file_read.py:6: in &lt;module&gt;
+    from whoosh.index import create_in,open_dir
+E   ModuleNotFoundError: No module named 'whoosh'</error></testcase><testcase classname="" name="test.parallel.test_cut_for_search" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_cut_for_search' has this __file__ attribute:
+  /workdir/jieba-0.42.1/test/test_cut_for_search.py
+which is not the same as the test file we want to collect:
+  /workdir/jieba-0.42.1/test/parallel/test_cut_for_search.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="test.parallel.test_file" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/parallel/test_file.py", line 9, in &lt;module&gt;
+    content = open(url,"rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '-v'</error></testcase><testcase classname="" name="test.parallel.test_pos" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_pos' has this __file__ attribute:
+  /workdir/jieba-0.42.1/test/test_pos.py
+which is not the same as the test file we want to collect:
+  /workdir/jieba-0.42.1/test/parallel/test_pos.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="test.parallel.test_pos_file" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/jieba-0.42.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/jieba-0.42.1/test/parallel/test_pos_file.py", line 11, in &lt;module&gt;
+    content = open(url,"rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '-v'</error></testcase></testsuite></testsuites>

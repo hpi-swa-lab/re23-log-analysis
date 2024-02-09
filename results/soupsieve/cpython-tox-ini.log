@@ -1,0 +1,12 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/soupsieve/2.3.2.post1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/tools.txt
+	-rrequirements/tests.txt
+	-rrequirements/project.txt
+	-rrequirements/lint.txt
+

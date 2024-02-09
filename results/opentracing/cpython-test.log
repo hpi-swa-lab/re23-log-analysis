@@ -1,0 +1,118 @@
+GLOB sdist-make: /workdir/opentracing-2.4.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/opentracing-2.4.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/opentracing-2.4.0/.tox/.tmp/package/1/opentracing-2.4.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,coverage==7.3.2,docutils==0.18.1,doubles==1.5.3,exceptiongroup==1.2.0,flake8==6.1.0,flake8-quotes==3.3.2,gevent==23.9.1,greenlet==3.0.1,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,opentracing @ file:///workdir/opentracing-2.4.0/.tox/.tmp/package/1/opentracing-2.4.0.zip#sha256=976909cfeeac5e23b1b015033e80bcd23442988c77ee7ea193bcd48cbf0e6582,packaging==23.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-mock==3.12.0,requests==2.31.0,six==1.16.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,tornado==6.3.3,urllib3==2.1.0,zope.event==5.0,zope.interface==6.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='4278441948'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/opentracing/2.4.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/opentracing-2.4.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/opentracing-2.4.0
+plugins: doubles-1.5.3, mock-3.12.0, cov-4.1.0
+collecting ... collected 170 items / 8 errors
+
+==================================== ERRORS ====================================
+____ ERROR collecting testbed/test_active_span_replacement/test_tornado.py _____
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_active_span_replacement/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_active_span_replacement/test_tornado.py:6: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+_________ ERROR collecting testbed/test_client_server/test_tornado.py __________
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_client_server/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_client_server/test_tornado.py:9: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+_____ ERROR collecting testbed/test_common_request_handler/test_tornado.py _____
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_common_request_handler/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_common_request_handler/test_tornado.py:9: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+________ ERROR collecting testbed/test_late_span_finish/test_tornado.py ________
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_late_span_finish/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_late_span_finish/test_tornado.py:6: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+______ ERROR collecting testbed/test_listener_per_request/test_tornado.py ______
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_listener_per_request/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_listener_per_request/test_tornado.py:9: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+_______ ERROR collecting testbed/test_multiple_callbacks/test_tornado.py _______
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_multiple_callbacks/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_multiple_callbacks/test_tornado.py:8: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+________ ERROR collecting testbed/test_nested_callbacks/test_tornado.py ________
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_nested_callbacks/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_nested_callbacks/test_tornado.py:7: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+____ ERROR collecting testbed/test_subtask_span_propagation/test_tornado.py ____
+ImportError while importing test module '/workdir/opentracing-2.4.0/testbed/test_subtask_span_propagation/test_tornado.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+testbed/test_subtask_span_propagation/test_tornado.py:8: in <module>
+    from opentracing.scope_managers.tornado import TornadoScopeManager, \
+opentracing/scope_managers/tornado.py:24: in <module>
+    import tornado.stack_context
+E   ModuleNotFoundError: No module named 'tornado.stack_context'
+- generated xml file: /workdir/results/opentracing/2.4.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR testbed/test_active_span_replacement/test_tornado.py
+ERROR testbed/test_client_server/test_tornado.py
+ERROR testbed/test_common_request_handler/test_tornado.py
+ERROR testbed/test_late_span_finish/test_tornado.py
+ERROR testbed/test_listener_per_request/test_tornado.py
+ERROR testbed/test_multiple_callbacks/test_tornado.py
+ERROR testbed/test_nested_callbacks/test_tornado.py
+ERROR testbed/test_subtask_span_propagation/test_tornado.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 8 errors in 1.24s ===============================
+ERROR: InvocationError for command /workdir/opentracing-2.4.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/opentracing/2.4.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

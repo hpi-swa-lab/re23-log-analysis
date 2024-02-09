@@ -1,0 +1,705 @@
+.package create: /workdir/uvicorn-0.20.0/.tox/.package
+.package installdeps: hatchling
+cpythonlibtest-unit-test-tests create: /workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/uvicorn-0.20.0/.tox/.tmp/package/1/uvicorn-0.20.0.tar.gz
+cpythonlibtest-unit-test-tests installed: anyio==3.7.1,asgiref==3.5.2,attrs==23.1.0,autoflake==1.7.7,black==22.10.0,build==0.8.0,certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,click==8.1.7,coverage==6.5.0,coverage-conditional-plugin==0.7.0,cryptography==38.0.3,docutils==0.20.1,exceptiongroup==1.2.0,flake8==3.9.2,ghp-import==2.1.0,h11==0.12.0,httpcore==0.15.0,httptools==0.6.1,httpx==0.23.0,idna==3.6,importlib-metadata==4.13.0,iniconfig==2.0.0,isort==5.10.1,jaraco.classes==3.3.0,jeepney==0.8.0,Jinja2==3.1.2,keyring==24.3.0,Markdown==3.3.7,markdown-it-py==3.0.0,MarkupSafe==2.1.3,mccabe==0.6.1,mdurl==0.1.2,mergedeep==1.3.4,mkdocs==1.4.0,mkdocs-material==8.5.4,mkdocs-material-extensions==1.3.1,mock==5.1.0,more-itertools==10.1.0,mypy==0.982,mypy-extensions==1.0.0,nh3==0.2.14,packaging==23.2,pathspec==0.11.2,pep517==0.13.1,pkginfo==1.9.6,platformdirs==4.0.0,pluggy==1.3.0,py==1.11.0,pycodestyle==2.7.0,pycparser==2.21,pyflakes==2.3.1,Pygments==2.17.2,pymdown-extensions==10.4,pytest==7.1.3,pytest-mock==3.10.0,python-dateutil==2.8.2,python-dotenv==1.0.0,PyYAML==6.0.1,pyyaml_env_tag==0.1,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==1.5.0,rich==13.7.0,SecretStorage==3.3.3,six==1.16.0,sniffio==1.3.0,tomli==2.0.1,trustme==0.9.0,twine==4.0.1,types-click==7.1.8,types-PyYAML==6.0.12.1,typing_extensions==4.8.0,urllib3==2.1.0,uvicorn @ file:///workdir/uvicorn-0.20.0/.tox/.tmp/package/1/uvicorn-0.20.0.tar.gz#sha256=fed3a3a87b7f4e7c951d5b6874a0d51bc5a9f0cfaa1c4c03ce7b6c8e1a51c93f,uvloop==0.19.0,watchdog==3.0.0,watchfiles==0.21.0,watchgod==0.8.2,websockets==12.0,wsproto==1.2.0,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2062682129'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/uvicorn/0.20.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.1.3, pluggy-1.3.0 -- /workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/uvicorn-0.20.0, configfile: setup.cfg
+plugins: anyio-3.7.1, mock-3.10.0
+collecting ... collected 448 items
+
+tests/test_auto_detection.py::test_loop_auto PASSED                      [  0%]
+tests/test_auto_detection.py::test_http_auto PASSED                      [  0%]
+tests/test_auto_detection.py::test_websocket_auto PASSED                 [  0%]
+tests/test_cli.py::test_cli_print_version PASSED                         [  0%]
+tests/test_cli.py::test_cli_headers PASSED                               [  1%]
+tests/test_cli.py::test_cli_call_server_run PASSED                       [  1%]
+tests/test_cli.py::test_cli_call_change_reload_run PASSED                [  1%]
+tests/test_cli.py::test_cli_call_multiprocess_run PASSED                 [  1%]
+tests/test_cli.py::test_cli_uds[True] PASSED                             [  2%]
+tests/test_cli.py::test_cli_uds[False] PASSED                            [  2%]
+tests/test_cli.py::test_cli_incomplete_app_parameter PASSED              [  2%]
+tests/test_cli.py::test_cli_event_size PASSED                            [  2%]
+tests/test_cli.py::test_env_variables PASSED                             [  2%]
+tests/test_cli.py::test_mistmatch_env_variables PASSED                   [  3%]
+tests/test_cli.py::test_app_dir PASSED                                   [  3%]
+tests/test_config.py::test_config_should_reload_is_set[asgi_app-False] PASSED [  3%]
+tests/test_config.py::test_config_should_reload_is_set[tests.test_config:asgi_app-True] PASSED [  3%]
+tests/test_config.py::test_should_warn_on_invalid_reload_configuration PASSED [  4%]
+tests/test_config.py::test_reload_dir_is_set PASSED                      [  4%]
+tests/test_config.py::test_non_existant_reload_dir_is_not_set PASSED     [  4%]
+tests/test_config.py::test_reload_subdir_removal PASSED                  [  4%]
+tests/test_config.py::test_reload_included_dir_is_added_to_reload_dirs PASSED [  4%]
+tests/test_config.py::test_reload_dir_subdirectories_are_removed PASSED  [  5%]
+tests/test_config.py::test_reload_excluded_subdirectories_are_removed PASSED [  5%]
+tests/test_config.py::test_reload_includes_exclude_dir_patterns_are_matched PASSED [  5%]
+tests/test_config.py::test_wsgi_app PASSED                               [  5%]
+tests/test_config.py::test_proxy_headers PASSED                          [  6%]
+tests/test_config.py::test_app_unimportable_module PASSED                [  6%]
+tests/test_config.py::test_app_unimportable_other PASSED                 [  6%]
+tests/test_config.py::test_app_factory PASSED                            [  6%]
+tests/test_config.py::test_concrete_http_class PASSED                    [  6%]
+tests/test_config.py::test_socket_bind PASSED                            [  7%]
+tests/test_config.py::test_ssl_config PASSED                             [  7%]
+tests/test_config.py::test_ssl_config_combined PASSED                    [  7%]
+tests/test_config.py::test_asgi_version[asgi_app-3.0] PASSED             [  7%]
+tests/test_config.py::test_asgi_version[asgi2_app-2.0] PASSED            [  8%]
+tests/test_config.py::test_log_config_default[use_colors_not_provided] PASSED [  8%]
+tests/test_config.py::test_log_config_default[use_colors_invalid_value] PASSED [  8%]
+tests/test_config.py::test_log_config_default[use_colors_enabled] PASSED [  8%]
+tests/test_config.py::test_log_config_default[use_colors_disabled] PASSED [  8%]
+tests/test_config.py::test_log_config_json PASSED                        [  9%]
+tests/test_config.py::test_log_config_yaml[log_config.yml] PASSED        [  9%]
+tests/test_config.py::test_log_config_yaml[log_config.yaml] PASSED       [  9%]
+tests/test_config.py::test_log_config_file PASSED                        [  9%]
+tests/test_config.py::test_env_file[0-127.0.0.1] PASSED                  [ 10%]
+tests/test_config.py::test_env_file[0-127.0.0.2] PASSED                  [ 10%]
+tests/test_config.py::test_env_file[1-127.0.0.1] PASSED                  [ 10%]
+tests/test_config.py::test_env_file[1-127.0.0.2] PASSED                  [ 10%]
+tests/test_config.py::test_config_access_log[access log enabled should have single handler] PASSED [ 10%]
+tests/test_config.py::test_config_access_log[access log disabled shouldn't have handlers] PASSED [ 11%]
+tests/test_config.py::test_config_log_level[5] PASSED                    [ 11%]
+tests/test_config.py::test_config_log_level[10] PASSED                   [ 11%]
+tests/test_config.py::test_config_log_level[20] PASSED                   [ 11%]
+tests/test_config.py::test_config_log_level[30] PASSED                   [ 12%]
+tests/test_config.py::test_config_log_level[40] PASSED                   [ 12%]
+tests/test_config.py::test_config_log_level[50] PASSED                   [ 12%]
+tests/test_config.py::test_ws_max_size PASSED                            [ 12%]
+tests/test_config.py::test_bind_unix_socket_works_with_reload_or_workers[--reload=True --workers=1] PASSED [ 12%]
+tests/test_config.py::test_bind_unix_socket_works_with_reload_or_workers[--reload=False --workers=2] PASSED [ 13%]
+tests/test_config.py::test_bind_fd_works_with_reload_or_workers[--reload=True --workers=1] PASSED [ 13%]
+tests/test_config.py::test_bind_fd_works_with_reload_or_workers[--reload=False --workers=2] PASSED [ 13%]
+tests/test_config.py::test_config_use_subprocess[--reload=True --workers=1] PASSED [ 13%]
+tests/test_config.py::test_config_use_subprocess[--reload=False --workers=2] PASSED [ 14%]
+tests/test_config.py::test_config_use_subprocess[--reload=False --workers=1] PASSED [ 14%]
+tests/test_config.py::test_warn_when_using_reload_and_workers PASSED     [ 14%]
+tests/test_default_headers.py::test_default_default_headers PASSED       [ 14%]
+tests/test_default_headers.py::test_override_server_header PASSED        [ 14%]
+tests/test_default_headers.py::test_disable_default_server_header PASSED [ 15%]
+tests/test_default_headers.py::test_override_server_header_multiple_times PASSED [ 15%]
+tests/test_default_headers.py::test_add_additional_header PASSED         [ 15%]
+tests/test_default_headers.py::test_disable_default_date_header PASSED   [ 15%]
+tests/test_lifespan.py::test_lifespan_on PASSED                          [ 16%]
+tests/test_lifespan.py::test_lifespan_off PASSED                         [ 16%]
+tests/test_lifespan.py::test_lifespan_auto PASSED                        [ 16%]
+tests/test_lifespan.py::test_lifespan_auto_with_error PASSED             [ 16%]
+tests/test_lifespan.py::test_lifespan_on_with_error PASSED               [ 16%]
+tests/test_lifespan.py::test_lifespan_with_failed_startup[True-auto] PASSED [ 17%]
+tests/test_lifespan.py::test_lifespan_with_failed_startup[True-on] PASSED [ 17%]
+tests/test_lifespan.py::test_lifespan_with_failed_startup[False-auto] PASSED [ 17%]
+tests/test_lifespan.py::test_lifespan_with_failed_startup[False-on] PASSED [ 17%]
+tests/test_lifespan.py::test_lifespan_scope_asgi3app PASSED              [ 18%]
+tests/test_lifespan.py::test_lifespan_scope_asgi2app PASSED              [ 18%]
+tests/test_lifespan.py::test_lifespan_with_failed_shutdown[True-auto] PASSED [ 18%]
+tests/test_lifespan.py::test_lifespan_with_failed_shutdown[True-on] PASSED [ 18%]
+tests/test_lifespan.py::test_lifespan_with_failed_shutdown[False-auto] PASSED [ 18%]
+tests/test_lifespan.py::test_lifespan_with_failed_shutdown[False-on] PASSED [ 19%]
+tests/test_main.py::test_return_close_header FAILED                      [ 19%]
+tests/test_main.py::test_run[default] PASSED                             [ 19%]
+tests/test_main.py::test_run[hostname] FAILED                            [ 19%]
+tests/test_main.py::test_run[ipv6] SKIPPED (IPV6 not enabled)            [ 20%]
+tests/test_main.py::test_run_multiprocess PASSED                         [ 20%]
+tests/test_main.py::test_run_reload PASSED                               [ 20%]
+tests/test_main.py::test_run_invalid_app_config_combination PASSED       [ 20%]
+tests/test_main.py::test_run_startup_failure PASSED                      [ 20%]
+tests/test_main.py::test_run_match_config_params PASSED                  [ 21%]
+tests/test_ssl.py::test_run PASSED                                       [ 21%]
+tests/test_ssl.py::test_run_chain PASSED                                 [ 21%]
+tests/test_ssl.py::test_run_chain_only PASSED                            [ 21%]
+tests/test_ssl.py::test_run_password PASSED                              [ 22%]
+tests/test_subprocess.py::test_get_subprocess PASSED                     [ 22%]
+tests/test_subprocess.py::test_subprocess_started PASSED                 [ 22%]
+tests/importer/test_importer.py::test_invalid_format PASSED              [ 22%]
+tests/importer/test_importer.py::test_invalid_module PASSED              [ 22%]
+tests/importer/test_importer.py::test_invalid_attr PASSED                [ 23%]
+tests/importer/test_importer.py::test_internal_import_error PASSED       [ 23%]
+tests/importer/test_importer.py::test_valid_import PASSED                [ 23%]
+tests/importer/test_importer.py::test_no_import_needed PASSED            [ 23%]
+tests/middleware/test_logging.py::test_trace_logging PASSED              [ 24%]
+tests/middleware/test_logging.py::test_trace_logging_on_http_protocol[H11Protocol] PASSED [ 24%]
+tests/middleware/test_logging.py::test_trace_logging_on_http_protocol[HttpToolsProtocol] PASSED [ 24%]
+tests/middleware/test_logging.py::test_trace_logging_on_ws_protocol[websockets] PASSED [ 24%]
+tests/middleware/test_logging.py::test_trace_logging_on_ws_protocol[wsproto] PASSED [ 25%]
+tests/middleware/test_logging.py::test_access_logging[True] PASSED       [ 25%]
+tests/middleware/test_logging.py::test_access_logging[False] PASSED      [ 25%]
+tests/middleware/test_logging.py::test_access_logging[None] PASSED       [ 25%]
+tests/middleware/test_logging.py::test_default_logging[True] PASSED      [ 25%]
+tests/middleware/test_logging.py::test_default_logging[False] PASSED     [ 26%]
+tests/middleware/test_logging.py::test_running_log_using_uds PASSED      [ 26%]
+tests/middleware/test_logging.py::test_running_log_using_fd PASSED       [ 26%]
+tests/middleware/test_logging.py::test_unknown_status_code PASSED        [ 26%]
+tests/middleware/test_logging.py::test_server_start_with_port_zero PASSED [ 27%]
+tests/middleware/test_message_logger.py::test_message_logger PASSED      [ 27%]
+tests/middleware/test_message_logger.py::test_message_logger_exc PASSED  [ 27%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[*-Remote: https://1.2.3.4:0] PASSED [ 27%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[127.0.0.1-Remote: https://1.2.3.4:0] PASSED [ 27%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[trusted_hosts2-Remote: https://1.2.3.4:0] PASSED [ 28%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[trusted_hosts3-Remote: https://1.2.3.4:0] PASSED [ 28%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[127.0.0.1, 10.0.0.1-Remote: https://1.2.3.4:0] PASSED [ 28%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_trusted_hosts[192.168.0.1-Remote: http://127.0.0.1:123] PASSED [ 28%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_multiple_proxies[*-Remote: https://1.2.3.4:0] PASSED [ 29%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_multiple_proxies[trusted_hosts1-Remote: https://1.2.3.4:0] PASSED [ 29%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_multiple_proxies[trusted_hosts2-Remote: https://1.2.3.4:0] PASSED [ 29%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_multiple_proxies[trusted_hosts3-Remote: https://10.0.2.1:0] PASSED [ 29%]
+tests/middleware/test_proxy_headers.py::test_proxy_headers_invalid_x_forwarded_for PASSED [ 29%]
+tests/middleware/test_wsgi.py::test_wsgi_get PASSED                      [ 30%]
+tests/middleware/test_wsgi.py::test_wsgi_post PASSED                     [ 30%]
+tests/middleware/test_wsgi.py::test_wsgi_put_more_body PASSED            [ 30%]
+tests/middleware/test_wsgi.py::test_wsgi_exception PASSED                [ 30%]
+tests/middleware/test_wsgi.py::test_wsgi_exc_info PASSED                 [ 31%]
+tests/middleware/test_wsgi.py::test_build_environ_encoding PASSED        [ 31%]
+tests/protocols/test_http.py::test_get_request[H11Protocol] PASSED       [ 31%]
+tests/protocols/test_http.py::test_get_request[HttpToolsProtocol] PASSED [ 31%]
+tests/protocols/test_http.py::test_request_logging[H11Protocol-/] PASSED [ 31%]
+tests/protocols/test_http.py::test_request_logging[H11Protocol-/?foo] PASSED [ 32%]
+tests/protocols/test_http.py::test_request_logging[H11Protocol-/?foo=bar] PASSED [ 32%]
+tests/protocols/test_http.py::test_request_logging[H11Protocol-/?foo=bar&baz=1] PASSED [ 32%]
+tests/protocols/test_http.py::test_request_logging[HttpToolsProtocol-/] PASSED [ 32%]
+tests/protocols/test_http.py::test_request_logging[HttpToolsProtocol-/?foo] PASSED [ 33%]
+tests/protocols/test_http.py::test_request_logging[HttpToolsProtocol-/?foo=bar] PASSED [ 33%]
+tests/protocols/test_http.py::test_request_logging[HttpToolsProtocol-/?foo=bar&baz=1] PASSED [ 33%]
+tests/protocols/test_http.py::test_head_request[H11Protocol] PASSED      [ 33%]
+tests/protocols/test_http.py::test_head_request[HttpToolsProtocol] PASSED [ 33%]
+tests/protocols/test_http.py::test_post_request[H11Protocol] PASSED      [ 34%]
+tests/protocols/test_http.py::test_post_request[HttpToolsProtocol] PASSED [ 34%]
+tests/protocols/test_http.py::test_keepalive[H11Protocol] PASSED         [ 34%]
+tests/protocols/test_http.py::test_keepalive[HttpToolsProtocol] PASSED   [ 34%]
+tests/protocols/test_http.py::test_keepalive_timeout[H11Protocol] PASSED [ 35%]
+tests/protocols/test_http.py::test_keepalive_timeout[HttpToolsProtocol] PASSED [ 35%]
+tests/protocols/test_http.py::test_close[H11Protocol] PASSED             [ 35%]
+tests/protocols/test_http.py::test_close[HttpToolsProtocol] PASSED       [ 35%]
+tests/protocols/test_http.py::test_chunked_encoding[H11Protocol] PASSED  [ 35%]
+tests/protocols/test_http.py::test_chunked_encoding[HttpToolsProtocol] PASSED [ 36%]
+tests/protocols/test_http.py::test_chunked_encoding_empty_body[H11Protocol] PASSED [ 36%]
+tests/protocols/test_http.py::test_chunked_encoding_empty_body[HttpToolsProtocol] PASSED [ 36%]
+tests/protocols/test_http.py::test_chunked_encoding_head_request[H11Protocol] PASSED [ 36%]
+tests/protocols/test_http.py::test_chunked_encoding_head_request[HttpToolsProtocol] PASSED [ 37%]
+tests/protocols/test_http.py::test_pipelined_requests[H11Protocol] PASSED [ 37%]
+tests/protocols/test_http.py::test_pipelined_requests[HttpToolsProtocol] PASSED [ 37%]
+tests/protocols/test_http.py::test_undersized_request[H11Protocol] PASSED [ 37%]
+tests/protocols/test_http.py::test_undersized_request[HttpToolsProtocol] PASSED [ 37%]
+tests/protocols/test_http.py::test_oversized_request[H11Protocol] PASSED [ 38%]
+tests/protocols/test_http.py::test_oversized_request[HttpToolsProtocol] PASSED [ 38%]
+tests/protocols/test_http.py::test_large_post_request[H11Protocol] PASSED [ 38%]
+tests/protocols/test_http.py::test_large_post_request[HttpToolsProtocol] PASSED [ 38%]
+tests/protocols/test_http.py::test_invalid_http[H11Protocol] PASSED      [ 39%]
+tests/protocols/test_http.py::test_invalid_http[HttpToolsProtocol] PASSED [ 39%]
+tests/protocols/test_http.py::test_app_exception[H11Protocol] PASSED     [ 39%]
+tests/protocols/test_http.py::test_app_exception[HttpToolsProtocol] PASSED [ 39%]
+tests/protocols/test_http.py::test_exception_during_response[H11Protocol] PASSED [ 39%]
+tests/protocols/test_http.py::test_exception_during_response[HttpToolsProtocol] PASSED [ 40%]
+tests/protocols/test_http.py::test_no_response_returned[H11Protocol] PASSED [ 40%]
+tests/protocols/test_http.py::test_no_response_returned[HttpToolsProtocol] PASSED [ 40%]
+tests/protocols/test_http.py::test_partial_response_returned[H11Protocol] PASSED [ 40%]
+tests/protocols/test_http.py::test_partial_response_returned[HttpToolsProtocol] PASSED [ 41%]
+tests/protocols/test_http.py::test_duplicate_start_message[H11Protocol] PASSED [ 41%]
+tests/protocols/test_http.py::test_duplicate_start_message[HttpToolsProtocol] PASSED [ 41%]
+tests/protocols/test_http.py::test_missing_start_message[H11Protocol] PASSED [ 41%]
+tests/protocols/test_http.py::test_missing_start_message[HttpToolsProtocol] PASSED [ 41%]
+tests/protocols/test_http.py::test_message_after_body_complete[H11Protocol] PASSED [ 42%]
+tests/protocols/test_http.py::test_message_after_body_complete[HttpToolsProtocol] PASSED [ 42%]
+tests/protocols/test_http.py::test_value_returned[H11Protocol] PASSED    [ 42%]
+tests/protocols/test_http.py::test_value_returned[HttpToolsProtocol] PASSED [ 42%]
+tests/protocols/test_http.py::test_early_disconnect[H11Protocol] PASSED  [ 43%]
+tests/protocols/test_http.py::test_early_disconnect[HttpToolsProtocol] PASSED [ 43%]
+tests/protocols/test_http.py::test_early_response[H11Protocol] PASSED    [ 43%]
+tests/protocols/test_http.py::test_early_response[HttpToolsProtocol] PASSED [ 43%]
+tests/protocols/test_http.py::test_read_after_response[H11Protocol] PASSED [ 43%]
+tests/protocols/test_http.py::test_read_after_response[HttpToolsProtocol] PASSED [ 44%]
+tests/protocols/test_http.py::test_http10_request[H11Protocol] PASSED    [ 44%]
+tests/protocols/test_http.py::test_http10_request[HttpToolsProtocol] PASSED [ 44%]
+tests/protocols/test_http.py::test_root_path[H11Protocol] PASSED         [ 44%]
+tests/protocols/test_http.py::test_root_path[HttpToolsProtocol] PASSED   [ 45%]
+tests/protocols/test_http.py::test_raw_path[H11Protocol] PASSED          [ 45%]
+tests/protocols/test_http.py::test_raw_path[HttpToolsProtocol] PASSED    [ 45%]
+tests/protocols/test_http.py::test_max_concurrency[H11Protocol] PASSED   [ 45%]
+tests/protocols/test_http.py::test_max_concurrency[HttpToolsProtocol] PASSED [ 45%]
+tests/protocols/test_http.py::test_shutdown_during_request[H11Protocol] PASSED [ 46%]
+tests/protocols/test_http.py::test_shutdown_during_request[HttpToolsProtocol] PASSED [ 46%]
+tests/protocols/test_http.py::test_shutdown_during_idle[H11Protocol] PASSED [ 46%]
+tests/protocols/test_http.py::test_shutdown_during_idle[HttpToolsProtocol] PASSED [ 46%]
+tests/protocols/test_http.py::test_100_continue_sent_when_body_consumed[H11Protocol] PASSED [ 47%]
+tests/protocols/test_http.py::test_100_continue_sent_when_body_consumed[HttpToolsProtocol] PASSED [ 47%]
+tests/protocols/test_http.py::test_100_continue_not_sent_when_body_not_consumed[H11Protocol] PASSED [ 47%]
+tests/protocols/test_http.py::test_100_continue_not_sent_when_body_not_consumed[HttpToolsProtocol] PASSED [ 47%]
+tests/protocols/test_http.py::test_supported_upgrade_request[H11Protocol] PASSED [ 47%]
+tests/protocols/test_http.py::test_supported_upgrade_request[HttpToolsProtocol] PASSED [ 48%]
+tests/protocols/test_http.py::test_unsupported_ws_upgrade_request[H11Protocol] PASSED [ 48%]
+tests/protocols/test_http.py::test_unsupported_ws_upgrade_request[HttpToolsProtocol] PASSED [ 48%]
+tests/protocols/test_http.py::test_unsupported_ws_upgrade_request_warn_on_auto[H11Protocol] PASSED [ 48%]
+tests/protocols/test_http.py::test_unsupported_ws_upgrade_request_warn_on_auto[HttpToolsProtocol] PASSED [ 49%]
+tests/protocols/test_http.py::test_http2_upgrade_request[auto-H11Protocol] PASSED [ 49%]
+tests/protocols/test_http.py::test_http2_upgrade_request[auto-HttpToolsProtocol] PASSED [ 49%]
+tests/protocols/test_http.py::test_http2_upgrade_request[none-H11Protocol] PASSED [ 49%]
+tests/protocols/test_http.py::test_http2_upgrade_request[none-HttpToolsProtocol] PASSED [ 50%]
+tests/protocols/test_http.py::test_http2_upgrade_request[websockets-H11Protocol] PASSED [ 50%]
+tests/protocols/test_http.py::test_http2_upgrade_request[websockets-HttpToolsProtocol] PASSED [ 50%]
+tests/protocols/test_http.py::test_http2_upgrade_request[wsproto-H11Protocol] PASSED [ 50%]
+tests/protocols/test_http.py::test_http2_upgrade_request[wsproto-HttpToolsProtocol] PASSED [ 50%]
+tests/protocols/test_http.py::test_scopes[H11Protocol-asgi3app-expected_scopes0] PASSED [ 51%]
+tests/protocols/test_http.py::test_scopes[H11Protocol-asgi2app-expected_scopes1] PASSED [ 51%]
+tests/protocols/test_http.py::test_scopes[HttpToolsProtocol-asgi3app-expected_scopes0] PASSED [ 51%]
+tests/protocols/test_http.py::test_scopes[HttpToolsProtocol-asgi2app-expected_scopes1] PASSED [ 51%]
+tests/protocols/test_http.py::test_invalid_http_request[H11Protocol-invalid-method] PASSED [ 52%]
+tests/protocols/test_http.py::test_invalid_http_request[H11Protocol-invalid-path] PASSED [ 52%]
+tests/protocols/test_http.py::test_invalid_http_request[H11Protocol-invalid-http-version] PASSED [ 52%]
+tests/protocols/test_http.py::test_invalid_http_request[HttpToolsProtocol-invalid-method] PASSED [ 52%]
+tests/protocols/test_http.py::test_invalid_http_request[HttpToolsProtocol-invalid-path] PASSED [ 52%]
+tests/protocols/test_http.py::test_invalid_http_request[HttpToolsProtocol-invalid-http-version] PASSED [ 53%]
+tests/protocols/test_http.py::test_fragmentation PASSED                  [ 53%]
+tests/protocols/test_http.py::test_huge_headers_h11protocol_failure PASSED [ 53%]
+tests/protocols/test_http.py::test_huge_headers_httptools_will_pass PASSED [ 53%]
+tests/protocols/test_http.py::test_huge_headers_h11protocol_failure_with_setting PASSED [ 54%]
+tests/protocols/test_http.py::test_huge_headers_httptools PASSED         [ 54%]
+tests/protocols/test_http.py::test_huge_headers_h11_max_incomplete PASSED [ 54%]
+tests/protocols/test_utils.py::test_get_local_addr_with_socket PASSED    [ 54%]
+tests/protocols/test_utils.py::test_get_remote_addr_with_socket PASSED   [ 54%]
+tests/protocols/test_utils.py::test_get_local_addr PASSED                [ 55%]
+tests/protocols/test_utils.py::test_get_remote_addr PASSED               [ 55%]
+tests/protocols/test_utils.py::test_get_client_addr[ip:port client] PASSED [ 55%]
+tests/protocols/test_utils.py::test_get_client_addr[None client] PASSED  [ 55%]
+tests/protocols/test_websocket.py::test_invalid_upgrade[H11Protocol-WSProtocol] PASSED [ 56%]
+tests/protocols/test_websocket.py::test_invalid_upgrade[H11Protocol-WebSocketProtocol] PASSED [ 56%]
+tests/protocols/test_websocket.py::test_invalid_upgrade[HttpToolsProtocol-WSProtocol] PASSED [ 56%]
+tests/protocols/test_websocket.py::test_invalid_upgrade[HttpToolsProtocol-WebSocketProtocol] PASSED [ 56%]
+tests/protocols/test_websocket.py::test_accept_connection[H11Protocol-WSProtocol] PASSED [ 56%]
+tests/protocols/test_websocket.py::test_accept_connection[H11Protocol-WebSocketProtocol] PASSED [ 57%]
+tests/protocols/test_websocket.py::test_accept_connection[HttpToolsProtocol-WSProtocol] PASSED [ 57%]
+tests/protocols/test_websocket.py::test_accept_connection[HttpToolsProtocol-WebSocketProtocol] PASSED [ 57%]
+tests/protocols/test_websocket.py::test_supports_permessage_deflate_extension[H11Protocol-WSProtocol] PASSED [ 57%]
+tests/protocols/test_websocket.py::test_supports_permessage_deflate_extension[H11Protocol-WebSocketProtocol] PASSED [ 58%]
+tests/protocols/test_websocket.py::test_supports_permessage_deflate_extension[HttpToolsProtocol-WSProtocol] PASSED [ 58%]
+tests/protocols/test_websocket.py::test_supports_permessage_deflate_extension[HttpToolsProtocol-WebSocketProtocol] PASSED [ 58%]
+tests/protocols/test_websocket.py::test_can_disable_permessage_deflate_extension[H11Protocol-WSProtocol] PASSED [ 58%]
+tests/protocols/test_websocket.py::test_can_disable_permessage_deflate_extension[H11Protocol-WebSocketProtocol] PASSED [ 58%]
+tests/protocols/test_websocket.py::test_can_disable_permessage_deflate_extension[HttpToolsProtocol-WSProtocol] PASSED [ 59%]
+tests/protocols/test_websocket.py::test_can_disable_permessage_deflate_extension[HttpToolsProtocol-WebSocketProtocol] PASSED [ 59%]
+tests/protocols/test_websocket.py::test_close_connection[H11Protocol-WSProtocol] PASSED [ 59%]
+tests/protocols/test_websocket.py::test_close_connection[H11Protocol-WebSocketProtocol] PASSED [ 59%]
+tests/protocols/test_websocket.py::test_close_connection[HttpToolsProtocol-WSProtocol] PASSED [ 60%]
+tests/protocols/test_websocket.py::test_close_connection[HttpToolsProtocol-WebSocketProtocol] PASSED [ 60%]
+tests/protocols/test_websocket.py::test_headers[H11Protocol-WSProtocol] PASSED [ 60%]
+tests/protocols/test_websocket.py::test_headers[H11Protocol-WebSocketProtocol] PASSED [ 60%]
+tests/protocols/test_websocket.py::test_headers[HttpToolsProtocol-WSProtocol] PASSED [ 60%]
+tests/protocols/test_websocket.py::test_headers[HttpToolsProtocol-WebSocketProtocol] PASSED [ 61%]
+tests/protocols/test_websocket.py::test_extra_headers[H11Protocol-WSProtocol] PASSED [ 61%]
+tests/protocols/test_websocket.py::test_extra_headers[H11Protocol-WebSocketProtocol] PASSED [ 61%]
+tests/protocols/test_websocket.py::test_extra_headers[HttpToolsProtocol-WSProtocol] PASSED [ 61%]
+tests/protocols/test_websocket.py::test_extra_headers[HttpToolsProtocol-WebSocketProtocol] PASSED [ 62%]
+tests/protocols/test_websocket.py::test_path_and_raw_path[H11Protocol-WSProtocol] PASSED [ 62%]
+tests/protocols/test_websocket.py::test_path_and_raw_path[H11Protocol-WebSocketProtocol] PASSED [ 62%]
+tests/protocols/test_websocket.py::test_path_and_raw_path[HttpToolsProtocol-WSProtocol] PASSED [ 62%]
+tests/protocols/test_websocket.py::test_path_and_raw_path[HttpToolsProtocol-WebSocketProtocol] PASSED [ 62%]
+tests/protocols/test_websocket.py::test_send_text_data_to_client[H11Protocol-WSProtocol] PASSED [ 63%]
+tests/protocols/test_websocket.py::test_send_text_data_to_client[H11Protocol-WebSocketProtocol] PASSED [ 63%]
+tests/protocols/test_websocket.py::test_send_text_data_to_client[HttpToolsProtocol-WSProtocol] PASSED [ 63%]
+tests/protocols/test_websocket.py::test_send_text_data_to_client[HttpToolsProtocol-WebSocketProtocol] PASSED [ 63%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_client[H11Protocol-WSProtocol] PASSED [ 64%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_client[H11Protocol-WebSocketProtocol] PASSED [ 64%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_client[HttpToolsProtocol-WSProtocol] PASSED [ 64%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_client[HttpToolsProtocol-WebSocketProtocol] PASSED [ 64%]
+tests/protocols/test_websocket.py::test_send_and_close_connection[H11Protocol-WSProtocol] PASSED [ 64%]
+tests/protocols/test_websocket.py::test_send_and_close_connection[H11Protocol-WebSocketProtocol] PASSED [ 65%]
+tests/protocols/test_websocket.py::test_send_and_close_connection[HttpToolsProtocol-WSProtocol] PASSED [ 65%]
+tests/protocols/test_websocket.py::test_send_and_close_connection[HttpToolsProtocol-WebSocketProtocol] PASSED [ 65%]
+tests/protocols/test_websocket.py::test_send_text_data_to_server[H11Protocol-WSProtocol] PASSED [ 65%]
+tests/protocols/test_websocket.py::test_send_text_data_to_server[H11Protocol-WebSocketProtocol] PASSED [ 66%]
+tests/protocols/test_websocket.py::test_send_text_data_to_server[HttpToolsProtocol-WSProtocol] PASSED [ 66%]
+tests/protocols/test_websocket.py::test_send_text_data_to_server[HttpToolsProtocol-WebSocketProtocol] PASSED [ 66%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server[H11Protocol-WSProtocol] PASSED [ 66%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server[H11Protocol-WebSocketProtocol] PASSED [ 66%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server[HttpToolsProtocol-WSProtocol] PASSED [ 67%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server[HttpToolsProtocol-WebSocketProtocol] PASSED [ 67%]
+tests/protocols/test_websocket.py::test_send_after_protocol_close[H11Protocol-WSProtocol] PASSED [ 67%]
+tests/protocols/test_websocket.py::test_send_after_protocol_close[H11Protocol-WebSocketProtocol] PASSED [ 67%]
+tests/protocols/test_websocket.py::test_send_after_protocol_close[HttpToolsProtocol-WSProtocol] PASSED [ 68%]
+tests/protocols/test_websocket.py::test_send_after_protocol_close[HttpToolsProtocol-WebSocketProtocol] PASSED [ 68%]
+tests/protocols/test_websocket.py::test_missing_handshake[H11Protocol-WSProtocol] PASSED [ 68%]
+tests/protocols/test_websocket.py::test_missing_handshake[H11Protocol-WebSocketProtocol] PASSED [ 68%]
+tests/protocols/test_websocket.py::test_missing_handshake[HttpToolsProtocol-WSProtocol] PASSED [ 68%]
+tests/protocols/test_websocket.py::test_missing_handshake[HttpToolsProtocol-WebSocketProtocol] PASSED [ 69%]
+tests/protocols/test_websocket.py::test_send_before_handshake[H11Protocol-WSProtocol] PASSED [ 69%]
+tests/protocols/test_websocket.py::test_send_before_handshake[H11Protocol-WebSocketProtocol] PASSED [ 69%]
+tests/protocols/test_websocket.py::test_send_before_handshake[HttpToolsProtocol-WSProtocol] PASSED [ 69%]
+tests/protocols/test_websocket.py::test_send_before_handshake[HttpToolsProtocol-WebSocketProtocol] PASSED [ 70%]
+tests/protocols/test_websocket.py::test_duplicate_handshake[H11Protocol-WSProtocol] PASSED [ 70%]
+tests/protocols/test_websocket.py::test_duplicate_handshake[H11Protocol-WebSocketProtocol] PASSED [ 70%]
+tests/protocols/test_websocket.py::test_duplicate_handshake[HttpToolsProtocol-WSProtocol] PASSED [ 70%]
+tests/protocols/test_websocket.py::test_duplicate_handshake[HttpToolsProtocol-WebSocketProtocol] PASSED [ 70%]
+tests/protocols/test_websocket.py::test_asgi_return_value[H11Protocol-WSProtocol] PASSED [ 71%]
+tests/protocols/test_websocket.py::test_asgi_return_value[H11Protocol-WebSocketProtocol] FAILED [ 71%]
+tests/protocols/test_websocket.py::test_asgi_return_value[HttpToolsProtocol-WSProtocol] PASSED [ 71%]
+tests/protocols/test_websocket.py::test_asgi_return_value[HttpToolsProtocol-WebSocketProtocol] FAILED [ 71%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-None-H11Protocol-WSProtocol] PASSED [ 72%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-None-H11Protocol-WebSocketProtocol] PASSED [ 72%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-None-HttpToolsProtocol-WSProtocol] PASSED [ 72%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-None-HttpToolsProtocol-WebSocketProtocol] PASSED [ 72%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1000-H11Protocol-WSProtocol] PASSED [ 72%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1000-H11Protocol-WebSocketProtocol] PASSED [ 73%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1000-HttpToolsProtocol-WSProtocol] PASSED [ 73%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1000-HttpToolsProtocol-WebSocketProtocol] PASSED [ 73%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1001-H11Protocol-WSProtocol] PASSED [ 73%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1001-H11Protocol-WebSocketProtocol] PASSED [ 74%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1001-HttpToolsProtocol-WSProtocol] PASSED [ 74%]
+tests/protocols/test_websocket.py::test_app_close[none_as_reason-1001-HttpToolsProtocol-WebSocketProtocol] PASSED [ 74%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-None-H11Protocol-WSProtocol] PASSED [ 74%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-None-H11Protocol-WebSocketProtocol] PASSED [ 75%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-None-HttpToolsProtocol-WSProtocol] PASSED [ 75%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-None-HttpToolsProtocol-WebSocketProtocol] PASSED [ 75%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1000-H11Protocol-WSProtocol] PASSED [ 75%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1000-H11Protocol-WebSocketProtocol] PASSED [ 75%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1000-HttpToolsProtocol-WSProtocol] PASSED [ 76%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1000-HttpToolsProtocol-WebSocketProtocol] PASSED [ 76%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1001-H11Protocol-WSProtocol] PASSED [ 76%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1001-H11Protocol-WebSocketProtocol] PASSED [ 76%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1001-HttpToolsProtocol-WSProtocol] PASSED [ 77%]
+tests/protocols/test_websocket.py::test_app_close[normal_reason-1001-HttpToolsProtocol-WebSocketProtocol] PASSED [ 77%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-None-H11Protocol-WSProtocol] PASSED [ 77%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-None-H11Protocol-WebSocketProtocol] PASSED [ 77%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-None-HttpToolsProtocol-WSProtocol] PASSED [ 77%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-None-HttpToolsProtocol-WebSocketProtocol] PASSED [ 78%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1000-H11Protocol-WSProtocol] PASSED [ 78%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1000-H11Protocol-WebSocketProtocol] PASSED [ 78%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1000-HttpToolsProtocol-WSProtocol] PASSED [ 78%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1000-HttpToolsProtocol-WebSocketProtocol] PASSED [ 79%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1001-H11Protocol-WSProtocol] PASSED [ 79%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1001-H11Protocol-WebSocketProtocol] PASSED [ 79%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1001-HttpToolsProtocol-WSProtocol] PASSED [ 79%]
+tests/protocols/test_websocket.py::test_app_close[without_reason-1001-HttpToolsProtocol-WebSocketProtocol] PASSED [ 79%]
+tests/protocols/test_websocket.py::test_client_close[H11Protocol-WSProtocol] PASSED [ 80%]
+tests/protocols/test_websocket.py::test_client_close[H11Protocol-WebSocketProtocol] PASSED [ 80%]
+tests/protocols/test_websocket.py::test_client_close[HttpToolsProtocol-WSProtocol] PASSED [ 80%]
+tests/protocols/test_websocket.py::test_client_close[HttpToolsProtocol-WebSocketProtocol] PASSED [ 80%]
+tests/protocols/test_websocket.py::test_client_connection_lost[H11Protocol-WSProtocol] PASSED [ 81%]
+tests/protocols/test_websocket.py::test_client_connection_lost[H11Protocol-WebSocketProtocol] PASSED [ 81%]
+tests/protocols/test_websocket.py::test_client_connection_lost[HttpToolsProtocol-WSProtocol] PASSED [ 81%]
+tests/protocols/test_websocket.py::test_client_connection_lost[HttpToolsProtocol-WebSocketProtocol] PASSED [ 81%]
+tests/protocols/test_websocket.py::test_connection_lost_before_handshake_complete[H11Protocol-WSProtocol] PASSED [ 81%]
+tests/protocols/test_websocket.py::test_connection_lost_before_handshake_complete[H11Protocol-WebSocketProtocol] PASSED [ 82%]
+tests/protocols/test_websocket.py::test_connection_lost_before_handshake_complete[HttpToolsProtocol-WSProtocol] PASSED [ 82%]
+tests/protocols/test_websocket.py::test_connection_lost_before_handshake_complete[HttpToolsProtocol-WebSocketProtocol] PASSED [ 82%]
+tests/protocols/test_websocket.py::test_send_close_on_server_shutdown[H11Protocol-WSProtocol] PASSED [ 82%]
+tests/protocols/test_websocket.py::test_send_close_on_server_shutdown[H11Protocol-WebSocketProtocol] PASSED [ 83%]
+tests/protocols/test_websocket.py::test_send_close_on_server_shutdown[HttpToolsProtocol-WSProtocol] PASSED [ 83%]
+tests/protocols/test_websocket.py::test_send_close_on_server_shutdown[HttpToolsProtocol-WebSocketProtocol] PASSED [ 83%]
+tests/protocols/test_websocket.py::test_subprotocols[proto1-H11Protocol-WSProtocol] PASSED [ 83%]
+tests/protocols/test_websocket.py::test_subprotocols[proto1-H11Protocol-WebSocketProtocol] PASSED [ 83%]
+tests/protocols/test_websocket.py::test_subprotocols[proto1-HttpToolsProtocol-WSProtocol] PASSED [ 84%]
+tests/protocols/test_websocket.py::test_subprotocols[proto1-HttpToolsProtocol-WebSocketProtocol] PASSED [ 84%]
+tests/protocols/test_websocket.py::test_subprotocols[proto2-H11Protocol-WSProtocol] PASSED [ 84%]
+tests/protocols/test_websocket.py::test_subprotocols[proto2-H11Protocol-WebSocketProtocol] PASSED [ 84%]
+tests/protocols/test_websocket.py::test_subprotocols[proto2-HttpToolsProtocol-WSProtocol] PASSED [ 85%]
+tests/protocols/test_websocket.py::test_subprotocols[proto2-HttpToolsProtocol-WebSocketProtocol] PASSED [ 85%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=defaults sent=defaults-H11Protocol-WebSocketProtocol] PASSED [ 85%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=defaults sent=defaults-HttpToolsProtocol-WebSocketProtocol] PASSED [ 85%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=defaults sent=defaults+1-H11Protocol-WebSocketProtocol] PASSED [ 85%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=defaults sent=defaults+1-HttpToolsProtocol-WebSocketProtocol] PASSED [ 86%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=10 sent=10-H11Protocol-WebSocketProtocol] PASSED [ 86%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=10 sent=10-HttpToolsProtocol-WebSocketProtocol] PASSED [ 86%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=10 sent=11-H11Protocol-WebSocketProtocol] PASSED [ 86%]
+tests/protocols/test_websocket.py::test_send_binary_data_to_server_bigger_than_default[max=10 sent=11-HttpToolsProtocol-WebSocketProtocol] PASSED [ 87%]
+tests/protocols/test_websocket.py::test_server_reject_connection[H11Protocol-WSProtocol] PASSED [ 87%]
+tests/protocols/test_websocket.py::test_server_reject_connection[H11Protocol-WebSocketProtocol] PASSED [ 87%]
+tests/protocols/test_websocket.py::test_server_reject_connection[HttpToolsProtocol-WSProtocol] PASSED [ 87%]
+tests/protocols/test_websocket.py::test_server_reject_connection[HttpToolsProtocol-WebSocketProtocol] PASSED [ 87%]
+tests/protocols/test_websocket.py::test_server_can_read_messages_in_buffer_after_close[H11Protocol-WSProtocol] PASSED [ 88%]
+tests/protocols/test_websocket.py::test_server_can_read_messages_in_buffer_after_close[H11Protocol-WebSocketProtocol] PASSED [ 88%]
+tests/protocols/test_websocket.py::test_server_can_read_messages_in_buffer_after_close[HttpToolsProtocol-WSProtocol] PASSED [ 88%]
+tests/protocols/test_websocket.py::test_server_can_read_messages_in_buffer_after_close[HttpToolsProtocol-WebSocketProtocol] PASSED [ 88%]
+tests/protocols/test_websocket.py::test_default_server_headers[H11Protocol-WSProtocol] PASSED [ 89%]
+tests/protocols/test_websocket.py::test_default_server_headers[H11Protocol-WebSocketProtocol] PASSED [ 89%]
+tests/protocols/test_websocket.py::test_default_server_headers[HttpToolsProtocol-WSProtocol] PASSED [ 89%]
+tests/protocols/test_websocket.py::test_default_server_headers[HttpToolsProtocol-WebSocketProtocol] PASSED [ 89%]
+tests/protocols/test_websocket.py::test_no_server_headers[H11Protocol-WSProtocol] PASSED [ 89%]
+tests/protocols/test_websocket.py::test_no_server_headers[H11Protocol-WebSocketProtocol] PASSED [ 90%]
+tests/protocols/test_websocket.py::test_no_server_headers[HttpToolsProtocol-WSProtocol] PASSED [ 90%]
+tests/protocols/test_websocket.py::test_no_server_headers[HttpToolsProtocol-WebSocketProtocol] PASSED [ 90%]
+tests/protocols/test_websocket.py::test_no_date_header[H11Protocol-WSProtocol] PASSED [ 90%]
+tests/protocols/test_websocket.py::test_no_date_header[HttpToolsProtocol-WSProtocol] PASSED [ 91%]
+tests/protocols/test_websocket.py::test_multiple_server_header[H11Protocol-WSProtocol] PASSED [ 91%]
+tests/protocols/test_websocket.py::test_multiple_server_header[H11Protocol-WebSocketProtocol] PASSED [ 91%]
+tests/protocols/test_websocket.py::test_multiple_server_header[HttpToolsProtocol-WSProtocol] PASSED [ 91%]
+tests/protocols/test_websocket.py::test_multiple_server_header[HttpToolsProtocol-WebSocketProtocol] PASSED [ 91%]
+tests/supervisors/test_multiprocess.py::test_multiprocess_run PASSED     [ 92%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reloader_should_initialize[StatReload] PASSED [ 92%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reloader_should_initialize[WatchGodReload] PASSED [ 92%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reloader_should_initialize[WatchFilesReload] PASSED [ 92%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reload_when_python_file_is_changed[StatReload] PASSED [ 93%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reload_when_python_file_is_changed[WatchGodReload] PASSED [ 93%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reload_when_python_file_is_changed[WatchFilesReload] PASSED [ 93%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_python_file_in_subdir_is_changed[StatReload] PASSED [ 93%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_python_file_in_subdir_is_changed[WatchGodReload] PASSED [ 93%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_python_file_in_subdir_is_changed[WatchFilesReload] FAILED [ 94%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_python_file_in_excluded_subdir_is_changed[WatchFilesReload] PASSED [ 94%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_python_file_in_excluded_subdir_is_changed[WatchGodReload] PASSED [ 94%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reload_when_pattern_matched_file_is_changed[StatReload-False] PASSED [ 94%]
+tests/supervisors/test_reload.py::TestBaseReload::test_reload_when_pattern_matched_file_is_changed[WatchFilesReload-True] FAILED [ 95%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_exclude_pattern_match_file_is_changed[WatchFilesReload] PASSED [ 95%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_exclude_pattern_match_file_is_changed[WatchGodReload] PASSED [ 95%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_dot_file_is_changed[StatReload] PASSED [ 95%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_dot_file_is_changed[WatchGodReload] PASSED [ 95%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_dot_file_is_changed[WatchFilesReload] PASSED [ 96%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_directories_have_same_prefix[StatReload] PASSED [ 96%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_directories_have_same_prefix[WatchGodReload] PASSED [ 96%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_reload_when_directories_have_same_prefix[WatchFilesReload] FAILED [ 96%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_only_subdirectory_is_watched[StatReload] PASSED [ 97%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_only_subdirectory_is_watched[WatchGodReload] PASSED [ 97%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_not_reload_when_only_subdirectory_is_watched[WatchFilesReload] FAILED [ 97%]
+tests/supervisors/test_reload.py::TestBaseReload::test_override_defaults[WatchFilesReload] PASSED [ 97%]
+tests/supervisors/test_reload.py::TestBaseReload::test_override_defaults[WatchGodReload] PASSED [ 97%]
+tests/supervisors/test_reload.py::TestBaseReload::test_watchfiles_no_changes[WatchFilesReload] PASSED [ 98%]
+tests/supervisors/test_reload.py::TestBaseReload::test_should_detect_new_reload_dirs[WatchGodReload] PASSED [ 98%]
+tests/supervisors/test_reload.py::test_should_watch_one_dir_cwd PASSED   [ 98%]
+tests/supervisors/test_reload.py::test_should_watch_separate_dirs_outside_cwd PASSED [ 98%]
+tests/supervisors/test_reload.py::test_display_path_relative PASSED      [ 99%]
+tests/supervisors/test_reload.py::test_display_path_non_relative PASSED  [ 99%]
+tests/supervisors/test_reload.py::test_base_reloader_run PASSED          [ 99%]
+tests/supervisors/test_reload.py::test_base_reloader_should_exit PASSED  [ 99%]
+tests/supervisors/test_reload.py::test_base_reloader_closes_sockets_on_shutdown PASSED [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_return_close_header ___________________________
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 151, in startup
+    server = await loop.create_server(
+  File "uvloop/loop.pyx", line 1790, in create_server
+OSError: [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 117, in pytest_pyfunc_call
+    runner.run_test(pyfuncitem.obj, testargs)
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2113, in run_test
+    self._loop.run_until_complete(test_func(**kwargs))
+  File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 77, in serve
+    await self.startup(sockets=sockets)
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 161, in startup
+    sys.exit(1)
+SystemExit: 1
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [3144]
+INFO:     Waiting for application startup.
+INFO:     ASGI 'lifespan' protocol appears unsupported.
+INFO:     Application startup complete.
+ERROR:    [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:75 Started server process [3144]
+INFO     uvicorn.error:on.py:47 Waiting for application startup.
+INFO     uvicorn.error:on.py:94 ASGI 'lifespan' protocol appears unsupported.
+INFO     uvicorn.error:on.py:61 Application startup complete.
+ERROR    uvicorn.error:server.py:159 [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+ERROR    asyncio:_asyncio.py:2047 Task exception was never retrieved
+future: <Task finished name='Task-74' coro=<Server.serve() done, defined at /workdir/uvicorn-0.20.0/uvicorn/server.py:62> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 151, in startup
+    server = await loop.create_server(
+  File "uvloop/loop.pyx", line 1790, in create_server
+OSError: [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 45, in get_runner
+    yield runner
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 117, in pytest_pyfunc_call
+    runner.run_test(pyfuncitem.obj, testargs)
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2113, in run_test
+    self._loop.run_until_complete(test_func(**kwargs))
+  File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 77, in serve
+    await self.startup(sockets=sockets)
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 161, in startup
+    sys.exit(1)
+SystemExit: 1
+______________________________ test_run[hostname] ______________________________
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 151, in startup
+    server = await loop.create_server(
+  File "uvloop/loop.pyx", line 1790, in create_server
+OSError: [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 117, in pytest_pyfunc_call
+    runner.run_test(pyfuncitem.obj, testargs)
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2113, in run_test
+    self._loop.run_until_complete(test_func(**kwargs))
+  File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 77, in serve
+    await self.startup(sockets=sockets)
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 161, in startup
+    sys.exit(1)
+SystemExit: 1
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [3144]
+INFO:     Waiting for application startup.
+INFO:     ASGI 'lifespan' protocol appears unsupported.
+INFO:     Application startup complete.
+ERROR:    [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:75 Started server process [3144]
+INFO     uvicorn.error:on.py:47 Waiting for application startup.
+INFO     uvicorn.error:on.py:94 ASGI 'lifespan' protocol appears unsupported.
+INFO     uvicorn.error:on.py:61 Application startup complete.
+ERROR    uvicorn.error:server.py:159 [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+ERROR    asyncio:_asyncio.py:2047 Task exception was never retrieved
+future: <Task finished name='Task-84' coro=<Server.serve() done, defined at /workdir/uvicorn-0.20.0/uvicorn/server.py:62> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 151, in startup
+    server = await loop.create_server(
+  File "uvloop/loop.pyx", line 1790, in create_server
+OSError: [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 45, in get_runner
+    yield runner
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/pytest_plugin.py", line 117, in pytest_pyfunc_call
+    runner.run_test(pyfuncitem.obj, testargs)
+  File "/workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2113, in run_test
+    self._loop.run_until_complete(test_func(**kwargs))
+  File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 77, in serve
+    await self.startup(sockets=sockets)
+  File "/workdir/uvicorn-0.20.0/uvicorn/server.py", line 161, in startup
+    sys.exit(1)
+SystemExit: 1
+____________ test_asgi_return_value[H11Protocol-WebSocketProtocol] _____________
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/protocols/test_websocket.py", line 451, in test_asgi_return_value
+    assert exc_info.value.code == 1006
+AssertionError: assert 1000 == 1006
+ +  where 1000 = ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True).code
+ +    where ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True) = <ExceptionInfo ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True) tblen=4>.value
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [3144]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 36398) - "WebSocket /" [accepted]
+ERROR:    ASGI callable should return None, but returned '123'.
+INFO:     connection open
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:75 Started server process [3144]
+INFO     uvicorn.error:server.py:209 Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:267 ('127.0.0.1', 36398) - "WebSocket /" [accepted]
+ERROR    uvicorn.error:websockets_impl.py:257 ASGI callable should return None, but returned '123'.
+INFO     uvicorn.error:server.py:642 connection open
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:255 Shutting down
+_________ test_asgi_return_value[HttpToolsProtocol-WebSocketProtocol] __________
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/protocols/test_websocket.py", line 451, in test_asgi_return_value
+    assert exc_info.value.code == 1006
+AssertionError: assert 1000 == 1006
+ +  where 1000 = ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True).code
+ +    where ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True) = <ExceptionInfo ConnectionClosedOK(Close(code=1000, reason=''), Close(code=1000, reason=''), True) tblen=4>.value
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [3144]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 36430) - "WebSocket /" [accepted]
+ERROR:    ASGI callable should return None, but returned '123'.
+INFO:     connection open
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:75 Started server process [3144]
+INFO     uvicorn.error:server.py:209 Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:267 ('127.0.0.1', 36430) - "WebSocket /" [accepted]
+ERROR    uvicorn.error:websockets_impl.py:257 ASGI callable should return None, but returned '123'.
+INFO     uvicorn.error:server.py:642 connection open
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:255 Shutting down
+_ TestBaseReload.test_should_reload_when_python_file_in_subdir_is_changed[WatchFilesReload] _
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/supervisors/test_reload.py", line 108, in test_should_reload_when_python_file_in_subdir_is_changed
+    assert self._reload_tester(touch_soon, reloader, file)
+AssertionError: assert None
+ +  where None = <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5ab2b0>>(<function touch_soon.<locals>.start at 0x7f7d871ecd30>, <uvicorn.supervisors.watchfilesreload.WatchFilesReload object at 0x7f7d8a9220e0>, PosixPath('/tmp/pytest-of-tester/pytest-20/reload_directory1/app/sub/sub.py'))
+ +    where <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5ab2b0>> = <test_reload.TestBaseReload object at 0x7f7d8a5ab2b0>._reload_tester
+----------------------------- Captured stderr call -----------------------------
+INFO:     Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1']
+INFO:     Started reloader process [3144] using WatchFiles
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:config.py:353 Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1']
+INFO     uvicorn.error:basereload.py:72 Started reloader process [3144] using WatchFiles
+_ TestBaseReload.test_reload_when_pattern_matched_file_is_changed[WatchFilesReload-True] _
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/supervisors/test_reload.py", line 145, in test_reload_when_pattern_matched_file_is_changed
+    assert bool(self._reload_tester(touch_soon, reloader, file)) == result
+AssertionError: assert False == True
+ +  where False = bool(None)
+ +    where None = <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5aa7d0>>(<function touch_soon.<locals>.start at 0x7f7d8721ca60>, <uvicorn.supervisors.watchfilesreload.WatchFilesReload object at 0x7f7d8ac32a10>, PosixPath('/tmp/pytest-of-tester/pytest-20/reload_directory1/app/js/main.js'))
+ +      where <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5aa7d0>> = <test_reload.TestBaseReload object at 0x7f7d8a5aa7d0>._reload_tester
+----------------------------- Captured stderr call -----------------------------
+INFO:     Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1']
+INFO:     Started reloader process [3144] using WatchFiles
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:config.py:353 Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1']
+INFO     uvicorn.error:basereload.py:72 Started reloader process [3144] using WatchFiles
+_ TestBaseReload.test_should_reload_when_directories_have_same_prefix[WatchFilesReload] _
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/supervisors/test_reload.py", line 203, in test_should_reload_when_directories_have_same_prefix
+    assert self._reload_tester(touch_soon, reloader, app_file)
+AssertionError: assert None
+ +  where None = <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5aa260>>(<function touch_soon.<locals>.start at 0x7f7d8721d750>, <uvicorn.supervisors.watchfilesreload.WatchFilesReload object at 0x7f7d8a3ce6e0>, PosixPath('/tmp/pytest-of-tester/pytest-20/reload_directory1/app/src/main.py'))
+ +    where <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5aa260>> = <test_reload.TestBaseReload object at 0x7f7d8a5aa260>._reload_tester
+----------------------------- Captured stderr call -----------------------------
+INFO:     Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1/app', '/tmp/pytest-of-tester/pytest-20/reload_directory1/app_first']
+INFO:     Started reloader process [3144] using WatchFiles
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:config.py:353 Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1/app', '/tmp/pytest-of-tester/pytest-20/reload_directory1/app_first']
+INFO     uvicorn.error:basereload.py:72 Started reloader process [3144] using WatchFiles
+_ TestBaseReload.test_should_not_reload_when_only_subdirectory_is_watched[WatchFilesReload] _
+Traceback (most recent call last):
+  File "/workdir/uvicorn-0.20.0/tests/supervisors/test_reload.py", line 225, in test_should_not_reload_when_only_subdirectory_is_watched
+    assert self._reload_tester(touch_soon, reloader, app_dir_file)
+AssertionError: assert None
+ +  where None = <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5a82e0>>(<function touch_soon.<locals>.start at 0x7f7d8721dfc0>, <uvicorn.supervisors.watchfilesreload.WatchFilesReload object at 0x7f7d8a9237f0>, PosixPath('/tmp/pytest-of-tester/pytest-20/reload_directory1/app/src/main.py'))
+ +    where <bound method TestBaseReload._reload_tester of <test_reload.TestBaseReload object at 0x7f7d8a5a82e0>> = <test_reload.TestBaseReload object at 0x7f7d8a5a82e0>._reload_tester
+----------------------------- Captured stderr call -----------------------------
+INFO:     Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1/app']
+INFO:     Started reloader process [3144] using WatchFiles
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:config.py:353 Will watch for changes in these directories: ['/tmp/pytest-of-tester/pytest-20/reload_directory1/app']
+INFO     uvicorn.error:basereload.py:72 Started reloader process [3144] using WatchFiles
+- generated xml file: /workdir/results/uvicorn/0.20.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_main.py:49: IPV6 not enabled
+============= 8 failed, 439 passed, 1 skipped in 83.51s (0:01:23) ==============
+ERROR: InvocationError for command /workdir/uvicorn-0.20.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/uvicorn/0.20.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

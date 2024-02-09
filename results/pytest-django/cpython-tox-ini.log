@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pytest-django/4.5.2/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+

@@ -1,0 +1,67 @@
+.package create: /workdir/pytest-7.2.0/.tox/.package
+.package installdeps: setuptools>=45.0, setuptools-scm[toml]>=6.2.3
+/workdir/pytest-7.2.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+/workdir/pytest-7.2.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/pytest-7.2.0" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+/workdir/pytest-7.2.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: check: missing meta-data: if 'author' supplied, 'author_email' should be supplied too
+
+cpythonlibtest-unit-test-tests create: /workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdoc/en/requirements.txt, -rtesting/plugins_integration/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pytest-7.2.0/.tox/.tmp/package/1/pytest-7.2.0.tar.gz
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,anyio==3.6.1,asgiref==3.7.2,async-generator==1.10,attrs==23.1.0,Automat==22.10.0,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,constantly==23.10.4,coverage==7.3.2,decorator==5.1.1,Django==4.1.2,docutils==0.19,exceptiongroup==1.2.0,glob2==0.7,greenlet==3.0.1,hyperlink==21.0.0,idna==3.6,imagesize==1.4.1,incremental==22.10.0,iniconfig==2.0.0,Jinja2==3.1.2,Mako==1.3.0,MarkupSafe==2.1.3,mock==5.1.0,outcome==1.3.0.post0,packaging==23.2,Pallets-Sphinx-Themes==2.1.1,parse==1.20.0,parse-type==0.6.2,pluggy==1.3.0,py==1.11.0,pyflakes==3.1.0,Pygments==2.17.2,pygments-pytest==2.4.0,pytest @ file:///workdir/pytest-7.2.0/.tox/.tmp/package/1/pytest-7.2.0.tar.gz#sha256=c7e49c83fc607ac5f683a87809db53e8516ade02c90c4b44c59283cec8eb9f23,pytest-asyncio==0.19.0,pytest-bdd==6.0.1,pytest-cov==4.0.0,pytest-django==4.5.2,pytest-flakes==4.0.5,pytest-html==3.1.1,pytest-metadata==3.0.0,pytest-mock==3.10.0,pytest-rerunfailures==10.2,pytest-sugar==0.9.5,pytest-trio==0.7.0,pytest-twisted==1.14.0,pytest-xvfb==2.0.0,PyVirtualDisplay==3.0,requests==2.31.0,six==1.16.0,sniffio==1.3.0,snowballstemmer==2.2.0,sortedcontainers==2.4.0,Sphinx==5.3.0,sphinx-removed-in==0.2.2,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,sphinxcontrib-svg2pdfconverter==1.2.2,sphinxcontrib-trio==1.1.2,sqlparse==0.4.4,termcolor==2.3.0,tomli==2.0.1,trio==0.23.1,Twisted==22.8.0,typing_extensions==4.8.0,urllib3==2.1.0,zope.interface==6.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='770268576'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytest/7.2.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.2.0, pluggy-1.3.0 -- /workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+metadata: {'Python': '3.10.8', 'Platform': 'Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.28', 'Packages': {'pytest': '7.2.0', 'pluggy': '1.3.0'}, 'Plugins': {'rerunfailures': '10.2', 'flakes': '4.0.5', 'django': '4.5.2', 'cov': '4.0.0', 'metadata': '3.0.0', 'trio': '0.7.0', 'html': '3.1.1', 'sugar': '0.9.5', 'twisted': '1.14.0', 'xvfb': '2.0.0', 'asyncio': '0.19.0', 'bdd': '6.0.1', 'anyio': '3.6.1', 'mock': '3.10.0'}}
+rootdir: /workdir/pytest-7.2.0, configfile: pyproject.toml, testpaths: testing
+plugins: rerunfailures-10.2, flakes-4.0.5, django-4.5.2, cov-4.0.0, metadata-3.0.0, trio-0.7.0, html-3.1.1, sugar-0.9.5, twisted-1.14.0, xvfb-2.0.0, asyncio-0.19.0, bdd-6.0.1, anyio-3.6.1, mock-3.10.0
+asyncio: mode=strict
+collecting ... collected 1070 items
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 270, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 323, in _main
+INTERNALERROR>     config.hook.pytest_collection(session=session)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+INTERNALERROR>     raise exc.with_traceback(exc.__traceback__)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 334, in pytest_collection
+INTERNALERROR>     session.perform_collect()
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 664, in perform_collect
+INTERNALERROR>     self.items.extend(self.genitems(node))
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 831, in genitems
+INTERNALERROR>     rep = collect_one_node(node)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 541, in collect_one_node
+INTERNALERROR>     ihook.pytest_exception_interact(node=collector, call=call, report=rep)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+INTERNALERROR>     raise exception.with_traceback(exception.__traceback__)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_trio/plugin.py", line 62, in pytest_exception_interact
+INTERNALERROR>     if issubclass(call.excinfo.type, trio.MultiError):
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/trio/_deprecate.py", line 148, in __getattr__
+INTERNALERROR>     warn_deprecated(thing, info.version, issue=info.issue, instead=instead)
+INTERNALERROR>   File "/workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/trio/_deprecate.py", line 69, in warn_deprecated
+INTERNALERROR>     warnings.warn(TrioDeprecationWarning(msg), stacklevel=stacklevel)
+INTERNALERROR> trio.TrioDeprecationWarning: trio.MultiError is deprecated since Trio 0.22.0; use BaseExceptionGroup (on Python 3.11 and later) or exceptiongroup.BaseExceptionGroup (earlier versions) instead (https://github.com/python-trio/trio/issues/2211)
+
+============================ no tests ran in 1.34s =============================
+ERROR: InvocationError for command /workdir/pytest-7.2.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pytest/7.2.0/1/cpython-test-results.xml (exited with code 3)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

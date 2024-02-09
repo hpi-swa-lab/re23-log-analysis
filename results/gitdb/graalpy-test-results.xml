@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="1" tests="33" time="82.234" timestamp="2023-11-22T01:51:54.739000" hostname="80ac3eb7f7f2"><testcase classname="gitdb.ext.smmap.smmap.test.test_buf.TestBuf" name="test_basics" time="0.055"><failure message="AssertionError">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/gitdb-4.0.10/gitdb/ext/smmap/smmap/test/test_buf.py", line 114, in test_basics
+    assert manager.collect()
+AssertionError</failure></testcase><testcase classname="gitdb.ext.smmap.smmap.test.test_mman.TestMMan" name="test_cursor" time="0.014" /><testcase classname="gitdb.ext.smmap.smmap.test.test_mman.TestMMan" name="test_memman_operation" time="58.343" /><testcase classname="gitdb.ext.smmap.smmap.test.test_mman.TestMMan" name="test_memory_manager" time="0.016" /><testcase classname="gitdb.ext.smmap.smmap.test.test_tutorial.TestTutorial" name="test_example" time="0.011" /><testcase classname="gitdb.ext.smmap.smmap.test.test_util.TestMMan" name="test_region" time="0.008" /><testcase classname="gitdb.ext.smmap.smmap.test.test_util.TestMMan" name="test_region_list" time="0.007" /><testcase classname="gitdb.ext.smmap.smmap.test.test_util.TestMMan" name="test_util" time="0.006" /><testcase classname="gitdb.ext.smmap.smmap.test.test_util.TestMMan" name="test_window" time="0.008" /><testcase classname="gitdb.test.test_base.TestBaseTypes" name="test_streams" time="0.013" /><testcase classname="gitdb.test.test_example.TestExamples" name="test_base" time="0.019" /><testcase classname="gitdb.test.test_pack.TestPack" name="test_pack" time="0.015"><failure message="zlib.error: Error -3 while decompressing data: incorrect header check">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/gitdb-4.0.10/gitdb/test/test_pack.py", line 135, in test_pack
+    self._assert_pack_file(pack, version, size)
+  File "/workdir/gitdb-4.0.10/gitdb/test/test_pack.py", line 84, in _assert_pack_file
+    for obj in pack.stream_iter():
+  File "/workdir/gitdb-4.0.10/gitdb/pack.py", line 556, in _iter_objects
+    stream_copy(ostream.read, null.write, ostream.size, chunk_size)
+  File "/workdir/gitdb-4.0.10/gitdb/fun.py", line 525, in stream_copy
+    data = read(cs)
+  File "/workdir/gitdb-4.0.10/gitdb/base.py", line 176, in read
+    return self[3].read(size)
+  File "/workdir/gitdb-4.0.10/gitdb/stream.py", line 283, in read
+    dcompdat = self._zip.decompress(indata, size)
+zlib.error: Error -3 while decompressing data: incorrect header check</failure></testcase><testcase classname="gitdb.test.test_pack.TestPack" name="test_pack_64" time="0.007"><skipped type="pytest.skip" message="not implemented">/workdir/gitdb-4.0.10/gitdb/test/test_pack.py:249: not implemented</skipped></testcase><testcase classname="gitdb.test.test_pack.TestPack" name="test_pack_entity" time="1.104" /><testcase classname="gitdb.test.test_pack.TestPack" name="test_pack_index" time="0.058" /><testcase classname="gitdb.test.test_stream.TestStream" name="test_compressed_writer" time="0.052" /><testcase classname="gitdb.test.test_stream.TestStream" name="test_decompress_reader" time="0.271"><failure message="AssertionError">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/gitdb-4.0.10/gitdb/test/test_stream.py", line 111, in test_decompress_reader
+    assert dummy.closed == close_on_deletion
+AssertionError</failure></testcase><testcase classname="gitdb.test.test_stream.TestStream" name="test_decompress_reader_special_case" time="0.019" /><testcase classname="gitdb.test.test_stream.TestStream" name="test_sha_writer" time="0.006" /><testcase classname="gitdb.test.test_util.TestUtils" name="test_basics" time="0.007" /><testcase classname="gitdb.test.test_util.TestUtils" name="test_lockedfd" time="0.012"><failure message="AssertionError">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/gitdb-4.0.10/gitdb/test/test_util.py", line 71, in test_lockedfd
+    assert not os.path.isfile(lockfilepath)
+AssertionError</failure></testcase><testcase classname="gitdb.test.db.test_git.TestGitDB" name="test_reading" time="0.122" /><testcase classname="gitdb.test.db.test_git.TestGitDB" name="test_writing" time="0.217" /><testcase classname="gitdb.test.db.test_loose.TestLooseDB" name="test_basics" time="0.246" /><testcase classname="gitdb.test.db.test_mem.TestMemoryDB" name="test_writing" time="0.973" /><testcase classname="gitdb.test.db.test_pack.TestPackDB" name="test_writing" time="0.385" /><testcase classname="gitdb.test.db.test_ref.TestReferenceDB" name="test_writing" time="0.272" /><testcase classname="gitdb.test.performance.test_pack.TestPackedDBPerformance" name="test_correctness" time="3.503" /><testcase classname="gitdb.test.performance.test_pack.TestPackedDBPerformance" name="test_loose_correctness" time="2.415" /><testcase classname="gitdb.test.performance.test_pack.TestPackedDBPerformance" name="test_pack_random_access" time="1.789" /><testcase classname="gitdb.test.performance.test_pack_streaming.TestPackStreamingPerformance" name="test_pack_writing" time="0.557" /><testcase classname="gitdb.test.performance.test_pack_streaming.TestPackStreamingPerformance" name="test_stream_reading" time="0.714" /><testcase classname="gitdb.test.performance.test_stream.TestObjDBPerformance" name="test_large_data_streaming" time="9.359" /></testsuite></testsuites>

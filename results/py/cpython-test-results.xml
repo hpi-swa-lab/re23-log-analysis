@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="1.028" timestamp="2023-11-23T04:08:04.315133" hostname="80ac3eb7f7f2"><testcase classname="testing.io_.test_terminalwriter" name="TestTerminalWriter" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 833, in collect
+    return super().collect()
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 455, in collect
+    res = ihook.pytest_pycollect_makeitem(
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 271, in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 498, in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 552, in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/py-1.11.0/testing/io_/test_terminalwriter.py", line 111, in pytest_generate_tests
+    if "tw" in metafunc.funcargnames:
+AttributeError: 'Metafunc' object has no attribute 'funcargnames'</error></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 271, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 324, in _main
+    config.hook.pytest_collection(session=session)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 335, in pytest_collection
+    session.perform_collect()
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 677, in perform_collect
+    self.config.pluginmanager.check_pending()
+  File "/workdir/py-1.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 370, in check_pending
+    raise PluginValidationError(
+pluggy._manager.PluginValidationError: unknown hook 'pytest_funcarg__repowc1' in plugin &lt;module 'conftest' from '/workdir/py-1.11.0/testing/path/conftest.py'&gt;</error></testcase></testsuite></testsuites>

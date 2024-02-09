@@ -1,0 +1,995 @@
+GLOB sdist-make: /workdir/trio-0.22.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/trio-0.22.0/.tox/.tmp/package/1/trio-0.21.0+dev.zip
+cpythonlibtest-unit-test-tests installed: astor==0.8.1,astroid==2.11.7,async-generator==1.10,attrs==22.1.0,backcall==0.2.0,black==22.8.0,cffi==1.15.1,click==8.1.3,coverage==6.4.1,cryptography==38.0.1,decorator==5.1.1,dill==0.3.5.1,exceptiongroup==1.0.0rc9,flake8==4.0.1,idna==3.4,iniconfig==1.1.1,ipython==7.31.1,isort==5.10.1,jedi==0.18.1,lazy-object-proxy==1.7.1,matplotlib-inline==0.1.6,mccabe==0.6.1,mock==5.1.0,mypy==0.981,mypy-extensions==0.4.3,outcome==1.2.0,packaging==21.3,parso==0.8.3,pathspec==0.9.0,pexpect==4.8.0,pickleshare==0.7.5,platformdirs==2.5.2,pluggy==1.0.0,prompt-toolkit==3.0.31,ptyprocess==0.7.0,py==1.11.0,pycodestyle==2.8.0,pycparser==2.21,pyflakes==2.4.0,Pygments==2.12.0,pylint==2.14.5,pyOpenSSL==22.1.0,pyparsing==3.0.9,pytest==7.1.2,pytest-cov==3.0.0,sniffio==1.3.0,sortedcontainers==2.4.0,tomli==2.0.1,tomlkit==0.11.4,traitlets==5.4.0,trio @ file:///workdir/trio-0.22.0/.tox/.tmp/package/1/trio-0.21.0%2Bdev.zip#sha256=b0bbc789ae1dfe39db7eaeb177f783bf5f42eef059c18d27cfdbc340f3c114d7,trustme==0.9.0,types-cryptography==3.3.22,types-pyOpenSSL==22.0.9,typing_extensions==4.3.0,wcwidth==0.2.5,wrapt==1.14.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2266427365'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/trio/0.22.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.1.2, pluggy-1.0.0 -- /workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/trio-0.22.0, configfile: pyproject.toml
+plugins: cov-3.0.0
+collecting ... collected 665 items
+
+trio/_core/tests/test_asyncgen.py::test_asyncgen_basics PASSED           [  0%]
+trio/_core/tests/test_asyncgen.py::test_asyncgen_throws_during_finalization PASSED [  0%]
+trio/_core/tests/test_asyncgen.py::test_firstiter_after_closing PASSED   [  0%]
+trio/_core/tests/test_asyncgen.py::test_interdependent_asyncgen_cleanup_order PASSED [  0%]
+trio/_core/tests/test_asyncgen.py::test_last_minute_gc_edge_case PASSED  [  0%]
+trio/_core/tests/test_asyncgen.py::test_fallback_when_no_hook_claims_it PASSED [  0%]
+trio/_core/tests/test_asyncgen.py::test_delegation_to_existing_hooks PASSED [  1%]
+trio/_core/tests/test_guest_mode.py::test_guest_trivial PASSED           [  1%]
+trio/_core/tests/test_guest_mode.py::test_guest_can_do_io PASSED         [  1%]
+trio/_core/tests/test_guest_mode.py::test_host_can_directly_wake_trio_task PASSED [  1%]
+trio/_core/tests/test_guest_mode.py::test_host_altering_deadlines_wakes_trio_up PASSED [  1%]
+trio/_core/tests/test_guest_mode.py::test_warn_set_wakeup_fd_overwrite PASSED [  1%]
+trio/_core/tests/test_guest_mode.py::test_host_wakeup_doesnt_trigger_wait_all_tasks_blocked PASSED [  1%]
+trio/_core/tests/test_guest_mode.py::test_guest_warns_if_abandoned PASSED [  2%]
+trio/_core/tests/test_guest_mode.py::test_guest_mode_on_asyncio PASSED   [  2%]
+trio/_core/tests/test_guest_mode.py::test_guest_mode_internal_errors PASSED [  2%]
+trio/_core/tests/test_guest_mode.py::test_guest_mode_ki PASSED           [  2%]
+trio/_core/tests/test_guest_mode.py::test_guest_mode_autojump_clock_threshold_changing PASSED [  2%]
+trio/_core/tests/test_guest_mode.py::test_guest_mode_asyncgens PASSED    [  2%]
+trio/_core/tests/test_instrumentation.py::test_instruments PASSED        [  3%]
+trio/_core/tests/test_instrumentation.py::test_instruments_interleave PASSED [  3%]
+trio/_core/tests/test_instrumentation.py::test_null_instrument PASSED    [  3%]
+trio/_core/tests/test_instrumentation.py::test_instrument_before_after_run PASSED [  3%]
+trio/_core/tests/test_instrumentation.py::test_instrument_task_spawn_exit PASSED [  3%]
+trio/_core/tests/test_instrumentation.py::test_instruments_crash PASSED  [  3%]
+trio/_core/tests/test_instrumentation.py::test_instruments_monkeypatch PASSED [  3%]
+trio/_core/tests/test_instrumentation.py::test_instrument_that_raises_on_getattr PASSED [  4%]
+trio/_core/tests/test_io.py::test_wait_basic[wait_writable-wait_readable] PASSED [  4%]
+trio/_core/tests/test_io.py::test_wait_basic[wait_writable-<wait_readable on fileno>] PASSED [  4%]
+trio/_core/tests/test_io.py::test_wait_basic[<wait_writable on fileno>-wait_readable] PASSED [  4%]
+trio/_core/tests/test_io.py::test_wait_basic[<wait_writable on fileno>-<wait_readable on fileno>] PASSED [  4%]
+trio/_core/tests/test_io.py::test_double_read[wait_readable] PASSED      [  4%]
+trio/_core/tests/test_io.py::test_double_read[<wait_readable on fileno>] PASSED [  4%]
+trio/_core/tests/test_io.py::test_double_write[wait_writable] PASSED     [  5%]
+trio/_core/tests/test_io.py::test_double_write[<wait_writable on fileno>] PASSED [  5%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[notify_closing-wait_writable-wait_readable] PASSED [  5%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[notify_closing-wait_writable-<wait_readable on fileno>] PASSED [  5%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[notify_closing-<wait_writable on fileno>-wait_readable] PASSED [  5%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[notify_closing-<wait_writable on fileno>-<wait_readable on fileno>] PASSED [  5%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[<notify_closing on fileno>-wait_writable-wait_readable] PASSED [  6%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[<notify_closing on fileno>-wait_writable-<wait_readable on fileno>] PASSED [  6%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[<notify_closing on fileno>-<wait_writable on fileno>-wait_readable] PASSED [  6%]
+trio/_core/tests/test_io.py::test_interrupted_by_close[<notify_closing on fileno>-<wait_writable on fileno>-<wait_readable on fileno>] PASSED [  6%]
+trio/_core/tests/test_io.py::test_socket_simultaneous_read_write[wait_writable-wait_readable] PASSED [  6%]
+trio/_core/tests/test_io.py::test_socket_simultaneous_read_write[wait_writable-<wait_readable on fileno>] PASSED [  6%]
+trio/_core/tests/test_io.py::test_socket_simultaneous_read_write[<wait_writable on fileno>-wait_readable] PASSED [  6%]
+trio/_core/tests/test_io.py::test_socket_simultaneous_read_write[<wait_writable on fileno>-<wait_readable on fileno>] PASSED [  7%]
+trio/_core/tests/test_io.py::test_socket_actual_streaming[wait_writable-wait_readable] PASSED [  7%]
+trio/_core/tests/test_io.py::test_socket_actual_streaming[wait_writable-<wait_readable on fileno>] PASSED [  7%]
+trio/_core/tests/test_io.py::test_socket_actual_streaming[<wait_writable on fileno>-wait_readable] PASSED [  7%]
+trio/_core/tests/test_io.py::test_socket_actual_streaming[<wait_writable on fileno>-<wait_readable on fileno>] PASSED [  7%]
+trio/_core/tests/test_io.py::test_notify_closing_on_invalid_object PASSED [  7%]
+trio/_core/tests/test_io.py::test_wait_on_invalid_object PASSED          [  7%]
+trio/_core/tests/test_io.py::test_io_manager_statistics PASSED           [  8%]
+trio/_core/tests/test_io.py::test_can_survive_unnotified_close PASSED    [  8%]
+trio/_core/tests/test_ki.py::test_ki_self PASSED                         [  8%]
+trio/_core/tests/test_ki.py::test_ki_enabled PASSED                      [  8%]
+trio/_core/tests/test_ki.py::test_ki_enabled_after_yield_briefly PASSED  [  8%]
+trio/_core/tests/test_ki.py::test_generator_based_context_manager_throw PASSED [  8%]
+trio/_core/tests/test_ki.py::test_agen_protection PASSED                 [  9%]
+trio/_core/tests/test_ki.py::test_ki_disabled_out_of_context PASSED      [  9%]
+trio/_core/tests/test_ki.py::test_ki_disabled_in_del PASSED              [  9%]
+trio/_core/tests/test_ki.py::test_ki_protection_works PASSED             [  9%]
+trio/_core/tests/test_ki.py::test_ki_is_good_neighbor PASSED             [  9%]
+trio/_core/tests/test_ki.py::test_ki_with_broken_threads PASSED          [  9%]
+trio/_core/tests/test_local.py::test_runvar_smoketest PASSED             [  9%]
+trio/_core/tests/test_local.py::test_runvar_resetting PASSED             [ 10%]
+trio/_core/tests/test_local.py::test_runvar_sync PASSED                  [ 10%]
+trio/_core/tests/test_local.py::test_accessing_runvar_outside_run_call_fails PASSED [ 10%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock PASSED              [ 10%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock_autojump PASSED     [ 10%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock_autojump_interference PASSED [ 10%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock_autojump_preset PASSED [ 10%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock_autojump_0_and_wait_all_tasks_blocked_0 PASSED [ 11%]
+trio/_core/tests/test_mock_clock.py::test_mock_clock_autojump_0_and_wait_all_tasks_blocked_nonzero PASSED [ 11%]
+trio/_core/tests/test_multierror.py::test_concat_tb PASSED               [ 11%]
+trio/_core/tests/test_multierror.py::test_MultiError PASSED              [ 11%]
+trio/_core/tests/test_multierror.py::test_MultiErrorOfSingleMultiError PASSED [ 11%]
+trio/_core/tests/test_multierror.py::test_MultiErrorNotHashable PASSED   [ 11%]
+trio/_core/tests/test_multierror.py::test_MultiError_filter_NotHashable PASSED [ 12%]
+trio/_core/tests/test_multierror.py::test_MultiError_filter PASSED       [ 12%]
+trio/_core/tests/test_multierror.py::test_MultiError_catch PASSED        [ 12%]
+trio/_core/tests/test_multierror.py::test_MultiError_catch_doesnt_create_cyclic_garbage PASSED [ 12%]
+trio/_core/tests/test_multierror.py::test_assert_match_in_seq PASSED     [ 12%]
+trio/_core/tests/test_multierror.py::test_base_multierror PASSED         [ 12%]
+trio/_core/tests/test_multierror.py::test_non_base_multierror PASSED     [ 12%]
+trio/_core/tests/test_multierror.py::test_ipython_exc_handler PASSED     [ 13%]
+trio/_core/tests/test_multierror.py::test_ipython_imported_but_unused PASSED [ 13%]
+trio/_core/tests/test_multierror.py::test_ipython_custom_exc_handler PASSED [ 13%]
+trio/_core/tests/test_multierror.py::test_apport_excepthook_monkeypatch_interaction SKIPPED [ 13%]
+trio/_core/tests/test_parking_lot.py::test_parking_lot_basic PASSED      [ 13%]
+trio/_core/tests/test_parking_lot.py::test_parking_lot_cancel PASSED     [ 13%]
+trio/_core/tests/test_parking_lot.py::test_parking_lot_repark PASSED     [ 13%]
+trio/_core/tests/test_parking_lot.py::test_parking_lot_repark_with_count PASSED [ 14%]
+trio/_core/tests/test_run.py::test_basic PASSED                          [ 14%]
+trio/_core/tests/test_run.py::test_initial_task_error PASSED             [ 14%]
+trio/_core/tests/test_run.py::test_run_nesting PASSED                    [ 14%]
+trio/_core/tests/test_run.py::test_nursery_warn_use_async_with PASSED    [ 14%]
+trio/_core/tests/test_run.py::test_nursery_main_block_error_basic PASSED [ 14%]
+trio/_core/tests/test_run.py::test_child_crash_basic PASSED              [ 15%]
+trio/_core/tests/test_run.py::test_basic_interleave PASSED               [ 15%]
+trio/_core/tests/test_run.py::test_task_crash_propagation PASSED         [ 15%]
+trio/_core/tests/test_run.py::test_main_and_task_both_crash PASSED       [ 15%]
+trio/_core/tests/test_run.py::test_two_child_crashes PASSED              [ 15%]
+trio/_core/tests/test_run.py::test_child_crash_wakes_parent PASSED       [ 15%]
+trio/_core/tests/test_run.py::test_reschedule PASSED                     [ 15%]
+trio/_core/tests/test_run.py::test_current_time PASSED                   [ 16%]
+trio/_core/tests/test_run.py::test_current_time_with_mock_clock PASSED   [ 16%]
+trio/_core/tests/test_run.py::test_current_clock PASSED                  [ 16%]
+trio/_core/tests/test_run.py::test_current_task PASSED                   [ 16%]
+trio/_core/tests/test_run.py::test_root_task PASSED                      [ 16%]
+trio/_core/tests/test_run.py::test_out_of_context PASSED                 [ 16%]
+trio/_core/tests/test_run.py::test_current_statistics PASSED             [ 16%]
+trio/_core/tests/test_run.py::test_cancel_scope_repr PASSED              [ 17%]
+trio/_core/tests/test_run.py::test_cancel_points PASSED                  [ 17%]
+trio/_core/tests/test_run.py::test_cancel_edge_cases PASSED              [ 17%]
+trio/_core/tests/test_run.py::test_cancel_scope_multierror_filtering PASSED [ 17%]
+trio/_core/tests/test_run.py::test_precancelled_task PASSED              [ 17%]
+trio/_core/tests/test_run.py::test_cancel_shielding PASSED               [ 17%]
+trio/_core/tests/test_run.py::test_cancel_inheritance PASSED             [ 18%]
+trio/_core/tests/test_run.py::test_cancel_shield_abort PASSED            [ 18%]
+trio/_core/tests/test_run.py::test_basic_timeout PASSED                  [ 18%]
+trio/_core/tests/test_run.py::test_cancel_scope_nesting PASSED           [ 18%]
+trio/_core/tests/test_run.py::test_unshield_while_cancel_propagating PASSED [ 18%]
+trio/_core/tests/test_run.py::test_cancel_unbound PASSED                 [ 18%]
+trio/_core/tests/test_run.py::test_cancel_scope_misnesting PASSED        [ 18%]
+trio/_core/tests/test_run.py::test_timekeeping PASSED                    [ 19%]
+trio/_core/tests/test_run.py::test_failed_abort PASSED                   [ 19%]
+trio/_core/tests/test_run.py::test_broken_abort PASSED                   [ 19%]
+trio/_core/tests/test_run.py::test_error_in_run_loop PASSED              [ 19%]
+trio/_core/tests/test_run.py::test_spawn_system_task PASSED              [ 19%]
+trio/_core/tests/test_run.py::test_system_task_crash PASSED              [ 19%]
+trio/_core/tests/test_run.py::test_system_task_crash_MultiError PASSED   [ 20%]
+trio/_core/tests/test_run.py::test_system_task_crash_plus_Cancelled PASSED [ 20%]
+trio/_core/tests/test_run.py::test_system_task_crash_KeyboardInterrupt PASSED [ 20%]
+trio/_core/tests/test_run.py::test_yield_briefly_checks_for_timeout PASSED [ 20%]
+trio/_core/tests/test_run.py::test_exc_info PASSED                       [ 20%]
+trio/_core/tests/test_run.py::test_exc_info_after_yield_error PASSED     [ 20%]
+trio/_core/tests/test_run.py::test_exception_chaining_after_yield_error PASSED [ 20%]
+trio/_core/tests/test_run.py::test_nursery_exception_chaining_doesnt_make_context_loops PASSED [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_identity PASSED             [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_basic PASSED  [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_too_late PASSED [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_idempotent PASSED [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_idempotent_requeue PASSED [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_after_main_crash PASSED [ 21%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_crashes PASSED [ 22%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_FIFO PASSED   [ 22%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_starvation_resistance PASSED [ 22%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_threaded_stress_test PASSED [ 22%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_massive_queue PASSED [ 22%]
+trio/_core/tests/test_run.py::test_TrioToken_run_sync_soon_late_crash PASSED [ 22%]
+trio/_core/tests/test_run.py::test_slow_abort_basic PASSED               [ 23%]
+trio/_core/tests/test_run.py::test_slow_abort_edge_cases PASSED          [ 23%]
+trio/_core/tests/test_run.py::test_task_tree_introspection PASSED        [ 23%]
+trio/_core/tests/test_run.py::test_nursery_closure PASSED                [ 23%]
+trio/_core/tests/test_run.py::test_spawn_name PASSED                     [ 23%]
+trio/_core/tests/test_run.py::test_current_effective_deadline PASSED     [ 23%]
+trio/_core/tests/test_run.py::test_nice_error_on_bad_calls_to_run_or_spawn PASSED [ 23%]
+trio/_core/tests/test_run.py::test_calling_asyncio_function_gives_nice_error PASSED [ 24%]
+trio/_core/tests/test_run.py::test_asyncio_function_inside_nursery_does_not_explode PASSED [ 24%]
+trio/_core/tests/test_run.py::test_trivial_yields PASSED                 [ 24%]
+trio/_core/tests/test_run.py::test_nursery_start PASSED                  [ 24%]
+trio/_core/tests/test_run.py::test_task_nursery_stack PASSED             [ 24%]
+trio/_core/tests/test_run.py::test_nursery_start_with_cancelled_nursery PASSED [ 24%]
+trio/_core/tests/test_run.py::test_nursery_start_keeps_nursery_open PASSED [ 24%]
+trio/_core/tests/test_run.py::test_nursery_explicit_exception PASSED     [ 25%]
+trio/_core/tests/test_run.py::test_nursery_stop_iteration PASSED         [ 25%]
+trio/_core/tests/test_run.py::test_nursery_stop_async_iteration PASSED   [ 25%]
+trio/_core/tests/test_run.py::test_traceback_frame_removal PASSED        [ 25%]
+trio/_core/tests/test_run.py::test_contextvar_support PASSED             [ 25%]
+trio/_core/tests/test_run.py::test_contextvar_multitask PASSED           [ 25%]
+trio/_core/tests/test_run.py::test_system_task_contexts PASSED           [ 26%]
+trio/_core/tests/test_run.py::test_Nursery_init PASSED                   [ 26%]
+trio/_core/tests/test_run.py::test_Nursery_private_init PASSED           [ 26%]
+trio/_core/tests/test_run.py::test_Nursery_subclass PASSED               [ 26%]
+trio/_core/tests/test_run.py::test_Cancelled_init PASSED                 [ 26%]
+trio/_core/tests/test_run.py::test_Cancelled_str PASSED                  [ 26%]
+trio/_core/tests/test_run.py::test_Cancelled_subclass PASSED             [ 26%]
+trio/_core/tests/test_run.py::test_CancelScope_subclass PASSED           [ 27%]
+trio/_core/tests/test_run.py::test_sniffio_integration PASSED            [ 27%]
+trio/_core/tests/test_run.py::test_Task_custom_sleep_data PASSED         [ 27%]
+trio/_core/tests/test_run.py::test_permanently_detach_coroutine_object PASSED [ 27%]
+trio/_core/tests/test_run.py::test_detach_and_reattach_coroutine_object PASSED [ 27%]
+trio/_core/tests/test_run.py::test_detached_coroutine_cancellation PASSED [ 27%]
+trio/_core/tests/test_run.py::test_async_function_implemented_in_C PASSED [ 27%]
+trio/_core/tests/test_run.py::test_very_deep_cancel_scope_nesting PASSED [ 28%]
+trio/_core/tests/test_run.py::test_cancel_scope_deadline_duplicates PASSED [ 28%]
+trio/_core/tests/test_run.py::test_simple_cancel_scope_usage_doesnt_create_cyclic_garbage PASSED [ 28%]
+trio/_core/tests/test_run.py::test_cancel_scope_exit_doesnt_create_cyclic_garbage PASSED [ 28%]
+trio/_core/tests/test_run.py::test_nursery_cancel_doesnt_create_cyclic_garbage PASSED [ 28%]
+trio/_core/tests/test_run.py::test_locals_destroyed_promptly_on_cancel PASSED [ 28%]
+trio/_core/tests/test_run.py::test_run_strict_exception_groups PASSED    [ 29%]
+trio/_core/tests/test_run.py::test_run_strict_exception_groups_nursery_override PASSED [ 29%]
+trio/_core/tests/test_run.py::test_nursery_strict_exception_groups PASSED [ 29%]
+trio/_core/tests/test_run.py::test_nursery_collapse_strict PASSED        [ 29%]
+trio/_core/tests/test_run.py::test_nursery_collapse_loose PASSED         [ 29%]
+trio/_core/tests/test_run.py::test_cancel_scope_no_cancellederror PASSED [ 29%]
+trio/_core/tests/test_thread_cache.py::test_thread_cache_basics PASSED   [ 29%]
+trio/_core/tests/test_thread_cache.py::test_thread_cache_deref PASSED    [ 30%]
+trio/_core/tests/test_thread_cache.py::test_spawning_new_thread_from_deliver_reuses_starting_thread PASSED [ 30%]
+trio/_core/tests/test_thread_cache.py::test_idle_threads_exit PASSED     [ 30%]
+trio/_core/tests/test_thread_cache.py::test_race_between_idle_exit_and_job_assignment PASSED [ 30%]
+trio/_core/tests/test_tutil.py::test_check_sequence_matches PASSED       [ 30%]
+trio/_core/tests/test_unbounded_queue.py::test_UnboundedQueue_basic PASSED [ 30%]
+trio/_core/tests/test_unbounded_queue.py::test_UnboundedQueue_blocking PASSED [ 30%]
+trio/_core/tests/test_unbounded_queue.py::test_UnboundedQueue_fairness PASSED [ 31%]
+trio/_core/tests/test_unbounded_queue.py::test_UnboundedQueue_trivial_yields PASSED [ 31%]
+trio/_core/tests/test_unbounded_queue.py::test_UnboundedQueue_no_spurious_wakeups PASSED [ 31%]
+trio/_core/tests/test_windows.py::test_completion_key_listen SKIPPED     [ 31%]
+trio/_core/tests/test_windows.py::test_readinto_overlapped SKIPPED (...) [ 31%]
+trio/_core/tests/test_windows.py::test_forgot_to_register_with_iocp SKIPPED [ 31%]
+trio/_core/tests/test_windows.py::test_too_late_to_cancel SKIPPED (w...) [ 32%]
+trio/_core/tests/test_windows.py::test_lsp_that_hooks_select_gives_good_error SKIPPED [ 32%]
+trio/_core/tests/test_windows.py::test_lsp_that_completely_hides_base_socket_gives_good_error SKIPPED [ 32%]
+trio/tests/test_abc.py::test_AsyncResource_defaults PASSED               [ 32%]
+trio/tests/test_abc.py::test_abc_generics PASSED                         [ 32%]
+trio/tests/test_channel.py::test_channel PASSED                          [ 32%]
+trio/tests/test_channel.py::test_553 PASSED                              [ 32%]
+trio/tests/test_channel.py::test_channel_multiple_producers PASSED       [ 33%]
+trio/tests/test_channel.py::test_channel_multiple_consumers PASSED       [ 33%]
+trio/tests/test_channel.py::test_close_basics PASSED                     [ 33%]
+trio/tests/test_channel.py::test_close_sync PASSED                       [ 33%]
+trio/tests/test_channel.py::test_receive_channel_clone_and_close PASSED  [ 33%]
+trio/tests/test_channel.py::test_close_multiple_send_handles PASSED      [ 33%]
+trio/tests/test_channel.py::test_close_multiple_receive_handles PASSED   [ 33%]
+trio/tests/test_channel.py::test_inf_capacity PASSED                     [ 34%]
+trio/tests/test_channel.py::test_statistics PASSED                       [ 34%]
+trio/tests/test_channel.py::test_channel_fairness PASSED                 [ 34%]
+trio/tests/test_channel.py::test_unbuffered PASSED                       [ 34%]
+trio/tests/test_contextvars.py::test_contextvars_default PASSED          [ 34%]
+trio/tests/test_contextvars.py::test_contextvars_set PASSED              [ 34%]
+trio/tests/test_contextvars.py::test_contextvars_copy PASSED             [ 35%]
+trio/tests/test_deprecate.py::test_warn_deprecated PASSED                [ 35%]
+trio/tests/test_deprecate.py::test_warn_deprecated_no_instead_or_issue PASSED [ 35%]
+trio/tests/test_deprecate.py::test_warn_deprecated_stacklevel PASSED     [ 35%]
+trio/tests/test_deprecate.py::test_warn_deprecated_formatting PASSED     [ 35%]
+trio/tests/test_deprecate.py::test_deprecated_decorator PASSED           [ 35%]
+trio/tests/test_deprecate.py::test_deprecated_decorator_method PASSED    [ 35%]
+trio/tests/test_deprecate.py::test_deprecated_decorator_with_explicit_thing PASSED [ 36%]
+trio/tests/test_deprecate.py::test_deprecated_alias PASSED               [ 36%]
+trio/tests/test_deprecate.py::test_deprecated_alias_method PASSED        [ 36%]
+trio/tests/test_deprecate.py::test_deprecated_docstring_munging PASSED   [ 36%]
+trio/tests/test_deprecate.py::test_module_with_deprecations PASSED       [ 36%]
+trio/tests/test_dtls.py::test_smoke[ipv4] PASSED                         [ 36%]
+trio/tests/test_dtls.py::test_smoke[ipv6] SKIPPED (need IPv6)            [ 36%]
+trio/tests/test_dtls.py::test_handshake_over_terrible_network PASSED     [ 37%]
+trio/tests/test_dtls.py::test_implicit_handshake PASSED                  [ 37%]
+trio/tests/test_dtls.py::test_full_duplex PASSED                         [ 37%]
+trio/tests/test_dtls.py::test_channel_closing PASSED                     [ 37%]
+trio/tests/test_dtls.py::test_serve_exits_cleanly_on_close PASSED        [ 37%]
+trio/tests/test_dtls.py::test_client_multiplex PASSED                    [ 37%]
+trio/tests/test_dtls.py::test_dtls_over_dgram_only PASSED                [ 38%]
+trio/tests/test_dtls.py::test_double_serve PASSED                        [ 38%]
+trio/tests/test_dtls.py::test_connect_to_non_server PASSED               [ 38%]
+trio/tests/test_dtls.py::test_incoming_buffer_overflow PASSED            [ 38%]
+trio/tests/test_dtls.py::test_server_socket_doesnt_crash_on_garbage PASSED [ 38%]
+trio/tests/test_dtls.py::test_invalid_cookie_rejected PASSED             [ 38%]
+trio/tests/test_dtls.py::test_client_cancels_handshake_and_starts_new_one PASSED [ 38%]
+trio/tests/test_dtls.py::test_swap_client_server PASSED                  [ 39%]
+trio/tests/test_dtls.py::test_openssl_retransmit_doesnt_break_stuff PASSED [ 39%]
+trio/tests/test_dtls.py::test_initial_retransmit_timeout_configuration PASSED [ 39%]
+trio/tests/test_dtls.py::test_explicit_tiny_mtu_is_respected PASSED      [ 39%]
+trio/tests/test_dtls.py::test_handshake_handles_minimum_network_mtu[ipv4] PASSED [ 39%]
+trio/tests/test_dtls.py::test_handshake_handles_minimum_network_mtu[ipv6] SKIPPED [ 39%]
+trio/tests/test_dtls.py::test_system_task_cleaned_up_on_gc PASSED        [ 40%]
+trio/tests/test_dtls.py::test_gc_before_system_task_starts PASSED        [ 40%]
+trio/tests/test_dtls.py::test_gc_as_packet_received PASSED               [ 40%]
+trio/tests/test_dtls.py::test_gc_after_trio_exits PASSED                 [ 40%]
+trio/tests/test_dtls.py::test_already_closed_socket_doesnt_crash PASSED  [ 40%]
+trio/tests/test_dtls.py::test_socket_closed_while_processing_clienthello PASSED [ 40%]
+trio/tests/test_dtls.py::test_association_replaced_while_handshake_running PASSED [ 40%]
+trio/tests/test_dtls.py::test_association_replaced_before_handshake_starts PASSED [ 41%]
+trio/tests/test_dtls.py::test_send_to_closed_local_port PASSED           [ 41%]
+trio/tests/test_exports.py::test_core_is_properly_reexported PASSED      [ 41%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio] FAILED [ 41%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.abc] FAILED [ 41%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.socket] FAILED [ 41%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.lowlevel] FAILED [ 41%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.from_thread] FAILED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.to_thread] FAILED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.testing] FAILED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio] PASSED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.abc] PASSED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.socket] PASSED [ 42%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.lowlevel] PASSED [ 43%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.from_thread] PASSED [ 43%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.to_thread] PASSED [ 43%]
+trio/tests/test_exports.py::test_static_tool_sees_all_symbols[jedi-trio.testing] PASSED [ 43%]
+trio/tests/test_exports.py::test_classes_are_final PASSED                [ 43%]
+trio/tests/test_fakenet.py::test_basic_udp PASSED                        [ 43%]
+trio/tests/test_fakenet.py::test_msg_trunc PASSED                        [ 43%]
+trio/tests/test_fakenet.py::test_basic_tcp PASSED                        [ 44%]
+trio/tests/test_file_io.py::test_wrap_invalid PASSED                     [ 44%]
+trio/tests/test_file_io.py::test_wrap_non_iobase PASSED                  [ 44%]
+trio/tests/test_file_io.py::test_wrapped_property PASSED                 [ 44%]
+trio/tests/test_file_io.py::test_dir_matches_wrapped PASSED              [ 44%]
+trio/tests/test_file_io.py::test_unsupported_not_forwarded PASSED        [ 44%]
+trio/tests/test_file_io.py::test_sync_attrs_forwarded PASSED             [ 44%]
+trio/tests/test_file_io.py::test_sync_attrs_match_wrapper PASSED         [ 45%]
+trio/tests/test_file_io.py::test_async_methods_generated_once PASSED     [ 45%]
+trio/tests/test_file_io.py::test_async_methods_signature PASSED          [ 45%]
+trio/tests/test_file_io.py::test_async_methods_wrap PASSED               [ 45%]
+trio/tests/test_file_io.py::test_async_methods_match_wrapper PASSED      [ 45%]
+trio/tests/test_file_io.py::test_open PASSED                             [ 45%]
+trio/tests/test_file_io.py::test_open_context_manager PASSED             [ 46%]
+trio/tests/test_file_io.py::test_async_iter PASSED                       [ 46%]
+trio/tests/test_file_io.py::test_aclose_cancelled PASSED                 [ 46%]
+trio/tests/test_file_io.py::test_detach_rewraps_asynciobase PASSED       [ 46%]
+trio/tests/test_highlevel_generic.py::test_StapledStream PASSED          [ 46%]
+trio/tests/test_highlevel_generic.py::test_StapledStream_with_erroring_close PASSED [ 46%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_basic PASSED [ 46%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_specific_port_specific_host PASSED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_ipv6_v6only SKIPPED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_rebind PASSED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_multiple_host_cleanup_on_error PASSED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_port_checking PASSED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_serve_tcp PASSED   [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families0-try_families0] PASSED [ 47%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families0-try_families1] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families0-try_families2] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families1-try_families0] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families1-try_families1] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families1-try_families2] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families2-try_families0] PASSED [ 48%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families2-try_families1] PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_some_address_families_unavailable[fail_families2-try_families2] PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_socket_fails_not_afnosupport PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_listeners.py::test_open_tcp_listeners_backlog PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_close_all PASSED      [ 49%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_reorder_for_rfc_6555_section_5_4 PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_format_host_port PASSED [ 49%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_open_tcp_stream_real_socket_smoketest PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_open_tcp_stream_input_validation PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_local_address_real PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_one_host_quick_success PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_one_host_slow_success PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_one_host_quick_fail PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_one_host_slow_fail PASSED [ 50%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_one_host_failed_after_connect PASSED [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_basic_fallthrough PASSED [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_early_success PASSED  [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_custom_delay PASSED   [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_custom_errors_expedite PASSED [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_all_fail PASSED       [ 51%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_multi_success PASSED  [ 52%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_does_reorder PASSED   [ 52%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_handles_no_ipv4 PASSED [ 52%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_handles_no_ipv6 PASSED [ 52%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_no_hosts PASSED       [ 52%]
+trio/tests/test_highlevel_open_tcp_stream.py::test_cancel PASSED         [ 52%]
+trio/tests/test_highlevel_open_unix_stream.py::test_close_on_error PASSED [ 52%]
+trio/tests/test_highlevel_open_unix_stream.py::test_open_with_bad_filename_type[4] PASSED [ 53%]
+trio/tests/test_highlevel_open_unix_stream.py::test_open_with_bad_filename_type[4.5] PASSED [ 53%]
+trio/tests/test_highlevel_open_unix_stream.py::test_open_bad_socket PASSED [ 53%]
+trio/tests/test_highlevel_open_unix_stream.py::test_open_unix_socket PASSED [ 53%]
+trio/tests/test_highlevel_serve_listeners.py::test_serve_listeners_basic PASSED [ 53%]
+trio/tests/test_highlevel_serve_listeners.py::test_serve_listeners_accept_unrecognized_error PASSED [ 53%]
+trio/tests/test_highlevel_serve_listeners.py::test_serve_listeners_accept_capacity_error PASSED [ 53%]
+trio/tests/test_highlevel_serve_listeners.py::test_serve_listeners_connection_nursery PASSED [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketStream_basics PASSED     [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketStream_send_all PASSED   [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketStream_generic PASSED    [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketListener PASSED          [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketListener_socket_closed_underfoot PASSED [ 54%]
+trio/tests/test_highlevel_socket.py::test_SocketListener_accept_errors PASSED [ 55%]
+trio/tests/test_highlevel_socket.py::test_socket_stream_works_when_peer_has_already_closed PASSED [ 55%]
+trio/tests/test_highlevel_ssl_helpers.py::test_open_ssl_over_tcp_stream_and_everything_else[tls13] PASSED [ 55%]
+trio/tests/test_highlevel_ssl_helpers.py::test_open_ssl_over_tcp_stream_and_everything_else[tls12] PASSED [ 55%]
+trio/tests/test_highlevel_ssl_helpers.py::test_open_ssl_over_tcp_listeners PASSED [ 55%]
+trio/tests/test_path.py::test_open_is_async_context_manager PASSED       [ 55%]
+trio/tests/test_path.py::test_magic PASSED                               [ 55%]
+trio/tests/test_path.py::test_cmp_magic[Path-Path0] PASSED               [ 56%]
+trio/tests/test_path.py::test_cmp_magic[Path-Path1] PASSED               [ 56%]
+trio/tests/test_path.py::test_cmp_magic[Path-Path2] PASSED               [ 56%]
+trio/tests/test_path.py::test_div_magic[Path-Path0] PASSED               [ 56%]
+trio/tests/test_path.py::test_div_magic[Path-Path1] PASSED               [ 56%]
+trio/tests/test_path.py::test_div_magic[Path-str] PASSED                 [ 56%]
+trio/tests/test_path.py::test_div_magic[str-Path] PASSED                 [ 56%]
+trio/tests/test_path.py::test_hash_magic[foo-Path-Path0] PASSED          [ 57%]
+trio/tests/test_path.py::test_hash_magic[foo-Path-Path1] PASSED          [ 57%]
+trio/tests/test_path.py::test_hash_magic[foo/bar/baz-Path-Path0] PASSED  [ 57%]
+trio/tests/test_path.py::test_hash_magic[foo/bar/baz-Path-Path1] PASSED  [ 57%]
+trio/tests/test_path.py::test_hash_magic[./foo-Path-Path0] PASSED        [ 57%]
+trio/tests/test_path.py::test_hash_magic[./foo-Path-Path1] PASSED        [ 57%]
+trio/tests/test_path.py::test_forwarded_properties PASSED                [ 58%]
+trio/tests/test_path.py::test_async_method_signature PASSED              [ 58%]
+trio/tests/test_path.py::test_compare_async_stat_methods[is_dir] PASSED  [ 58%]
+trio/tests/test_path.py::test_compare_async_stat_methods[is_file] PASSED [ 58%]
+trio/tests/test_path.py::test_invalid_name_not_wrapped PASSED            [ 58%]
+trio/tests/test_path.py::test_async_methods_rewrap[absolute] PASSED      [ 58%]
+trio/tests/test_path.py::test_async_methods_rewrap[resolve] PASSED       [ 58%]
+trio/tests/test_path.py::test_forward_methods_rewrap PASSED              [ 59%]
+trio/tests/test_path.py::test_forward_properties_rewrap PASSED           [ 59%]
+trio/tests/test_path.py::test_forward_methods_without_rewrap PASSED      [ 59%]
+trio/tests/test_path.py::test_repr PASSED                                [ 59%]
+trio/tests/test_path.py::test_type_forwards_unsupported PASSED           [ 59%]
+trio/tests/test_path.py::test_type_wraps_unsupported PASSED              [ 59%]
+trio/tests/test_path.py::test_type_forwards_private PASSED               [ 60%]
+trio/tests/test_path.py::test_type_wraps_private PASSED                  [ 60%]
+trio/tests/test_path.py::test_path_wraps_path[__init__] PASSED           [ 60%]
+trio/tests/test_path.py::test_path_wraps_path[joinpath] PASSED           [ 60%]
+trio/tests/test_path.py::test_path_nonpath PASSED                        [ 60%]
+trio/tests/test_path.py::test_open_file_can_open_path PASSED             [ 60%]
+trio/tests/test_path.py::test_globmethods PASSED                         [ 60%]
+trio/tests/test_path.py::test_iterdir PASSED                             [ 61%]
+trio/tests/test_path.py::test_classmethods PASSED                        [ 61%]
+trio/tests/test_scheduler_determinism.py::test_the_trio_scheduler_is_not_deterministic PASSED [ 61%]
+trio/tests/test_scheduler_determinism.py::test_the_trio_scheduler_is_deterministic_if_seeded PASSED [ 61%]
+trio/tests/test_signals.py::test_open_signal_receiver PASSED             [ 61%]
+trio/tests/test_signals.py::test_open_signal_receiver_restore_handler_after_one_bad_signal PASSED [ 61%]
+trio/tests/test_signals.py::test_open_signal_receiver_empty_fail PASSED  [ 61%]
+trio/tests/test_signals.py::test_open_signal_receiver_restore_handler_after_duplicate_signal PASSED [ 62%]
+trio/tests/test_signals.py::test_catch_signals_wrong_thread PASSED       [ 62%]
+trio/tests/test_signals.py::test_open_signal_receiver_conflict PASSED    [ 62%]
+trio/tests/test_signals.py::test_open_signal_receiver_no_starvation PASSED [ 62%]
+trio/tests/test_signals.py::test_catch_signals_race_condition_on_exit PASSED [ 62%]
+trio/tests/test_socket.py::test__try_sync PASSED                         [ 62%]
+trio/tests/test_socket.py::test_socket_has_some_reexports PASSED         [ 63%]
+trio/tests/test_socket.py::test_getaddrinfo PASSED                       [ 63%]
+trio/tests/test_socket.py::test_getnameinfo PASSED                       [ 63%]
+trio/tests/test_socket.py::test_from_stdlib_socket PASSED                [ 63%]
+trio/tests/test_socket.py::test_from_fd PASSED                           [ 63%]
+trio/tests/test_socket.py::test_socketpair_simple PASSED                 [ 63%]
+trio/tests/test_socket.py::test_fromshare SKIPPED (windows only)         [ 63%]
+trio/tests/test_socket.py::test_socket PASSED                            [ 64%]
+trio/tests/test_socket.py::test_socket_v6 PASSED                         [ 64%]
+trio/tests/test_socket.py::test_sniff_sockopts PASSED                    [ 64%]
+trio/tests/test_socket.py::test_SocketType_basics PASSED                 [ 64%]
+trio/tests/test_socket.py::test_SocketType_dup PASSED                    [ 64%]
+trio/tests/test_socket.py::test_SocketType_shutdown PASSED               [ 64%]
+trio/tests/test_socket.py::test_SocketType_simple_server[127.0.0.1-AddressFamily.AF_INET] PASSED [ 64%]
+trio/tests/test_socket.py::test_SocketType_simple_server[::1-AddressFamily.AF_INET6] SKIPPED [ 65%]
+trio/tests/test_socket.py::test_SocketType_is_readable PASSED            [ 65%]
+trio/tests/test_socket.py::test_SocketType_resolve[AddressFamily.AF_INET-addrs0] PASSED [ 65%]
+trio/tests/test_socket.py::test_SocketType_resolve[AddressFamily.AF_INET6-addrs1] PASSED [ 65%]
+trio/tests/test_socket.py::test_SocketType_unresolved_names PASSED       [ 65%]
+trio/tests/test_socket.py::test_SocketType_non_blocking_paths PASSED     [ 65%]
+trio/tests/test_socket.py::test_SocketType_connect_paths PASSED          [ 66%]
+trio/tests/test_socket.py::test_resolve_address_exception_in_connect_closes_socket PASSED [ 66%]
+trio/tests/test_socket.py::test_send_recv_variants PASSED                [ 66%]
+trio/tests/test_socket.py::test_idna PASSED                              [ 66%]
+trio/tests/test_socket.py::test_getprotobyname PASSED                    [ 66%]
+trio/tests/test_socket.py::test_custom_hostname_resolver PASSED          [ 66%]
+trio/tests/test_socket.py::test_custom_socket_factory PASSED             [ 66%]
+trio/tests/test_socket.py::test_SocketType_is_abstract PASSED            [ 67%]
+trio/tests/test_socket.py::test_unix_domain_socket PASSED                [ 67%]
+trio/tests/test_socket.py::test_interrupted_by_close PASSED              [ 67%]
+trio/tests/test_socket.py::test_many_sockets PASSED                      [ 67%]
+trio/tests/test_ssl.py::test_PyOpenSSLEchoStream_gives_resource_busy_errors PASSED [ 67%]
+trio/tests/test_ssl.py::test_ssl_client_basics[tls13] PASSED             [ 67%]
+trio/tests/test_ssl.py::test_ssl_server_basics[tls13] PASSED             [ 67%]
+trio/tests/test_ssl.py::test_attributes[tls13] PASSED                    [ 68%]
+trio/tests/test_ssl.py::test_full_duplex_basics[tls13] PASSED            [ 68%]
+trio/tests/test_ssl.py::test_renegotiation_simple[tls13] PASSED          [ 68%]
+trio/tests/test_ssl.py::test_renegotiation_randomized[tls13] PASSED      [ 68%]
+trio/tests/test_ssl.py::test_resource_busy_errors[tls13] PASSED          [ 68%]
+trio/tests/test_ssl.py::test_checkpoints[tls13] PASSED                   [ 68%]
+trio/tests/test_ssl.py::test_send_all_empty_string[tls13] PASSED         [ 69%]
+trio/tests/test_ssl.py::test_SSLStream_generic[tls13-False] PASSED       [ 69%]
+trio/tests/test_ssl.py::test_SSLStream_generic[tls13-True] PASSED        [ 69%]
+trio/tests/test_ssl.py::test_unwrap[tls13] PASSED                        [ 69%]
+trio/tests/test_ssl.py::test_closing_nice_case[tls13] PASSED             [ 69%]
+trio/tests/test_ssl.py::test_send_all_fails_in_the_middle[tls13] PASSED  [ 69%]
+trio/tests/test_ssl.py::test_ssl_over_ssl[tls13] PASSED                  [ 69%]
+trio/tests/test_ssl.py::test_ssl_bad_shutdown[tls13] PASSED              [ 70%]
+trio/tests/test_ssl.py::test_ssl_bad_shutdown_but_its_ok[tls13] PASSED   [ 70%]
+trio/tests/test_ssl.py::test_ssl_only_closes_stream_once[tls13] PASSED   [ 70%]
+trio/tests/test_ssl.py::test_ssl_https_compatibility_disagreement[tls13] PASSED [ 70%]
+trio/tests/test_ssl.py::test_https_mode_eof_before_handshake[tls13] PASSED [ 70%]
+trio/tests/test_ssl.py::test_send_error_during_handshake[tls13] PASSED   [ 70%]
+trio/tests/test_ssl.py::test_receive_error_during_handshake[tls13] PASSED [ 70%]
+trio/tests/test_ssl.py::test_selected_alpn_protocol_before_handshake[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_selected_alpn_protocol_when_not_set[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_selected_npn_protocol_before_handshake[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_selected_npn_protocol_when_not_set[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_get_channel_binding_before_handshake[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_get_channel_binding_after_handshake[tls13] PASSED [ 71%]
+trio/tests/test_ssl.py::test_getpeercert[tls13] PASSED                   [ 72%]
+trio/tests/test_ssl.py::test_SSLListener[tls13] PASSED                   [ 72%]
+trio/tests/test_ssl.py::test_ssl_client_basics[tls12] PASSED             [ 72%]
+trio/tests/test_ssl.py::test_ssl_server_basics[tls12] PASSED             [ 72%]
+trio/tests/test_ssl.py::test_attributes[tls12] PASSED                    [ 72%]
+trio/tests/test_ssl.py::test_full_duplex_basics[tls12] PASSED            [ 72%]
+trio/tests/test_ssl.py::test_renegotiation_simple[tls12] PASSED          [ 72%]
+trio/tests/test_ssl.py::test_renegotiation_randomized[tls12] PASSED      [ 73%]
+trio/tests/test_ssl.py::test_resource_busy_errors[tls12] PASSED          [ 73%]
+trio/tests/test_ssl.py::test_checkpoints[tls12] PASSED                   [ 73%]
+trio/tests/test_ssl.py::test_send_all_empty_string[tls12] PASSED         [ 73%]
+trio/tests/test_ssl.py::test_SSLStream_generic[tls12-False] PASSED       [ 73%]
+trio/tests/test_ssl.py::test_SSLStream_generic[tls12-True] PASSED        [ 73%]
+trio/tests/test_ssl.py::test_unwrap[tls12] PASSED                        [ 73%]
+trio/tests/test_ssl.py::test_closing_nice_case[tls12] PASSED             [ 74%]
+trio/tests/test_ssl.py::test_send_all_fails_in_the_middle[tls12] PASSED  [ 74%]
+trio/tests/test_ssl.py::test_ssl_over_ssl[tls12] PASSED                  [ 74%]
+trio/tests/test_ssl.py::test_ssl_bad_shutdown[tls12] PASSED              [ 74%]
+trio/tests/test_ssl.py::test_ssl_bad_shutdown_but_its_ok[tls12] PASSED   [ 74%]
+trio/tests/test_ssl.py::test_ssl_only_closes_stream_once[tls12] PASSED   [ 74%]
+trio/tests/test_ssl.py::test_ssl_https_compatibility_disagreement[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_https_mode_eof_before_handshake[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_send_error_during_handshake[tls12] PASSED   [ 75%]
+trio/tests/test_ssl.py::test_receive_error_during_handshake[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_selected_alpn_protocol_before_handshake[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_selected_alpn_protocol_when_not_set[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_selected_npn_protocol_before_handshake[tls12] PASSED [ 75%]
+trio/tests/test_ssl.py::test_selected_npn_protocol_when_not_set[tls12] PASSED [ 76%]
+trio/tests/test_ssl.py::test_get_channel_binding_before_handshake[tls12] PASSED [ 76%]
+trio/tests/test_ssl.py::test_get_channel_binding_after_handshake[tls12] PASSED [ 76%]
+trio/tests/test_ssl.py::test_getpeercert[tls12] PASSED                   [ 76%]
+trio/tests/test_ssl.py::test_SSLListener[tls12] PASSED                   [ 76%]
+trio/tests/test_ssl.py::test_wait_writable_calls_underlying_wait_writable PASSED [ 76%]
+trio/tests/test_ssl.py::test_ssl_handshake_failure_during_aclose PASSED  [ 76%]
+trio/tests/test_subprocess.py::test_basic[open_process] PASSED           [ 77%]
+trio/tests/test_subprocess.py::test_basic[run_process in nursery] PASSED [ 77%]
+trio/tests/test_subprocess.py::test_auto_update_returncode[open_process] PASSED [ 77%]
+trio/tests/test_subprocess.py::test_auto_update_returncode[run_process in nursery] PASSED [ 77%]
+trio/tests/test_subprocess.py::test_multi_wait[open_process] PASSED      [ 77%]
+trio/tests/test_subprocess.py::test_multi_wait[run_process in nursery] PASSED [ 77%]
+trio/tests/test_subprocess.py::test_async_with_basics_deprecated PASSED  [ 78%]
+trio/tests/test_subprocess.py::test_kill_when_context_cancelled PASSED   [ 78%]
+trio/tests/test_subprocess.py::test_pipes[open_process] PASSED           [ 78%]
+trio/tests/test_subprocess.py::test_pipes[run_process in nursery] PASSED [ 78%]
+trio/tests/test_subprocess.py::test_interactive[open_process] PASSED     [ 78%]
+trio/tests/test_subprocess.py::test_interactive[run_process in nursery] PASSED [ 78%]
+trio/tests/test_subprocess.py::test_run PASSED                           [ 78%]
+trio/tests/test_subprocess.py::test_run_check PASSED                     [ 79%]
+trio/tests/test_subprocess.py::test_run_with_broken_pipe PASSED          [ 79%]
+trio/tests/test_subprocess.py::test_stderr_stdout[open_process] PASSED   [ 79%]
+trio/tests/test_subprocess.py::test_stderr_stdout[run_process in nursery] PASSED [ 79%]
+trio/tests/test_subprocess.py::test_errors PASSED                        [ 79%]
+trio/tests/test_subprocess.py::test_signals[open_process] PASSED         [ 79%]
+trio/tests/test_subprocess.py::test_signals[run_process in nursery] PASSED [ 80%]
+trio/tests/test_subprocess.py::test_wait_reapable_fails[open_process] PASSED [ 80%]
+trio/tests/test_subprocess.py::test_wait_reapable_fails[run_process in nursery] PASSED [ 80%]
+trio/tests/test_subprocess.py::test_waitid_eintr PASSED                  [ 80%]
+trio/tests/test_subprocess.py::test_custom_deliver_cancel PASSED         [ 80%]
+trio/tests/test_subprocess.py::test_warn_on_failed_cancel_terminate PASSED [ 80%]
+trio/tests/test_subprocess.py::test_warn_on_cancel_SIGKILL_escalation PASSED [ 80%]
+trio/tests/test_subprocess.py::test_run_process_background_fail PASSED   [ 81%]
+trio/tests/test_subprocess.py::test_for_leaking_fds PASSED               [ 81%]
+trio/tests/test_subprocess.py::test_subprocess_pidfd_unnotified PASSED   [ 81%]
+trio/tests/test_sync.py::test_Event PASSED                               [ 81%]
+trio/tests/test_sync.py::test_CapacityLimiter PASSED                     [ 81%]
+trio/tests/test_sync.py::test_CapacityLimiter_inf PASSED                 [ 81%]
+trio/tests/test_sync.py::test_CapacityLimiter_change_total_tokens PASSED [ 81%]
+trio/tests/test_sync.py::test_CapacityLimiter_memleak_548 PASSED         [ 82%]
+trio/tests/test_sync.py::test_Semaphore PASSED                           [ 82%]
+trio/tests/test_sync.py::test_Semaphore_bounded PASSED                   [ 82%]
+trio/tests/test_sync.py::test_Lock_and_StrictFIFOLock[Lock] PASSED       [ 82%]
+trio/tests/test_sync.py::test_Lock_and_StrictFIFOLock[StrictFIFOLock] PASSED [ 82%]
+trio/tests/test_sync.py::test_Condition PASSED                           [ 82%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[CapacityLimiter(1)] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[Semaphore(1)] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[Lock] PASSED        [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[StrictFIFOLock] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[ChannelLock1(10)] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[ChannelLock1(1)] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[ChannelLock2] PASSED [ 83%]
+trio/tests/test_sync.py::test_generic_lock_exclusion[ChannelLock3] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[CapacityLimiter(1)] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[Semaphore(1)] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[Lock] PASSED    [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[StrictFIFOLock] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[ChannelLock1(10)] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[ChannelLock1(1)] PASSED [ 84%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[ChannelLock2] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_fifo_fairness[ChannelLock3] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[CapacityLimiter(1)] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[Semaphore(1)] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[Lock] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[StrictFIFOLock] PASSED [ 85%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[ChannelLock1(10)] PASSED [ 86%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[ChannelLock1(1)] PASSED [ 86%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[ChannelLock2] PASSED [ 86%]
+trio/tests/test_sync.py::test_generic_lock_acquire_nowait_blocks_acquire[ChannelLock3] PASSED [ 86%]
+trio/tests/test_testing.py::test_wait_all_tasks_blocked PASSED           [ 86%]
+trio/tests/test_testing.py::test_wait_all_tasks_blocked_with_timeouts PASSED [ 86%]
+trio/tests/test_testing.py::test_wait_all_tasks_blocked_with_cushion PASSED [ 86%]
+trio/tests/test_testing.py::test_assert_checkpoints PASSED               [ 87%]
+trio/tests/test_testing.py::test_assert_no_checkpoints PASSED            [ 87%]
+trio/tests/test_testing.py::test_Sequencer PASSED                        [ 87%]
+trio/tests/test_testing.py::test_Sequencer_cancel PASSED                 [ 87%]
+trio/tests/test_testing.py::test__assert_raises PASSED                   [ 87%]
+trio/tests/test_testing.py::test__UnboundeByteQueue PASSED               [ 87%]
+trio/tests/test_testing.py::test_MemorySendStream PASSED                 [ 87%]
+trio/tests/test_testing.py::test_MemoryReceiveStream PASSED              [ 88%]
+trio/tests/test_testing.py::test_MemoryRecvStream_closing PASSED         [ 88%]
+trio/tests/test_testing.py::test_memory_stream_pump PASSED               [ 88%]
+trio/tests/test_testing.py::test_memory_stream_one_way_pair PASSED       [ 88%]
+trio/tests/test_testing.py::test_memory_stream_pair PASSED               [ 88%]
+trio/tests/test_testing.py::test_memory_streams_with_generic_tests PASSED [ 88%]
+trio/tests/test_testing.py::test_lockstep_streams_with_generic_tests PASSED [ 89%]
+trio/tests/test_testing.py::test_open_stream_to_socket_listener PASSED   [ 89%]
+trio/tests/test_threads.py::test_do_in_trio_thread PASSED                [ 89%]
+trio/tests/test_threads.py::test_do_in_trio_thread_from_trio_thread PASSED [ 89%]
+trio/tests/test_threads.py::test_run_in_trio_thread_ki PASSED            [ 89%]
+trio/tests/test_threads.py::test_await_in_trio_thread_while_main_exits PASSED [ 89%]
+trio/tests/test_threads.py::test_run_in_worker_thread PASSED             [ 89%]
+trio/tests/test_threads.py::test_run_in_worker_thread_cancellation PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_abandoned PASSED   [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-False-3] PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-False-5] PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-False-10] PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-True-3] PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-True-5] PASSED [ 90%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[False-True-10] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-False-3] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-False-5] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-False-10] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-True-3] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-True-5] PASSED [ 91%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter[True-True-10] PASSED [ 92%]
+trio/tests/test_threads.py::test_run_in_worker_thread_custom_limiter PASSED [ 92%]
+trio/tests/test_threads.py::test_run_in_worker_thread_limiter_error PASSED [ 92%]
+trio/tests/test_threads.py::test_run_in_worker_thread_fail_to_spawn PASSED [ 92%]
+trio/tests/test_threads.py::test_trio_to_thread_run_sync_token PASSED    [ 92%]
+trio/tests/test_threads.py::test_trio_to_thread_run_sync_expected_error PASSED [ 92%]
+trio/tests/test_threads.py::test_trio_to_thread_run_sync_contextvars PASSED [ 92%]
+trio/tests/test_threads.py::test_trio_from_thread_run_sync PASSED        [ 93%]
+trio/tests/test_threads.py::test_trio_from_thread_run PASSED             [ 93%]
+trio/tests/test_threads.py::test_trio_from_thread_token PASSED           [ 93%]
+trio/tests/test_threads.py::test_trio_from_thread_token_kwarg PASSED     [ 93%]
+trio/tests/test_threads.py::test_from_thread_no_token PASSED             [ 93%]
+trio/tests/test_threads.py::test_trio_from_thread_run_sync_contextvars PASSED [ 93%]
+trio/tests/test_threads.py::test_trio_from_thread_run_contextvars PASSED [ 93%]
+trio/tests/test_threads.py::test_run_fn_as_system_task_catched_badly_typed_token PASSED [ 94%]
+trio/tests/test_threads.py::test_from_thread_inside_trio_thread PASSED   [ 94%]
+trio/tests/test_threads.py::test_from_thread_run_during_shutdown PASSED  [ 94%]
+trio/tests/test_threads.py::test_trio_token_weak_referenceable PASSED    [ 94%]
+trio/tests/test_threads.py::test_unsafe_cancellable_kwarg PASSED         [ 94%]
+trio/tests/test_timeouts.py::test_sleep PASSED                           [ 94%]
+trio/tests/test_timeouts.py::test_move_on_after PASSED                   [ 95%]
+trio/tests/test_timeouts.py::test_fail PASSED                            [ 95%]
+trio/tests/test_unix_pipes.py::test_send_pipe PASSED                     [ 95%]
+trio/tests/test_unix_pipes.py::test_receive_pipe PASSED                  [ 95%]
+trio/tests/test_unix_pipes.py::test_pipes_combined PASSED                [ 95%]
+trio/tests/test_unix_pipes.py::test_pipe_errors PASSED                   [ 95%]
+trio/tests/test_unix_pipes.py::test_del PASSED                           [ 95%]
+trio/tests/test_unix_pipes.py::test_async_with PASSED                    [ 96%]
+trio/tests/test_unix_pipes.py::test_misdirected_aclose_regression PASSED [ 96%]
+trio/tests/test_unix_pipes.py::test_close_at_bad_time_for_receive_some PASSED [ 96%]
+trio/tests/test_unix_pipes.py::test_close_at_bad_time_for_send_all PASSED [ 96%]
+trio/tests/test_unix_pipes.py::test_bizarro_OSError_from_receive PASSED  [ 96%]
+trio/tests/test_unix_pipes.py::test_pipe_fully PASSED                    [ 96%]
+trio/tests/test_util.py::test_signal_raise PASSED                        [ 96%]
+trio/tests/test_util.py::test_ConflictDetector PASSED                    [ 97%]
+trio/tests/test_util.py::test_module_metadata_is_fixed_up PASSED         [ 97%]
+trio/tests/test_util.py::test_is_main_thread PASSED                      [ 97%]
+trio/tests/test_util.py::test_coroutine_or_error PASSED                  [ 97%]
+trio/tests/test_util.py::test_generic_function PASSED                    [ 97%]
+trio/tests/test_util.py::test_final_metaclass PASSED                     [ 97%]
+trio/tests/test_util.py::test_no_public_constructor_metaclass PASSED     [ 98%]
+trio/tests/test_wait_for_object.py::test_WaitForMultipleObjects_sync SKIPPED [ 98%]
+trio/tests/test_wait_for_object.py::test_WaitForMultipleObjects_sync_slow SKIPPED [ 98%]
+trio/tests/test_wait_for_object.py::test_WaitForSingleObject SKIPPED     [ 98%]
+trio/tests/test_wait_for_object.py::test_WaitForSingleObject_slow SKIPPED [ 98%]
+trio/tests/test_windows_pipes.py::test_pipe_typecheck SKIPPED (windo...) [ 98%]
+trio/tests/test_windows_pipes.py::test_pipe_error_on_close SKIPPED (...) [ 98%]
+trio/tests/test_windows_pipes.py::test_pipes_combined SKIPPED (windo...) [ 99%]
+trio/tests/test_windows_pipes.py::test_async_with SKIPPED (windows only) [ 99%]
+trio/tests/test_windows_pipes.py::test_close_during_write SKIPPED (w...) [ 99%]
+trio/tests/test_windows_pipes.py::test_pipe_fully SKIPPED (windows only) [ 99%]
+trio/tests/tools/test_gen_exports.py::test_get_public_methods PASSED     [ 99%]
+trio/tests/tools/test_gen_exports.py::test_create_pass_through_args PASSED [ 99%]
+trio/tests/tools/test_gen_exports.py::test_process PASSED                [100%]
+
+=================================== FAILURES ===================================
+________________ test_static_tool_sees_all_symbols[pylint-trio] ________________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+______________ test_static_tool_sees_all_symbols[pylint-trio.abc] ______________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+____________ test_static_tool_sees_all_symbols[pylint-trio.socket] _____________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+___________ test_static_tool_sees_all_symbols[pylint-trio.lowlevel] ____________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+__________ test_static_tool_sees_all_symbols[pylint-trio.from_thread] __________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+___________ test_static_tool_sees_all_symbols[pylint-trio.to_thread] ___________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+____________ test_static_tool_sees_all_symbols[pylint-trio.testing] ____________
+Traceback (most recent call last):
+  File "/workdir/trio-0.22.0/trio/tests/test_exports.py", line 87, in test_static_tool_sees_all_symbols
+    from pylint.lint import PyLinter
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/lint/__init__.py", line 19, in <module>
+    from pylint.config.exceptions import ArgumentPreprocessingError
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/__init__.py", line 25, in <module>
+    from pylint.config.arguments_provider import UnsupportedAction
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_provider.py", line 15, in <module>
+    from pylint.config.arguments_manager import _ArgumentsManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/config/arguments_manager.py", line 25, in <module>
+    from pylint import utils
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/__init__.py", line 9, in <module>
+    from pylint.utils.ast_walker import ASTWalker
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pylint/utils/ast_walker.py", line 13, in <module>
+    from astroid import nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/__init__.py", line 43, in <module>
+    from astroid.nodes import node_classes, scoped_nodes
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/__init__.py", line 15, in <module>
+    from astroid.nodes.node_classes import (  # pylint: disable=redefined-builtin (Ellipsis)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/nodes/node_classes.py", line 26, in <module>
+    from astroid.bases import Instance, _infer_stmts
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 528, in <module>
+    class Generator(BaseInstance):
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/bases.py", line 534, in Generator
+    special_attributes = lazy_descriptor(objectmodel.GeneratorModel)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/util.py", line 21, in <lambda>
+    lambda: importlib.import_module("." + module_name, "astroid")
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/objectmodel.py", line 34, in <module>
+    from astroid.manager import AstroidManager
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/manager.py", line 16, in <module>
+    from astroid.interpreter._import import spec
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/spec.py", line 16, in <module>
+    from astroid.modutils import EXT_LIB_DIRS
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/modutils.py", line 29, in <module>
+    from astroid.interpreter._import import spec, util
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/astroid/interpreter/_import/util.py", line 6, in <module>
+    import pkg_resources
+  File "/workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py", line 118, in <module>
+    warnings.warn(
+DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+- generated xml file: /workdir/results/trio/0.22.0/1/cpython-test-results.xml --
+=========================== short test summary info ============================
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.abc]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.socket]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.lowlevel]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.from_thread]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.to_thread]
+FAILED trio/tests/test_exports.py::test_static_tool_sees_all_symbols[pylint-trio.testing]
+================== 7 failed, 636 passed, 22 skipped in 56.26s ==================
+ERROR: InvocationError for command /workdir/trio-0.22.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/trio/0.22.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

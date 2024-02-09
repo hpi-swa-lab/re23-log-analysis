@@ -1,0 +1,179 @@
+GLOB sdist-make: /workdir/coloredlogs-15.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements-screenshots.txt, -rrequirements.txt, -rrequirements-travis.txt, -rrequirements-tests.txt, -rrequirements-checks.txt
+cpythonlibtest-unit-test-tests inst: /workdir/coloredlogs-15.0.1/.tox/.tmp/package/1/coloredlogs-15.0.1.zip
+cpythonlibtest-unit-test-tests installed: capturer==3.0,certifi==2023.11.17,charset-normalizer==3.3.2,coloredlogs @ file:///workdir/coloredlogs-15.0.1/.tox/.tmp/package/1/coloredlogs-15.0.1.zip#sha256=988558d0be2b37d9734a6211384428d1058b00fba86494fcc044961f579b3a45,coverage==6.5.0,coveralls==3.3.1,docopt==0.6.2,exceptiongroup==1.1.3,executor==23.2,fasteners==0.19,flake8==6.1.0,flake8-docstrings==1.7.0,humanfriendly==10.0,idna==3.4,iniconfig==2.0.0,lxml==4.9.3,mccabe==0.7.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,property-manager==3.0,pycodestyle==2.11.1,pydocstyle==6.3.0,pyflakes==3.1.0,pytest==7.4.3,pytest-cov==4.1.0,requests==2.31.0,six==1.16.0,snowballstemmer==2.2.0,tomli==2.0.1,unittest-xml-reporting==3.2.0,urllib3==2.1.0,verboselogs==1.7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='375989836'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/coloredlogs/15.0.1/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+
+E
+E
+.
+E
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] SPAM message with level spam (5)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] DEBUG message with level debug (10)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] VERBOSE message with level verbose (15)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] INFO message with level info (20)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] NOTICE message with level notice (25)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] WARNING message with level warning (30)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] SUCCESS message with level success (35)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] ERROR message with level error (40)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] CRITICAL message with level critical (50)
+.
+.
+.
+.
+.
+E
+E
+.
+.
+.
+.
+E
+.
+.
+.
+.
+.
+.
+.
+.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] DEBUG This is a message with severity 'debug'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] INFO This is a message with severity 'info'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] VERBOSE This is a message with severity 'verbose'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] WARNING This is a message with severity 'warning'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] ERROR This is a message with severity 'error'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] CRITICAL This is a message with severity 'critical'.
+.
+E
+.
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should not include milliseconds.
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should include milliseconds.
+.
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should be timestamped according to #45.
+.
+s
+s
+s
+.
+E
+.
+======================================================================
+ERROR [0.005s]: test_auto_disable (coloredlogs.tests.ColoredLogsTestCase)
+Make sure ANSI escape sequences are not emitted when logging output is being redirected.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 445, in test_auto_disable
+    with CaptureOutput():
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_auto_install (coloredlogs.tests.ColoredLogsTestCase)
+Test :func:`coloredlogs.auto_install()`.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 553, in test_auto_install
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_cli_demo (coloredlogs.tests.ColoredLogsTestCase)
+Test the command line colored logging demonstration.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 568, in test_cli_demo
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_enable_colored_cron_mailer (coloredlogs.tests.ColoredLogsTestCase)
+Test that automatic ANSI to HTML conversion when running under ``cron`` can be enabled.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 539, in test_enable_colored_cron_mailer
+    with ColoredCronMailer() as mailer:
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/converter/__init__.py", line 375, in __init__
+    self.capturer = CaptureOutput(merged=True, relay=False)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_env_disable (coloredlogs.tests.ColoredLogsTestCase)
+Make sure ANSI escape sequences can be disabled using ``$NO_COLOR``.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 459, in test_env_disable
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_host_name_filter (coloredlogs.tests.ColoredLogsTestCase)
+Make sure :func:`install()` integrates with :class:`~coloredlogs.HostNameFilter()`.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 149, in test_host_name_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_program_name_filter (coloredlogs.tests.ColoredLogsTestCase)
+Make sure :func:`install()` integrates with :class:`~coloredlogs.ProgramNameFilter()`.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 157, in test_program_name_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+======================================================================
+ERROR [0.001s]: test_username_filter (coloredlogs.tests.ColoredLogsTestCase)
+Make sure :func:`install()` integrates with :class:`~coloredlogs.UserNameFilter()`.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 165, in test_username_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.223s
+
+FAILED (errors=8, skipped=3)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/coloredlogs/15.0.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

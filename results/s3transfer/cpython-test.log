@@ -1,0 +1,12 @@
+GLOB sdist-make: /workdir/s3transfer-0.6.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/s3transfer-0.6.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/s3transfer-0.6.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Obtaining botocore from git+https://github.com/boto/botocore.git@develop#egg=botocore (from -r requirements.txt (line 1))
+ERROR: The editable requirement botocore from git+https://github.com/boto/botocore.git@develop#egg=botocore (from -r requirements.txt (line 1)) cannot be installed when requiring hashes, because there is no single file to hash.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt]; v = InvocationError('/workdir/s3transfer-0.6.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-dev.txt -rrequirements-dev-lock.txt -rrequirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt]; v = InvocationError('/workdir/s3transfer-0.6.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-dev.txt -rrequirements-dev-lock.txt -rrequirements.txt', 1)

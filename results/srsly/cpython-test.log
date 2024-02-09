@@ -1,0 +1,84 @@
+.package create: /workdir/srsly-2.4.6/.tox/.package
+.package installdeps: setuptools, cython>=0.25
+warning: no files found matching '*.pxd' under directory 'srsly'
+cpythonlibtest-unit-test-tests create: /workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/srsly-2.4.6/.tox/.tmp/package/1/srsly-2.4.6.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/srsly-2.4.6.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [52 lines of output]
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          object PyMemoryView_GetContiguous(object obj, int buffertype, char order)
+      
+      from libc.stdlib cimport *
+      from libc.string cimport *
+      from libc.limits cimport *
+      ctypedef unsigned long long uint64_t
+      ^
+      ------------------------------------------------------------
+      
+      srsly/msgpack/_unpacker.pyx:13:0: 'uint64_t' redeclared
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      cdef extern from "Python.h":
+          ctypedef int int32_t
+          ctypedef int int64_t
+          ctypedef unsigned int uint32_t
+          ctypedef unsigned int uint64_t
+          ^
+      ------------------------------------------------------------
+      
+      /tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/Cython/Includes/cpython/pyport.pxd:5:4: Previous declaration is here
+      Cythonizing sources
+      Compiling srsly/msgpack/_unpacker.pyx because it changed.
+      Compiling srsly/msgpack/_packer.pyx because it changed.
+      [1/2] Cythonizing srsly/msgpack/_packer.pyx
+      [2/2] Cythonizing srsly/msgpack/_unpacker.pyx
+      Traceback (most recent call last):
+        File "/workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 138, in <module>
+        File "<string>", line 125, in setup_package
+        File "/tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1154, in cythonize
+          cythonize_one(*args)
+        File "/tmp/pip-build-env-2g19q7jj/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1321, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: srsly/msgpack/_unpacker.pyx
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/srsly-2.4.6/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/srsly-2.4.6.tar.gz (exited with code 1)

@@ -1,0 +1,11 @@
+# MCD: Automatically copied from pyproject.toml's legacy_tox_ini key
+[tox]
+envlist = py36,py37,py38
+
+[testenv]
+whitelist_externals=bash
+commands =
+    bash -c "source ./.travis/lib-verify.sh && verify::flake8"
+    python -m unittest
+
+deps = -r{toxinidir}/test-requirements.txt

@@ -1,0 +1,46 @@
+GLOB sdist-make: /workdir/requests-mock-1.10.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/requests-mock-1.10.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rdev-requirements.txt, -roldest-requirements.txt, -rrequirements.txt, -rrtfd-requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/requests-mock-1.10.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting fixtures (from -r test-requirements.txt (line 1))
+  Downloading fixtures-4.1.0-py3-none-any.whl.metadata (21 kB)
+Collecting purl (from -r test-requirements.txt (line 3))
+  Downloading purl-1.6-py2.py3-none-any.whl (10 kB)
+Collecting sphinx (from -r test-requirements.txt (line 5))
+  Using cached sphinx-7.2.6-py3-none-any.whl.metadata (5.9 kB)
+Collecting testrepository>=0.0.18 (from -r test-requirements.txt (line 6))
+  Downloading testrepository-0.0.20.tar.gz (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 3.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting testtools (from -r test-requirements.txt (line 7))
+  Downloading testtools-2.7.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting requests_futures (from -r test-requirements.txt (line 8))
+  Downloading requests_futures-1.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting coverage (from -r dev-requirements.txt (line 1))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Requirement already satisfied: wheel in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r dev-requirements.txt (line 3)) (0.41.3)
+Collecting requests==2.0.0 (from -r oldest-requirements.txt (line 1))
+  Downloading requests-2.0.0-py2.py3-none-any.whl (391 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.1/391.1 kB 8.1 MB/s eta 0:00:00
+ERROR: Cannot install requests<3 and >=2.3 and requests==2.0.0 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested requests==2.0.0
+    The user requested requests<3 and >=2.3
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rtest-requirements.txt, -rdev-requirements.txt, -roldest-requirements.txt, -rrequirements.txt, -rrtfd-requirements.txt]; v = InvocationError('/workdir/requests-mock-1.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rtest-requirements.txt -rdev-requirements.txt -roldest-requirements.txt -rrequirements.txt -rrtfd-requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rtest-requirements.txt, -rdev-requirements.txt, -roldest-requirements.txt, -rrequirements.txt, -rrtfd-requirements.txt]; v = InvocationError('/workdir/requests-mock-1.10.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rtest-requirements.txt -rdev-requirements.txt -roldest-requirements.txt -rrequirements.txt -rrtfd-requirements.txt', 1)

@@ -1,0 +1,10 @@
+[testenv]
+commands = {envpython} -m xmlrunner --output-file /workdir/results/coloredlogs/15.0.1/1/graalpy-test-results.xml
+deps = mock
+	unittest-xml-reporting
+	-rrequirements-screenshots.txt
+	-rrequirements.txt
+	-rrequirements-travis.txt
+	-rrequirements-tests.txt
+	-rrequirements-checks.txt
+

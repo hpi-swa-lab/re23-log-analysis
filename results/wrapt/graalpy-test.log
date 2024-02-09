@@ -1,0 +1,951 @@
+GLOB sdist-make: /workdir/wrapt-1.14.1/setup.py
+graalpylibtest-unit-test-tests create: /workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/wrapt-1.14.1/.tox/.tmp/package/1/wrapt-1.14.1.zip
+graalpylibtest-unit-test-tests installed: distlib==0.3.7,exceptiongroup==1.2.0,filelock==3.13.1,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,platformdirs==4.0.0,pluggy==1.3.0,py==1.11.0,pytest==7.4.3,six==1.16.0,tomli==2.0.1,tox==3.28.0,virtualenv==20.24.7,wrapt @ file:///workdir/wrapt-1.14.1/.tox/.tmp/package/1/wrapt-1.14.1.zip
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2611942491'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/wrapt/1.14.1/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/wrapt-1.14.1
+configfile: setup.cfg
+collecting ... collected 392 items
+
+tests/test_adapter.py::TestAdapterAttributes::test_doc_string PASSED     [  0%]
+tests/test_adapter.py::TestAdapterAttributes::test_module_name PASSED    [  0%]
+tests/test_adapter.py::TestAdapterAttributes::test_object_name PASSED    [  0%]
+tests/test_adapter.py::TestAdapterAttributes::test_object_qualname PASSED [  1%]
+tests/test_adapter.py::TestArgumentSpecification::test_argspec PASSED    [  1%]
+tests/test_adapter.py::TestArgumentSpecification::test_isinstance FAILED [  1%]
+tests/test_adapter.py::TestArgumentSpecification::test_signature PASSED  [  1%]
+tests/test_adapter.py::TestDynamicAdapter::test_adapter_factory PASSED   [  2%]
+tests/test_adapter.py::TestDynamicAdapter::test_dynamic_adapter_classmethod PASSED [  2%]
+tests/test_adapter.py::TestDynamicAdapter::test_dynamic_adapter_function PASSED [  2%]
+tests/test_adapter.py::TestDynamicAdapter::test_dynamic_adapter_instancemethod PASSED [  2%]
+tests/test_adapter_py3.py::TestAdapterAttributesWithAnnotations::test_annotations PASSED [  3%]
+tests/test_adapter_py3.py::TestArgumentSpecificationWithAnnotations::test_argspec PASSED [  3%]
+tests/test_adapter_py3.py::TestArgumentSpecificationWithAnnotations::test_isinstance FAILED [  3%]
+tests/test_adapter_py3.py::TestArgumentSpecificationWithAnnotations::test_signature PASSED [  3%]
+tests/test_adapter_py3.py::TestDynamicAdapterWithAnnotations::test_adapter_factory PASSED [  4%]
+tests/test_adapter_py3.py::TestDynamicAdapterWithAnnotations::test_dynamic_adapter_classmethod PASSED [  4%]
+tests/test_adapter_py3.py::TestDynamicAdapterWithAnnotations::test_dynamic_adapter_function PASSED [  4%]
+tests/test_adapter_py3.py::TestDynamicAdapterWithAnnotations::test_dynamic_adapter_instancemethod PASSED [  4%]
+tests/test_adapter_py33.py::TestArgumentSpecification::test_getfullargspec PASSED [  5%]
+tests/test_adapter_py33.py::TestArgumentSpecification::test_signature PASSED [  5%]
+tests/test_arguments.py::TestArguments::test_getcallargs PASSED          [  5%]
+tests/test_arguments.py::TestArguments::test_unexpected_unicode_keyword PASSED [  5%]
+tests/test_attribute_wrapper.py::TestAttributeProxy::test_wrap_attribute PASSED [  6%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_1_keyword_argument PASSED [  6%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_1_positional_argument PASSED [  6%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_empty_arguments PASSED [  6%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_multiple_keyword_arguments PASSED [  7%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_multiple_positional_arguments PASSED [  7%]
+tests/test_callable_object_proxy.py::TestPartialCallableObjectProxy::test_no_arguments PASSED [  7%]
+tests/test_class.py::TestIntrospection::test_getmembers FAILED           [  7%]
+tests/test_class.py::TestInheritance::test_single_inheritance PASSED     [  8%]
+tests/test_class_py37.py::TestInheritance::test_multiple_inheritance PASSED [  8%]
+tests/test_class_py37.py::TestInheritance::test_multiple_inheritance_common PASSED [  8%]
+tests/test_class_py37.py::TestInheritance::test_single_inheritance PASSED [  8%]
+tests/test_copy.py::TestObjectCopy::test_copy PASSED                     [  9%]
+tests/test_copy.py::TestObjectCopy::test_copy_proxy PASSED               [  9%]
+tests/test_copy.py::TestObjectCopy::test_deepcopy PASSED                 [  9%]
+tests/test_copy.py::TestObjectCopy::test_deepcopy_proxy PASSED           [  9%]
+tests/test_decorators.py::TestDecorator::test_class_method_as_decorator PASSED [ 10%]
+tests/test_decorators.py::TestDecorator::test_class_type_as_decorator PASSED [ 10%]
+tests/test_decorators.py::TestDecorator::test_class_type_as_decorator_args PASSED [ 10%]
+tests/test_decorators.py::TestDecorator::test_instance_method_as_decorator PASSED [ 10%]
+tests/test_decorators.py::TestDecorator::test_no_parameters PASSED       [ 11%]
+tests/test_descriptors_py36.py::TestObjectDescriptors::test_set_name PASSED [ 11%]
+tests/test_formatargspec_py35.py::TestFormatargspec35::test_formatargspec PASSED [ 11%]
+tests/test_formatargspec_py38.py::TestFormatargspec38::test_formatargspec PASSED [ 11%]
+tests/test_function.py::TestNamingFunction::test_argspec PASSED          [ 12%]
+tests/test_function.py::TestNamingFunction::test_doc_string PASSED       [ 12%]
+tests/test_function.py::TestNamingFunction::test_getmembers PASSED       [ 12%]
+tests/test_function.py::TestNamingFunction::test_isinstance FAILED       [ 13%]
+tests/test_function.py::TestNamingFunction::test_module_name PASSED      [ 13%]
+tests/test_function.py::TestNamingFunction::test_object_name PASSED      [ 13%]
+tests/test_function.py::TestNamingFunction::test_object_qualname PASSED  [ 13%]
+tests/test_function.py::TestCallingFunction::test_call_function PASSED   [ 14%]
+tests/test_function_wrapper.py::TestClassInheritence::test_classmethod_type_inheritence PASSED [ 14%]
+tests/test_function_wrapper.py::TestClassInheritence::test_function_type_inheritence PASSED [ 14%]
+tests/test_function_wrapper.py::TestClassInheritence::test_instancemethod_type_inheritence PASSED [ 14%]
+tests/test_function_wrapper.py::TestClassInheritence::test_staticmethod_type_inheritence PASSED [ 15%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_classmethod_attributes PASSED [ 15%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_classmethod_attributes_external_class PASSED [ 15%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_classmethod_attributes_external_instance PASSED [ 15%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_function_attributes PASSED [ 16%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_instancemethod_attributes PASSED [ 16%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_instancemethod_attributes_external_class PASSED [ 16%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_instancemethod_attributes_external_instance PASSED [ 16%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_staticmethod_attributes PASSED [ 17%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_staticmethod_attributes_external_class PASSED [ 17%]
+tests/test_function_wrapper.py::TestAttributeAccess::test_staticmethod_attributes_external_instance PASSED [ 17%]
+tests/test_function_wrapper.py::TestParentReference::test_class_decorator PASSED [ 17%]
+tests/test_function_wrapper.py::TestParentReference::test_classmethod PASSED [ 18%]
+tests/test_function_wrapper.py::TestParentReference::test_function_decorator PASSED [ 18%]
+tests/test_function_wrapper.py::TestParentReference::test_instancemethod PASSED [ 18%]
+tests/test_function_wrapper.py::TestParentReference::test_nested_class_decorator PASSED [ 18%]
+tests/test_function_wrapper.py::TestParentReference::test_staticmethod_inner PASSED [ 19%]
+tests/test_function_wrapper.py::TestGuardArgument::test_boolean_dynamic_guard_on_decorator PASSED [ 19%]
+tests/test_function_wrapper.py::TestGuardArgument::test_boolean_false_guard_on_decorator PASSED [ 19%]
+tests/test_function_wrapper.py::TestGuardArgument::test_boolean_true_guard_on_decorator PASSED [ 19%]
+tests/test_function_wrapper.py::TestGuardArgument::test_function_guard_on_decorator PASSED [ 20%]
+tests/test_function_wrapper.py::TestGuardArgument::test_guard_on_instancemethod PASSED [ 20%]
+tests/test_function_wrapper.py::TestDerivedFunctionWrapper::test_override_bound_type PASSED [ 20%]
+tests/test_function_wrapper.py::TestFunctionBinding::test_double_binding PASSED [ 20%]
+tests/test_function_wrapper.py::TestFunctionBinding::test_re_bind_after_none PASSED [ 21%]
+tests/test_function_wrapper.py::TestInvalidWrapper::test_none_for_wrapped PASSED [ 21%]
+tests/test_function_wrapper.py::TestInvalidCalling::test_missing_self_via_class PASSED [ 21%]
+tests/test_inheritance_py37.py::TestClassInheritance::test_abc_inheritance PASSED [ 21%]
+tests/test_inheritance_py37.py::TestClassInheritance::test_basic_inheritance FAILED [ 22%]
+tests/test_inheritance_py37.py::TestClassInheritance::test_py_abc_inheritance PASSED [ 22%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_argspec PASSED [ 22%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_doc_string PASSED [ 22%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_isinstance FAILED [ 23%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_module_name PASSED [ 23%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_object_name PASSED [ 23%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_object_qualname PASSED [ 23%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_argspec PASSED [ 24%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_doc_string PASSED [ 24%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_isinstance FAILED [ 24%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_module_name PASSED [ 25%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_object_name PASSED [ 25%]
+tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_object_qualname PASSED [ 25%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_class_call_function PASSED [ 25%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_class_call_function_nested_decorators FAILED [ 26%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_class_externally_applied_wrapper PASSED [ 26%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_class_externally_passed_wrapper PASSED [ 26%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_instance_call_function PASSED [ 26%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_instance_call_function_nested_decorators FAILED [ 27%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_instance_externally_applied_wrapper PASSED [ 27%]
+tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_instance_externally_passed_wrapper PASSED [ 27%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_argspec PASSED [ 27%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_doc_string PASSED [ 28%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_isinstance FAILED [ 28%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_module_name PASSED [ 28%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_object_name PASSED [ 28%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_object_qualname PASSED [ 29%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_argspec PASSED [ 29%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_doc_string PASSED [ 29%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_isinstance FAILED [ 29%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_module_name PASSED [ 30%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_object_name PASSED [ 30%]
+tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_object_qualname PASSED [ 30%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_class_call_function PASSED [ 30%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_class_call_function_nested_decorator FAILED [ 31%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_class_externally_applied_wrapper PASSED [ 31%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_instance_call_function PASSED [ 31%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_instance_call_function_nested_decorator FAILED [ 31%]
+tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_instance_externally_applied_wrapper PASSED [ 32%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_argspec PASSED [ 32%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_doc_string PASSED [ 32%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_isinstance FAILED [ 32%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_module_name PASSED [ 33%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_object_name PASSED [ 33%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_object_qualname PASSED [ 33%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_getmembers PASSED [ 33%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_argspec PASSED [ 34%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_doc_string PASSED [ 34%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_isinstance FAILED [ 34%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_module_name PASSED [ 34%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_object_name PASSED [ 35%]
+tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_object_qualname PASSED [ 35%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_argspec PASSED [ 35%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_doc_string PASSED [ 35%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_isinstance FAILED [ 36%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_module_name PASSED [ 36%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_object_name PASSED [ 36%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_object_qualname PASSED [ 36%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_argspec PASSED [ 37%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_doc_string PASSED [ 37%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_isinstance FAILED [ 37%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_module_name PASSED [ 38%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_object_name PASSED [ 38%]
+tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_object_qualname PASSED [ 38%]
+tests/test_instancemethod.py::TestCallingInstanceMethodOldStyle::test_class_call_function PASSED [ 38%]
+tests/test_instancemethod.py::TestCallingInstanceMethodOldStyle::test_class_call_function_nested PASSED [ 39%]
+tests/test_instancemethod.py::TestCallingInstanceMethodOldStyle::test_instance_call_function PASSED [ 39%]
+tests/test_instancemethod.py::TestCallingInstanceMethodOldStyle::test_instance_call_function_nested PASSED [ 39%]
+tests/test_instancemethod.py::TestCallingInstanceMethodNewStyle::test_class_call_function PASSED [ 39%]
+tests/test_instancemethod.py::TestCallingInstanceMethodNewStyle::test_class_call_function_nested PASSED [ 40%]
+tests/test_instancemethod.py::TestCallingInstanceMethodNewStyle::test_instance_call_function PASSED [ 40%]
+tests/test_instancemethod.py::TestCallingInstanceMethodNewStyle::test_instance_call_function_nested PASSED [ 40%]
+tests/test_memoize.py::TestSynchronized::test_classmethod PASSED         [ 40%]
+tests/test_memoize.py::TestSynchronized::test_function PASSED            [ 41%]
+tests/test_memoize.py::TestSynchronized::test_instancemethod PASSED      [ 41%]
+tests/test_memoize.py::TestSynchronized::test_staticmethod PASSED        [ 41%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_function_wrapper PASSED [ 41%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_function_wrapper_class_method PASSED [ 42%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_function_wrapper_instance_method PASSED [ 42%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_patch_function_module PASSED [ 42%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_patch_function_module_name PASSED [ 42%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_transient_function_wrapper FAILED [ 43%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_transient_function_wrapper_instance_method FAILED [ 43%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_class_method_inherited PASSED [ 43%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_class_method_module_name PASSED [ 43%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_function_module PASSED [ 44%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_function_module_name PASSED [ 44%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_instance_method_module_name PASSED [ 44%]
+tests/test_monkey_patching.py::TestMonkeyPatching::test_wrap_static_method_module_name PASSED [ 44%]
+tests/test_monkey_patching.py::TestExplicitMonkeyPatching::test_patch_instance_method_class PASSED [ 45%]
+tests/test_monkey_patching.py::TestExplicitMonkeyPatching::test_patch_instance_method_dict PASSED [ 45%]
+tests/test_monkey_patching.py::TestExplicitMonkeyPatching::test_patch_instance_method_extracted PASSED [ 45%]
+tests/test_monkey_patching.py::TestExplicitMonkeyPatching::test_patch_instance_method_instance PASSED [ 45%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_argspec PASSED [ 46%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_doc_string PASSED [ 46%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_isinstance FAILED [ 46%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_module_name PASSED [ 46%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_object_name PASSED [ 47%]
+tests/test_nested_function.py::TestNamingNestedFunction::test_object_qualname PASSED [ 47%]
+tests/test_nested_function.py::TestCallingNestedFunction::test_call_function PASSED [ 47%]
+tests/test_object_proxy.py::TestAttributeAccess::test_attributes PASSED  [ 47%]
+tests/test_object_proxy.py::TestAttributeAccess::test_delete_wrapped PASSED [ 48%]
+tests/test_object_proxy.py::TestAttributeAccess::test_get_wrapped PASSED [ 48%]
+tests/test_object_proxy.py::TestAttributeAccess::test_init_not_called PASSED [ 48%]
+tests/test_object_proxy.py::TestAttributeAccess::test_proxy_attribute PASSED [ 48%]
+tests/test_object_proxy.py::TestAttributeAccess::test_set_wrapped PASSED [ 49%]
+tests/test_object_proxy.py::TestAttributeAccess::test_wrapped_attribute PASSED [ 49%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_class_doc_string PASSED [ 49%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_class_module_name PASSED [ 50%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_class_object_name PASSED [ 50%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_class_object_qualname PASSED [ 50%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_function_doc_string PASSED [ 50%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_function_module_name PASSED [ 51%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_function_object_name PASSED [ 51%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_function_object_qualname PASSED [ 51%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_instance_doc_string PASSED [ 51%]
+tests/test_object_proxy.py::TestNamingObjectProxy::test_instance_module_name PASSED [ 52%]
+tests/test_object_proxy.py::TestTypeObjectProxy::test_class_of_class FAILED [ 52%]
+tests/test_object_proxy.py::TestTypeObjectProxy::test_class_of_function FAILED [ 52%]
+tests/test_object_proxy.py::TestTypeObjectProxy::test_class_of_instance PASSED [ 52%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_dir_of_class PASSED [ 53%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_dir_of_function PASSED [ 53%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_dir_of_instance PASSED [ 53%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_vars_of_class PASSED [ 53%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_vars_of_function PASSED [ 54%]
+tests/test_object_proxy.py::TestDirObjectProxy::test_vars_of_instance PASSED [ 54%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_args PASSED [ 54%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_args_plus_kwargs PASSED [ 54%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_kwargs PASSED [ 55%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_no_args PASSED [ 55%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_via_class_args PASSED [ 55%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_via_class_args_plus_kwargs PASSED [ 55%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_via_class_kwargs PASSED [ 56%]
+tests/test_object_proxy.py::TestCallingObject::test_classmethod_via_class_no_args PASSED [ 56%]
+tests/test_object_proxy.py::TestCallingObject::test_function_args PASSED [ 56%]
+tests/test_object_proxy.py::TestCallingObject::test_function_args_plus_kwargs PASSED [ 56%]
+tests/test_object_proxy.py::TestCallingObject::test_function_kwargs PASSED [ 57%]
+tests/test_object_proxy.py::TestCallingObject::test_function_no_args PASSED [ 57%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_args PASSED [ 57%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_args_plus_kwargs PASSED [ 57%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_kwargs PASSED [ 58%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_no_args PASSED [ 58%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_via_class_args PASSED [ 58%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_via_class_args_plus_kwargs PASSED [ 58%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_via_class_kwargs PASSED [ 59%]
+tests/test_object_proxy.py::TestCallingObject::test_instancemethod_via_class_no_args PASSED [ 59%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_args PASSED [ 59%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_args_plus_kwargs PASSED [ 59%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_kwargs PASSED [ 60%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_no_args PASSED [ 60%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_via_class_args PASSED [ 60%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_via_class_args_plus_kwargs PASSED [ 60%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_via_class_kwargs PASSED [ 61%]
+tests/test_object_proxy.py::TestCallingObject::test_staticmethod_via_class_no_args PASSED [ 61%]
+tests/test_object_proxy.py::TestIterObjectProxy::test_iteration PASSED   [ 61%]
+tests/test_object_proxy.py::TestContextManagerObjectProxy::test_context_manager PASSED [ 61%]
+tests/test_object_proxy.py::TestEqualityObjectProxy::test_comparison PASSED [ 62%]
+tests/test_object_proxy.py::TestEqualityObjectProxy::test_mapping_key PASSED [ 62%]
+tests/test_object_proxy.py::TestEqualityObjectProxy::test_object_hash PASSED [ 62%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_abs PASSED     [ 63%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_add PASSED     [ 63%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_add_uninitialized_args PASSED [ 63%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_and PASSED     [ 63%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_and_uninitialized_args PASSED [ 64%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_div PASSED     [ 64%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_div_uninitialized_args PASSED [ 64%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_divmod PASSED  [ 64%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_divmod_uninitialized_args PASSED [ 65%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_float PASSED   [ 65%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_floordiv PASSED [ 65%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_floordiv_uninitialized_args PASSED [ 65%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_hex PASSED     [ 66%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_iadd PASSED    [ 66%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_iand PASSED    [ 66%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_idiv PASSED    [ 66%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ifloordiv PASSED [ 67%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ilshift PASSED [ 67%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_imod PASSED    [ 67%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_imul PASSED    [ 67%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_index PASSED   [ 68%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_int PASSED     [ 68%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_invert PASSED  [ 68%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ior PASSED     [ 68%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ior_list_self PASSED [ 69%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ipow PASSED    [ 69%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_irshift PASSED [ 69%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_isub PASSED    [ 69%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_ixor PASSED    [ 70%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_lshift PASSED  [ 70%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_lshift_uninitialized_args PASSED [ 70%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_mod PASSED     [ 70%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_mod_uninitialized_args PASSED [ 71%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_mul PASSED     [ 71%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_mul_uninitialized_args PASSED [ 71%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_neg PASSED     [ 71%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_nonzero PASSED [ 72%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_oct PASSED     [ 72%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_or PASSED      [ 72%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_or_uninitialized_args PASSED [ 72%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_pos PASSED     [ 73%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_pow PASSED     [ 73%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_pow_uninitialized_args PASSED [ 73%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_rshift PASSED  [ 73%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_rshift_uninitialized_args PASSED [ 74%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_sub PASSED     [ 74%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_sub_uninitialized_args PASSED [ 74%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_xor PASSED     [ 75%]
+tests/test_object_proxy.py::TestAsNumberObjectProxy::test_xor_uninitialized_args PASSED [ 75%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_contains PASSED [ 75%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_delitem PASSED [ 75%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_delslice PASSED [ 76%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_getitem PASSED [ 76%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_getslice PASSED [ 76%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_length PASSED [ 76%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_setitem PASSED [ 77%]
+tests/test_object_proxy.py::TestAsSequenceObjectProxy::test_setslice PASSED [ 77%]
+tests/test_object_proxy.py::TestAsMappingObjectProxy::test_contains PASSED [ 77%]
+tests/test_object_proxy.py::TestAsMappingObjectProxy::test_delitem PASSED [ 77%]
+tests/test_object_proxy.py::TestAsMappingObjectProxy::test_getitem PASSED [ 78%]
+tests/test_object_proxy.py::TestAsMappingObjectProxy::test_length PASSED [ 78%]
+tests/test_object_proxy.py::TestAsMappingObjectProxy::test_setitem PASSED [ 78%]
+tests/test_object_proxy.py::TestObjectRepresentationObjectProxy::test_repr PASSED [ 78%]
+tests/test_object_proxy.py::TestObjectRepresentationObjectProxy::test_str PASSED [ 79%]
+tests/test_object_proxy.py::TestDerivedClassCreation::test_derived_missing_init PASSED [ 79%]
+tests/test_object_proxy.py::TestDerivedClassCreation::test_derived_new PASSED [ 79%]
+tests/test_object_proxy.py::TestDerivedClassCreation::test_derived_setattr PASSED [ 79%]
+tests/test_object_proxy.py::DerivedClassAttributes::test_class_properties PASSED [ 80%]
+tests/test_object_proxy.py::DerivedClassAttributes::test_override_class_attributes PASSED [ 80%]
+tests/test_object_proxy.py::DerivedClassAttributes::test_setup_class_attributes PASSED [ 80%]
+tests/test_object_proxy.py::OverrideAttributeAccess::test_attr_functions PASSED [ 80%]
+tests/test_object_proxy.py::OverrideAttributeAccess::test_override_getattr PASSED [ 81%]
+tests/test_object_proxy.py::CallableFunction::test_callable_proxy_getattr_call PASSED [ 81%]
+tests/test_object_proxy.py::CallableFunction::test_callable_proxy_hasattr_call PASSED [ 81%]
+tests/test_object_proxy.py::CallableFunction::test_callable_proxy_is_callable PASSED [ 81%]
+tests/test_object_proxy.py::CallableFunction::test_proxy_getattr_call PASSED [ 82%]
+tests/test_object_proxy.py::CallableFunction::test_proxy_hasattr_call PASSED [ 82%]
+tests/test_object_proxy.py::CallableFunction::test_proxy_is_callable PASSED [ 82%]
+tests/test_object_proxy.py::SpecialMethods::test_class_bytes PASSED      [ 82%]
+tests/test_object_proxy.py::SpecialMethods::test_complex PASSED          [ 83%]
+tests/test_object_proxy.py::SpecialMethods::test_decimal_complex PASSED  [ 83%]
+tests/test_object_proxy.py::SpecialMethods::test_fractions_round PASSED  [ 83%]
+tests/test_object_proxy.py::SpecialMethods::test_list_reversed PASSED    [ 83%]
+tests/test_object_proxy.py::SpecialMethods::test_str_format PASSED       [ 84%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_argspec PASSED [ 84%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_doc_string FAILED [ 84%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_isinstance PASSED [ 84%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_module_name PASSED [ 85%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_object_name PASSED [ 85%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_object_qualname PASSED [ 85%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_argspec PASSED [ 85%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_doc_string FAILED [ 86%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_isinstance PASSED [ 86%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_module_name PASSED [ 86%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_object_name PASSED [ 86%]
+tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_object_qualname PASSED [ 87%]
+tests/test_outer_classmethod.py::TestCallingOuterClassMethod::test_class_call_function FAILED [ 87%]
+tests/test_outer_classmethod.py::TestCallingOuterClassMethod::test_instance_call_function FAILED [ 87%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_argspec PASSED [ 88%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_doc_string PASSED [ 88%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_isinstance FAILED [ 88%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_module_name PASSED [ 88%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_object_name PASSED [ 89%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_object_qualname PASSED [ 89%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_argspec PASSED [ 89%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_doc_string PASSED [ 89%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_isinstance FAILED [ 90%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_module_name PASSED [ 90%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_object_name PASSED [ 90%]
+tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_object_qualname PASSED [ 90%]
+tests/test_outer_staticmethod.py::TestCallingOuterStaticMethod::test_class_call_function PASSED [ 91%]
+tests/test_outer_staticmethod.py::TestCallingOuterStaticMethod::test_instance_call_function PASSED [ 91%]
+tests/test_pickle.py::TestObjectPickle::test_pickle PASSED               [ 91%]
+tests/test_pickle.py::TestObjectPickle::test_pickle_proxy PASSED         [ 91%]
+tests/test_post_import_hooks.py::TestPostImportHooks::test_after_import PASSED [ 92%]
+tests/test_post_import_hooks.py::TestPostImportHooks::test_before_and_after_import PASSED [ 92%]
+tests/test_post_import_hooks.py::TestPostImportHooks::test_before_import PASSED [ 92%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_false_instance PASSED [ 92%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_function PASSED [ 93%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_inner_classmethod PASSED [ 93%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_inner_staticmethod PASSED [ 93%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_instancemethod PASSED [ 93%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_outer_classmethod FAILED [ 94%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_outer_staticmethod PASSED [ 94%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_type_new_style PASSED [ 94%]
+tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_type_old_style PASSED [ 94%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_annotations PASSED [ 95%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_annotations_modified_on_original PASSED [ 95%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_doc PASSED [ 95%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_doc_modified_on_original PASSED [ 95%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_module PASSED [ 96%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_module_modified_on_original PASSED [ 96%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_name PASSED [ 96%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_name_modified_on_original PASSED [ 96%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_qualname PASSED [ 97%]
+tests/test_update_attributes.py::TestUpdateAttributes::test_update_qualname_modified_on_original PASSED [ 97%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_call_expired PASSED [ 97%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_classmethod FAILED [ 97%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_decorator_method PASSED [ 98%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_function FAILED [ 98%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_instancemethod_delete_function PASSED [ 98%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_instancemethod_delete_function_and_instance PASSED [ 98%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_instancemethod_delete_instance PASSED [ 99%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_isinstance FAILED [ 99%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_no_callback PASSED [ 99%]
+tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_staticmethod FAILED [100%]
+
+=================================== FAILURES ===================================
+__________________ TestArgumentSpecification.test_isinstance ___________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_adapter.py", line 103, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+___________ TestArgumentSpecificationWithAnnotations.test_isinstance ___________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_adapter_py3.py", line 103, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+______________________ TestIntrospection.test_getmembers _______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_class.py", line 33, in test_getmembers
+    class1d_members = inspect.getmembers(class1d)
+  File "/opt/graalpy/lib/python3.10/inspect.py", line 469, in getmembers
+    value = getattr(object, key)
+TypeError: descriptor '__weakref__' for '_ObjectProxyMethods' objects doesn't apply to 'FunctionWrapper' object
+______________________ TestNamingFunction.test_isinstance ______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_function.py", line 71, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_________________ TestClassInheritance.test_basic_inheritance __________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inheritance_py37.py", line 31, in test_basic_inheritance
+    self.assertTrue(issubclass(C1, B1))
+TypeError: issubclass() arg 1 must be a class
+_______________ TestNamingInnerClassMethod.test_class_isinstance _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_____________ TestNamingInnerClassMethod.test_instance_isinstance ______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+____ TestCallingInnerClassMethod.test_class_call_function_nested_decorators ____
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 200, in test_class_call_function_nested_decorators
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 642, in __call__
+    return self._self_wrapper(wrapped, instance, args, kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 184, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != <class 'test_inner_classmethod.TestCallin[72 chars]ass'>
+__ TestCallingInnerClassMethod.test_instance_call_function_nested_decorators ___
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 228, in test_instance_call_function_nested_decorators
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 212, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: <test_inner_classmethod.TestCallingInnerCl[86 chars]9c0d> != <class 'test_inner_classmethod.TestCalling[74 chars]ass'>
+______________ TestNamingInnerStaticMethod.test_class_isinstance _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_____________ TestNamingInnerStaticMethod.test_instance_isinstance _____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+____ TestCallingInnerStaticMethod.test_class_call_function_nested_decorator ____
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 200, in test_class_call_function_nested_decorator
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 642, in __call__
+    return self._self_wrapper(wrapped, instance, args, kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 184, in _decorator
+    self.assertEqual(instance, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != None
+__ TestCallingInnerStaticMethod.test_instance_call_function_nested_decorator ___
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 228, in test_instance_call_function_nested_decorator
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 212, in _decorator
+    self.assertEqual(instance, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: <test_inner_staticmethod.TestCallingInner[89 chars]066d> != None
+____________ TestNamingInstanceMethodOldStyle.test_class_isinstance ____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 116, in test_class_isinstance
+    self.assertTrue(isinstance(OldClass1d.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+__________ TestNamingInstanceMethodOldStyle.test_instance_isinstance ___________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 122, in test_instance_isinstance
+    self.assertTrue(isinstance(OldClass1d().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+____________ TestNamingInstanceMethodNewStyle.test_class_isinstance ____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 215, in test_class_isinstance
+    self.assertTrue(isinstance(NewClass1d.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+__________ TestNamingInstanceMethodNewStyle.test_instance_isinstance ___________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 221, in test_instance_isinstance
+    self.assertTrue(isinstance(NewClass1d().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+______________ TestMonkeyPatching.test_transient_function_wrapper ______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 324, in test_transient_function_wrapper
+    result = function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 892, in _execute
+    return wrapped(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 322, in function
+    return self._test_transient_function_wrapper(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 314, in wrapper
+    self.assertEqual(wrapped, self._test_transient_function_wrapper)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: <bound method TestMonkeyPatching._test_tra[107 chars]per>> != <BoundFunctionWrapper at 0xb83 for method at 0xb87>
+______ TestMonkeyPatching.test_transient_function_wrapper_instance_method ______
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 353, in test_transient_function_wrapper_instance_method
+    result = function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 892, in _execute
+    return wrapped(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 351, in function
+    return self._test_transient_function_wrapper(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 343, in __call__
+    _self.assertEqual(wrapped, _self._test_transient_function_wrapper)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: <bound method TestMonkeyPatching._test_tra[123 chars]hod>> != <BoundFunctionWrapper at 0xb8f for method at 0xb93>
+___________________ TestNamingNestedFunction.test_isinstance ___________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_nested_function.py", line 75, in test_isinstance
+    self.assertTrue(isinstance(function1d(), type(function1o())))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+___________________ TestTypeObjectProxy.test_class_of_class ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_object_proxy.py", line 248, in test_class_of_class
+    self.assertTrue(isinstance(wrapper, type(target)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+__________________ TestTypeObjectProxy.test_class_of_function __________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_object_proxy.py", line 269, in test_class_of_function
+    self.assertTrue(isinstance(wrapper, type(target)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_______________ TestNamingOuterClassMethod.test_class_doc_string _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 85, in test_class_doc_string
+    self.assertEqual(Class.function.__doc__,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != 'documentation'
+_____________ TestNamingOuterClassMethod.test_instance_doc_string ______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 91, in test_instance_doc_string
+    self.assertEqual(Class().function.__doc__,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != 'documentation'
+_____________ TestCallingOuterClassMethod.test_class_call_function _____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 160, in test_class_call_function
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 141, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != <class 'test_outer_classmethod.TestCallin[54 chars]ass'>
+___________ TestCallingOuterClassMethod.test_instance_call_function ____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 202, in test_instance_call_function
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 183, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != <class 'test_outer_classmethod.TestCallin[57 chars]ass'>
+______________ TestNamingOuterStaticMethod.test_class_isinstance _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_staticmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_____________ TestNamingOuterStaticMethod.test_instance_isinstance _____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_staticmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+_____________ TestSynchronized.test_synchronized_outer_classmethod _____________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_synchronized_lock.py", line 181, in test_synchronized_outer_classmethod
+    self.assertNotEqual(_lock1, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 854, in assertNotEqual
+    raise self.failureException(msg)
+AssertionError: None == None
+----------------------------- Captured stdout call -----------------------------
+function2
+____________________ TestWeakFunctionProxy.test_classmethod ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 151, in test_classmethod
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1
+_____________________ TestWeakFunctionProxy.test_function ______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 61, in test_function
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1
+____________________ TestWeakFunctionProxy.test_isinstance _____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 16, in test_isinstance
+    self.assertTrue(isinstance(proxy, type(function)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+___________________ TestWeakFunctionProxy.test_staticmethod ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 172, in test_staticmethod
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/wrapt/1.14.1/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_adapter.py::TestArgumentSpecification::test_isinstance - As...
+FAILED tests/test_adapter_py3.py::TestArgumentSpecificationWithAnnotations::test_isinstance
+FAILED tests/test_class.py::TestIntrospection::test_getmembers - TypeError: d...
+FAILED tests/test_function.py::TestNamingFunction::test_isinstance - Assertio...
+FAILED tests/test_inheritance_py37.py::TestClassInheritance::test_basic_inheritance
+FAILED tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_class_isinstance
+FAILED tests/test_inner_classmethod.py::TestNamingInnerClassMethod::test_instance_isinstance
+FAILED tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_class_call_function_nested_decorators
+FAILED tests/test_inner_classmethod.py::TestCallingInnerClassMethod::test_instance_call_function_nested_decorators
+FAILED tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_class_isinstance
+FAILED tests/test_inner_staticmethod.py::TestNamingInnerStaticMethod::test_instance_isinstance
+FAILED tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_class_call_function_nested_decorator
+FAILED tests/test_inner_staticmethod.py::TestCallingInnerStaticMethod::test_instance_call_function_nested_decorator
+FAILED tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_class_isinstance
+FAILED tests/test_instancemethod.py::TestNamingInstanceMethodOldStyle::test_instance_isinstance
+FAILED tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_class_isinstance
+FAILED tests/test_instancemethod.py::TestNamingInstanceMethodNewStyle::test_instance_isinstance
+FAILED tests/test_monkey_patching.py::TestMonkeyPatching::test_transient_function_wrapper
+FAILED tests/test_monkey_patching.py::TestMonkeyPatching::test_transient_function_wrapper_instance_method
+FAILED tests/test_nested_function.py::TestNamingNestedFunction::test_isinstance
+FAILED tests/test_object_proxy.py::TestTypeObjectProxy::test_class_of_class
+FAILED tests/test_object_proxy.py::TestTypeObjectProxy::test_class_of_function
+FAILED tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_class_doc_string
+FAILED tests/test_outer_classmethod.py::TestNamingOuterClassMethod::test_instance_doc_string
+FAILED tests/test_outer_classmethod.py::TestCallingOuterClassMethod::test_class_call_function
+FAILED tests/test_outer_classmethod.py::TestCallingOuterClassMethod::test_instance_call_function
+FAILED tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_class_isinstance
+FAILED tests/test_outer_staticmethod.py::TestNamingOuterStaticMethod::test_instance_isinstance
+FAILED tests/test_synchronized_lock.py::TestSynchronized::test_synchronized_outer_classmethod
+FAILED tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_classmethod
+FAILED tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_function
+FAILED tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_isinstance
+FAILED tests/test_weak_function_proxy.py::TestWeakFunctionProxy::test_staticmethod
+================== 33 failed, 359 passed, 1 warning in 10.63s ==================
+ERROR: InvocationError for command /workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/wrapt/1.14.1/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

@@ -1,0 +1,71 @@
+GLOB sdist-make: /workdir/oslo.utils-6.1.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements.txt, -rdoc/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/oslo.utils-6.1.0/.tox/.tmp/package/1/oslo.utils-6.1.0.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,autopage==0.5.2,Babel==2.13.1,bandit==1.6.2,certifi==2023.11.17,cfgv==3.4.0,charset-normalizer==3.1.0,cliff==4.4.0,cmd2==2.4.3,coverage==7.3.2,ddt==1.7.0,debtcollector==2.5.0,distlib==0.3.7,dnspython==2.4.2,docutils==0.20.1,dulwich==0.21.6,entrypoints==0.3,eventlet==0.33.3,exceptiongroup==1.2.0,extras==1.0.0,filelock==3.13.1,fixtures==4.1.0,flake8==3.7.9,gitdb==4.0.11,GitPython==3.1.40,graalpy-virtualenv==0.0.1,greenlet==3.0.1,hacking==3.0.1,hpy==0.9.0rc2,identify==2.5.32,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,iso8601==2.1.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.6.1,mock==5.1.0,netaddr==0.9.0,netifaces==0.11.0,nodeenv==1.8.0,openstackdocstheme==3.2.0,oslo.config==9.2.0,oslo.i18n==6.2.0,oslo.utils @ file:///workdir/oslo.utils-6.1.0/.tox/.tmp/package/1/oslo.utils-6.1.0.zip,oslotest==4.5.0,packaging==23.2,pbr==6.0.0,platformdirs==4.0.0,pluggy==1.3.0,pre-commit==3.5.0,prettytable==3.9.0,pycodestyle==2.5.0,pyflakes==2.1.1,Pygments==2.17.2,pyparsing==3.0.8,pyperclip==1.8.2,pytest==7.4.3,python-subunit==1.4.4,pytz==2022.2.1,PyYAML==6.0.1,reno==4.0.0,requests==2.31.0,rfc3986==2.0.0,six==1.16.0,smmap==5.0.1,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,stestr==4.1.0,stevedore==5.1.0,testscenarios==0.5.0,testtools==2.7.1,tomli==2.0.1,tomlkit==0.12.3,urllib3==2.1.0,virtualenv==20.24.7,voluptuous==0.14.1,wcwidth==0.2.12,wrapt==1.16.0,zipp==3.17.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3170571236'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/oslo.utils/6.1.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/oslo.utils-6.1.0
+collecting ... collected 395 items / 1 error
+
+==================================== ERRORS ====================================
+___________ ERROR collecting oslo_utils/tests/test_eventletutils.py ____________
+Traceback (most recent call last):
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_eventletutils.py", line 19, in <module>
+    import eventlet
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/__init__.py", line 17, in <module>
+    from eventlet import convenience
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/convenience.py", line 7, in <module>
+    from eventlet.green import socket
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/green/socket.py", line 21, in <module>
+    from eventlet.support import greendns
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greendns.py", line 72, in <module>
+    setattr(dns.rdtypes.IN, pkg, import_patched('dns.rdtypes.IN.' + pkg))
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greendns.py", line 61, in import_patched
+    return patcher.import_patched(module_name, **modules)
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/patcher.py", line 132, in import_patched
+    return inject(
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/patcher.py", line 109, in inject
+    module = __import__(module_name, {}, {}, module_name.split('.')[:-1])
+  File "/workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/dns/rdtypes/IN/WKS.py", line 26, in <module>
+    _proto_tcp = socket.getprotobyname("tcp")
+AttributeError: module 'eventlet.green._socket_nodns' has no attribute 'getprotobyname'
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+
+oslo_utils/tests/test_strutils.py:677
+  /workdir/oslo.utils-6.1.0/oslo_utils/tests/test_strutils.py:677: PytestCollectionWarning: cannot collect test class 'TestMapping' because it has a __init__ constructor (from: oslo_utils/tests/test_strutils.py)
+    class TestMapping(collections.abc.Mapping):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/oslo.utils/6.1.0/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+ERROR oslo_utils/tests/test_eventletutils.py - AttributeError: module 'eventl...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+========================= 2 warnings, 1 error in 5.62s =========================
+Function not implemented in GraalPy: PyInterpreterState_Head
+ERROR: InvocationError for command /workdir/oslo.utils-6.1.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/oslo.utils/6.1.0/1/graalpy-test-results.xml (exited with code 255) (exited with code 255)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

@@ -1,0 +1,84 @@
+GLOB sdist-make: /workdir/circuitbreaker-2.0.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/circuitbreaker-2.0.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements_dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/circuitbreaker-2.0.0/.tox/.tmp/package/1/circuitbreaker-2.0.0.zip
+cpythonlibtest-unit-test-tests installed: circuitbreaker @ file:///workdir/circuitbreaker-2.0.0/.tox/.tmp/package/1/circuitbreaker-2.0.0.zip#sha256=f98f1e114b753fef0989d7d46c921d3ad5c430929af091becebcb14f10f20fd0,coverage==7.3.2,exceptiongroup==1.1.3,flake8==6.1.0,iniconfig==2.0.0,mccabe==0.7.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,pytest==7.4.3,pytest-asyncio==0.21.1,pytest-cov==4.1.0,pytest-mock==3.12.0,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2389297670'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/circuitbreaker/2.0.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/circuitbreaker-2.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/circuitbreaker-2.0.0
+configfile: pytest.ini
+plugins: asyncio-0.21.1, mock-3.12.0, cov-4.1.0
+asyncio: mode=auto
+collecting ... collected 62 items
+
+tests/test_functional.py::test_circuit_pass_through[sync-function] PASSED [  1%]
+tests/test_functional.py::test_circuit_pass_through[sync-generator] PASSED [  3%]
+tests/test_functional.py::test_circuit_pass_through[async-function] PASSED [  4%]
+tests/test_functional.py::test_circuit_pass_through[async-generator] PASSED [  6%]
+tests/test_functional.py::test_circuitbreaker_monitor[sync-function] PASSED [  8%]
+tests/test_functional.py::test_circuitbreaker_monitor[sync-generator] PASSED [  9%]
+tests/test_functional.py::test_circuitbreaker_monitor[async-function] PASSED [ 11%]
+tests/test_functional.py::test_circuitbreaker_monitor[async-generator] PASSED [ 12%]
+tests/test_functional.py::test_threshold_hit_prevents_consequent_calls[sync-function] PASSED [ 14%]
+tests/test_functional.py::test_threshold_hit_prevents_consequent_calls[sync-generator] PASSED [ 16%]
+tests/test_functional.py::test_threshold_hit_prevents_consequent_calls[async-function] PASSED [ 17%]
+tests/test_functional.py::test_threshold_hit_prevents_consequent_calls[async-generator] PASSED [ 19%]
+tests/test_functional.py::test_circuitbreaker_recover_half_open[sync-function] PASSED [ 20%]
+tests/test_functional.py::test_circuitbreaker_recover_half_open[sync-generator] PASSED [ 22%]
+tests/test_functional.py::test_circuitbreaker_recover_half_open[async-function] PASSED [ 24%]
+tests/test_functional.py::test_circuitbreaker_recover_half_open[async-generator] PASSED [ 25%]
+tests/test_functional.py::test_circuitbreaker_reopens_after_successful_calls[sync-function] PASSED [ 27%]
+tests/test_functional.py::test_circuitbreaker_reopens_after_successful_calls[sync-generator] PASSED [ 29%]
+tests/test_functional.py::test_circuitbreaker_reopens_after_successful_calls[async-function] PASSED [ 30%]
+tests/test_functional.py::test_circuitbreaker_reopens_after_successful_calls[async-generator] PASSED [ 32%]
+tests/test_unit.py::test_circuitbreaker__str__ PASSED                    [ 33%]
+tests/test_unit.py::test_circuitbreaker_error__str__ PASSED              [ 35%]
+tests/test_unit.py::test_circuitbreaker_wrapper_matches_function_type[sync-function] PASSED [ 37%]
+tests/test_unit.py::test_circuitbreaker_wrapper_matches_function_type[sync-generator] PASSED [ 38%]
+tests/test_unit.py::test_circuitbreaker_wrapper_matches_function_type[async-function] PASSED [ 40%]
+tests/test_unit.py::test_circuitbreaker_wrapper_matches_function_type[async-generator] PASSED [ 41%]
+tests/test_unit.py::test_circuitbreaker_should_save_last_exception_on_failure_call[sync-function] PASSED [ 43%]
+tests/test_unit.py::test_circuitbreaker_should_save_last_exception_on_failure_call[sync-generator] PASSED [ 45%]
+tests/test_unit.py::test_circuitbreaker_should_save_last_exception_on_failure_call[async-function] PASSED [ 46%]
+tests/test_unit.py::test_circuitbreaker_should_save_last_exception_on_failure_call[async-generator] PASSED [ 48%]
+tests/test_unit.py::test_circuitbreaker_should_clear_last_exception_on_success_call[sync-function] PASSED [ 50%]
+tests/test_unit.py::test_circuitbreaker_should_clear_last_exception_on_success_call[sync-generator] PASSED [ 51%]
+tests/test_unit.py::test_circuitbreaker_should_clear_last_exception_on_success_call[async-function] PASSED [ 53%]
+tests/test_unit.py::test_circuitbreaker_should_clear_last_exception_on_success_call[async-generator] PASSED [ 54%]
+tests/test_unit.py::test_circuitbreaker_should_call_fallback_function_if_open[sync-function] PASSED [ 56%]
+tests/test_unit.py::test_circuitbreaker_should_call_fallback_function_if_open[sync-generator] PASSED [ 58%]
+tests/test_unit.py::test_circuitbreaker_should_call_fallback_function_if_open[async-function] PASSED [ 59%]
+tests/test_unit.py::test_circuitbreaker_should_call_fallback_function_if_open[async-generator] PASSED [ 61%]
+tests/test_unit.py::test_circuitbreaker_should_not_call_function_if_open[sync-function] PASSED [ 62%]
+tests/test_unit.py::test_circuitbreaker_should_not_call_function_if_open[sync-generator] PASSED [ 64%]
+tests/test_unit.py::test_circuitbreaker_should_not_call_function_if_open[async-function] PASSED [ 66%]
+tests/test_unit.py::test_circuitbreaker_should_not_call_function_if_open[async-generator] PASSED [ 67%]
+tests/test_unit.py::test_circuitbreaker_call_fallback_function_with_parameters[sync-function] PASSED [ 69%]
+tests/test_unit.py::test_circuitbreaker_call_fallback_function_with_parameters[sync-generator] PASSED [ 70%]
+tests/test_unit.py::test_circuitbreaker_call_fallback_function_with_parameters[async-function] PASSED [ 72%]
+tests/test_unit.py::test_circuitbreaker_call_fallback_function_with_parameters[async-generator] PASSED [ 74%]
+tests/test_unit.py::test_circuit_decorator_without_args[sync-function] PASSED [ 75%]
+tests/test_unit.py::test_circuit_decorator_without_args[sync-generator] PASSED [ 77%]
+tests/test_unit.py::test_circuit_decorator_without_args[async-function] PASSED [ 79%]
+tests/test_unit.py::test_circuit_decorator_without_args[async-generator] PASSED [ 80%]
+tests/test_unit.py::test_circuit_decorator_with_args PASSED              [ 82%]
+tests/test_unit.py::test_breaker_expected_exception_is_predicate PASSED  [ 83%]
+tests/test_unit.py::test_breaker_default_constructor_traps_Exception PASSED [ 85%]
+tests/test_unit.py::test_breaker_expected_exception_is_custom_exception PASSED [ 87%]
+tests/test_unit.py::test_breaker_constructor_expected_exception_is_exception_list PASSED [ 88%]
+tests/test_unit.py::test_constructor_mistake_name_bytes PASSED           [ 90%]
+tests/test_unit.py::test_constructor_mistake_name_unicode PASSED         [ 91%]
+tests/test_unit.py::test_constructor_mistake_expected_exception PASSED   [ 93%]
+tests/test_unit.py::test_advanced_usage_circuitbreaker_subclass PASSED   [ 95%]
+tests/test_unit.py::test_advanced_usage_circuitbreaker_subclass_with_list PASSED [ 96%]
+tests/test_unit.py::test_advanced_usage_circuitbreaker_subclass_with_predicate PASSED [ 98%]
+tests/test_unit.py::test_advanced_usage_circuitbreaker_default_expected_exception PASSED [100%]
+
+- generated xml file: /workdir/results/circuitbreaker/2.0.0/1/cpython-test-results.xml -
+============================== 62 passed in 8.38s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

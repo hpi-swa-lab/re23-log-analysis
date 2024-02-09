@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="1.754" timestamp="2023-11-30T06:43:19.690000" hostname="be2d8ee410eb"><testcase classname="" name="ast3.tests.test_basics" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/typed-ast-1.5.4/ast3/tests/test_basics.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+SystemError: /workdir/typed-ast-1.5.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/typed_ast/_ast3.graalpy231-310-native-x86_64-linux.so: undefined symbol: _PyArena_AddPyObject
+
+The above exception was the direct cause of the following exception:
+/opt/graalpy/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ast3/tests/test_basics.py:5: in &lt;module&gt;
+    from typed_ast import _ast3
+E   ImportError: cannot load /workdir/typed-ast-1.5.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/typed_ast/_ast3.graalpy231-310-native-x86_64-linux.so: NFIUnsatisfiedLinkError: /workdir/typed-ast-1.5.4/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/typed_ast/_ast3.graalpy231-310-native-x86_64-linux.so: undefined symbol: _PyArena_AddPyObject</error></testcase></testsuite></testsuites>

@@ -1,0 +1,133 @@
+.package create: /workdir/jupyter-core-5.2.0/.tox/.package
+.package installdeps: hatchling>=1.4
+cpythonlibtest-unit-test-tests create: /workdir/jupyter-core-5.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/jupyter-core-5.2.0/.tox/.tmp/package/1/jupyter_core-5.2.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,jupyter_core @ file:///workdir/jupyter-core-5.2.0/.tox/.tmp/package/1/jupyter_core-5.2.0.tar.gz#sha256=8c155a7fdabb762a019bac4eb1e201a178c5f8007e029115fc61880c345cf012,mock==5.1.0,packaging==23.2,platformdirs==4.0.0,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1,traitlets==5.13.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1164565124'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/jupyter-core/5.2.0/1/cpython-test-results.xml
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/jupyter-core-5.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/jupyter-core-5.2.0
+configfile: pyproject.toml
+testpaths: jupyter_core/tests/
+[1mcollecting ... [0mcollected 75 items
+
+jupyter_core/tests/test_application.py::test_basic [32mPASSED[0m[33m                [  1%][0m
+jupyter_core/tests/test_application.py::test_default_traits [32mPASSED[0m[33m       [  2%][0m
+jupyter_core/tests/test_application.py::test_custom_config [32mPASSED[0m[33m        [  4%][0m
+jupyter_core/tests/test_application.py::test_cli_override [32mPASSED[0m[33m         [  5%][0m
+jupyter_core/tests/test_application.py::test_generate_config [32mPASSED[0m[33m      [  6%][0m
+jupyter_core/tests/test_application.py::test_load_config [32mPASSED[0m[33m          [  8%][0m
+jupyter_core/tests/test_application.py::test_load_config_no_cwd [32mPASSED[0m[33m   [  9%][0m
+jupyter_core/tests/test_application.py::test_load_bad_config [32mPASSED[0m[33m      [ 10%][0m
+jupyter_core/tests/test_application.py::test_runtime_dir_changed [32mPASSED[0m[33m  [ 12%][0m
+jupyter_core/tests/test_async.py::test_ensure_async [32mPASSED[0m[33m               [ 13%][0m
+jupyter_core/tests/test_async.py::test_run_sync [32mPASSED[0m[33m                   [ 14%][0m
+jupyter_core/tests/test_command.py::test_config_dir [32mPASSED[0m[33m               [ 16%][0m
+jupyter_core/tests/test_command.py::test_data_dir [32mPASSED[0m[33m                 [ 17%][0m
+jupyter_core/tests/test_command.py::test_runtime_dir [32mPASSED[0m[33m              [ 18%][0m
+jupyter_core/tests/test_command.py::test_paths [32mPASSED[0m[33m                    [ 20%][0m
+jupyter_core/tests/test_command.py::test_paths_json [32mPASSED[0m[33m               [ 21%][0m
+jupyter_core/tests/test_command.py::test_paths_debug [32mPASSED[0m[33m              [ 22%][0m
+jupyter_core/tests/test_command.py::test_subcommand_not_given [32mPASSED[0m[33m     [ 24%][0m
+jupyter_core/tests/test_command.py::test_help [32mPASSED[0m[33m                     [ 25%][0m
+jupyter_core/tests/test_command.py::test_subcommand_not_found [32mPASSED[0m[33m     [ 26%][0m
+jupyter_core/tests/test_command.py::test_subcommand_list [32mPASSED[0m[33m          [ 28%][0m
+jupyter_core/tests/test_command.py::test_not_on_path [32mPASSED[0m[33m              [ 29%][0m
+jupyter_core/tests/test_command.py::test_path_priority [32mPASSED[0m[33m            [ 30%][0m
+jupyter_core/tests/test_command.py::test_argv0 [32mPASSED[0m[33m                    [ 32%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_file [32mPASSED[0m[33m             [ 33%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_dir [32mPASSED[0m[33m              [ 34%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_one [32mPASSED[0m[33m              [ 36%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_config [32mPASSED[0m[33m           [ 37%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_custom_default [32mPASSED[0m[33m   [ 38%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_nothing [32mPASSED[0m[33m          [ 40%][0m
+jupyter_core/tests/test_migrate.py::test_migrate_default [32mPASSED[0m[33m          [ 41%][0m
+jupyter_core/tests/test_migrate.py::test_migrate [32mPASSED[0m[33m                  [ 42%][0m
+jupyter_core/tests/test_paths.py::test_envset [32mPASSED[0m[33m                     [ 44%][0m
+jupyter_core/tests/test_paths.py::test_config_dir [32mPASSED[0m[33m                 [ 45%][0m
+jupyter_core/tests/test_paths.py::test_config_dir_darwin [33mSKIPPED[0m (on...)[33m [ 46%][0m
+jupyter_core/tests/test_paths.py::test_config_dir_windows [33mSKIPPED[0m (o...)[33m [ 48%][0m
+jupyter_core/tests/test_paths.py::test_config_dir_linux [32mPASSED[0m[33m           [ 49%][0m
+jupyter_core/tests/test_paths.py::test_config_env_legacy [32mPASSED[0m[33m          [ 50%][0m
+jupyter_core/tests/test_paths.py::test_config_env [32mPASSED[0m[33m                 [ 52%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_env_legacy [32mPASSED[0m[33m        [ 53%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_env [32mPASSED[0m[33m               [ 54%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_darwin_legacy [33mSKIPPED[0m[33m    [ 56%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_darwin [33mSKIPPED[0m (only...)[33m [ 57%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_windows_legacy [33mSKIPPED[0m[33m   [ 58%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_windows [33mSKIPPED[0m (onl...)[33m [ 60%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_linux_legacy [32mPASSED[0m[33m      [ 61%][0m
+jupyter_core/tests/test_paths.py::test_data_dir_linux [32mPASSED[0m[33m             [ 62%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_env_legacy [32mPASSED[0m[33m     [ 64%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_env [32mPASSED[0m[33m            [ 65%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_darwin_legacy [33mSKIPPED[0m[33m [ 66%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_darwin [33mSKIPPED[0m (o...)[33m [ 68%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_windows_legacy [33mSKIPPED[0m[33m [ 69%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_windows [33mSKIPPED[0m (...)[33m [ 70%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_linux_legacy [32mPASSED[0m[33m   [ 72%][0m
+jupyter_core/tests/test_paths.py::test_runtime_dir_linux [32mPASSED[0m[33m          [ 73%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path [32mPASSED[0m[33m               [ 74%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_user_site [32mPASSED[0m[33m     [ 76%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_no_user_site [32mPASSED[0m[33m  [ 77%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_prefer_env [32mPASSED[0m[33m    [ 78%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_env [32mPASSED[0m[33m           [ 80%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_sys_prefix [32mPASSED[0m[33m    [ 81%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_path_subdir [32mPASSED[0m[33m        [ 82%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_config_path [32mPASSED[0m[33m        [ 84%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_config_path_no_user_site [32mPASSED[0m[33m [ 85%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_config_path_prefer_env [32mPASSED[0m[33m [ 86%][0m
+jupyter_core/tests/test_paths.py::test_jupyter_config_path_env [32mPASSED[0m[33m    [ 88%][0m
+jupyter_core/tests/test_paths.py::test_prefer_environment_over_user [32mPASSED[0m[33m [ 89%][0m
+jupyter_core/tests/test_paths.py::test_is_hidden [32mPASSED[0m[33m                  [ 90%][0m
+jupyter_core/tests/test_paths.py::test_is_hidden_win32_cpython [33mSKIPPED[0m[33m   [ 92%][0m
+jupyter_core/tests/test_paths.py::test_is_hidden_win32_pypy [33mSKIPPED[0m[33m      [ 93%][0m
+jupyter_core/tests/test_paths.py::test_win32_restrict_file_to_user_ctypes [33mSKIPPED[0m[33m [ 94%][0m
+jupyter_core/tests/test_paths.py::test_secure_write_win32 [33mSKIPPED[0m (o...)[33m [ 96%][0m
+jupyter_core/tests/test_paths.py::test_secure_write_unix [32mPASSED[0m[33m          [ 97%][0m
+jupyter_core/tests/test_paths.py::test_exists [32mPASSED[0m[33m                     [ 98%][0m
+jupyter_core/tests/test_paths.py::test_insecure_write_warning [32mPASSED[0m[33m     [100%][0m
+
+[33m=============================== warnings summary ===============================[0m
+jupyter_core/application.py:21
+  /workdir/jupyter-core-5.2.0/jupyter_core/application.py:21: DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
+  given by the platformdirs library.  To remove this warning and
+  see the appropriate new directories, set the environment variable
+  `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
+  The use of platformdirs will be the default in `jupyter_core` v6
+    from .paths import (
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/jupyter-core/5.2.0/1/cpython-test-results.xml -
+============================= slowest 10 durations =============================
+0.13s call     jupyter_core/tests/test_command.py::test_paths_debug
+0.09s call     jupyter_core/tests/test_command.py::test_subcommand_not_found
+0.08s call     jupyter_core/tests/test_command.py::test_config_dir
+0.08s call     jupyter_core/tests/test_command.py::test_runtime_dir
+0.08s call     jupyter_core/tests/test_command.py::test_path_priority
+0.07s call     jupyter_core/tests/test_command.py::test_not_on_path
+0.07s call     jupyter_core/tests/test_command.py::test_paths
+0.07s call     jupyter_core/tests/test_command.py::test_data_dir
+0.07s call     jupyter_core/tests/test_command.py::test_argv0
+0.07s call     jupyter_core/tests/test_command.py::test_help
+[36m[1m=========================== short test summary info ============================[0m
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:110: only run on macos
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:117: only run on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:159: only run on macos
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:165: only run on macos
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:172: only run on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:178: only run on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:223: only run on macos
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:229: only run on macos
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:236: only run on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:242: only run on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:458: only run on windows/cpython or pypy >= 7.3.6: https://foss.heptapod.net/pypy/pypy/-/issues/3469
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:477: only run on windows/pypy < 7.3.6: https://foss.heptapod.net/pypy/pypy/-/issues/3469
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:515: only runs on windows
+[33mSKIPPED[0m [1] jupyter_core/tests/test_paths.py:520: only runs on windows
+[33m================== [32m61 passed[0m, [33m[1m14 skipped[0m, [33m[1m1 warning[0m[33m in 1.31s[0m[33m ===================[0m
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

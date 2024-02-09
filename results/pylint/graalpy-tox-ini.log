@@ -1,0 +1,12 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pylint/2.15.8/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements_test.txt
+	-rrequirements_test_pre_commit.txt
+	-rrequirements_test_min.txt
+	-rdoc/requirements.txt
+

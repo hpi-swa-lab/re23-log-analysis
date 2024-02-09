@@ -1,0 +1,1152 @@
+GLOB sdist-make: /workdir/elasticsearch-8.5.2/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/elasticsearch-8.5.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev-requirements.txt, -rexamples/bulk-ingest/requirements.txt, -rexamples/fastapi-apm/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/elasticsearch-8.5.2/.tox/.tmp/package/1/elasticsearch-8.5.2.zip
+cpythonlibtest-unit-test-tests installed: aiohttp==3.7.4.post0,alabaster==0.7.13,argcomplete==3.1.6,asgiref==3.3.4,async-timeout==3.0.1,attrs==21.2.0,Babel==2.13.1,black==23.7.0,build==1.0.3,certifi==2021.5.30,cffi==1.16.0,chardet==4.0.0,charset-normalizer==3.3.2,click==8.0.1,colorlog==6.7.0,coverage==7.3.2,cryptography==41.0.5,distlib==0.3.7,docutils==0.20.1,elastic-apm==6.2.1,elastic-transport==8.10.0,elasticsearch @ file:///workdir/elasticsearch-8.5.2/.tox/.tmp/package/1/elasticsearch-8.5.2.zip#sha256=baca6ecc76a3513948679343384f1351aedd184f01bb25c83827408cceee48fc,exceptiongroup==1.1.3,fastapi==0.65.1,filelock==3.13.1,h11==0.12.0,idna==3.2,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,isort==5.12.0,jaraco.classes==3.3.0,jeepney==0.8.0,Jinja2==3.1.2,keyring==24.3.0,markdown-it-py==3.0.0,MarkupSafe==2.1.3,mdurl==0.1.2,mock==5.1.0,more-itertools==10.1.0,multidict==5.1.0,mypy-extensions==1.0.0,nh3==0.2.14,nox==2023.4.22,packaging==23.2,pathspec==0.11.2,pkginfo==1.9.6,platformdirs==3.11.0,pluggy==1.3.0,pycparser==2.21,pydantic==1.8.2,Pygments==2.17.1,pyproject_hooks==1.0.0,pytest==7.4.3,pytest-asyncio==0.21.1,pytest-cov==4.1.0,python-dateutil==2.8.2,PyYAML==6.0.1,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,SecretStorage==3.3.3,six==1.16.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,starlette==0.14.2,tomli==2.0.1,tqdm==4.66.1,twine==4.0.2,typing-extensions==3.10.0.0,unasync==0.5.0,urllib3==1.26.5,uvicorn==0.14.0,virtualenv==20.24.6,yarl==1.6.3,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3817357138'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/elasticsearch/8.5.2/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/elasticsearch-8.5.2/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/elasticsearch-8.5.2
+configfile: setup.cfg
+plugins: asyncio-0.21.1, cov-4.1.0
+asyncio: mode=strict
+collecting ... collected 344 items
+
+test_elasticsearch/test_exceptions.py::TestTransformError::test_transform_error_parse_with_error_reason PASSED [  0%]
+test_elasticsearch/test_exceptions.py::TestTransformError::test_transform_error_parse_with_error_string PASSED [  0%]
+test_elasticsearch/test_helpers.py::TestParallelBulk::test_all_chunks_sent PASSED [  0%]
+test_elasticsearch/test_helpers.py::TestParallelBulk::test_chunk_sent_from_different_threads PASSED [  1%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_expand_action PASSED [  1%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_expand_action_actions PASSED [  1%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_expand_action_options PASSED [  2%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test__source_metadata_or_source PASSED [  2%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_chunks_are_chopped_by_byte_size PASSED [  2%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_chunks_are_chopped_by_chunk_size PASSED [  2%]
+test_elasticsearch/test_helpers.py::TestChunkActions::test_chunks_are_chopped_by_byte_size_properly PASSED [  3%]
+test_elasticsearch/test_helpers.py::TestExpandActions::test_string_actions_are_marked_as_simple_inserts[whatever0] PASSED [  3%]
+test_elasticsearch/test_helpers.py::TestExpandActions::test_string_actions_are_marked_as_simple_inserts[whatever1] PASSED [  3%]
+test_elasticsearch/test_serializer.py::test_datetime_serialization PASSED [  4%]
+test_elasticsearch/test_serializer.py::test_decimal_serialization PASSED [  4%]
+test_elasticsearch/test_serializer.py::test_uuid_serialization PASSED    [  4%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_bool SKIPPED [  4%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_integers SKIPPED [  5%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_floats SKIPPED [  5%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_datetime SKIPPED [  5%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_ndarray SKIPPED [  6%]
+test_elasticsearch/test_serializer.py::test_serializes_numpy_nan_to_nan SKIPPED [  6%]
+test_elasticsearch/test_serializer.py::test_serializes_pandas_timestamp SKIPPED [  6%]
+test_elasticsearch/test_serializer.py::test_serializes_pandas_series SKIPPED [  6%]
+test_elasticsearch/test_serializer.py::test_serializes_pandas_na SKIPPED [  7%]
+test_elasticsearch/test_serializer.py::test_raises_serialization_error_pandas_nat SKIPPED [  7%]
+test_elasticsearch/test_serializer.py::test_serializes_pandas_category SKIPPED [  7%]
+test_elasticsearch/test_serializer.py::test_json_raises_serialization_error_on_dump_error PASSED [  8%]
+test_elasticsearch/test_serializer.py::test_raises_serialization_error_on_load_error PASSED [  8%]
+test_elasticsearch/test_serializer.py::test_strings_are_left_untouched PASSED [  8%]
+test_elasticsearch/test_serializer.py::test_text_raises_serialization_error_on_dump_error PASSED [  9%]
+test_elasticsearch/test_serializer.py::TestDeserializer::test_deserializes_json_by_default PASSED [  9%]
+test_elasticsearch/test_serializer.py::TestDeserializer::test_deserializes_text_with_correct_ct[{"some":"data"}0] PASSED [  9%]
+test_elasticsearch/test_serializer.py::TestDeserializer::test_deserializes_text_with_correct_ct[{"some":"data"}1] PASSED [  9%]
+test_elasticsearch/test_serializer.py::TestDeserializer::test_deserialize_compatibility_header PASSED [ 10%]
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored PASSED [ 10%]
+test_elasticsearch/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed PASSED [ 10%]
+test_elasticsearch/test_transport.py::TestTransport::test_opaque_id PASSED [ 11%]
+test_elasticsearch/test_transport.py::TestTransport::test_custom_user_agent_on_initialization PASSED [ 11%]
+test_elasticsearch/test_transport.py::TestTransport::test_request_with_custom_user_agent_header PASSED [ 11%]
+test_elasticsearch/test_transport.py::TestTransport::test_client_meta_header PASSED [ 11%]
+test_elasticsearch/test_transport.py::TestTransport::test_client_meta_header_not_sent PASSED [ 12%]
+test_elasticsearch/test_transport.py::TestTransport::test_meta_header_type_error PASSED [ 12%]
+test_elasticsearch/test_transport.py::TestTransport::test_body_surrogates_replaced_encoded_into_bytes PASSED [ 12%]
+test_elasticsearch/test_transport.py::TestTransport::test_kwargs_passed_on_to_node_pool PASSED [ 13%]
+test_elasticsearch/test_transport.py::TestTransport::test_custom_node_class PASSED [ 13%]
+test_elasticsearch/test_transport.py::TestTransport::test_request_will_fail_after_x_retries PASSED [ 13%]
+test_elasticsearch/test_transport.py::TestTransport::test_failed_connection_will_be_marked_as_dead PASSED [ 13%]
+test_elasticsearch/test_transport.py::TestTransport::test_resurrected_connection_will_be_marked_as_live_on_success PASSED [ 14%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_will_use_seed_connections[{\n  "_nodes" : {\n    "total" : 1,\n    "successful" : 1,\n    "failed" : 0\n  },\n  "cluster_name" : "elasticsearch",\n  "nodes" : {\n    "SRZpKFZdQguhhvifmN6UVA" : {\n      "name" : "SRZpKFZ",\n      "transport_address" : "127.0.0.1:9300",\n      "host" : "127.0.0.1",\n      "ip" : "127.0.0.1",\n      "version" : "5.0.0",\n      "build_hash" : "253032b",\n      "roles" : [ "master", "data", "ingest" ],\n      "http" : {\n        "bound_address" : [ "[fe80::1]:9200", "[::1]:9200", "127.0.0.1:9200" ],\n        "publish_address" : "1.1.1.1:123",\n        "max_content_length_in_bytes" : 104857600\n      }\n    }\n  }\n}-1.1.1.1] PASSED [ 14%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_will_use_seed_connections[{\n  "_nodes" : {\n    "total" : 1,\n    "successful" : 1,\n    "failed" : 0\n  },\n  "cluster_name" : "elasticsearch",\n  "nodes" : {\n    "SRZpKFZdQguhhvifmN6UVA" : {\n      "name" : "SRZpKFZ",\n      "transport_address" : "127.0.0.1:9300",\n      "host" : "127.0.0.1",\n      "ip" : "127.0.0.1",\n      "version" : "5.0.0",\n      "build_hash" : "253032b",\n      "roles" : [ "master", "data", "ingest" ],\n      "http" : {\n        "bound_address" : [ "[fe80::1]:9200", "[::1]:9200", "127.0.0.1:9200" ],\n        "publish_address" : "somehost.tld/1.1.1.1:123",\n        "max_content_length_in_bytes" : 104857600\n      }\n    }\n  }\n}-somehost.tld] PASSED [ 14%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_on_start_ignores_sniff_timeout PASSED [ 15%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_uses_sniff_timeout PASSED [ 15%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_reuses_node_instances PASSED [ 15%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_after_n_seconds PASSED [ 15%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs0] PASSED [ 16%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs1] PASSED [ 16%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs2] PASSED [ 16%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs3] PASSED [ 17%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs4] PASSED [ 17%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs5] PASSED [ 17%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_master_only_filtered_by_default PASSED [ 18%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniff_node_callback PASSED [ 18%]
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_deprecated_host_info_callback PASSED [ 18%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error[headers0] PASSED [ 18%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error[headers1] PASSED [ 19%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[401] PASSED [ 19%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[403] PASSED [ 19%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[413] PASSED [ 20%]
+test_elasticsearch/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[500] PASSED [ 20%]
+test_elasticsearch/test_transport.py::test_api_error_raised_before_product_error[404] PASSED [ 20%]
+test_elasticsearch/test_transport.py::test_api_error_raised_before_product_error[500] PASSED [ 20%]
+test_elasticsearch/test_transport.py::test_warning_header[headers0] PASSED [ 21%]
+test_elasticsearch/test_transport.py::test_warning_header[headers1] PASSED [ 21%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed PASSED [ 21%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_opaque_id PASSED [ 22%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_with_custom_user_agent_header PASSED [ 22%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_client_meta_header PASSED [ 22%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_client_meta_header_not_sent PASSED [ 22%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_body_surrogates_replaced_encoded_into_bytes PASSED [ 23%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_kwargs_passed_on_to_node_pool PASSED [ 23%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_will_fail_after_x_retries PASSED [ 23%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_failed_connection_will_be_marked_as_dead PASSED [ 24%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_resurrected_connection_will_be_marked_as_live_on_success PASSED [ 24%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_will_use_seed_connections[{\n  "_nodes" : {\n    "total" : 1,\n    "successful" : 1,\n    "failed" : 0\n  },\n  "cluster_name" : "elasticsearch",\n  "nodes" : {\n    "SRZpKFZdQguhhvifmN6UVA" : {\n      "name" : "SRZpKFZ",\n      "transport_address" : "127.0.0.1:9300",\n      "host" : "127.0.0.1",\n      "ip" : "127.0.0.1",\n      "version" : "5.0.0",\n      "build_hash" : "253032b",\n      "roles" : [ "master", "data", "ingest" ],\n      "http" : {\n        "bound_address" : [ "[fe80::1]:9200", "[::1]:9200", "127.0.0.1:9200" ],\n        "publish_address" : "1.1.1.1:123",\n        "max_content_length_in_bytes" : 104857600\n      }\n    }\n  }\n}-1.1.1.1] PASSED [ 24%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_will_use_seed_connections[{\n  "_nodes" : {\n    "total" : 1,\n    "successful" : 1,\n    "failed" : 0\n  },\n  "cluster_name" : "elasticsearch",\n  "nodes" : {\n    "SRZpKFZdQguhhvifmN6UVA" : {\n      "name" : "SRZpKFZ",\n      "transport_address" : "127.0.0.1:9300",\n      "host" : "127.0.0.1",\n      "ip" : "127.0.0.1",\n      "version" : "5.0.0",\n      "build_hash" : "253032b",\n      "roles" : [ "master", "data", "ingest" ],\n      "http" : {\n        "bound_address" : [ "[fe80::1]:9200", "[::1]:9200", "127.0.0.1:9200" ],\n        "publish_address" : "somehost.tld/1.1.1.1:123",\n        "max_content_length_in_bytes" : 104857600\n      }\n    }\n  }\n}-somehost.tld] PASSED [ 25%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_on_start_ignores_sniff_timeout PASSED [ 25%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_uses_sniff_timeout PASSED [ 25%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_on_start_awaits_before_request PASSED [ 25%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_reuses_node_instances PASSED [ 26%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_on_node_failure_triggers[exception-extra_value0] PASSED [ 26%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_on_node_failure_triggers[status-500] PASSED [ 26%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_after_n_seconds PASSED [ 27%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs0] PASSED [ 27%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs1] PASSED [ 27%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs2] PASSED [ 27%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs3] PASSED [ 28%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs4] PASSED [ 28%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs5] PASSED [ 28%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_on_start_close_unlocks_async_calls PASSED [ 29%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_master_only_filtered_by_default PASSED [ 29%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniff_node_callback PASSED [ 29%]
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_deprecated_host_info_callback PASSED [ 29%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error[headers0] PASSED [ 30%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error[headers1] PASSED [ 30%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[401] PASSED [ 30%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[403] PASSED [ 31%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[413] PASSED [ 31%]
+test_elasticsearch/test_async/test_transport.py::test_unsupported_product_error_not_raised_on_non_2xx[500] PASSED [ 31%]
+test_elasticsearch/test_async/test_transport.py::test_api_error_raised_before_product_error[404] PASSED [ 31%]
+test_elasticsearch/test_async/test_transport.py::test_api_error_raised_before_product_error[500] PASSED [ 32%]
+test_elasticsearch/test_async/test_transport.py::test_warning_header[headers0] PASSED [ 32%]
+test_elasticsearch/test_async/test_transport.py::test_warning_header[headers1] PASSED [ 32%]
+test_elasticsearch/test_async/test_server/test_clients.py::test_indices_analyze_unicode[kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 33%]
+test_elasticsearch/test_async/test_server/test_clients.py::test_indices_analyze_unicode[kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 33%]
+test_elasticsearch/test_async/test_server/test_clients.py::test_bulk_works_with_string_body SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 33%]
+test_elasticsearch/test_async/test_server/test_clients.py::test_bulk_works_with_bytestring_body SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 34%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_actions_remain_unchanged SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 34%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_all_documents_get_inserted SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 34%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_documents_data_types SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 34%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_all_errors_from_chunk_are_raised_on_failure SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 35%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_different_op_types SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 35%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_transport_error_can_becaught SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 35%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_rejected_documents_are_retried SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 36%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_rejected_documents_are_retried_at_most_max_retries_times SKIPPEDic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 36%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestStreamingBulk::test_transport_error_is_raised_with_max_retries SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 36%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_bulk_works_with_single_item SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 36%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_all_documents_get_inserted SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 37%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_stats_only_reports_numbers SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 37%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_errors_are_reported_correctly SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 37%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_error_is_raised SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 38%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_ignore_error_if_raised SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 38%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestBulk::test_errors_are_collected_properly SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 38%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_order_can_be_preserved SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 38%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_all_documents_are_read SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 39%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_scroll_error SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 39%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_initial_search_error SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 39%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_no_scroll_id_fast_route SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 40%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_logger SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 40%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_clear_scroll SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 40%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_scan_auth_kwargs_forwarded[kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 40%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_scan_auth_kwargs_forwarded[kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 41%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_scan_auth_kwargs_forwarded[kwargs2] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 41%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestScan::test_scan_auth_kwargs_favor_scroll_kwargs_option SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 41%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 42%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 42%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs2] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 42%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs3] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 43%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs4] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 43%]
+test_elasticsearch/test_async/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs5] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 43%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestReindex::test_reindex_passes_kwargs_to_scan_and_bulk SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 43%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestReindex::test_reindex_accepts_a_query SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 44%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestReindex::test_all_documents_get_moved SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 44%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestParentChildReindex::test_children_are_reindexed_correctly SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 44%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestAsyncDataStreamReindex::test_reindex_index_datastream[None] SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 45%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestAsyncDataStreamReindex::test_reindex_index_datastream[create] SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 45%]
+test_elasticsearch/test_async/test_server/test_helpers.py::TestAsyncDataStreamReindex::test_reindex_index_datastream_op_type_index SKIPPEDelastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 45%]
+test_elasticsearch/test_async/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_error SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 45%]
+test_elasticsearch/test_async/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_response SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 46%]
+test_elasticsearch/test_client/test_cluster.py::TestCluster::test_stats_without_node_id PASSED [ 46%]
+test_elasticsearch/test_client/test_cluster.py::TestCluster::test_stats_with_node_id PASSED [ 46%]
+test_elasticsearch/test_client/test_cluster.py::TestCluster::test_state_with_index_without_metric_defaults_to_all PASSED [ 47%]
+test_elasticsearch/test_client/test_deprecated_options.py::test_sniff_on_connection_fail PASSED [ 47%]
+test_elasticsearch/test_client/test_deprecated_options.py::test_sniffer_timeout PASSED [ 47%]
+test_elasticsearch/test_client/test_deprecated_options.py::test_randomize_hosts PASSED [ 47%]
+test_elasticsearch/test_client/test_deprecated_options.py::test_http_auth PASSED [ 48%]
+test_elasticsearch/test_client/test_deprecated_options.py::test_serializer_and_serializers PASSED [ 48%]
+test_elasticsearch/test_client/test_indices.py::TestIndices::test_create_one_index PASSED [ 48%]
+test_elasticsearch/test_client/test_indices.py::TestIndices::test_delete_multiple_indices PASSED [ 49%]
+test_elasticsearch/test_client/test_indices.py::TestIndices::test_exists_index PASSED [ 49%]
+test_elasticsearch/test_client/test_indices.py::TestIndices::test_passing_empty_value_for_required_param_raises_exception PASSED [ 49%]
+test_elasticsearch/test_client/test_indices.py::TestIndices::test_query_params PASSED [ 50%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options0-headers0] PASSED [ 50%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options1-headers1] PASSED [ 50%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options2-headers2] PASSED [ 50%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options3-headers3] PASSED [ 51%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options4-headers4] PASSED [ 51%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options5-headers5] PASSED [ 51%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options6-headers6] PASSED [ 52%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_to_headers[options7-headers7] PASSED [ 52%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-None-None] SKIPPED [ 52%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-None-api-key] SKIPPED [ 52%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-None-api_key2] SKIPPED [ 53%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-bearer-None] SKIPPED [ 53%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-bearer-api-key] PASSED [ 53%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-None-bearer-api_key2] PASSED [ 54%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-None-None] SKIPPED [ 54%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-None-api-key] PASSED [ 54%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-None-api_key2] PASSED [ 54%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-bearer-None] PASSED [ 55%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-bearer-api-key] PASSED [ 55%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-user:pass-bearer-api_key2] PASSED [ 55%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-None-None] SKIPPED [ 56%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-None-api-key] PASSED [ 56%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-None-api_key2] PASSED [ 56%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-bearer-None] PASSED [ 56%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-bearer-api-key] PASSED [ 57%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[None-basic_auth2-bearer-api_key2] PASSED [ 57%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-None-None] SKIPPED [ 57%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-None-api-key] PASSED [ 58%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-None-api_key2] PASSED [ 58%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-bearer-None] PASSED [ 58%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-bearer-api-key] PASSED [ 59%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-None-bearer-api_key2] PASSED [ 59%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-None-None] PASSED [ 59%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-None-api-key] PASSED [ 59%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-None-api_key2] PASSED [ 60%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-bearer-None] PASSED [ 60%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-bearer-api-key] PASSED [ 60%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-user:pass-bearer-api_key2] PASSED [ 61%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-None-None] PASSED [ 61%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-None-api-key] PASSED [ 61%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-None-api_key2] PASSED [ 61%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-bearer-None] PASSED [ 62%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-bearer-api-key] PASSED [ 62%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers1-basic_auth2-bearer-api_key2] PASSED [ 62%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-None-None] SKIPPED [ 63%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-None-api-key] PASSED [ 63%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-None-api_key2] PASSED [ 63%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-bearer-None] PASSED [ 63%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-bearer-api-key] PASSED [ 64%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-None-bearer-api_key2] PASSED [ 64%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-None-None] PASSED [ 64%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-None-api-key] PASSED [ 65%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-None-api_key2] PASSED [ 65%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-bearer-None] PASSED [ 65%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-bearer-api-key] PASSED [ 65%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-user:pass-bearer-api_key2] PASSED [ 66%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-None-None] PASSED [ 66%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-None-api-key] PASSED [ 66%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-None-api_key2] PASSED [ 67%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-bearer-None] PASSED [ 67%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-bearer-api-key] PASSED [ 67%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_auth_conflicts[headers2-basic_auth2-bearer-api_key2] PASSED [ 68%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_passed_to_perform_request PASSED [ 68%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_passed_to_async_perform_request PASSED [ 68%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_default_node_configs PASSED [ 68%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_http_headers_overrides PASSED [ 69%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_user_agent_override PASSED [ 69%]
+test_elasticsearch/test_client/test_options.py::TestOptions::test_options_timeout_parameters PASSED [ 69%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_create PASSED [ 70%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_delete PASSED [ 70%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_index PASSED [ 70%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_update PASSED [ 70%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_cluster_state PASSED [ 71%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_cluster_stats PASSED [ 71%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_index_uses_post_if_id_is_empty PASSED [ 71%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_index_uses_put_if_id_is_not_empty PASSED [ 72%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_from_in_search[from] PASSED [ 72%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_from_in_search[from_] PASSED [ 72%]
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_sort_in_search PASSED [ 72%]
+test_elasticsearch/test_client/test_requests_auth.py::test_requests_auth[requests] PASSED [ 73%]
+test_elasticsearch/test_client/test_requests_auth.py::test_requests_auth[RequestsHttpNode] PASSED [ 73%]
+test_elasticsearch/test_client/test_requests_auth.py::test_requests_auth[CustomRequestHttpNode] PASSED [ 73%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[urllib3-Elasticsearch] PASSED [ 74%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[urllib3-AsyncElasticsearch] PASSED [ 74%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[aiohttp-Elasticsearch] PASSED [ 74%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[aiohttp-AsyncElasticsearch] PASSED [ 75%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[None-Elasticsearch] PASSED [ 75%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[None-AsyncElasticsearch] PASSED [ 75%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[<DEFAULT>-Elasticsearch] PASSED [ 75%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[<DEFAULT>-AsyncElasticsearch] PASSED [ 76%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[CustomUrllib3HttpNode-Elasticsearch] PASSED [ 76%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_node_class[CustomUrllib3HttpNode-AsyncElasticsearch] PASSED [ 76%]
+test_elasticsearch/test_client/test_requests_auth.py::test_error_for_requests_auth_async PASSED [ 77%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_default PASSED [ 77%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_body_name_using_body PASSED [ 77%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_body_name PASSED [ 77%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_body_name_duplicate PASSED [ 78%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_body_fields PASSED [ 78%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_error_on_body_merge[{"query": {"match_all": {}}}0] PASSED [ 78%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_error_on_body_merge[{"query": {"match_all": {}}}1] PASSED [ 79%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_error_on_params_merge[{"query": {"match_all": {}}}0] PASSED [ 79%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_error_on_params_merge[{"query": {"match_all": {}}}1] PASSED [ 79%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_ignore_deprecated_options PASSED [ 79%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_parameter_aliases PASSED [ 80%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_positional_argument_error[Elasticsearch] PASSED [ 80%]
+test_elasticsearch/test_client/test_rewrite_parameters.py::TestRewriteParameters::test_positional_argument_error[AsyncElasticsearch] PASSED [ 80%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_mode_on_by_default PASSED [ 81%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_serializers_used_when_given_non_compat[json] PASSED [ 81%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_serializers_used_when_given_non_compat[x-ndjson] PASSED [ 81%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_serializers_used_when_given_compat[json] PASSED [ 81%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_serializers_used_when_given_compat[x-ndjson] PASSED [ 82%]
+test_elasticsearch/test_client/test_serializers.py::TestSerializers::test_compat_serializer_used_when_given_non_compat PASSED [ 82%]
+test_elasticsearch/test_client/test_utils.py::test_handles_ascii PASSED  [ 82%]
+test_elasticsearch/test_client/test_utils.py::test_handles_bytestring PASSED [ 83%]
+test_elasticsearch/test_client/test_utils.py::test_handles_unicode PASSED [ 83%]
+test_elasticsearch/test_client/test_utils.py::test_handles_unicode2 PASSED [ 83%]
+test_elasticsearch/test_server/test_clients.py::test_indices_analyze_unicode[kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 84%]
+test_elasticsearch/test_server/test_clients.py::test_indices_analyze_unicode[kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 84%]
+test_elasticsearch/test_server/test_clients.py::test_bulk_works_with_string_body SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 84%]
+test_elasticsearch/test_server/test_clients.py::test_bulk_works_with_bytestring_body SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 84%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_actions_remain_unchanged SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 85%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_all_documents_get_inserted SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 85%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_all_errors_from_chunk_are_raised_on_failure SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 85%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_different_op_types SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 86%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_transport_error_can_becaught SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 86%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_rejected_documents_are_retried SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 86%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_rejected_documents_are_retried_when_bytes_or_string[False] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 86%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_rejected_documents_are_retried_when_bytes_or_string[True] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 87%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_rejected_documents_are_retried_at_most_max_retries_times SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 87%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_transport_error_is_raised_with_max_retries SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 87%]
+test_elasticsearch/test_server/test_helpers.py::test_bulk_works_with_single_item SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 88%]
+test_elasticsearch/test_server/test_helpers.py::test_all_documents_get_inserted SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 88%]
+test_elasticsearch/test_server/test_helpers.py::test_stats_only_reports_numbers SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 88%]
+test_elasticsearch/test_server/test_helpers.py::test_errors_are_reported_correctly SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 88%]
+test_elasticsearch/test_server/test_helpers.py::test_error_is_raised SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 89%]
+test_elasticsearch/test_server/test_helpers.py::test_ignore_error_if_raised SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 89%]
+test_elasticsearch/test_server/test_helpers.py::test_errors_are_collected_properly SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 89%]
+test_elasticsearch/test_server/test_helpers.py::test_order_can_be_preserved SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 90%]
+test_elasticsearch/test_server/test_helpers.py::test_all_documents_are_read SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 90%]
+test_elasticsearch/test_server/test_helpers.py::test_scroll_error SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 90%]
+test_elasticsearch/test_server/test_helpers.py::test_initial_search_error SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 90%]
+test_elasticsearch/test_server/test_helpers.py::test_no_scroll_id_fast_route SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 91%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_forwarded[kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 91%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_forwarded[kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 91%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_forwarded[kwargs2] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 92%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_forwarded[kwargs3] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 92%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_forwarded[kwargs4] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 92%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_auth_kwargs_favor_scroll_kwargs_option SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 93%]
+test_elasticsearch/test_server/test_helpers.py::test_log_warning_on_shard_failures SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 93%]
+test_elasticsearch/test_server/test_helpers.py::test_clear_scroll SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 93%]
+test_elasticsearch/test_server/test_helpers.py::test_shards_no_skipped_field SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 93%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs0] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 94%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs1] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 94%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs2] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 94%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs3] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 95%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs4] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 95%]
+test_elasticsearch/test_server/test_helpers.py::test_scan_from_keyword_is_aliased[scan_kwargs5] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 95%]
+test_elasticsearch/test_server/test_helpers.py::test_reindex_passes_kwargs_to_scan_and_bulk SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 95%]
+test_elasticsearch/test_server/test_helpers.py::test_reindex_accepts_a_query SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 96%]
+test_elasticsearch/test_server/test_helpers.py::test_all_documents_get_moved SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 96%]
+test_elasticsearch/test_server/test_helpers.py::test_children_are_reindexed_correctly SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 96%]
+test_elasticsearch/test_server/test_helpers.py::test_reindex_index_datastream[None] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 97%]
+test_elasticsearch/test_server/test_helpers.py::test_reindex_index_datastream[create] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 97%]
+test_elasticsearch/test_server/test_helpers.py::test_reindex_index_datastream_op_type_index SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 97%]
+test_elasticsearch/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_error[urllib3] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 97%]
+test_elasticsearch/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_error[requests] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 98%]
+test_elasticsearch/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_response[urllib3] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 98%]
+test_elasticsearch/test_server/test_mapbox_vector_tile.py::test_mapbox_vector_tile_response[requests] SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 98%]
+test_elasticsearch/test_server/test_responses.py::test_text_response SKIPPED://localhost:9200, https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 99%]
+test_elasticsearch/test_server/test_responses.py::test_object_response SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 99%]
+test_elasticsearch/test_server/test_responses.py::test_exists_response SKIPPED://localhost:9200,
+https://elastic:changeme@localhost:9200,
+http://elastic:changeme@localhost:9200): Connection error caused by:
+ConnectionError(Connection error caused by: NewConnectionError(<elastic_
+transport._node._urllib3_chain_certs.HTTPSConnection object at
+0x7f269f3f7430>: Failed to establish a new connection: [Errno 111]
+Connection refused)))                                                    [ 99%]
+test_elasticsearch/test_server/test_rest_api_spec.py::test_rest_api_spec[test_spec0] SKIPPED/workdir/elasticsearch-
+8.5.2/test_elasticsearch/test_server/test_rest_api_spec.py:654)          [100%]
+
+=============================== warnings summary ===============================
+test_elasticsearch/test_transport.py:36
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:36: DeprecationWarning: Importing from the 'elasticsearch.transport' module is deprecated. Instead import from 'elastic_transport'
+    from elasticsearch.transport import get_host_info
+
+elasticsearch/_sync/client/__init__.py:395
+test_elasticsearch/test_async/test_server/test_clients.py::test_indices_analyze_unicode[kwargs0]
+  /workdir/elasticsearch-8.5.2/elasticsearch/_sync/client/__init__.py:395: SecurityWarning: Connecting to 'https://localhost:9200' using TLS with verify_certs=False is insecure
+    _transport = transport_class(
+
+test_elasticsearch/test_server/test_rest_api_spec.py:641
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_server/test_rest_api_spec.py:641: UserWarning: Could not load REST API tests: Could not connect to Elasticsearch (tried https://localhost:9200, http://localhost:9200, https://elastic:changeme@localhost:9200, http://elastic:changeme@localhost:9200): Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<elastic_transport._node._urllib3_chain_certs.HTTPSConnection object at 0x7f269f3f5090>: Failed to establish a new connection: [Errno 111] Connection refused))
+    warnings.warn(f"Could not load REST API tests: {str(e)}")
+
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored
+test_elasticsearch/test_transport.py::TestHostsInfoCallback::test_master_only_nodes_are_ignored
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:169: DeprecationWarning: The 'get_host_info' function is deprecated. Instead use the 'sniff_node_callback' parameter on the client
+    if get_host_info(node_info, i) is not None
+
+test_elasticsearch/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:180: DeprecationWarning: The 'params' parameter is deprecated and will be removed in a future version. Instead use individual parameters.
+    client.info(params={"request_timeout": 42})
+
+test_elasticsearch/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:180: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.info(params={"request_timeout": 42})
+
+test_elasticsearch/test_transport.py::TestTransport::test_opaque_id
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:201: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.info(opaque_id="request-2")
+
+test_elasticsearch/test_transport.py::TestTransport::test_request_with_custom_user_agent_header
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:220: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.info(headers={"User-Agent": "my-custom-value/1.2.3"})
+
+test_elasticsearch/test_transport.py::TestTransport::test_client_meta_header
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:241: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.info(headers={"CustoM": "header"})
+
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs1]
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:489: DeprecationWarning: The 'sniff_on_connection_fail' parameter is deprecated in favor of 'sniff_on_node_failure'
+    Elasticsearch(
+
+test_elasticsearch/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs4]
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_transport.py:489: DeprecationWarning: The 'sniffer_timeout' parameter is deprecated in favor of 'min_delay_between_sniffing'
+    Elasticsearch(
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:172: DeprecationWarning: The 'params' parameter is deprecated and will be removed in a future version. Instead use individual parameters.
+    await client.info(params={"request_timeout": 42})
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_timeout_extracted_from_params_and_passed
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:172: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    await client.info(params={"request_timeout": 42})
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_opaque_id
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:193: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    await client.info(opaque_id="request-2")
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_request_with_custom_user_agent_header
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:204: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    await client.info(headers={"User-Agent": "my-custom-value/1.2.3"})
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_client_meta_header
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:227: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    await client.info(headers={"CustoM": "header"})
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_kwargs_passed_on_to_node_pool
+  test_elasticsearch/test_async/test_transport.py:262: PytestWarning: The test <Function test_kwargs_passed_on_to_node_pool> is marked with '@pytest.mark.asyncio' but it is not an async function. Please remove asyncio marker. If the test is not marked explicitly, check for global markers applied via 'pytestmark'.
+    def test_kwargs_passed_on_to_node_pool(self):
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs1]
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:541: DeprecationWarning: The 'sniff_on_connection_fail' parameter is deprecated in favor of 'sniff_on_node_failure'
+    AsyncElasticsearch(
+
+test_elasticsearch/test_async/test_transport.py::TestTransport::test_sniffing_disabled_on_elastic_cloud[kwargs4]
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_async/test_transport.py:541: DeprecationWarning: The 'sniffer_timeout' parameter is deprecated in favor of 'min_delay_between_sniffing'
+    AsyncElasticsearch(
+
+test_elasticsearch/test_client/test_options.py::TestOptions::test_user_agent_override
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_client/test_options.py:344: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.indices.get(index="2", headers={"user-agent": "custom2"})
+
+test_elasticsearch/test_client/test_options.py::TestOptions::test_user_agent_override
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_client/test_options.py:365: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+    client.indices.get(index="2", headers={"user-agent": "custom4"})
+
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_create
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_client/test_overrides.py:26: DeprecationWarning: The 'body' parameter is deprecated and will be removed in a future version. Instead use the 'document' parameter. See https://github.com/elastic/elasticsearch-py/issues/1698 for more information
+    self.client.create(index="test-index", id="test-id", body={})
+
+test_elasticsearch/test_client/test_overrides.py::TestOverriddenUrlTargets::test_update
+  /workdir/elasticsearch-8.5.2/test_elasticsearch/test_client/test_overrides.py:41: DeprecationWarning: The 'body' parameter is deprecated and will be removed in a future version. Instead use individual parameters.
+    self.client.update(index="test-index", id="test-id", body={})
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/elasticsearch/8.5.2/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                                                  Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------
+elasticsearch/__init__.py                                23      1    96%   32
+elasticsearch/_async/__init__.py                          0      0   100%
+elasticsearch/_async/client/__init__.py                1876   1518    19%   191, 194-204, 207-212, 215-225, 229, 242, 254-264, 289, 351, 355, 359, 365-375, 409, 416, 464-473, 476-481, 484, 526-528, 534, 541, 548, 557, 578-595, 667-705, 732-750, 775-795, 879-928, 984-1016, 1071-1102, 1235-1322, 1348-1363, 1392-1409, 1477-1512, 1575-1608, 1682-1728, 1804-1843, 1912-1947, 1974-1989, 2009-2020, 2040-2051, 2119-2154, 2222-2267, 2290, 2292, 2294, 2296, 2363-2397, 2470-2505, 2598-2642, 2687-2717, 2786-2831, 2860-2879, 2914-2941, 3008-3039, 3102-3146, 3172-3187, 3219-3244, 3273-3295, 3326-3350, 3619, 3633-3634, 3636, 3638, 3640, 3642, 3644, 3646, 3648, 3650, 3652, 3654, 3656, 3658, 3660, 3662, 3664, 3666, 3668, 3670, 3672, 3674, 3676, 3678, 3680, 3682, 3684, 3686, 3688, 3690, 3692, 3694, 3696, 3698, 3700, 3702, 3704, 3706, 3710, 3712, 3714, 3716, 3718, 3720, 3722, 3724, 3726, 3728, 3730, 3732, 3734, 3736, 3738, 3740, 3742, 3744, 3746, 3748, 3750, 3752, 3754, 3756, 3758, 3760, 3762, 3764, 3766, 3768, 3860-3919, 3979-4005, 4096-4143, 4192-4226, 4290-4341, 4432-4484, 4624-4719, 4745-4760
+elasticsearch/_async/client/_base.py                    153     34    78%   83-99, 109-134, 184-185, 188, 194, 219, 266, 282, 316, 318-319, 356, 359-369
+elasticsearch/_async/client/async_search.py             213    200     6%   47-60, 95-114, 138-151, 421-581
+elasticsearch/_async/client/autoscaling.py               70     57    19%   47-60, 81-92, 116-129, 157-173
+elasticsearch/_async/client/cat.py                      843    786     7%   90-120, 174-204, 250-278, 325-353, 406-436, 482-509, 553-578, 657-695, 739-764, 862-896, 998-1030, 1135-1169, 1271-1307, 1351-1376, 1427-1456, 1500-1525, 1569-1594, 1650-1684, 1728-1753, 1803-1833, 1883-1913, 1963-1993, 2047-2080, 2126-2154, 2208-2238, 2342-2378
+elasticsearch/_async/client/ccr.py                      305    274    10%   46-59, 119-163, 188-201, 226-239, 273-295, 320-334, 358-371, 396-409, 500-550, 574-587, 636-678, 698-709, 734-747
+elasticsearch/_async/client/cluster.py                  375    340     9%   63-91, 121-138, 166-179, 213-230, 262-282, 313-332, 428-464, 493-508, 545-562, 607-639, 674-696, 716-727, 776-806, 878-912, 945-963
+elasticsearch/_async/client/dangling_indices.py          67     56    16%   55-76, 108-129, 149-160
+elasticsearch/_async/client/enrich.py                    92     77    16%   46-59, 85-100, 123-137, 168-188, 209-220
+elasticsearch/_async/client/eql.py                      110     97    12%   47-60, 93-110, 134-147, 246-296
+elasticsearch/_async/client/features.py                  33     24    27%   44-55, 75-86
+elasticsearch/_async/client/fleet.py                    224    213     5%   61-82, 184-232, 478-631
+elasticsearch/_async/client/graph.py                     38     31    18%   64-94
+elasticsearch/_async/client/ilm.py                      228    201    12%   56-73, 115-136, 169-187, 207-218, 250-272, 301-323, 359-383, 406-419, 443-456, 483-498, 526-541
+elasticsearch/_async/client/indices.py                 1484   1354     9%   81-106, 160-197, 258-286, 328-358, 419-444, 487-517, 540-553, 596-612, 667-690, 723-742, 786-801, 834-851, 880-897, 960-983, 1012-1030, 1086-1111, 1166-1192, 1222-1237, 1269-1288, 1363-1390, 1451-1475, 1538-1566, 1651, 1655, 1657, 1659, 1661, 1663, 1665, 1667, 1669, 1671, 1673, 1675, 1677, 1734-1760, 1804-1820, 1878-1906, 1942-1962, 2019-2043, 2108-2140, 2172-2192, 2215-2228, 2255-2271, 2332-2357, 2381-2394, 2438-2472, 2517-2547, 2655-2703, 2769-2800, 2857-2891, 2919-2937, 2988-3008, 3058-3077, 3120-3135, 3185-3224, 3277-3299, 3362-3384, 3426-3456, 3511-3549, 3589-3612, 3654-3684, 3769-3805, 3865-3890, 3923-3941, 4020-4065
+elasticsearch/_async/client/ingest.py                   129    112    13%   52-69, 89-100, 129-147, 167-178, 239-269, 303-324
+elasticsearch/_async/client/license.py                  124    105    15%   43-54, 83-98, 118-129, 149-160, 192-214, 238-251, 277-292
+elasticsearch/_async/client/logstash.py                  56     45    20%   46-59, 82-95, 122-138
+elasticsearch/_async/client/migration.py                 49     38    22%   49-63, 83-94, 114-125
+elasticsearch/_async/client/ml.py                      1859   1710     8%   46-57, 94-118, 141-154, 179-194, 220-235, 263-280, 309-324, 356-379, 402-415, 451-473, 502-519, 544-559, 586-601, 626-641, 681-699, 729-751, 810-845, 880-908, 941-965, 1016-1059, 1098-1121, 1158-1183, 1222-1253, 1297-1319, 1361-1383, 1418-1434, 1473-1491, 1522-1540, 1589-1625, 1659-1675, 1714-1732, 1765-1783, 1820-1837, 1883-1920, 1966-1998, 2043-2079, 2134-2162, 2200-2220, 2257-2279, 2299-2310, 2337-2357, 2388-2406, 2438-2461, 2490-2511, 2549-2572, 2601-2623, 2649-2664, 2755-2795, 2930-2982, 3012-3030, 3143-3193, 3249-3287, 3317-3334, 3372-3402, 3431-3451, 3477-3492, 3524-3546, 3574-3589, 3617-3632, 3666-3690, 3743-3768, 3807-3826, 3861-3885, 3919-3936, 3979-4001, 4137-4185, 4216-4236, 4327-4371, 4404-4424, 4456-4475, 4516-4546, 4571-4585
+elasticsearch/_async/client/monitoring.py                34     27    21%   56-85
+elasticsearch/_async/client/nodes.py                    188    169    10%   50-65, 89-102, 153-183, 225-249, 281-304, 382-428, 461-481
+elasticsearch/_async/client/rollup.py                   177    156    12%   46-59, 83-97, 122-136, 161-174, 250-290, 330-356, 379-392, 421-438
+elasticsearch/_async/client/searchable_snapshots.py      98     85    13%   54-70, 120-140, 188-220, 247-263
+elasticsearch/_async/client/security.py                1096    989    10%   54-76, 97-108, 148-169, 192-205, 228-241, 267-282, 305-318, 345-362, 409-431, 464-492, 523-540, 569-584, 613-628, 661-680, 709-724, 753-768, 797-812, 841-856, 885-900, 921-932, 952-963, 998-1021, 1042-1053, 1078-1094, 1119-1133, 1160-1174, 1202-1218, 1243-1258, 1298-1322, 1352-1368, 1398-1415, 1443-1458, 1494-1522, 1573-1594, 1623-1643, 1678-1702, 1733-1753, 1784-1800, 1875-1905, 1946-1972, 2018-2048, 2106-2145, 2178-2200, 2236-2260, 2301-2321, 2353-2371, 2406-2424, 2447-2460, 2498-2522, 2560-2582, 2625-2649
+elasticsearch/_async/client/shutdown.py                  78     67    14%   58-75, 112-130, 197-227
+elasticsearch/_async/client/slm.py                      158    135    15%   46-59, 83-96, 116-127, 153-167, 188-199, 219-230, 281-313, 333-344, 364-375
+elasticsearch/_async/client/snapshot.py                 317    290     9%   52-69, 106-132, 199-235, 274-304, 333-350, 380-397, 480-521, 551-569, 625-667, 701-721, 750-767
+elasticsearch/_async/client/sql.py                      154    137    11%   48-64, 88-101, 140-161, 185-198, 271-317, 348-370
+elasticsearch/_async/client/ssl.py                       19     12    37%   44-55
+elasticsearch/_async/client/tasks.py                     79     68    14%   61-83, 111-128, 179-206
+elasticsearch/_async/client/text_structure.py            42     35    17%   119-156
+elasticsearch/_async/client/transform.py                274    249     9%   53-70, 113-135, 172-191, 246-285, 351-393, 422-437, 463-478, 526-549, 602-636, 662-677
+elasticsearch/_async/client/utils.py                      2      0   100%
+elasticsearch/_async/client/watcher.py                  247    220    11%   50-68, 91-104, 127-140, 163-176, 234-269, 292-305, 354-394, 442-479, 499-510, 558-574, 594-605
+elasticsearch/_async/client/xpack.py                     41     31    24%   28, 54-69, 96-109
+elasticsearch/_async/helpers.py                         166    148    11%   76-85, 106-128, 133-144, 153-158, 214-294, 333-351, 406-497, 546-587
+elasticsearch/_sync/__init__.py                           0      0   100%
+elasticsearch/_sync/client/__init__.py                 1876   1333    29%   191, 194-204, 254-264, 289, 351, 355, 359, 409, 464-473, 476-481, 484, 526-528, 534, 541, 548, 557, 578-593, 666, 668, 673, 675, 677, 679, 681, 683, 685, 687, 689, 691, 693, 695, 697, 730-748, 773-793, 877-926, 983, 985, 987, 991, 993, 995, 997, 999, 1001, 1003, 1005, 1007, 1009, 1011, 1070, 1072, 1076, 1078, 1080, 1082, 1084, 1086, 1088, 1090, 1092, 1094, 1096, 1098, 1233-1320, 1346-1361, 1390-1407, 1475-1510, 1573-1606, 1680-1726, 1802-1841, 1911, 1913, 1917, 1919, 1921, 1923, 1925, 1927, 1929, 1931, 1933, 1935, 1937, 1939, 1941, 1943, 1972-1987, 2007-2018, 2038-2049, 2117-2152, 2221, 2223, 2231, 2234, 2236, 2238, 2240, 2242, 2244, 2246, 2248, 2250, 2252, 2254, 2256, 2258, 2260, 2262, 2288, 2290, 2292, 2294, 2361-2395, 2468-2503, 2596-2640, 2685-2715, 2784-2829, 2858-2877, 2912-2939, 3006-3037, 3100-3144, 3170-3185, 3217-3242, 3271-3293, 3324-3348, 3634, 3636, 3638, 3640, 3642, 3644, 3646, 3648, 3650, 3652, 3654, 3656, 3658, 3660, 3662, 3664, 3666, 3668, 3672, 3674, 3676, 3678, 3680, 3682, 3684, 3686, 3688, 3690, 3692, 3694, 3696, 3698, 3700, 3702, 3704, 3708, 3710, 3712, 3714, 3716, 3718, 3720, 3722, 3724, 3726, 3728, 3730, 3734, 3736, 3738, 3740, 3742, 3744, 3746, 3748, 3750, 3752, 3754, 3756, 3758, 3760, 3762, 3764, 3859, 3861, 3863, 3865, 3867, 3880-3881, 3883, 3885, 3887, 3889, 3891, 3893, 3895, 3897, 3899, 3901, 3905, 3907, 3909, 3911, 3913, 3977-4003, 4094-4141, 4190-4224, 4288-4339, 4431, 4433, 4438, 4440, 4442, 4444, 4446, 4448, 4450, 4452, 4454, 4456, 4458, 4460, 4462, 4464, 4466, 4468, 4470, 4472, 4474, 4476, 4478, 4480, 4622-4717, 4743-4758
+elasticsearch/_sync/client/_base.py                     153     17    89%   94, 184-185, 188, 194, 219, 266, 316, 318-319, 359-369
+elasticsearch/_sync/client/async_search.py              213    200     6%   47-60, 95-114, 138-151, 421-581
+elasticsearch/_sync/client/autoscaling.py                70     57    19%   47-60, 81-92, 116-129, 157-173
+elasticsearch/_sync/client/cat.py                       843    769     9%   90-120, 174-204, 250-278, 325-353, 406-436, 482-509, 553-578, 657-695, 739-764, 862-896, 998-1030, 1135-1169, 1271-1307, 1351-1376, 1430, 1432, 1434, 1436, 1438, 1440, 1442, 1444, 1446, 1448, 1450, 1452, 1454, 1500-1525, 1569-1594, 1650-1684, 1728-1753, 1803-1833, 1883-1913, 1963-1993, 2047-2080, 2126-2154, 2208-2238, 2342-2378
+elasticsearch/_sync/client/ccr.py                       305    274    10%   46-59, 119-163, 188-201, 226-239, 273-295, 320-334, 358-371, 396-409, 500-550, 574-587, 636-678, 698-709, 734-747
+elasticsearch/_sync/client/cluster.py                   375    306    18%   63-91, 121-138, 166-179, 213-230, 262-282, 313-332, 428-464, 493-508, 545-562, 607-639, 674-696, 716-727, 776-806, 888, 890, 892, 894, 896, 898, 900, 902, 904, 906, 908, 910, 951, 953, 955, 957, 959, 961
+elasticsearch/_sync/client/dangling_indices.py           67     56    16%   55-76, 108-129, 149-160
+elasticsearch/_sync/client/enrich.py                     92     77    16%   46-59, 85-100, 123-137, 168-188, 209-220
+elasticsearch/_sync/client/eql.py                       110     97    12%   47-60, 93-110, 134-147, 246-296
+elasticsearch/_sync/client/features.py                   33     24    27%   44-55, 75-86
+elasticsearch/_sync/client/fleet.py                     224    213     5%   61-82, 184-232, 478-631
+elasticsearch/_sync/client/graph.py                      38     31    18%   64-94
+elasticsearch/_sync/client/ilm.py                       228    201    12%   56-73, 115-136, 169-187, 207-218, 250-272, 301-323, 359-383, 406-419, 443-456, 483-498, 526-541
+elasticsearch/_sync/client/indices.py                  1484   1304    12%   81-106, 160-197, 258-286, 328-358, 419-444, 488, 493, 495, 497, 499, 501, 503, 505, 507, 509, 511, 516, 540-553, 596-612, 668, 672, 674, 678, 680, 682, 684, 686, 688, 723-742, 786-801, 834-851, 880-897, 960-983, 1012-1030, 1091, 1093, 1095, 1097, 1099, 1101, 1103, 1105, 1107, 1109, 1166-1192, 1222-1237, 1269-1288, 1363-1390, 1451-1475, 1538-1566, 1651, 1655, 1657, 1659, 1661, 1663, 1665, 1667, 1669, 1671, 1673, 1675, 1677, 1734-1760, 1804-1820, 1878-1906, 1942-1962, 2019-2043, 2108-2140, 2172-2192, 2215-2228, 2255-2271, 2332-2357, 2381-2394, 2438-2472, 2517-2547, 2655-2703, 2769-2800, 2857-2891, 2919-2937, 2988-3008, 3058-3077, 3120-3135, 3185-3224, 3277-3299, 3362-3384, 3426-3456, 3511-3549, 3589-3612, 3654-3684, 3769-3805, 3865-3890, 3923-3941, 4020-4065
+elasticsearch/_sync/client/ingest.py                    129    112    13%   52-69, 89-100, 129-147, 167-178, 239-269, 303-324
+elasticsearch/_sync/client/license.py                   124    105    15%   43-54, 83-98, 118-129, 149-160, 192-214, 238-251, 277-292
+elasticsearch/_sync/client/logstash.py                   56     45    20%   46-59, 82-95, 122-138
+elasticsearch/_sync/client/migration.py                  49     38    22%   49-63, 83-94, 114-125
+elasticsearch/_sync/client/ml.py                       1859   1710     8%   46-57, 94-118, 141-154, 179-194, 220-235, 263-280, 309-324, 356-379, 402-415, 451-473, 502-519, 544-559, 586-601, 626-641, 681-699, 729-751, 810-845, 880-908, 941-965, 1016-1059, 1098-1121, 1158-1183, 1222-1253, 1297-1319, 1361-1383, 1418-1434, 1473-1491, 1522-1540, 1589-1625, 1659-1675, 1714-1732, 1765-1783, 1820-1837, 1883-1920, 1966-1998, 2043-2079, 2134-2162, 2200-2220, 2257-2279, 2299-2310, 2337-2357, 2388-2406, 2438-2461, 2490-2511, 2549-2572, 2601-2623, 2649-2664, 2755-2795, 2930-2982, 3012-3030, 3143-3193, 3249-3287, 3317-3334, 3372-3402, 3431-3451, 3477-3492, 3524-3546, 3574-3589, 3617-3632, 3666-3690, 3743-3768, 3807-3826, 3861-3885, 3919-3936, 3979-4001, 4137-4185, 4216-4236, 4327-4371, 4404-4424, 4456-4475, 4516-4546, 4571-4585
+elasticsearch/_sync/client/monitoring.py                 34     27    21%   56-85
+elasticsearch/_sync/client/nodes.py                     188    169    10%   50-65, 89-102, 153-183, 225-249, 281-304, 382-428, 461-481
+elasticsearch/_sync/client/rollup.py                    177    156    12%   46-59, 83-97, 122-136, 161-174, 250-290, 330-356, 379-392, 421-438
+elasticsearch/_sync/client/searchable_snapshots.py       98     85    13%   54-70, 120-140, 188-220, 247-263
+elasticsearch/_sync/client/security.py                 1096    989    10%   54-76, 97-108, 148-169, 192-205, 228-241, 267-282, 305-318, 345-362, 409-431, 464-492, 523-540, 569-584, 613-628, 661-680, 709-724, 753-768, 797-812, 841-856, 885-900, 921-932, 952-963, 998-1021, 1042-1053, 1078-1094, 1119-1133, 1160-1174, 1202-1218, 1243-1258, 1298-1322, 1352-1368, 1398-1415, 1443-1458, 1494-1522, 1573-1594, 1623-1643, 1678-1702, 1733-1753, 1784-1800, 1875-1905, 1946-1972, 2018-2048, 2106-2145, 2178-2200, 2236-2260, 2301-2321, 2353-2371, 2406-2424, 2447-2460, 2498-2522, 2560-2582, 2625-2649
+elasticsearch/_sync/client/shutdown.py                   78     67    14%   58-75, 112-130, 197-227
+elasticsearch/_sync/client/slm.py                       158    135    15%   46-59, 83-96, 116-127, 153-167, 188-199, 219-230, 281-313, 333-344, 364-375
+elasticsearch/_sync/client/snapshot.py                  317    290     9%   52-69, 106-132, 199-235, 274-304, 333-350, 380-397, 480-521, 551-569, 625-667, 701-721, 750-767
+elasticsearch/_sync/client/sql.py                       154    137    11%   48-64, 88-101, 140-161, 185-198, 271-317, 348-370
+elasticsearch/_sync/client/ssl.py                        19     12    37%   44-55
+elasticsearch/_sync/client/tasks.py                      79     68    14%   61-83, 111-128, 179-206
+elasticsearch/_sync/client/text_structure.py             42     35    17%   119-156
+elasticsearch/_sync/client/transform.py                 274    249     9%   53-70, 113-135, 172-191, 246-285, 351-393, 422-437, 463-478, 526-549, 602-636, 662-677
+elasticsearch/_sync/client/utils.py                     177     41    77%   61, 98-102, 153-156, 166-221, 226-230, 262, 266, 287, 346-347, 427-429
+elasticsearch/_sync/client/watcher.py                   247    220    11%   50-68, 91-104, 127-140, 163-176, 234-269, 292-305, 354-394, 442-479, 499-510, 558-574, 594-605
+elasticsearch/_sync/client/xpack.py                      41     31    24%   28, 54-69, 96-109
+elasticsearch/_utils.py                                  13      0   100%
+elasticsearch/_version.py                                 1      0   100%
+elasticsearch/client.py                                  40     40     0%   18-112
+elasticsearch/compat.py                                  29      4    86%   28, 69-71
+elasticsearch/exceptions.py                              43      3    93%   56, 77-78
+elasticsearch/helpers/__init__.py                         9      0   100%
+elasticsearch/helpers/actions.py                        249    149    40%   164, 182, 253-274, 290-313, 334-355, 410-478, 517-535, 669-758, 807-844
+elasticsearch/helpers/errors.py                          10      4    60%   23-24, 31-32
+elasticsearch/serializer.py                              86     26    70%   65, 71, 80, 95, 98-100, 127, 131, 141-172, 186-191, 203
+elasticsearch/transport.py                                9      0   100%
+-----------------------------------------------------------------------------------
+TOTAL                                                 23517  19997    15%
+
+================ 223 passed, 121 skipped, 28 warnings in 5.05s =================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

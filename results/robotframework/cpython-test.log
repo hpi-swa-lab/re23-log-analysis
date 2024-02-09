@@ -1,0 +1,239 @@
+GLOB sdist-make: /workdir/robotframework-6.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt, -ratest/requirements.txt, -ratest/requirements-run.txt, -rutest/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/robotframework-6.0.1/.tox/.tmp/package/1/robotframework-6.0.1.zip
+cpythonlibtest-unit-test-tests installed: annotated-types==0.6.0,attrs==23.1.0,certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,cryptography==41.0.7,Deprecated==1.2.14,docutils==0.20.1,elementpath==4.1.5,exceptiongroup==1.2.0,idna==3.6,importlib-metadata==6.8.0,iniconfig==2.0.0,invoke==2.2.0,jaraco.classes==3.3.0,jeepney==0.8.0,jsonschema==4.20.0,jsonschema-specifications==2023.11.1,keyring==24.3.0,lxml==4.9.3,markdown-it-py==3.0.0,mdurl==0.1.2,mock==5.1.0,more-itertools==10.1.0,nh3==0.2.14,packaging==23.2,pkginfo==1.9.6,pluggy==1.3.0,pycparser==2.21,pydantic==2.5.2,pydantic_core==2.14.5,PyGithub==2.1.1,Pygments==2.17.2,PyJWT==2.8.0,PyNaCl==1.5.0,pytest==7.4.3,python-dateutil==2.8.2,PyYAML==6.0.1,readme-renderer==42.0,referencing==0.31.0,rellu==0.7,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,robotframework @ file:///workdir/robotframework-6.0.1/.tox/.tmp/package/1/robotframework-6.0.1.zip#sha256=3e5963be25ff3f4bdb5a26d9a905f900e72417b2c76b302339d0ad336045b677,rpds-py==0.13.1,SecretStorage==3.3.3,six==1.16.0,tomli==2.0.1,twine==4.0.2,typing_extensions==4.8.0,urllib3==2.1.0,wrapt==1.16.0,xmlschema==2.5.0,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1582643216'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/robotframework/6.0.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/robotframework-6.0.1
+collecting ... collected 1807 items / 4 errors
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting utest/api/test_run_and_rebot.py _______________
+ImportError while importing test module '/workdir/robotframework-6.0.1/utest/api/test_run_and_rebot.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+utest/api/test_run_and_rebot.py:18: in <module>
+    from resources.runningtestcase import RunningTestCase
+E   ModuleNotFoundError: No module named 'resources'
+_______________ ERROR collecting utest/running/test_handlers.py ________________
+ImportError while importing test module '/workdir/robotframework-6.0.1/utest/running/test_handlers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+utest/running/test_handlers.py:14: in <module>
+    from classes import (NameLibrary, DocLibrary, ArgInfoLibrary,
+E   ModuleNotFoundError: No module named 'classes'
+________________ ERROR collecting utest/running/test_running.py ________________
+ImportError while importing test module '/workdir/robotframework-6.0.1/utest/running/test_running.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+utest/running/test_running.py:11: in <module>
+    from resources.runningtestcase import RunningTestCase
+E   ModuleNotFoundError: No module named 'resources'
+______________ ERROR collecting utest/running/test_testlibrary.py ______________
+ImportError while importing test module '/workdir/robotframework-6.0.1/utest/running/test_testlibrary.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+utest/running/test_testlibrary.py:14: in <module>
+    from classes import (NameLibrary, DocLibrary, ArgInfoLibrary, GetattrLibrary,
+E   ModuleNotFoundError: No module named 'classes'
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_body.py)
+    class TestCase(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_control.py)
+    class TestCase(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_filter.py)
+    class TestSuite(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_fixture.py)
+    class TestSuite(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_keyword.py)
+    class TestSuite(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_keyword.py)
+    class TestCase(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_statistics.py)
+    class TestCase(model.TestCase, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_statistics.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_tagstatistics.py)
+    class TestCase(model.TestCase, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_testcase.py)
+    class TestSuite(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:26: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/model/test_testcase.py)
+    class TestCase(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:173
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testcase.py:173: PytestCollectionWarning: cannot collect test class 'TestCases' because it has a __init__ constructor (from: utest/model/test_testcase.py)
+    class TestCases(ItemList):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/model/test_testsuite.py)
+    class TestSuite(ModelObject):
+
+utest/output/test_listeners.py:34
+  /workdir/robotframework-6.0.1/utest/output/test_listeners.py:34: PytestCollectionWarning: cannot collect test class 'TestMock' because it has a __init__ constructor (from: utest/output/test_listeners.py)
+    class TestMock(Mock):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/blocks.py:127
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/blocks.py:127: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/parsing/test_model.py)
+    class TestCase(Block):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/blocks.py:112
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/blocks.py:112: PytestCollectionWarning: cannot collect test class 'TestCaseSection' because it has a __init__ constructor (from: utest/parsing/test_model.py)
+    class TestCaseSection(Section):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:565
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:565: PytestCollectionWarning: cannot collect test class 'TestCaseName' because it has a __init__ constructor (from: utest/parsing/test_model.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:457
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:457: PytestCollectionWarning: cannot collect test class 'TestSetup' because it has a __init__ constructor (from: utest/parsing/test_statements.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:473
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:473: PytestCollectionWarning: cannot collect test class 'TestTeardown' because it has a __init__ constructor (from: utest/parsing/test_statements.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:489
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:489: PytestCollectionWarning: cannot collect test class 'TestTemplate' because it has a __init__ constructor (from: utest/parsing/test_statements.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:503
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:503: PytestCollectionWarning: cannot collect test class 'TestTimeout' because it has a __init__ constructor (from: utest/parsing/test_statements.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:565
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/parsing/model/statements.py:565: PytestCollectionWarning: cannot collect test class 'TestCaseName' because it has a __init__ constructor (from: utest/parsing/test_statements.py)
+    @Statement.register
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/reporting/test_jsexecutionresult.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/reporting/test_jsmodelbuilders.py)
+    class TestCase(model.TestCase, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/reporting/test_jsmodelbuilders.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/reporting/jsmodelbuilders.py:115
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/reporting/jsmodelbuilders.py:115: PytestCollectionWarning: cannot collect test class 'TestBuilder' because it has a __init__ constructor (from: utest/reporting/test_jsmodelbuilders.py)
+    class TestBuilder(_Builder):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/reporting/test_reporting.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/result/test_configurer.py)
+    class TestCase(model.TestCase, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/result/test_configurer.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/result/test_keywordremover.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/result/test_resultbuilder.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:513: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/result/test_resultmodel.py)
+    class TestCase(model.TestCase, StatusMixin):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/result/model.py:546: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/result/test_resultmodel.py)
+    class TestSuite(model.TestSuite, StatusMixin):
+
+utest/result/test_resultserializer.py:24
+  /workdir/robotframework-6.0.1/utest/result/test_resultserializer.py:24: PytestCollectionWarning: cannot collect test class 'TestableOutputWriter' because it has a __init__ constructor (from: utest/result/test_resultserializer.py)
+    class TestableOutputWriter(OutputWriter):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/model/testsuite.py:29: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/result/test_visitor.py)
+    class TestSuite(ModelObject):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/running/test_builder.py)
+    class TestSuite(model.TestSuite):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/builder/builders.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/builder/builders.py:26: PytestCollectionWarning: cannot collect test class 'TestSuiteBuilder' because it has a __init__ constructor (from: utest/running/test_builder.py)
+    class TestSuiteBuilder:
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/running/test_imports.py)
+    class TestSuite(model.TestSuite):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/running/test_randomizer.py)
+    class TestSuite(model.TestSuite):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:245
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:245: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/running/test_randomizer.py)
+    class TestCase(model.TestCase):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:266: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: utest/running/test_run_model.py)
+    class TestSuite(model.TestSuite):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:245
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/model.py:245: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: utest/running/test_run_model.py)
+    class TestCase(model.TestCase):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/builder/builders.py:26
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/builder/builders.py:26: PytestCollectionWarning: cannot collect test class 'TestSuiteBuilder' because it has a __init__ constructor (from: utest/running/test_run_model.py)
+    class TestSuiteBuilder:
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/timeouts/__init__.py:109
+  /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/robot/running/timeouts/__init__.py:109: PytestCollectionWarning: cannot collect test class 'TestTimeout' because it has a __init__ constructor (from: utest/running/test_timeouts.py)
+    class TestTimeout(_Timeout):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/robotframework/6.0.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR utest/api/test_run_and_rebot.py
+ERROR utest/running/test_handlers.py
+ERROR utest/running/test_running.py
+ERROR utest/running/test_testlibrary.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!!
+======================== 44 warnings, 4 errors in 1.73s ========================
+ERROR: InvocationError for command /workdir/robotframework-6.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/robotframework/6.0.1/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

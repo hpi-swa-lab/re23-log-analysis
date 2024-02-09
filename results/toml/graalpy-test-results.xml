@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="2" tests="23" time="0.889" timestamp="2023-11-30T05:39:34.218000" hostname="be2d8ee410eb"><testcase classname="tests.test_api" name="test_bug_148" time="0.014" /><testcase classname="tests.test_api" name="test_bug_144" time="0.007" /><testcase classname="tests.test_api" name="test_bug_196" time="0.009" /><testcase classname="tests.test_api" name="test_valid_tests" time="0.006"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'toml-test/tests/valid/'">Traceback (most recent call last):
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/toml-0.10.2/tests/test_api.py", line 49, in test_valid_tests
+    for f in os.listdir(valid_dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'toml-test/tests/valid/'</failure></testcase><testcase classname="tests.test_api" name="test_circular_ref" time="0.008" /><testcase classname="tests.test_api" name="test__dict" time="0.006" /><testcase classname="tests.test_api" name="test_dict_decoder" time="0.005" /><testcase classname="tests.test_api" name="test_inline_dict" time="0.009" /><testcase classname="tests.test_api" name="test_array_sep" time="0.006" /><testcase classname="tests.test_api" name="test_numpy_floats" time="0.007"><skipped type="pytest.skip" message="could not import 'numpy': No module named 'numpy'">/workdir/toml-0.10.2/tests/test_api.py:106: could not import 'numpy': No module named 'numpy'</skipped></testcase><testcase classname="tests.test_api" name="test_numpy_ints" time="0.007"><skipped type="pytest.skip" message="could not import 'numpy': No module named 'numpy'">/workdir/toml-0.10.2/tests/test_api.py:123: could not import 'numpy': No module named 'numpy'</skipped></testcase><testcase classname="tests.test_api" name="test_ordered" time="0.015" /><testcase classname="tests.test_api" name="test_tuple" time="0.005" /><testcase classname="tests.test_api" name="test_decimal" time="0.011" /><testcase classname="tests.test_api" name="test_invalid_tests" time="0.005"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'toml-test/tests/invalid/'">Traceback (most recent call last):
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/toml-0.10.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/toml-0.10.2/tests/test_api.py", line 165, in test_invalid_tests
+    for f in os.listdir(invalid_dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'toml-test/tests/invalid/'</failure></testcase><testcase classname="tests.test_api" name="test_exceptions" time="0.005" /><testcase classname="tests.test_api" name="test_dump" time="0.008" /><testcase classname="tests.test_api" name="test_paths" time="0.029" /><testcase classname="tests.test_api" name="test_warnings" time="0.015" /><testcase classname="tests.test_api" name="test_commutativity" time="0.006" /><testcase classname="tests.test_api" name="test_pathlib" time="0.006" /><testcase classname="tests.test_api" name="test_comment_preserve_decoder_encoder" time="0.009" /><testcase classname="tests.test_api" name="test_deepcopy_timezone" time="0.008" /></testsuite></testsuites>

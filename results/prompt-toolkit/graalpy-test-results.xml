@@ -1,0 +1,1869 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="34" skipped="0" tests="145" time="9.456" timestamp="2023-11-23T00:49:58.094000" hostname="80ac3eb7f7f2"><testcase classname="tests.test_async_generator" name="test_generator_to_async_generator" time="0.036" /><testcase classname="tests.test_buffer" name="test_initial" time="0.011" /><testcase classname="tests.test_buffer" name="test_insert_text" time="0.011" /><testcase classname="tests.test_buffer" name="test_cursor_movement" time="0.009" /><testcase classname="tests.test_buffer" name="test_backspace" time="0.007" /><testcase classname="tests.test_buffer" name="test_cursor_up" time="0.008" /><testcase classname="tests.test_buffer" name="test_cursor_down" time="0.007" /><testcase classname="tests.test_buffer" name="test_join_next_line" time="0.008" /><testcase classname="tests.test_buffer" name="test_newline" time="0.007" /><testcase classname="tests.test_buffer" name="test_swap_characters_before_cursor" time="0.007" /><testcase classname="tests.test_cli" name="test_simple_text_input" time="0.193"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 66, in test_simple_text_input
+    result, cli = _feed_cli_with_input("hello\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_cursor_movements" time="0.141"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 76, in test_emacs_cursor_movements
+    result, cli = _feed_cli_with_input("hello\x01X\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_kill_multiple_words_and_paste" time="0.096"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 190, in test_emacs_kill_multiple_words_and_paste
+    result, cli = _feed_cli_with_input(
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_interrupts" time="0.115"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 212, in test_interrupts
+    result, cli = _feed_cli_with_input("hello\x03\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_yank" time="0.089"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 225, in test_emacs_yank
+    result, cli = _feed_cli_with_input("hello\x02\x19\r", clipboard=c)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_quoted_insert" time="0.102"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 232, in test_quoted_insert
+    result, cli = _feed_cli_with_input("hello\x11\x02\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_transformations" time="0.081"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 238, in test_transformations
+    result, cli = _feed_cli_with_input("hello world\01\x1bc\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_other_bindings" time="0.082"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 265, in test_emacs_other_bindings
+    result, cli = _feed_cli_with_input("abcde\x14X\r")  # Ctrl-T
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_controlx_controlx" time="0.084"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 305, in test_controlx_controlx
+    result, cli = _feed_cli_with_input("hello world\x18\x18X\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_history_bindings" time="0.077"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 321, in test_emacs_history_bindings
+    result, cli = _feed_cli_with_input("new input\r", history=history)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_reverse_search" time="0.087"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 352, in test_emacs_reverse_search
+    result, cli = _feed_cli_with_input("\x12input\r\r", history=history)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_arguments" time="0.075"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 365, in test_emacs_arguments
+    result, cli = _feed_cli_with_input("\x1b4x\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_arguments_for_all_commands" time="0.088"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 402, in test_emacs_arguments_for_all_commands
+    result, cli = _feed_cli_with_input("hello\x1b4" + key + "X\r\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_kill_ring" time="0.075"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 422, in test_emacs_kill_ring
+    result, cli = _feed_cli_with_input(operations + "\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_selection" time="0.084"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 449, in test_emacs_selection
+    result, cli = _feed_cli_with_input(operations)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_insert_comment" time="0.076"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 475, in test_emacs_insert_comment
+    result, cli = _feed_cli_with_input("hello\x1b#", check_line_ending=False)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_record_macro" time="0.092"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 496, in test_emacs_record_macro
+    result, cli = _feed_cli_with_input(operations)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_emacs_nested_macro" time="0.071"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 513, in test_emacs_nested_macro
+    result, cli = _feed_cli_with_input(operations)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_prefix_meta" time="0.089"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 538, in test_prefix_meta
+    result, cli = _feed_cli_with_input(
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_bracketed_paste" time="0.092"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 545, in test_bracketed_paste
+    result, cli = _feed_cli_with_input("\x1b[200~hello world\x1b[201~\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_cursor_movements" time="0.093"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 566, in test_vi_cursor_movements
+    result, cli = feed("\x1b\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_operators" time="0.067"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 611, in test_vi_operators
+    result, cli = feed("hello\x1bg~0\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_text_objects" time="0.361"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 627, in test_vi_text_objects
+    result, cli = feed("hello\x1bgUgg\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_digraphs" time="0.061"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 651, in test_vi_digraphs
+    result, cli = feed("hello\x0bo/\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_block_editing" time="0.060"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 691, in test_vi_block_editing
+    result, cli = feed(operations.replace("insert", "I"))
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_block_editing_empty_lines" time="0.057"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 725, in test_vi_block_editing_empty_lines
+    result, cli = feed(operations.replace("insert", "I"))
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_visual_line_copy" time="0.053"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 759, in test_vi_visual_line_copy
+    result, cli = feed(operations)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_visual_empty_line" time="0.054"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 784, in test_vi_visual_empty_line
+    result, cli = feed(operations)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_character_delete_after_cursor" time="0.046"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 806, in test_vi_character_delete_after_cursor
+    result, cli = feed("abcd\x1bHx\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_character_delete_before_cursor" time="0.054"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 831, in test_vi_character_delete_before_cursor
+    result, cli = feed("abcd\x1bX\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_character_paste" time="0.044"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 854, in test_vi_character_paste
+    result, cli = feed("abcde\x1bhhxp\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_temp_navigation_mode" time="0.058"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 870, in test_vi_temp_navigation_mode
+    result, cli = feed("abcde" "\x0f" "3h" "x\r")  # c-o  # 3 times to the left.
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_vi_macros" time="0.041"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 897, in test_vi_macros
+    result, cli = feed("\x1bqcahello\x1bq@c\r")
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 60, in _feed_cli_with_input
+    _ = session.prompt()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_cli" name="test_accept_default" time="0.040"><failure message="AttributeError: module 'signal' has no attribute 'siginterrupt'">Traceback (most recent call last):
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/prompt-toolkit-3.0.33/tests/test_cli.py", line 933, in test_accept_default
+    result = session.prompt(default="hello", accept_default=True)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/shortcuts/prompt.py", line 1034, in prompt
+    return self.app.run(
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 978, in run
+    return loop.run_until_complete(
+  File "/opt/graalpy/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/graalpy/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/opt/graalpy/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 876, in run_async
+    stack.enter_context(set_handle_sigint(loop))
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/opt/graalpy/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/workdir/prompt-toolkit-3.0.33/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 812, in set_handle_sigint
+    loop.add_signal_handler(
+  File "/opt/graalpy/lib/python3.10/asyncio/unix_events.py", line 119, in add_signal_handler
+    signal.siginterrupt(sig, False)
+AttributeError: module 'signal' has no attribute 'siginterrupt'</failure></testcase><testcase classname="tests.test_completion" name="test_pathcompleter_completes_in_current_directory" time="0.009" /><testcase classname="tests.test_completion" name="test_pathcompleter_completes_files_in_current_directory" time="0.011" /><testcase classname="tests.test_completion" name="test_pathcompleter_completes_files_in_absolute_directory" time="0.011" /><testcase classname="tests.test_completion" name="test_pathcompleter_completes_directories_with_only_directories" time="0.011" /><testcase classname="tests.test_completion" name="test_pathcompleter_respects_completions_under_min_input_len" time="0.014" /><testcase classname="tests.test_completion" name="test_pathcompleter_does_not_expanduser_by_default" time="0.006" /><testcase classname="tests.test_completion" name="test_pathcompleter_can_expanduser" time="0.007" /><testcase classname="tests.test_completion" name="test_pathcompleter_can_apply_file_filter" time="0.009" /><testcase classname="tests.test_completion" name="test_pathcompleter_get_paths_constrains_path" time="0.011" /><testcase classname="tests.test_completion" name="test_word_completer_static_word_list" time="0.010" /><testcase classname="tests.test_completion" name="test_word_completer_ignore_case" time="0.008" /><testcase classname="tests.test_completion" name="test_word_completer_match_middle" time="0.009" /><testcase classname="tests.test_completion" name="test_word_completer_sentence" time="0.008" /><testcase classname="tests.test_completion" name="test_word_completer_dynamic_word_list" time="0.010" /><testcase classname="tests.test_completion" name="test_word_completer_pattern" time="0.010" /><testcase classname="tests.test_completion" name="test_fuzzy_completer" time="0.026" /><testcase classname="tests.test_completion" name="test_nested_completer" time="0.014" /><testcase classname="tests.test_completion" name="test_deduplicate_completer" time="0.007" /><testcase classname="tests.test_document" name="test_current_char" time="0.007" /><testcase classname="tests.test_document" name="test_text_before_cursor" time="0.007" /><testcase classname="tests.test_document" name="test_text_after_cursor" time="0.006" /><testcase classname="tests.test_document" name="test_lines" time="0.006" /><testcase classname="tests.test_document" name="test_line_count" time="0.006" /><testcase classname="tests.test_document" name="test_current_line_before_cursor" time="0.005" /><testcase classname="tests.test_document" name="test_current_line_after_cursor" time="0.006" /><testcase classname="tests.test_document" name="test_current_line" time="0.007" /><testcase classname="tests.test_document" name="test_cursor_position" time="0.006" /><testcase classname="tests.test_document" name="test_translate_index_to_position" time="0.006" /><testcase classname="tests.test_document" name="test_is_cursor_at_the_end" time="0.008" /><testcase classname="tests.test_filter" name="test_never" time="0.005" /><testcase classname="tests.test_filter" name="test_always" time="0.009" /><testcase classname="tests.test_filter" name="test_invert" time="0.008" /><testcase classname="tests.test_filter" name="test_or" time="0.007" /><testcase classname="tests.test_filter" name="test_and" time="0.006" /><testcase classname="tests.test_filter" name="test_to_filter" time="0.008" /><testcase classname="tests.test_formatted_text" name="test_basic_html" time="0.081" /><testcase classname="tests.test_formatted_text" name="test_html_with_fg_bg" time="0.011" /><testcase classname="tests.test_formatted_text" name="test_ansi_formatting" time="0.008" /><testcase classname="tests.test_formatted_text" name="test_ansi_256_color" time="0.006" /><testcase classname="tests.test_formatted_text" name="test_ansi_true_color" time="0.006" /><testcase classname="tests.test_formatted_text" name="test_ansi_interpolation" time="0.009" /><testcase classname="tests.test_formatted_text" name="test_interpolation" time="0.008" /><testcase classname="tests.test_formatted_text" name="test_html_interpolation" time="0.018" /><testcase classname="tests.test_formatted_text" name="test_merge_formatted_text" time="0.009" /><testcase classname="tests.test_formatted_text" name="test_pygments_tokens" time="0.006" /><testcase classname="tests.test_formatted_text" name="test_split_lines" time="0.005" /><testcase classname="tests.test_formatted_text" name="test_split_lines_2" time="0.005" /><testcase classname="tests.test_formatted_text" name="test_split_lines_3" time="0.005" /><testcase classname="tests.test_history" name="test_in_memory_history" time="0.009" /><testcase classname="tests.test_history" name="test_file_history" time="0.035" /><testcase classname="tests.test_history" name="test_threaded_file_history" time="0.072" /><testcase classname="tests.test_history" name="test_threaded_in_memory_history" time="0.021" /><testcase classname="tests.test_inputstream" name="test_control_keys" time="0.011" /><testcase classname="tests.test_inputstream" name="test_arrows" time="0.011" /><testcase classname="tests.test_inputstream" name="test_escape" time="0.012" /><testcase classname="tests.test_inputstream" name="test_special_double_keys" time="0.010" /><testcase classname="tests.test_inputstream" name="test_flush_1" time="0.009" /><testcase classname="tests.test_inputstream" name="test_flush_2" time="0.009" /><testcase classname="tests.test_inputstream" name="test_meta_arrows" time="0.009" /><testcase classname="tests.test_inputstream" name="test_control_square_close" time="0.009" /><testcase classname="tests.test_inputstream" name="test_invalid" time="0.009" /><testcase classname="tests.test_inputstream" name="test_cpr_response" time="0.011" /><testcase classname="tests.test_inputstream" name="test_cpr_response_2" time="0.010" /><testcase classname="tests.test_key_binding" name="test_remove_bindings" time="0.083" /><testcase classname="tests.test_key_binding" name="test_feed_simple" time="0.034" /><testcase classname="tests.test_key_binding" name="test_feed_several" time="0.034" /><testcase classname="tests.test_key_binding" name="test_control_square_closed_any" time="0.064" /><testcase classname="tests.test_key_binding" name="test_common_prefix" time="0.033" /><testcase classname="tests.test_key_binding" name="test_previous_key_sequence" time="0.034" /><testcase classname="tests.test_layout" name="test_layout_class" time="0.011" /><testcase classname="tests.test_layout" name="test_create_invalid_layout" time="0.006" /><testcase classname="tests.test_print_formatted_text" name="test_print_formatted_text" time="0.063" /><testcase classname="tests.test_print_formatted_text" name="test_print_formatted_text_backslash_r" time="0.023" /><testcase classname="tests.test_print_formatted_text" name="test_formatted_text_with_style" time="0.027" /><testcase classname="tests.test_print_formatted_text" name="test_html_with_style" time="0.026" /><testcase classname="tests.test_regular_languages" name="test_simple_match" time="0.017" /><testcase classname="tests.test_regular_languages" name="test_variable_varname" time="0.015" /><testcase classname="tests.test_regular_languages" name="test_prefix" time="0.013" /><testcase classname="tests.test_regular_languages" name="test_completer" time="0.013" /><testcase classname="tests.test_shortcuts" name="test_split_multiline_prompt" time="0.007" /><testcase classname="tests.test_shortcuts" name="test_print_container" time="0.645" /><testcase classname="tests.test_style" name="test_style_from_dict" time="0.007" /><testcase classname="tests.test_style" name="test_class_combinations_1" time="0.007" /><testcase classname="tests.test_style" name="test_class_combinations_2" time="0.007" /><testcase classname="tests.test_style" name="test_substyles" time="0.007" /><testcase classname="tests.test_style" name="test_swap_light_and_dark_style_transformation" time="0.006" /><testcase classname="tests.test_style_transformation" name="test_adjust_brightness_style_transformation" time="0.009" /><testcase classname="tests.test_utils" name="test_using_weights" time="0.009" /><testcase classname="tests.test_vt100_output" name="test_get_closest_ansi_color" time="0.006" /><testcase classname="tests.test_widgets" name="test_defaulf_button" time="0.007" /><testcase classname="tests.test_widgets" name="test_custom_button" time="0.007" /><testcase classname="tests.test_yank_nth_arg" name="test_empty_history" time="0.007" /><testcase classname="tests.test_yank_nth_arg" name="test_simple_search" time="0.008" /><testcase classname="tests.test_yank_nth_arg" name="test_simple_search_with_quotes" time="0.008" /><testcase classname="tests.test_yank_nth_arg" name="test_simple_search_with_arg" time="0.007" /><testcase classname="tests.test_yank_nth_arg" name="test_simple_search_with_arg_out_of_bounds" time="0.008" /><testcase classname="tests.test_yank_nth_arg" name="test_repeated_search" time="0.008" /><testcase classname="tests.test_yank_nth_arg" name="test_repeated_search_with_wraparound" time="0.008" /><testcase classname="tests.test_yank_nth_arg" name="test_yank_nth_arg" time="0.007" /><testcase classname="tests.test_yank_nth_arg" name="test_repeated_yank_nth_arg" time="0.007" /><testcase classname="tests.test_yank_nth_arg" name="test_yank_nth_arg_with_arg" time="0.008" /></testsuite></testsuites>

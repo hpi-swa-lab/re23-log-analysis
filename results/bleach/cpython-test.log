@@ -1,0 +1,29 @@
+GLOB sdist-make: /workdir/bleach-5.0.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/bleach-5.0.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/bleach-5.0.0/.tox/.tmp/package/1/bleach-5.0.0.zip
+ERROR: invocation failed (exit code 1), logfile: /workdir/bleach-5.0.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/bleach-5.0.0.zip
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [1 lines of output]
+      error in bleach setup command: 'extras_require' must be a dictionary whose values are strings or lists of strings containing valid project/version requirement specifiers.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/bleach-5.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/bleach-5.0.0.zip (exited with code 1)

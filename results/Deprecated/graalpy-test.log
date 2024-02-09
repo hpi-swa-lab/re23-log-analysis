@@ -1,0 +1,843 @@
+GLOB sdist-make: /workdir/Deprecated-1.2.13/setup.py
+graalpylibtest-unit-test-tests create: /workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/Deprecated-1.2.13/.tox/.tmp/package/1/Deprecated-1.2.13.zip
+graalpylibtest-unit-test-tests installed: Deprecated @ file:///workdir/Deprecated-1.2.13/.tox/.tmp/package/1/Deprecated-1.2.13.zip,exceptiongroup==1.1.3,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1,wrapt==1.16.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3247260095'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/Deprecated/1.2.13/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/Deprecated-1.2.13
+configfile: setup.cfg
+collecting ... collected 159 items
+
+tests/test.py::test_deprecated_has_docstring PASSED                      [  0%]
+tests/test.py::test_deprecated_has_version PASSED                        [  1%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[None] PASSED [  1%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function1] PASSED [  2%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function2] PASSED [  3%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function3] PASSED [  3%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function4] PASSED [  4%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function5] PASSED [  5%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function6] PASSED [  5%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[None] FAILED [  6%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1] FAILED [  6%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2] FAILED [  7%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3] FAILED [  8%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4] FAILED [  8%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5] FAILED [  9%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6] FAILED [ 10%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[None] PASSED [ 10%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method1] PASSED [ 11%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method2] PASSED [ 11%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method3] PASSED [ 12%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method4] PASSED [ 13%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method5] PASSED [ 13%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method6] PASSED [ 14%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[None] PASSED [ 15%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method1] PASSED [ 15%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method2] PASSED [ 16%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method3] PASSED [ 16%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method4] PASSED [ 17%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method5] PASSED [ 18%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method6] PASSED [ 18%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[None] FAILED [ 19%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1] FAILED [ 20%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2] FAILED [ 20%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3] FAILED [ 21%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4] FAILED [ 22%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5] FAILED [ 22%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6] FAILED [ 23%]
+tests/test_deprecated.py::test_should_raise_type_error PASSED            [ 23%]
+tests/test_deprecated.py::test_warning_msg_has_reason PASSED             [ 24%]
+tests/test_deprecated.py::test_warning_msg_has_version PASSED            [ 25%]
+tests/test_deprecated.py::test_warning_is_ignored PASSED                 [ 25%]
+tests/test_deprecated.py::test_specific_warning_cls_is_used PASSED       [ 26%]
+tests/test_deprecated.py::test_respect_global_filter PASSED              [ 27%]
+tests/test_deprecated_class.py::test_simple_class_deprecation PASSED     [ 27%]
+tests/test_deprecated_class.py::test_class_deprecation_using_wrapper PASSED [ 28%]
+tests/test_deprecated_class.py::test_class_deprecation_using_a_simple_decorator PASSED [ 28%]
+tests/test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator PASSED [ 29%]
+tests/test_deprecated_class.py::test_class_respect_global_filter PASSED  [ 30%]
+tests/test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator PASSED [ 30%]
+tests/test_deprecated_class.py::test_simple_class_deprecation_with_args PASSED [ 31%]
+tests/test_deprecated_metaclass.py::test_with_init PASSED                [ 32%]
+tests/test_deprecated_metaclass.py::test_with_new PASSED                 [ 32%]
+tests/test_deprecated_metaclass.py::test_with_metaclass PASSED           [ 33%]
+tests/test_deprecated_metaclass.py::test_with_singleton_metaclass PASSED [ 33%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-reason&version] PASSED [ 34%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-version] PASSED [ 35%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-reason&version] PASSED [ 35%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-version] PASSED [ 36%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-reason&version] PASSED [ 37%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-version] PASSED [ 37%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-reason&version] PASSED [ 38%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-version] PASSED [ 38%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-reason&version] PASSED [ 39%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-version] PASSED [ 40%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-reason&version] PASSED [ 40%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-version] PASSED [ 41%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-reason&version] PASSED [ 42%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-version] PASSED [ 42%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-reason&version] PASSED [ 43%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-version] PASSED [ 44%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionchanged-reason&version] PASSED [ 44%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionchanged-version] PASSED [ 45%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionchanged-reason&version] PASSED [ 45%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionchanged-version] PASSED [ 46%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionadded-reason&version] PASSED [ 47%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionadded-version] PASSED [ 47%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionadded-reason&version] PASSED [ 48%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionadded-version] PASSED [ 49%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-deprecated-reason&version] PASSED [ 49%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-deprecated-version] PASSED [ 50%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-deprecated-reason&version] PASSED [ 50%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-deprecated-version] PASSED [ 51%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-reason&version] PASSED [ 52%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-version] PASSED [ 52%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&version] PASSED [ 53%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version] PASSED [ 54%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-reason&version] PASSED [ 54%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-version] PASSED [ 55%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&version] PASSED [ 55%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version] PASSED [ 56%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function0] PASSED [ 57%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function1] PASSED [ 57%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function2] PASSED [ 58%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function3] PASSED [ 59%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0] PASSED [ 59%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1] PASSED [ 60%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2] PASSED [ 61%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3] PASSED [ 61%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method0] PASSED [ 62%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method1] PASSED [ 62%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method2] PASSED [ 63%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method3] PASSED [ 64%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0] PASSED [ 64%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1] PASSED [ 65%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2] PASSED [ 66%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3] PASSED [ 66%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0] FAILED [ 67%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1] FAILED [ 67%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2] FAILED [ 68%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3] FAILED [ 69%]
+tests/test_sphinx.py::test_should_raise_type_error PASSED                [ 69%]
+tests/test_sphinx.py::test_warning_msg_has_reason PASSED                 [ 70%]
+tests/test_sphinx.py::test_warning_msg_has_version PASSED                [ 71%]
+tests/test_sphinx.py::test_warning_is_ignored PASSED                     [ 71%]
+tests/test_sphinx.py::test_specific_warning_cls_is_used PASSED           [ 72%]
+tests/test_sphinx.py::test_can_catch_warnings PASSED                     [ 72%]
+tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :function:`bar` instead-Use `bar` instead] PASSED [ 73%]
+tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :py:func:`bar` instead-Use `bar` instead] PASSED [ 74%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`bar` instead-Use `bar` instead] PASSED [ 74%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :function:`bar` instead-Use `bar` instead] PASSED [ 75%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :class:`Baz` instead-Use `Baz` instead] PASSED [ 76%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :exc:`Baz` instead-Use `Baz` instead] PASSED [ 76%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :exception:`Baz` instead-Use `Baz` instead] PASSED [ 77%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :meth:`Baz.bar` instead-Use `Baz.bar` instead] PASSED [ 77%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :method:`Baz.bar` instead-Use `Baz.bar` instead] PASSED [ 78%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :py:func:`bar` instead-Use `bar` instead] PASSED [ 79%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :cpp:func:`bar` instead-Use `bar` instead] PASSED [ 79%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :js:func:`bar` instead-Use `bar` instead] PASSED [ 80%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead] PASSED [ 81%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`` instead-Use `` instead] PASSED [ 81%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead] PASSED [ 82%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`foo` instead-Use `foo` instead] PASSED [ 83%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`foo` instead-Use `foo` instead] PASSED [ 83%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use r:`bad` instead-Use r:`bad` instead] PASSED [ 84%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use ::`bad` instead-Use ::`bad` instead] PASSED [ 84%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :::`bad` instead-Use :::`bad` instead] PASSED [ 85%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionchanged-wrapped] PASSED [ 86%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionchanged-long] PASSED [ 86%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionadded-wrapped] PASSED [ 87%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionadded-long] PASSED [ 88%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[deprecated-wrapped] PASSED [ 88%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[deprecated-long] PASSED [ 89%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[versionchanged] PASSED [ 89%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[versionadded] PASSED [ 90%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[deprecated] PASSED [ 91%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionadded-versionadded] PASSED [ 91%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionchanged-versionchanged] PASSED [ 92%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[deprecated-deprecated] PASSED [ 93%]
+tests/test_sphinx_class.py::test_class_deprecation_using_a_simple_decorator PASSED [ 93%]
+tests/test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator PASSED [ 94%]
+tests/test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator PASSED [ 94%]
+tests/test_sphinx_class.py::test_isinstance_versionadded PASSED          [ 95%]
+tests/test_sphinx_class.py::test_isinstance_versionchanged PASSED        [ 96%]
+tests/test_sphinx_class.py::test_isinstance_deprecated PASSED            [ 96%]
+tests/test_sphinx_class.py::test_isinstance_versionadded_versionchanged PASSED [ 97%]
+tests/test_sphinx_metaclass.py::test_with_init PASSED                    [ 98%]
+tests/test_sphinx_metaclass.py::test_with_new PASSED                     [ 98%]
+tests/test_sphinx_metaclass.py::test_with_metaclass PASSED               [ 99%]
+tests/test_sphinx_metaclass.py::test_with_singleton_metaclass PASSED     [100%]
+
+=================================== FAILURES ===================================
+__________________ test_classic_deprecated_class__warns[None] __________________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class1] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class2] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class3] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class4] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class5] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+_______ test_classic_deprecated_class__warns[classic_deprecated_class6] ________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 151, in test_classic_deprecated_class__warns
+    assert warn.filename == __file__, 'Incorrect warning stackLevel'
+AssertionError: Incorrect warning stackLevel
+______________ test_classic_deprecated_class_method__warns[None] _______________
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method1] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method2] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method3] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method4] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method5] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_classic_deprecated_class_method__warns[classic_deprecated_class_method6] _
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_deprecated.py", line 189, in test_classic_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0] __
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_sphinx.py", line 299, in test_sphinx_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1] __
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_sphinx.py", line 299, in test_sphinx_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2] __
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_sphinx.py", line 299, in test_sphinx_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+_ test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3] __
+Traceback (most recent call last):
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/Deprecated-1.2.13/tests/test_sphinx.py", line 299, in test_sphinx_deprecated_class_method__warns
+    assert "deprecated class method" in str(warn.message)
+AssertionError
+=============================== warnings summary ===============================
+tests/test_deprecated_class.py::test_simple_class_deprecation_with_args
+  /workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:194: DeprecationWarning: Call to deprecated class MyClass. (kwargs class)
+    result = testfunction(**testargs)
+
+tests/test_sphinx_class.py::test_isinstance_deprecated
+  /workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:194: DeprecationWarning: Call to deprecated class DeprecatedChildCls. (some reason) -- Deprecated since version Y.Z.
+    result = testfunction(**testargs)
+
+tests/test_sphinx_class.py::test_isinstance_deprecated
+  /workdir/Deprecated-1.2.13/tests/test_sphinx_class.py:134: DeprecationWarning: Call to deprecated class DeprecatedCls. (some reason) -- Deprecated since version X.Y.
+    instance = DeprecatedChildCls()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/Deprecated/1.2.13/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[None]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5]
+FAILED tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6]
+FAILED tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0]
+FAILED tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1]
+FAILED tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2]
+FAILED tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3]
+================== 18 failed, 141 passed, 3 warnings in 4.80s ==================
+ERROR: InvocationError for command /workdir/Deprecated-1.2.13/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/Deprecated/1.2.13/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

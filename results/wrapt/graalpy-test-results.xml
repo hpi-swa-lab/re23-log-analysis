@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="33" skipped="0" tests="392" time="10.551" timestamp="2023-11-30T23:25:36.265000" hostname="be2d8ee410eb"><testcase classname="tests.test_adapter.TestAdapterAttributes" name="test_doc_string" time="0.016" /><testcase classname="tests.test_adapter.TestAdapterAttributes" name="test_module_name" time="0.010" /><testcase classname="tests.test_adapter.TestAdapterAttributes" name="test_object_name" time="0.006" /><testcase classname="tests.test_adapter.TestAdapterAttributes" name="test_object_qualname" time="0.013" /><testcase classname="tests.test_adapter.TestArgumentSpecification" name="test_argspec" time="0.016" /><testcase classname="tests.test_adapter.TestArgumentSpecification" name="test_isinstance" time="0.012"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_adapter.py", line 103, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_adapter.TestArgumentSpecification" name="test_signature" time="0.014" /><testcase classname="tests.test_adapter.TestDynamicAdapter" name="test_adapter_factory" time="0.017" /><testcase classname="tests.test_adapter.TestDynamicAdapter" name="test_dynamic_adapter_classmethod" time="0.020" /><testcase classname="tests.test_adapter.TestDynamicAdapter" name="test_dynamic_adapter_function" time="0.014" /><testcase classname="tests.test_adapter.TestDynamicAdapter" name="test_dynamic_adapter_instancemethod" time="0.017" /><testcase classname="tests.test_adapter_py3.TestAdapterAttributesWithAnnotations" name="test_annotations" time="0.042" /><testcase classname="tests.test_adapter_py3.TestArgumentSpecificationWithAnnotations" name="test_argspec" time="0.013" /><testcase classname="tests.test_adapter_py3.TestArgumentSpecificationWithAnnotations" name="test_isinstance" time="0.012"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_adapter_py3.py", line 103, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_adapter_py3.TestArgumentSpecificationWithAnnotations" name="test_signature" time="0.014" /><testcase classname="tests.test_adapter_py3.TestDynamicAdapterWithAnnotations" name="test_adapter_factory" time="0.014" /><testcase classname="tests.test_adapter_py3.TestDynamicAdapterWithAnnotations" name="test_dynamic_adapter_classmethod" time="0.021" /><testcase classname="tests.test_adapter_py3.TestDynamicAdapterWithAnnotations" name="test_dynamic_adapter_function" time="0.017" /><testcase classname="tests.test_adapter_py3.TestDynamicAdapterWithAnnotations" name="test_dynamic_adapter_instancemethod" time="0.022" /><testcase classname="tests.test_adapter_py33.TestArgumentSpecification" name="test_getfullargspec" time="0.013" /><testcase classname="tests.test_adapter_py33.TestArgumentSpecification" name="test_signature" time="0.012" /><testcase classname="tests.test_arguments.TestArguments" name="test_getcallargs" time="0.014" /><testcase classname="tests.test_arguments.TestArguments" name="test_unexpected_unicode_keyword" time="0.012" /><testcase classname="tests.test_attribute_wrapper.TestAttributeProxy" name="test_wrap_attribute" time="0.013" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_1_keyword_argument" time="0.011" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_1_positional_argument" time="0.009" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_empty_arguments" time="0.009" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_multiple_keyword_arguments" time="0.009" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_multiple_positional_arguments" time="0.008" /><testcase classname="tests.test_callable_object_proxy.TestPartialCallableObjectProxy" name="test_no_arguments" time="0.009" /><testcase classname="tests.test_class.TestIntrospection" name="test_getmembers" time="0.015"><failure message="TypeError: descriptor '__weakref__' for '_ObjectProxyMethods' objects doesn't apply to 'FunctionWrapper' object">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_class.py", line 33, in test_getmembers
+    class1d_members = inspect.getmembers(class1d)
+  File "/opt/graalpy/lib/python3.10/inspect.py", line 469, in getmembers
+    value = getattr(object, key)
+TypeError: descriptor '__weakref__' for '_ObjectProxyMethods' objects doesn't apply to 'FunctionWrapper' object</failure></testcase><testcase classname="tests.test_class.TestInheritance" name="test_single_inheritance" time="0.012" /><testcase classname="tests.test_class_py37.TestInheritance" name="test_multiple_inheritance" time="0.012" /><testcase classname="tests.test_class_py37.TestInheritance" name="test_multiple_inheritance_common" time="0.010" /><testcase classname="tests.test_class_py37.TestInheritance" name="test_single_inheritance" time="0.011" /><testcase classname="tests.test_copy.TestObjectCopy" name="test_copy" time="0.011" /><testcase classname="tests.test_copy.TestObjectCopy" name="test_copy_proxy" time="0.009" /><testcase classname="tests.test_copy.TestObjectCopy" name="test_deepcopy" time="0.008" /><testcase classname="tests.test_copy.TestObjectCopy" name="test_deepcopy_proxy" time="0.010" /><testcase classname="tests.test_decorators.TestDecorator" name="test_class_method_as_decorator" time="0.012" /><testcase classname="tests.test_decorators.TestDecorator" name="test_class_type_as_decorator" time="0.009" /><testcase classname="tests.test_decorators.TestDecorator" name="test_class_type_as_decorator_args" time="0.009" /><testcase classname="tests.test_decorators.TestDecorator" name="test_instance_method_as_decorator" time="0.010" /><testcase classname="tests.test_decorators.TestDecorator" name="test_no_parameters" time="0.009" /><testcase classname="tests.test_descriptors_py36.TestObjectDescriptors" name="test_set_name" time="0.010" /><testcase classname="tests.test_formatargspec_py35.TestFormatargspec35" name="test_formatargspec" time="0.016" /><testcase classname="tests.test_formatargspec_py38.TestFormatargspec38" name="test_formatargspec" time="0.023" /><testcase classname="tests.test_function.TestNamingFunction" name="test_argspec" time="0.011" /><testcase classname="tests.test_function.TestNamingFunction" name="test_doc_string" time="0.006" /><testcase classname="tests.test_function.TestNamingFunction" name="test_getmembers" time="0.006" /><testcase classname="tests.test_function.TestNamingFunction" name="test_isinstance" time="0.006"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_function.py", line 71, in test_isinstance
+    self.assertTrue(isinstance(function1d, type(function1o)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_function.TestNamingFunction" name="test_module_name" time="0.007" /><testcase classname="tests.test_function.TestNamingFunction" name="test_object_name" time="0.006" /><testcase classname="tests.test_function.TestNamingFunction" name="test_object_qualname" time="0.008" /><testcase classname="tests.test_function.TestCallingFunction" name="test_call_function" time="0.009" /><testcase classname="tests.test_function_wrapper.TestClassInheritence" name="test_classmethod_type_inheritence" time="0.009" /><testcase classname="tests.test_function_wrapper.TestClassInheritence" name="test_function_type_inheritence" time="0.008" /><testcase classname="tests.test_function_wrapper.TestClassInheritence" name="test_instancemethod_type_inheritence" time="0.008" /><testcase classname="tests.test_function_wrapper.TestClassInheritence" name="test_staticmethod_type_inheritence" time="0.009" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_classmethod_attributes" time="0.010" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_classmethod_attributes_external_class" time="0.008" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_classmethod_attributes_external_instance" time="0.009" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_function_attributes" time="0.008" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_instancemethod_attributes" time="0.010" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_instancemethod_attributes_external_class" time="0.008" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_instancemethod_attributes_external_instance" time="0.010" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_staticmethod_attributes" time="0.009" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_staticmethod_attributes_external_class" time="0.008" /><testcase classname="tests.test_function_wrapper.TestAttributeAccess" name="test_staticmethod_attributes_external_instance" time="0.010" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_class_decorator" time="0.008" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_classmethod" time="0.009" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_function_decorator" time="0.008" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_instancemethod" time="0.008" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_nested_class_decorator" time="0.008" /><testcase classname="tests.test_function_wrapper.TestParentReference" name="test_staticmethod_inner" time="0.010" /><testcase classname="tests.test_function_wrapper.TestGuardArgument" name="test_boolean_dynamic_guard_on_decorator" time="0.009" /><testcase classname="tests.test_function_wrapper.TestGuardArgument" name="test_boolean_false_guard_on_decorator" time="0.009" /><testcase classname="tests.test_function_wrapper.TestGuardArgument" name="test_boolean_true_guard_on_decorator" time="0.008" /><testcase classname="tests.test_function_wrapper.TestGuardArgument" name="test_function_guard_on_decorator" time="0.008" /><testcase classname="tests.test_function_wrapper.TestGuardArgument" name="test_guard_on_instancemethod" time="0.011" /><testcase classname="tests.test_function_wrapper.TestDerivedFunctionWrapper" name="test_override_bound_type" time="0.010" /><testcase classname="tests.test_function_wrapper.TestFunctionBinding" name="test_double_binding" time="0.009" /><testcase classname="tests.test_function_wrapper.TestFunctionBinding" name="test_re_bind_after_none" time="0.010" /><testcase classname="tests.test_function_wrapper.TestInvalidWrapper" name="test_none_for_wrapped" time="0.010" /><testcase classname="tests.test_function_wrapper.TestInvalidCalling" name="test_missing_self_via_class" time="0.010" /><testcase classname="tests.test_inheritance_py37.TestClassInheritance" name="test_abc_inheritance" time="0.014" /><testcase classname="tests.test_inheritance_py37.TestClassInheritance" name="test_basic_inheritance" time="0.011"><failure message="TypeError: issubclass() arg 1 must be a class">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inheritance_py37.py", line 31, in test_basic_inheritance
+    self.assertTrue(issubclass(C1, B1))
+TypeError: issubclass() arg 1 must be a class</failure></testcase><testcase classname="tests.test_inheritance_py37.TestClassInheritance" name="test_py_abc_inheritance" time="0.012" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_argspec" time="0.011" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_doc_string" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_isinstance" time="0.010"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_module_name" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_object_name" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_class_object_qualname" time="0.007" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_argspec" time="0.010" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_doc_string" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_isinstance" time="0.009"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_module_name" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_object_name" time="0.008" /><testcase classname="tests.test_inner_classmethod.TestNamingInnerClassMethod" name="test_instance_object_qualname" time="0.010" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_class_call_function" time="0.011" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_class_call_function_nested_decorators" time="0.013"><failure message="AssertionError: 1 != &lt;class 'test_inner_classmethod.TestCallin[72 chars]ass'&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 200, in test_class_call_function_nested_decorators
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 642, in __call__
+    return self._self_wrapper(wrapped, instance, args, kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 184, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != &lt;class 'test_inner_classmethod.TestCallin[72 chars]ass'&gt;</failure></testcase><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_class_externally_applied_wrapper" time="0.010" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_class_externally_passed_wrapper" time="0.011" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_instance_call_function" time="0.011" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_instance_call_function_nested_decorators" time="0.013"><failure message="AssertionError: &lt;test_inner_classmethod.TestCallingInnerCl[86 chars]9c0d&gt; != &lt;class 'test_inner_classmethod.TestCalling[74 chars]ass'&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 228, in test_instance_call_function_nested_decorators
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_inner_classmethod.py", line 212, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: &lt;test_inner_classmethod.TestCallingInnerCl[86 chars]9c0d&gt; != &lt;class 'test_inner_classmethod.TestCalling[74 chars]ass'&gt;</failure></testcase><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_instance_externally_applied_wrapper" time="0.009" /><testcase classname="tests.test_inner_classmethod.TestCallingInnerClassMethod" name="test_instance_externally_passed_wrapper" time="0.010" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_argspec" time="0.261" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_doc_string" time="0.006" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_isinstance" time="0.008"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_module_name" time="0.007" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_object_name" time="0.007" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_class_object_qualname" time="0.006" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_argspec" time="0.009" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_doc_string" time="0.006" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_isinstance" time="0.008"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_module_name" time="0.007" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_object_name" time="0.006" /><testcase classname="tests.test_inner_staticmethod.TestNamingInnerStaticMethod" name="test_instance_object_qualname" time="0.009" /><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_class_call_function" time="0.009" /><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_class_call_function_nested_decorator" time="0.011"><failure message="AssertionError: 1 != None">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 200, in test_class_call_function_nested_decorator
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 642, in __call__
+    return self._self_wrapper(wrapped, instance, args, kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 184, in _decorator
+    self.assertEqual(instance, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != None</failure></testcase><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_class_externally_applied_wrapper" time="0.007" /><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_instance_call_function" time="0.008" /><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_instance_call_function_nested_decorator" time="0.010"><failure message="AssertionError: &lt;test_inner_staticmethod.TestCallingInner[89 chars]066d&gt; != None">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 228, in test_instance_call_function_nested_decorator
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_inner_staticmethod.py", line 212, in _decorator
+    self.assertEqual(instance, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: &lt;test_inner_staticmethod.TestCallingInner[89 chars]066d&gt; != None</failure></testcase><testcase classname="tests.test_inner_staticmethod.TestCallingInnerStaticMethod" name="test_instance_externally_applied_wrapper" time="0.009" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_argspec" time="0.011" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_doc_string" time="0.006" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_isinstance" time="0.008"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 116, in test_class_isinstance
+    self.assertTrue(isinstance(OldClass1d.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_module_name" time="0.007" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_object_name" time="0.007" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_class_object_qualname" time="0.006" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_getmembers" time="0.009" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_argspec" time="0.009" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_doc_string" time="0.007" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_isinstance" time="0.008"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 122, in test_instance_isinstance
+    self.assertTrue(isinstance(OldClass1d().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_module_name" time="0.007" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_object_name" time="0.006" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodOldStyle" name="test_instance_object_qualname" time="0.008" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_argspec" time="0.009" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_doc_string" time="0.007" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_isinstance" time="0.054"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 215, in test_class_isinstance
+    self.assertTrue(isinstance(NewClass1d.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_module_name" time="0.009" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_object_name" time="0.017" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_class_object_qualname" time="0.012" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_argspec" time="0.014" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_doc_string" time="0.012" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_isinstance" time="0.017"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_instancemethod.py", line 221, in test_instance_isinstance
+    self.assertTrue(isinstance(NewClass1d().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_module_name" time="0.013" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_object_name" time="0.013" /><testcase classname="tests.test_instancemethod.TestNamingInstanceMethodNewStyle" name="test_instance_object_qualname" time="0.008" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodOldStyle" name="test_class_call_function" time="0.009" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodOldStyle" name="test_class_call_function_nested" time="0.010" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodOldStyle" name="test_instance_call_function" time="0.011" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodOldStyle" name="test_instance_call_function_nested" time="0.010" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodNewStyle" name="test_class_call_function" time="0.008" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodNewStyle" name="test_class_call_function_nested" time="0.009" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodNewStyle" name="test_instance_call_function" time="0.007" /><testcase classname="tests.test_instancemethod.TestCallingInstanceMethodNewStyle" name="test_instance_call_function_nested" time="0.009" /><testcase classname="tests.test_memoize.TestSynchronized" name="test_classmethod" time="0.007" /><testcase classname="tests.test_memoize.TestSynchronized" name="test_function" time="0.016" /><testcase classname="tests.test_memoize.TestSynchronized" name="test_instancemethod" time="0.007" /><testcase classname="tests.test_memoize.TestSynchronized" name="test_staticmethod" time="0.008" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_function_wrapper" time="0.007" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_function_wrapper_class_method" time="0.007" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_function_wrapper_instance_method" time="0.007" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_patch_function_module" time="0.006" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_patch_function_module_name" time="0.005" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_transient_function_wrapper" time="0.008"><failure message="AssertionError: &lt;bound method TestMonkeyPatching._test_tra[107 chars]per&gt;&gt; != &lt;BoundFunctionWrapper at 0xb83 for method at 0xb87&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 324, in test_transient_function_wrapper
+    result = function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 892, in _execute
+    return wrapped(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 322, in function
+    return self._test_transient_function_wrapper(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 314, in wrapper
+    self.assertEqual(wrapped, self._test_transient_function_wrapper)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: &lt;bound method TestMonkeyPatching._test_tra[107 chars]per&gt;&gt; != &lt;BoundFunctionWrapper at 0xb83 for method at 0xb87&gt;</failure></testcase><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_transient_function_wrapper_instance_method" time="0.009"><failure message="AssertionError: &lt;bound method TestMonkeyPatching._test_tra[123 chars]hod&gt;&gt; != &lt;BoundFunctionWrapper at 0xb8f for method at 0xb93&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 353, in test_transient_function_wrapper_instance_method
+    result = function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 892, in _execute
+    return wrapped(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 351, in function
+    return self._test_transient_function_wrapper(*args, **kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 644, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_monkey_patching.py", line 343, in __call__
+    _self.assertEqual(wrapped, _self._test_transient_function_wrapper)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: &lt;bound method TestMonkeyPatching._test_tra[123 chars]hod&gt;&gt; != &lt;BoundFunctionWrapper at 0xb8f for method at 0xb93&gt;</failure></testcase><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_class_method_inherited" time="0.007" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_class_method_module_name" time="0.006" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_function_module" time="0.006" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_function_module_name" time="0.006" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_instance_method_module_name" time="0.018" /><testcase classname="tests.test_monkey_patching.TestMonkeyPatching" name="test_wrap_static_method_module_name" time="0.009" /><testcase classname="tests.test_monkey_patching.TestExplicitMonkeyPatching" name="test_patch_instance_method_class" time="0.008" /><testcase classname="tests.test_monkey_patching.TestExplicitMonkeyPatching" name="test_patch_instance_method_dict" time="0.008" /><testcase classname="tests.test_monkey_patching.TestExplicitMonkeyPatching" name="test_patch_instance_method_extracted" time="0.007" /><testcase classname="tests.test_monkey_patching.TestExplicitMonkeyPatching" name="test_patch_instance_method_instance" time="0.007" /><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_argspec" time="0.009" /><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_doc_string" time="0.006" /><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_isinstance" time="0.007"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_nested_function.py", line 75, in test_isinstance
+    self.assertTrue(isinstance(function1d(), type(function1o())))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_module_name" time="0.006" /><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_object_name" time="0.006" /><testcase classname="tests.test_nested_function.TestNamingNestedFunction" name="test_object_qualname" time="0.006" /><testcase classname="tests.test_nested_function.TestCallingNestedFunction" name="test_call_function" time="0.007" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_attributes" time="0.007" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_delete_wrapped" time="0.006" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_get_wrapped" time="0.006" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_init_not_called" time="0.006" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_proxy_attribute" time="0.007" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_set_wrapped" time="0.007" /><testcase classname="tests.test_object_proxy.TestAttributeAccess" name="test_wrapped_attribute" time="0.007" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_class_doc_string" time="0.007" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_class_module_name" time="0.005" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_class_object_name" time="0.005" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_class_object_qualname" time="0.006" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_function_doc_string" time="0.006" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_function_module_name" time="0.006" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_function_object_name" time="0.006" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_function_object_qualname" time="0.005" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_instance_doc_string" time="0.005" /><testcase classname="tests.test_object_proxy.TestNamingObjectProxy" name="test_instance_module_name" time="0.006" /><testcase classname="tests.test_object_proxy.TestTypeObjectProxy" name="test_class_of_class" time="0.007"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_object_proxy.py", line 248, in test_class_of_class
+    self.assertTrue(isinstance(wrapper, type(target)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_object_proxy.TestTypeObjectProxy" name="test_class_of_function" time="0.007"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_object_proxy.py", line 269, in test_class_of_function
+    self.assertTrue(isinstance(wrapper, type(target)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_object_proxy.TestTypeObjectProxy" name="test_class_of_instance" time="0.006" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_dir_of_class" time="0.007" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_dir_of_function" time="0.007" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_dir_of_instance" time="0.007" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_vars_of_class" time="0.006" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_vars_of_function" time="0.006" /><testcase classname="tests.test_object_proxy.TestDirObjectProxy" name="test_vars_of_instance" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_args_plus_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_no_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_via_class_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_via_class_args_plus_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_via_class_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_classmethod_via_class_no_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_function_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_function_args_plus_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_function_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_function_no_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_args_plus_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_no_args" time="0.007" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_via_class_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_via_class_args_plus_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_via_class_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_instancemethod_via_class_no_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_args_plus_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_no_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_via_class_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_via_class_args_plus_kwargs" time="0.006" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_via_class_kwargs" time="0.005" /><testcase classname="tests.test_object_proxy.TestCallingObject" name="test_staticmethod_via_class_no_args" time="0.008" /><testcase classname="tests.test_object_proxy.TestIterObjectProxy" name="test_iteration" time="0.006" /><testcase classname="tests.test_object_proxy.TestContextManagerObjectProxy" name="test_context_manager" time="0.006" /><testcase classname="tests.test_object_proxy.TestEqualityObjectProxy" name="test_comparison" time="0.006" /><testcase classname="tests.test_object_proxy.TestEqualityObjectProxy" name="test_mapping_key" time="0.005" /><testcase classname="tests.test_object_proxy.TestEqualityObjectProxy" name="test_object_hash" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_abs" time="0.007" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_add" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_add_uninitialized_args" time="0.018" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_and" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_and_uninitialized_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_div" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_div_uninitialized_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_divmod" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_divmod_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_float" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_floordiv" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_floordiv_uninitialized_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_hex" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_iadd" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_iand" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_idiv" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ifloordiv" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ilshift" time="0.007" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_imod" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_imul" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_index" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_int" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_invert" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ior" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ior_list_self" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ipow" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_irshift" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_isub" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_ixor" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_lshift" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_lshift_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_mod" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_mod_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_mul" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_mul_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_neg" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_nonzero" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_oct" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_or" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_or_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_pos" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_pow" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_pow_uninitialized_args" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_rshift" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_rshift_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_sub" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_sub_uninitialized_args" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_xor" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsNumberObjectProxy" name="test_xor_uninitialized_args" time="0.010" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_contains" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_delitem" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_delslice" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_getitem" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_getslice" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_length" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_setitem" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsSequenceObjectProxy" name="test_setslice" time="0.007" /><testcase classname="tests.test_object_proxy.TestAsMappingObjectProxy" name="test_contains" time="0.007" /><testcase classname="tests.test_object_proxy.TestAsMappingObjectProxy" name="test_delitem" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsMappingObjectProxy" name="test_getitem" time="0.006" /><testcase classname="tests.test_object_proxy.TestAsMappingObjectProxy" name="test_length" time="0.005" /><testcase classname="tests.test_object_proxy.TestAsMappingObjectProxy" name="test_setitem" time="0.007" /><testcase classname="tests.test_object_proxy.TestObjectRepresentationObjectProxy" name="test_repr" time="0.006" /><testcase classname="tests.test_object_proxy.TestObjectRepresentationObjectProxy" name="test_str" time="0.006" /><testcase classname="tests.test_object_proxy.TestDerivedClassCreation" name="test_derived_missing_init" time="0.007" /><testcase classname="tests.test_object_proxy.TestDerivedClassCreation" name="test_derived_new" time="0.007" /><testcase classname="tests.test_object_proxy.TestDerivedClassCreation" name="test_derived_setattr" time="0.006" /><testcase classname="tests.test_object_proxy.DerivedClassAttributes" name="test_class_properties" time="0.009" /><testcase classname="tests.test_object_proxy.DerivedClassAttributes" name="test_override_class_attributes" time="0.007" /><testcase classname="tests.test_object_proxy.DerivedClassAttributes" name="test_setup_class_attributes" time="0.007" /><testcase classname="tests.test_object_proxy.OverrideAttributeAccess" name="test_attr_functions" time="0.006" /><testcase classname="tests.test_object_proxy.OverrideAttributeAccess" name="test_override_getattr" time="0.006" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_callable_proxy_getattr_call" time="0.006" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_callable_proxy_hasattr_call" time="0.005" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_callable_proxy_is_callable" time="0.005" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_proxy_getattr_call" time="0.006" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_proxy_hasattr_call" time="0.007" /><testcase classname="tests.test_object_proxy.CallableFunction" name="test_proxy_is_callable" time="0.007" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_class_bytes" time="0.007" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_complex" time="0.005" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_decimal_complex" time="0.006" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_fractions_round" time="0.028" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_list_reversed" time="0.013" /><testcase classname="tests.test_object_proxy.SpecialMethods" name="test_str_format" time="0.007" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_argspec" time="0.008" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_doc_string" time="0.008"><failure message="AssertionError: None != 'documentation'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 85, in test_class_doc_string
+    self.assertEqual(Class.function.__doc__,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != 'documentation'</failure></testcase><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_isinstance" time="0.006" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_module_name" time="0.006" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_object_name" time="0.006" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_class_object_qualname" time="0.006" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_argspec" time="0.007" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_doc_string" time="0.007"><failure message="AssertionError: None != 'documentation'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 91, in test_instance_doc_string
+    self.assertEqual(Class().function.__doc__,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != 'documentation'</failure></testcase><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_isinstance" time="0.005" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_module_name" time="0.005" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_object_name" time="0.005" /><testcase classname="tests.test_outer_classmethod.TestNamingOuterClassMethod" name="test_instance_object_qualname" time="0.006" /><testcase classname="tests.test_outer_classmethod.TestCallingOuterClassMethod" name="test_class_call_function" time="0.009"><failure message="AssertionError: None != &lt;class 'test_outer_classmethod.TestCallin[54 chars]ass'&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 160, in test_class_call_function
+    result = Class._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 141, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != &lt;class 'test_outer_classmethod.TestCallin[54 chars]ass'&gt;</failure></testcase><testcase classname="tests.test_outer_classmethod.TestCallingOuterClassMethod" name="test_instance_call_function" time="0.008"><failure message="AssertionError: None != &lt;class 'test_outer_classmethod.TestCallin[57 chars]ass'&gt;">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 202, in test_instance_call_function
+    result = Class()._function(*_args, **_kwargs)
+  File "/workdir/wrapt-1.14.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/wrapt/wrappers.py", line 578, in __call__
+    return self._self_wrapper(self.__wrapped__, self._self_instance,
+  File "/workdir/wrapt-1.14.1/tests/test_outer_classmethod.py", line 183, in _decorator
+    self.assertEqual(instance, Class)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: None != &lt;class 'test_outer_classmethod.TestCallin[57 chars]ass'&gt;</failure></testcase><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_argspec" time="0.007" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_doc_string" time="0.005" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_isinstance" time="0.007"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_staticmethod.py", line 111, in test_class_isinstance
+    self.assertTrue(isinstance(Class.function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_module_name" time="0.005" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_object_name" time="0.005" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_class_object_qualname" time="0.005" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_argspec" time="0.007" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_doc_string" time="0.006" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_isinstance" time="0.007"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_outer_staticmethod.py", line 117, in test_instance_isinstance
+    self.assertTrue(isinstance(Class().function,
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_module_name" time="0.005" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_object_name" time="0.006" /><testcase classname="tests.test_outer_staticmethod.TestNamingOuterStaticMethod" name="test_instance_object_qualname" time="0.007" /><testcase classname="tests.test_outer_staticmethod.TestCallingOuterStaticMethod" name="test_class_call_function" time="0.007" /><testcase classname="tests.test_outer_staticmethod.TestCallingOuterStaticMethod" name="test_instance_call_function" time="0.007" /><testcase classname="tests.test_pickle.TestObjectPickle" name="test_pickle" time="0.008" /><testcase classname="tests.test_pickle.TestObjectPickle" name="test_pickle_proxy" time="0.012" /><testcase classname="tests.test_post_import_hooks.TestPostImportHooks" name="test_after_import" time="0.012" /><testcase classname="tests.test_post_import_hooks.TestPostImportHooks" name="test_before_and_after_import" time="0.010" /><testcase classname="tests.test_post_import_hooks.TestPostImportHooks" name="test_before_import" time="0.011" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_false_instance" time="0.007" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_function" time="0.007" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_inner_classmethod" time="0.007" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_inner_staticmethod" time="0.007" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_instancemethod" time="0.009" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_outer_classmethod" time="0.008"><failure message="AssertionError: None == None">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_synchronized_lock.py", line 181, in test_synchronized_outer_classmethod
+    self.assertNotEqual(_lock1, None)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 854, in assertNotEqual
+    raise self.failureException(msg)
+AssertionError: None == None</failure></testcase><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_outer_staticmethod" time="0.009" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_type_new_style" time="0.007" /><testcase classname="tests.test_synchronized_lock.TestSynchronized" name="test_synchronized_type_old_style" time="0.010" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_annotations" time="0.008" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_annotations_modified_on_original" time="0.007" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_doc" time="0.007" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_doc_modified_on_original" time="0.007" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_module" time="0.007" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_module_modified_on_original" time="0.008" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_name" time="0.008" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_name_modified_on_original" time="0.007" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_qualname" time="0.008" /><testcase classname="tests.test_update_attributes.TestUpdateAttributes" name="test_update_qualname_modified_on_original" time="0.009" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_call_expired" time="0.232" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_classmethod" time="0.239"><failure message="AssertionError: 0 != 1">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 151, in test_classmethod
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1</failure></testcase><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_decorator_method" time="0.008" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_function" time="0.242"><failure message="AssertionError: 0 != 1">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 61, in test_function
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1</failure></testcase><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_instancemethod_delete_function" time="0.241" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_instancemethod_delete_function_and_instance" time="0.244" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_instancemethod_delete_instance" time="0.262" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_isinstance" time="0.008"><failure message="AssertionError: False is not true">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 16, in test_isinstance
+    self.assertTrue(isinstance(proxy, type(function)))
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true</failure></testcase><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_no_callback" time="0.243" /><testcase classname="tests.test_weak_function_proxy.TestWeakFunctionProxy" name="test_staticmethod" time="0.263"><failure message="AssertionError: 0 != 1">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/wrapt-1.14.1/tests/test_weak_function_proxy.py", line 172, in test_staticmethod
+    self.assertEqual(len(result), 1)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1</failure></testcase></testsuite></testsuites>

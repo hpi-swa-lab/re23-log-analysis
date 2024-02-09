@@ -1,0 +1,16 @@
+GLOB sdist-make: /workdir/grpcio-tools-1.51.1/tools/distrib/python/grpcio_tools/setup.py
+ERROR: invocation failed (exit code 1), logfile: /workdir/grpcio-tools-1.51.1/tools/distrib/python/grpcio_tools/.tox/log/GLOB-0.log
+================================== log start ===================================
+Traceback (most recent call last):
+  File "/workdir/grpcio-tools-1.51.1/tools/distrib/python/grpcio_tools/setup.py", line 297, in <module>
+    package_data=package_data(),
+  File "/workdir/grpcio-tools-1.51.1/tools/distrib/python/grpcio_tools/setup.py", line 242, in package_data
+    shutil.copy(source, target)
+  File "/opt/graalpy/lib/python3.10/shutil.py", line 417, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/graalpy/lib/python3.10/shutil.py", line 254, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: 'third_party/protobuf/src/google/protobuf/any.proto'
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError('/opt/graalpy/bin/graalpy setup.py sdist --formats=zip --dist-dir /workdir/grpcio-tools-1.51.1/tools/distrib/python/grpcio_tools/.tox/dist', 1)

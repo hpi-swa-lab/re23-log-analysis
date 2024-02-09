@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="13" skipped="5" tests="135" time="31.934" timestamp="2023-11-22T23:02:42.564258" hostname="80ac3eb7f7f2"><testcase classname="pbr.tests.test_commands.TestCommands" name="test_custom_build_py_command" time="0.527" /><testcase classname="pbr.tests.test_commands.TestCommands" name="test_custom_deb_version_py_command" time="0.509" /><testcase classname="pbr.tests.test_commands.TestCommands" name="test_custom_rpm_version_py_command" time="0.491" /><testcase classname="pbr.tests.test_commands.TestCommands" name="test_freeze_command" time="0.136" /><testcase classname="pbr.tests.test_core.TestCore" name="test_console_script_develop" time="0.731" /><testcase classname="pbr.tests.test_core.TestCore" name="test_console_script_install" time="0.583" /><testcase classname="pbr.tests.test_core.TestCore" name="test_sdist_extra_files" time="0.556" /><testcase classname="pbr.tests.test_core.TestCore" name="test_setup_py_build_sphinx" time="0.453"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_core.py&quot;, line 82, in test_setup_py_build_sphinx&#10;    self.assertEqual(0, return_code)&#10;  File &quot;/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py&quot;, line 395, in assertEqual&#10;    self.assertThat(observed, matcher, message)&#10;  File &quot;/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py&quot;, line 482, in assertThat&#10;    raise mismatch_error&#10;testtools.matchers._impl.MismatchError: 0 != 1">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_core.py", line 82, in test_setup_py_build_sphinx
+    self.assertEqual(0, return_code)
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 0 != 1</failure></testcase><testcase classname="pbr.tests.test_core.TestCore" name="test_setup_py_keywords" time="0.826" /><testcase classname="pbr.tests.test_core.TestGitSDist" name="test_sdist_git_extra_files" time="0.524" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_auto_package" time="0.011" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_data_files_globbing" time="0.009" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_data_files_globbing_source_prefix_in_directory_name" time="0.009" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_data_files_with_spaces" time="0.009" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_data_files_with_spaces_quoted_components" time="0.009" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_data_files_with_spaces_subdirectories" time="0.009" /><testcase classname="pbr.tests.test_files.FilesConfigTest" name="test_implicit_auto_package" time="0.009" /><testcase classname="pbr.tests.test_hooks.TestHooks" name="test_custom_commands_known" time="0.522" /><testcase classname="pbr.tests.test_hooks.TestHooks" name="test_global_setup_hooks" time="0.407" /><testcase classname="pbr.tests.test_integration.TestIntegration" name="test_integration" time="0.001"><skipped type="pytest.skip" message="integration tests not enabled">/workdir/pbr-5.11.0/pbr/tests/test_integration.py:73: integration tests not enabled</skipped></testcase><testcase classname="pbr.tests.test_integration.TestInstallWithoutPbr" name="test_install_without_pbr" time="0.001"><skipped type="pytest.skip" message="integration tests not enabled">/workdir/pbr-5.11.0/pbr/tests/test_integration.py:156: integration tests not enabled</skipped></testcase><testcase classname="pbr.tests.test_integration.TestMarkersPip" name="test_pip_versions" time="0.001"><skipped type="pytest.skip" message="integration tests not enabled">/workdir/pbr-5.11.0/pbr/tests/test_integration.py:224: integration tests not enabled</skipped></testcase><testcase classname="pbr.tests.test_integration.TestLTSSupport" name="test_lts_venv_default_versions" time="0.001"><skipped type="pytest.skip" message="integration tests not enabled">/workdir/pbr-5.11.0/pbr/tests/test_integration.py:275: integration tests not enabled</skipped></testcase><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_authors" time="0.507" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_changelog" time="0.507" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_changelog_handles_astrisk" time="0.509" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_changelog_handles_backticks" time="0.517" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_changelog_handles_dead_links_in_commit" time="0.517" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_install_writes_changelog" time="0.550" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithCommit" name="test_manifest_exclude_honoured" time="0.517" /><testcase classname="pbr.tests.test_packaging.TestExtrafileInstallation" name="test_install_glob" time="0.516" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithoutCommit" name="test_authors" time="0.494" /><testcase classname="pbr.tests.test_packaging.TestPackagingInGitRepoWithoutCommit" name="test_changelog" time="0.496" /><testcase classname="pbr.tests.test_packaging.TestPackagingWheels" name="test_data_directory_has_wsgi_scripts" time="0.576" /><testcase classname="pbr.tests.test_packaging.TestPackagingWheels" name="test_generates_c_extensions" time="0.574" /><testcase classname="pbr.tests.test_packaging.TestPackagingWheels" name="test_metadata_directory_has_pbr_json" time="0.567" /><testcase classname="pbr.tests.test_packaging.TestPackagingHelpers" name="test_generate_script" time="0.001" /><testcase classname="pbr.tests.test_packaging.TestPackagingHelpers" name="test_generate_script_validates_expectations" time="0.001" /><testcase classname="pbr.tests.test_packaging.TestPackagingInPlainDirectory" name="test_authors" time="0.462" /><testcase classname="pbr.tests.test_packaging.TestPackagingInPlainDirectory" name="test_changelog" time="0.483" /><testcase classname="pbr.tests.test_packaging.TestPackagingInPlainDirectory" name="test_install_no_ChangeLog" time="0.484" /><testcase classname="pbr.tests.test_packaging.TestPresenceOfGit" name="testGitIsInstalled" time="0.007" /><testcase classname="pbr.tests.test_packaging.TestPresenceOfGit" name="testGitIsNotInstalled" time="0.007" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_default_requirements" time="0.009" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_empty_requirements" time="0.007" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_index_present" time="0.007" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_nested_requirements" time="0.008" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_override_with_env" time="0.007" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTest" name="test_override_with_env_multiple_files" time="0.008" /><testcase classname="pbr.tests.test_packaging.ParseRequirementsTestScenarios" name="test_parse_requirements" time="0.008"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_packaging.py&quot;, line 600, in test_parse_requirements&#10;    req_string = self.url&#10;AttributeError: 'ParseRequirementsTestScenarios' object has no attribute 'url'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_packaging.py", line 600, in test_parse_requirements
+    req_string = self.url
+AttributeError: 'ParseRequirementsTestScenarios' object has no attribute 'url'</failure></testcase><testcase classname="pbr.tests.test_packaging.ParseDependencyLinksTest" name="test_parse_dependency_normal" time="0.007" /><testcase classname="pbr.tests.test_packaging.ParseDependencyLinksTest" name="test_parse_dependency_with_git_egg_url" time="0.007" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_capitalized_headers" time="0.156" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_capitalized_headers_partial" time="0.308" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_email_parsing_errors_are_handled" time="0.157" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_get_kwargs_corner_cases" time="0.244" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_invalid_tag_ignored" time="0.353" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_leading_characters_symbol_not_found" time="0.245" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_leading_space" time="0.133" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_leading_space_multiline" time="0.101" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_multi_inline_symbols_no_space" time="0.097" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_multi_inline_symbols_reversed" time="0.190" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_multi_inline_symbols_spaced" time="0.097" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_non_canonical_tagged_version_bump" time="0.234" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_preversion_too_low_semver_headers" time="0.158" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_preversion_too_low_simple" time="0.217" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_skip_write_git_changelog" time="0.104" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_tagged_version_has_tag_version" time="0.095" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_tagged_version_with_semver_compliant_prerelease" time="0.183" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_pre_release_has_pre_dev_version_postversion" time="0.174" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_after_pre_has_dev_version_preversion" time="0.134" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_after_rc_has_dev_version_preversion" time="0.274" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_after_semver_compliant_prerelease_tag" time="0.168" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_has_dev_version_postversion" time="0.149" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_has_dev_version_preversion" time="0.187" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_major_bump" time="0.220" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_untagged_version_minor_bump" time="0.196" /><testcase classname="pbr.tests.test_packaging.TestVersions" name="test_valid_tag_honoured" time="0.147" /><testcase classname="pbr.tests.test_packaging.TestRequirementParsing" name="test_requirement_parsing" time="4.360" /><testcase classname="pbr.tests.test_packaging.TestPEP517Support" name="test_pep_517_support" time="5.170" /><testcase classname="pbr.tests.test_packaging.TestRepositoryURLDependencies" name="test_egg_fragment" time="0.012" /><testcase classname="pbr.tests.test_packaging.TestRepositoryURLDependencies" name="test_parse_repo_url_dependency_links" time="0.009" /><testcase classname="pbr.tests.test_packaging.TestRepositoryURLDependencies" name="test_parse_repo_url_requirements" time="0.011" /><testcase classname="pbr.tests.test_pbr_json.TestJsonContent" name="test_content" time="0.013" /><testcase classname="pbr.tests.test_setup.SkipFileWrites" name="test_skip" time="0.009"><skipped type="pytest.skip" message="/tmp/tmpm_eftjyk/tmpz8jcz92q/testpackage/.git is missing; skipping git-related checks">/workdir/pbr-5.11.0/pbr/tests/test_setup.py:90: /tmp/tmpm_eftjyk/tmpz8jcz92q/testpackage/.git is missing; skipping git-related checks</skipped></testcase><testcase classname="pbr.tests.test_setup.GitLogsTest" name="test_generate_authors" time="0.010" /><testcase classname="pbr.tests.test_setup.GitLogsTest" name="test_write_git_changelog" time="0.012"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:'pbr'&#10;&#10;pythonlogging:'': {{{&#10;[pbr] Writing ChangeLog&#10;[pbr] Generating ChangeLog&#10;}}}&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 157, in test_write_git_changelog&#10;    git.write_git_changelog(git_dir=self.git_dir,&#10;  File &quot;/workdir/pbr-5.11.0/pbr/git.py&quot;, line 289, in write_git_changelog&#10;    for release, content in changelog:&#10;  File &quot;/workdir/pbr-5.11.0/pbr/git.py&quot;, line 176, in _iter_changelog&#10;    for hash, tags, msg in changelog:&#10;  File &quot;/workdir/pbr-5.11.0/pbr/git.py&quot;, line 235, in _iter_log_inner&#10;    changelog = _run_git_command(log_cmd, git_dir)&#10;  File &quot;/workdir/pbr-5.11.0/pbr/git.py&quot;, line 64, in _run_git_command&#10;    return _run_shell_command(&#10;  File &quot;/workdir/pbr-5.11.0/pbr/git.py&quot;, line 46, in _run_shell_command&#10;    output = subprocess.Popen(cmd,&#10;  File &quot;/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fixtures/_fixtures/popen.py&quot;, line 169, in __call__&#10;    proc_info = self.get_info(proc_args)&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 154, in &lt;lambda&gt;&#10;    &quot;stdout&quot;: BytesIO(self.changelog.encode('utf-8'))&#10;AttributeError: 'GitLogsTest' object has no attribute 'changelog'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:'pbr'
+
+pythonlogging:'': {{{
+[pbr] Writing ChangeLog
+[pbr] Generating ChangeLog
+}}}
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 157, in test_write_git_changelog
+    git.write_git_changelog(git_dir=self.git_dir,
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 289, in write_git_changelog
+    for release, content in changelog:
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 176, in _iter_changelog
+    for hash, tags, msg in changelog:
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 235, in _iter_log_inner
+    changelog = _run_git_command(log_cmd, git_dir)
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 64, in _run_git_command
+    return _run_shell_command(
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 46, in _run_shell_command
+    output = subprocess.Popen(cmd,
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fixtures/_fixtures/popen.py", line 169, in __call__
+    proc_info = self.get_info(proc_args)
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 154, in &lt;lambda&gt;
+    "stdout": BytesIO(self.changelog.encode('utf-8'))
+AttributeError: 'GitLogsTest' object has no attribute 'changelog'</failure></testcase><testcase classname="pbr.tests.test_setup.BuildSphinxTest" name="test_build_doc" time="0.023"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 295, in test_build_doc&#10;    build_doc = packaging.LocalBuildDoc(self.distr)&#10;TypeError: 'NoneType' object is not callable">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 295, in test_build_doc
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable</failure></testcase><testcase classname="pbr.tests.test_setup.BuildSphinxTest" name="test_builders_config" time="0.022"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 315, in test_builders_config&#10;    build_doc = packaging.LocalBuildDoc(self.distr)&#10;TypeError: 'NoneType' object is not callable">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 315, in test_builders_config
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable</failure></testcase><testcase classname="pbr.tests.test_setup.BuildSphinxTest" name="test_cmd_builder_override" time="0.025"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 344, in test_cmd_builder_override&#10;    if self.has_opt:&#10;AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 344, in test_cmd_builder_override
+    if self.has_opt:
+AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'</failure></testcase><testcase classname="pbr.tests.test_setup.BuildSphinxTest" name="test_cmd_builder_override_multiple_builders" time="0.023"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 364, in test_cmd_builder_override_multiple_builders&#10;    if self.has_opt:&#10;AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 364, in test_cmd_builder_override_multiple_builders
+    if self.has_opt:
+AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'</failure></testcase><testcase classname="pbr.tests.test_setup.APIAutoDocTest" name="test_default_api_build_dir" time="0.022"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 417, in test_default_api_build_dir&#10;    build_doc = packaging.LocalBuildDoc(self.distr)&#10;TypeError: 'NoneType' object is not callable">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 417, in test_default_api_build_dir
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable</failure></testcase><testcase classname="pbr.tests.test_setup.APIAutoDocTest" name="test_different_api_build_dir" time="0.022"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_setup.py&quot;, line 436, in test_different_api_build_dir&#10;    build_doc = packaging.LocalBuildDoc(self.distr)&#10;TypeError: 'NoneType' object is not callable">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 436, in test_different_api_build_dir
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable</failure></testcase><testcase classname="pbr.tests.test_util.TestBasics" name="test_basics" time="0.010" /><testcase classname="pbr.tests.test_util.TestExtrasRequireParsingScenarios" name="test_extras_parsing" time="0.014"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_util.py&quot;, line 186, in test_extras_parsing&#10;    config = config_from_ini(self.config_text)&#10;AttributeError: 'TestExtrasRequireParsingScenarios' object has no attribute 'config_text'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 186, in test_extras_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestExtrasRequireParsingScenarios' object has no attribute 'config_text'</failure></testcase><testcase classname="pbr.tests.test_util.TestInvalidMarkers" name="test_invalid_marker_raises_error" time="0.009" /><testcase classname="pbr.tests.test_util.TestMapFieldsParsingScenarios" name="test_project_url_parsing" time="0.013"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_util.py&quot;, line 234, in test_project_url_parsing&#10;    config = config_from_ini(self.config_text)&#10;AttributeError: 'TestMapFieldsParsingScenarios' object has no attribute 'config_text'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 234, in test_project_url_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestMapFieldsParsingScenarios' object has no attribute 'config_text'</failure></testcase><testcase classname="pbr.tests.test_util.TestKeywordsParsingScenarios" name="test_keywords_parsing" time="0.013"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_util.py&quot;, line 264, in test_keywords_parsing&#10;    config = config_from_ini(self.config_text)&#10;AttributeError: 'TestKeywordsParsingScenarios' object has no attribute 'config_text'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 264, in test_keywords_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestKeywordsParsingScenarios' object has no attribute 'config_text'</failure></testcase><testcase classname="pbr.tests.test_util.TestProvidesExtras" name="test_provides_extras" time="0.009" /><testcase classname="pbr.tests.test_util.TestDataFilesParsing" name="test_handling_of_whitespace_in_data_files" time="0.012"><failure message="Failed: NOTE: Incompatible Exception Representation, displaying natively:&#10;&#10;testtools.testresult.real._StringException: Empty attachments:&#10;  pythonlogging:''&#10;  pythonlogging:'pbr'&#10;&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/pbr-5.11.0/pbr/tests/test_util.py&quot;, line 300, in test_handling_of_whitespace_in_data_files&#10;    config = config_from_ini(self.config_text)&#10;AttributeError: 'TestDataFilesParsing' object has no attribute 'config_text'">'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 300, in test_handling_of_whitespace_in_data_files
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestDataFilesParsing' object has no attribute 'config_text'</failure></testcase><testcase classname="pbr.tests.test_util.TestUTF8DescriptionFile" name="test_utf8_description_file" time="0.010" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_alpha_default_version" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_alpha_dev_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_alpha_major_zero_version" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_alpha_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_alpha_zero_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_beta_dev_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_beta_version" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_decrement_nonrelease" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_decrement_nonrelease_zero" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_decrement_release" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_dev_no_git_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_dev_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_dev_zero_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_final_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_alpha" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_no_0_prerelease" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_no_0_prerelease_2" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_non_440_beta" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_nonzero_lead_in" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_postN" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_legacy_short_nonzero_lead_in" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_non_digit_start" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_pure_git_hash" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_from_pip_string_v_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_increment_nonrelease" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_increment_release" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_ordering" time="0.011" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_parsing_short_forms" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_rc_dev_version" time="0.009" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_rc_version" time="0.008" /><testcase classname="pbr.tests.test_version.TestSemanticVersion" name="test_to_dev" time="0.008" /><testcase classname="pbr.tests.test_wsgi.TestWsgiScripts" name="test_with_argument" time="0.638" /><testcase classname="pbr.tests.test_wsgi.TestWsgiScripts" name="test_wsgi_script_install" time="0.525" /><testcase classname="pbr.tests.test_wsgi.TestWsgiScripts" name="test_wsgi_script_run" time="0.616" /></testsuite></testsuites>

@@ -1,0 +1,2115 @@
+GLOB sdist-make: /workdir/pycryptodome-3.16.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pycryptodome-3.16.0/.tox/.tmp/package/1/pycryptodome-3.16.0.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycryptodome @ file:///workdir/pycryptodome-3.16.0/.tox/.tmp/package/1/pycryptodome-3.16.0.zip#sha256=8313ef1957f098b7ed35ac2c71416ed2e62b18efc1f1750b67802f86517ab735,pycryptodome-test-vectors==1.0.10,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2504045344'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pycryptodome/3.16.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pycryptodome-3.16.0
+collecting ... collected 249 items / 55 errors
+
+==================================== ERRORS ====================================
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_AES.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_AES.py", line 30, in <module>
+    from Crypto.Hash import SHA256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA256.py", line 29, in <module>
+    _raw_sha256_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA256",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA256': Not found '_SHA256.cpython-310-x86_64-linux-gnu.so', Not found '_SHA256.abi3.so', Not found '_SHA256.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_ARC2.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_ARC2.py", line 31, in <module>
+    from Crypto.Cipher import ARC2
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_ARC4.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_ARC4.py", line 33, in <module>
+    from Crypto.Cipher import ARC4
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_Blowfish.py _________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_Blowfish.py", line 31, in <module>
+    from Crypto.Cipher import Blowfish
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_CAST.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_CAST.py", line 31, in <module>
+    from Crypto.Cipher import CAST
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_CBC.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_CBC.py", line 37, in <module>
+    from Crypto.Cipher import AES, DES3, DES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_CCM.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_CCM.py", line 37, in <module>
+    from Crypto.Cipher import AES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_CFB.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_CFB.py", line 37, in <module>
+    from Crypto.Cipher import AES, DES3, DES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_CTR.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_CTR.py", line 36, in <module>
+    from Crypto.Cipher import AES, DES3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_ChaCha20.py _________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_ChaCha20.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+____ ERROR collecting lib/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.py _____
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.py", line 37, in <module>
+    from Crypto.Cipher import ChaCha20_Poly1305
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_DES.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_DES.py", line 29, in <module>
+    from Crypto.Cipher import DES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_DES3.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_DES3.py", line 30, in <module>
+    from Crypto.Cipher import DES3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_EAX.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_EAX.py", line 37, in <module>
+    from Crypto.Cipher import AES, DES3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_GCM.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_GCM.py", line 40, in <module>
+    from Crypto.Cipher import AES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_OCB.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_OCB.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_OFB.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_OFB.py", line 36, in <module>
+    from Crypto.Cipher import AES, DES3, DES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_OpenPGP.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_OpenPGP.py", line 36, in <module>
+    from Crypto.Cipher import AES, DES3, DES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_SIV.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_SIV.py", line 39, in <module>
+    from Crypto.Cipher import AES
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_Salsa20.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_Salsa20.py", line 33, in <module>
+    from Crypto.Cipher import Salsa20
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_pkcs1_15.py _________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_pkcs1_15.py", line 30, in <module>
+    from Crypto.Cipher import PKCS1_v1_5 as PKCS
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+________ ERROR collecting lib/Crypto/SelfTest/Cipher/test_pkcs1_oaep.py ________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Cipher/test_pkcs1_oaep.py", line 29, in <module>
+    from Crypto.Cipher import PKCS1_OAEP as PKCS
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/__init__.py", line 27, in <module>
+    from Crypto.Cipher._mode_ecb import _create_ecb_cipher
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Cipher/_mode_ecb.py", line 35, in <module>
+    raw_ecb_lib = load_pycryptodome_raw_lib("Crypto.Cipher._raw_ecb", """
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Cipher._raw_ecb': Not found '_raw_ecb.cpython-310-x86_64-linux-gnu.so', Not found '_raw_ecb.abi3.so', Not found '_raw_ecb.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Hash/test_BLAKE2.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_BLAKE2.py", line 38, in <module>
+    from Crypto.Util.strxor import strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+____________ ERROR collecting lib/Crypto/SelfTest/Hash/test_CMAC.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_CMAC.py", line 42, in <module>
+    from Crypto.Hash import CMAC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/CMAC.py", line 25, in <module>
+    from Crypto.Hash import BLAKE2s
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/BLAKE2s.py", line 42, in <module>
+    _raw_blake2s_lib = load_pycryptodome_raw_lib("Crypto.Hash._BLAKE2s",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._BLAKE2s': Not found '_BLAKE2s.cpython-310-x86_64-linux-gnu.so', Not found '_BLAKE2s.abi3.so', Not found '_BLAKE2s.so'
+____________ ERROR collecting lib/Crypto/SelfTest/Hash/test_HMAC.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_HMAC.py", line 31, in <module>
+    from Crypto.Hash import (HMAC, MD5, SHA1, SHA256,
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/HMAC.py", line 38, in <module>
+    from Crypto.Hash import MD5
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/MD5.py", line 29, in <module>
+    _raw_md5_lib = load_pycryptodome_raw_lib("Crypto.Hash._MD5",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._MD5': Not found '_MD5.cpython-310-x86_64-linux-gnu.so', Not found '_MD5.abi3.so', Not found '_MD5.so'
+____________ ERROR collecting lib/Crypto/SelfTest/Hash/test_KMAC.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_KMAC.py", line 5, in <module>
+    from Crypto.Util.strxor import strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+_______ ERROR collecting lib/Crypto/SelfTest/Hash/test_KangarooTwelve.py _______
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_KangarooTwelve.py", line 34, in <module>
+    from Crypto.Hash import KangarooTwelve as K12
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/KangarooTwelve.py", line 39, in <module>
+    from .keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+____________ ERROR collecting lib/Crypto/SelfTest/Hash/test_MD5.py _____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_MD5.py", line 28, in <module>
+    from Crypto.Hash import MD5
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/MD5.py", line 29, in <module>
+    _raw_md5_lib = load_pycryptodome_raw_lib("Crypto.Hash._MD5",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._MD5': Not found '_MD5.cpython-310-x86_64-linux-gnu.so', Not found '_MD5.abi3.so', Not found '_MD5.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Hash/test_Poly1305.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_Poly1305.py", line 40, in <module>
+    from .common import make_mac_tests
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/common.py", line 34, in <module>
+    from Crypto.Util.strxor import strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHA3_224.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHA3_224.py", line 30, in <module>
+    from Crypto.Hash import SHA3_224 as SHA3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA3_224.py", line 29, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHA3_256.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHA3_256.py", line 30, in <module>
+    from Crypto.Hash import SHA3_256 as SHA3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA3_256.py", line 29, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHA3_384.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHA3_384.py", line 30, in <module>
+    from Crypto.Hash import SHA3_384 as SHA3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA3_384.py", line 29, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHA3_512.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHA3_512.py", line 30, in <module>
+    from Crypto.Hash import SHA3_512 as SHA3
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA3_512.py", line 29, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHA512.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHA512.py", line 29, in <module>
+    from Crypto.Hash import SHA512
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Hash/test_SHAKE.py ____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_SHAKE.py", line 39, in <module>
+    from Crypto.Hash import SHAKE128, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHAKE128.py", line 39, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Hash/test_TupleHash.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_TupleHash.py", line 7, in <module>
+    from Crypto.Hash import TupleHash128, TupleHash256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/TupleHash128.py", line 33, in <module>
+    from . import cSHAKE128
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/cSHAKE128.py", line 40, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Hash/test_cSHAKE.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_cSHAKE.py", line 34, in <module>
+    from Crypto.Hash import cSHAKE128, cSHAKE256, SHAKE128, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/cSHAKE128.py", line 40, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Hash/test_keccak.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Hash/test_keccak.py", line 39, in <module>
+    from Crypto.Hash import keccak
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+_____________ ERROR collecting lib/Crypto/SelfTest/IO/test_PBES.py _____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/IO/test_PBES.py", line 39, in <module>
+    from Crypto.IO._PBES import PBES2
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/IO/_PBES.py", line 41, in <module>
+    from Crypto.Hash import MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/MD5.py", line 29, in <module>
+    _raw_md5_lib = load_pycryptodome_raw_lib("Crypto.Hash._MD5",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._MD5': Not found '_MD5.cpython-310-x86_64-linux-gnu.so', Not found '_MD5.abi3.so', Not found '_MD5.so'
+____________ ERROR collecting lib/Crypto/SelfTest/IO/test_PKCS8.py _____________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/IO/test_PKCS8.py", line 40, in <module>
+    from Crypto.IO import PKCS8
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/IO/PKCS8.py", line 44, in <module>
+    from Crypto.IO._PBES import PBES1, PBES2, PbesError
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/IO/_PBES.py", line 41, in <module>
+    from Crypto.Hash import MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/MD5.py", line 29, in <module>
+    _raw_md5_lib = load_pycryptodome_raw_lib("Crypto.Hash._MD5",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._MD5': Not found '_MD5.cpython-310-x86_64-linux-gnu.so', Not found '_MD5.abi3.so', Not found '_MD5.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Math/test_modexp.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Math/test_modexp.py", line 50, in <module>
+    from Crypto.Hash import SHAKE128
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHAKE128.py", line 39, in <module>
+    from Crypto.Hash.keccak import _raw_keccak_lib
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/keccak.py", line 39, in <module>
+    _raw_keccak_lib = load_pycryptodome_raw_lib("Crypto.Hash._keccak",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._keccak': Not found '_keccak.cpython-310-x86_64-linux-gnu.so', Not found '_keccak.abi3.so', Not found '_keccak.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Protocol/test_KDF.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Protocol/test_KDF.py", line 30, in <module>
+    from Crypto.Hash import SHA1, HMAC, SHA256, MD5, SHA224, SHA384, SHA512
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA1.py", line 29, in <module>
+    _raw_sha1_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA1",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA1': Not found '_SHA1.cpython-310-x86_64-linux-gnu.so', Not found '_SHA1.abi3.so', Not found '_SHA1.so'
+__________ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_DSA.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+_______ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_ECC_25519.py _______
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+________ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_ECC_448.py ________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+_______ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py ________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+________ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_ElGamal.py ________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+______ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_import_DSA.py _______
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+______ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_import_ECC.py _______
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+______ ERROR collecting lib/Crypto/SelfTest/PublicKey/test_import_RSA.py _______
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/__init__.py", line 28, in <module>
+    from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py", line 37, in <module>
+    from Crypto.PublicKey import ECC
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/PublicKey/ECC.py", line 53, in <module>
+    from Crypto.Hash import SHA512, SHAKE256
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Hash/SHA512.py", line 29, in <module>
+    _raw_sha512_lib = load_pycryptodome_raw_lib("Crypto.Hash._SHA512",
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Hash._SHA512': Not found '_SHA512.cpython-310-x86_64-linux-gnu.so', Not found '_SHA512.abi3.so', Not found '_SHA512.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Signature/test_dss.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/__init__.py", line 26, in <module>
+    from . import test_pkcs1_15, test_pss, test_dss, test_eddsa
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/test_pkcs1_15.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+_________ ERROR collecting lib/Crypto/SelfTest/Signature/test_eddsa.py _________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/__init__.py", line 26, in <module>
+    from . import test_pkcs1_15, test_pss, test_dss, test_eddsa
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/test_pkcs1_15.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+_______ ERROR collecting lib/Crypto/SelfTest/Signature/test_pkcs1_15.py ________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/__init__.py", line 26, in <module>
+    from . import test_pkcs1_15, test_pss, test_dss, test_eddsa
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/test_pkcs1_15.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+__________ ERROR collecting lib/Crypto/SelfTest/Signature/test_pss.py __________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/__init__.py", line 26, in <module>
+    from . import test_pkcs1_15, test_pss, test_dss, test_eddsa
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Signature/test_pkcs1_15.py", line 37, in <module>
+    from Crypto.Util.strxor import strxor
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+___________ ERROR collecting lib/Crypto/SelfTest/Util/test_strxor.py ___________
+Traceback (most recent call last):
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/SelfTest/Util/test_strxor.py", line 38, in <module>
+    from Crypto.Util.strxor import strxor, strxor_c
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/strxor.py", line 35, in <module>
+    _raw_strxor = load_pycryptodome_raw_lib(
+  File "/workdir/pycryptodome-3.16.0/lib/Crypto/Util/_raw_api.py", line 309, in load_pycryptodome_raw_lib
+    raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+OSError: Cannot load native module 'Crypto.Util._strxor': Not found '_strxor.cpython-310-x86_64-linux-gnu.so', Not found '_strxor.abi3.so', Not found '_strxor.so'
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.10/unittest/suite.py:92
+  /usr/local/lib/python3.10/unittest/suite.py:92: PytestCollectionWarning: cannot collect test class 'TestSuite' because it has a __init__ constructor (from: lib/Crypto/SelfTest/Protocol/test_SecretSharing.py)
+    class TestSuite(BaseTestSuite):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pycryptodome/3.16.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR lib/Crypto/SelfTest/Cipher/test_AES.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_ARC2.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Cipher/test_ARC4.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Cipher/test_Blowfish.py - OSError: Cannot load nati...
+ERROR lib/Crypto/SelfTest/Cipher/test_CAST.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Cipher/test_CBC.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_CCM.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_CFB.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_CTR.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_ChaCha20.py - OSError: Cannot load nati...
+ERROR lib/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.py - OSError: Cannot ...
+ERROR lib/Crypto/SelfTest/Cipher/test_DES.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_DES3.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Cipher/test_EAX.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_GCM.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_OCB.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_OFB.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_OpenPGP.py - OSError: Cannot load nativ...
+ERROR lib/Crypto/SelfTest/Cipher/test_SIV.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Cipher/test_Salsa20.py - OSError: Cannot load nativ...
+ERROR lib/Crypto/SelfTest/Cipher/test_pkcs1_15.py - OSError: Cannot load nati...
+ERROR lib/Crypto/SelfTest/Cipher/test_pkcs1_oaep.py - OSError: Cannot load na...
+ERROR lib/Crypto/SelfTest/Hash/test_BLAKE2.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Hash/test_CMAC.py - OSError: Cannot load native mod...
+ERROR lib/Crypto/SelfTest/Hash/test_HMAC.py - OSError: Cannot load native mod...
+ERROR lib/Crypto/SelfTest/Hash/test_KMAC.py - OSError: Cannot load native mod...
+ERROR lib/Crypto/SelfTest/Hash/test_KangarooTwelve.py - OSError: Cannot load ...
+ERROR lib/Crypto/SelfTest/Hash/test_MD5.py - OSError: Cannot load native modu...
+ERROR lib/Crypto/SelfTest/Hash/test_Poly1305.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Hash/test_SHA3_224.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Hash/test_SHA3_256.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Hash/test_SHA3_384.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Hash/test_SHA3_512.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Hash/test_SHA512.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Hash/test_SHAKE.py - OSError: Cannot load native mo...
+ERROR lib/Crypto/SelfTest/Hash/test_TupleHash.py - OSError: Cannot load nativ...
+ERROR lib/Crypto/SelfTest/Hash/test_cSHAKE.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Hash/test_keccak.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/IO/test_PBES.py - OSError: Cannot load native modul...
+ERROR lib/Crypto/SelfTest/IO/test_PKCS8.py - OSError: Cannot load native modu...
+ERROR lib/Crypto/SelfTest/Math/test_modexp.py - OSError: Cannot load native m...
+ERROR lib/Crypto/SelfTest/Protocol/test_KDF.py - OSError: Cannot load native ...
+ERROR lib/Crypto/SelfTest/PublicKey/test_DSA.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/PublicKey/test_ECC_25519.py - OSError: Cannot load ...
+ERROR lib/Crypto/SelfTest/PublicKey/test_ECC_448.py - OSError: Cannot load na...
+ERROR lib/Crypto/SelfTest/PublicKey/test_ECC_NIST.py - OSError: Cannot load n...
+ERROR lib/Crypto/SelfTest/PublicKey/test_ElGamal.py - OSError: Cannot load na...
+ERROR lib/Crypto/SelfTest/PublicKey/test_import_DSA.py - OSError: Cannot load...
+ERROR lib/Crypto/SelfTest/PublicKey/test_import_ECC.py - OSError: Cannot load...
+ERROR lib/Crypto/SelfTest/PublicKey/test_import_RSA.py - OSError: Cannot load...
+ERROR lib/Crypto/SelfTest/Signature/test_dss.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Signature/test_eddsa.py - OSError: Cannot load nati...
+ERROR lib/Crypto/SelfTest/Signature/test_pkcs1_15.py - OSError: Cannot load n...
+ERROR lib/Crypto/SelfTest/Signature/test_pss.py - OSError: Cannot load native...
+ERROR lib/Crypto/SelfTest/Util/test_strxor.py - OSError: Cannot load native m...
+!!!!!!!!!!!!!!!!!!! Interrupted: 55 errors during collection !!!!!!!!!!!!!!!!!!!
+======================== 1 warning, 55 errors in 0.80s =========================
+ERROR: InvocationError for command /workdir/pycryptodome-3.16.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pycryptodome/3.16.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

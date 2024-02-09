@@ -1,0 +1,46 @@
+GLOB sdist-make: /workdir/protobuf-4.21.10/python/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/protobuf-4.21.10/python/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/protobuf-4.21.10/python/.tox/.tmp/package/1/protobuf-4.21.10.zip
+ERROR: invocation failed (exit code 1), logfile: /workdir/protobuf-4.21.10/python/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/protobuf-4.21.10.zip
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: protobuf
+  Building wheel for protobuf (setup.py): started
+  Building wheel for protobuf (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 255
+  ╰─> [18 lines of output]
+      /tmp/pip-req-build-wu7ybhmu/setup.py:11: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+        import pkg_resources
+      /workdir/protobuf-4.21.10/python/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:700: SetuptoolsDeprecationWarning: The namespace_packages parameter is deprecated.
+      !!
+      
+              ********************************************************************************
+              Please replace its usage with implicit namespaces (PEP 420).
+      
+              See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages for details.
+              ********************************************************************************
+      
+      !!
+        ep.load()(self, ep.name, value)
+      running bdist_wheel
+      running build
+      running build_py
+      Generating google/protobuf/descriptor_pb2.py...
+      Can't find required file: ../src/google/protobuf/descriptor.proto
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for protobuf
+  Running setup.py clean for protobuf
+Failed to build protobuf
+ERROR: Could not build wheels for protobuf, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/protobuf-4.21.10/python/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/protobuf-4.21.10.zip (exited with code 1)

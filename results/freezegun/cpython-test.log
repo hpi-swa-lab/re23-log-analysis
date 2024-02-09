@@ -1,0 +1,199 @@
+.package create: /workdir/freezegun-1.2.1/.tox/.package
+.package installdeps: setuptools, wheel
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[co]' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[co]' found anywhere in distribution
+cpythonlibtest-unit-test-tests create: /workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/freezegun-1.2.1/.tox/.tmp/package/1/freezegun-1.2.1.tar.gz
+cpythonlibtest-unit-test-tests installed: certifi==2023.11.17,charset-normalizer==3.3.2,coverage==6.5.0,coveralls==3.3.1,dateparser==1.2.0,docopt==0.6.2,exceptiongroup==1.2.0,freezegun @ file:///workdir/freezegun-1.2.1/.tox/.tmp/package/1/freezegun-1.2.1.tar.gz#sha256=0e53b35d661a9ccd02ec0fd5b76f334316a6dad75f2cc541b2cfefce06a149de,humanize==4.9.0,idna==3.4,iniconfig==2.0.0,maya==0.6.1,mock==5.1.0,packaging==23.2,pendulum==2.1.2,pluggy==1.3.0,pytest==7.4.3,pytest-cov==4.1.0,pytest-cover==3.0.0,pytest-coverage==0.0,python-dateutil==2.8.2,pytz==2023.3.post1,pytzdata==2020.1,regex==2023.10.3,requests==2.31.0,six==1.16.0,snaptime==0.2.4,tomli==2.0.1,tzlocal==5.2,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='724789442'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/freezegun/1.2.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/freezegun-1.2.1
+plugins: cov-4.1.0
+collecting ... collected 123 items
+
+tests/test_asyncio.py::test_time_freeze_coroutine PASSED                 [  0%]
+tests/test_asyncio.py::test_time_freeze_async_def PASSED                 [  1%]
+tests/test_class_import.py::test_import_datetime_works PASSED            [  2%]
+tests/test_class_import.py::test_import_date_works PASSED                [  3%]
+tests/test_class_import.py::test_import_time PASSED                      [  4%]
+tests/test_class_import.py::test_start_and_stop_works PASSED             [  4%]
+tests/test_class_import.py::test_isinstance_works PASSED                 [  5%]
+tests/test_class_import.py::test_issubclass_works PASSED                 [  6%]
+tests/test_class_import.py::test_fake_uses_real_when_ignored PASSED      [  7%]
+tests/test_class_import.py::test_can_ignore_email_module PASSED          [  8%]
+tests/test_class_import.py::test_avoid_replacing_equal_to_anything PASSED [  8%]
+tests/test_class_import.py::test_import_localtime PASSED                 [  9%]
+tests/test_class_import.py::test_fake_gmtime_function PASSED             [ 10%]
+tests/test_class_import.py::test_fake_strftime_function PASSED           [ 11%]
+tests/test_class_import.py::test_import_after_start PASSED               [ 12%]
+tests/test_class_import.py::test_none_as_initial PASSED                  [ 13%]
+tests/test_configure.py::test_default_ignore_list_is_overridden PASSED   [ 13%]
+tests/test_configure.py::test_extend_default_ignore_list PASSED          [ 14%]
+tests/test_datetimes.py::test_simple_api PASSED                          [ 15%]
+tests/test_datetimes.py::test_tz_offset PASSED                           [ 16%]
+tests/test_datetimes.py::test_timedelta_tz_offset PASSED                 [ 17%]
+tests/test_datetimes.py::test_tz_offset_with_today PASSED                [ 17%]
+tests/test_datetimes.py::test_zero_tz_offset_with_time PASSED            [ 18%]
+tests/test_datetimes.py::test_tz_offset_with_time PASSED                 [ 19%]
+tests/test_datetimes.py::test_time_with_microseconds PASSED              [ 20%]
+tests/test_datetimes.py::test_time_with_dst PASSED                       [ 21%]
+tests/test_datetimes.py::test_manual_increment PASSED                    [ 21%]
+tests/test_datetimes.py::test_manual_increment_seconds PASSED            [ 22%]
+tests/test_datetimes.py::test_move_to PASSED                             [ 23%]
+tests/test_datetimes.py::test_bad_time_argument PASSED                   [ 24%]
+tests/test_datetimes.py::test_time_monotonic[monotonic-True-1.0] PASSED  [ 25%]
+tests/test_datetimes.py::test_time_monotonic[monotonic_ns-True-1000000000] PASSED [ 26%]
+tests/test_datetimes.py::test_time_monotonic[perf_counter-True-1.0] PASSED [ 26%]
+tests/test_datetimes.py::test_time_monotonic[perf_counter_ns-True-1000000000] PASSED [ 27%]
+tests/test_datetimes.py::test_time_gmtime PASSED                         [ 28%]
+tests/test_datetimes.py::test_time_clock SKIPPED (time.clock was rem...) [ 29%]
+tests/test_datetimes.py::test_time_localtime PASSED                      [ 30%]
+tests/test_datetimes.py::test_strftime PASSED                            [ 30%]
+tests/test_datetimes.py::test_real_strftime_fall_through PASSED          [ 31%]
+tests/test_datetimes.py::test_date_object PASSED                         [ 32%]
+tests/test_datetimes.py::test_old_date_object PASSED                     [ 33%]
+tests/test_datetimes.py::test_date_with_locale SKIPPED (could not se...) [ 34%]
+tests/test_datetimes.py::test_invalid_type PASSED                        [ 34%]
+tests/test_datetimes.py::test_datetime_object PASSED                     [ 35%]
+tests/test_datetimes.py::test_function_object PASSED                     [ 36%]
+tests/test_datetimes.py::test_lambda_object PASSED                       [ 37%]
+tests/test_datetimes.py::test_generator_object PASSED                    [ 38%]
+tests/test_datetimes.py::test_maya_datetimes PASSED                      [ 39%]
+tests/test_datetimes.py::test_old_datetime_object PASSED                 [ 39%]
+tests/test_datetimes.py::test_datetime_with_locale SKIPPED (could no...) [ 40%]
+tests/test_datetimes.py::test_decorator PASSED                           [ 41%]
+tests/test_datetimes.py::test_decorator_wrapped_attribute PASSED         [ 42%]
+tests/test_datetimes.py::Tester::test_the_class PASSED                   [ 43%]
+tests/test_datetimes.py::Tester::test_still_the_same PASSED              [ 43%]
+tests/test_datetimes.py::Tester::test_class_name_preserved_by_decorator PASSED [ 44%]
+tests/test_datetimes.py::Tester::test_class_decorator_ignores_nested_class PASSED [ 45%]
+tests/test_datetimes.py::Tester::test_class_decorator_wraps_callable_object_py3 PASSED [ 46%]
+tests/test_datetimes.py::Tester::test_class_decorator_respects_staticmethod FAILED [ 47%]
+tests/test_datetimes.py::test_nice_datetime PASSED                       [ 47%]
+tests/test_datetimes.py::test_datetime_date_method PASSED                [ 48%]
+tests/test_datetimes.py::test_context_manager PASSED                     [ 49%]
+tests/test_datetimes.py::test_nested_context_manager PASSED              [ 50%]
+tests/test_datetimes.py::test_nested_context_manager_with_tz_offsets PASSED [ 51%]
+tests/test_datetimes.py::test_isinstance_with_active PASSED              [ 52%]
+tests/test_datetimes.py::test_isinstance_without_active PASSED           [ 52%]
+tests/test_datetimes.py::TestUnitTestMethodDecorator::test_method_decorator_works_on_unittest PASSED [ 53%]
+tests/test_datetimes.py::TestUnitTestMethodDecorator::test_method_decorator_works_on_unittest_kwarg_frozen_time PASSED [ 54%]
+tests/test_datetimes.py::TestUnitTestMethodDecorator::test_method_decorator_works_on_unittest_kwarg_hello PASSED [ 55%]
+tests/test_datetimes.py::TestUnitTestClassDecorator::test_class_decorator_works_on_unittest PASSED [ 56%]
+tests/test_datetimes.py::TestUnitTestClassDecorator::test_class_name_preserved_by_decorator PASSED [ 56%]
+tests/test_datetimes.py::TestUnitTestClassDecoratorWithNoSetUpOrTearDown::test_class_decorator_works_on_unittest PASSED [ 57%]
+tests/test_datetimes.py::TestUnitTestClassDecoratorSubclass::test_class_decorator_works_on_unittest PASSED [ 58%]
+tests/test_datetimes.py::TestUnitTestClassDecoratorSubclass::test_class_name_preserved_by_decorator PASSED [ 59%]
+tests/test_datetimes.py::UnfrozenInheritedTests::test_time_is_not_frozen PASSED [ 60%]
+tests/test_datetimes.py::FrozenInheritedTests::test_time_is_frozen PASSED [ 60%]
+tests/test_datetimes.py::TestOldStyleClasses::test_direct_method PASSED  [ 61%]
+tests/test_datetimes.py::TestOldStyleClasses::test_inherited_method PASSED [ 62%]
+tests/test_datetimes.py::test_min_and_max PASSED                         [ 63%]
+tests/test_datetimes.py::test_freeze_with_timezone_aware_datetime_in_utc PASSED [ 64%]
+tests/test_datetimes.py::test_freeze_with_timezone_aware_datetime_in_non_utc PASSED [ 65%]
+tests/test_datetimes.py::test_time_with_nested PASSED                    [ 65%]
+tests/test_datetimes.py::test_monotonic_with_nested[monotonic] PASSED    [ 66%]
+tests/test_datetimes.py::test_monotonic_with_nested[perf_counter] PASSED [ 67%]
+tests/test_datetimes.py::test_should_use_real_time PASSED                [ 68%]
+tests/test_datetimes.py::test_time_ns PASSED                             [ 69%]
+tests/test_datetimes.py::test_compare_datetime_and_time_with_timezone PASSED [ 69%]
+tests/test_datetimes.py::test_timestamp_with_tzoffset PASSED             [ 70%]
+tests/test_datetimes.py::test_datetime_in_timezone SKIPPED (timezone...) [ 71%]
+tests/test_errors.py::test_ignore_errors_in_start[ImportError] PASSED    [ 72%]
+tests/test_errors.py::test_ignore_errors_in_start[TypeError] PASSED      [ 73%]
+tests/test_import_alias.py::test_datetime_alias PASSED                   [ 73%]
+tests/test_import_alias.py::test_time_alias PASSED                       [ 74%]
+tests/test_import_alias.py::TestCallOtherFuncInTestClassDecoratorWithAlias::test_calls_other_method PASSED [ 75%]
+tests/test_operations.py::test_addition PASSED                           [ 76%]
+tests/test_operations.py::test_subtraction PASSED                        [ 77%]
+tests/test_operations.py::test_datetime_timezone_none PASSED             [ 78%]
+tests/test_operations.py::test_datetime_timezone_real PASSED             [ 78%]
+tests/test_operations.py::test_datetime_timezone_real_with_offset PASSED [ 79%]
+tests/test_operations.py::test_astimezone PASSED                         [ 80%]
+tests/test_operations.py::test_astimezone_tz_none PASSED                 [ 81%]
+tests/test_operations.py::test_replace PASSED                            [ 82%]
+tests/test_operations.py::test_auto_tick PASSED                          [ 82%]
+tests/test_pickle.py::test_pickle PASSED                                 [ 83%]
+tests/test_pickle.py::test_pickle_real_datetime PASSED                   [ 84%]
+tests/test_pickle.py::test_pickle_real_date PASSED                       [ 85%]
+tests/test_sqlite3.py::test_fake_datetime_select PASSED                  [ 86%]
+tests/test_sqlite3.py::test_fake_date_select PASSED                      [ 86%]
+tests/test_ticking.py::test_ticking_datetime PASSED                      [ 87%]
+tests/test_ticking.py::test_ticking_time_clock SKIPPED (time.clock w...) [ 88%]
+tests/test_ticking.py::test_ticking_date PASSED                          [ 89%]
+tests/test_ticking.py::test_ticking_time PASSED                          [ 90%]
+tests/test_ticking.py::test_ticking_monotonic[monotonic] PASSED          [ 91%]
+tests/test_ticking.py::test_ticking_monotonic[monotonic_ns] PASSED       [ 91%]
+tests/test_ticking.py::test_ticking_monotonic[perf_counter] PASSED       [ 92%]
+tests/test_ticking.py::test_ticking_monotonic[perf_counter_ns] PASSED    [ 93%]
+tests/test_ticking.py::test_pypy_compat PASSED                           [ 94%]
+tests/test_ticking.py::test_non_pypy_compat PASSED                       [ 95%]
+tests/test_utils.py::test_should_not_skip_cpython PASSED                 [ 95%]
+tests/test_utils.py::test_should_skip_non_cpython PASSED                 [ 96%]
+tests/test_uuid.py::test_uuid1_future PASSED                             [ 97%]
+tests/test_uuid.py::test_uuid1_past PASSED                               [ 98%]
+tests/test_warnings.py::test_ignore_warnings_in_start PASSED             [ 99%]
+tests/test_warnings.py::test_ignore_warnings_in_stop PASSED              [100%]
+
+=================================== FAILURES ===================================
+______________ Tester.test_class_decorator_respects_staticmethod _______________
+Traceback (most recent call last):
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/freezegun-1.2.1/freezegun/api.py", line 789, in wrapper
+    result = func(*args, **kwargs)
+  File "/workdir/freezegun-1.2.1/tests/test_datetimes.py", line 453, in test_class_decorator_respects_staticmethod
+    assert self.helper() == datetime.date(2012, 1, 14)
+  File "/workdir/freezegun-1.2.1/freezegun/api.py", line 789, in wrapper
+    result = func(*args, **kwargs)
+TypeError: Tester.helper() takes 0 positional arguments but 1 was given
+=============================== warnings summary ===============================
+tests/test_asyncio.py::test_time_freeze_coroutine
+  /workdir/freezegun-1.2.1/tests/test_asyncio.py:17: DeprecationWarning: There is no current event loop
+    asyncio.get_event_loop().run_until_complete(frozen_coroutine())
+
+tests/test_asyncio.py::test_time_freeze_async_def
+  <string>:5: DeprecationWarning: There is no current event loop
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/freezegun/1.2.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_datetimes.py::Tester::test_class_decorator_respects_staticmethod
+============= 1 failed, 117 passed, 5 skipped, 2 warnings in 1.09s =============
+ERROR: InvocationError for command /workdir/freezegun-1.2.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/freezegun/1.2.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

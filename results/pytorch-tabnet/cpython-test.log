@@ -1,0 +1,22 @@
+.package create: /workdir/pytorch-tabnet-4.0/.tox/.package
+.package installdeps: poetry>=0.12
+cpythonlibtest-unit-test-tests create: /workdir/pytorch-tabnet-4.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pytorch-tabnet-4.0/.tox/.tmp/package/1/pytorch_tabnet-4.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,joblib==1.3.2,mock==5.1.0,numpy==1.26.2,nvidia-cublas-cu11==11.10.3.66,nvidia-cuda-nvrtc-cu11==11.7.99,nvidia-cuda-runtime-cu11==11.7.99,nvidia-cudnn-cu11==8.5.0.96,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytorch_tabnet @ file:///workdir/pytorch-tabnet-4.0/.tox/.tmp/package/1/pytorch_tabnet-4.0.tar.gz#sha256=b767b916088a72e48af2c99375db91362f11d8a573514eddc173d1958ddd2baa,scikit-learn==1.3.2,scipy==1.11.4,threadpoolctl==3.2.0,tomli==2.0.1,torch==1.13.1,tqdm==4.66.1,typing_extensions==4.8.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3186381986'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytorch-tabnet/4.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pytorch-tabnet-4.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pytorch-tabnet-4.0
+collecting ... collected 2 items
+
+tests/test_unsupervised_loss.py::test_equal_losses[y_pred0-embedded_x0-obf_vars0] PASSED [ 50%]
+tests/test_unsupervised_loss.py::test_equal_losses[y_pred1-embedded_x1-obf_vars1] PASSED [100%]
+
+- generated xml file: /workdir/results/pytorch-tabnet/4.0/1/cpython-test-results.xml -
+============================== 2 passed in 1.14s ===============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

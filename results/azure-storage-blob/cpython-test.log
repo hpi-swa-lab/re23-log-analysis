@@ -1,0 +1,95 @@
+GLOB sdist-make: /workdir/azure-storage-blob-12.14.1/sdk/storage/azure-storage-blob/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/azure-storage-blob-12.14.1/sdk/storage/azure-storage-blob/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev_requirements.txt, -rtests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/azure-storage-blob-12.14.1/sdk/storage/azure-storage-blob/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Obtaining file:///workdir/azure-storage-blob-12.14.1/tools/vcrpy (from -r dev_requirements.txt (line 1))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Obtaining file:///workdir/azure-storage-blob-12.14.1/tools/azure-devtools (from -r dev_requirements.txt (line 2))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Obtaining file:///workdir/azure-storage-blob-12.14.1/tools/azure-sdk-tools (from -r dev_requirements.txt (line 3))
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Processing /workdir/azure-storage-blob-12.14.1/sdk/core/azure-core
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Obtaining file:///workdir/azure-storage-blob-12.14.1/sdk/storage/azure-mgmt-storage (from -r dev_requirements.txt (line 6))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting azure-identity (from -r dev_requirements.txt (line 5))
+  Downloading azure_identity-1.15.0-py3-none-any.whl.metadata (75 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.4/75.4 kB 2.7 MB/s eta 0:00:00
+Collecting aiohttp>=3.0 (from -r dev_requirements.txt (line 7))
+  Downloading aiohttp-3.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+Collecting azure-storage-blob==2.1.0 (from -r tests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt (line 1))
+  Downloading azure_storage_blob-2.1.0-py2.py3-none-any.whl (88 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.1/88.1 kB 7.2 MB/s eta 0:00:00
+Collecting azure-common>=1.1.5 (from azure-storage-blob==2.1.0->-r tests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt (line 1))
+  Using cached azure_common-1.1.28-py2.py3-none-any.whl (14 kB)
+Collecting azure-storage-common~=2.1 (from azure-storage-blob==2.1.0->-r tests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt (line 1))
+  Downloading azure_storage_common-2.1.0-py2.py3-none-any.whl (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.8/47.8 kB 3.7 MB/s eta 0:00:00
+Collecting iniconfig (from pytest)
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging (from pytest)
+  Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest)
+  Using cached pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest)
+  Using cached exceptiongroup-1.1.3-py3-none-any.whl.metadata (6.1 kB)
+Collecting tomli>=1.0.0 (from pytest)
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting PyYAML (from vcrpy==3.0.1->-r dev_requirements.txt (line 1))
+  Using cached PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting wrapt<=1.12.1 (from vcrpy==3.0.1->-r dev_requirements.txt (line 1))
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting six>=1.5 (from vcrpy==3.0.1->-r dev_requirements.txt (line 1))
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting yarl (from vcrpy==3.0.1->-r dev_requirements.txt (line 1))
+  Using cached yarl-1.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (28 kB)
+Collecting ConfigArgParse>=0.12.0 (from azure-devtools==1.2.1->-r dev_requirements.txt (line 2))
+  Using cached ConfigArgParse-1.7-py3-none-any.whl.metadata (23 kB)
+Requirement already satisfied: wheel in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3)) (0.41.2)
+Collecting Jinja2 (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting MarkupSafe==2.0.1 (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Downloading MarkupSafe-2.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (30 kB)
+Collecting pytoml (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Using cached pytoml-0.1.21-py2.py3-none-any.whl (8.5 kB)
+Collecting json-delta>=2.0 (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Using cached json_delta-2.0.2-py2.py3-none-any.whl (33 kB)
+Collecting pytest-cov (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Using cached pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting readme-renderer (from azure-sdk-tools==0.0.0->-r dev_requirements.txt (line 3))
+  Using cached readme_renderer-42.0-py3-none-any.whl.metadata (2.8 kB)
+INFO: pip is looking at multiple versions of azure-sdk-tools to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install -r dev_requirements.txt (line 3) and -r tests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt (line 1) because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    azure-storage-blob 2.1.0 depends on azure-storage-common~=2.1
+    azure-sdk-tools 0.0.0 depends on azure-storage-common<1.4.1
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdev_requirements.txt, -rtests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt]; v = InvocationError('/workdir/azure-storage-blob-12.14.1/sdk/storage/azure-storage-blob/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rtests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rdev_requirements.txt, -rtests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt]; v = InvocationError('/workdir/azure-storage-blob-12.14.1/sdk/storage/azure-storage-blob/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rdev_requirements.txt -rtests/perfstress_tests/T1_legacy_tests/t1_test_requirements.txt', 1)

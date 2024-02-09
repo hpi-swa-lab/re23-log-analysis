@@ -1,0 +1,32 @@
+GLOB sdist-make: /workdir/SQLAlchemy-Utils-0.38.3/setup.py
+cpythonlibtest-sqlalchemy14 create: /workdir/SQLAlchemy-Utils-0.38.3/.tox/cpythonlibtest-sqlalchemy14
+cpythonlibtest-sqlalchemy14 installdeps: mock, pytest
+cpythonlibtest-sqlalchemy14 inst: /workdir/SQLAlchemy-Utils-0.38.3/.tox/.tmp/package/1/SQLAlchemy-Utils-0.38.3.zip
+cpythonlibtest-sqlalchemy14 installed: exceptiongroup==1.2.0,greenlet==3.0.1,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,SQLAlchemy==2.0.23,SQLAlchemy-Utils @ file:///workdir/SQLAlchemy-Utils-0.38.3/.tox/.tmp/package/1/SQLAlchemy-Utils-0.38.3.zip#sha256=b059088237b883064d99af38dd7fafc0e7f302fc33268a7f03368dc5c429f4e6,tomli==2.0.1,typing_extensions==4.8.0
+cpythonlibtest-sqlalchemy14 run-test-pre: PYTHONHASHSEED='1807853458'
+cpythonlibtest-sqlalchemy14 run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/SQLAlchemy-Utils/0.38.3/1/cpython-test-results.xml
+ImportError while loading conftest '/workdir/SQLAlchemy-Utils-0.38.3/conftest.py'.
+conftest.py:13: in <module>
+    from sqlalchemy_utils import (
+sqlalchemy_utils/__init__.py:1: in <module>
+    from .aggregates import aggregated  # noqa
+sqlalchemy_utils/aggregates.py:551: in <module>
+    manager.register_listeners()
+sqlalchemy_utils/aggregates.py:511: in register_listeners
+    sa.event.listen(
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/event/api.py:124: in listen
+    _event_key(target, identifier, fn).listen(*args, **kw)
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/event/api.py:32: in _event_key
+    tgt = evt_cls._accept_with(target, identifier)
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/orm/events.py:828: in _accept_with
+    util.warn_deprecated(
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py:58: in warn_deprecated
+    _warn_with_version(
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py:52: in _warn_with_version
+    _warnings_warn(warn, stacklevel=stacklevel + 1)
+.tox/cpythonlibtest-sqlalchemy14/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py:1899: in _warnings_warn
+    warnings.warn(message, stacklevel=stacklevel + 1)
+E   sqlalchemy.exc.SADeprecationWarning: The `sqlalchemy.orm.mapper()` symbol is deprecated and will be removed in a future release. For the mapper-wide event target, use the 'sqlalchemy.orm.Mapper' class.
+ERROR: InvocationError for command /workdir/SQLAlchemy-Utils-0.38.3/.tox/cpythonlibtest-sqlalchemy14/bin/pytest -v --tb=native --junitxml /workdir/results/SQLAlchemy-Utils/0.38.3/1/cpython-test-results.xml (exited with code 4)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-sqlalchemy14: commands failed

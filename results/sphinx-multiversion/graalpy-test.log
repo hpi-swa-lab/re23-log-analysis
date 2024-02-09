@@ -1,0 +1,25 @@
+GLOB sdist-make: /workdir/sphinx-multiversion-0.2.4/setup.py
+graalpylibtest-unit-test-tests create: /workdir/sphinx-multiversion-0.2.4/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/sphinx-multiversion-0.2.4/.tox/.tmp/package/1/sphinx-multiversion-0.2.4.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.1.0,docutils==0.20.1,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,requests==2.31.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-multiversion @ file:///workdir/sphinx-multiversion-0.2.4/.tox/.tmp/package/1/sphinx-multiversion-0.2.4.zip,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='517962794'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/sphinx-multiversion/0.2.4/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/sphinx-multiversion-0.2.4/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/sphinx-multiversion-0.2.4
+collecting ... collected 6 items
+
+tests/test_sphinx.py::VersionInfoTestCase::test_branches_property PASSED [ 16%]
+tests/test_sphinx.py::VersionInfoTestCase::test_in_development_property PASSED [ 33%]
+tests/test_sphinx.py::VersionInfoTestCase::test_releases_property PASSED [ 50%]
+tests/test_sphinx.py::VersionInfoTestCase::test_tags_property PASSED     [ 66%]
+tests/test_sphinx.py::VersionInfoTestCase::test_vhasdoc PASSED           [ 83%]
+tests/test_sphinx.py::VersionInfoTestCase::test_vpathto PASSED           [100%]
+
+- generated xml file: /workdir/results/sphinx-multiversion/0.2.4/1/graalpy-test-results.xml -
+============================== 6 passed in 0.94s ===============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

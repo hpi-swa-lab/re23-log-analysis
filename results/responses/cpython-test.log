@@ -1,0 +1,666 @@
+GLOB sdist-make: /workdir/responses-0.22.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/responses-0.22.0/.tox/.tmp/package/1/responses-0.22.0.zip
+cpythonlibtest-unit-test-tests installed: certifi==2023.11.17,charset-normalizer==3.3.2,exceptiongroup==1.2.0,idna==3.6,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,requests==2.31.0,responses @ file:///workdir/responses-0.22.0/.tox/.tmp/package/1/responses-0.22.0.zip#sha256=86fb9f01f09f8d45334bc264f5d25cab8fcbdfaa4bab167a368c308b4cd02946,toml==0.10.2,tomli==2.0.1,types-toml==0.10.8.7,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3418927237'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/responses/0.22.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/responses-0.22.0
+collecting ... collected 195 items
+
+responses/tests/test_matchers.py::test_query_string_matcher PASSED       [  0%]
+responses/tests/test_matchers.py::test_request_matches_post_params PASSED [  1%]
+responses/tests/test_matchers.py::test_json_params_matcher_not_strict PASSED [  1%]
+responses/tests/test_matchers.py::test_json_params_matcher_not_strict_diff_values PASSED [  2%]
+responses/tests/test_matchers.py::test_json_params_matcher_json_list PASSED [  2%]
+responses/tests/test_matchers.py::test_json_params_matcher_json_list_empty PASSED [  3%]
+responses/tests/test_matchers.py::test_urlencoded_params_matcher_blank PASSED [  3%]
+responses/tests/test_matchers.py::test_query_params_numbers PASSED       [  4%]
+responses/tests/test_matchers.py::test_query_param_matcher_loose PASSED  [  4%]
+responses/tests/test_matchers.py::test_query_param_matcher_loose_fail PASSED [  5%]
+responses/tests/test_matchers.py::test_request_matches_empty_body PASSED [  5%]
+responses/tests/test_matchers.py::test_request_matches_params PASSED     [  6%]
+responses/tests/test_matchers.py::test_fail_matchers_error PASSED        [  6%]
+responses/tests/test_matchers.py::test_multipart_matcher[Old World!-Old World!0] PASSED [  7%]
+responses/tests/test_matchers.py::test_multipart_matcher[Old World!-Old World!1] PASSED [  7%]
+responses/tests/test_matchers.py::test_multipart_matcher[Old World!-Old World!2] PASSED [  8%]
+responses/tests/test_matchers.py::test_multipart_matcher[Old World!-Old World!3] PASSED [  8%]
+responses/tests/test_matchers.py::test_multipart_matcher[\xacHello World!-\xacHello World!] PASSED [  9%]
+responses/tests/test_matchers.py::test_multipart_matcher_fail PASSED     [  9%]
+responses/tests/test_matchers.py::test_query_string_matcher_raises PASSED [ 10%]
+responses/tests/test_matchers.py::test_request_matches_headers PASSED    [ 10%]
+responses/tests/test_matchers.py::test_request_matches_headers_no_match PASSED [ 11%]
+responses/tests/test_matchers.py::test_request_matches_headers_strict_match PASSED [ 11%]
+responses/tests/test_matchers.py::test_fragment_identifier_matcher PASSED [ 12%]
+responses/tests/test_matchers.py::test_fragment_identifier_matcher_error PASSED [ 12%]
+responses/tests/test_matchers.py::test_fragment_identifier_matcher_and_match_querystring PASSED [ 13%]
+responses/tests/test_matchers.py::test_matchers_create_key_val_str PASSED [ 13%]
+responses/tests/test_multithreading.py::test_multithreading_lock[0] PASSED [ 14%]
+responses/tests/test_multithreading.py::test_multithreading_lock[1] PASSED [ 14%]
+responses/tests/test_multithreading.py::test_multithreading_lock[2] PASSED [ 15%]
+responses/tests/test_multithreading.py::test_multithreading_lock[3] PASSED [ 15%]
+responses/tests/test_multithreading.py::test_multithreading_lock[4] PASSED [ 16%]
+responses/tests/test_multithreading.py::test_multithreading_lock[5] PASSED [ 16%]
+responses/tests/test_multithreading.py::test_multithreading_lock[6] PASSED [ 17%]
+responses/tests/test_multithreading.py::test_multithreading_lock[7] PASSED [ 17%]
+responses/tests/test_multithreading.py::test_multithreading_lock[8] PASSED [ 18%]
+responses/tests/test_multithreading.py::test_multithreading_lock[9] PASSED [ 18%]
+responses/tests/test_recorder.py::TestRecord::test_recorder ERROR        [ 19%]
+responses/tests/test_recorder.py::TestReplay::test_add_from_file PASSED  [ 20%]
+responses/tests/test_registries.py::test_set_registry_not_empty PASSED   [ 20%]
+responses/tests/test_registries.py::test_set_registry PASSED             [ 21%]
+responses/tests/test_registries.py::test_set_registry_reversed PASSED    [ 21%]
+responses/tests/test_registries.py::test_registry_async SKIPPED (asy...) [ 22%]
+responses/tests/test_registries.py::test_set_registry_context_manager PASSED [ 22%]
+responses/tests/test_registries.py::test_registry_reset PASSED           [ 23%]
+responses/tests/test_registries.py::TestOrderedRegistry::test_invocation_index PASSED [ 23%]
+responses/tests/test_registries.py::TestOrderedRegistry::test_not_match PASSED [ 24%]
+responses/tests/test_registries.py::TestOrderedRegistry::test_empty_registry PASSED [ 24%]
+responses/tests/test_responses.py::test_response PASSED                  [ 25%]
+responses/tests/test_responses.py::test_response_encoded PASSED          [ 25%]
+responses/tests/test_responses.py::test_response_with_instance PASSED    [ 26%]
+responses/tests/test_responses.py::test_replace[http://example.com/two-http://example.com/two] PASSED [ 26%]
+responses/tests/test_responses.py::test_replace[original1-replacement1] PASSED [ 27%]
+responses/tests/test_responses.py::test_replace[http://example\\.com/two-http://example\\.com/two] PASSED [ 27%]
+responses/tests/test_responses.py::test_replace_error[http://example.com/one-http://example\\.com/one] PASSED [ 28%]
+responses/tests/test_responses.py::test_replace_error[http://example\\.com/one-http://example.com/one] PASSED [ 28%]
+responses/tests/test_responses.py::test_replace_response_object_error PASSED [ 29%]
+responses/tests/test_responses.py::test_upsert_replace[http://example.com/two-http://example.com/two] PASSED [ 29%]
+responses/tests/test_responses.py::test_upsert_replace[original1-replacement1] PASSED [ 30%]
+responses/tests/test_responses.py::test_upsert_replace[http://example\\.com/two-http://example\\.com/two] PASSED [ 30%]
+responses/tests/test_responses.py::test_upsert_add[http://example.com/two-http://example.com/two] PASSED [ 31%]
+responses/tests/test_responses.py::test_upsert_add[original1-replacement1] PASSED [ 31%]
+responses/tests/test_responses.py::test_upsert_add[http://example\\.com/two-http://example\\.com/two] PASSED [ 32%]
+responses/tests/test_responses.py::test_remove PASSED                    [ 32%]
+responses/tests/test_responses.py::test_response_equality[args10-kwargs10-args20-kwargs20-True] PASSED [ 33%]
+responses/tests/test_responses.py::test_response_equality[args11-kwargs11-args21-kwargs21-False] PASSED [ 33%]
+responses/tests/test_responses.py::test_response_equality[args12-kwargs12-args22-kwargs22-False] PASSED [ 34%]
+responses/tests/test_responses.py::test_response_equality[args13-kwargs13-args23-kwargs23-True] PASSED [ 34%]
+responses/tests/test_responses.py::test_response_equality_different_objects PASSED [ 35%]
+responses/tests/test_responses.py::test_connection_error PASSED          [ 35%]
+responses/tests/test_responses.py::test_match_querystring PASSED         [ 36%]
+responses/tests/test_responses.py::test_match_querystring_empty PASSED   [ 36%]
+responses/tests/test_responses.py::test_match_querystring_error PASSED   [ 37%]
+responses/tests/test_responses.py::test_match_querystring_regex PASSED   [ 37%]
+responses/tests/test_responses.py::test_match_querystring_error_regex PASSED [ 38%]
+responses/tests/test_responses.py::test_match_querystring_auto_activates PASSED [ 38%]
+responses/tests/test_responses.py::test_match_querystring_missing_key PASSED [ 39%]
+responses/tests/test_responses.py::test_accept_string_body PASSED        [ 40%]
+responses/tests/test_responses.py::test_accept_json_body PASSED          [ 40%]
+responses/tests/test_responses.py::test_no_content_type PASSED           [ 41%]
+responses/tests/test_responses.py::test_arbitrary_status_code PASSED     [ 41%]
+responses/tests/test_responses.py::test_throw_connection_error_explicit PASSED [ 42%]
+responses/tests/test_responses.py::test_callback PASSED                  [ 42%]
+responses/tests/test_responses.py::test_deprecated_package_attributes PASSED [ 43%]
+responses/tests/test_responses.py::test_callback_deprecated_stream_argument PASSED [ 43%]
+responses/tests/test_responses.py::test_callback_deprecated_match_querystring_argument PASSED [ 44%]
+responses/tests/test_responses.py::test_callback_match_querystring_default_false PASSED [ 44%]
+responses/tests/test_responses.py::test_callback_exception_result PASSED [ 45%]
+responses/tests/test_responses.py::test_callback_exception_body PASSED   [ 45%]
+responses/tests/test_responses.py::test_callback_no_content_type PASSED  [ 46%]
+responses/tests/test_responses.py::test_callback_content_type_dict PASSED [ 46%]
+responses/tests/test_responses.py::test_callback_matchers PASSED         [ 47%]
+responses/tests/test_responses.py::test_callback_matchers_fail PASSED    [ 47%]
+responses/tests/test_responses.py::test_callback_content_type_tuple PASSED [ 48%]
+responses/tests/test_responses.py::test_regular_expression_url PASSED    [ 48%]
+responses/tests/test_responses.py::test_base_response_get_response PASSED [ 49%]
+responses/tests/test_responses.py::test_custom_adapter PASSED            [ 49%]
+responses/tests/test_responses.py::test_responses_as_context_manager PASSED [ 50%]
+responses/tests/test_responses.py::test_activate_doesnt_change_signature PASSED [ 50%]
+responses/tests/test_responses.py::TestFixtures::test_function PASSED    [ 51%]
+responses/tests/test_responses.py::TestFixtures::test_function_decorated PASSED [ 51%]
+responses/tests/test_responses.py::test_activate_mock_interaction PASSED [ 52%]
+responses/tests/test_responses.py::test_activate_doesnt_change_signature_with_return_type PASSED [ 52%]
+responses/tests/test_responses.py::test_activate_doesnt_change_signature_for_method PASSED [ 53%]
+responses/tests/test_responses.py::test_response_cookies PASSED          [ 53%]
+responses/tests/test_responses.py::test_response_cookies_secure PASSED   [ 54%]
+responses/tests/test_responses.py::test_response_cookies_multiple PASSED [ 54%]
+responses/tests/test_responses.py::test_response_cookies_session[True-True] PASSED [ 55%]
+responses/tests/test_responses.py::test_response_cookies_session[True-False] PASSED [ 55%]
+responses/tests/test_responses.py::test_response_cookies_session[True-None] PASSED [ 56%]
+responses/tests/test_responses.py::test_response_cookies_session[False-True] PASSED [ 56%]
+responses/tests/test_responses.py::test_response_cookies_session[False-False] PASSED [ 57%]
+responses/tests/test_responses.py::test_response_cookies_session[False-None] PASSED [ 57%]
+responses/tests/test_responses.py::test_response_cookies_session[None-True] PASSED [ 58%]
+responses/tests/test_responses.py::test_response_cookies_session[None-False] PASSED [ 58%]
+responses/tests/test_responses.py::test_response_cookies_session[None-None] PASSED [ 59%]
+responses/tests/test_responses.py::test_response_callback PASSED         [ 60%]
+responses/tests/test_responses.py::test_response_filebody PASSED         [ 60%]
+responses/tests/test_responses.py::test_use_stream_twice_to_double_raw_io PASSED [ 61%]
+responses/tests/test_responses.py::test_assert_all_requests_are_fired PASSED [ 61%]
+responses/tests/test_responses.py::test_allow_redirects_samehost PASSED  [ 62%]
+responses/tests/test_responses.py::test_path_segments PASSED             [ 62%]
+responses/tests/test_responses.py::test_handles_unicode_querystring PASSED [ 63%]
+responses/tests/test_responses.py::test_handles_unicode_url PASSED       [ 63%]
+responses/tests/test_responses.py::test_handles_unicode_body PASSED      [ 64%]
+responses/tests/test_responses.py::test_handles_buffered_reader_body PASSED [ 64%]
+responses/tests/test_responses.py::test_headers PASSED                   [ 65%]
+responses/tests/test_responses.py::test_content_length_error PASSED      [ 65%]
+responses/tests/test_responses.py::test_stream_with_none_chunk_size PASSED [ 66%]
+responses/tests/test_responses.py::test_legacy_adding_headers PASSED     [ 66%]
+responses/tests/test_responses.py::test_legacy_adding_headers_with_content_type PASSED [ 67%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_string_body PASSED [ 67%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_bytes_body PASSED [ 68%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_json_body PASSED [ 68%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_unicode_body PASSED [ 69%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_doesnt_work_for_buffered_reader_body PASSED [ 69%]
+responses/tests/test_responses.py::test_auto_calculate_content_length_doesnt_override_existing_value FAILED [ 70%]
+responses/tests/test_responses.py::test_multiple_responses PASSED        [ 70%]
+responses/tests/test_responses.py::test_multiple_responses_intermixed PASSED [ 71%]
+responses/tests/test_responses.py::test_multiple_urls PASSED             [ 71%]
+responses/tests/test_responses.py::test_multiple_methods PASSED          [ 72%]
+responses/tests/test_responses.py::test_passthrough_flag ERROR           [ 72%]
+responses/tests/test_responses.py::test_passthrough_kwarg ERROR          [ 73%]
+responses/tests/test_responses.py::test_passthrough_response ERROR       [ 73%]
+responses/tests/test_responses.py::test_passthrough_response_stream ERROR [ 74%]
+responses/tests/test_responses.py::test_passthru_prefixes ERROR          [ 74%]
+responses/tests/test_responses.py::test_passthru ERROR                   [ 75%]
+responses/tests/test_responses.py::test_passthru_regex ERROR             [ 75%]
+responses/tests/test_responses.py::test_passthru_does_not_persist_across_tests ERROR [ 76%]
+responses/tests/test_responses.py::test_method_named_param PASSED        [ 76%]
+responses/tests/test_responses.py::test_passthru_unicode PASSED          [ 77%]
+responses/tests/test_responses.py::test_custom_target PASSED             [ 77%]
+responses/tests/test_responses.py::test_request_param[http://example.com] PASSED [ 78%]
+responses/tests/test_responses.py::test_request_param[http://example.com/some/path] PASSED [ 78%]
+responses/tests/test_responses.py::test_request_param[http://example.com/other/path/] PASSED [ 79%]
+responses/tests/test_responses.py::test_request_param_with_multiple_values_for_the_same_key PASSED [ 80%]
+responses/tests/test_responses.py::test_assert_call_count[http://example.com] PASSED [ 80%]
+responses/tests/test_responses.py::test_assert_call_count[http://example.com?hello=world] PASSED [ 81%]
+responses/tests/test_responses.py::test_call_count_with_matcher PASSED   [ 81%]
+responses/tests/test_responses.py::test_call_count_without_matcher PASSED [ 82%]
+responses/tests/test_responses.py::test_fail_request_error PASSED        [ 82%]
+responses/tests/test_responses.py::test_response_representations[response_params0-<Response(url='http://example.com/' status=200 content_type='text/plain' headers='null')>] PASSED [ 83%]
+responses/tests/test_responses.py::test_response_representations[response_params1-<Response(url='http://another-domain.com/' status=404 content_type='application/json' headers='null')>] PASSED [ 83%]
+responses/tests/test_responses.py::test_response_representations[response_params2-<Response(url='http://abcd.com/' status=500 content_type='text/html' headers='{"X-Test": "foo"}')>] PASSED [ 84%]
+responses/tests/test_responses.py::test_mocked_responses_list_registered PASSED [ 84%]
+responses/tests/test_responses.py::test_rfc_compliance[http://service-A/foo?q=fizz-http://service-a/foo?q=fizz] PASSED [ 85%]
+responses/tests/test_responses.py::test_rfc_compliance[http://service-a/foo-http://service-A/foo] PASSED [ 85%]
+responses/tests/test_responses.py::test_rfc_compliance[http://someHost-AwAy/-http://somehost-away/] PASSED [ 86%]
+responses/tests/test_responses.py::test_rfc_compliance[http://fizzbuzz/foo-http://fizzbuzz/foo] PASSED [ 86%]
+responses/tests/test_responses.py::test_requests_between_add PASSED      [ 87%]
+responses/tests/test_responses.py::test_responses_reuse PASSED           [ 87%]
+responses/tests/test_responses.py::test_async_calls SKIPPED (async d...) [ 88%]
+responses/tests/test_responses.py::TestStrictWrapper::test_strict_wrapper PASSED [ 88%]
+responses/tests/test_responses.py::TestStrictWrapper::test_nested_decorators[True] PASSED [ 89%]
+responses/tests/test_responses.py::TestStrictWrapper::test_nested_decorators[False] PASSED [ 89%]
+responses/tests/test_responses.py::TestStrictWrapper::test_nested_decorators[None] PASSED [ 90%]
+responses/tests/test_responses.py::TestMultipleWrappers::test_wrapped PASSED [ 90%]
+responses/tests/test_responses.py::TestMultipleWrappers::test_call_another_wrapped_function PASSED [ 91%]
+responses/tests/test_responses.py::TestMultipleWrappers::test_mock_not_leaked ERROR [ 91%]
+responses/tests/test_responses.py::TestShortcuts::test_delete PASSED     [ 92%]
+responses/tests/test_responses.py::TestShortcuts::test_get PASSED        [ 92%]
+responses/tests/test_responses.py::TestShortcuts::test_head PASSED       [ 93%]
+responses/tests/test_responses.py::TestShortcuts::test_options PASSED    [ 93%]
+responses/tests/test_responses.py::TestShortcuts::test_patch PASSED      [ 94%]
+responses/tests/test_responses.py::TestShortcuts::test_post PASSED       [ 94%]
+responses/tests/test_responses.py::TestShortcuts::test_put PASSED        [ 95%]
+responses/tests/test_responses.py::TestUnitTestPatchSetup::test_function PASSED [ 95%]
+responses/tests/test_responses.py::TestUnitTestPatchSetupRaises::test_function PASSED [ 96%]
+responses/tests/test_responses.py::test_reset_in_the_middle PASSED       [ 96%]
+responses/tests/test_responses.py::test_redirect PASSED                  [ 97%]
+responses/tests/test_responses.py::TestMaxRetry::test_max_retries FAILED [ 97%]
+responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed[True] FAILED [ 98%]
+responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed[False] FAILED [ 98%]
+responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed_msg FAILED [ 99%]
+responses/tests/test_responses.py::TestMaxRetry::test_adapter_retry_untouched FAILED [100%]
+
+==================================== ERRORS ====================================
+__________________ ERROR at setup of TestRecord.test_recorder __________________
+file /workdir/responses-0.22.0/responses/tests/test_recorder.py, line 66
+      def test_recorder(self, httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: _xunit_setup_method_fixture_TestRecord, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_recorder.py:66
+___________________ ERROR at setup of test_passthrough_flag ____________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1568
+  def test_passthrough_flag(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1568
+___________________ ERROR at setup of test_passthrough_kwarg ___________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1594
+  def test_passthrough_kwarg(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1594
+_________________ ERROR at setup of test_passthrough_response __________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1620
+  def test_passthrough_response(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1620
+______________ ERROR at setup of test_passthrough_response_stream ______________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1644
+  def test_passthrough_response_stream(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1644
+___________________ ERROR at setup of test_passthru_prefixes ___________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1660
+  def test_passthru_prefixes(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1660
+_______________________ ERROR at setup of test_passthru ________________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1683
+  def test_passthru(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1683
+____________________ ERROR at setup of test_passthru_regex _____________________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1704
+  def test_passthru_regex(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1704
+________ ERROR at setup of test_passthru_does_not_persist_across_tests _________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 1729
+  def test_passthru_does_not_persist_across_tests(httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:1729
+_________ ERROR at setup of TestMultipleWrappers.test_mock_not_leaked __________
+file /workdir/responses-0.22.0/responses/tests/test_responses.py, line 2184
+      def test_mock_not_leaked(self, httpserver):
+E       fixture 'httpserver' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, fruit_basket, monkeypatch, my_fruit, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/responses-0.22.0/responses/tests/test_responses.py:2184
+=================================== FAILURES ===================================
+______ test_auto_calculate_content_length_doesnt_override_existing_value _______
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(4 bytes read, -2 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 905, in read
+    data = self._raw_read(amt)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 811, in _raw_read
+    with self._error_catcher():
+  File "/usr/local/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/response.py", line 729, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(4 bytes read, -2 more expected)', IncompleteRead(4 bytes read, -2 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 1483, in test_auto_calculate_content_length_doesnt_override_existing_value
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 1479, in run
+    resp = requests.get(url)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 747, in send
+    r.content
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(4 bytes read, -2 more expected)', IncompleteRead(4 bytes read, -2 more expected))
+________________________ TestMaxRetry.test_max_retries _________________________
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2425, in test_max_retries
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2415, in run
+    session = self.set_session()
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2393, in set_session
+    max_retries=Retry(
+TypeError: Retry.__init__() got an unexpected keyword argument 'method_whitelist'
+__________________ TestMaxRetry.test_max_retries_exceed[True] __________________
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2450, in test_max_retries_exceed
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2437, in run
+    session = self.set_session(total=2, raise_on_status=raise_on_status)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2393, in set_session
+    max_retries=Retry(
+TypeError: Retry.__init__() got an unexpected keyword argument 'method_whitelist'
+_________________ TestMaxRetry.test_max_retries_exceed[False] __________________
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2450, in test_max_retries_exceed
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2437, in run
+    session = self.set_session(total=2, raise_on_status=raise_on_status)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2393, in set_session
+    max_retries=Retry(
+TypeError: Retry.__init__() got an unexpected keyword argument 'method_whitelist'
+___________________ TestMaxRetry.test_max_retries_exceed_msg ___________________
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2467, in test_max_retries_exceed_msg
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2460, in run
+    session = self.set_session(total=1)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2393, in set_session
+    max_retries=Retry(
+TypeError: Retry.__init__() got an unexpected keyword argument 'method_whitelist'
+__________________ TestMaxRetry.test_adapter_retry_untouched ___________________
+Traceback (most recent call last):
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2495, in test_adapter_retry_untouched
+    run()
+  File "/workdir/responses-0.22.0/responses/__init__.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2486, in run
+    session = self.set_session()
+  File "/workdir/responses-0.22.0/responses/tests/test_responses.py", line 2393, in set_session
+    max_retries=Retry(
+TypeError: Retry.__init__() got an unexpected keyword argument 'method_whitelist'
+=============================== warnings summary ===============================
+responses/tests/test_matchers.py: 2 warnings
+responses/tests/test_responses.py: 8 warnings
+  /workdir/responses-0.22.0/responses/__init__.py:408: DeprecationWarning: Argument 'match_querystring' is deprecated. Use 'responses.matchers.query_param_matcher' or 'responses.matchers.query_string_matcher'
+    warn(
+
+responses/tests/test_recorder.py::TestRecord::test_recorder
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_recorder.py::TestRecord::test_recorder is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+responses/tests/test_recorder.py::TestReplay::test_add_from_file
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_recorder.py::TestReplay::test_add_from_file is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+responses/tests/test_registries.py::test_registry_async
+responses/tests/test_responses.py::test_async_calls
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:183: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.
+  You need to install a suitable plugin for your async framework, for example:
+    - anyio
+    - pytest-asyncio
+    - pytest-tornasync
+    - pytest-trio
+    - pytest-twisted
+    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))
+
+responses/tests/test_responses.py::test_response_cookies_session[True-True]
+responses/tests/test_responses.py::test_response_cookies_session[True-False]
+responses/tests/test_responses.py::test_response_cookies_session[True-None]
+responses/tests/test_responses.py::test_response_cookies_session[False-True]
+responses/tests/test_responses.py::test_response_cookies_session[False-False]
+responses/tests/test_responses.py::test_response_cookies_session[False-None]
+responses/tests/test_responses.py::test_response_filebody
+responses/tests/test_responses.py::test_use_stream_twice_to_double_raw_io
+  /workdir/responses-0.22.0/responses/__init__.py:547: DeprecationWarning: stream argument is deprecated. Use stream parameter in request directly
+    warn(
+
+responses/tests/test_responses.py::TestUnitTestPatchSetup::test_function
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_responses.py::TestUnitTestPatchSetup::test_function is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+responses/tests/test_responses.py::TestUnitTestPatchSetup::test_function
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_responses.py::TestUnitTestPatchSetup::test_function is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+responses/tests/test_responses.py::TestUnitTestPatchSetupRaises::test_function
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_responses.py::TestUnitTestPatchSetupRaises::test_function is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+responses/tests/test_responses.py::TestUnitTestPatchSetupRaises::test_function
+  /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  responses/tests/test_responses.py::TestUnitTestPatchSetupRaises::test_function is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/responses/0.22.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED responses/tests/test_responses.py::test_auto_calculate_content_length_doesnt_override_existing_value
+FAILED responses/tests/test_responses.py::TestMaxRetry::test_max_retries - Ty...
+FAILED responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed[True]
+FAILED responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed[False]
+FAILED responses/tests/test_responses.py::TestMaxRetry::test_max_retries_exceed_msg
+FAILED responses/tests/test_responses.py::TestMaxRetry::test_adapter_retry_untouched
+ERROR responses/tests/test_recorder.py::TestRecord::test_recorder
+ERROR responses/tests/test_responses.py::test_passthrough_flag
+ERROR responses/tests/test_responses.py::test_passthrough_kwarg
+ERROR responses/tests/test_responses.py::test_passthrough_response
+ERROR responses/tests/test_responses.py::test_passthrough_response_stream
+ERROR responses/tests/test_responses.py::test_passthru_prefixes
+ERROR responses/tests/test_responses.py::test_passthru
+ERROR responses/tests/test_responses.py::test_passthru_regex
+ERROR responses/tests/test_responses.py::test_passthru_does_not_persist_across_tests
+ERROR responses/tests/test_responses.py::TestMultipleWrappers::test_mock_not_leaked
+======= 6 failed, 177 passed, 2 skipped, 26 warnings, 10 errors in 5.76s =======
+ERROR: InvocationError for command /workdir/responses-0.22.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/responses/0.22.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

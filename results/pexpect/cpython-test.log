@@ -1,0 +1,22 @@
+GLOB sdist-make: /workdir/pexpect-4.8.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pexpect-4.8.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-testing.txt, -rdoc/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/pexpect-4.8.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-cov (from -r requirements-testing.txt (line 2))
+  Using cached pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting coverage (from -r requirements-testing.txt (line 3))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting coveralls (from -r requirements-testing.txt (line 4))
+  Using cached coveralls-3.3.1-py2.py3-none-any.whl (14 kB)
+ERROR: Could not find a version that satisfies the requirement pytest-capturelog (from versions: none)
+ERROR: No matching distribution found for pytest-capturelog
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements-testing.txt, -rdoc/requirements.txt]; v = InvocationError('/workdir/pexpect-4.8.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-testing.txt -rdoc/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements-testing.txt, -rdoc/requirements.txt]; v = InvocationError('/workdir/pexpect-4.8.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-testing.txt -rdoc/requirements.txt', 1)

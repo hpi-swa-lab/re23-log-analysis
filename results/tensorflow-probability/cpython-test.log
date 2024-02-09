@@ -1,0 +1,34 @@
+GLOB sdist-make: /workdir/tensorflow-probability-0.19.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/tensorflow-probability-0.19.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/tensorflow-probability-0.19.0/.tox/.tmp/package/1/tfp-nightly-0.19.0.zip
+ERROR: invocation failed (exit code 1), logfile: /workdir/tensorflow-probability-0.19.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/tfp-nightly-0.19.0.zip
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [6 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-req-build-36huad7o/setup.py", line 32, in <module>
+          from required_packages import REQUIRED_PACKAGES  # pylint: disable=g-import-not-at-top, g-bad-import-order
+      ModuleNotFoundError: No module named 'required_packages'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/tensorflow-probability-0.19.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/tfp-nightly-0.19.0.zip (exited with code 1)

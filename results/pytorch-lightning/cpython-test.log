@@ -1,0 +1,38 @@
+GLOB sdist-make: /workdir/pytorch-lightning-1.8.3.post1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pytorch-lightning-1.8.3.post1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rexamples/app_hpo/requirements.txt, -rexamples/app_template_streamlit_ui/requirements.txt, -rexamples/app_works_on_default_machine/requirements.txt, -rexamples/app_justpy/requirements.txt, -rexamples/app_components/serve/gradio/requirements.txt, -rexamples/app_pickle_or_not/requirements.txt, -rexamples/app_multi_node/requirements.txt, -rexamples/app_layout/requirements.txt, -rexamples/app_dag/requirements.txt, -rexamples/app_v0/requirements.txt, -rsrc/lightning_app/cli/app-template/requirements.txt, -rsrc/lightning_app/cli/app-template/tests/requirements.txt, -rsrc/lightning_app/cli/component-template/requirements.txt, -rsrc/lightning_app/cli/component-template/tests/requirements.txt, -r.actions/requirements.txt, -r_notebooks/requirements.txt, -r_notebooks/.actions/requirements.txt, -rtests/tests_app/utilities/packaging/projects/requirements.txt, -rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt, -rtests/tests_app_examples/collect_failures/requirements.txt, -rtests/legacy/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/pytorch-lightning-1.8.3.post1/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting git+https://github.com/mit-han-lab/torchsparse.git@v1.4.0 (from -r tests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt (line 3))
+  Cloning https://github.com/mit-han-lab/torchsparse.git (to revision v1.4.0) to /tmp/pip-req-build-oy4cebxb
+  Running command git clone --filter=blob:none --quiet https://github.com/mit-han-lab/torchsparse.git /tmp/pip-req-build-oy4cebxb
+  Running command git checkout -q 74099d10a51c71c14318bce63d6421f698b24f24
+  Resolved https://github.com/mit-han-lab/torchsparse.git to commit 74099d10a51c71c14318bce63d6421f698b24f24
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [6 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-req-build-oy4cebxb/setup.py", line 4, in <module>
+          import torch
+      ModuleNotFoundError: No module named 'torch'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements.txt, -rexamples/app_hpo/requirements.txt, -rexamples/app_template_streamlit_ui/requirements.txt, -rexamples/app_works_on_default_machine/requirements.txt, -rexamples/app_justpy/requirements.txt, -rexamples/app_components/serve/gradio/requirements.txt, -rexamples/app_pickle_or_not/requirements.txt, -rexamples/app_multi_node/requirements.txt, -rexamples/app_layout/requirements.txt, -rexamples/app_dag/requirements.txt, -rexamples/app_v0/requirements.txt, -rsrc/lightning_app/cli/app-template/requirements.txt, -rsrc/lightning_app/cli/app-template/tests/requirements.txt, -rsrc/lightning_app/cli/component-template/requirements.txt, -rsrc/lightning_app/cli/component-template/tests/requirements.txt, -r.actions/requirements.txt, -r_notebooks/requirements.txt, -r_notebooks/.actions/requirements.txt, -rtests/tests_app/utilities/packaging/projects/requirements.txt, -rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt, -rtests/tests_app_examples/collect_failures/requirements.txt, -rtests/legacy/requirements.txt]; v = InvocationError('/workdir/pytorch-lightning-1.8.3.post1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rexamples/app_hpo/requirements.txt -rexamples/app_template_streamlit_ui/requirements.txt -rexamples/app_works_on_default_machine/requirements.txt -rexamples/app_justpy/requirements.txt -rexamples/app_components/serve/gradio/requirements.txt -rexamples/app_pickle_or_not/requirements.txt -rexamples/app_multi_node/requirements.txt -rexamples/app_layout/requirements.txt -rexamples/app_dag/requirements.txt -rexamples/app_v0/requirements.txt -rsrc/lightning_app/cli/app-template/requirements.txt -rsrc/lightning_app/cli/app-template/tests/requirements.txt -rsrc/lightning_app/cli/component-template/requirements.txt -rsrc/lightning_app/cli/component-template/tests/requirements.txt -r.actions/requirements.txt -r_notebooks/requirements.txt -r_notebooks/.actions/requirements.txt -rtests/tests_app/utilities/packaging/projects/requirements.txt -rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt -rtests/tests_app_examples/collect_failures/requirements.txt -rtests/legacy/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements.txt, -rexamples/app_hpo/requirements.txt, -rexamples/app_template_streamlit_ui/requirements.txt, -rexamples/app_works_on_default_machine/requirements.txt, -rexamples/app_justpy/requirements.txt, -rexamples/app_components/serve/gradio/requirements.txt, -rexamples/app_pickle_or_not/requirements.txt, -rexamples/app_multi_node/requirements.txt, -rexamples/app_layout/requirements.txt, -rexamples/app_dag/requirements.txt, -rexamples/app_v0/requirements.txt, -rsrc/lightning_app/cli/app-template/requirements.txt, -rsrc/lightning_app/cli/app-template/tests/requirements.txt, -rsrc/lightning_app/cli/component-template/requirements.txt, -rsrc/lightning_app/cli/component-template/tests/requirements.txt, -r.actions/requirements.txt, -r_notebooks/requirements.txt, -r_notebooks/.actions/requirements.txt, -rtests/tests_app/utilities/packaging/projects/requirements.txt, -rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt, -rtests/tests_app_examples/collect_failures/requirements.txt, -rtests/legacy/requirements.txt]; v = InvocationError('/workdir/pytorch-lightning-1.8.3.post1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rexamples/app_hpo/requirements.txt -rexamples/app_template_streamlit_ui/requirements.txt -rexamples/app_works_on_default_machine/requirements.txt -rexamples/app_justpy/requirements.txt -rexamples/app_components/serve/gradio/requirements.txt -rexamples/app_pickle_or_not/requirements.txt -rexamples/app_multi_node/requirements.txt -rexamples/app_layout/requirements.txt -rexamples/app_dag/requirements.txt -rexamples/app_v0/requirements.txt -rsrc/lightning_app/cli/app-template/requirements.txt -rsrc/lightning_app/cli/app-template/tests/requirements.txt -rsrc/lightning_app/cli/component-template/requirements.txt -rsrc/lightning_app/cli/component-template/tests/requirements.txt -r.actions/requirements.txt -r_notebooks/requirements.txt -r_notebooks/.actions/requirements.txt -rtests/tests_app/utilities/packaging/projects/requirements.txt -rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt -rtests/tests_app_examples/collect_failures/requirements.txt -rtests/legacy/requirements.txt', 1)

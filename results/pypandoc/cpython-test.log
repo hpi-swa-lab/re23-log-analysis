@@ -1,0 +1,152 @@
+.package create: /workdir/pypandoc-1.10/.tox/.package
+.package installdeps: poetry-core>=1.0.0
+cpythonlibtest-unit-test-tests create: /workdir/pypandoc-1.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/pypandoc-1.10/.tox/.tmp/package/1/pypandoc-1.10.tar.gz
+cpythonlibtest-unit-test-tests installed: lxml==4.9.3,mock==5.1.0,pypandoc @ file:///workdir/pypandoc-1.10/.tox/.tmp/package/1/pypandoc-1.10.tar.gz#sha256=2eb65b8b9a8156871d6af97ea85703704159ec8dcbd1d4301eddbdf9685e517e,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2835625201'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/pypandoc-1.10/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/pypandoc/1.10/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+/workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+F/workdir
+F/workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+F/workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+E/workdir
+E/workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+./workdir
+E/workdir
+.
+======================================================================
+ERROR [0.182s]: test_conversion_with_mixed_filters (tests.TestPypandoc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 384, in test_conversion_with_mixed_filters
+    output = pypandoc.convert_text(
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 93, in convert_text
+    return _convert_input(source, format, 'string', to, extra_args=extra_args,
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 420, in _convert_input
+    raise RuntimeError(
+RuntimeError: Pandoc died with exitcode "83" during conversion: Traceback (most recent call last):
+  File "/tmp/tmptaaqz19q.py", line 3, in <module>
+    from pandocfilters import toJSONFilter, Para, Str
+ModuleNotFoundError: No module named 'pandocfilters'
+Error running filter /tmp/tmptaaqz19q.py:
+Filter returned error status 1
+
+
+======================================================================
+ERROR [0.181s]: test_conversion_with_python_filter (tests.TestPypandoc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 334, in test_conversion_with_python_filter
+    output = pypandoc.convert_text(
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 93, in convert_text
+    return _convert_input(source, format, 'string', to, extra_args=extra_args,
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 420, in _convert_input
+    raise RuntimeError(
+RuntimeError: Pandoc died with exitcode "83" during conversion: Traceback (most recent call last):
+  File "/tmp/tmpgsjx87gj.py", line 8, in <module>
+    from pandocfilters import toJSONFilter, Str
+ModuleNotFoundError: No module named 'pandocfilters'
+Error running filter /tmp/tmpgsjx87gj.py:
+Filter returned error status 1
+
+
+======================================================================
+ERROR [0.150s]: test_pdf_conversion (tests.TestPypandoc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 533, in test_pdf_conversion
+    ret = pypandoc.convert_text('# some title\n', to='pdf', format='md', outputfile=file_name)
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 93, in convert_text
+    return _convert_input(source, format, 'string', to, extra_args=extra_args,
+  File "/workdir/pypandoc-1.10/pypandoc/__init__.py", line 420, in _convert_input
+    raise RuntimeError(
+RuntimeError: Pandoc died with exitcode "47" during conversion: pdflatex not found. Please select a different --pdf-engine or install pdflatex
+
+
+======================================================================
+FAIL [0.141s]: test_basic_conversion_from_multiple_files (tests.TestPypandoc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 203, in test_basic_conversion_from_multiple_files
+    self.assertEqualExceptForNewlineEnd(expected, received)
+  File "/workdir/pypandoc-1.10/tests.py", line 639, in assertEqualExceptForNewlineEnd
+    self.assertEqual(expected.rstrip('\n'), received.rstrip('\n'))
+AssertionError: '<p>some title</p>\n<p>some title</p>' != '<p>some title some title</p>'
+- <p>some title</p>
+- <p>some title</p>+ <p>some title some title</p>?        +++++++++++
+
+
+======================================================================
+FAIL [0.290s]: test_basic_conversion_from_multiple_files_pathlib (tests.TestPypandoc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 611, in test_basic_conversion_from_multiple_files_pathlib
+    self.assertEqualExceptForNewlineEnd(expected, received_from_str_filename_input)
+  File "/workdir/pypandoc-1.10/tests.py", line 639, in assertEqualExceptForNewlineEnd
+    self.assertEqual(expected.rstrip('\n'), received.rstrip('\n'))
+AssertionError: '<p>some title</p>\n<p>some title</p>' != '<p>some title some title</p>'
+- <p>some title</p>
+- <p>some title</p>+ <p>some title some title</p>?        +++++++++++
+
+
+======================================================================
+FAIL [0.037s]: test_conversion_error (tests.TestPypandoc)
+----------------------------------------------------------------------
+RuntimeError: Pandoc died with exitcode "2" during conversion: Unknown option --blah.
+Try pandoc --help for more information.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/pypandoc-1.10/tests.py", line 486, in test_conversion_error
+    with self.assertRaisesRegex(RuntimeError, 'Pandoc died with exitcode "6" during conversion: Unknown option --blah'):
+AssertionError: "Pandoc died with exitcode "6" during conversion: Unknown option --blah" does not match "Pandoc died with exitcode "2" during conversion: Unknown option --blah.
+Try pandoc --help for more information.
+"
+
+----------------------------------------------------------------------
+Ran 40 tests in 7.166s
+
+FAILED (failures=3, errors=3)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/pypandoc-1.10/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/pypandoc/1.10/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

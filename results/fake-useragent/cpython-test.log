@@ -1,0 +1,97 @@
+.package create: /workdir/fake-useragent-1.1.1/.tox/.package
+.package installdeps: setuptools
+/workdir/fake-useragent-1.1.1/.tox/.package/lib/python3.10/site-packages/setuptools/config/pyprojecttoml.py:104: _BetaConfiguration: Support for `[tool.setuptools]` in `pyproject.toml` is still *beta*.
+  warnings.warn(msg, _BetaConfiguration)
+package init file 'src/fake_useragent/data/__init__.py' not found (or not a regular file)
+/workdir/fake-useragent-1.1.1/.tox/.package/lib/python3.10/site-packages/setuptools/config/pyprojecttoml.py:104: _BetaConfiguration: Support for `[tool.setuptools]` in `pyproject.toml` is still *beta*.
+  warnings.warn(msg, _BetaConfiguration)
+package init file 'src/fake_useragent/data/__init__.py' not found (or not a regular file)
+warning: check: missing required meta-data: url
+
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) should be supplied
+
+cpythonlibtest-unit-test-tests create: /workdir/fake-useragent-1.1.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rcache_scraper/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/fake-useragent-1.1.1/.tox/.tmp/package/1/fake-useragent-1.1.1.tar.gz
+cpythonlibtest-unit-test-tests installed: APScheduler==3.9.1,attrs==22.1.0,Automat==20.2.0,black==22.10.0,build==0.9.0,certifi==2022.9.24,cffi==1.15.1,charset-normalizer==2.1.1,click==8.1.3,constantly==15.1.0,coverage==6.5.0,cryptography==38.0.1,cssselect==1.1.0,distlib==0.3.6,exceptiongroup==1.0.0,fake-useragent @ file:///workdir/fake-useragent-1.1.1/.tox/.tmp/package/1/fake-useragent-1.1.1.tar.gz#sha256=78bb5520190f55df519598a7c31e6ed564f969f35db23fa04d8bf846c6dbe6f0,filelock==3.8.0,hyperlink==21.0.0,idna==3.4,importlib-metadata==5.0.0,importlib-resources==5.10.0,incremental==22.10.0,iniconfig==1.1.1,isort==5.10.1,itemadapter==0.7.0,itemloaders==1.0.6,jmespath==1.0.1,lxml==4.9.1,mock==5.1.0,mypy-extensions==0.4.3,packaging==21.3,parsel==1.6.0,pathspec==0.10.1,pep517==0.13.0,platformdirs==2.5.2,pluggy==1.0.0,Protego==0.2.1,py==1.11.0,pyasn1==0.4.8,pyasn1-modules==0.2.8,pycparser==2.21,PyDispatcher==2.0.6,pyOpenSSL==22.1.0,pyparsing==3.0.9,pytest==7.2.0,pytest-cov==4.0.0,pytz==2023.3.post1,queuelib==1.6.2,requests==2.28.1,requests-file==1.5.1,Scrapy==2.7.0,service-identity==21.1.0,six==1.16.0,tldextract==3.4.0,tomli==2.0.1,tox==3.27.0,Twisted==22.10.0,typing_extensions==4.4.0,tzlocal==5.2,urllib3==1.26.12,validate-pyproject==0.10.1,virtualenv==20.16.6,w3lib==2.0.1,zipp==3.10.0,zope.interface==5.5.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='26460417'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/fake-useragent/1.1.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.2.0, pluggy-1.0.0 -- /workdir/fake-useragent-1.1.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/fake-useragent-1.1.1, configfile: pytest.ini
+plugins: cov-4.0.0
+collecting ... collected 31 items
+
+tests/test_errors.py::TestErrors::test_error_aliases PASSED
+tests/test_fake.py::TestFake::test_fake_aliases PASSED
+tests/test_fake.py::TestFake::test_fake_check_cache_path_external_data PASSED
+tests/test_fake.py::TestFake::test_fake_default_path PASSED
+tests/test_fake.py::TestFake::test_fake_external_data_boolean PASSED
+tests/test_fake.py::TestFake::test_fake_fallback PASSED
+tests/test_fake.py::TestFake::test_fake_fallback_str_types PASSED
+tests/test_fake.py::TestFake::test_fake_init PASSED
+tests/test_fake.py::TestFake::test_fake_no_fallback PASSED
+tests/test_fake.py::TestFake::test_fake_path_str_types PASSED
+tests/test_fake.py::TestFake::test_fake_safe_attrs PASSED
+tests/test_fake.py::TestFake::test_fake_safe_attrs_iterable_str_types PASSED
+tests/test_fake.py::TestFake::test_fake_update_external PASSED
+tests/test_fake.py::TestFake::test_fake_update_external_chrome_only PASSED
+tests/test_fake.py::TestFake::test_fake_update_external_data_cache PASSED
+tests/test_fake.py::TestFake::test_fake_update_external_data_cache_bad_weather PASSED
+tests/test_fake.py::TestFake::test_fake_user_agent_browsers PASSED
+tests/test_fake.py::TestFake::test_fake_version PASSED
+tests/test_utils.py::TestUtils::test_utils_exist PASSED
+tests/test_utils.py::TestUtils::test_utils_get PASSED
+tests/test_utils.py::TestUtils::test_utils_get_retries PASSED
+tests/test_utils.py::TestUtils::test_utils_load PASSED
+tests/test_utils.py::TestUtils::test_utils_load_cached PASSED
+tests/test_utils.py::TestUtils::test_utils_load_no_local_file_external_data_bad_weather PASSED
+tests/test_utils.py::TestUtils::test_utils_load_use_local_file PASSED
+tests/test_utils.py::TestUtils::test_utils_load_use_local_file_pkg_resource_fallback PASSED
+tests/test_utils.py::TestUtils::test_utils_load_use_not_local_file_external_is_down PASSED
+tests/test_utils.py::TestUtils::test_utils_read PASSED
+tests/test_utils.py::TestUtils::test_utils_rm PASSED
+tests/test_utils.py::TestUtils::test_utils_update PASSED
+tests/test_utils.py::TestUtils::test_utils_write PASSEDException ignored in: <function _TemporaryFileCloser.__del__ at 0x7fe896da4b80>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/tempfile.py", line 450, in __del__
+  File "/usr/local/lib/python3.10/tempfile.py", line 443, in close
+AttributeError: 'list' object has no attribute 'close'
+
+
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1240
+  /workdir/fake-useragent-1.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1240: PytestRemovedIn8Warning: The --strict option is deprecated, use --strict-markers instead.
+    self.issue_config_time_warning(
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/utils.py:25
+  /workdir/fake-useragent-1.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/utils.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import resource_filename
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+  /workdir/fake-useragent-1.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('zope')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/fake-useragent/1.1.1/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                                                                                          Stmts   Miss  Cover
+-----------------------------------------------------------------------------------------------------------------
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/__init__.py       3      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/errors.py         3      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/fake.py          65      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/log.py            2      0   100%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/settings.py      16      2    88%
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fake_useragent/utils.py        123     14    89%
+-----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                           212     16    92%
+Coverage HTML written to dir htmlcov
+Coverage XML written to file coverage.xml
+
+======================== 31 passed, 3 warnings in 0.62s ========================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/preshed/3.0.8/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+

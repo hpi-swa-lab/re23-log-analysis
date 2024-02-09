@@ -1,0 +1,12 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/papermill/2.4.0/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rbinder/requirements.txt
+	-rrequirements/gcs.txt
+	-rrequirements/azure.txt
+	-rrequirements/github.txt
+	-rrequirements/dev.txt
+	-rrequirements/hdfs.txt
+

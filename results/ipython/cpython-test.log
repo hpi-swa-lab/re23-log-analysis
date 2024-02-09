@@ -1,0 +1,77 @@
+.package create: /workdir/ipython-8.7.0/.tox/.package
+.package installdeps: setuptools >= 51.0.0
+/workdir/ipython-8.7.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching 'py.typed'
+warning: no previously-included files matching '*' found under directory 'tools'
+warning: no previously-included files found matching 'tools'
+warning: no previously-included files found matching 'CONTRIBUTING.md'
+warning: no previously-included files found matching '.editorconfig'
+warning: no previously-included files found matching 'SECURITY.md'
+warning: no previously-included files found matching 'docs/#*'
+warning: no previously-included files found matching 'docs/man/*.1.gz'
+warning: no previously-included files found matching '.git-blame-ignore-revs'
+no previously-included directories found matching 'docs/build'
+no previously-included directories found matching 'docs/gh-pages'
+no previously-included directories found matching 'docs/dist'
+warning: no previously-included files matching '*~' found anywhere in distribution
+warning: no previously-included files matching '*.flc' found anywhere in distribution
+warning: no previously-included files matching '*.pyo' found anywhere in distribution
+warning: no previously-included files matching '.dircopy.log' found anywhere in distribution
+warning: no previously-included files matching '.git' found anywhere in distribution
+warning: no previously-included files matching '.ipynb_checkpoints' found anywhere in distribution
+/workdir/ipython-8.7.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching 'py.typed'
+warning: no previously-included files matching '*' found under directory 'tools'
+warning: no previously-included files found matching 'tools'
+warning: no previously-included files found matching 'CONTRIBUTING.md'
+warning: no previously-included files found matching '.editorconfig'
+warning: no previously-included files found matching 'SECURITY.md'
+warning: no previously-included files found matching 'docs/#*'
+warning: no previously-included files found matching '.git-blame-ignore-revs'
+no previously-included directories found matching 'docs/build'
+no previously-included directories found matching 'docs/gh-pages'
+no previously-included directories found matching 'docs/dist'
+warning: no previously-included files matching '*~' found anywhere in distribution
+warning: no previously-included files matching '*.flc' found anywhere in distribution
+warning: no previously-included files matching '*.pyo' found anywhere in distribution
+warning: no previously-included files matching '.dircopy.log' found anywhere in distribution
+warning: no previously-included files matching '.git' found anywhere in distribution
+warning: no previously-included files matching '.ipynb_checkpoints' found anywhere in distribution
+cpythonlibtest-unit-test-tests create: /workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/ipython-8.7.0/.tox/.tmp/package/1/ipython-8.7.0.tar.gz
+cpythonlibtest-unit-test-tests installed: asttokens==2.4.1,backcall==0.2.0,decorator==5.1.1,exceptiongroup==1.2.0,executing==2.0.1,iniconfig==2.0.0,ipython @ file:///workdir/ipython-8.7.0/.tox/.tmp/package/1/ipython-8.7.0.tar.gz#sha256=17bb49b3617ce7ff9144104a0a2a37ea5eec0c8b9fb3bd02ea93907766ccbb81,jedi==0.19.1,matplotlib-inline==0.1.6,mock==5.1.0,packaging==23.2,parso==0.8.3,pexpect==4.8.0,pickleshare==0.7.5,pluggy==1.3.0,prompt-toolkit==3.0.41,ptyprocess==0.7.0,pure-eval==0.2.2,Pygments==2.17.2,pytest==7.4.3,six==1.16.0,stack-data==0.6.3,tomli==2.0.1,traitlets==5.13.0,wcwidth==0.2.12
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='700417479'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/ipython/8.7.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/ipython-8.7.0
+configfile: pytest.ini
+collecting ... collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test session _________________________
+Traceback (most recent call last):
+  File "/workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 641, in _importconftest
+    mod = import_path(conftestpath, mode=importmode, root=rootpath)
+  File "/workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('IPython.conftest', '/workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/IPython/conftest.py', PosixPath('/workdir/ipython-8.7.0/IPython/conftest.py'))
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/ipython/8.7.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR  - _pytest.pathlib.ImportPathMismatchError: ('IPython.conftest', '/work...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 1 error in 0.16s ==========================
+ERROR: InvocationError for command /workdir/ipython-8.7.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/ipython/8.7.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

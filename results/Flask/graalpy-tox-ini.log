@@ -1,0 +1,10 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/Flask/2.2.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/tests.txt
+	-rrequirements/dev.txt
+	-rrequirements/tests-pallets-dev.txt
+	-rrequirements/typing.txt
+	-rrequirements/tests-pallets-min.txt
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.279" timestamp="2023-11-22T05:36:53.520279" hostname="80ac3eb7f7f2"><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 271, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 324, in _main
+    config.hook.pytest_collection(session=session)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 335, in pytest_collection
+    session.perform_collect()
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 675, in perform_collect
+    self.items.extend(self.genitems(node))
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 845, in genitems
+    yield from self.genitems(subnode)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 842, in genitems
+    rep = collect_one_node(node)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 550, in collect_one_node
+    ihook.pytest_exception_interact(node=collector, call=call, report=rep)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/kazoo-2.9.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/kazoo-2.9.0/kazoo/tests/conftest.py", line 7, in pytest_exception_interact
+    cluster = node._testcase.cluster
+AttributeError: 'Module' object has no attribute '_testcase'</error></testcase></testsuite></testsuites>

@@ -1,0 +1,117 @@
+GLOB sdist-make: /workdir/pytest-sugar-0.9.6/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pytest-sugar-0.9.6/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pytest-sugar-0.9.6/.tox/.tmp/package/1/pytest-sugar-0.9.6.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytest-sugar @ file:///workdir/pytest-sugar-0.9.6/.tox/.tmp/package/1/pytest-sugar-0.9.6.zip#sha256=b89940e82e3e19c32580ab7a821ef61f59c9d98a43ed7249330e652ca93c7fa5,termcolor==2.3.0,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='279435231'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytest-sugar/0.9.6/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pytest-sugar-0.9.6/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pytest-sugar-0.9.6
+plugins: sugar-0.9.6
+collecting ... collected 28 items
+
+test_sugar.py::TestTerminalReporter::test_new_summary PASSED             [  3%]
+test_sugar.py::TestTerminalReporter::test_new_summary PASSED             [  3%]
+test_sugar.py::TestTerminalReporter::test_old_summary PASSED             [  7%]
+test_sugar.py::TestTerminalReporter::test_old_summary PASSED             [  7%]
+test_sugar.py::TestTerminalReporter::test_old_summary PASSED             [  7%]
+test_sugar.py::TestTerminalReporter::test_xfail_true PASSED              [ 10%]
+test_sugar.py::TestTerminalReporter::test_xfail_true PASSED              [ 10%]
+test_sugar.py::TestTerminalReporter::test_xfail_true PASSED              [ 10%]
+test_sugar.py::TestTerminalReporter::test_xfail_false PASSED             [ 14%]
+test_sugar.py::TestTerminalReporter::test_xfail_false PASSED             [ 14%]
+test_sugar.py::TestTerminalReporter::test_xfail_false PASSED             [ 14%]
+test_sugar.py::TestTerminalReporter::test_report_header PASSED           [ 17%]
+test_sugar.py::TestTerminalReporter::test_report_header PASSED           [ 17%]
+test_sugar.py::TestTerminalReporter::test_report_header PASSED           [ 17%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_true PASSED       [ 21%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_true PASSED       [ 21%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_true PASSED       [ 21%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_false PASSED      [ 25%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_false PASSED      [ 25%]
+test_sugar.py::TestTerminalReporter::test_xfail_strict_false PASSED      [ 25%]
+test_sugar.py::TestTerminalReporter::test_xpass_true PASSED              [ 28%]
+test_sugar.py::TestTerminalReporter::test_xpass_true PASSED              [ 28%]
+test_sugar.py::TestTerminalReporter::test_xpass_true PASSED              [ 28%]
+test_sugar.py::TestTerminalReporter::test_xpass_false PASSED             [ 32%]
+test_sugar.py::TestTerminalReporter::test_xpass_false PASSED             [ 32%]
+test_sugar.py::TestTerminalReporter::test_xpass_false PASSED             [ 32%]
+test_sugar.py::TestTerminalReporter::test_flaky_test PASSED              [ 35%]
+test_sugar.py::TestTerminalReporter::test_flaky_test SKIPPED (could ...) [ 35%]
+test_sugar.py::TestTerminalReporter::test_flaky_test PASSED              [ 35%]
+test_sugar.py::TestTerminalReporter::test_xpass_strict PASSED            [ 39%]
+test_sugar.py::TestTerminalReporter::test_xpass_strict PASSED            [ 39%]
+test_sugar.py::TestTerminalReporter::test_xpass_strict PASSED            [ 39%]
+test_sugar.py::TestTerminalReporter::test_teardown_errors PASSED         [ 42%]
+test_sugar.py::TestTerminalReporter::test_teardown_errors PASSED         [ 42%]
+test_sugar.py::TestTerminalReporter::test_teardown_errors PASSED         [ 42%]
+test_sugar.py::TestTerminalReporter::test_skipping_tests PASSED          [ 46%]
+test_sugar.py::TestTerminalReporter::test_skipping_tests PASSED          [ 46%]
+test_sugar.py::TestTerminalReporter::test_skipping_tests PASSED          [ 46%]
+test_sugar.py::TestTerminalReporter::test_deselecting_tests PASSED       [ 50%]
+test_sugar.py::TestTerminalReporter::test_deselecting_tests PASSED       [ 50%]
+test_sugar.py::TestTerminalReporter::test_deselecting_tests PASSED       [ 50%]
+test_sugar.py::TestTerminalReporter::test_item_count_after_pytest_collection_modifyitems PASSED [ 53%]
+test_sugar.py::TestTerminalReporter::test_item_count_after_pytest_collection_modifyitems PASSED [ 53%]
+test_sugar.py::TestTerminalReporter::test_item_count_after_pytest_collection_modifyitems PASSED [ 53%]
+test_sugar.py::TestTerminalReporter::test_fail PASSED                    [ 57%]
+test_sugar.py::TestTerminalReporter::test_fail PASSED                    [ 57%]
+test_sugar.py::TestTerminalReporter::test_fail PASSED                    [ 57%]
+test_sugar.py::TestTerminalReporter::test_fail_unicode_crashline PASSED  [ 60%]
+test_sugar.py::TestTerminalReporter::test_fail_unicode_crashline PASSED  [ 60%]
+test_sugar.py::TestTerminalReporter::test_fail_unicode_crashline PASSED  [ 60%]
+test_sugar.py::TestTerminalReporter::test_fail_in_fixture_and_test PASSED [ 64%]
+test_sugar.py::TestTerminalReporter::test_fail_in_fixture_and_test PASSED [ 64%]
+test_sugar.py::TestTerminalReporter::test_fail_in_fixture_and_test PASSED [ 64%]
+test_sugar.py::TestTerminalReporter::test_fail_fail PASSED               [ 67%]
+test_sugar.py::TestTerminalReporter::test_fail_fail PASSED               [ 67%]
+test_sugar.py::TestTerminalReporter::test_fail_fail PASSED               [ 67%]
+test_sugar.py::TestTerminalReporter::test_error_in_setup_then_pass PASSED [ 71%]
+test_sugar.py::TestTerminalReporter::test_error_in_setup_then_pass PASSED [ 71%]
+test_sugar.py::TestTerminalReporter::test_error_in_setup_then_pass PASSED [ 71%]
+test_sugar.py::TestTerminalReporter::test_error_in_teardown_then_pass PASSED [ 75%]
+test_sugar.py::TestTerminalReporter::test_error_in_teardown_then_pass PASSED [ 75%]
+test_sugar.py::TestTerminalReporter::test_error_in_teardown_then_pass PASSED [ 75%]
+test_sugar.py::TestTerminalReporter::test_collect_error PASSED           [ 78%]
+test_sugar.py::TestTerminalReporter::test_collect_error PASSED           [ 78%]
+test_sugar.py::TestTerminalReporter::test_collect_error PASSED           [ 78%]
+test_sugar.py::TestTerminalReporter::test_verbose PASSED                 [ 82%]
+test_sugar.py::TestTerminalReporter::test_verbose PASSED                 [ 82%]
+test_sugar.py::TestTerminalReporter::test_verbose PASSED                 [ 82%]
+test_sugar.py::TestTerminalReporter::test_verbose_has_double_colon PASSED [ 85%]
+test_sugar.py::TestTerminalReporter::test_verbose_has_double_colon PASSED [ 85%]
+test_sugar.py::TestTerminalReporter::test_verbose_has_double_colon PASSED [ 85%]
+test_sugar.py::TestTerminalReporter::test_xdist PASSED                   [ 89%]
+test_sugar.py::TestTerminalReporter::test_xdist SKIPPED (could not i...) [ 89%]
+test_sugar.py::TestTerminalReporter::test_xdist PASSED                   [ 89%]
+test_sugar.py::TestTerminalReporter::test_xdist_verbose PASSED           [ 92%]
+test_sugar.py::TestTerminalReporter::test_xdist_verbose SKIPPED (cou...) [ 92%]
+test_sugar.py::TestTerminalReporter::test_xdist_verbose PASSED           [ 92%]
+test_sugar.py::TestTerminalReporter::test_doctest PASSED                 [ 96%]
+test_sugar.py::TestTerminalReporter::test_doctest PASSED                 [ 96%]
+test_sugar.py::TestTerminalReporter::test_doctest PASSED                 [ 96%]
+test_sugar.py::TestTerminalReporter::test_doctest_lineno PASSED          [100%]
+test_sugar.py::TestTerminalReporter::test_doctest_lineno PASSED          [100%]
+test_sugar.py::TestTerminalReporter::test_doctest_lineno PASSED          [100%]
+
+=============================== warnings summary ===============================
+test_sugar.py: 31 warnings
+  /workdir/pytest-sugar-0.9.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:155: PytestDeprecationWarning: The hookimpl pytest_configure uses old-style configuration options (marks or attributes).
+  Please use the pytest.hookimpl(trylast=True) decorator instead
+   to configure the hooks.
+   See https://docs.pytest.org/en/latest/deprecations.html#configuring-hook-specs-impls-using-markers
+    @pytest.mark.trylast
+
+test_sugar.py: 31 warnings
+  /workdir/pytest-sugar-0.9.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:250: PytestRemovedIn8Warning: The (startdir: py.path.local) argument is deprecated, please use (start_path: pathlib.Path)
+  see https://docs.pytest.org/en/latest/deprecations.html#py-path-local-arguments-for-hooks-replaced-with-pathlib-path
+    lines = self.config.hook.pytest_report_header(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pytest-sugar/0.9.6/1/cpython-test-results.xml -
+================== 80 passed, 3 skipped, 62 warnings in 2.17s ==================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

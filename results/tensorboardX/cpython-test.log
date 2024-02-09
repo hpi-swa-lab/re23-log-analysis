@@ -1,0 +1,251 @@
+GLOB sdist-make: /workdir/tensorboardX-2.6.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/tensorboardX-2.6.1/.tox/.tmp/package/1/tensorboardX-2.6.1.zip
+cpythonlibtest-unit-test-tests installed: absl-py==2.0.0,boto3==1.33.3,botocore==1.33.3,cachetools==5.3.2,certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,contourpy==1.2.0,coverage==7.3.2,cryptography==41.0.7,cycler==0.12.1,exceptiongroup==1.2.0,filelock==3.13.1,flake8==6.1.0,fonttools==4.45.1,fsspec==2023.10.0,google-auth==2.23.4,google-auth-oauthlib==1.1.0,grpcio==1.59.3,idna==3.6,iniconfig==2.0.0,Jinja2==3.1.2,jmespath==1.0.1,jsonpatch==1.33,jsonpointer==2.4,kiwisolver==1.4.5,Markdown==3.5.1,MarkupSafe==2.1.3,matplotlib==3.8.2,mccabe==0.7.0,mock==5.1.0,moto==4.2.10,mpmath==1.3.0,networkx==3.2.1,numpy==1.22.0,nvidia-cublas-cu12==12.1.3.1,nvidia-cuda-cupti-cu12==12.1.105,nvidia-cuda-nvrtc-cu12==12.1.105,nvidia-cuda-runtime-cu12==12.1.105,nvidia-cudnn-cu12==8.9.2.26,nvidia-cufft-cu12==11.0.2.54,nvidia-curand-cu12==10.3.2.106,nvidia-cusolver-cu12==11.4.5.107,nvidia-cusparse-cu12==12.1.0.106,nvidia-nccl-cu12==2.18.1,nvidia-nvjitlink-cu12==12.3.101,nvidia-nvtx-cu12==12.1.105,oauthlib==3.2.2,onnx==1.15.0,packaging==23.2,Pillow==10.1.0,pluggy==1.3.0,protobuf==4.25.1,pyasn1==0.5.1,pyasn1-modules==0.3.0,pycodestyle==2.11.1,pycparser==2.21,pyflakes==3.1.0,pyparsing==3.1.1,pytest==7.4.3,pytest-cov==4.1.0,python-dateutil==2.8.2,PyYAML==6.0.1,requests==2.31.0,requests-oauthlib==1.3.1,responses==0.24.1,rsa==4.9,s3transfer==0.8.2,scipy==1.11.4,six==1.16.0,soundfile==0.12.1,sympy==1.12,tensorboard==2.15.1,tensorboard-data-server==0.7.2,tensorboardX @ file:///workdir/tensorboardX-2.6.1/.tox/.tmp/package/1/tensorboardX-2.6.1.zip#sha256=6e41aa07da270563436a7b55e3c7aa5c0136b4f060e3a4e7a1e911f600a7cbc0,tomli==2.0.1,torch==2.1.1,torchvision==0.16.1,tornado==6.4,triton==2.1.0,typing_extensions==4.8.0,urllib3==2.0.7,visdom==0.2.4,websocket-client==1.6.4,Werkzeug==3.0.1,xmltodict==0.13.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3706960561'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/tensorboardX/2.6.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/tensorboardX-2.6.1
+configfile: setup.cfg
+plugins: cov-4.1.0
+collecting ... collected 82 items
+
+tests/event_file_writer_test.py::EventFileWriterTest::test_async_writer_without_write PASSED [  1%]
+tests/event_file_writer_test.py::EventFileWriterTest::test_event_file_writer_roundtrip PASSED [  2%]
+tests/event_file_writer_test.py::EventFileWriterTest::test_setting_filename_suffix_works PASSED [  3%]
+tests/record_writer_test.py::RecordWriterTest::test_empty_record PASSED  [  4%]
+tests/record_writer_test.py::RecordWriterTest::test_expect_bytes_written PASSED [  6%]
+tests/record_writer_test.py::RecordWriterTest::test_record_writer_roundtrip PASSED [  7%]
+tests/test_beholder.py::BeholderTest::test_beholder PASSED               [  8%]
+tests/test_beholder.py::BeholderTest::test_beholder_video PASSED         [  9%]
+tests/test_crc32c.py::CRC32CTest::test_crc32c PASSED                     [ 10%]
+tests/test_crc32c.py::CRC32CTest::test_crc32c_native PASSED              [ 12%]
+tests/test_crc32c.py::CRC32CTest::test_crc32c_python PASSED              [ 13%]
+tests/test_embedding.py::EmbeddingTest::test_embedding PASSED            [ 14%]
+tests/test_embedding.py::EmbeddingTest::test_embedding_64 PASSED         [ 15%]
+tests/test_embedding.py::EmbeddingTest::test_embedding_fail PASSED       [ 17%]
+tests/test_embedding.py::EmbeddingTest::test_embedding_s3_mock PASSED    [ 18%]
+tests/test_embedding.py::EmbeddingTest::test_embedding_square PASSED     [ 19%]
+tests/test_figure.py::FigureTest::test_figure PASSED                     [ 20%]
+tests/test_figure.py::FigureTest::test_figure_list PASSED                [ 21%]
+tests/test_hparams.py::HparamsTest::test_smoke PASSED                    [ 23%]
+tests/test_lint.py::test_linting FAILED                                  [ 24%]
+tests/test_multiprocess_write.py::GlobalWriterTest::test_auto_close PASSED [ 25%]
+tests/test_multiprocess_write.py::GlobalWriterTest::test_flush PASSED    [ 26%]
+tests/test_multiprocess_write.py::GlobalWriterTest::test_flush_after_close PASSED [ 28%]
+tests/test_multiprocess_write.py::GlobalWriterTest::test_flush_timer_is_long_so_data_is_not_there PASSED [ 29%]
+tests/test_multiprocess_write.py::GlobalWriterTest::test_writer PASSED   [ 30%]
+tests/test_numpy.py::NumpyTest::test_make_grid PASSED                    [ 31%]
+tests/test_numpy.py::NumpyTest::test_numpy_vid PASSED                    [ 32%]
+tests/test_numpy.py::NumpyTest::test_numpy_vid_uint8 PASSED              [ 34%]
+tests/test_numpy.py::NumpyTest::test_scalar PASSED                       [ 35%]
+tests/test_onnx_graph.py::ONNXGraphTest::test_onnx_graph PASSED          [ 36%]
+tests/test_openvino_graph.py::OPENVINOGraphTest::test_openvino_graph PASSED [ 37%]
+tests/test_pr_curve.py::PRCurveTest::test_pr_purve PASSED                [ 39%]
+tests/test_pr_curve.py::PRCurveTest::test_pr_purve_raw PASSED            [ 40%]
+tests/test_pr_curve.py::PRCurveTest::test_smoke PASSED                   [ 41%]
+tests/test_pytorch_graph.py::PytorchGraphTest::test_pytorch_graph PASSED [ 42%]
+tests/test_pytorch_graph.py::PytorchGraphTest::test_wrong_input_size PASSED [ 43%]
+tests/test_pytorch_np.py::PyTorchNumpyTest::test_pytorch_histogram PASSED [ 45%]
+tests/test_pytorch_np.py::PyTorchNumpyTest::test_pytorch_histogram_raw PASSED [ 46%]
+tests/test_pytorch_np.py::PyTorchNumpyTest::test_pytorch_np PASSED       [ 47%]
+tests/test_pytorch_np.py::PyTorchNumpyTest::test_pytorch_write PASSED    [ 48%]
+tests/test_record_writer.py::RecordWriterTest::test_make_valid_tf_name PASSED [ 50%]
+tests/test_record_writer.py::RecordWriterTest::test_record_writer_gcs PASSED [ 51%]
+tests/test_record_writer.py::RecordWriterTest::test_record_writer_s3 PASSED [ 52%]
+tests/test_summary.py::SummaryTest::test_audio PASSED                    [ 53%]
+tests/test_summary.py::SummaryTest::test_custom_scalars PASSED           [ 54%]
+tests/test_summary.py::SummaryTest::test_empty_input PASSED              [ 56%]
+tests/test_summary.py::SummaryTest::test_float32_image PASSED            [ 57%]
+tests/test_summary.py::SummaryTest::test_float_1_converts_to_uint8_255 PASSED [ 58%]
+tests/test_summary.py::SummaryTest::test_histogram_auto PASSED           [ 59%]
+tests/test_summary.py::SummaryTest::test_histogram_doane PASSED          [ 60%]
+tests/test_summary.py::SummaryTest::test_histogram_fd PASSED             [ 62%]
+tests/test_summary.py::SummaryTest::test_hparams PASSED                  [ 63%]
+tests/test_summary.py::SummaryTest::test_hparams_bool PASSED             [ 64%]
+tests/test_summary.py::SummaryTest::test_hparams_smoke PASSED            [ 65%]
+tests/test_summary.py::SummaryTest::test_hparams_string PASSED           [ 67%]
+tests/test_summary.py::SummaryTest::test_image_with_3_channel_batched PASSED [ 68%]
+tests/test_summary.py::SummaryTest::test_image_with_boxes PASSED         [ 69%]
+tests/test_summary.py::SummaryTest::test_image_with_four_channel PASSED  [ 70%]
+tests/test_summary.py::SummaryTest::test_image_with_four_channel_batched PASSED [ 71%]
+tests/test_summary.py::SummaryTest::test_image_with_one_channel PASSED   [ 73%]
+tests/test_summary.py::SummaryTest::test_image_with_one_channel_batched PASSED [ 74%]
+tests/test_summary.py::SummaryTest::test_image_without_channel PASSED    [ 75%]
+tests/test_summary.py::SummaryTest::test_list_input PASSED               [ 76%]
+tests/test_summary.py::SummaryTest::test_mesh PASSED                     [ 78%]
+tests/test_summary.py::SummaryTest::test_text PASSED                     [ 79%]
+tests/test_summary.py::SummaryTest::test_uint8_image PASSED              [ 80%]
+tests/test_summary.py::SummaryTest::test_video PASSED                    [ 81%]
+tests/test_summary_writer.py::SummaryWriterTest::test_dummy_summary_writer PASSED [ 82%]
+tests/test_summary_writer.py::SummaryWriterTest::test_pathlib PASSED     [ 84%]
+tests/test_summary_writer.py::SummaryWriterTest::test_summary_writer_backcomapt PASSED [ 85%]
+tests/test_summary_writer.py::SummaryWriterTest::test_summary_writer_close PASSED [ 86%]
+tests/test_summary_writer.py::SummaryWriterTest::test_summary_writer_ctx PASSED [ 87%]
+tests/test_summary_writer.py::SummaryWriterTest::test_windowsPath PASSED [ 89%]
+tests/test_utils.py::UtilsTest::test_prepare_video PASSED                [ 90%]
+tests/test_utils.py::UtilsTest::test_to_HWC PASSED                       [ 91%]
+tests/test_visdom.py::VisdomTest::test_TorchVis FAILED                   [ 92%]
+tests/test_writer.py::WriterTest::test_auto_close PASSED                 [ 93%]
+tests/test_writer.py::WriterTest::test_flush PASSED                      [ 95%]
+tests/test_writer.py::WriterTest::test_flush_after_close PASSED          [ 96%]
+tests/test_writer.py::WriterTest::test_flush_timer_is_long_so_data_is_not_there PASSED [ 97%]
+tests/test_writer.py::WriterTest::test_reuse_writer_after_closed PASSED  [ 98%]
+tests/test_writer.py::WriterTest::test_writer PASSED                     [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_linting _________________________________
+Traceback (most recent call last):
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/tensorboardX-2.6.1/tests/test_lint.py", line 3, in test_linting
+    subprocess.check_output(['flake8', 'tensorboardX'])
+  File "/usr/local/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/local/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['flake8', 'tensorboardX']' returned non-zero exit status 1.
+___________________________ VisdomTest.test_TorchVis ___________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/tensorboardX-2.6.1/tests/test_visdom.py", line 17, in test_TorchVis
+    w = TorchVis('visdom')
+  File "/workdir/tensorboardX-2.6.1/tensorboardX/torchvis.py", line 29, in __init__
+    self.register(*args, **init_kwargs)
+  File "/workdir/tensorboardX-2.6.1/tensorboardX/torchvis.py", line 36, in register
+    self.subscribers[format] = vis_formats[format](**init_kwargs.get(format, {}))
+  File "/workdir/tensorboardX-2.6.1/tensorboardX/visdom_writer.py", line 36, in __init__
+    self._try_connect()
+  File "/workdir/tensorboardX-2.6.1/tensorboardX/visdom_writer.py", line 45, in _try_connect
+    assert self.server_connected, 'No connection could be formed quickly'
+AssertionError: No connection could be formed quickly
+----------------------------- Captured stdout call -----------------------------
+Exception in user code:
+------------------------------------------------------------
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f0889d75240>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0889d75240>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/visdom/__init__.py", line 756, in _send
+    return self._handle_post(
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/visdom/__init__.py", line 720, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0889d75240>: Failed to establish a new connection: [Errno 111] Connection refused'))
+------------------------------ Captured log call -------------------------------
+WARNING  visdom:__init__.py:536 Setting up a new session...
+ERROR    visdom:__init__.py:653 [Errno 99] Cannot assign requested address
+ERROR    websocket:_logging.py:64 [Errno 99] Cannot assign requested address - goodbye
+ERROR    websocket:_logging.py:64 error from callback <function Visdom.setup_socket.<locals>.on_close at 0x7f088ab6a4d0>: Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+ERROR    visdom:__init__.py:653 Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+ERROR    visdom:__init__.py:653 [Errno 99] Cannot assign requested address
+ERROR    websocket:_logging.py:64 [Errno 99] Cannot assign requested address - goodbye
+ERROR    websocket:_logging.py:64 error from callback <function Visdom.setup_socket.<locals>.on_close at 0x7f088ab6a4d0>: Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+ERROR    visdom:__init__.py:653 Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+ERROR    visdom:__init__.py:653 [Errno 99] Cannot assign requested address
+ERROR    websocket:_logging.py:64 [Errno 99] Cannot assign requested address - goodbye
+ERROR    websocket:_logging.py:64 error from callback <function Visdom.setup_socket.<locals>.on_close at 0x7f088ab6a4d0>: Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+ERROR    visdom:__init__.py:653 Visdom.setup_socket.<locals>.on_close() takes 1 positional argument but 3 were given
+WARNING  visdom:__init__.py:524 Visdom python client failed to establish socket to get messages from the server. This feature is optional and can be disabled by initializing Visdom with `use_incoming_socket=False`, which will prevent waiting for this request to timeout.
+=============================== warnings summary ===============================
+tests/test_visdom.py: 25 warnings
+  /workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/visdom/__init__.py:767: PendingDeprecationWarning: Visdom is eventually changing to default to raising exceptions rather than ignoring/printing. This change is expected to happen by July 2018. Please set `raise_exceptions` to False to retain current behavior.
+    warnings.warn(
+
+tests/test_visdom.py::VisdomTest::test_TorchVis
+  /workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/visdom/__init__.py:524: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+    logger.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/tensorboardX/2.6.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_lint.py::test_linting - subprocess.CalledProcessError: Comm...
+FAILED tests/test_visdom.py::VisdomTest::test_TorchVis - AssertionError: No c...
+============= 2 failed, 80 passed, 26 warnings in 78.83s (0:01:18) =============
+ERROR: InvocationError for command /workdir/tensorboardX-2.6.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/tensorboardX/2.6.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

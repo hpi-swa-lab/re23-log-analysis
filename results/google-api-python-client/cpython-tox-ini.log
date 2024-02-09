@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/google-api-python-client/2.68.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rscripts/requirements.txt
+	-rsamples/compute/requirements-test.txt
+	-rsamples/compute/requirements.txt
+	-r.kokoro/requirements.txt
+

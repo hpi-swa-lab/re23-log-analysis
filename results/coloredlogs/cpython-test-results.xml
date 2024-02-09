@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="coloredlogs.tests.ColoredLogsTestCase-20231121003553" tests="35" file="coloredlogs/tests.py" time="0.221" timestamp="2023-11-21T00:35:53" failures="0" errors="8" skipped="3">
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_cli_conversion" time="0.082" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="575">
+			<!--Test the command line HTML conversion.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_custom_record_factory" time="0.002" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="602">
+			<!--
+        Test that custom LogRecord factories are supported.
+
+        This test is a bit convoluted because the logging module suppresses
+        exceptions. We monkey patch the method suspected of encountering
+        exceptions so that we can tell after it was called whether any
+        exceptions occurred (despite the exceptions not propagating).
+        -->
+			<system-err><![CDATA[
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] SPAM message with level spam (5)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] DEBUG message with level debug (10)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] VERBOSE message with level verbose (15)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] INFO message with level info (20)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] NOTICE message with level notice (25)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] WARNING message with level warning (30)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] SUCCESS message with level success (35)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] ERROR message with level error (40)
+2023-11-21 00:35:53 b80581c01e0f coloredlogs.demo[39713] CRITICAL message with level critical (50)
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_decrease_verbosity" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="270">
+			<!--Make sure decrease_verbosity() respects default and custom levels.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_disable_colored_cron_mailer" time="0.000" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="542">
+			<!--Test that automatic ANSI to HTML conversion when running under ``cron`` can be disabled.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_dynamic_stderr_lookup" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="399">
+			<!--Make sure coloredlogs.install() uses StandardErrorHandler when possible.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_empty_conversion" time="0.024" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="581">
+			<!--
+        Test that conversion of empty output produces no HTML.
+
+        This test was added because I found that ``coloredlogs &#45;&#45;convert`` when
+        used in a cron job could cause cron to send out what appeared to be
+        empty emails. On more careful inspection the body of those emails was
+        ``<code></code>``. By not emitting the wrapper element when no other
+        HTML is generated, cron will not send out an email.
+        -->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_explicit_usage_message" time="0.000" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="598">
+			<!--Test that the usage message is shown when ``&#45;&#45;help`` is given.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_find_handler" time="0.002" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="312">
+			<!--Make sure find_handler() works as intended.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_find_hostname" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="121">
+			<!--Make sure :func:`~find_hostname()` works correctly.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_force_enable" time="0.056" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="415">
+			<!--Make sure ANSI escape sequences can be forced (bypassing auto-detection).-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_html_conversion" time="0.003" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="470">
+			<!--Check the conversion from ANSI escape sequences to HTML.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_implicit_usage_message" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="594">
+			<!--Test that the usage message is shown when no actions are given.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_increase_verbosity" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="249">
+			<!--Make sure increase_verbosity() respects default and custom levels.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_is_verbose" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="240">
+			<!--Make sure is_verbose() does what it should :-).-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_level_discovery" time="0.000" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="294">
+			<!--Make sure find_defined_levels() always reports the levels defined in Python's standard library.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_level_to_number" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="110">
+			<!--Make sure :func:`level_to_number()` works as intended.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_name_normalization" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="220">
+			<!--Make sure :class:`~coloredlogs.NameNormalizer` works as intended.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_output_interception" time="0.024" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="530">
+			<!--Test capturing of output from external commands.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_plain_text_output_format" time="0.002" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="362">
+			<!--Inspect the plain text output of coloredlogs.-->
+			<system-err><![CDATA[
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] DEBUG This is a message with severity 'debug'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] INFO This is a message with severity 'info'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] VERBOSE This is a message with severity 'verbose'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] WARNING This is a message with severity 'warning'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] ERROR This is a message with severity 'error'.
+2023-11-21 00:35:53 b80581c01e0f yelgTVoeiCmIYEZIuXxeBLsFo[39713] CRITICAL This is a message with severity 'critical'.
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_style_parsing" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="229">
+			<!--Make sure :func:`~coloredlogs.parse_encoded_styles()` works as intended.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_support_for_milliseconds" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="342">
+			<!--Make sure milliseconds are hidden by default but can be easily enabled.-->
+			<system-err><![CDATA[
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should not include milliseconds.
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should include milliseconds.
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_support_for_milliseconds_directive" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="355">
+			<!--Make sure milliseconds using the ``%f`` directive are supported.-->
+			<system-err><![CDATA[
+2023-11-21 00:35:53 b80581c01e0f root[39713] INFO This should be timestamped according to #45.
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_system_logging_override" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="188">
+			<!--Make sure the :class:`coloredlogs.syslog.is_syslog_supported` respects the override.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_walk_propagation_tree" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="301">
+			<!--Make sure walk_propagation_tree() properly walks the tree of loggers.-->
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_auto_disable" time="0.005" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="427">
+			<!--
+        Make sure ANSI escape sequences are not emitted when logging output is being redirected.
+
+        This is a regression test for https://github.com/xolox/python-coloredlogs/issues/100.
+
+        It works as follows:
+
+        1. We mock an interactive terminal using 'capturer' to ensure that this
+           test works inside test drivers that capture output (like pytest).
+
+        2. We launch a subprocess (to ensure a clean process state) where
+           stderr is captured but stdout is not, emulating issue #100.
+
+        3. The output captured on stderr contained ANSI escape sequences after
+           this test was written and before the issue was fixed, so now this
+           serves as a regression test for issue #100.
+        -->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 445, in test_auto_disable
+    with CaptureOutput():
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_auto_install" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="548">
+			<!--Test :func:`coloredlogs.auto_install()`.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 553, in test_auto_install
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_cli_demo" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="566">
+			<!--Test the command line colored logging demonstration.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 568, in test_cli_demo
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_enable_colored_cron_mailer" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="536">
+			<!--Test that automatic ANSI to HTML conversion when running under ``cron`` can be enabled.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 539, in test_enable_colored_cron_mailer
+    with ColoredCronMailer() as mailer:
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/converter/__init__.py", line 375, in __init__
+    self.capturer = CaptureOutput(merged=True, relay=False)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_env_disable" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="456">
+			<!--Make sure ANSI escape sequences can be disabled using ``$NO_COLOR``.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 459, in test_env_disable
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_host_name_filter" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="146">
+			<!--Make sure :func:`install()` integrates with :class:`~coloredlogs.HostNameFilter()`.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 149, in test_host_name_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_program_name_filter" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="154">
+			<!--Make sure :func:`install()` integrates with :class:`~coloredlogs.ProgramNameFilter()`.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 157, in test_program_name_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_username_filter" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="162">
+			<!--Make sure :func:`install()` integrates with :class:`~coloredlogs.UserNameFilter()`.-->
+			<error type="UnsupportedOperation" message="fileno"><![CDATA[Traceback (most recent call last):
+  File "/workdir/coloredlogs-15.0.1/coloredlogs/tests.py", line 165, in test_username_filter
+    with CaptureOutput() as capturer:
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 233, in __init__
+    self.stdout_stream = self.initialize_stream(sys.stdout, STDOUT_FD)
+  File "/workdir/coloredlogs-15.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/capturer/__init__.py", line 267, in initialize_stream
+    real_fd = file_obj.fileno()
+io.UnsupportedOperation: fileno
+]]></error>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_syslog_shortcut_enhanced" time="0.002" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="206">
+			<!--Make sure that ``coloredlogs.install(syslog='warning')`` works.-->
+			<skipped type="skip" message="System log file not found! (/var/log/syslog)"/>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_syslog_shortcut_simple" time="0.000" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="195">
+			<!--Make sure that ``coloredlogs.install(syslog=True)`` works.-->
+			<skipped type="skip" message="System log file not found! (/var/log/syslog)"/>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+		<testcase classname="coloredlogs.tests.ColoredLogsTestCase" name="test_system_logging" time="0.001" timestamp="2023-11-21T00:35:53" file="coloredlogs/tests.py" line="170">
+			<!--Make sure the :class:`coloredlogs.syslog.SystemLogging` context manager works.-->
+			<skipped type="skip" message="System log file not found! (/var/log/syslog)"/>
+			<system-err><![CDATA[
+]]></system-err>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/multidict/6.0.3/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/doc.txt
+	-rrequirements/wheel.txt
+	-rrequirements/towncrier.txt
+	-rrequirements/lint.txt
+	-rrequirements/pytest.txt
+	-rrequirements/ci.txt
+	-rrequirements/dev.txt
+	-rrequirements/doc-spelling.txt
+

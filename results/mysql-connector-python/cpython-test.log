@@ -1,0 +1,101 @@
+.package create: /workdir/mysql-connector-python-8.0.31/.tox/.package
+.package installdeps: setuptools, wheel
+warning: no files found matching 'docs/INFO_SRC'
+warning: no files found matching 'docs/INFO_BIN'
+warning: check: missing meta-data: if 'author' supplied, 'author_email' should be supplied too
+
+warning: DistSource: standard file 'build_isolated.py' not found
+
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_connection.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_connection.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_crud.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_crud.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_cursor.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_cursor.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_datatypes.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_datatypes.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_expect.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_expect.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_expr.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_expr.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_notice.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_notice.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_prepare.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_prepare.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_resultset.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_resultset.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_session.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_session.pb.cc' not a regular file -- skipping
+WARNING[cpydist]: 'src/mysqlxpb/mysqlx/mysqlx_sql.pb.cc' not a regular file -- skipping
+'src/mysqlxpb/mysqlx/mysqlx_sql.pb.cc' not a regular file -- skipping
+cpythonlibtest-unit-test-tests create: /workdir/mysql-connector-python-8.0.31/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/mysql-connector-python-8.0.31/.tox/.tmp/package/1/mysql-connector-python-8.0.31.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,mysql-connector-python @ file:///workdir/mysql-connector-python-8.0.31/.tox/.tmp/package/1/mysql-connector-python-8.0.31.tar.gz#sha256=1a89edc4bb7d1124e4b19d9ce725bcab2f164d6633115febf7b17be481d9f50d,packaging==23.2,pluggy==1.3.0,protobuf==3.20.1,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3947164302'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/mysql-connector-python/8.0.31/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/mysql-connector-python-8.0.31/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/mysql-connector-python-8.0.31
+collecting ... collected 1299 items / 3 errors
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_django.py _____________________
+ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/test_django.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_django.py:104: in <module>
+    import django.db  # pylint: disable=W0611
+E   ModuleNotFoundError: No module named 'django'
+_____________ ERROR collecting tests/cext/test_cext_connection.py ______________
+ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/cext/test_cext_connection.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/cext/test_cext_connection.py:38: in <module>
+    from mysql.connector import cursor, cursor_cext, errors
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/cursor_cext.py:38: in <module>
+    from _mysql_connector import MySQLInterfaceError
+E   ModuleNotFoundError: No module named '_mysql_connector'
+_______________ ERROR collecting tests/cext/test_cext_cursor.py ________________
+ImportError while importing test module '/workdir/mysql-connector-python-8.0.31/tests/cext/test_cext_cursor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/connection_cext.py:50: in <module>
+    import _mysql_connector
+E   ModuleNotFoundError: No module named '_mysql_connector'
+
+The above exception was the direct cause of the following exception:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/cext/test_cext_cursor.py:51: in <module>
+    from mysql.connector.connection_cext import CMySQLConnection
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/mysql/connector/connection_cext.py:66: in <module>
+    raise ImportError(
+E   ImportError: MySQL Connector/Python C Extension not available (No module named '_mysql_connector')
+=============================== warnings summary ===============================
+tests/test_mysqlx_pooling.py:921
+  /workdir/mysql-connector-python-8.0.31/tests/test_mysqlx_pooling.py:921: DeprecationWarning: invalid escape sequence '\d'
+    re_ip = re.compile("  pool: 1.0.0.(\d+).*")
+
+tests/cext/test_cext_api.py:256
+  /workdir/mysql-connector-python-8.0.31/tests/cext/test_cext_api.py:256: DeprecationWarning: invalid escape sequence '\s'
+    ("back\slash", b"back\\\\slash"),
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/mysql-connector-python/8.0.31/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_django.py
+ERROR tests/cext/test_cext_connection.py
+ERROR tests/cext/test_cext_cursor.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+======================== 2 warnings, 3 errors in 1.50s =========================
+ERROR: InvocationError for command /workdir/mysql-connector-python-8.0.31/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/mysql-connector-python/8.0.31/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

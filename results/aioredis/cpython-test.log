@@ -1,0 +1,106 @@
+GLOB sdist-make: /workdir/aioredis-2.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements-mypy.txt, -rtests/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aioredis-2.0.1/.tox/.tmp/package/1/aioredis-2.0.1.zip
+cpythonlibtest-unit-test-tests installed: aioredis @ file:///workdir/aioredis-2.0.1/.tox/.tmp/package/1/aioredis-2.0.1.zip#sha256=9e7a7e8d39db870b239d642810ce2e61e04ced03cf9a848020ad26058587b78b,async-timeout==3.0.1,attrs==23.1.0,coverage==6.1.1,execnet==2.0.2,flake8==4.0.1,hiredis==2.0.0,iniconfig==2.0.0,mccabe==0.6.1,mock==4.0.3,mypy==0.910,mypy-extensions==0.4.4,packaging==23.2,pluggy==1.3.0,py==1.11.0,pycodestyle==2.8.0,pyflakes==2.4.0,pytest==6.2.5,pytest-asyncio==0.16.0,pytest-cov==3.0.0,pytest-forked==1.6.0,pytest-sugar==0.9.4,pytest-xdist==2.4.0,termcolor==2.3.0,toml==0.10.2,tomli==2.0.1,typing_extensions==4.8.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2319630837'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aioredis/2.0.1/1/cpython-test-results.xml
+/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  xdist_version = LooseVersion(xdist.__version__)
+/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:170: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if xdist_version >= LooseVersion('1.14'):
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 692, in connect
+INTERNALERROR>     await self._connect()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 719, in _connect
+INTERNALERROR>     reader, writer = await asyncio.open_connection(
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/streams.py", line 48, in open_connection
+INTERNALERROR>     transport, _ = await loop.create_connection(
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/base_events.py", line 1075, in create_connection
+INTERNALERROR>     raise OSError('Multiple exceptions: {}'.format(
+INTERNALERROR> OSError: Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 6379), [Errno 99] Cannot assign requested address
+INTERNALERROR> 
+INTERNALERROR> During handling of the above exception, another exception occurred:
+INTERNALERROR> 
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 267, in wrap_session
+INTERNALERROR>     config.hook.pytest_sessionstart(session=session)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+INTERNALERROR>     raise exc.with_traceback(exc.__traceback__)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/tests/conftest.py", line 111, in pytest_sessionstart
+INTERNALERROR>     info = asyncio.get_event_loop().run_until_complete(_get_info(redis_url))
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+INTERNALERROR>     return future.result()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/tests/conftest.py", line 92, in _get_info
+INTERNALERROR>     info = await client.info()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/client.py", line 1082, in execute_command
+INTERNALERROR>     conn = self.connection or await pool.get_connection(command_name, **options)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 1415, in get_connection
+INTERNALERROR>     await connection.connect()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 698, in connect
+INTERNALERROR>     raise ConnectionError(self._error_message(e))
+INTERNALERROR> aioredis.exceptions.ConnectionError: Error connecting to localhost:6379. Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 6379), [Errno 99] Cannot assign requested address.
+ERROR: InvocationError for command /workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/aioredis/2.0.1/1/cpython-test-results.xml (exited with code 3)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed
+GLOB sdist-make: /workdir/aioredis-2.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements-mypy.txt, -rtests/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aioredis-2.0.1/.tox/.tmp/package/1/aioredis-2.0.1.zip
+cpythonlibtest-unit-test-tests installed: aioredis @ file:///workdir/aioredis-2.0.1/.tox/.tmp/package/1/aioredis-2.0.1.zip#sha256=27b31c138e3f4a2a3b06c8e71baa34fd83f9cbebbf106e045fb2434760b89813,async-timeout==3.0.1,attrs==23.1.0,coverage==6.1.1,execnet==2.0.2,flake8==4.0.1,hiredis==2.0.0,iniconfig==2.0.0,mccabe==0.6.1,mock==4.0.3,mypy==0.910,mypy-extensions==0.4.4,packaging==23.2,pluggy==1.3.0,py==1.11.0,pycodestyle==2.8.0,pyflakes==2.4.0,pytest==6.2.5,pytest-asyncio==0.16.0,pytest-cov==3.0.0,pytest-forked==1.6.0,pytest-sugar==0.9.4,pytest-xdist==2.4.0,termcolor==2.3.0,toml==0.10.2,tomli==2.0.1,typing_extensions==4.8.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2480858268'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aioredis/2.0.1/1/cpython-test-results.xml
+/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  xdist_version = LooseVersion(xdist.__version__)
+/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_sugar.py:170: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if xdist_version >= LooseVersion('1.14'):
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 692, in connect
+INTERNALERROR>     await self._connect()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 719, in _connect
+INTERNALERROR>     reader, writer = await asyncio.open_connection(
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/streams.py", line 48, in open_connection
+INTERNALERROR>     transport, _ = await loop.create_connection(
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/base_events.py", line 1075, in create_connection
+INTERNALERROR>     raise OSError('Multiple exceptions: {}'.format(
+INTERNALERROR> OSError: Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 6379), [Errno 99] Cannot assign requested address
+INTERNALERROR> 
+INTERNALERROR> During handling of the above exception, another exception occurred:
+INTERNALERROR> 
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 267, in wrap_session
+INTERNALERROR>     config.hook.pytest_sessionstart(session=session)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+INTERNALERROR>     raise exc.with_traceback(exc.__traceback__)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/tests/conftest.py", line 111, in pytest_sessionstart
+INTERNALERROR>     info = asyncio.get_event_loop().run_until_complete(_get_info(redis_url))
+INTERNALERROR>   File "/usr/local/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+INTERNALERROR>     return future.result()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/tests/conftest.py", line 92, in _get_info
+INTERNALERROR>     info = await client.info()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/client.py", line 1082, in execute_command
+INTERNALERROR>     conn = self.connection or await pool.get_connection(command_name, **options)
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 1415, in get_connection
+INTERNALERROR>     await connection.connect()
+INTERNALERROR>   File "/workdir/aioredis-2.0.1/aioredis/connection.py", line 698, in connect
+INTERNALERROR>     raise ConnectionError(self._error_message(e))
+INTERNALERROR> aioredis.exceptions.ConnectionError: Error connecting to localhost:6379. Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 6379), [Errno 99] Cannot assign requested address.
+ERROR: InvocationError for command /workdir/aioredis-2.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/aioredis/2.0.1/1/cpython-test-results.xml (exited with code 3)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

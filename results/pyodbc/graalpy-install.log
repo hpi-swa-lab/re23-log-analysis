@@ -1,0 +1,457 @@
+Collecting pyodbc==4.0.35
+  Downloading pyodbc-4.0.35.tar.gz (273 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 273.3/273.3 kB 4.4 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-e3unpemo/pyodbc_52024b706a9c445cb7ef707fc4e47010/src/params.cpp
+auto-patching C API usages in /tmp/pip-install-e3unpemo/pyodbc_52024b706a9c445cb7ef707fc4e47010/src/pyodbccompat.h
+auto-patching C API usages in /tmp/pip-install-e3unpemo/pyodbc_52024b706a9c445cb7ef707fc4e47010/src/errors.h
+auto-patching C API usages in /tmp/pip-install-e3unpemo/pyodbc_52024b706a9c445cb7ef707fc4e47010/src/textenc.cpp
+Looking for GraalPy patches for pyodbc
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pyodbc
+  Building wheel for pyodbc (pyproject.toml): started
+  Building wheel for pyodbc (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for pyodbc (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [427 lines of output]
+      running bdist_wheel
+      running build
+      running build_ext
+      building 'pyodbc' extension
+      creating build
+      creating build/temp.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-3.10/src
+      gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -DPYODBC_VERSION=4.0.35 -I/workdir/install-virtualenv/include -I/opt/graalpy/include/python3.10 -c src/buffer.cpp -o build/temp.linux-x86_64-3.10/src/buffer.o -Wno-write-strings -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include
+      In file included from /opt/graalpy/include/python3.10/Python.h:17,
+                       from src/pyodbc.h:45,
+                       from src/buffer.cpp:12:
+      /opt/graalpy/include/python3.10/pyconfig.h:161: warning: "HAVE_UNISTD_H" redefined
+       #define HAVE_UNISTD_H
+      
+      <command-line>: note: this is the location of the previous definition
+      In file included from src/pyodbc.h:172,
+                       from src/buffer.cpp:12:
+      src/pyodbccompat.h: In function ‘PyObject* Text_New(Py_ssize_t)’:
+      src/pyodbccompat.h:75:43: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]
+           return PyUnicode_FromUnicode(0, length);
+                                                 ^
+      In file included from /opt/graalpy/include/python3.10/unicodeobject.h:1051,
+                       from /opt/graalpy/include/python3.10/Python.h:93,
+                       from src/pyodbc.h:45,
+                       from src/buffer.cpp:12:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:558:42: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+                                                ^~~~~~~~~~~~~~~~~~~~~
+      In file included from src/pyodbc.h:172,
+                       from src/buffer.cpp:12:
+      src/pyodbccompat.h:75:43: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]
+           return PyUnicode_FromUnicode(0, length);
+                                                 ^
+      In file included from /opt/graalpy/include/python3.10/unicodeobject.h:1051,
+                       from /opt/graalpy/include/python3.10/Python.h:93,
+                       from src/pyodbc.h:45,
+                       from src/buffer.cpp:12:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:558:42: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+                                                ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_UNICODE* Text_Buffer(PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:86:12: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+           return PyUnicode_AS_UNICODE(o);
+                  ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:86:12: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+           return PyUnicode_AS_UNICODE(o);
+                  ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_ssize_t Text_Size(PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_ssize_t TextCopyToUnicode(Py_UNICODE*, PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:147:24: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+               memcpy(buffer, PyUnicode_AS_UNICODE(o), cch * sizeof(Py_UNICODE));
+                              ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:147:24: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+               memcpy(buffer, PyUnicode_AS_UNICODE(o), cch * sizeof(Py_UNICODE));
+                              ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -DPYODBC_VERSION=4.0.35 -I/workdir/install-virtualenv/include -I/opt/graalpy/include/python3.10 -c src/cnxninfo.cpp -o build/temp.linux-x86_64-3.10/src/cnxninfo.o -Wno-write-strings -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include
+      In file included from /opt/graalpy/include/python3.10/Python.h:17,
+                       from src/pyodbc.h:45,
+                       from src/cnxninfo.cpp:7:
+      /opt/graalpy/include/python3.10/pyconfig.h:161: warning: "HAVE_UNISTD_H" redefined
+       #define HAVE_UNISTD_H
+      
+      <command-line>: note: this is the location of the previous definition
+      In file included from src/pyodbc.h:172,
+                       from src/cnxninfo.cpp:7:
+      src/pyodbccompat.h: In function ‘PyObject* Text_New(Py_ssize_t)’:
+      src/pyodbccompat.h:75:43: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]
+           return PyUnicode_FromUnicode(0, length);
+                                                 ^
+      In file included from /opt/graalpy/include/python3.10/unicodeobject.h:1051,
+                       from /opt/graalpy/include/python3.10/Python.h:93,
+                       from src/pyodbc.h:45,
+                       from src/cnxninfo.cpp:7:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:558:42: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+                                                ^~~~~~~~~~~~~~~~~~~~~
+      In file included from src/pyodbc.h:172,
+                       from src/cnxninfo.cpp:7:
+      src/pyodbccompat.h:75:43: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]
+           return PyUnicode_FromUnicode(0, length);
+                                                 ^
+      In file included from /opt/graalpy/include/python3.10/unicodeobject.h:1051,
+                       from /opt/graalpy/include/python3.10/Python.h:93,
+                       from src/pyodbc.h:45,
+                       from src/cnxninfo.cpp:7:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:558:42: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+                                                ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_UNICODE* Text_Buffer(PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:86:12: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+           return PyUnicode_AS_UNICODE(o);
+                  ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:86:12: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+           return PyUnicode_AS_UNICODE(o);
+                  ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_ssize_t Text_Size(PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:126:40: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+           return (o && PyUnicode_Check(o)) ? PyUnicode_GET_SIZE(o) : 0;
+                                              ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h: In function ‘Py_ssize_t TextCopyToUnicode(Py_UNICODE*, PyObject*)’:
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:274:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+             PyUnicode_WSTR_LENGTH(op) :                    \
+             ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:275:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                                                          ^
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:458:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                                                                 ^
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:277:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’
+              PyUnicode_WSTR_LENGTH(op)))
+              ^~~~~~~~~~~~~~~~~~~~~
+      src/pyodbccompat.h:146:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’
+               Py_ssize_t cch = PyUnicode_GET_SIZE(o);
+                                ^~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:457:24: note: declared here
+       PyAPI_FUNC(Py_ssize_t) _PyUnicode_get_wstr_length(PyObject *op);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:147:24: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+               memcpy(buffer, PyUnicode_AS_UNICODE(o), cch * sizeof(Py_UNICODE));
+                              ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:292:45: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]
+             PyUnicode_AsUnicode(_PyObject_CAST(op)))
+                                                   ^
+      src/pyodbccompat.h:147:24: note: in expansion of macro ‘PyUnicode_AS_UNICODE’
+               memcpy(buffer, PyUnicode_AS_UNICODE(o), cch * sizeof(Py_UNICODE));
+                              ^~~~~~~~~~~~~~~~~~~~
+      /opt/graalpy/include/python3.10/cpython/unicodeobject.h:587:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      In file included from /opt/graalpy/include/python3.10/tupleobject.h:44,
+                       from /opt/graalpy/include/python3.10/Python.h:100,
+                       from src/pyodbc.h:45,
+                       from src/cnxninfo.cpp:7:
+      src/wrapper.h: In member function ‘PyObject*& Tuple::operator[](int)’:
+      /opt/graalpy/include/python3.10/cpython/tupleobject.h:29:48: error: cannot bind non-const lvalue reference of type ‘PyObject*&’ {aka ‘_object*&’} to an rvalue of type ‘PyObject*’ {aka ‘_object*’}
+       #define PyTuple_GET_ITEM(op, i) PyTuple_GetItem(_PyObject_CAST(op), (i))
+                                       ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+      src/wrapper.h:93:16: note: in expansion of macro ‘PyTuple_GET_ITEM’
+               return PyTuple_GET_ITEM(p, i);
+                      ^~~~~~~~~~~~~~~~
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pyodbc
+Failed to build pyodbc
+ERROR: Could not build wheels for pyodbc, which is required to install pyproject.toml-based projects

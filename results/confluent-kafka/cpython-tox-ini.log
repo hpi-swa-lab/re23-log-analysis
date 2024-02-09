@@ -1,0 +1,12 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/confluent-kafka/2.0.2/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rexamples/requirements.txt
+	-rtools/requirements-manylinux.txt
+	-rsrc/confluent_kafka/requirements.txt
+	-rsrc/confluent_kafka/avro/requirements.txt
+	-rsrc/confluent_kafka/schema_registry/requirements.txt
+	-rtests/requirements.txt
+	-rtests/soak/requirements.txt
+

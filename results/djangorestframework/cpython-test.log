@@ -1,0 +1,56 @@
+GLOB sdist-make: /workdir/djangorestframework-3.14.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/djangorestframework-3.14.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/djangorestframework-3.14.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting coreapi==2.3.1 (from -r requirements/requirements-optionals.txt (line 2))
+  Downloading coreapi-2.3.1-py2.py3-none-any.whl (110 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.0/111.0 kB 4.6 MB/s eta 0:00:00
+Collecting coreschema==0.0.4 (from -r requirements/requirements-optionals.txt (line 3))
+  Using cached coreschema-0.0.4-py3-none-any.whl
+Collecting django-filter<3.0,>=2.4.0 (from -r requirements/requirements-optionals.txt (line 4))
+  Downloading django_filter-2.4.0-py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 kB 3.3 MB/s eta 0:00:00
+Collecting django-guardian<2.5,>=2.4.0 (from -r requirements/requirements-optionals.txt (line 5))
+  Downloading django_guardian-2.4.0-py3-none-any.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.1/106.1 kB 5.4 MB/s eta 0:00:00
+Collecting markdown==3.3 (from -r requirements/requirements-optionals.txt (line 6))
+  Downloading Markdown-3.3-py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.5/94.5 kB 8.2 MB/s eta 0:00:00
+Collecting psycopg2-binary<2.9,>=2.8.5 (from -r requirements/requirements-optionals.txt (line 7))
+  Using cached psycopg2_binary-2.8.6-cp310-cp310-linux_x86_64.whl
+Collecting pygments==2.12 (from -r requirements/requirements-optionals.txt (line 8))
+  Using cached Pygments-2.12.0-py3-none-any.whl (1.1 MB)
+Collecting pyyaml<5.4,>=5.3.1 (from -r requirements/requirements-optionals.txt (line 9))
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 269.4/269.4 kB 9.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pytest
+  Using cached pytest-6.2.5-py3-none-any.whl (280 kB)
+Collecting pytest-cov<3.0,>=2.10.1 (from -r requirements/requirements-testing.txt (line 3))
+  Downloading pytest_cov-2.12.1-py2.py3-none-any.whl (20 kB)
+Collecting pytest-django<5.0,>=4.1.0 (from -r requirements/requirements-testing.txt (line 4))
+  Downloading pytest_django-4.7.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting mkdocs<1.2,>=1.1.2 (from -r requirements/requirements-documentation.txt (line 2))
+  Downloading mkdocs-1.1.2-py3-none-any.whl (6.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 10.2 MB/s eta 0:00:00
+Collecting jinja2<3.1.0,>=2.10 (from -r requirements/requirements-documentation.txt (line 3))
+  Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.6/133.6 kB 13.4 MB/s eta 0:00:00
+Collecting wheel<0.36,>=0.35.1 (from -r requirements/requirements-packaging.txt (line 2))
+  Downloading wheel-0.35.1-py2.py3-none-any.whl (33 kB)
+Collecting twine<3.3,>=3.2.0 (from -r requirements/requirements-packaging.txt (line 5))
+  Downloading twine-3.2.0-py3-none-any.whl (34 kB)
+ERROR: Ignored the following versions that require a different python version: 0.13.0 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.6; 0.13.1 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.7; 0.13.10 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.13.11 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.13.12 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.13.2 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.7; 0.13.3 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.7; 0.13.4 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.8; 0.13.5 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.8; 0.13.6 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.8; 0.13.7 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.13.8 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.13.9 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9; 0.14.0 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.10; 0.14.1 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.10; 0.14.2 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.10; 0.14.3 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.10; 0.14.4 Requires-Python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.10
+ERROR: Could not find a version that satisfies the requirement transifex-client<0.14,>=0.13.12 (from versions: 0.1, 0.2, 0.2.1, 0.3, 0.4, 0.4.1, 0.5, 0.5.1, 0.5.2, 0.6, 0.6.1, 0.7, 0.7.2, 0.7.3, 0.8, 0.9, 0.9.1, 0.10, 0.11b0, 0.11b3, 0.11, 0.11.1b0, 0.12b0, 0.12.1, 0.12.2, 0.12.3, 0.12.4, 0.12.5)
+ERROR: No matching distribution found for transifex-client<0.14,>=0.13.12
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt]; v = InvocationError('/workdir/djangorestframework-3.14.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rrequirements/requirements-packaging.txt -rrequirements/requirements-testing.txt -rrequirements/requirements-documentation.txt -rrequirements/requirements-optionals.txt -rrequirements/requirements-packaging.txt -rrequirements/requirements-testing.txt -rrequirements/requirements-documentation.txt -rrequirements/requirements-optionals.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt, -rrequirements/requirements-packaging.txt, -rrequirements/requirements-testing.txt, -rrequirements/requirements-documentation.txt, -rrequirements/requirements-optionals.txt]; v = InvocationError('/workdir/djangorestframework-3.14.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rrequirements/requirements-packaging.txt -rrequirements/requirements-testing.txt -rrequirements/requirements-documentation.txt -rrequirements/requirements-optionals.txt -rrequirements/requirements-packaging.txt -rrequirements/requirements-testing.txt -rrequirements/requirements-documentation.txt -rrequirements/requirements-optionals.txt', 1)

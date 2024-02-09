@@ -1,0 +1,36 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/ray/2.2.0/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rdoc/requirements-doc.txt
+	-rdoc/requirements-rtd.txt
+	-rdoc/source/ray-core/examples/lbfgs/ray-project/requirements.txt
+	-rci/repro-ci-requirements.txt
+	-rrelease/requirements_buildkite.txt
+	-rrelease/requirements.txt
+	-rrelease/ml_user_tests/horovod/driver_requirements.txt
+	-rrelease/ml_user_tests/ray-lightning/driver_requirements.txt
+	-rrelease/ml_user_tests/train/driver_requirements.txt
+	-rrelease/ml_user_tests/tune_rllib/driver_requirements.txt
+	-rrelease/lightgbm_tests/requirements.txt
+	-rpython/requirements_linters.txt
+	-rpython/requirements_test.txt
+	-rpython/requirements.txt
+	-rpython/ray/util/collective/requirements.txt
+	-rpython/ray/tune/requirements-dev.txt
+	-rpython/ray/tests/project_files/session-tests/project-pass/ray-project/requirements.txt
+	-rpython/ray/tests/project_files/session-tests/invalid-config-fail/ray-project/requirements.txt
+	-rpython/ray/tests/project_files/session-tests/git-repo-pass/ray-project/requirements.txt
+	-rpython/ray/tests/project_files/requirements_project/requirements.txt
+	-rpython/ray/tests/project_files/project1/requirements.txt
+	-rpython/requirements/data_processing/requirements_dataset.txt
+	-rpython/requirements/data_processing/requirements.txt
+	-rpython/requirements/ml/requirements_rllib.txt
+	-rpython/requirements/ml/requirements_train.txt
+	-rpython/requirements/ml/requirements_tune.txt
+	-rpython/requirements/ml/requirements_ml_docker.txt
+	-rpython/requirements/ml/requirements_dl.txt
+	-rpython/requirements/ml/requirements_upstream.txt
+	-rpython/requirements/compat/requirements_legacy_compat.txt
+	-rbinder/requirements.txt
+

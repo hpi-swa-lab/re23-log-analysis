@@ -1,0 +1,15 @@
+GLOB sdist-make: /workdir/lxml-4.9.1/setup.py
+ERROR: invocation failed (exit code 1), logfile: /workdir/lxml-4.9.1/.tox/log/GLOB-0.log
+================================== log start ===================================
+Building lxml version 4.9.1.
+Traceback (most recent call last):
+  File "/workdir/lxml-4.9.1/setup.py", line 270, in <module>
+    **setup_extra_options()
+  File "/workdir/lxml-4.9.1/setup.py", line 162, in setup_extra_options
+    ext_modules = setupinfo.ext_modules(
+  File "/workdir/lxml-4.9.1/setupinfo.py", line 102, in ext_modules
+    raise RuntimeError(
+RuntimeError: ERROR: Trying to build without Cython, but pre-generated 'src/lxml/etree.c' is not available (pass --without-cython to ignore this error).
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError('/opt/graalpy/bin/graalpy setup.py sdist --formats=zip --dist-dir /workdir/lxml-4.9.1/.tox/dist', 1)

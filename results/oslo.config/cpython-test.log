@@ -1,0 +1,1116 @@
+GLOB sdist-make: /workdir/oslo.config-9.0.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements.txt, -rdoc/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/oslo.config-9.0.0/.tox/.tmp/package/1/oslo.config-9.0.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,autopage==0.5.2,Babel==2.13.1,bandit==1.6.2,certifi==2023.11.17,cfgv==3.4.0,charset-normalizer==3.3.2,cliff==4.4.0,cmd2==2.4.3,coverage==7.3.2,debtcollector==2.5.0,distlib==0.3.7,doc8==1.1.1,docutils==0.20.1,dulwich==0.21.6,entrypoints==0.3,exceptiongroup==1.2.0,extras==1.0.0,filelock==3.13.1,fixtures==4.1.0,flake8==3.7.9,gitdb==4.0.11,GitPython==3.1.40,hacking==3.0.1,identify==2.5.32,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,iso8601==2.1.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.6.1,mock==5.1.0,msgpack==1.0.7,mypy==1.7.0,mypy-extensions==1.0.0,netaddr==0.9.0,netifaces==0.11.0,nodeenv==1.8.0,openstackdocstheme==3.2.0,oslo.config @ file:///workdir/oslo.config-9.0.0/.tox/.tmp/package/1/oslo.config-9.0.0.zip#sha256=f5131fe77dac490860eb057d1453da6b9b2571b6ae994f70adf5a9bddbeb2a2b,oslo.context==5.3.0,oslo.i18n==6.2.0,oslo.log==5.4.0,oslo.serialization==5.2.0,oslo.utils==6.3.0,oslotest==4.5.0,packaging==23.2,pbr==6.0.0,platformdirs==4.0.0,pluggy==1.3.0,pre-commit==3.5.0,prettytable==3.9.0,pycodestyle==2.5.0,pyflakes==2.1.1,Pygments==2.17.2,pyinotify==0.9.6,pyparsing==3.1.1,pyperclip==1.8.2,pytest==7.4.3,python-dateutil==2.8.2,python-subunit==1.4.4,pytz==2023.3.post1,PyYAML==6.0.1,reno==4.0.0,requests==2.31.0,requests-mock==1.11.0,restructuredtext-lint==1.4.0,rfc3986==2.0.0,six==1.16.0,smmap==5.0.1,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-apidoc==0.4.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,stestr==4.1.0,stevedore==5.1.0,testscenarios==0.5.0,testtools==2.7.1,tomli==2.0.1,tomlkit==0.12.3,typing_extensions==4.8.0,tzdata==2023.3,urllib3==2.1.0,virtualenv==20.24.7,voluptuous==0.14.1,wcwidth==0.2.12,wrapt==1.16.0,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='664251626'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/oslo.config/9.0.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/oslo.config-9.0.0
+plugins: requests-mock-1.11.0
+collecting ... collected 787 items
+
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_args_already_parsed_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_config_dir_not_found_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_config_file_parse_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_config_files_not_found_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_config_files_permission_denied_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_duplicate_opt_error PASSED [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_error PASSED     [  0%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_no_such_group_error PASSED [  1%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_no_such_opt_error PASSED [  1%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_no_such_opt_error_with_group PASSED [  1%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_required_opt_error PASSED [  1%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_required_opt_error_with_group PASSED [  1%]
+oslo_config/tests/test_cfg.py::ExceptionsTestCase::test_template_substitution_error PASSED [  1%]
+oslo_config/tests/test_cfg.py::UsageTestCase::test_print_custom_usage PASSED [  1%]
+oslo_config/tests/test_cfg.py::UsageTestCase::test_print_help PASSED     [  1%]
+oslo_config/tests/test_cfg.py::UsageTestCase::test_print_usage PASSED    [  2%]
+oslo_config/tests/test_cfg.py::HelpTestCase::test_print_help PASSED      [  2%]
+oslo_config/tests/test_cfg.py::HelpTestCase::test_print_help_with_deprecated PASSED [  2%]
+oslo_config/tests/test_cfg.py::HelpTestCase::test_print_sorted_help PASSED [  2%]
+oslo_config/tests/test_cfg.py::HelpTestCase::test_print_sorted_help_with_positionals PASSED [  2%]
+oslo_config/tests/test_cfg.py::HelpTestCase::test_print_strOpt_with_choices_help PASSED [  2%]
+oslo_config/tests/test_cfg.py::FindConfigFilesTestCase::test_find_config_files PASSED [  2%]
+oslo_config/tests/test_cfg.py::FindConfigFilesTestCase::test_find_config_files_overrides PASSED [  2%]
+oslo_config/tests/test_cfg.py::FindConfigFilesTestCase::test_find_config_files_snap PASSED [  3%]
+oslo_config/tests/test_cfg.py::FindConfigFilesTestCase::test_find_config_files_with_extension PASSED [  3%]
+oslo_config/tests/test_cfg.py::FindConfigDirsTestCase::test_find_config_dirs PASSED [  3%]
+oslo_config/tests/test_cfg.py::FindConfigDirsTestCase::test_find_config_dirs_non_exists PASSED [  3%]
+oslo_config/tests/test_cfg.py::FindConfigDirsTestCase::test_find_config_dirs_snap PASSED [  3%]
+oslo_config/tests/test_cfg.py::FindConfigDirsTestCase::test_find_config_dirs_with_extension PASSED [  3%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_default_config_file PASSED [  3%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_default_config_file_priority PASSED [  3%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_default_config_file_with_value PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_do_not_use_default_multi_arg PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_do_not_use_default_single_arg PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_find_default_config_file PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_no_default_config_file PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigFilesTestCase::test_use_default PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_default_config_dir PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_default_config_dir_priority PASSED [  4%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_default_config_dir_with_value PASSED [  5%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_do_not_use_default_multi_arg PASSED [  5%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_do_not_use_default_single_arg PASSED [  5%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_find_default_config_dir PASSED [  5%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_no_default_config_dir PASSED [  5%]
+oslo_config/tests/test_cfg.py::DefaultConfigDirsTestCase::test_use_default PASSED [  5%]
+oslo_config/tests/test_cfg.py::CliOptsTestCase::test_cli FAILED          [  5%]
+oslo_config/tests/test_cfg.py::CliSpecialOptsTestCase::test_config_file PASSED [  5%]
+oslo_config/tests/test_cfg.py::CliSpecialOptsTestCase::test_help PASSED  [  6%]
+oslo_config/tests/test_cfg.py::CliSpecialOptsTestCase::test_version PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_missing_required_cli_opt PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_optional_positional_hyphenated_opt_defined PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_optional_positional_hyphenated_opt_undefined PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_optional_positional_opt_defined PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_optional_positional_opt_undefined PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_bool PASSED [  6%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_dict_arg PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_dict_default PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_dict_empty_default PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_dict_none_default PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_float_arg PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_float_default PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_float_none_default PASSED [  7%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_int_arg PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_int_default PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_int_none_default PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_ip_arg PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_ip_default PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_ip_none_default PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_list_arg PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_list_default PASSED [  8%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_list_empty_default PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_list_none_default PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_multistr_arg PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_multistr_default PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_multistr_empty_default PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_multistr_none_default PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_opt_order PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_opt_unregister PASSED [  9%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_opts_order PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_port_arg PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_port_default PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_port_none_default PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_str_arg PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_str_default PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_str_none_default PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_uri_arg PASSED [ 10%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_uri_default PASSED [ 11%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_positional_uri_none_default PASSED [ 11%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_required_positional_hyphenated_opt_defined PASSED [ 11%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_required_positional_hyphenated_opt_undefined PASSED [ 11%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_required_positional_opt_defined PASSED [ 11%]
+oslo_config/tests/test_cfg.py::PositionalTestCase::test_required_positional_opt_undefined PASSED [ 11%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_cli_inverse_override PASSED [ 11%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_cli_order_override PASSED [ 11%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_cli_value_override PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_default_false PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_default_none PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_file_value_override PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_ignore_dgroup PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_ignore_dname PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_ignore_group_and_dname PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_use_default_dgroup PASSED [ 12%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_use_dgroup PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_use_dgroup_and_dname PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_use_dname PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_bool_value PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_colon_in_value PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_default PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_deprecated PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_ignore_dgroup PASSED [ 13%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_ignore_dgroup_and_dname PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_ignore_dname PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_ignore_dgroup PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_ignore_dgroup_and_dname PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_ignore_dname PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_use_default_dgroup PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_use_dgroup PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_use_dgroup_and_dname PASSED [ 14%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_spaces_use_dname PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_use_default_dgroup PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_use_dgroup PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_use_dgroup_and_dname PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_use_dname PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_value PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_value_duplicate_key PASSED [ 15%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_value_no_colon PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_value_override PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_dict_values_override_deprecated PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_default PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_default_wrong_type PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_ignore_dgroup PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_ignore_dgroup_and_dname PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_ignore_dname PASSED [ 16%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_min_greater_max PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_min_max_above_max PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_min_max_below_min PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_min_max_in_range PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_only_max_above_max PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_only_max_in_range PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_only_min_below_min PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_only_min_in_range PASSED [ 17%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_use_default_dgroup PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_use_dgroup PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_use_dgroup_and_dname PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_use_dname PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_value PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_float_value_override PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_default PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_ignore_dgroup PASSED [ 18%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_ignore_dgroup_and_dname PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_ignore_dname PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_min_greater_max PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_min_max PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_string_default_type PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_use_default_dgroup PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_use_dgroup PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_use_dgroup_and_dname PASSED [ 19%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_use_dname PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_value PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_int_value_override PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_bounds PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_default PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_default_wrong_type PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_ignore_dgroup PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_ignore_dgroup_and_dname PASSED [ 20%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_ignore_dname PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_item_type PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_item_wrong_type PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_ignore_dgroup PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_ignore_dgroup_and_dname PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_ignore_dname PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_use_default_dgroup PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_use_dgroup PASSED [ 21%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_use_dgroup_and_dname PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_spaces_use_dname PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_use_default_dgroup PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_use_dgroup PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_use_dgroup_and_dname PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_use_dname PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_value PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_list_value_override PASSED [ 22%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multiple_opts PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multistr_default PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multistr_deprecated PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multistr_value PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multistr_values_append PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_multistr_values_append_deprecated PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_list PASSED [ 23%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_list_default PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_list_only_default PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_list_outside_range PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_min_greater_max PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_min_max_above_max PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_min_max_below_min PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_min_max_in_range PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_only_max_above_max PASSED [ 24%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_only_max_in_range PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_only_min_below_min PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_only_min_in_range PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_port_outside_range PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_raw_value PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_sorted_group PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_default PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_ignore_dgroup PASSED [ 25%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_ignore_dgroup_and_dname PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_ignore_dname PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_use_default_dgroup PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_use_dgroup PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_use_dgroup_and_dname PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_use_dname PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_value PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_value_override PASSED [ 26%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_value_override_use_deprecated PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_conf_file_str_value_with_good_choice_value PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_use_deprecated_for_removal_with_reason PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileOptsTestCase::test_use_deprecated_for_removal_without_reason PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileReloadTestCase::test_conf_files_reload PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileReloadTestCase::test_conf_files_reload_default PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileReloadTestCase::test_conf_files_reload_error PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileReloadTestCase::test_conf_files_reload_file_not_found PASSED [ 27%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_clear PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_conf_files_mutate_foo PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_conf_files_mutate_group PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_conf_files_mutate_none PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_diff PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_hooks_invoked_once PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_hooks_see_new_values PASSED [ 28%]
+oslo_config/tests/test_cfg.py::ConfigFileMutateTestCase::test_warn_immutability PASSED [ 28%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group PASSED  [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_by_name PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_override_deprecated_group PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_override_deprecated_group_and_name PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_override_deprecated_name PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_with_capital_name PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_with_capital_name_on_legacy_code PASSED [ 29%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_with_deprecated_group PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_with_deprecated_group_and_name PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_in_config_file_with_deprecated_name PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_with_conf_and_group_opts PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_arg_group_with_default PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_autocreate_group_by_group PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_autocreate_group_by_name PASSED [ 30%]
+oslo_config/tests/test_cfg.py::OptGroupsTestCase::test_autocreate_title PASSED [ 31%]
+oslo_config/tests/test_cfg.py::MappingInterfaceTestCase::test_mapping_interface PASSED [ 31%]
+oslo_config/tests/test_cfg.py::MappingInterfaceTestCase::test_mapping_interface_with_group PASSED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_attribute_and_key_name FAILED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_cli_opt_name FAILED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_config_file_opt_name FAILED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name FAILED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_alternate_group FAILED [ 31%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_cli FAILED [ 32%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_config_file FAILED [ 32%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts FAILED [ 32%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts_cli FAILED [ 32%]
+oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts_config_file FAILED [ 32%]
+oslo_config/tests/test_cfg.py::ReRegisterOptTestCase::test_conf_file_re_register_opt PASSED [ 32%]
+oslo_config/tests/test_cfg.py::ReRegisterOptTestCase::test_conf_file_re_register_opt_in_group PASSED [ 32%]
+oslo_config/tests/test_cfg.py::RegisterOptNameTestCase::test_register_opt_with_disallow_name PASSED [ 32%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_dict_sub_default_from_arg PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_dict_sub_default_from_config_file PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_dict_sub_default_from_default PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_dict_sub_default_from_default_multi PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_dict_sub_default_from_default_recurse PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_arg_from_arg PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_arg_from_config_file PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_arg_from_default PASSED [ 33%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_config_file_from_arg PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_config_file_from_config_file PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_config_file_from_default PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_default_from_arg PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_default_from_config_file PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_default_from_default PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_default_from_default_recurse PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_group_from_default PASSED [ 34%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_set_default PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_set_override PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_with_backslash_escape_char PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_str_sub_with_dollar_escape_char PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_arg_from_arg PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_arg_from_config_file PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_arg_from_default PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_config_file_from_arg PASSED [ 35%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_config_file_from_config_file PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_config_file_from_default PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_default_from_arg PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_default_from_config_file PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_default_from_default PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_default_from_default_recurse PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_group_from_args_deprecated PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_group_from_configfile_deprecated PASSED [ 36%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_group_from_default PASSED [ 37%]
+oslo_config/tests/test_cfg.py::TemplateSubstitutionTestCase::test_sub_group_from_default_deprecated PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ConfigDirTestCase::test_config_dir PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ConfigDirTestCase::test_config_dir_default_file_precedence PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ConfigDirTestCase::test_config_dir_doesnt_exist PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ConfigDirTestCase::test_config_dir_file_precedence PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ConfigDirTestCase::test_config_dir_multistr PASSED [ 37%]
+oslo_config/tests/test_cfg.py::ReparseTestCase::test_reparse PASSED      [ 37%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_List_override PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test__str_override PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test__wrong_type_override PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_bool_override PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_cli_bool_default PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_cli_bool_override PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_default_none PASSED [ 38%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_default_override PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_group_default_override PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_group_no_default_override PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_group_override PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_int_override_with_None PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_no_default_override PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_override PASSED   [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_override_none PASSED [ 39%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_set_default_not_in_choices PASSED [ 40%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_set_override_in_choices PASSED [ 40%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_set_override_not_in_choices PASSED [ 40%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_str_override_with_None PASSED [ 40%]
+oslo_config/tests/test_cfg.py::OverridesTestCase::test_wrong_type_default_override PASSED [ 40%]
+oslo_config/tests/test_cfg.py::ResetAndClearTestCase::test_clear PASSED  [ 40%]
+oslo_config/tests/test_cfg.py::ResetAndClearTestCase::test_reset_and_clear_with_defaults_and_overrides PASSED [ 40%]
+oslo_config/tests/test_cfg.py::UnregisterOptTestCase::test_unregister_opt PASSED [ 40%]
+oslo_config/tests/test_cfg.py::UnregisterOptTestCase::test_unregister_opt_from_group PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportOptTestCase::test_import_opt PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportOptTestCase::test_import_opt_import_errror PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportOptTestCase::test_import_opt_in_group PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportOptTestCase::test_import_opt_no_such_group PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportOptTestCase::test_import_opt_no_such_opt PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportGroupTestCase::test_import_group PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportGroupTestCase::test_import_group_import_error PASSED [ 41%]
+oslo_config/tests/test_cfg.py::ImportGroupTestCase::test_import_group_no_such_group PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_missing_required_cli_group_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_missing_required_cli_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_missing_required_group_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_missing_required_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_cli_group_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_cli_opt PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_cli_opt_with_dash PASSED [ 42%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_group_opt PASSED [ 43%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_opt PASSED [ 43%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_opt_with_default PASSED [ 43%]
+oslo_config/tests/test_cfg.py::RequiredOptsTestCase::test_required_opt_with_override PASSED [ 43%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_already_parsed PASSED [ 43%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_bad_cli_arg PASSED  [ 43%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_bad_float_arg PASSED [ 43%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_bad_int_arg PASSED  [ 43%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_bad_bool PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_bad_float PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_bad_int PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_broken PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_not_found PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_conf_file_permission_denied PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_error_duplicate PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_error_duplicate_short PASSED [ 44%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_error_duplicate_with_different_dest PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_ok_duplicate PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_set_default_unknown_attr PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_set_default_unknown_group PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_set_override_unknown_attr PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_set_override_unknown_group PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_str_sub_from_group PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_str_sub_from_group_with_brace PASSED [ 45%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_str_sub_none_value PASSED [ 46%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_unknown_attr PASSED [ 46%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_unknown_attr_is_attr_error PASSED [ 46%]
+oslo_config/tests/test_cfg.py::SadPathTestCase::test_unknown_group_attr PASSED [ 46%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_config_dirs_empty_list_when_nothing_parsed PASSED [ 46%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_find_file_without_init PASSED [ 46%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_find_policy_file PASSED [ 46%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_find_policy_file_with_config_dir PASSED [ 47%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_find_policy_file_with_config_file PASSED [ 47%]
+oslo_config/tests/test_cfg.py::FindFileTestCase::test_find_policy_file_with_multiple_config_dirs PASSED [ 47%]
+oslo_config/tests/test_cfg.py::OptDumpingTestCase::test_log_opt_values PASSED [ 47%]
+oslo_config/tests/test_cfg.py::OptDumpingTestCase::test_log_opt_values_empty_config PASSED [ 47%]
+oslo_config/tests/test_cfg.py::OptDumpingTestCase::test_log_opt_values_from_sys_argv PASSED [ 47%]
+oslo_config/tests/test_cfg.py::ConfigParserTestCase::test__parse_file_ioerror PASSED [ 47%]
+oslo_config/tests/test_cfg.py::ConfigParserTestCase::test_no_section PASSED [ 47%]
+oslo_config/tests/test_cfg.py::ConfigParserTestCase::test_parse_file PASSED [ 48%]
+oslo_config/tests/test_cfg.py::ConfigParserTestCase::test_parse_file_with_normalized PASSED [ 48%]
+oslo_config/tests/test_cfg.py::NamespaceTestCase::test_attrs_subparser PASSED [ 48%]
+oslo_config/tests/test_cfg.py::NamespaceTestCase::test_attrs_subparser_failure PASSED [ 48%]
+oslo_config/tests/test_cfg.py::NamespaceTestCase::test_cli PASSED        [ 48%]
+oslo_config/tests/test_cfg.py::NamespaceTestCase::test_multiple_files PASSED [ 48%]
+oslo_config/tests/test_cfg.py::NamespaceTestCase::test_single_file PASSED [ 48%]
+oslo_config/tests/test_cfg.py::TildeExpansionTestCase::test_config_dir_tilde PASSED [ 48%]
+oslo_config/tests/test_cfg.py::TildeExpansionTestCase::test_config_file_tilde PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_errors PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_multiple PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_no_handler PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_not_cli PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_resparse PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_with_dest PASSED [ 49%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_with_group PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_with_help PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SubCommandTestCase::test_sub_command_with_parent PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_change_default PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_change_default_many PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_default_from_none PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_default_to_none PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_group_change_default PASSED [ 50%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_group_default_from_none PASSED [ 51%]
+oslo_config/tests/test_cfg.py::SetDefaultsTestCase::test_group_default_to_none PASSED [ 51%]
+oslo_config/tests/test_cfg.py::DeprecatedOptionsTestCase::test_deprecated_opts_equal PASSED [ 51%]
+oslo_config/tests/test_cfg.py::DeprecatedOptionsTestCase::test_deprecated_opts_not_equal PASSED [ 51%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedOptionsTestCase::test_conf_file_override_use_deprecated_multi_opts PASSED [ 51%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedOptionsTestCase::test_conf_file_override_use_deprecated_name_and_group PASSED [ 51%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedOptionsTestCase::test_conf_file_override_use_deprecated_opts PASSED [ 51%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedCliOptionsTestCase::test_conf_file_common_deprecated_group PASSED [ 51%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedCliOptionsTestCase::test_conf_file_override_use_deprecated_multi_opts PASSED [ 52%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedCliOptionsTestCase::test_conf_file_override_use_deprecated_name_and_group PASSED [ 52%]
+oslo_config/tests/test_cfg.py::MultipleDeprecatedCliOptionsTestCase::test_conf_file_override_use_deprecated_opts PASSED [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_choice_bad PASSED   [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_choice_default PASSED [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_choice_good PASSED  [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_bad_choice_value PASSED [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_choice_bad_default PASSED [ 52%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_choice_empty_value PASSED [ 53%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_choice_none_value PASSED [ 53%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_choice_value PASSED [ 53%]
+oslo_config/tests/test_cfg.py::ChoicesTestCase::test_conf_file_choice_value_override PASSED [ 53%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_choice_bad PASSED [ 53%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_choice_default PASSED [ 53%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_choice_good_with_list PASSED [ 53%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_choice_good_with_tuple PASSED [ 54%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_choice_out_range PASSED [ 54%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_conf_file_bad_choice_value PASSED [ 54%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_conf_file_choice_bad_default PASSED [ 54%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_conf_file_choice_value PASSED [ 54%]
+oslo_config/tests/test_cfg.py::PortChoicesTestCase::test_conf_file_choice_value_override PASSED [ 54%]
+oslo_config/tests/test_cfg.py::RegexTestCase::test_conf_file_regex_bad_value PASSED [ 54%]
+oslo_config/tests/test_cfg.py::RegexTestCase::test_conf_file_regex_value PASSED [ 54%]
+oslo_config/tests/test_cfg.py::RegexTestCase::test_regex_bad PASSED      [ 55%]
+oslo_config/tests/test_cfg.py::RegexTestCase::test_regex_good PASSED     [ 55%]
+oslo_config/tests/test_cfg.py::RegexTestCase::test_regex_with_choice PASSED [ 55%]
+oslo_config/tests/test_cfg.py::QuotesTestCase::test_conf_file_quotes_bad_value PASSED [ 55%]
+oslo_config/tests/test_cfg.py::QuotesTestCase::test_conf_file_quotes_good_value PASSED [ 55%]
+oslo_config/tests/test_cfg.py::QuotesTestCase::test_quotes_bad PASSED    [ 55%]
+oslo_config/tests/test_cfg.py::QuotesTestCase::test_quotes_good PASSED   [ 55%]
+oslo_config/tests/test_cfg.py::IgnoreCaseTestCase::test_conf_file_ignore_case_with_choices PASSED [ 55%]
+oslo_config/tests/test_cfg.py::IgnoreCaseTestCase::test_conf_file_ignore_case_with_regex PASSED [ 56%]
+oslo_config/tests/test_cfg.py::IgnoreCaseTestCase::test_ignore_case_with_choices PASSED [ 56%]
+oslo_config/tests/test_cfg.py::IgnoreCaseTestCase::test_ignore_case_with_regex PASSED [ 56%]
+oslo_config/tests/test_cfg.py::StrOptMaxLengthTestCase::test_stropt_max_length_bad PASSED [ 56%]
+oslo_config/tests/test_cfg.py::StrOptMaxLengthTestCase::test_stropt_max_length_good PASSED [ 56%]
+oslo_config/tests/test_cfg.py::URIOptMaxLengthTestCase::test_uriopt_max_length_bad PASSED [ 56%]
+oslo_config/tests/test_cfg.py::URIOptMaxLengthTestCase::test_uriopt_max_length_good PASSED [ 56%]
+oslo_config/tests/test_cfg.py::URIOptSchemesTestCase::test_uriopt_schemes_bad PASSED [ 56%]
+oslo_config/tests/test_cfg.py::URIOptSchemesTestCase::test_uriopt_schemes_good PASSED [ 57%]
+oslo_config/tests/test_cfg.py::PrintHelpTestCase::test_print_help_with_clear PASSED [ 57%]
+oslo_config/tests/test_cfg.py::PrintHelpTestCase::test_print_help_without_init PASSED [ 57%]
+oslo_config/tests/test_cfg.py::OptTestCase::test_illegal_name PASSED     [ 57%]
+oslo_config/tests/test_cfg.py::OptTestCase::test_opt_eq PASSED           [ 57%]
+oslo_config/tests/test_cfg.py::OptTestCase::test_opt_not_eq PASSED       [ 57%]
+oslo_config/tests/test_cfg.py::SectionsTestCase::test_list_all_sections PASSED [ 57%]
+oslo_config/tests/test_cfg.py::SectionsTestCase::test_list_all_sections_post_mutate PASSED [ 57%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestScenarios::test_deprecated_logging FAILED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTests::test_DeprecatedOpt PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTests::test_check_deprecated PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTests::test_deprecated_for_removal PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTests::test_deprecated_for_removal_with_group PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTests::test_deprecated_with_dest PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_DeprecatedOpt PASSED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_check_deprecated FAILED [ 58%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_for_removal FAILED [ 59%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_for_removal_with_group FAILED [ 59%]
+oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_with_dest FAILED [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_assert_default_files_cleanup PASSED [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_cleanup PASSED   [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_cleanup_unregister_cli_option PASSED [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_cleanup_unregister_option PASSED [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_load_custom_files PASSED [ 59%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_load_raw_values PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_overridden_value PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_overridden_value_with_wrong_type PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_register_cli_option PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_register_cli_options PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_register_option PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_register_options PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_set_default PASSED [ 60%]
+oslo_config/tests/test_fixture.py::ConfigTestCase::test_set_default_group PASSED [ 61%]
+oslo_config/tests/test_generator.py::GeneratorTestCase::test_generate FAILED [ 61%]
+oslo_config/tests/test_generator.py::GeneratorFileHandlingTestCase::test_close_generated_file PASSED [ 61%]
+oslo_config/tests/test_generator.py::GeneratorFileHandlingTestCase::test_not_close_external_file PASSED [ 61%]
+oslo_config/tests/test_generator.py::DriverOptionTestCase::test_driver_option PASSED [ 61%]
+oslo_config/tests/test_generator.py::MachineReadableGeneratorTestCase::test_generate FAILED [ 61%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_cleanup_opts_default PASSED [ 61%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_cleanup_opts_dup_groups_opt PASSED [ 62%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_cleanup_opts_dup_mixed_case_groups_opt PASSED [ 62%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_cleanup_opts_dup_namespace_groups_opts PASSED [ 62%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_cleanup_opts_dup_opt PASSED [ 62%]
+oslo_config/tests/test_generator.py::IgnoreDoublesTestCase::test_list_ignores_doubles PASSED [ 62%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_get_groups_empty_ns PASSED [ 62%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_get_groups_multiple_ns PASSED [ 62%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_get_groups_single_ns PASSED [ 62%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_output_default_list_opt_with_string_value_multiple_entries PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_output_default_list_opt_with_string_value_single_entry PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_output_opts_empty_default PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorAdditionalTestCase::test_output_opts_group PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorMutableOptionTestCase::test_do_not_include_message PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorMutableOptionTestCase::test_include_message PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorRaiseErrorTestCase::test_generator_call_with_no_arguments_raises_system_exit PASSED [ 63%]
+oslo_config/tests/test_generator.py::GeneratorRaiseErrorTestCase::test_generator_raises_error PASSED [ 63%]
+oslo_config/tests/test_generator.py::ChangeDefaultsTestCase::test_change_default PASSED [ 64%]
+oslo_config/tests/test_generator.py::ChangeDefaultsTestCase::test_no_modifiers_registered PASSED [ 64%]
+oslo_config/tests/test_generator.py::RequiredOptionTestCase::test_required_option_order_single_ns PASSED [ 64%]
+oslo_config/tests/test_generator.py::SummarizedOptionsTestCase::test_summarized_option_order_single_ns PASSED [ 64%]
+oslo_config/tests/test_generator.py::AdvancedOptionsTestCase::test_advanced_option_order_single_ns PASSED [ 64%]
+oslo_config/tests/test_generator.py::HostAddressTestCase::test_host_address PASSED [ 64%]
+oslo_config/tests/test_generator.py::HostDomainTestCase::test_host_domain PASSED [ 64%]
+oslo_config/tests/test_get_location.py::LocationTestCase::test_not_user_controlled PASSED [ 64%]
+oslo_config/tests/test_get_location.py::LocationTestCase::test_user_controlled PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_default_cli PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_duplicate_registration PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_group_opt PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_opt_default PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_set_default_on_config_opt PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_set_defaults_func PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_set_override PASSED [ 65%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_user_cli PASSED [ 66%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_user_cli_opt_in_file PASSED [ 66%]
+oslo_config/tests/test_get_location.py::GetLocationTestCase::test_user_file PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::BaseParserTestCase::test_empty_key PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::BaseParserTestCase::test_invalid_assignment PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::BaseParserTestCase::test_invalid_section PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::BaseParserTestCase::test_no_section_name PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::BaseParserTestCase::test_unexpected_continuation PASSED [ 66%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_colon PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_equal PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_multiline PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_multline_empty PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_space_double_quote PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_assignment_space_single_quote PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_blank_line PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_comment PASSED [ 67%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_empty_assignment PASSED [ 68%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_new_section PASSED [ 68%]
+oslo_config/tests/test_iniparser.py::ParserTestCase::test_section_assignment PASSED [ 68%]
+oslo_config/tests/test_iniparser.py::ExceptionTestCase::test_parseerror PASSED [ 68%]
+oslo_config/tests/test_sources.py::TestProcessingSources::test_multiple_sources_named PASSED [ 68%]
+oslo_config/tests/test_sources.py::TestProcessingSources::test_no_sources PASSED [ 68%]
+oslo_config/tests/test_sources.py::TestProcessingSources::test_no_sources_default PASSED [ 68%]
+oslo_config/tests/test_sources.py::TestProcessingSources::test_source_named PASSED [ 68%]
+oslo_config/tests/test_sources.py::TestLoading::test_driver_missing PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestLoading::test_source_missing PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestLoading::test_unknown_driver PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestEnvironmentConfigurationSource::test_cli_beats_env PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestEnvironmentConfigurationSource::test_env_beats_files PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestEnvironmentConfigurationSource::test_invalid_env PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestEnvironmentConfigurationSource::test_simple_environment_get PASSED [ 69%]
+oslo_config/tests/test_sources.py::TestEnvironmentConfigurationSource::test_use_env_false_allows_files PASSED [ 70%]
+oslo_config/tests/test_sources.py::URISourceTestCase::test_configuration_source PASSED [ 70%]
+oslo_config/tests/test_sources.py::URISourceTestCase::test_fetch_uri PASSED [ 70%]
+oslo_config/tests/test_sources.py::URISourceTestCase::test_incomplete_driver PASSED [ 70%]
+oslo_config/tests/test_sources.py::URISourceTestCase::test_list_opts PASSED [ 70%]
+oslo_config/tests/test_sources.py::URISourceTestCase::test_multiple_configuration_sources PASSED [ 70%]
+oslo_config/tests/test_sphinxconfiggen.py::SingleSampleGenerationTest::test_sample_gen_with_single_config_file PASSED [ 70%]
+oslo_config/tests/test_sphinxconfiggen.py::SingleSampleGenerationTest::test_sample_gen_with_single_config_file_no_base PASSED [ 70%]
+oslo_config/tests/test_sphinxconfiggen.py::MultipleSampleGenerationTest::test_multi_sample_gen PASSED [ 71%]
+oslo_config/tests/test_sphinxconfiggen.py::MultipleSampleGenerationTest::test_multi_sample_gen_with_without_any_base PASSED [ 71%]
+oslo_config/tests/test_sphinxconfiggen.py::MultipleSampleGenerationTest::test_multi_sample_gen_with_without_one_base PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_advanced PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_deprecated_for_removal PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_deprecated_opts_with_deprecated_group PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_deprecated_opts_without_deprecated_group PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_group_obj_with_help PASSED [ 71%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_group_obj_without_help PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_mutable PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_none_in_default PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_not_advanced PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_not_mutable PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_choices PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_choices_with_descriptions PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_default_value PASSED [ 72%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_max PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_max_0 PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_min PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatGroupTest::test_with_min_0 PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatOptionHelpTest::test_dont_split_namespaces PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatOptionHelpTest::test_dont_split_namespaces_with_group PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatOptionHelpTest::test_split_namespaces PASSED [ 73%]
+oslo_config/tests/test_sphinxext.py::FormatOptionHelpTest::test_split_namespaces_with_group PASSED [ 73%]
+oslo_config/tests/test_types.py::ConfigTypeTests::test_concrete_class PASSED [ 74%]
+oslo_config/tests/test_types.py::ConfigTypeTests::test_none_concrete_class PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_empty_string_passes PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_equal PASSED      [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_equal_with_equal_quote_falgs PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_equal_with_same_choices PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_equal_with_same_regex PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_ignore_case PASSED [ 74%]
+oslo_config/tests/test_types.py::StringTypeTests::test_ignore_case_raises PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_listed_value PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_listed_value_dict PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_listed_value_tuple PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_max_length PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_not_equal_to_other_class PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_not_equal_with_different_choices PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_not_equal_with_different_quote_falgs PASSED [ 75%]
+oslo_config/tests/test_types.py::StringTypeTests::test_not_equal_with_different_regex PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_quotes_are_stripped PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_and_choices_raises PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_and_ignore_case PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_and_ignore_case_str PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_fails PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_matches PASSED [ 76%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_matches_uncompiled PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_regex_preserve_flags PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_repr PASSED       [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_repr_with_choices PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_repr_with_choices_dict PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_repr_with_choices_tuple PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_should_return_same_string_if_valid PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_single_quote_is_invalid PASSED [ 77%]
+oslo_config/tests/test_types.py::StringTypeTests::test_string_with_non_closed_quote_is_invalid PASSED [ 78%]
+oslo_config/tests/test_types.py::StringTypeTests::test_trailing_quote_is_ok PASSED [ 78%]
+oslo_config/tests/test_types.py::StringTypeTests::test_unlisted_value PASSED [ 78%]
+oslo_config/tests/test_types.py::StringTypeTests::test_with_no_values_returns_error PASSED [ 78%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_0 PASSED         [ 78%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_1 PASSED         [ 78%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_False PASSED     [ 78%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_True PASSED      [ 78%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_equal PASSED     [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_no PASSED        [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_not_equal_to_other_class PASSED [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_off PASSED       [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_on PASSED        [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_other_values_produce_error PASSED [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_repr PASSED      [ 79%]
+oslo_config/tests/test_types.py::BooleanTypeTests::test_yes PASSED       [ 79%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_choices_with_min_max PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_empty_string PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_equal PASSED     [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_equal_with_same_choices PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_equal_with_same_max_and_no_min PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_equal_with_same_min_and_max PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_equal_with_same_min_and_no_max PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_leading_whitespace_is_ignored PASSED [ 80%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_min_greater_max PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_negative_values_are_valid PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_non_digits_are_invalid PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_not_equal PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_not_equal_to_other_class PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_positive_values_are_valid PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr PASSED      [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_choices PASSED [ 81%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_choices_dict PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_choices_tuple PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_max PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_min PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_repr_with_min_and_max PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_trailing_whitespace_is_ignored PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_whitespace_string PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_choices_dict PASSED [ 82%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_choices_list PASSED [ 83%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_choices_tuple PASSED [ 83%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_max_and_min PASSED [ 83%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_max_zero PASSED [ 83%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_with_min_zero PASSED [ 83%]
+oslo_config/tests/test_types.py::IntegerTypeTests::test_zero_is_valid PASSED [ 83%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_decimal_format PASSED [ 83%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_decimal_format_negative_float PASSED [ 83%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_equal PASSED       [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_equal_with_same_max_and_no_min PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_equal_with_same_min_and_max PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_equal_with_same_min_and_no_max PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_exponential_format PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_min_greater_max PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_non_float_is_invalid PASSED [ 84%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_not_equal PASSED   [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_not_equal_to_other_class PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_repr PASSED        [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_repr_with_max PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_repr_with_min PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_repr_with_min_and_max PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_with_max_and_min PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_with_max_zero PASSED [ 85%]
+oslo_config/tests/test_types.py::FloatTypeTests::test_with_min_zero PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_bounds_parsing PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_bounds_required PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_empty_value PASSED  [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_equal PASSED        [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_equal_with_equal_custom_item_types PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_custom_type PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_custom_type_containing_trailing_comma PASSED [ 86%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_lists PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_values PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_values_containing_commas PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_list_of_values_containing_trailing_comma PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_not_equal_to_other_class PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_not_equal_with_non_equal_custom_item_types PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_repr PASSED         [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_single_value PASSED [ 87%]
+oslo_config/tests/test_types.py::ListTypeTests::test_tuple_of_custom_type PASSED [ 88%]
+oslo_config/tests/test_types.py::ListTypeTests::test_tuple_of_values PASSED [ 88%]
+oslo_config/tests/test_types.py::RangeTypeTests::test_range PASSED       [ 88%]
+oslo_config/tests/test_types.py::RangeTypeTests::test_range_bounds PASSED [ 88%]
+oslo_config/tests/test_types.py::RangeTypeTests::test_range_exclusive PASSED [ 88%]
+oslo_config/tests/test_types.py::DictTypeTests::test_bounds_parsing PASSED [ 88%]
+oslo_config/tests/test_types.py::DictTypeTests::test_bounds_required PASSED [ 88%]
+oslo_config/tests/test_types.py::DictTypeTests::test_custom_value_type PASSED [ 88%]
+oslo_config/tests/test_types.py::DictTypeTests::test_dict_of_dicts PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_dict_of_values PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_dict_of_values_containing_commas PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_empty_value PASSED  [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_equal PASSED        [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_equal_with_equal_custom_item_types PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_no_mapping_produces_error PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_not_equal_to_other_class PASSED [ 89%]
+oslo_config/tests/test_types.py::DictTypeTests::test_not_equal_with_non_equal_custom_item_types PASSED [ 90%]
+oslo_config/tests/test_types.py::DictTypeTests::test_repr PASSED         [ 90%]
+oslo_config/tests/test_types.py::DictTypeTests::test_single_value PASSED [ 90%]
+oslo_config/tests/test_types.py::IPAddressTypeTests::test_ipv4_address PASSED [ 90%]
+oslo_config/tests/test_types.py::IPAddressTypeTests::test_ipv6_address PASSED [ 90%]
+oslo_config/tests/test_types.py::IPAddressTypeTests::test_numbers PASSED [ 90%]
+oslo_config/tests/test_types.py::IPAddressTypeTests::test_strings PASSED [ 90%]
+oslo_config/tests/test_types.py::IPv4AddressTypeTests::test_ipv4_address PASSED [ 90%]
+oslo_config/tests/test_types.py::IPv4AddressTypeTests::test_ipv6_address PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv4AddressTypeTests::test_numbers PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv4AddressTypeTests::test_strings PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv6AddressTypeTests::test_ipv4_address PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv6AddressTypeTests::test_ipv6_address PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv6AddressTypeTests::test_numbers PASSED [ 91%]
+oslo_config/tests/test_types.py::IPv6AddressTypeTests::test_strings PASSED [ 91%]
+oslo_config/tests/test_types.py::HostAddressTypeTests::test_invalid_host_addresses PASSED [ 91%]
+oslo_config/tests/test_types.py::HostAddressTypeTests::test_valid_host_addresses PASSED [ 92%]
+oslo_config/tests/test_types.py::HostDomainTypeTests::test_invalid_host_addresses PASSED [ 92%]
+oslo_config/tests/test_types.py::HostDomainTypeTests::test_valid_host_addresses PASSED [ 92%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_empty_hostname_fails PASSED [ 92%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_equal PASSED    [ 92%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_invalid_characters PASSED [ 92%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_invalid_hostnames_with_numeric_characters PASSED [ 92%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_max_hostname_size PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_max_segment_size PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_no_start_end_hyphens PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_not_equal_to_other_class PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_repr PASSED     [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_should_return_same_hostname_if_valid PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_strip_trailing_dot PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_trailing_quote_is_invalid PASSED [ 93%]
+oslo_config/tests/test_types.py::HostnameTypeTests::test_valid_hostname PASSED [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_equality PASSED      [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_equality_length PASSED [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_equality_length_not PASSED [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_equality_schemes PASSED [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_equality_schemes_not PASSED [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_max_length PASSED    [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_repr PASSED          [ 94%]
+oslo_config/tests/test_types.py::URITypeTests::test_uri PASSED           [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_choices_with_min_max PASSED [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_equal PASSED        [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_equal_with_same_choices PASSED [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_equal_with_same_max_and_no_min PASSED [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_equal_with_same_min_and_max PASSED [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_equal_with_same_min_and_no_max PASSED [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_illegal_max PASSED  [ 95%]
+oslo_config/tests/test_types.py::PortTypeTests::test_illegal_min PASSED  [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_invalid_choices PASSED [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_min_greater_max PASSED [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_not_equal PASSED    [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_not_equal_to_other_class PASSED [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_port PASSED         [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr PASSED         [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr_with_choices PASSED [ 96%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr_with_choices_tuple PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr_with_max PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr_with_min PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_repr_with_min_and_max PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_choices_dict PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_choices_list PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_choices_tuple PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_max_and_min PASSED [ 97%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_max_zero PASSED [ 98%]
+oslo_config/tests/test_types.py::PortTypeTests::test_with_min_zero PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_no_type PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_not_list PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_string PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_string PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_string_non_str PASSED [ 98%]
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_string_non_str_spaces PASSED [ 98%]
+oslo_config/tests/test_validator.py::TestValidator::test_check_defaults PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_deprecated PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_deprecated_fatal_warnings PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_exclude_groups PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_invalid_options PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_missing PASSED  [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_missing_group PASSED [ 99%]
+oslo_config/tests/test_validator.py::TestValidator::test_passing PASSED  [100%]
+
+=================================== FAILURES ===================================
+___________________________ CliOptsTestCase.test_cli ___________________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 807, in test_cli
+    self.opt_class('foo', default=self.default,
+AttributeError: 'CliOptsTestCase' object has no attribute 'opt_class'
+
+_____________ OptNameSeparatorTestCase.test_attribute_and_key_name _____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2677, in test_attribute_and_key_name
+    self.conf.register_opt(cfg.StrOpt(self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+__________________ OptNameSeparatorTestCase.test_cli_opt_name __________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2685, in test_cli_opt_name
+    self.conf.register_cli_opt(cfg.BoolOpt(self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+______________ OptNameSeparatorTestCase.test_config_file_opt_name ______________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2692, in test_config_file_opt_name
+    self.conf.register_opt(cfg.BoolOpt(self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+________________ OptNameSeparatorTestCase.test_deprecated_name _________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2705, in test_deprecated_name
+    deprecated_name=self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+________ OptNameSeparatorTestCase.test_deprecated_name_alternate_group _________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2718, in test_deprecated_name_alternate_group
+    deprecated_name=self.opt_name,
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+______________ OptNameSeparatorTestCase.test_deprecated_name_cli _______________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2733, in test_deprecated_name_cli
+    deprecated_name=self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+__________ OptNameSeparatorTestCase.test_deprecated_name_config_file ___________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2741, in test_deprecated_name_config_file
+    deprecated_name=self.opt_name))
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+________________ OptNameSeparatorTestCase.test_deprecated_opts _________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2752, in test_deprecated_opts
+    oldopts = [cfg.DeprecatedOpt(self.opt_name)]
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+______________ OptNameSeparatorTestCase.test_deprecated_opts_cli _______________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2765, in test_deprecated_opts_cli
+    oldopts = [cfg.DeprecatedOpt(self.opt_name)]
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+__________ OptNameSeparatorTestCase.test_deprecated_opts_config_file ___________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 2774, in test_deprecated_opts_config_file
+    oldopts = [cfg.DeprecatedOpt(self.opt_name)]
+AttributeError: 'OptNameSeparatorTestCase' object has no attribute 'opt_name'
+
+___________ DeprecationWarningTestScenarios.test_deprecated_logging ____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5013, in test_deprecated_logging
+    if self.deprecated:
+AttributeError: 'DeprecationWarningTestScenarios' object has no attribute 'deprecated'. Did you mean: '_deprecate'?
+
+____________ DeprecationWarningTestsNoOsloLog.test_check_deprecated ____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: pythonlogging:'': {{{Deprecated: Option "bar" from group "DEFAULT" is deprecated. Use option "foo" from group "DEFAULT".}}}
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5073, in test_check_deprecated
+    self.assert_message_logged('bar', 'DEFAULT', 'foo', 'DEFAULT')
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5083, in assert_message_logged
+    self.assertEqual(self.log_prefix + expected + '\n',
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = '''\
+Option "bar" from group "DEFAULT" is deprecated. Use option "foo" from group "DEFAULT".
+'''
+actual    = '''\
+Deprecated: Option "bar" from group "DEFAULT" is deprecated. Use option "foo" from group "DEFAULT".
+'''
+
+_________ DeprecationWarningTestsNoOsloLog.test_deprecated_for_removal _________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: pythonlogging:'': {{{Deprecated: Option "foo" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.}}}
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5103, in test_deprecated_for_removal
+    self.assertEqual(self.log_prefix + expected, self.log_fixture.output)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = '''\
+Option "foo" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+'''
+actual    = '''\
+Deprecated: Option "foo" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+'''
+
+___ DeprecationWarningTestsNoOsloLog.test_deprecated_for_removal_with_group ____
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: pythonlogging:'': {{{Deprecated: Option "foo" from group "other" is deprecated for removal.  Its value may be silently ignored in the future.}}}
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5125, in test_deprecated_for_removal_with_group
+    self.assertEqual(self.log_prefix + expected, self.log_fixture.output)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = '''\
+Option "foo" from group "other" is deprecated for removal.  Its value may be silently ignored in the future.
+'''
+actual    = '''\
+Deprecated: Option "foo" from group "other" is deprecated for removal.  Its value may be silently ignored in the future.
+'''
+
+__________ DeprecationWarningTestsNoOsloLog.test_deprecated_with_dest __________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: pythonlogging:'': {{{Deprecated: Option "bar" from group "other" is deprecated. Use option "foo-bar" from group "other".}}}
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_cfg.py", line 5144, in test_deprecated_with_dest
+    self.assertEqual(self.log_prefix + expected, self.log_fixture.output)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = '''\
+Option "bar" from group "other" is deprecated. Use option "foo-bar" from group "other".
+'''
+actual    = '''\
+Deprecated: Option "bar" from group "other" is deprecated. Use option "foo-bar" from group "other".
+'''
+
+_______________________ GeneratorTestCase.test_generate ________________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_generator.py", line 987, in test_generate
+    if self.stdout:
+AttributeError: 'GeneratorTestCase' object has no attribute 'stdout'
+
+________________ MachineReadableGeneratorTestCase.test_generate ________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.config-9.0.0/oslo_config/tests/test_generator.py", line 1407, in test_generate
+    namespaces = [i[0] for i in self.opts]
+AttributeError: 'MachineReadableGeneratorTestCase' object has no attribute 'opts'
+
+=============================== warnings summary ===============================
+oslo_config/tests/test_get_location.py:22
+  /workdir/oslo.config-9.0.0/oslo_config/tests/test_get_location.py:22: PytestCollectionWarning: cannot collect test class 'TestConfigOpts' because it has a __init__ constructor (from: oslo_config/tests/test_get_location.py)
+    class TestConfigOpts(cfg.ConfigOpts):
+
+oslo_config/tests/test_iniparser.py:20
+  /workdir/oslo.config-9.0.0/oslo_config/tests/test_iniparser.py:20: PytestCollectionWarning: cannot collect test class 'TestParser' because it has a __init__ constructor (from: oslo_config/tests/test_iniparser.py)
+    class TestParser(iniparser.BaseParser):
+
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_no_type
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_string
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_string_non_str_spaces
+  /workdir/oslo.config-9.0.0/oslo_config/types.py:57: UserWarning: converting ' bar ' to a string
+    warnings.warn('converting \'%s\' to a string' % str_val)
+
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_list_not_list
+  /workdir/oslo.config-9.0.0/oslo_config/types.py:57: UserWarning: converting 'foo' to a string
+    warnings.warn('converting \'%s\' to a string' % str_val)
+
+oslo_config/tests/test_types.py::FormatSampleDefaultTests::test_string_non_str
+  /workdir/oslo.config-9.0.0/oslo_config/types.py:57: UserWarning: converting 'bar' to a string
+    warnings.warn('converting \'%s\' to a string' % str_val)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/oslo.config/9.0.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED oslo_config/tests/test_cfg.py::CliOptsTestCase::test_cli - Failed: NOT...
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_attribute_and_key_name
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_cli_opt_name
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_config_file_opt_name
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_alternate_group
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_cli
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_name_config_file
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts_cli
+FAILED oslo_config/tests/test_cfg.py::OptNameSeparatorTestCase::test_deprecated_opts_config_file
+FAILED oslo_config/tests/test_cfg.py::DeprecationWarningTestScenarios::test_deprecated_logging
+FAILED oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_check_deprecated
+FAILED oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_for_removal
+FAILED oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_for_removal_with_group
+FAILED oslo_config/tests/test_cfg.py::DeprecationWarningTestsNoOsloLog::test_deprecated_with_dest
+FAILED oslo_config/tests/test_generator.py::GeneratorTestCase::test_generate
+FAILED oslo_config/tests/test_generator.py::MachineReadableGeneratorTestCase::test_generate
+================== 18 failed, 769 passed, 7 warnings in 2.69s ==================
+ERROR: InvocationError for command /workdir/oslo.config-9.0.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/oslo.config/9.0.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

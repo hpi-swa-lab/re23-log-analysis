@@ -1,0 +1,86 @@
+GLOB sdist-make: /workdir/json5-0.9.14/setup.py
+graalpylibtest-unit-test-tests create: /workdir/json5-0.9.14/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/json5-0.9.14/.tox/.tmp/package/1/json5-0.9.14.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,json5 @ file:///workdir/json5-0.9.14/.tox/.tmp/package/1/json5-0.9.14.zip,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2226257632'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/json5/0.9.14/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/json5-0.9.14/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/json5-0.9.14
+collecting ... collected 67 items
+
+tests/host_test.py::HostTest::test_directory_and_file_operations PASSED  [  1%]
+tests/host_test.py::HostTest::test_print PASSED                          [  2%]
+tests/lib_test.py::TestLoads::test_arrays PASSED                         [  4%]
+tests/lib_test.py::TestLoads::test_bools PASSED                          [  5%]
+tests/lib_test.py::TestLoads::test_cls_is_not_supported PASSED           [  7%]
+tests/lib_test.py::TestLoads::test_duplicate_keys_should_be_allowed PASSED [  8%]
+tests/lib_test.py::TestLoads::test_duplicate_keys_should_be_allowed_by_default PASSED [ 10%]
+tests/lib_test.py::TestLoads::test_duplicate_keys_should_not_be_allowed PASSED [ 11%]
+tests/lib_test.py::TestLoads::test_empty_strings_are_errors PASSED       [ 13%]
+tests/lib_test.py::TestLoads::test_encoding PASSED                       [ 14%]
+tests/lib_test.py::TestLoads::test_error_reporting PASSED                [ 16%]
+tests/lib_test.py::TestLoads::test_identifiers PASSED                    [ 17%]
+tests/lib_test.py::TestLoads::test_identifiers_unicode PASSED            [ 19%]
+tests/lib_test.py::TestLoads::test_nul PASSED                            [ 20%]
+tests/lib_test.py::TestLoads::test_null PASSED                           [ 22%]
+tests/lib_test.py::TestLoads::test_numbers PASSED                        [ 23%]
+tests/lib_test.py::TestLoads::test_object_hook PASSED                    [ 25%]
+tests/lib_test.py::TestLoads::test_object_pairs_hook PASSED              [ 26%]
+tests/lib_test.py::TestLoads::test_objects PASSED                        [ 28%]
+tests/lib_test.py::TestLoads::test_parse_constant PASSED                 [ 29%]
+tests/lib_test.py::TestLoads::test_parse_float PASSED                    [ 31%]
+tests/lib_test.py::TestLoads::test_parse_int PASSED                      [ 32%]
+tests/lib_test.py::TestLoads::test_sample_file PASSED                    [ 34%]
+tests/lib_test.py::TestLoads::test_strings PASSED                        [ 35%]
+tests/lib_test.py::TestLoads::test_unrecognized_escape_char PASSED       [ 37%]
+tests/lib_test.py::TestLoads::test_whitespace PASSED                     [ 38%]
+tests/lib_test.py::TestDump::test_basic PASSED                           [ 40%]
+tests/lib_test.py::TestDumps::test_allow_duplicate_keys PASSED           [ 41%]
+tests/lib_test.py::TestDumps::test_arrays PASSED                         [ 43%]
+tests/lib_test.py::TestDumps::test_bools PASSED                          [ 44%]
+tests/lib_test.py::TestDumps::test_check_circular PASSED                 [ 46%]
+tests/lib_test.py::TestDumps::test_custom_arrays PASSED                  [ 47%]
+tests/lib_test.py::TestDumps::test_custom_numbers PASSED                 [ 49%]
+tests/lib_test.py::TestDumps::test_custom_objects PASSED                 [ 50%]
+tests/lib_test.py::TestDumps::test_custom_strings PASSED                 [ 52%]
+tests/lib_test.py::TestDumps::test_default PASSED                        [ 53%]
+tests/lib_test.py::TestDumps::test_empty_key PASSED                      [ 55%]
+tests/lib_test.py::TestDumps::test_ensure_ascii PASSED                   [ 56%]
+tests/lib_test.py::TestDumps::test_identifiers_only_starting_with_reserved_words_are_not_quoted PASSED [ 58%]
+tests/lib_test.py::TestDumps::test_indent PASSED                         [ 59%]
+tests/lib_test.py::TestDumps::test_non_string_keys PASSED                [ 61%]
+tests/lib_test.py::TestDumps::test_null PASSED                           [ 62%]
+tests/lib_test.py::TestDumps::test_numbers PASSED                        [ 64%]
+tests/lib_test.py::TestDumps::test_objects PASSED                        [ 65%]
+tests/lib_test.py::TestDumps::test_quote_keys PASSED                     [ 67%]
+tests/lib_test.py::TestDumps::test_reserved_words_in_object_keys_are_quoted PASSED [ 68%]
+tests/lib_test.py::TestDumps::test_skip_keys PASSED                      [ 70%]
+tests/lib_test.py::TestDumps::test_sort_keys PASSED                      [ 71%]
+tests/lib_test.py::TestDumps::test_string_escape_sequences PASSED        [ 73%]
+tests/lib_test.py::TestDumps::test_strings PASSED                        [ 74%]
+tests/lib_test.py::TestDumps::test_supplemental_unicode PASSED           [ 76%]
+tests/lib_test.py::TestDumps::test_trailing_commas PASSED                [ 77%]
+tests/tool_test.py::ToolTest::test_as_json PASSED                        [ 79%]
+tests/tool_test.py::ToolTest::test_help PASSED                           [ 80%]
+tests/tool_test.py::ToolTest::test_indent PASSED                         [ 82%]
+tests/tool_test.py::ToolTest::test_inline_expression PASSED              [ 83%]
+tests/tool_test.py::ToolTest::test_keys_are_quoted_by_default PASSED     [ 85%]
+tests/tool_test.py::ToolTest::test_no_quote_keys PASSED                  [ 86%]
+tests/tool_test.py::ToolTest::test_no_trailing_commas PASSED             [ 88%]
+tests/tool_test.py::ToolTest::test_quote_keys PASSED                     [ 89%]
+tests/tool_test.py::ToolTest::test_read_command PASSED                   [ 91%]
+tests/tool_test.py::ToolTest::test_read_from_a_file PASSED               [ 92%]
+tests/tool_test.py::ToolTest::test_read_from_stdin PASSED                [ 94%]
+tests/tool_test.py::ToolTest::test_trailing_commas PASSED                [ 95%]
+tests/tool_test.py::ToolTest::test_trailing_commas_are_there_by_default PASSED [ 97%]
+tests/tool_test.py::ToolTest::test_unknown_switch PASSED                 [ 98%]
+tests/tool_test.py::ToolTest::test_version PASSED                        [100%]
+
+- generated xml file: /workdir/results/json5/0.9.14/1/graalpy-test-results.xml -
+============================== 67 passed in 2.16s ==============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

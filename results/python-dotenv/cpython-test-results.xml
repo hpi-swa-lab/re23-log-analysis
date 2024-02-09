@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="147" time="1.188" timestamp="2023-11-29T02:00:04.759960" hostname="a1f8948d47fc"><testcase classname="tests.test_cli" name="test_list[None-x='a b c'-x=a b c\n]" time="0.005" /><testcase classname="tests.test_cli" name="test_list[simple-x='a b c'-x=a b c\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[simple-x='&quot;a b c&quot;'-x=&quot;a b c&quot;\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[simple-x=&quot;'a b c'&quot;-x='a b c'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[json-x='a b c'-{\n  &quot;x&quot;: &quot;a b c&quot;\n}\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[shell-x='a b c'-x='a b c'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[shell-x='&quot;a b c&quot;'-x='&quot;a b c&quot;'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[shell-x=&quot;'a b c'&quot;-x=''&quot;'&quot;'a b c'&quot;'&quot;''\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[shell-x='a\nb\nc'-x='a\nb\nc'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list[export-x='a b c'-export x='a b c'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_list_non_existent_file" time="0.003" /><testcase classname="tests.test_cli" name="test_list_no_file" time="0.002" /><testcase classname="tests.test_cli" name="test_get_existing_value" time="0.003" /><testcase classname="tests.test_cli" name="test_get_non_existent_value" time="0.003" /><testcase classname="tests.test_cli" name="test_get_no_file" time="0.002" /><testcase classname="tests.test_cli" name="test_unset_existing_value" time="0.003" /><testcase classname="tests.test_cli" name="test_unset_non_existent_value" time="0.003" /><testcase classname="tests.test_cli" name="test_set_quote_options[always-a-x-a='x'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_set_quote_options[never-a-x-a=x\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_set_quote_options[auto-a-x-a=x\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_set_quote_options[auto-a-x y-a='x y'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_set_quote_options[auto-a-$-a='$'\n]" time="0.003" /><testcase classname="tests.test_cli" name="test_set_export[.nx_file-true-a-x-export a='x'\n]" time="0.002" /><testcase classname="tests.test_cli" name="test_set_export[.nx_file-false-a-x-a='x'\n]" time="0.002" /><testcase classname="tests.test_cli" name="test_set_non_existent_file" time="0.002" /><testcase classname="tests.test_cli" name="test_set_no_file" time="0.002" /><testcase classname="tests.test_cli" name="test_get_default_path" time="0.066"><failure message="sh.ErrorReturnCode_2: &#10;&#10;  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv get a&#10;&#10;  STDOUT:&#10;&#10;&#10;  STDERR:&#10;Usage: dotenv get [OPTIONS] KEY&#10;Try 'dotenv get --help' for help.&#10;&#10;Error: Invalid value: Path &quot;/workdir/python-dotenv-0.21.0/.env&quot; does not exist.">Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 146, in test_get_default_path
+    result = sh.dotenv("get", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv get a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv get [OPTIONS] KEY
+Try 'dotenv get --help' for help.
+
+Error: Invalid value: Path "/workdir/python-dotenv-0.21.0/.env" does not exist.</failure></testcase><testcase classname="tests.test_cli" name="test_run" time="0.067"><failure message="sh.ErrorReturnCode_2: &#10;&#10;  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a&#10;&#10;  STDOUT:&#10;&#10;&#10;  STDERR:&#10;Usage: dotenv run [OPTIONS] [COMMANDLINE]...&#10;Try 'dotenv run --help' for help.&#10;&#10;Error: Invalid value: Invalid value for '-f' &quot;/workdir/python-dotenv-0.21.0/.env&quot; does not exist.">Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 157, in test_run
+    result = sh.dotenv("run", "printenv", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.</failure></testcase><testcase classname="tests.test_cli" name="test_run_with_existing_variable" time="0.068"><failure message="sh.ErrorReturnCode_2: &#10;&#10;  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a&#10;&#10;  STDOUT:&#10;&#10;&#10;  STDERR:&#10;Usage: dotenv run [OPTIONS] [COMMANDLINE]...&#10;Try 'dotenv run --help' for help.&#10;&#10;Error: Invalid value: Invalid value for '-f' &quot;/workdir/python-dotenv-0.21.0/.env&quot; does not exist.">Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 170, in test_run_with_existing_variable
+    result = sh.dotenv("run", "printenv", "a", _env=env)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.</failure></testcase><testcase classname="tests.test_cli" name="test_run_with_existing_variable_not_overridden" time="0.066"><failure message="sh.ErrorReturnCode_2: &#10;&#10;  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run --no-override printenv a&#10;&#10;  STDOUT:&#10;&#10;&#10;  STDERR:&#10;Usage: dotenv run [OPTIONS] [COMMANDLINE]...&#10;Try 'dotenv run --help' for help.&#10;&#10;Error: Invalid value: Invalid value for '-f' &quot;/workdir/python-dotenv-0.21.0/.env&quot; does not exist.">Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 183, in test_run_with_existing_variable_not_overridden
+    result = sh.dotenv("run", "--no-override", "printenv", "a", _env=env)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run --no-override printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.</failure></testcase><testcase classname="tests.test_cli" name="test_run_with_none_value" time="0.065"><failure message="sh.ErrorReturnCode_2: &#10;&#10;  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a&#10;&#10;  STDOUT:&#10;&#10;&#10;  STDERR:&#10;Usage: dotenv run [OPTIONS] [COMMANDLINE]...&#10;Try 'dotenv run --help' for help.&#10;&#10;Error: Invalid value: Invalid value for '-f' &quot;/workdir/python-dotenv-0.21.0/.env&quot; does not exist.">Traceback (most recent call last):
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/python-dotenv-0.21.0/tests/test_cli.py", line 194, in test_run_with_none_value
+    result = sh.dotenv("run", "printenv", "a")
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 1508, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 737, in __init__
+    self.wait()
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 799, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sh.py", line 826, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /workdir/python-dotenv-0.21.0/.tox/cpythonlibtest-unit-test-tests/bin/dotenv run printenv a
+
+  STDOUT:
+
+
+  STDERR:
+Usage: dotenv run [OPTIONS] [COMMANDLINE]...
+Try 'dotenv run --help' for help.
+
+Error: Invalid value: Invalid value for '-f' "/workdir/python-dotenv-0.21.0/.env" does not exist.</failure></testcase><testcase classname="tests.test_cli" name="test_run_with_other_env" time="0.062" /><testcase classname="tests.test_cli" name="test_run_without_cmd" time="0.004" /><testcase classname="tests.test_cli" name="test_run_with_invalid_cmd" time="0.002" /><testcase classname="tests.test_cli" name="test_run_with_version" time="0.001" /><testcase classname="tests.test_ipython" name="test_ipython_existing_variable_no_override" time="0.036" /><testcase classname="tests.test_ipython" name="test_ipython_existing_variable_override" time="0.019" /><testcase classname="tests.test_ipython" name="test_ipython_new_variable" time="0.019" /><testcase classname="tests.test_main" name="test_set_key_no_file" time="0.002" /><testcase classname="tests.test_main" name="test_set_key[-a--expected0-a=''\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[-a-b-expected1-a='b'\n]" time="0.004" /><testcase classname="tests.test_main" name="test_set_key[-a-'b'-expected2-a='\\'b\\''\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[-a-&quot;b&quot;-expected3-a='&quot;b&quot;'\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[-a-b'c-expected4-a='b\\'c'\n]" time="0.035" /><testcase classname="tests.test_main" name="test_set_key[-a-b&quot;c-expected5-a='b&quot;c'\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b-a-c-expected6-a='c'\n]" time="0.002" /><testcase classname="tests.test_main" name="test_set_key[a=b\n-a-c-expected7-a='c'\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b\n\n-a-c-expected8-a='c'\n\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b\nc=d-a-e-expected9-a='e'\nc=d]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b\nc=d\ne=f-c-g-expected10-a=b\nc='g'\ne=f]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b\n-c-d-expected11-a=b\nc='d'\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key[a=b-c-d-expected12-a=b\nc='d'\n]" time="0.003" /><testcase classname="tests.test_main" name="test_set_key_encoding" time="0.002" /><testcase classname="tests.test_main" name="test_set_key_permission_error" time="0.002" /><testcase classname="tests.test_main" name="test_get_key_no_file" time="0.003" /><testcase classname="tests.test_main" name="test_get_key_not_found" time="0.002" /><testcase classname="tests.test_main" name="test_get_key_ok" time="0.002" /><testcase classname="tests.test_main" name="test_get_key_encoding" time="0.002" /><testcase classname="tests.test_main" name="test_get_key_none" time="0.002" /><testcase classname="tests.test_main" name="test_unset_with_value" time="0.002" /><testcase classname="tests.test_main" name="test_unset_no_value" time="0.002" /><testcase classname="tests.test_main" name="test_unset_encoding" time="0.002" /><testcase classname="tests.test_main" name="test_unset_non_existent_file" time="0.002" /><testcase classname="tests.test_main" name="test_find_dotenv_no_file_raise" time="0.003" /><testcase classname="tests.test_main" name="test_find_dotenv_no_file_no_raise" time="0.002" /><testcase classname="tests.test_main" name="test_find_dotenv_found" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_existing_file" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_no_file_verbose" time="0.001" /><testcase classname="tests.test_main" name="test_load_dotenv_existing_variable_no_override" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_existing_variable_override" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_redefine_var_used_in_file_no_override" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_redefine_var_used_in_file_with_override" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_string_io_utf_8" time="0.001" /><testcase classname="tests.test_main" name="test_load_dotenv_file_stream" time="0.002" /><testcase classname="tests.test_main" name="test_load_dotenv_in_current_dir" time="0.041" /><testcase classname="tests.test_main" name="test_dotenv_values_file" time="0.002" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env0-a=$b-False-expected0]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env1-a=$b-True-expected1]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env2-a=${b}-False-expected2]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env3-a=${b}-True-expected3]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env4-a=${b:-d}-False-expected4]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env5-a=${b:-d}-True-expected5]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env6-b=c\na=${b}-True-expected6]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env7-a=${b}-True-expected7]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env8-a=${b:-d}-True-expected8]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env9-a=&quot;${b}&quot;-True-expected9]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env10-a='${b}'-True-expected10]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env11-a=x${b}y-True-expected11]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env12-a=${a}-True-expected12]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env13-a=${a}-True-expected13]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env14-a=${a:-c}-True-expected14]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env15-a=${a:-c}-True-expected15]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env16-a=${b}${b}-True-expected16]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env17-b=d\na=${b}-True-expected17]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env18-a=b\na=c\nd=${a}-True-expected18]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_string_io[env19-a=b\nc=${a}\nd=e\nc=${d}-True-expected19]" time="0.001" /><testcase classname="tests.test_main" name="test_dotenv_values_file_stream" time="0.002" /><testcase classname="tests.test_parser" name="test_parse_stream[-expected0]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b-expected1]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream['a'=b-expected2]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[[=b-expected3]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[ a = b -expected4]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[export a=b-expected5]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[ export 'a'=b-expected6]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[# a=b-expected7]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b#c-expected8]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b #c-expected9]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\t#c-expected10]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b c-expected11]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\tc-expected12]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b  c-expected13]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\xa0 c-expected14]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b c -expected15]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a='b c '-expected16]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;b c &quot;-expected17]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[export export_a=1-expected18]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[export port=8000-expected19]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;b\nc&quot;-expected20]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a='b\nc'-expected21]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;b\nc&quot;-expected22]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;b\\nc&quot;-expected23]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a='b\\nc'-expected24]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;b\\&quot;c&quot;-expected25]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a='b\\'c'-expected26]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=\xe0-expected27]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;\xe0&quot;-expected28]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[no_value_var-expected29]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a: b-expected30]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\nc=d-expected31]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\rc=d-expected32]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\r\nc=d-expected33]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=\nb=c-expected34]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[\n\n-expected35]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\n\n-expected36]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\n\nc=d-expected37]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=&quot;\nb=c-expected38]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[# comment\na=&quot;b\nc&quot;\nd=e\n-expected39]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[a=b\n# comment 1-expected40]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[# comment 1\n# comment 2-expected41]" time="0.001" /><testcase classname="tests.test_parser" name="test_parse_stream[uglyKey[%$=&quot;S3cr3t_P4ssw#rD&quot; #\na=b-expected42]" time="0.001" /><testcase classname="tests.test_utils" name="test_to_cli_string" time="0.000" /><testcase classname="tests.test_variables" name="test_parse_variables[-expected0]" time="0.001" /><testcase classname="tests.test_variables" name="test_parse_variables[a-expected1]" time="0.001" /><testcase classname="tests.test_variables" name="test_parse_variables[${a}-expected2]" time="0.001" /><testcase classname="tests.test_variables" name="test_parse_variables[${a:-b}-expected3]" time="0.001" /><testcase classname="tests.test_variables" name="test_parse_variables[${a}${b}-expected4]" time="0.001" /><testcase classname="tests.test_variables" name="test_parse_variables[a${b}c${d}e-expected5]" time="0.002" /></testsuite></testsuites>

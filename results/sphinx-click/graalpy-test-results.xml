@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="22" time="1.485" timestamp="2023-11-29T19:08:21.650000" hostname="be2d8ee410eb"><testcase classname="tests.test_extension" name="test_basics" time="0.081"><failure message="AttributeError: 'path' object has no attribute 'mkdir'">Traceback (most recent call last):
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-click-4.4.0/tests/test_extension.py", line 9, in test_basics
+    app = make_app('xml', srcdir=srcdir)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'</failure></testcase><testcase classname="tests.test_extension" name="test_nested_full" time="0.026"><failure message="AttributeError: 'path' object has no attribute 'mkdir'">Traceback (most recent call last):
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-click-4.4.0/tests/test_extension.py", line 53, in test_nested_full
+    app = make_app('xml', srcdir=srcdir)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/sphinx-click-4.4.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'</failure></testcase><testcase classname="tests.test_formatter.CommandTestCase" name="test_ansi_escape_sequences" time="0.032" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_basic_parameters" time="0.020" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_defaults" time="0.013" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_help_epilog" time="0.010" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_hidden" time="0.006" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_no_line_wrapping" time="0.025" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_no_parameters" time="0.008" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_no_truncation" time="0.008" /><testcase classname="tests.test_formatter.CommandTestCase" name="test_titles" time="0.016" /><testcase classname="tests.test_formatter.GroupTestCase" name="test_basic_parameters" time="0.014" /><testcase classname="tests.test_formatter.GroupTestCase" name="test_no_parameters" time="0.011" /><testcase classname="tests.test_formatter.NestedCommandsTestCase" name="test_nested_full" time="0.013" /><testcase classname="tests.test_formatter.NestedCommandsTestCase" name="test_nested_none" time="0.012" /><testcase classname="tests.test_formatter.NestedCommandsTestCase" name="test_nested_short" time="0.018" /><testcase classname="tests.test_formatter.CommandFilterTestCase" name="test_no_commands" time="0.018" /><testcase classname="tests.test_formatter.CommandFilterTestCase" name="test_order_of_commands" time="0.013" /><testcase classname="tests.test_formatter.CustomMultiCommandTestCase" name="test_basics" time="0.012" /><testcase classname="tests.test_formatter.CustomMultiCommandTestCase" name="test_hidden" time="0.011" /><testcase classname="tests.test_formatter.CommandCollectionTestCase" name="test_basics" time="0.016" /><testcase classname="tests.test_formatter.AutoEnvvarPrefixTestCase" name="test_basics" time="0.017" /></testsuite></testsuites>

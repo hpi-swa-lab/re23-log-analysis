@@ -1,0 +1,226 @@
+graalpylibtest-unit-test-tests create: /workdir/ptyprocess-0.7.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/ptyprocess-0.7.0/.tox/.tmp/package/1/ptyprocess-0.7.0.tar.gz
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,ptyprocess @ file:///workdir/ptyprocess-0.7.0/.tox/.tmp/package/1/ptyprocess-0.7.0.tar.gz,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1274975830'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/ptyprocess/0.7.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/ptyprocess-0.7.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/ptyprocess-0.7.0
+collecting ... collected 14 items
+
+tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_forever FAILED      [  7%]
+tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_timeout FAILED      [ 14%]
+tests/test_invalid_binary.py::InvalidBinaryChars::test_invalid_binary FAILED [ 21%]
+tests/test_preexec_fn.py::PreexecFns::test_preexec FAILED                [ 28%]
+tests/test_preexec_fn.py::PreexecFns::test_preexec_error FAILED          [ 35%]
+tests/test_spawn.py::PtyTestCase::test_interactive_repl_unicode_echo SKIPPED [ 42%]
+tests/test_spawn.py::PtyTestCase::test_interactive_repl_unicode_noecho SKIPPED [ 50%]
+tests/test_spawn.py::PtyTestCase::test_pass_fds FAILED                   [ 57%]
+tests/test_spawn.py::PtyTestCase::test_quick_spawn FAILED                [ 64%]
+tests/test_spawn.py::PtyTestCase::test_spawn_sh FAILED                   [ 71%]
+tests/test_spawn.py::PtyTestCase::test_spawn_sh_unicode FAILED           [ 78%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_false_shortproc FAILED [ 85%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_true_shortproc FAILED [ 92%]
+tests/test_wait.py::TestWaitAfterTermination::test_wait_twice_longproc FAILED [100%]
+
+=================================== FAILURES ===================================
+___________________ PtyEchoTestCase.test_waitnoecho_forever ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_echo.py", line 19, in test_waitnoecho_forever
+    cat = PtyProcess.spawn(['cat'], echo=False)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+___________________ PtyEchoTestCase.test_waitnoecho_timeout ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_echo.py", line 30, in test_waitnoecho_timeout
+    cat = PtyProcess.spawn(['cat'], echo=True)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+____________________ InvalidBinaryChars.test_invalid_binary ____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_invalid_binary.py", line 55, in test_invalid_binary
+    child = PtyProcess.spawn([fullpath])
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+___________________________ PreexecFns.test_preexec ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_preexec_fn.py", line 36, in test_preexec
+    child = PtyProcess.spawn(['ls'], preexec_fn=pef)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+________________________ PreexecFns.test_preexec_error _________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_preexec_fn.py", line 49, in test_preexec_error
+    child = PtyProcess.spawn(['ls'], preexec_fn=func)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+__________________________ PtyTestCase.test_pass_fds ___________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 123, in test_pass_fds
+    fcntl.fcntl(temp_file_fd,
+AttributeError: module 'fcntl' has no attribute 'fcntl'
+_________________________ PtyTestCase.test_quick_spawn _________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 58, in test_quick_spawn
+    PtyProcess.spawn(['true'])
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+__________________________ PtyTestCase.test_spawn_sh ___________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 45, in test_spawn_sh
+    self._spawn_sh(PtyProcess, self.cmd.encode('ascii'),
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 23, in _spawn_sh
+    p = ptyp.spawn(['sh'], env=self.env)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+______________________ PtyTestCase.test_spawn_sh_unicode _______________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 50, in test_spawn_sh_unicode
+    self._spawn_sh(PtyProcessUnicode, self.cmd,
+  File "/workdir/ptyprocess-0.7.0/tests/test_spawn.py", line 23, in _spawn_sh
+    p = ptyp.spawn(['sh'], env=self.env)
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+______________ TestWaitAfterTermination.test_wait_false_shortproc ______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_wait.py", line 19, in test_wait_false_shortproc
+    child = PtyProcess.spawn(['false'])
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+______________ TestWaitAfterTermination.test_wait_true_shortproc _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_wait.py", line 12, in test_wait_true_shortproc
+    child = PtyProcess.spawn(['true'])
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+______________ TestWaitAfterTermination.test_wait_twice_longproc _______________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/ptyprocess-0.7.0/tests/test_wait.py", line 29, in test_wait_twice_longproc
+    child = PtyProcess.spawn(['sleep', '1'])
+  File "/workdir/ptyprocess-0.7.0/ptyprocess/ptyprocess.py", line 230, in spawn
+    pid, fd = pty.fork()
+  File "/opt/graalpy/lib/python3.10/pty.py", line 102, in fork
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+- generated xml file: /workdir/results/ptyprocess/0.7.0/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_forever - Attribu...
+FAILED tests/test_echo.py::PtyEchoTestCase::test_waitnoecho_timeout - Attribu...
+FAILED tests/test_invalid_binary.py::InvalidBinaryChars::test_invalid_binary
+FAILED tests/test_preexec_fn.py::PreexecFns::test_preexec - AttributeError: m...
+FAILED tests/test_preexec_fn.py::PreexecFns::test_preexec_error - AttributeEr...
+FAILED tests/test_spawn.py::PtyTestCase::test_pass_fds - AttributeError: modu...
+FAILED tests/test_spawn.py::PtyTestCase::test_quick_spawn - AttributeError: m...
+FAILED tests/test_spawn.py::PtyTestCase::test_spawn_sh - AttributeError: modu...
+FAILED tests/test_spawn.py::PtyTestCase::test_spawn_sh_unicode - AttributeErr...
+FAILED tests/test_wait.py::TestWaitAfterTermination::test_wait_false_shortproc
+FAILED tests/test_wait.py::TestWaitAfterTermination::test_wait_true_shortproc
+FAILED tests/test_wait.py::TestWaitAfterTermination::test_wait_twice_longproc
+======================== 12 failed, 2 skipped in 0.71s =========================
+ERROR: InvocationError for command /workdir/ptyprocess-0.7.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/ptyprocess/0.7.0/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

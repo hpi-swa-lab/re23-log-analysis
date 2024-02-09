@@ -1,0 +1,14 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/scikit-image/0.19.3/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-r.binder/requirements.txt
+	-rrequirements/build.txt
+	-rrequirements/_release_tools.txt
+	-rrequirements/default.txt
+	-rrequirements/optional.txt
+	-rrequirements/test.txt
+	-rrequirements/extras.txt
+	-rrequirements/data.txt
+

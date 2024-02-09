@@ -1,0 +1,311 @@
+GLOB sdist-make: /workdir/gunicorn-20.1.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements_dev.txt, -rrequirements_test.txt, -rexamples/frameworks/requirements_webpyapp.txt, -rexamples/frameworks/requirements_cherryapp.txt, -rexamples/frameworks/requirements_flaskapp.txt, -rexamples/frameworks/requirements.txt, -rexamples/frameworks/requirements_tornadoapp.txt, -rexamples/frameworks/requirements_pyramidapp.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/log/graalpylibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting aiohttp
+  Downloading aiohttp-3.9.0.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 6.3 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/aiohttp_da2f6d2779854605ba5ee8ade797ce53/aiohttp/_websocket.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/aiohttp_da2f6d2779854605ba5ee8ade797ce53/aiohttp/_http_writer.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/aiohttp_da2f6d2779854605ba5ee8ade797ce53/aiohttp/_helpers.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/aiohttp_da2f6d2779854605ba5ee8ade797ce53/aiohttp/_http_parser.c
+Looking for GraalPy patches for aiohttp
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting gevent
+  Downloading gevent-23.9.1.tar.gz (5.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 8.3 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_ident.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_imap.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_hub_primitives.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/event.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_waiter.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/local.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/greenlet.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_greenlet_primitives.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_hub_local.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/queue.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_tracer.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_semaphore.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_abstract_linkable.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/_generated_include/SliceTupleAndList_impl_61162c68be90c6ddbfa662886410109c320224cc.h
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/resolver/cares.c
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/gevent_5c7dc2a112a8435f8d445b4b56f9106e/src/gevent/libev/corecext.c
+Looking for GraalPy patches for gevent
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting eventlet
+  Downloading eventlet-0.33.3-py2.py3-none-any.whl (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 5.7 MB/s eta 0:00:00
+Collecting coverage
+  Using cached coverage-7.3.2-py3-none-any.whl
+Collecting pytest-cov
+  Using cached pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Collecting sphinx
+  Using cached sphinx-7.2.6-py3-none-any.whl (3.2 MB)
+Collecting sphinx_rtd_theme
+  Using cached sphinx_rtd_theme-1.3.0-py2.py3-none-any.whl (2.8 MB)
+Collecting web-py
+  Downloading web.py-0.62.tar.gz (623 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 623.2/623.2 kB 5.4 MB/s eta 0:00:00
+Looking for GraalPy patches for web.py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting cherrypy
+  Downloading CherryPy-18.8.0-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.4/348.4 kB 13.5 MB/s eta 0:00:00
+Collecting flask
+  Using cached flask-3.0.0-py3-none-any.whl (99 kB)
+Collecting pyramid
+  Downloading pyramid-2.0.2-py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.3/247.3 kB 12.8 MB/s eta 0:00:00
+Collecting tornado<6
+  Downloading tornado-5.1.1.tar.gz (516 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.8/516.8 kB 12.2 MB/s eta 0:00:00
+Looking for GraalPy patches for tornado
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting iniconfig
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pluggy<2.0,>=0.12
+  Using cached pluggy-1.3.0-py3-none-any.whl (18 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting tomli>=1.0.0
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting attrs>=17.3.0
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.4.tar.gz (51 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.3/51.3 kB 4.6 MB/s eta 0:00:00
+Looking for GraalPy patches for multidict
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  WARNING: Missing build requirements in pyproject.toml for multidict<7.0,>=4.5 from https://files.pythonhosted.org/packages/4a/15/bd620f7a6eb9aa5112c4ef93e7031bcd071e0611763d8e17706ef8ba65e0/multidict-6.0.4.tar.gz (from aiohttp->-r requirements_test.txt (line 1)).
+  WARNING: The project does not specify a build backend, and pip cannot fall back to setuptools without 'wheel'.
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.3-py3-none-any.whl (30 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.0.tar.gz (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.7/90.7 kB 8.2 MB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-1p0dxqtz/frozenlist_0e0cb2e1f44641ef86f35a005d2b6046/frozenlist/_frozenlist.c
+Looking for GraalPy patches for frozenlist
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout<5.0,>=4.0
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting zope.event
+  Using cached zope.event-5.0-py3-none-any.whl (6.8 kB)
+Collecting zope.interface
+  Using cached zope.interface-6.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting dnspython>=1.15.0
+  Downloading dnspython-2.4.2-py3-none-any.whl (300 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 300.4/300.4 kB 10.5 MB/s eta 0:00:00
+Collecting greenlet>=0.3
+  Using cached greenlet-3.0.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting six>=1.10.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting sphinxcontrib-applehelp
+  Using cached sphinxcontrib_applehelp-1.0.7-py3-none-any.whl (120 kB)
+Collecting sphinxcontrib-devhelp
+  Using cached sphinxcontrib_devhelp-1.0.5-py3-none-any.whl (83 kB)
+Collecting sphinxcontrib-jsmath
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting sphinxcontrib-htmlhelp>=2.0.0
+  Using cached sphinxcontrib_htmlhelp-2.0.4-py3-none-any.whl (99 kB)
+Collecting sphinxcontrib-serializinghtml>=1.1.9
+  Using cached sphinxcontrib_serializinghtml-1.1.9-py3-none-any.whl (92 kB)
+Collecting sphinxcontrib-qthelp
+  Using cached sphinxcontrib_qthelp-1.0.6-py3-none-any.whl (89 kB)
+Collecting Jinja2>=3.0
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting Pygments>=2.14
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting docutils<0.21,>=0.18.1
+  Using cached docutils-0.20.1-py3-none-any.whl (572 kB)
+Collecting snowballstemmer>=2.0
+  Using cached snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+Collecting babel>=2.9
+  Using cached Babel-2.13.1-py3-none-any.whl (10.1 MB)
+Collecting alabaster<0.8,>=0.7
+  Using cached alabaster-0.7.13-py3-none-any.whl (13 kB)
+Collecting imagesize>=1.3
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Collecting requests>=2.25.0
+  Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting docutils<0.21,>=0.18.1
+  Using cached docutils-0.18.1-py2.py3-none-any.whl (570 kB)
+Collecting sphinxcontrib-jquery<5,>=4
+  Using cached sphinxcontrib_jquery-4.1-py2.py3-none-any.whl (121 kB)
+Collecting cheroot
+  Downloading cheroot-10.0.0-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.6/101.6 kB 7.7 MB/s eta 0:00:00
+Collecting portend>=2.1.1
+  Downloading portend-3.2.0-py3-none-any.whl (5.3 kB)
+Collecting more-itertools
+  Using cached more_itertools-10.1.0-py3-none-any.whl (55 kB)
+Collecting zc.lockfile
+  Downloading zc.lockfile-3.0.post1-py3-none-any.whl (9.8 kB)
+Collecting jaraco.collections
+  Downloading jaraco.collections-4.3.0-py3-none-any.whl (11 kB)
+Collecting Werkzeug>=3.0.0
+  Using cached werkzeug-3.0.1-py3-none-any.whl (226 kB)
+Collecting itsdangerous>=2.1.2
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting click>=8.1.3
+  Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Collecting blinker>=1.6.2
+  Using cached blinker-1.7.0-py3-none-any.whl (13 kB)
+Collecting hupper>=1.5
+  Downloading hupper-1.12-py3-none-any.whl (22 kB)
+Collecting plaster
+  Downloading plaster-1.1.2-py2.py3-none-any.whl (11 kB)
+Collecting plaster-pastedeploy
+  Downloading plaster_pastedeploy-1.0.1-py2.py3-none-any.whl (7.8 kB)
+Requirement already satisfied: setuptools in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from pyramid->-r examples/frameworks/requirements_pyramidapp.txt (line 1)) (63.2.0)
+Collecting translationstring>=0.4
+  Downloading translationstring-1.4-py2.py3-none-any.whl (15 kB)
+Collecting venusian>=1.0
+  Downloading venusian-3.1.0-py3-none-any.whl (13 kB)
+Collecting webob>=1.8.3
+  Downloading WebOb-1.8.7-py2.py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.0/115.0 kB 7.9 MB/s eta 0:00:00
+Collecting zope.deprecation>=3.5.0
+  Downloading zope.deprecation-5.0-py3-none-any.whl (10 kB)
+Collecting jaraco.functools
+  Downloading jaraco.functools-4.0.0-py3-none-any.whl (9.8 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.3-py3-none-any.whl
+Collecting tempora>=1.8
+  Downloading tempora-5.5.0-py3-none-any.whl (13 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-py3-none-any.whl (46 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting urllib3<3,>=1.21.1
+  Using cached urllib3-2.1.0-py3-none-any.whl (104 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Collecting jaraco.text
+  Downloading jaraco.text-3.11.1-py3-none-any.whl (11 kB)
+Collecting PasteDeploy>=2.0
+  Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+Collecting pytz
+  Using cached pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+Collecting jaraco.context>=4.1
+  Downloading jaraco.context-4.3.0-py3-none-any.whl (5.3 kB)
+Collecting autocommand
+  Downloading autocommand-2.2.2-py3-none-any.whl (19 kB)
+Collecting inflect
+  Downloading inflect-7.0.0-py3-none-any.whl (34 kB)
+Collecting pydantic>=1.9.1
+  Downloading pydantic-2.5.1-py3-none-any.whl (381 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 381.6/381.6 kB 10.0 MB/s eta 0:00:00
+Collecting typing-extensions
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting annotated-types>=0.4.0
+  Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Collecting pydantic-core==2.14.3
+  Downloading pydantic_core-2.14.3.tar.gz (359 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 359.1/359.1 kB 10.8 MB/s eta 0:00:00
+Looking for GraalPy patches for pydantic_core
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: aiohttp, gevent, web-py, tornado, frozenlist, multidict, pydantic-core
+  Building wheel for aiohttp (pyproject.toml): started
+  Building wheel for aiohttp (pyproject.toml): finished with status 'done'
+  Created wheel for aiohttp: filename=aiohttp-3.9.0-py3-none-any.whl size=190021 sha256=6f09f369cecb3b34dd350eb6fa0aa4325a258f6e01cf9358c93ee98af9d05f05
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/d7/2f/63/1455855718dfc872f88136059a81e6b13c63ce8f7d152b3873
+  Building wheel for gevent (pyproject.toml): started
+  Building wheel for gevent (pyproject.toml): finished with status 'done'
+  Created wheel for gevent: filename=gevent-23.9.1-graalpy310-graalpy231_310_native-linux_x86_64.whl size=1734234 sha256=f0259f4d80a763880a7b5754f7d31d66183ff828d72ef92a7093fad69c187527
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/7d/f2/4a/3f8ad7c8595ec683043ba52bbd3b08fdff2874bf57464b3aa1
+  Building wheel for web-py (pyproject.toml): started
+  Building wheel for web-py (pyproject.toml): finished with status 'done'
+  Created wheel for web-py: filename=web.py-0.62-py3-none-any.whl size=78567 sha256=f69fd41bf9e315a4a02129f85a845a616680d0154d5599b06931d358020ddd26
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/b3/7c/a7/6de46e75ea4bd4cb3948aad220cd2139faa36d26ab4db86ae4
+  Building wheel for tornado (setup.py): started
+  Building wheel for tornado (setup.py): finished with status 'done'
+  Created wheel for tornado: filename=tornado-5.1.1-py3-none-any.whl size=449843 sha256=9a39889cf55b528c9ee7719b824594100035f1945c22eda9121f9084f25e06cb
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/d4/e7/d1/f8d1767a4bf2f74bc7621f4a866d5953a853489714ea974585
+  Building wheel for frozenlist (pyproject.toml): started
+  Building wheel for frozenlist (pyproject.toml): finished with status 'done'
+  Created wheel for frozenlist: filename=frozenlist-1.4.0-py3-none-any.whl size=9411 sha256=21f5f9dde0320825f17e27054fe3556f1c1a07087cfed03751f662f98e78672f
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/8c/d5/db/b4692ccfa8cc89292ddbbf776af44b1c5c1b6dcb0ea5842a99
+  Building wheel for multidict (pyproject.toml): started
+  Building wheel for multidict (pyproject.toml): finished with status 'done'
+  Created wheel for multidict: filename=multidict-6.0.4-py3-none-any.whl size=9723 sha256=a1c881861aefc612a960303cf11cc0255b7717e68a3727bbe4908094a3cb3f3b
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/4a/91/a7/263dd3526b17601cdd7e607e87322568f2e4f764d2ffa62079
+  Building wheel for pydantic-core (pyproject.toml): started
+  Building wheel for pydantic-core (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for pydantic-core (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [14 lines of output]
+      Running `maturin pep517 build-wheel -i /workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python --compatibility off`
+      📦 Including license file "/tmp/pip-install-1p0dxqtz/pydantic-core_49432ef1f17e41cf92743ec72b3fa3d6/LICENSE"
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found GraalPy 3.10 at /workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python
+      📡 Using build options features, bindings from pyproject.toml
+      error: package `regex-automata v0.4.3` cannot be built because it requires rustc 1.65 or newer, while the currently active rustc version is 1.62.1
+      Either upgrade to rustc 1.65 or newer, or use
+      cargo update -p regex-automata@0.4.3 --precise ver
+      where `ver` is the latest version of `regex-automata` supporting rustc 1.62.1
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `PYO3_ENVIRONMENT_SIGNATURE="graalpy-3.10-64bit" PYO3_PYTHON="/workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python" PYTHON_SYS_EXECUTABLE="/workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python" "cargo" "rustc" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "/tmp/pip-install-1p0dxqtz/pydantic-core_49432ef1f17e41cf92743ec72b3fa3d6/Cargo.toml" "--release" "--lib"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pydantic-core
+Successfully built aiohttp gevent web-py tornado frozenlist multidict
+Failed to build pydantic-core
+ERROR: Could not build wheels for pydantic-core, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements_dev.txt, -rrequirements_test.txt, -rexamples/frameworks/requirements_webpyapp.txt, -rexamples/frameworks/requirements_cherryapp.txt, -rexamples/frameworks/requirements_flaskapp.txt, -rexamples/frameworks/requirements.txt, -rexamples/frameworks/requirements_tornadoapp.txt, -rexamples/frameworks/requirements_pyramidapp.txt]; v = InvocationError('/workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements_dev.txt -rrequirements_test.txt -rexamples/frameworks/requirements_webpyapp.txt -rexamples/frameworks/requirements_cherryapp.txt -rexamples/frameworks/requirements_flaskapp.txt -rexamples/frameworks/requirements.txt -rexamples/frameworks/requirements_tornadoapp.txt -rexamples/frameworks/requirements_pyramidapp.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements_dev.txt, -rrequirements_test.txt, -rexamples/frameworks/requirements_webpyapp.txt, -rexamples/frameworks/requirements_cherryapp.txt, -rexamples/frameworks/requirements_flaskapp.txt, -rexamples/frameworks/requirements.txt, -rexamples/frameworks/requirements_tornadoapp.txt, -rexamples/frameworks/requirements_pyramidapp.txt]; v = InvocationError('/workdir/gunicorn-20.1.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements_dev.txt -rrequirements_test.txt -rexamples/frameworks/requirements_webpyapp.txt -rexamples/frameworks/requirements_cherryapp.txt -rexamples/frameworks/requirements_flaskapp.txt -rexamples/frameworks/requirements.txt -rexamples/frameworks/requirements_tornadoapp.txt -rexamples/frameworks/requirements_pyramidapp.txt', 1)

@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/websockets/10.4/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rexample/deployment/heroku/requirements.txt
+	-rexample/deployment/fly/requirements.txt
+	-rexample/deployment/render/requirements.txt
+

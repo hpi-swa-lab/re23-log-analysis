@@ -1,0 +1,57 @@
+GLOB sdist-make: /workdir/requests-kerberos-0.14.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/requests-kerberos-0.14.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-test.txt, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/requests-kerberos-0.14.0/.tox/.tmp/package/1/requests-kerberos-0.14.0.zip
+cpythonlibtest-unit-test-tests installed: certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,coverage==7.3.2,cryptography==41.0.7,decorator==5.1.1,exceptiongroup==1.2.0,gssapi==1.8.3,idna==3.6,iniconfig==2.0.0,krb5==0.5.1,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycparser==2.21,pyspnego==0.10.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-mock==3.12.0,requests==2.31.0,requests-kerberos @ file:///workdir/requests-kerberos-0.14.0/.tox/.tmp/package/1/requests-kerberos-0.14.0.zip#sha256=cf4c5d3951a15a57cd8a7a790665ca97228fb138a6429aa8d36b84a6c89e446d,tomli==2.0.1,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3346647242'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/requests-kerberos/0.14.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/requests-kerberos-0.14.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/requests-kerberos-0.14.0
+plugins: mock-3.12.0, cov-4.1.0
+collecting ... collected 37 items
+
+tests/test_functional_kerberos.py::test_successful_http_call SKIPPED     [  2%]
+tests/test_requests_kerberos.py::test_negotate_value_extraction PASSED   [  5%]
+tests/test_requests_kerberos.py::test_negotate_value_extraction_none PASSED [  8%]
+tests/test_requests_kerberos.py::test_force_preemptive PASSED            [ 10%]
+tests/test_requests_kerberos.py::test_no_force_preemptive PASSED         [ 13%]
+tests/test_requests_kerberos.py::test_generate_request_header PASSED     [ 16%]
+tests/test_requests_kerberos.py::test_generate_request_header_init_error PASSED [ 18%]
+tests/test_requests_kerberos.py::test_generate_request_header_step_error PASSED [ 21%]
+tests/test_requests_kerberos.py::test_authenticate_user PASSED           [ 24%]
+tests/test_requests_kerberos.py::test_authenticate_user2 PASSED          [ 27%]
+tests/test_requests_kerberos.py::test_handle_401 PASSED                  [ 29%]
+tests/test_requests_kerberos.py::test_handle_407 PASSED                  [ 32%]
+tests/test_requests_kerberos.py::test_authenticate_server PASSED         [ 35%]
+tests/test_requests_kerberos.py::test_handle_other PASSED                [ 37%]
+tests/test_requests_kerberos.py::test_handle_response_200 PASSED         [ 40%]
+tests/test_requests_kerberos.py::test_handle_response_200_mutual_auth_required_failure PASSED [ 43%]
+tests/test_requests_kerberos.py::test_handle_response_200_mutual_auth_required_failure_2 PASSED [ 45%]
+tests/test_requests_kerberos.py::test_handle_response_200_mutual_auth_optional_hard_failure PASSED [ 48%]
+tests/test_requests_kerberos.py::test_handle_response_200_mutual_auth_optional_soft_failure PASSED [ 51%]
+tests/test_requests_kerberos.py::test_handle_response_500_mutual_auth_required_failure PASSED [ 54%]
+tests/test_requests_kerberos.py::test_handle_response_500_mutual_auth_optional_failure PASSED [ 56%]
+tests/test_requests_kerberos.py::test_handle_response_401 PASSED         [ 59%]
+tests/test_requests_kerberos.py::test_handle_response_401_rejected PASSED [ 62%]
+tests/test_requests_kerberos.py::test_generate_request_header_custom_service PASSED [ 64%]
+tests/test_requests_kerberos.py::test_delegation PASSED                  [ 67%]
+tests/test_requests_kerberos.py::test_principal_override PASSED          [ 70%]
+tests/test_requests_kerberos.py::test_realm_override PASSED              [ 72%]
+tests/test_requests_kerberos.py::test_cbt_rsa_md5 PASSED                 [ 75%]
+tests/test_requests_kerberos.py::test_cbt_rsa_sha1 PASSED                [ 78%]
+tests/test_requests_kerberos.py::test_cbt_rsa_sha256 PASSED              [ 81%]
+tests/test_requests_kerberos.py::test_cbt_rsa_sha384 PASSED              [ 83%]
+tests/test_requests_kerberos.py::test_cbt_rsa_sha512 PASSED              [ 86%]
+tests/test_requests_kerberos.py::test_cbt_ecdsa_sha1 PASSED              [ 89%]
+tests/test_requests_kerberos.py::test_cbt_ecdsa_sha256 PASSED            [ 91%]
+tests/test_requests_kerberos.py::test_cbt_ecdsa_sha384 PASSED            [ 94%]
+tests/test_requests_kerberos.py::test_cbt_ecdsa_sha512 PASSED            [ 97%]
+tests/test_requests_kerberos.py::test_cbt_invalid_signature_algorithm PASSED [100%]
+
+- generated xml file: /workdir/results/requests-kerberos/0.14.0/1/cpython-test-results.xml -
+======================== 36 passed, 1 skipped in 0.34s =========================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

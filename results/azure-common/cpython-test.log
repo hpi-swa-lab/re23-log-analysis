@@ -1,0 +1,26 @@
+GLOB sdist-make: /workdir/azure-common-1.1.28/sdk/core/azure-common/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/azure-common-1.1.28/sdk/core/azure-common/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdev_requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/azure-common-1.1.28/sdk/core/azure-common/.tox/.tmp/package/1/azure-common-1.1.28.zip
+cpythonlibtest-unit-test-tests installed: adal==1.2.7,azure-common @ file:///workdir/azure-common-1.1.28/sdk/core/azure-common/.tox/.tmp/package/1/azure-common-1.1.28.zip#sha256=3f0bd9c32d03bb2c35402a464c1ee0e8cd152c0484592611c534278e6b9bbb24,-e git+https://github.com/Azure/azure-sdk-for-python@41e81c8a7a5f99595f7821ca6666d9b35c882d15#egg=azure_core&subdirectory=sdk/core/azure-core,-e git+https://github.com/Azure/azure-sdk-for-python@41e81c8a7a5f99595f7821ca6666d9b35c882d15#egg=azure_devtools&subdirectory=tools/azure-devtools,azure-mgmt-core==1.3.0,azure-mgmt-keyvault==10.0.0,azure-mgmt-resource==21.1.0,azure-mgmt-storage==20.0.0,-e git+https://github.com/Azure/azure-sdk-for-python@41e81c8a7a5f99595f7821ca6666d9b35c882d15#egg=azure_sdk_tools&subdirectory=tools/azure-sdk-tools,azure-storage-common==1.4.0,certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,ConfigArgParse==1.7,coverage==7.3.2,cryptography==41.0.5,docutils==0.20.1,exceptiongroup==1.1.3,idna==3.4,iniconfig==2.0.0,isodate==0.6.1,Jinja2==3.1.2,json-delta==2.0.2,MarkupSafe==2.1.3,mock==5.1.0,msrest==0.6.21,msrestazure==0.6.4,multidict==6.0.4,nh3==0.2.14,oauthlib==3.2.2,packaging==23.2,pluggy==1.3.0,pycparser==2.21,Pygments==2.17.1,PyJWT==2.8.0,pyOpenSSL==23.3.0,pytest==7.4.3,pytest-asyncio==0.21.1,pytest-cov==4.1.0,python-dateutil==2.8.2,python-dotenv==1.0.0,pytoml==0.1.21,PyYAML==6.0.1,readme-renderer==42.0,requests==2.31.0,requests-oauthlib==1.3.1,six==1.16.0,tomli==2.0.1,urllib3==2.1.0,vcrpy==3.0.0,wrapt==1.16.0,yarl==1.9.3
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='387115472'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/azure-common/1.1.28/1/cpython-test-results.xml
+ImportError while loading conftest '/workdir/azure-common-1.1.28/sdk/conftest.py'.
+../../conftest.py:52: in <module>
+    from azure_devtools.scenario_tests import AbstractPreparer
+../../../tools/azure-devtools/src/azure_devtools/scenario_tests/__init__.py:6: in <module>
+    from .base import IntegrationTestBase, ReplayableTest, LiveTest
+../../../tools/azure-devtools/src/azure_devtools/scenario_tests/base.py:15: in <module>
+    import vcr
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/vcr/__init__.py:4: in <module>
+    from .config import VCR
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/vcr/config.py:14: in <module>
+    from .cassette import Cassette
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/vcr/cassette.py:12: in <module>
+    from .patch import CassettePatcherBuilder
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/vcr/patch.py:40: in <module>
+    _VerifiedHTTPSConnection = cpool.VerifiedHTTPSConnection
+E   AttributeError: module 'urllib3.connectionpool' has no attribute 'VerifiedHTTPSConnection'
+ERROR: InvocationError for command /workdir/azure-common-1.1.28/sdk/core/azure-common/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/azure-common/1.1.28/1/cpython-test-results.xml (exited with code 4)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

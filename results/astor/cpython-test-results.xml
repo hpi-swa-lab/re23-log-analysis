@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="2" tests="55" time="27.635" timestamp="2023-11-20T21:29:54.704597" hostname="b80581c01e0f"><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_annassign" time="0.003" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_arguments" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_assignment_expr" time="0.005" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_async_comprehension" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_async_def_with_for" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_attribute" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_class_definition_with_starbases_and_kwargs" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_compile_types" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_complex" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_comprehension" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_constant_nodes" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_del_statement" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_deprecated_constant_nodes" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_deprecated_constants_as_name" time="0.001"><skipped type="pytest.skip" message="ast.Name used for True, False, None until Python 3.4">/workdir/astor-0.8.1/tests/test_code_gen.py:497: ast.Name used for True, False, None until Python 3.4</skipped></testcase><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_deprecated_name_constants" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_dictionary_literals" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_docstring_class" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_docstring_function" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_docstring_method" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_docstring_module" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_double_await" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_elif" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_empty_iterable_literals" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_fstring_debugging" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_fstring_escaped_braces" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_fstring_trailing_newline" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_fstrings" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_huge_int" time="0.001"><failure message="ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 290, in test_huge_int
+    self.assertEqual(astornum(n), n)
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 31, in astornum
+    return astorexpr(ast.Num(n=x))
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 28, in astorexpr
+    return eval(astor.to_source(ast.Expression(body=x)))
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 63, in to_source
+    generator.visit(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 883, in visit_Expression
+    self.visit(node.body)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 556, in visit_Constant
+    self._handle_numeric_constant(value)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 677, in _handle_numeric_constant
+    real = part(x.real if isinstance(x, complex) else x, imaginary=False)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 675, in part
+    return repr(p) + s
+ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_imports" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_inf" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_matrix_multiplication" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_multiple_call_unpackings" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_nan" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_non_string_leakage" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_output_formatting" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_pass_arguments_node" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_positional_only_arguments" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_pow" time="0.002" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_right_hand_side_dictionary_unpacking" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_slicing" time="0.004" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_try_expect" time="0.004" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_tuple_corner_cases" time="0.005" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_unary" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_unicode_literals" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_with" time="0.001" /><testcase classname="tests.test_code_gen.CodegenTestCase" name="test_yield" time="0.003" /><testcase classname="tests.test_misc.GetSymbolTestCase" name="test_get_mat_mult" time="0.001" /><testcase classname="tests.test_misc.PublicAPITestCase" name="test_aliases" time="0.001" /><testcase classname="tests.test_misc.PublicAPITestCase" name="test_codegen_as_submodule" time="0.002" /><testcase classname="tests.test_misc.PublicAPITestCase" name="test_codegen_from_root" time="0.004" /><testcase classname="tests.test_misc.PublicAPITestCase" name="test_to_source_invalid_customize_generator" time="0.001" /><testcase classname="tests.test_misc.FastCompareTestCase" name="test_fast_compare" time="0.001" /><testcase classname="tests.test_misc.TreeWalkTestCase" name="test_auto_generated_attributes" time="0.001" /><testcase classname="tests.test_misc.SourceReprTestCase" name="test_split_lines_unicode_support" time="0.001"><skipped type="pytest.skip" message="only applies to Python 2">/workdir/astor-0.8.1/tests/test_misc.py:111: only applies to Python 2</skipped></testcase><testcase classname="tests.test_rtrip.RtripTestCase" name="test_convert_stdlib" time="27.442"><failure message="AttributeError: No defined handler for node of type Match">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/astor-0.8.1/tests/test_rtrip.py", line 23, in test_convert_stdlib
+    result = astor.rtrip.convert(srcdir)
+  File "/workdir/astor-0.8.1/astor/rtrip.py", line 83, in convert
+    dsttxt = to_source(srcast)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 63, in to_source
+    generator.visit(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 878, in visit_Module
+    self.write(*node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 364, in visit_ClassDef
+    self.body(node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 226, in body
+    self.write(*statements)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 335, in visit_FunctionDef
+    self.body(node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 226, in body
+    self.write(*statements)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 137, in abort_visit
+    raise AttributeError(msg % node.__class__.__name__)
+AttributeError: No defined handler for node of type Match</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="28" time="1.072" timestamp="2023-11-20T22:50:10.860000" hostname="b80581c01e0f"><testcase classname="tests.test_context" name="test_temp_connection" time="0.009" /><testcase classname="tests.test_context" name="test_temp_connection_for_sender" time="0.008" /><testcase classname="tests.test_context" name="test_temp_connection_failure" time="0.005" /><testcase classname="tests.test_saferef.TestSaferef" name="test_In" time="0.025" /><testcase classname="tests.test_saferef.TestSaferef" name="test_Representation" time="0.018" /><testcase classname="tests.test_saferef.TestSaferef" name="test_ShortCircuit" time="0.083" /><testcase classname="tests.test_saferef.TestSaferef" name="test_Valid" time="0.020" /><testcase classname="tests.test_signals" name="test_meta_connect" time="0.006" /><testcase classname="tests.test_signals" name="test_signal_signals_any_sender" time="0.007" /><testcase classname="tests.test_signals" name="test_signal_signals_strong_sender" time="0.006" /><testcase classname="tests.test_signals" name="test_signal_weak_receiver_vanishes" time="0.007"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 142, in test_signal_weak_receiver_vanishes
+    assert len(sentinel) == 0
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_signal_signals_weak_sender" time="0.005" /><testcase classname="tests.test_signals" name="test_empty_bucket_growth" time="0.005" /><testcase classname="tests.test_signals" name="test_meta_connect_failure" time="0.007" /><testcase classname="tests.test_signals" name="test_weak_namespace" time="0.006"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 248, in test_weak_namespace
+    assert 'def' not in ns
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_namespace" time="0.006" /><testcase classname="tests.test_signals" name="test_weak_receiver" time="0.006"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 290, in test_weak_receiver
+    assert not sentinel
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_strong_receiver" time="0.005" /><testcase classname="tests.test_signals" name="test_instancemethod_receiver" time="0.007"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 335, in test_instancemethod_receiver
+    assert len(sentinel) == 1
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_filtered_receiver" time="0.005" /><testcase classname="tests.test_signals" name="test_filtered_receiver_weakref" time="0.006"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 390, in test_filtered_receiver_weakref
+    values_are_empty_sets_(sig._by_receiver)
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 488, in values_are_empty_sets_
+    assert val == set()
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_decorated_receiver" time="0.005" /><testcase classname="tests.test_signals" name="test_no_double_send" time="0.005" /><testcase classname="tests.test_signals" name="test_has_receivers" time="0.006"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/blinker-1.5/tests/test_signals.py", line 461, in test_has_receivers
+    assert not sig.has_receivers_for('xyz')
+AssertionError</failure></testcase><testcase classname="tests.test_signals" name="test_instance_doc" time="0.004" /><testcase classname="tests.test_signals" name="test_named_blinker" time="0.005" /><testcase classname="tests.test_utilities" name="test_symbols" time="0.005" /><testcase classname="tests.test_utilities" name="test_pickled_symbols" time="0.016" /></testsuite></testsuites>

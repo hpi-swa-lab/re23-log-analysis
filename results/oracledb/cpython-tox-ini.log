@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/oracledb/1.3.2/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdoc/requirements.txt
+

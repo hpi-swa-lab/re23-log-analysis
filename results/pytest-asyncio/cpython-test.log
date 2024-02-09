@@ -1,0 +1,63 @@
+.package create: /workdir/pytest-asyncio-0.20.3/.tox/.package
+.package installdeps: setuptools>=51.0, wheel>=0.36, setuptools_scm[toml]>=6.2
+/workdir/pytest-asyncio-0.20.3/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/pytest-asyncio-0.20.3" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+/workdir/pytest-asyncio-0.20.3/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/pytest-asyncio-0.20.3" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+cpythonlibtest-unit-test-tests create: /workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdependencies/pytest-min/requirements.txt, -rdependencies/default/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pytest-asyncio-0.20.3/.tox/.tmp/package/1/pytest-asyncio-0.20.3.tar.gz
+cpythonlibtest-unit-test-tests installed: attrs==23.1.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==0.13.1,py==1.11.0,pytest==6.1.0,pytest-asyncio @ file:///workdir/pytest-asyncio-0.20.3/.tox/.tmp/package/1/pytest-asyncio-0.20.3.tar.gz#sha256=6ad7a4758ed4d94ab5b5d37b47fd7db0e472ec10a08ad22b06206658d0a5a8db,toml==0.10.2
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1275187544'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pytest-asyncio/0.20.3/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 8, in <module>
+    sys.exit(console_main())
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 187, in console_main
+    code = main()
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 143, in main
+    config = _prepareconfig(args, plugins)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 318, in _prepareconfig
+    config = pluginmanager.hook.pytest_cmdline_parse(
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/callers.py", line 203, in _multicall
+    gen.send(outcome)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/helpconfig.py", line 100, in pytest_cmdline_parse
+    config = outcome.get_result()  # type: Config
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 1003, in pytest_cmdline_parse
+    self.parse(args)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 1280, in parse
+    self._preparse(args, addopts=addopts)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 1172, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/manager.py", line 299, in load_setuptools_entrypoints
+    plugin = ep.load()
+  File "/usr/local/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
+    module = import_module(match.group('module'))
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 162, in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+  File "/workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 359, in _rewrite_test
+    co = compile(tree, fn_, "exec", dont_inherit=True)
+TypeError: required field "lineno" missing from alias
+ERROR: InvocationError for command /workdir/pytest-asyncio-0.20.3/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pytest-asyncio/0.20.3/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

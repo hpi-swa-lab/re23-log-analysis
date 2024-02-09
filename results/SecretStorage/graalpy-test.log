@@ -1,0 +1,598 @@
+GLOB sdist-make: /workdir/SecretStorage-3.3.3/setup.py
+graalpylibtest-unit-test-tests create: /workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/SecretStorage-3.3.3/.tox/.tmp/package/1/SecretStorage-3.3.3.zip
+graalpylibtest-unit-test-tests installed: cffi==1.15.1,cryptography==3.4.7,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,jeepney==0.8.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycparser==2.21,pytest==7.4.3,SecretStorage @ file:///workdir/SecretStorage-3.3.3/.tox/.tmp/package/1/SecretStorage-3.3.3.zip,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2582116727'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/SecretStorage/3.3.3/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/SecretStorage-3.3.3
+collecting ... collected 26 items
+
+tests/test_collection.py::CollectionTest::test_all_collections FAILED    [  3%]
+tests/test_collection.py::CollectionTest::test_all_items FAILED          [  7%]
+tests/test_collection.py::CollectionTest::test_create_empty_item FAILED  [ 11%]
+tests/test_collection.py::CollectionTest::test_label FAILED              [ 15%]
+tests/test_collection.py::MockCollectionTest::test_create_collection SKIPPED [ 19%]
+tests/test_collection.py::MockCollectionTest::test_default_collection SKIPPED [ 23%]
+tests/test_collection.py::MockCollectionTest::test_deleting SKIPPED      [ 26%]
+tests/test_collection.py::MockCollectionTest::test_deleting_item_prompt SKIPPED [ 30%]
+tests/test_collection.py::MockCollectionTest::test_deleting_prompt SKIPPED [ 34%]
+tests/test_context_manager.py::ContextManagerTest::test_closing_context_manager FAILED [ 38%]
+tests/test_dhcrypto.py::ConversionTest::test_int_to_bytes PASSED         [ 42%]
+tests/test_exceptions.py::ExceptionsTest::test_double_deleting FAILED    [ 46%]
+tests/test_exceptions.py::ExceptionsTest::test_non_existing_collection FAILED [ 50%]
+tests/test_exceptions.py::ExceptionsTest::test_non_existing_item FAILED  [ 53%]
+tests/test_item.py::ItemTest::test_attributes FAILED                     [ 57%]
+tests/test_item.py::ItemTest::test_created FAILED                        [ 61%]
+tests/test_item.py::ItemTest::test_equal FAILED                          [ 65%]
+tests/test_item.py::ItemTest::test_item_in_all_items FAILED              [ 69%]
+tests/test_item.py::ItemTest::test_label FAILED                          [ 73%]
+tests/test_item.py::ItemTest::test_modified FAILED                       [ 76%]
+tests/test_item.py::ItemTest::test_searchable FAILED                     [ 80%]
+tests/test_item.py::ItemTest::test_secret FAILED                         [ 84%]
+tests/test_item.py::ItemTest::test_secret_content_type FAILED            [ 88%]
+tests/test_item.py::ItemTest::test_secret_wrong_type FAILED              [ 92%]
+tests/test_item.py::ItemTest::test_unlock FAILED                         [ 96%]
+tests/test_unlocking.py::LockingUnlockingTest::test_lock_unlock SKIPPED  [100%]
+
+=================================== FAILURES ===================================
+_____________________ CollectionTest.test_all_collections ______________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+________________________ CollectionTest.test_all_items _________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+____________________ CollectionTest.test_create_empty_item _____________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+__________________________ CollectionTest.test_label ___________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_collection.py", line 20, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_______________ ContextManagerTest.test_closing_context_manager ________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/SecretStorage-3.3.3/tests/test_context_manager.py", line 19, in test_closing_context_manager
+    with closing(dbus_init()) as connection:
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_____________________ ExceptionsTest.test_double_deleting ______________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_________________ ExceptionsTest.test_non_existing_collection __________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+____________________ ExceptionsTest.test_non_existing_item _____________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_exceptions.py", line 17, in setUp
+    self.connection = secretstorage.dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+___________________________ ItemTest.test_attributes ___________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+____________________________ ItemTest.test_created _____________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_____________________________ ItemTest.test_equal ______________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_______________________ ItemTest.test_item_in_all_items ________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_____________________________ ItemTest.test_label ______________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+____________________________ ItemTest.test_modified ____________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+___________________________ ItemTest.test_searchable ___________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_____________________________ ItemTest.test_secret _____________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+______________________ ItemTest.test_secret_content_type _______________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_______________________ ItemTest.test_secret_wrong_type ________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+_____________________________ ItemTest.test_unlock _____________________________
+Traceback (most recent call last):
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 73, in dbus_init
+    connection = open_dbus_connection()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/io/blocking.py", line 341, in open_dbus_connection
+    bus_addr = get_bus(bus)
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 53, in get_bus
+    return find_session_bus()
+  File "/workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/jeepney/bus.py", line 42, in find_session_bus
+    addr = os.environ['DBUS_SESSION_BUS_ADDRESS']
+  File "/opt/graalpy/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DBUS_SESSION_BUS_ADDRESS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 587, in run
+    self._callSetUp()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 546, in _callSetUp
+    self.setUp()
+  File "/workdir/SecretStorage-3.3.3/tests/test_item.py", line 21, in setUp
+    self.connection = dbus_init()
+  File "/workdir/SecretStorage-3.3.3/secretstorage/__init__.py", line 79, in dbus_init
+    raise SecretServiceNotAvailableException(reason) from ex
+secretstorage.exceptions.SecretServiceNotAvailableException: Environment variable DBUS_SESSION_BUS_ADDRESS is unset
+- generated xml file: /workdir/results/SecretStorage/3.3.3/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_collection.py::CollectionTest::test_all_collections - secre...
+FAILED tests/test_collection.py::CollectionTest::test_all_items - secretstora...
+FAILED tests/test_collection.py::CollectionTest::test_create_empty_item - sec...
+FAILED tests/test_collection.py::CollectionTest::test_label - secretstorage.e...
+FAILED tests/test_context_manager.py::ContextManagerTest::test_closing_context_manager
+FAILED tests/test_exceptions.py::ExceptionsTest::test_double_deleting - secre...
+FAILED tests/test_exceptions.py::ExceptionsTest::test_non_existing_collection
+FAILED tests/test_exceptions.py::ExceptionsTest::test_non_existing_item - sec...
+FAILED tests/test_item.py::ItemTest::test_attributes - secretstorage.exceptio...
+FAILED tests/test_item.py::ItemTest::test_created - secretstorage.exceptions....
+FAILED tests/test_item.py::ItemTest::test_equal - secretstorage.exceptions.Se...
+FAILED tests/test_item.py::ItemTest::test_item_in_all_items - secretstorage.e...
+FAILED tests/test_item.py::ItemTest::test_label - secretstorage.exceptions.Se...
+FAILED tests/test_item.py::ItemTest::test_modified - secretstorage.exceptions...
+FAILED tests/test_item.py::ItemTest::test_searchable - secretstorage.exceptio...
+FAILED tests/test_item.py::ItemTest::test_secret - secretstorage.exceptions.S...
+FAILED tests/test_item.py::ItemTest::test_secret_content_type - secretstorage...
+FAILED tests/test_item.py::ItemTest::test_secret_wrong_type - secretstorage.e...
+FAILED tests/test_item.py::ItemTest::test_unlock - secretstorage.exceptions.S...
+=================== 19 failed, 1 passed, 6 skipped in 1.08s ====================
+ERROR: InvocationError for command /workdir/SecretStorage-3.3.3/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/SecretStorage/3.3.3/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

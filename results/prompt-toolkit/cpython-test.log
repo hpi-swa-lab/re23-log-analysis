@@ -1,0 +1,200 @@
+GLOB sdist-make: /workdir/prompt-toolkit-3.0.33/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/prompt-toolkit-3.0.33/.tox/.tmp/package/1/prompt_toolkit-3.0.33.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,prompt-toolkit @ file:///workdir/prompt-toolkit-3.0.33/.tox/.tmp/package/1/prompt_toolkit-3.0.33.zip#sha256=26e588ec00a4d28404050fbc2b18c286ac54afdf9c493c5a8df520489676f30b,pytest==7.4.3,tomli==2.0.1,wcwidth==0.2.12
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2811807331'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/prompt-toolkit/3.0.33/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/prompt-toolkit-3.0.33
+collecting ... collected 145 items
+
+tests/test_async_generator.py::test_generator_to_async_generator PASSED  [  0%]
+tests/test_buffer.py::test_initial PASSED                                [  1%]
+tests/test_buffer.py::test_insert_text PASSED                            [  2%]
+tests/test_buffer.py::test_cursor_movement PASSED                        [  2%]
+tests/test_buffer.py::test_backspace PASSED                              [  3%]
+tests/test_buffer.py::test_cursor_up PASSED                              [  4%]
+tests/test_buffer.py::test_cursor_down PASSED                            [  4%]
+tests/test_buffer.py::test_join_next_line PASSED                         [  5%]
+tests/test_buffer.py::test_newline PASSED                                [  6%]
+tests/test_buffer.py::test_swap_characters_before_cursor PASSED          [  6%]
+tests/test_cli.py::test_simple_text_input PASSED                         [  7%]
+tests/test_cli.py::test_emacs_cursor_movements PASSED                    [  8%]
+tests/test_cli.py::test_emacs_kill_multiple_words_and_paste PASSED       [  8%]
+tests/test_cli.py::test_interrupts PASSED                                [  9%]
+tests/test_cli.py::test_emacs_yank PASSED                                [ 10%]
+tests/test_cli.py::test_quoted_insert PASSED                             [ 11%]
+tests/test_cli.py::test_transformations PASSED                           [ 11%]
+tests/test_cli.py::test_emacs_other_bindings PASSED                      [ 12%]
+tests/test_cli.py::test_controlx_controlx PASSED                         [ 13%]
+tests/test_cli.py::test_emacs_history_bindings PASSED                    [ 13%]
+tests/test_cli.py::test_emacs_reverse_search PASSED                      [ 14%]
+tests/test_cli.py::test_emacs_arguments PASSED                           [ 15%]
+tests/test_cli.py::test_emacs_arguments_for_all_commands PASSED          [ 15%]
+tests/test_cli.py::test_emacs_kill_ring PASSED                           [ 16%]
+tests/test_cli.py::test_emacs_selection PASSED                           [ 17%]
+tests/test_cli.py::test_emacs_insert_comment PASSED                      [ 17%]
+tests/test_cli.py::test_emacs_record_macro PASSED                        [ 18%]
+tests/test_cli.py::test_emacs_nested_macro PASSED                        [ 19%]
+tests/test_cli.py::test_prefix_meta PASSED                               [ 20%]
+tests/test_cli.py::test_bracketed_paste PASSED                           [ 20%]
+tests/test_cli.py::test_vi_cursor_movements PASSED                       [ 21%]
+tests/test_cli.py::test_vi_operators PASSED                              [ 22%]
+tests/test_cli.py::test_vi_text_objects PASSED                           [ 22%]
+tests/test_cli.py::test_vi_digraphs PASSED                               [ 23%]
+tests/test_cli.py::test_vi_block_editing PASSED                          [ 24%]
+tests/test_cli.py::test_vi_block_editing_empty_lines PASSED              [ 24%]
+tests/test_cli.py::test_vi_visual_line_copy PASSED                       [ 25%]
+tests/test_cli.py::test_vi_visual_empty_line PASSED                      [ 26%]
+tests/test_cli.py::test_vi_character_delete_after_cursor PASSED          [ 26%]
+tests/test_cli.py::test_vi_character_delete_before_cursor PASSED         [ 27%]
+tests/test_cli.py::test_vi_character_paste PASSED                        [ 28%]
+tests/test_cli.py::test_vi_temp_navigation_mode PASSED                   [ 28%]
+tests/test_cli.py::test_vi_macros PASSED                                 [ 29%]
+tests/test_cli.py::test_accept_default PASSED                            [ 30%]
+tests/test_completion.py::test_pathcompleter_completes_in_current_directory PASSED [ 31%]
+tests/test_completion.py::test_pathcompleter_completes_files_in_current_directory PASSED [ 31%]
+tests/test_completion.py::test_pathcompleter_completes_files_in_absolute_directory PASSED [ 32%]
+tests/test_completion.py::test_pathcompleter_completes_directories_with_only_directories PASSED [ 33%]
+tests/test_completion.py::test_pathcompleter_respects_completions_under_min_input_len PASSED [ 33%]
+tests/test_completion.py::test_pathcompleter_does_not_expanduser_by_default PASSED [ 34%]
+tests/test_completion.py::test_pathcompleter_can_expanduser PASSED       [ 35%]
+tests/test_completion.py::test_pathcompleter_can_apply_file_filter PASSED [ 35%]
+tests/test_completion.py::test_pathcompleter_get_paths_constrains_path PASSED [ 36%]
+tests/test_completion.py::test_word_completer_static_word_list PASSED    [ 37%]
+tests/test_completion.py::test_word_completer_ignore_case PASSED         [ 37%]
+tests/test_completion.py::test_word_completer_match_middle PASSED        [ 38%]
+tests/test_completion.py::test_word_completer_sentence PASSED            [ 39%]
+tests/test_completion.py::test_word_completer_dynamic_word_list PASSED   [ 40%]
+tests/test_completion.py::test_word_completer_pattern PASSED             [ 40%]
+tests/test_completion.py::test_fuzzy_completer PASSED                    [ 41%]
+tests/test_completion.py::test_nested_completer PASSED                   [ 42%]
+tests/test_completion.py::test_deduplicate_completer PASSED              [ 42%]
+tests/test_document.py::test_current_char PASSED                         [ 43%]
+tests/test_document.py::test_text_before_cursor PASSED                   [ 44%]
+tests/test_document.py::test_text_after_cursor PASSED                    [ 44%]
+tests/test_document.py::test_lines PASSED                                [ 45%]
+tests/test_document.py::test_line_count PASSED                           [ 46%]
+tests/test_document.py::test_current_line_before_cursor PASSED           [ 46%]
+tests/test_document.py::test_current_line_after_cursor PASSED            [ 47%]
+tests/test_document.py::test_current_line PASSED                         [ 48%]
+tests/test_document.py::test_cursor_position PASSED                      [ 48%]
+tests/test_document.py::test_translate_index_to_position PASSED          [ 49%]
+tests/test_document.py::test_is_cursor_at_the_end PASSED                 [ 50%]
+tests/test_filter.py::test_never PASSED                                  [ 51%]
+tests/test_filter.py::test_always PASSED                                 [ 51%]
+tests/test_filter.py::test_invert PASSED                                 [ 52%]
+tests/test_filter.py::test_or PASSED                                     [ 53%]
+tests/test_filter.py::test_and PASSED                                    [ 53%]
+tests/test_filter.py::test_to_filter PASSED                              [ 54%]
+tests/test_formatted_text.py::test_basic_html PASSED                     [ 55%]
+tests/test_formatted_text.py::test_html_with_fg_bg PASSED                [ 55%]
+tests/test_formatted_text.py::test_ansi_formatting PASSED                [ 56%]
+tests/test_formatted_text.py::test_ansi_256_color PASSED                 [ 57%]
+tests/test_formatted_text.py::test_ansi_true_color PASSED                [ 57%]
+tests/test_formatted_text.py::test_ansi_interpolation PASSED             [ 58%]
+tests/test_formatted_text.py::test_interpolation PASSED                  [ 59%]
+tests/test_formatted_text.py::test_html_interpolation PASSED             [ 60%]
+tests/test_formatted_text.py::test_merge_formatted_text PASSED           [ 60%]
+tests/test_formatted_text.py::test_pygments_tokens PASSED                [ 61%]
+tests/test_formatted_text.py::test_split_lines PASSED                    [ 62%]
+tests/test_formatted_text.py::test_split_lines_2 PASSED                  [ 62%]
+tests/test_formatted_text.py::test_split_lines_3 PASSED                  [ 63%]
+tests/test_history.py::test_in_memory_history PASSED                     [ 64%]
+tests/test_history.py::test_file_history PASSED                          [ 64%]
+tests/test_history.py::test_threaded_file_history PASSED                 [ 65%]
+tests/test_history.py::test_threaded_in_memory_history PASSED            [ 66%]
+tests/test_inputstream.py::test_control_keys PASSED                      [ 66%]
+tests/test_inputstream.py::test_arrows PASSED                            [ 67%]
+tests/test_inputstream.py::test_escape PASSED                            [ 68%]
+tests/test_inputstream.py::test_special_double_keys PASSED               [ 68%]
+tests/test_inputstream.py::test_flush_1 PASSED                           [ 69%]
+tests/test_inputstream.py::test_flush_2 PASSED                           [ 70%]
+tests/test_inputstream.py::test_meta_arrows PASSED                       [ 71%]
+tests/test_inputstream.py::test_control_square_close PASSED              [ 71%]
+tests/test_inputstream.py::test_invalid PASSED                           [ 72%]
+tests/test_inputstream.py::test_cpr_response PASSED                      [ 73%]
+tests/test_inputstream.py::test_cpr_response_2 PASSED                    [ 73%]
+tests/test_key_binding.py::test_remove_bindings PASSED                   [ 74%]
+tests/test_key_binding.py::test_feed_simple PASSED                       [ 75%]
+tests/test_key_binding.py::test_feed_several PASSED                      [ 75%]
+tests/test_key_binding.py::test_control_square_closed_any PASSED         [ 76%]
+tests/test_key_binding.py::test_common_prefix PASSED                     [ 77%]
+tests/test_key_binding.py::test_previous_key_sequence PASSED             [ 77%]
+tests/test_layout.py::test_layout_class PASSED                           [ 78%]
+tests/test_layout.py::test_create_invalid_layout PASSED                  [ 79%]
+tests/test_print_formatted_text.py::test_print_formatted_text PASSED     [ 80%]
+tests/test_print_formatted_text.py::test_print_formatted_text_backslash_r PASSED [ 80%]
+tests/test_print_formatted_text.py::test_formatted_text_with_style PASSED [ 81%]
+tests/test_print_formatted_text.py::test_html_with_style PASSED          [ 82%]
+tests/test_regular_languages.py::test_simple_match PASSED                [ 82%]
+tests/test_regular_languages.py::test_variable_varname PASSED            [ 83%]
+tests/test_regular_languages.py::test_prefix PASSED                      [ 84%]
+tests/test_regular_languages.py::test_completer PASSED                   [ 84%]
+tests/test_shortcuts.py::test_split_multiline_prompt PASSED              [ 85%]
+tests/test_shortcuts.py::test_print_container PASSED                     [ 86%]
+tests/test_style.py::test_style_from_dict PASSED                         [ 86%]
+tests/test_style.py::test_class_combinations_1 PASSED                    [ 87%]
+tests/test_style.py::test_class_combinations_2 PASSED                    [ 88%]
+tests/test_style.py::test_substyles PASSED                               [ 88%]
+tests/test_style.py::test_swap_light_and_dark_style_transformation PASSED [ 89%]
+tests/test_style_transformation.py::test_adjust_brightness_style_transformation PASSED [ 90%]
+tests/test_utils.py::test_using_weights PASSED                           [ 91%]
+tests/test_vt100_output.py::test_get_closest_ansi_color PASSED           [ 91%]
+tests/test_widgets.py::test_defaulf_button PASSED                        [ 92%]
+tests/test_widgets.py::test_custom_button PASSED                         [ 93%]
+tests/test_yank_nth_arg.py::test_empty_history PASSED                    [ 93%]
+tests/test_yank_nth_arg.py::test_simple_search PASSED                    [ 94%]
+tests/test_yank_nth_arg.py::test_simple_search_with_quotes PASSED        [ 95%]
+tests/test_yank_nth_arg.py::test_simple_search_with_arg PASSED           [ 95%]
+tests/test_yank_nth_arg.py::test_simple_search_with_arg_out_of_bounds PASSED [ 96%]
+tests/test_yank_nth_arg.py::test_repeated_search PASSED                  [ 97%]
+tests/test_yank_nth_arg.py::test_repeated_search_with_wraparound PASSED  [ 97%]
+tests/test_yank_nth_arg.py::test_yank_nth_arg PASSED                     [ 98%]
+tests/test_yank_nth_arg.py::test_repeated_yank_nth_arg PASSED            [ 99%]
+tests/test_yank_nth_arg.py::test_yank_nth_arg_with_arg PASSED            [100%]
+
+- generated xml file: /workdir/results/prompt-toolkit/3.0.33/1/cpython-test-results.xml -
+============================= 145 passed in 18.50s =============================
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6/test_safe_delete_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_delete_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6/test_safe_set_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_set_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6/test_rmtree_errorhandler_rerai0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_rerai0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6/test_rmtree_errorhandler_reado0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_reado0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6/test_safe_get_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_get_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6
+<class 'OSError'>: [Errno 39] Directory not empty: '/tmp/pytest-of-tester/garbage-87823730-d8f6-495c-853c-57a8b31703a6'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d/test_safe_delete_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_delete_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d/test_safe_set_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_set_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d/test_rmtree_errorhandler_rerai0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_rerai0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d/test_rmtree_errorhandler_reado0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_reado0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d/test_safe_get_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_get_no_perms0'
+  warnings.warn(
+/workdir/prompt-toolkit-3.0.33/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d
+<class 'OSError'>: [Errno 39] Directory not empty: '/tmp/pytest-of-tester/garbage-b78d0bf2-e6fd-476e-b272-209f0e9d4e2d'
+  warnings.warn(
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

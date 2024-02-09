@@ -1,0 +1,13 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pymdown-extensions/10.0.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/tools.txt
+	-rrequirements/project.txt
+	-rrequirements/extra.txt
+	-rrequirements/lint.txt
+	-rrequirements/test.txt
+

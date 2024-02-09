@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="35" failures="2" skipped="1" tests="205" time="1649.116" timestamp="2023-11-29T19:31:55.562000" hostname="be2d8ee410eb"><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_thumbnail_div[&lt;&quot;test&quot;&gt;-&amp;lt;&amp;quot;test&amp;quot;&amp;gt;-False]" time="0.523" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_thumbnail_div[test formating-test formating-True]" time="0.095" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_thumbnail_div[1 :class:`~a.b`. 2 :class:`a.b` 3 :ref:`whatever &lt;better name&gt;`-1 b. 2 a.b 3 better name-False]" time="0.093" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_thumbnail_div[use :meth:`mne.io.Raw.plot_psd` to-use mne.io.Raw.plot_psd to-False]" time="0.107" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_thumbnail_div[`this` and ``that``; and `these things` and ``those things``-this and that; and these things and those things-False]" time="0.096" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_identify_names" time="0.216" /><testcase classname="sphinx_gallery.tests.test_backreferences" name="test_identify_names2" time="0.175" /><testcase classname="sphinx_gallery.tests.test_binder" name="test_binder" time="0.183" /><testcase classname="sphinx_gallery.tests.test_binder" name="test_gen_binder_rst" time="0.115" /><testcase classname="sphinx_gallery.tests.test_docs_resolv" name="test_embed_code_links_get_data" time="0.871" /><testcase classname="sphinx_gallery.tests.test_docs_resolv" name="test_shelve" time="0.137" /><testcase classname="sphinx_gallery.tests.test_docs_resolv" name="test_parse_sphinx_docopts" time="0.071" /><testcase classname="sphinx_gallery.tests.test_full" name="test_timings" time="784.508"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 693, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1069, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_optipng" time="0.028"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_junit" time="0.030"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_run_sphinx" time="0.027"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_thumbnail_path" time="0.032"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_negative_thumbnail_config" time="0.027"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_command_line_args_img" time="0.024"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_image_formats" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_repr_html_classes" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_embed_links_and_styles" time="0.027"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_backreferences" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_backreferences_examples_rst[sphinx_gallery.backreferences.identify_names.examples-plot_numpy_matplotlib]" time="0.024"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_backreferences_examples_rst[sphinx_gallery.sorting.ExplicitOrder.examples-plot_second_future_imports]" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_backreferences_examples_html" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_logging_std_nested" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_rebuild" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_error_messages[future/plot_future_imports_broken-.*RuntimeError.*Forcing this example to fail on Python 3.*]" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_error_messages[plot_scraper_broken-.*ValueError.*zero-size array to reduction.*]" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_alt_text_image" time="0.023"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_alt_text_thumbnail" time="0.023"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_backreference_labels" time="0.023"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 1-N-5-False]" time="0.046"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 1-D-D-7-False]" time="0.032"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 1-D-C-7-False]" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 1-C-D-8-False]" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 2-N-10-True]" time="0.037"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 2-D-D-13-True]" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_minigallery_directive[Test 2-C-C-14-True]" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_matplotlib_warning_filter" time="0.027"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_jupyter_notebook_pandoc" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_md5_hash" time="0.027"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_binder_logo_exists" time="0.026"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_defer_figures" time="0.025"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full" name="test_no_dummy_image" time="0.072"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples&#10;&#10;#x1B[91mUnexpected failing examples:#x1B[39;49;00m&#10;/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:&#10;Traceback (most recent call last):&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 365, in fork_exec&#10;  File &quot;/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py&quot;, line 38, in fork_exec&#10;    pid = os.fork()&#10;AttributeError: module 'os' has no attribute 'fork'&#10;&#10;&#10;-------------------------------------------------------------------------------&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 693, in execute
+    fixturedef.execute(request=subrequest)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1059, in execute
+    raise val.with_traceback(tb)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 97, in summarize_failing_examples
+    'inspect_global_variables': True,
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/gen_gallery.py", line 852, in summarize_failing_examples
+    raise ExtensionError(fail_message)
+sphinx.errors.ExtensionError: Here is a summary of the problems encountered when running the examples
+
+#x1B[91mUnexpected failing examples:#x1B[39;49;00m
+/tmp/pytest-of-tester/pytest-10/root/examples/plot_pickle.py failed leaving traceback:
+Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 365, in fork_exec
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/joblib/externals/loky/backend/fork_exec.py", line 38, in fork_exec
+    pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+
+
+-------------------------------------------------------------------------------</error></testcase><testcase classname="sphinx_gallery.tests.test_full_noexec" name="test_dummy_image" time="394.620"><error message="failed on setup with &quot;sphinx.errors.ExtensionError: Documentation options could not be found in index.&quot;">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 693, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/fixtures.py", line 1069, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/docs_resolv.py", line 323, in parse_sphinx_docopts
+    doc_resolvers[this_module] = SphinxDocLinkResolver(
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/docs_resolv.py", line 182, in __init__
+    self._docopts = parse_sphinx_docopts(docopts)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/docs_resolv.py", line 86, in parse_sphinx_docopts
+    raise ExtensionError(
+sphinx.errors.ExtensionError: Documentation options could not be found in index.</error></testcase><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_config" time="0.130" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_builder" time="1.923" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_default_config" time="7.906" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_no_warning_simple_config" time="8.143" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_reset[Resetter unknown]" time="2.052" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_reset[Resetter not callable]" time="1.781" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_reset_modules_order[Resetter unknown]" time="1.691" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_reset_modules_order[reset_modules_order not valid]" time="1.830" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_css[CSS str error]" time="1.745" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_bad_css[CSS type error]" time="1.690" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_config_backreferences" time="8.124" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_duplicate_files_warn" time="8.057" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_spaces_in_files_warn" time="7.930" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_example_sorting_default" time="8.248" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_example_sorting_filesize" time="7.806" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_example_sorting_filename" time="7.618" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_example_sorting_title" time="7.464" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_collect_gallery_files" time="0.298" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_collect_gallery_files_ignore_pattern" time="0.246" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_binder_copy_files" time="7.699" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_failing_examples_raise_exception" time="37.260" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_expected_failing_examples_were_executed" time="33.533" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_only_warn_on_example_error" time="37.918" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_only_warn_on_example_error_sphinx_warning" time="7.693" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_examples_not_expected_to_pass" time="38.902" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_show_memory_callable" time="37.654" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_first_notebook_cell_config" time="1.777" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_last_notebook_cell_config" time="1.940" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_backreferences_dir_config" time="1.652" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_backreferences_dir_pathlib_config" time="7.943" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_write_computation_times_noop" time="0.034" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_pypandoc_config_list" time="1.804" /><testcase classname="sphinx_gallery.tests.test_gen_gallery" name="test_pypandoc_config_keys" time="1.814" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_split_code_and_text_blocks" time="0.041" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_bug_cases_of_notebook_syntax" time="0.064" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_direct_comment_after_docstring" time="0.045" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_final_rst_last_word" time="0.093" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_rst_block_after_docstring" time="0.240" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_rst_empty_code_block" time="1.608" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_script_vars_globals" time="1.850" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_codestr2rst" time="0.027" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_extract_intro_and_title" time="0.359" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_md5sums[b-a546be453c8f436e744838a4801bd3a0]" time="0.059" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_md5sums[t-ea8a570e9f3afc0a7c3f2a17a48b8047]" time="0.060" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_fail_example[failing_code0-not defined]" time="2.671" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_fail_example[failing_code1-Cannot use input]" time="2.718"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 169, in _multicall
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/tests/test_gen_rst.py", line 77, in test_fail_example
+    """Test the known requirements of supported syntax in the
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/tests/test_gen_rst.py", line 370, in test_fail_example
+    assert '_check_input' not in msg
+AssertionError</failure></testcase><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_fail_example[failing_code2-invalid syntax]" time="2.360" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_custom_scraper_thumbnail_alpha" time="14.034" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_remove_config_comments" time="0.685" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_remove_ignore_blocks" time="0.449" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_dummy_image_error" time="0.258" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_final_empty_block" time="0.457" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_download_link_note_only_html" time="0.449" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_download_link_classes" time="0.444" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_exclude_implicit[exclude nothing (default)]" time="0.505" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_exclude_implicit[exclude anything (explicit backreferences only)]" time="0.500" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_exclude_implicit[explicit backref not shadowed by implicit one]" time="0.498" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_exclude_implicit[exclude implicit backref]" time="0.701" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_gen_dir_rst[.txt]" time="0.256" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_gen_dir_rst[.rst]" time="0.281" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_gen_dir_rst[.bad]" time="0.234" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_pattern_matching" time="2.841" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_number[# sphinx_gallery_thumbnail_number= 2]" time="0.051" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_number[# sphinx_gallery_thumbnail_number=2]" time="0.061" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_number[#sphinx_gallery_thumbnail_number = 2]" time="0.053" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_number[    # sphinx_gallery_thumbnail_number=2]" time="0.051" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_path[# sphinx_gallery_thumbnail_path= '_static/demo.png']" time="0.059" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_path[# sphinx_gallery_thumbnail_path='_static/demo.png']" time="0.051" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_path[#sphinx_gallery_thumbnail_path = '_static/demo.png']" time="0.050" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_thumbnail_path[    # sphinx_gallery_thumbnail_path='_static/demo.png']" time="0.065" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_zip_notebooks" time="0.379" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_rst_example" time="0.245" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_output_indentation" time="0.453" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_output_no_ansi" time="0.338" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_absl_logging" time="0.946" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_empty_output_box" time="0.272" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[assign,()]" time="0.283" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[var,()]" time="0.281" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print(var),()]" time="0.287" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print+var,()]" time="0.289" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[assign,(repr)]" time="0.276" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[var,(repr)]" time="0.292" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print(var),(repr)]" time="0.297" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print+var,(repr)]" time="0.291" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_and_html,(repr)]" time="0.318" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print and repr_and_html,(repr)]" time="0.299" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_only,(html)]" time="0.295" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_and_html,(html)]" time="0.408" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[print and repr_and_html,(html)]" time="0.319" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_and_html,(html,repr)]" time="0.322" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_and_html,(repr,html)]" time="0.319" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[repr_only,(html,repr)]" time="0.309" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_capture_repr[html_none]" time="0.330" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_per_file_capture_repr[() --&gt; repr]" time="0.299" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_per_file_capture_repr[repr --&gt; ()]" time="0.290" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_ignore_repr_types" time="0.278" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_2_param[before-1]" time="2.730" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_2_param[after-1]" time="2.714" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_2_param[both-2]" time="2.416" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_3_param[before-1-expected_call_order0]" time="2.512" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_3_param[after-1-expected_call_order1]" time="2.393" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_3_param[both-2-expected_call_order2]" time="2.568" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_reset_module_order_3_param_invalid_when" time="0.521" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_full_line" time="0.300" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_incomplete_line_with_flush" time="0.267" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_incomplete_line_with_more_output" time="0.191" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_multi_line" time="0.191" /><testcase classname="sphinx_gallery.tests.test_gen_rst" name="test_isatty" time="0.164" /><testcase classname="sphinx_gallery.tests.test_load_style" name="test_load_style" time="16.134"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 341, in get_result
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 169, in _multicall
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/tests/test_load_style.py", line 77, in test_load_style
+  File "/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sphinx-gallery-0.11.1/sphinx_gallery/tests/test_load_style.py", line 18, in test_load_style
+    assert 'link rel="stylesheet" type="text/css" href="_static/sg_gallery.css"' in content  # noqa: E501
+AssertionError</failure></testcase><testcase classname="sphinx_gallery.tests.test_notebook" name="test_latex_conversion" time="0.268" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_code_conversion" time="0.048" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_convert" time="0.243" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_headings" time="0.049" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_cell_magic_promotion" time="0.037" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[rel_no_prefix]" time="0.260" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[abs_no_prefix]" time="0.259" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[rel_prefix]" time="0.278" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[abs_prefix]" time="0.269" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[url_no_prefix]" time="0.262" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_prefix[url_prefix]" time="0.259" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_notebook_images_data_uri" time="0.266" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_jupyter_notebook" time="0.774" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_with_empty_args" time="0.076" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_missing_file" time="0.057" /><testcase classname="sphinx_gallery.tests.test_notebook" name="test_file_is_generated" time="0.173" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_get_docstring_and_rest" time="0.143" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[No config\nin here.-file_conf0]" time="0.157" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[# sphinx_gallery_line_numbers = True-file_conf1]" time="0.160" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[  #   sphinx_gallery_line_numbers   =   True   -file_conf2]" time="0.303" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[#sphinx_gallery_line_numbers=True-file_conf3]" time="0.196" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[#sphinx_gallery_thumbnail_number\n=\n5-file_conf4]" time="0.155" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[#sphinx_gallery_thumbnail_number=1foo-None]" time="0.195" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_extract_file_config[# sphinx_gallery_defer_figures-file_conf6]" time="0.197" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[No config\nin here.-No config\nin here.]" time="0.046" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[# sphinx_gallery_line_numbers = True-]" time="0.048" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[  #   sphinx_gallery_line_numbers   =   True   -]" time="0.047" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[#sphinx_gallery_line_numbers=True-]" time="0.051" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[#sphinx_gallery_thumbnail_number\n=\n5-]" time="0.054" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[a = 1\n# sphinx_gallery_line_numbers = True\nb = 1-a = 1\nb = 1]" time="0.042" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[a = 1\n\n# sphinx_gallery_line_numbers = True\n\nb = 1-a = 1\n\n\nb = 1]" time="0.049" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[# comment\n# sphinx_gallery_line_numbers = True\n# comment 2-# comment\n# comment 2]" time="0.047" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_config_comments[# sphinx_gallery_defer_figures-]" time="0.050" /><testcase classname="sphinx_gallery.tests.test_py_source_parser" name="test_remove_ignore_comments" time="0.041" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_save_matplotlib_figures[png]" time="13.593" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_save_matplotlib_figures[svg]" time="14.707" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_save_matplotlib_figures_hidpi" time="18.378" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_save_mayavi_figures" time="0.140"><skipped type="pytest.skip" message="Mayavi not installed">/workdir/sphinx-gallery-0.11.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py:115: Mayavi not installed</skipped></testcase><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_custom_scraper" time="0.279" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_figure_rst[png]" time="0.057" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_figure_rst[svg]" time="0.057" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_figure_rst[jpg]" time="0.057" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_figure_rst[gif]" time="0.064" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_figure_rst_srcset[png]" time="0.061" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_iterator" time="0.038" /><testcase classname="sphinx_gallery.tests.test_scrapers" name="test_reset_matplotlib" time="0.321" /><testcase classname="sphinx_gallery.tests.test_sorting" name="test_ExplicitOrder_sorting_key" time="0.066" /><testcase classname="sphinx_gallery.tests.test_utils" name="test_replace_py_ipynb[some/file/name]" time="0.046" /><testcase classname="sphinx_gallery.tests.test_utils" name="test_replace_py_ipynb[/corner.pycase]" time="0.941" /></testsuite></testsuites>

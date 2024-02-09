@@ -1,0 +1,467 @@
+warning: no previously-included files matching '*.py[cdo]' found anywhere in distribution
+warning: no previously-included files matching '*.py[cdo]' found anywhere in distribution
+graalpylibtest-unit-test-tests create: /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/debugpy-1.6.7/.tox/.tmp/package/1/debugpy-1.6.7.tar.gz
+graalpylibtest-unit-test-tests installed: asgiref==3.7.2,blinker==1.7.0,certifi==2023.11.17,charset-normalizer==3.1.0,click==8.1.7,coverage==7.3.2,debugpy @ file:///workdir/debugpy-1.6.7/.tox/.tmp/package/1/debugpy-1.6.7.tar.gz,Django==4.2.7,exceptiongroup==1.1.3,execnet==2.0.2,Flask==3.0.0,gevent==23.9.1,graalpy-virtualenv==0.0.1,greenlet==1.1.3,hpy==0.9.0rc2,idna==3.4,iniconfig==2.0.0,itsdangerous==2.1.2,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,psutil==5.9.6,pytest==7.4.3,pytest-cov==4.1.0,pytest-timeout==2.2.0,pytest-xdist==3.4.0,requests==2.31.0,sqlparse==0.4.4,tomli==2.0.1,typing_extensions==4.8.0,urllib3==2.1.0,Werkzeug==3.0.1,zope.event==5.0,zope.interface==6.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='392445021'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/debugpy/1.6.7/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/debugpy-1.6.7
+configfile: pytest.ini
+testpaths: tests
+plugins: xdist-3.4.0, timeout-2.2.0, cov-4.1.0
+timeout: 30.0s
+timeout method: thread
+timeout func_only: False
+created: 8/8 workers
+I+14.177: debugpy and pydevd logs will be under /workdir/debugpy-1.6.7/tests/_logs/3.10-32
+
+I+02.656: debugpy and pydevd logs will be under /workdir/debugpy-1.6.7/tests/_logs/3.10-32
+
+I+03.257: Test environment for tests-12822
+          
+          System paths:
+              sys.executable: /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/bin/python(/opt/graalpy/bin/graalpy)
+              sys.prefix: /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests
+              sys.base_prefix: /opt/graalpy
+              sys.real_prefix: <missing>
+              site.getsitepackages(): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages
+              site.getusersitepackages(): /workdir/.local/lib/python3.10/site-packages
+              sys.path (site-packages): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages
+              sysconfig.get_path('stdlib'): /opt/graalpy/lib/python3.10
+              sysconfig.get_path('platstdlib'): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10
+              sysconfig.get_path('purelib'): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages
+              sysconfig.get_path('platlib'): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages
+              sysconfig.get_path('include'): /opt/graalpy/include/python3.10
+              sysconfig.get_path('scripts'): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/bin
+              sysconfig.get_path('data'): /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests
+              os.__file__: /opt/graalpy/lib/python3.10/os.py
+              threading.__file__: /opt/graalpy/lib/python3.10/threading.py
+              debugpy.__file__: /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/debugpy/__init__.py
+
+INTERNALERROR> def worker_internal_error(self, node, formatted_error):
+INTERNALERROR>             """
+INTERNALERROR>             pytest_internalerror() was called on the worker.
+INTERNALERROR>     
+INTERNALERROR>             pytest_internalerror() arguments are an excinfo and an excrepr, which can't
+INTERNALERROR>             be serialized, so we go with a poor man's solution of raising an exception
+INTERNALERROR>             here ourselves using the formatted message.
+INTERNALERROR>             """
+INTERNALERROR>             self._active_nodes.remove(node)
+INTERNALERROR>             try:
+INTERNALERROR> >               assert False, formatted_error
+INTERNALERROR>             except AssertionError:
+INTERNALERROR>                 from _pytest._code import ExceptionInfo
+INTERNALERROR>     
+INTERNALERROR>                 excinfo = ExceptionInfo.from_current()
+INTERNALERROR>                 excrepr = excinfo.getrepr()
+INTERNALERROR>                 self.config.hook.pytest_internalerror(excrepr=excrepr, excinfo=excinfo)
+INTERNALERROR>     
+INTERNALERROR>         def worker_errordown(self, node, error):
+INTERNALERROR>             """Emitted by the WorkerController when a node dies."""
+INTERNALERROR>             self.config.hook.pytest_testnodedown(node=node, error=error)
+INTERNALERROR>             try:
+INTERNALERROR>                 crashitem = self.sched.remove_node(node)
+INTERNALERROR>             except KeyError:
+INTERNALERROR>                 pass
+INTERNALERROR>             else:
+INTERNALERROR>                 if crashitem:
+INTERNALERROR>                     self.handle_crashitem(crashitem, node)
+INTERNALERROR>     
+INTERNALERROR>             self._failed_nodes_count += 1
+INTERNALERROR>             maximum_reached = (
+INTERNALERROR>                 self._max_worker_restart is not None
+INTERNALERROR>                 and self._failed_nodes_count > self._max_worker_restart
+INTERNALERROR>             )
+INTERNALERROR>             if maximum_reached:
+INTERNALERROR>                 if self._max_worker_restart == 0:
+INTERNALERROR>                     msg = "worker {} crashed and worker restarting disabled".format(
+INTERNALERROR>                         node.gateway.id
+INTERNALERROR>                     )
+INTERNALERROR>                 else:
+INTERNALERROR>                     msg = "maximum crashed workers reached: %d" % self._max_worker_restart
+INTERNALERROR>                 self._summary_report = msg
+INTERNALERROR>                 self.report_line("\n" + msg)
+INTERNALERROR>                 self.triggershutdown()
+INTERNALERROR>             else:
+INTERNALERROR>                 self.report_line("\nreplacing crashed worker %s" % node.gateway.id)
+INTERNALERROR>                 self.shuttingdown = False
+INTERNALERROR>                 self._clone_node(node)
+INTERNALERROR>             self._active_nodes.remove(node)
+INTERNALERROR>     
+INTERNALERROR>         @pytest.hookimpl
+INTERNALERROR>         def pytest_terminal_summary(self, terminalreporter):
+INTERNALERROR>             if self.config.option.verbose >= 0 and self._summary_report:
+INTERNALERROR>                 terminalreporter.write_sep("=", f"xdist: {self._summary_report}")
+INTERNALERROR>     
+INTERNALERROR>         def worker_collectionfinish(self, node, ids):
+INTERNALERROR>             """worker has finished test collection.
+INTERNALERROR>     
+INTERNALERROR>             This adds the collection for this node to the scheduler.  If
+INTERNALERROR>             the scheduler indicates collection is finished (i.e. all
+INTERNALERROR>             initial nodes have submitted their collections), then tells the
+INTERNALERROR>             scheduler to schedule the collected items.  When initiating
+INTERNALERROR>             scheduling the first time it logs which scheduler is in use.
+INTERNALERROR>             """
+INTERNALERROR>             if self.shuttingdown:
+INTERNALERROR>                 return
+INTERNALERROR>             self.config.hook.pytest_xdist_node_collection_finished(node=node, ids=ids)
+INTERNALERROR>             # tell session which items were effectively collected otherwise
+INTERNALERROR>             # the controller node will finish the session with EXIT_NOTESTSCOLLECTED
+INTERNALERROR>             self._session.testscollected = len(ids)
+INTERNALERROR>             self.sched.add_node_collection(node, ids)
+INTERNALERROR>             if self.terminal:
+INTERNALERROR>                 self.trdist.setstatus(
+INTERNALERROR>                     node.gateway.spec, WorkerStatus.CollectionDone, tests_collected=len(ids)
+INTERNALERROR>                 )
+INTERNALERROR>             if self.sched.collection_is_completed:
+INTERNALERROR>                 if self.terminal and not self.sched.has_pending:
+INTERNALERROR>                     self.trdist.ensure_show_status()
+INTERNALERROR>                     self.terminal.write_line("")
+INTERNALERROR>                     if self.config.option.verbose > 0:
+INTERNALERROR>                         self.terminal.write_line(
+INTERNALERROR>                             f"scheduling tests via {self.sched.__class__.__name__}"
+INTERNALERROR>                         )
+INTERNALERROR>                 self.sched.schedule()
+INTERNALERROR>     
+INTERNALERROR>         def worker_logstart(self, node, nodeid, location):
+INTERNALERROR>             """Emitted when a node calls the pytest_runtest_logstart hook."""
+INTERNALERROR>             self.config.hook.pytest_runtest_logstart(nodeid=nodeid, location=location)
+INTERNALERROR>     
+INTERNALERROR>         def worker_logfinish(self, node, nodeid, location):
+INTERNALERROR>             """Emitted when a node calls the pytest_runtest_logfinish hook."""
+INTERNALERROR>             self.config.hook.pytest_runtest_logfinish(nodeid=nodeid, location=location)
+INTERNALERROR>     
+INTERNALERROR>         def worker_testreport(self, node, rep):
+INTERNALERROR>             """Emitted when a node calls the pytest_runtest_logreport hook."""
+INTERNALERROR>             rep.node = node
+INTERNALERROR>             self.config.hook.pytest_runtest_logreport(report=rep)
+INTERNALERROR>             self._handlefailures(rep)
+INTERNALERROR>     
+INTERNALERROR>         def worker_runtest_protocol_complete(self, node, item_index, duration):
+INTERNALERROR>             """
+INTERNALERROR>             Emitted when a node fires the 'runtest_protocol_complete' event,
+INTERNALERROR>             signalling that a test has completed the runtestprotocol and should be
+INTERNALERROR>             removed from the pending list in the scheduler.
+INTERNALERROR>             """
+INTERNALERROR>             self.sched.mark_test_complete(node, item_index, duration)
+INTERNALERROR>     
+INTERNALERROR>         def worker_unscheduled(self, node, indices):
+INTERNALERROR>             """
+INTERNALERROR>             Emitted when a node fires the 'unscheduled' event, signalling that
+INTERNALERROR>             some tests have been removed from the worker's queue and should be
+INTERNALERROR>             sent to some worker again.
+INTERNALERROR>     
+INTERNALERROR>             This should happen only in response to 'steal' command, so schedulers
+INTERNALERROR>             not using 'steal' command don't have to implement it.
+INTERNALERROR>             """
+INTERNALERROR>             self.sched.remove_pending_tests_from_node(node, indices)
+INTERNALERROR>     
+INTERNALERROR>         def worker_collectreport(self, node, rep):
+INTERNALERROR>             """Emitted when a node calls the pytest_collectreport hook.
+INTERNALERROR>     
+INTERNALERROR>             Because we only need the report when there's a failure/skip, as optimization
+INTERNALERROR>             we only expect to receive failed/skipped reports from workers (#330).
+INTERNALERROR>             """
+INTERNALERROR>             assert not rep.passed
+INTERNALERROR>             self._failed_worker_collectreport(node, rep)
+INTERNALERROR>     
+INTERNALERROR>         def worker_warning_captured(self, warning_message, when, item):
+INTERNALERROR>             """Emitted when a node calls the pytest_warning_captured hook (deprecated in 6.0)."""
+INTERNALERROR>             # This hook as been removed in pytest 7.1, and we can remove support once we only
+INTERNALERROR>             # support pytest >=7.1.
+INTERNALERROR>             kwargs = dict(warning_message=warning_message, when=when, item=item)
+INTERNALERROR>             self.config.hook.pytest_warning_captured.call_historic(kwargs=kwargs)
+INTERNALERROR>     
+INTERNALERROR>         def worker_warning_recorded(self, warning_message, when, nodeid, location):
+INTERNALERROR>             """Emitted when a node calls the pytest_warning_recorded hook."""
+INTERNALERROR>             kwargs = dict(
+INTERNALERROR>                 warning_message=warning_message, when=when, nodeid=nodeid, location=location
+INTERNALERROR>             )
+INTERNALERROR>             self.config.hook.pytest_warning_recorded.call_historic(kwargs=kwargs)
+INTERNALERROR>     
+INTERNALERROR>         def _clone_node(self, node):
+INTERNALERROR>             """Return new node based on an existing one.
+INTERNALERROR>     
+INTERNALERROR>             This is normally for when a node dies, this will copy the spec
+INTERNALERROR>             of the existing node and create a new one with a new id.  The
+INTERNALERROR>             new node will have been setup so it will start calling the
+INTERNALERROR>             "worker_*" hooks and do work soon.
+INTERNALERROR>             """
+INTERNALERROR>             spec = node.gateway.spec
+INTERNALERROR>             spec.id = None
+INTERNALERROR>             self.nodemanager.group.allocate_id(spec)
+INTERNALERROR>             node = self.nodemanager.setup_node(spec, self.queue.put)
+INTERNALERROR>             self._active_nodes.add(node)
+INTERNALERROR>             return node
+INTERNALERROR>     
+INTERNALERROR>         def _failed_worker_collectreport(self, node, rep):
+INTERNALERROR>             # Check we haven't already seen this report (from
+INTERNALERROR>             # another worker).
+INTERNALERROR>             if rep.longrepr not in self._failed_collection_errors:
+INTERNALERROR>                 self._failed_collection_errors[rep.longrepr] = True
+INTERNALERROR>                 self.config.hook.pytest_collectreport(report=rep)
+INTERNALERROR>                 self._handlefailures(rep)
+INTERNALERROR>     
+INTERNALERROR>         def _handlefailures(self, rep):
+INTERNALERROR>             if rep.failed:
+INTERNALERROR>                 self.countfailures += 1
+INTERNALERROR>                 if (
+INTERNALERROR>                     self.maxfail
+INTERNALERROR>                     and self.countfailures >= self.maxfail
+INTERNALERROR>                     and not self.shouldstop
+INTERNALERROR>                 ):
+INTERNALERROR>                     self.shouldstop = f"stopping after {self.countfailures} failures"
+INTERNALERROR>     
+INTERNALERROR>         def triggershutdown(self):
+INTERNALERROR>             if not self.shuttingdown:
+INTERNALERROR>                 self.log("triggering shutdown")
+INTERNALERROR>                 self.shuttingdown = True
+INTERNALERROR>                 for node in self.sched.nodes:
+INTERNALERROR>                     node.shutdown()
+INTERNALERROR>     
+INTERNALERROR>         def handle_crashitem(self, nodeid, worker):
+INTERNALERROR>             # XXX get more reporting info by recording pytest_runtest_logstart?
+INTERNALERROR>             # XXX count no of failures and retry N times
+INTERNALERROR>             runner = self.config.pluginmanager.getplugin("runner")
+INTERNALERROR>             fspath = nodeid.split("::")[0]
+INTERNALERROR>             msg = f"worker {worker.gateway.id!r} crashed while running {nodeid!r}"
+INTERNALERROR>             rep = runner.TestReport(
+INTERNALERROR>                 nodeid, (fspath, None, fspath), (), "failed", msg, "???"
+INTERNALERROR>             )
+INTERNALERROR>             rep.node = worker
+INTERNALERROR>     
+INTERNALERROR>             self.config.hook.pytest_handlecrashitem(
+INTERNALERROR>                 crashitem=nodeid,
+INTERNALERROR>                 report=rep,
+INTERNALERROR>                 sched=self.sched,
+INTERNALERROR>             )
+INTERNALERROR>             self.config.hook.pytest_runtest_logreport(report=rep)
+INTERNALERROR>     
+INTERNALERROR>     
+INTERNALERROR>     class WorkerStatus(Enum):
+INTERNALERROR>         """Status of each worker during creation/collection."""
+INTERNALERROR>     
+INTERNALERROR>         # Worker spec has just been created.
+INTERNALERROR>         Created = auto()
+INTERNALERROR>     
+INTERNALERROR>         # Worker has been initialized.
+INTERNALERROR>         Initialized = auto()
+INTERNALERROR>     
+INTERNALERROR>         # Worker is now ready for collection.
+INTERNALERROR>         ReadyForCollection = auto()
+INTERNALERROR>     
+INTERNALERROR>         # Worker has finished collection.
+INTERNALERROR>         CollectionDone = auto()
+INTERNALERROR>     
+INTERNALERROR>     
+INTERNALERROR>     class TerminalDistReporter:
+INTERNALERROR>         def __init__(self, config) -> None:
+INTERNALERROR>             self.config = config
+INTERNALERROR>             self.tr = config.pluginmanager.getplugin("terminalreporter")
+INTERNALERROR>             self._status: dict[str, tuple[WorkerStatus, int]] = {}
+INTERNALERROR>             self._lastlen = 0
+INTERNALERROR>             self._isatty = getattr(self.tr, "isatty", self.tr.hasmarkup)
+INTERNALERROR>     
+INTERNALERROR>         def write_line(self, msg: str) -> None:
+INTERNALERROR>             self.tr.write_line(msg)
+INTERNALERROR>     
+INTERNALERROR>         def ensure_show_status(self) -> None:
+INTERNALERROR>             if not self._isatty:
+INTERNALERROR>                 self.write_line(self.getstatus())
+INTERNALERROR>     
+INTERNALERROR>         def setstatus(
+INTERNALERROR>             self, spec, status: WorkerStatus, *, tests_collected: int, show: bool = True
+INTERNALERROR>         ) -> None:
+INTERNALERROR>             self._status[spec.id] = (status, tests_collected)
+INTERNALERROR>             if show and self._isatty:
+INTERNALERROR>                 self.rewrite(self.getstatus())
+INTERNALERROR>     
+INTERNALERROR>         def getstatus(self) -> str:
+INTERNALERROR>             if self.config.option.verbose >= 0:
+INTERNALERROR>                 line = get_workers_status_line(list(self._status.values()))
+INTERNALERROR>                 if line:
+INTERNALERROR>                     return line
+INTERNALERROR>     
+INTERNALERROR>             return "bringing up nodes..."
+INTERNALERROR>     
+INTERNALERROR>         def rewrite(self, line, newline=False):
+INTERNALERROR>             pline = line + " " * max(self._lastlen - len(line), 0)
+INTERNALERROR>             if newline:
+INTERNALERROR>                 self._lastlen = 0
+INTERNALERROR>                 pline += "\n"
+INTERNALERROR>             else:
+INTERNALERROR>                 self._lastlen = len(line)
+INTERNALERROR>             self.tr.rewrite(pline, bold=True)
+INTERNALERROR>     
+INTERNALERROR>         @pytest.hookimpl
+INTERNALERROR>         def pytest_xdist_setupnodes(self, specs) -> None:
+INTERNALERROR>             self._specs = specs
+INTERNALERROR>             for spec in specs:
+INTERNALERROR>                 self.setstatus(spec, WorkerStatus.Created, tests_collected=0, show=False)
+INTERNALERROR>             self.setstatus(spec, WorkerStatus.Created, tests_collected=0, show=True)
+INTERNALERROR>             self.ensure_show_status()
+INTERNALERROR>     
+INTERNALERROR>         @pytest.hookimpl
+INTERNALERROR>         def pytest_xdist_newgateway(self, gateway) -> None:
+INTERNALERROR>             if self.config.option.verbose > 0:
+INTERNALERROR>                 rinfo = gateway._rinfo()
+INTERNALERROR>                 different_interpreter = rinfo.executable != sys.executable
+INTERNALERROR>                 if different_interpreter:
+INTERNALERROR>                     version = "%s.%s.%s" % rinfo.version_info[:3]
+INTERNALERROR>                     self.rewrite(
+INTERNALERROR>                         f"[{gateway.id}] {rinfo.platform} Python {version} cwd: {rinfo.cwd}",
+INTERNALERROR>                         newline=True,
+INTERNALERROR>                     )
+INTERNALERROR>             self.setstatus(gateway.spec, WorkerStatus.Initialized, tests_collected=0)
+INTERNALERROR>     
+INTERNALERROR>         @pytest.hookimpl
+INTERNALERROR>         def pytest_testnodeready(self, node) -> None:
+INTERNALERROR>             if self.config.option.verbose > 0:
+INTERNALERROR>                 d = node.workerinfo
+INTERNALERROR>                 different_interpreter = d.get("executable") != sys.executable
+INTERNALERROR>                 if different_interpreter:
+INTERNALERROR>                     version = d["version"].replace("\n", " -- ")
+INTERNALERROR>                     self.rewrite(f"[{d['id']}] Python {version}", newline=True)
+INTERNALERROR>             self.setstatus(
+INTERNALERROR>                 node.gateway.spec, WorkerStatus.ReadyForCollection, tests_collected=0
+INTERNALERROR>             )
+INTERNALERROR>     
+INTERNALERROR>         @pytest.hookimpl
+INTERNALERROR>         def pytest_testnodedown(self, node, error) -> None:
+INTERNALERROR>             if not error:
+INTERNALERROR>                 return
+INTERNALERROR>             self.write_line(f"[{node.gateway.id}] node down: {error}")
+INTERNALERROR>     
+INTERNALERROR>     
+INTERNALERROR>     def get_default_max_worker_restart(config):
+INTERNALERROR>         """gets the default value of --max-worker-restart option if it is not provided.
+INTERNALERROR>     
+INTERNALERROR>         Use a reasonable default to avoid workers from restarting endlessly due to crashing collections (#226).
+INTERNALERROR>         """
+INTERNALERROR>         result = config.option.maxworkerrestart
+INTERNALERROR>         if result is not None:
+INTERNALERROR>             result = int(result)
+INTERNALERROR>         elif config.option.numprocesses:
+INTERNALERROR>             # if --max-worker-restart was not provided, use a reasonable default (#226)
+INTERNALERROR>             result = config.option.numprocesses * 4
+INTERNALERROR>         return result
+INTERNALERROR>     
+INTERNALERROR>     
+INTERNALERROR>     def get_workers_status_line(
+INTERNALERROR>         status_and_items: Sequence[tuple[WorkerStatus, int]]
+INTERNALERROR>     ) -> str:
+INTERNALERROR>         """
+INTERNALERROR>         Return the line to display during worker setup/collection based on the
+INTERNALERROR>         status of the workers and number of tests collected for each.
+INTERNALERROR>         """
+INTERNALERROR>         statuses = [s for s, c in status_and_items]
+INTERNALERROR>         total_workers = len(statuses)
+INTERNALERROR>         workers_noun = "worker" if total_workers == 1 else "workers"
+INTERNALERROR>         if status_and_items and all(s == WorkerStatus.CollectionDone for s in statuses):
+INTERNALERROR>             # All workers collect the same number of items, so we grab
+INTERNALERROR>             # the total number of items from the first worker.
+INTERNALERROR>             first = status_and_items[0]
+INTERNALERROR>             status, tests_collected = first
+INTERNALERROR>             tests_noun = "item" if tests_collected == 1 else "items"
+INTERNALERROR>             return f"{total_workers} {workers_noun} [{tests_collected} {tests_noun}]"
+INTERNALERROR>         if WorkerStatus.CollectionDone in statuses:
+INTERNALERROR>             done = sum(1 for s, c in status_and_items if c > 0)
+INTERNALERROR>             return f"collecting: {done}/{total_workers} {workers_noun}"
+INTERNALERROR>         if WorkerStatus.ReadyForCollection in statuses:
+INTERNALERROR>             ready = statuses.count(WorkerStatus.ReadyForCollection)
+INTERNALERROR>             return f"ready: {ready}/{total_workers} {workers_noun}"
+INTERNALERROR>         if WorkerStatus.Initialized in statuses:
+INTERNALERROR>             initialized = statuses.count(WorkerStatus.Initialized)
+INTERNALERROR>             return f"initialized: {initialized}/{total_workers} {workers_noun}"
+INTERNALERROR>         if WorkerStatus.Created in statuses:
+INTERNALERROR>             created = statuses.count(WorkerStatus.Created)
+INTERNALERROR>             return f"created: {created}/{total_workers} {workers_noun}"
+INTERNALERROR> E           AssertionError: Traceback (most recent call last):
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1498, in _save
+INTERNALERROR> E               dispatch = self._dispatch[tp]
+INTERNALERROR> E           KeyError: <class 'sys.version_info'>
+INTERNALERROR> E           
+INTERNALERROR> E           During handling of the above exception, another exception occurred:
+INTERNALERROR> E           
+INTERNALERROR> E           Traceback (most recent call last):
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 269, in wrap_session
+INTERNALERROR> E               config.hook.pytest_sessionstart(session=session)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR> E               return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR> E               return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+INTERNALERROR> E               return outcome.get_result()
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+INTERNALERROR> E               raise exc.with_traceback(exc.__traceback__)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR> E               res = hook_impl.function(*args)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/remote.py", line 100, in pytest_sessionstart
+INTERNALERROR> E               self.sendevent("workerready", workerinfo=workerinfo)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/remote.py", line 87, in sendevent
+INTERNALERROR> E               self.channel.send((name, kwargs))
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 811, in send
+INTERNALERROR> E               self.gateway._send(Message.CHANNEL_DATA, self.id, dumps_internal(item))
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1469, in dumps_internal
+INTERNALERROR> E               return _Serializer().save(obj)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1487, in save
+INTERNALERROR> E               self._save(obj)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1505, in _save
+INTERNALERROR> E               dispatch(self, obj)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1580, in save_tuple
+INTERNALERROR> E               self._save(item)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1505, in _save
+INTERNALERROR> E               dispatch(self, obj)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1576, in save_dict
+INTERNALERROR> E               self._write_setitem(key, value)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1570, in _write_setitem
+INTERNALERROR> E               self._save(value)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1505, in _save
+INTERNALERROR> E               dispatch(self, obj)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1576, in save_dict
+INTERNALERROR> E               self._write_setitem(key, value)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1570, in _write_setitem
+INTERNALERROR> E               self._save(value)
+INTERNALERROR> E             File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/execnet/gateway_base.py", line 1503, in _save
+INTERNALERROR> E               raise DumpError(f"can't serialize {tp}")
+INTERNALERROR> E           execnet.gateway_base.DumpError: can't serialize <class 'sys.version_info'>
+INTERNALERROR> 
+INTERNALERROR> .tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/dsession.py:200: AssertionError
+[gw0] node down: Not properly terminated
+
+replacing crashed worker gw0
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 271, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 325, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+INTERNALERROR>     raise exc.with_traceback(exc.__traceback__)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/dsession.py", line 123, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/dsession.py", line 148, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "/workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/xdist/dsession.py", line 238, in worker_errordown
+INTERNALERROR>     self._active_nodes.remove(node)
+INTERNALERROR> KeyError: <WorkerController gw0>
+I+18.062: debugpy and pydevd logs will be under /workdir/debugpy-1.6.7/tests/_logs/3.10-32
+
+I+17.077: debugpy and pydevd logs will be under /workdir/debugpy-1.6.7/tests/_logs/3.10-32
+
+
+============================= 2 warnings in 34.06s =============================
+ERROR: InvocationError for command /workdir/debugpy-1.6.7/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/debugpy/1.6.7/1/graalpy-test-results.xml (exited with code 3)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

@@ -1,0 +1,18 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/aiohttp/3.8.3/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/doc.txt
+	-rrequirements/cython.txt
+	-rrequirements/lint.txt
+	-rrequirements/dev.txt
+	-rrequirements/base.txt
+	-rrequirements/test.txt
+	-rrequirements/multidict.txt
+	-rrequirements/doc-spelling.txt
+	-rrequirements/typing-extensions.txt
+	-rrequirements/constraints.txt
+

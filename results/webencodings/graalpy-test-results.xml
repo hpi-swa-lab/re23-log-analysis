@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="8" time="0.533" timestamp="2023-11-30T23:07:00.020000" hostname="be2d8ee410eb"><testcase classname="webencodings.tests" name="test_labels" time="0.013" /><testcase classname="webencodings.tests" name="test_all_labels" time="0.139"><failure message="LookupError: no such codec is supported.">Traceback (most recent call last):
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/webencodings-0.5.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/webencodings-0.5.1/webencodings/tests.py", line 50, in test_all_labels
+    assert decode(b'', label) == ('', lookup(label))
+  File "/workdir/webencodings-0.5.1/webencodings/__init__.py", line 155, in decode
+    fallback_encoding = _get_encoding(fallback_encoding)
+  File "/workdir/webencodings-0.5.1/webencodings/__init__.py", line 103, in _get_encoding
+    encoding = lookup(encoding_or_label)
+  File "/workdir/webencodings-0.5.1/webencodings/__init__.py", line 85, in lookup
+    codec_info = codecs.lookup(python_name)
+  File "/opt/graalpy/lib/python3.10/encodings/hz.py", line 10, in &lt;module&gt;
+    codec = _codecs_cn.getcodec('hz')
+LookupError: no such codec is supported.</failure></testcase><testcase classname="webencodings.tests" name="test_invalid_label" time="0.006" /><testcase classname="webencodings.tests" name="test_decode" time="0.005" /><testcase classname="webencodings.tests" name="test_encode" time="0.004" /><testcase classname="webencodings.tests" name="test_iter_decode" time="0.012" /><testcase classname="webencodings.tests" name="test_iter_encode" time="0.005" /><testcase classname="webencodings.tests" name="test_x_user_defined" time="0.004" /></testsuite></testsuites>

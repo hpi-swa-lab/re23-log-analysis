@@ -1,0 +1,58 @@
+GLOB sdist-make: /workdir/onnx-1.12.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/onnx-1.12.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-release.txt, -rrequirements-dev.txt, -rrequirements.txt, -rthird_party/pybind11/tests/requirements.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/onnx-1.12.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring numpy: markers 'python_version < "3.6" and sys_platform != "win32" and platform_python_implementation != "PyPy"' don't match your environment
+Ignoring numpy: markers 'platform_python_implementation == "PyPy" and sys_platform == "linux" and python_version == "3.6"' don't match your environment
+Ignoring numpy: markers 'platform_python_implementation == "PyPy" and sys_platform == "linux" and python_version == "3.7"' don't match your environment
+Ignoring numpy: markers 'platform_python_implementation != "PyPy" and python_version == "3.6"' don't match your environment
+Ignoring py: markers 'python_version >= "3.11"' don't match your environment
+Ignoring pytest: markers 'python_version < "3.5"' don't match your environment
+Ignoring pytest: markers 'python_version == "3.5"' don't match your environment
+Ignoring scipy: markers 'platform_python_implementation != "PyPy" and python_version < "3.6"' don't match your environment
+Ignoring scipy: markers 'platform_python_implementation != "PyPy" and python_version >= "3.6" and python_version < "3.10"' don't match your environment
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting numpy==1.21.5 (from -r requirements-release.txt (line 1))
+  Downloading numpy-1.21.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (15.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.9/15.9 MB 8.2 MB/s eta 0:00:00
+Collecting protobuf==3.16.0 (from -r requirements-release.txt (line 2))
+  Downloading protobuf-3.16.0-py2.py3-none-any.whl (173 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 173.7/173.7 kB 5.8 MB/s eta 0:00:00
+Collecting nbval (from -r requirements-release.txt (line 4))
+  Downloading nbval-0.10.0-py2.py3-none-any.whl (24 kB)
+Collecting ipython (from -r requirements-release.txt (line 5))
+  Using cached ipython-8.17.2-py3-none-any.whl.metadata (6.0 kB)
+Requirement already satisfied: wheel in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements-release.txt (line 6)) (0.41.3)
+Requirement already satisfied: setuptools in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements-release.txt (line 7)) (68.2.2)
+Collecting twine (from -r requirements-release.txt (line 8))
+  Using cached twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting typing-extensions (from -r requirements-dev.txt (line 3))
+  Using cached typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest-cov (from -r requirements-dev.txt (line 5))
+  Using cached pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting jupyter (from -r requirements-dev.txt (line 8))
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting pyzmq (from -r requirements-dev.txt (line 9))
+  Using cached pyzmq-25.1.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+ERROR: Cannot install numpy, numpy==1.21.3, numpy==1.21.5 and numpy>=1.16.6 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested numpy==1.21.5
+    The user requested numpy
+    The user requested numpy>=1.16.6
+    The user requested numpy==1.21.3
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements-release.txt, -rrequirements-dev.txt, -rrequirements.txt, -rthird_party/pybind11/tests/requirements.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt]; v = InvocationError('/workdir/onnx-1.12.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-release.txt -rrequirements-dev.txt -rrequirements.txt -rthird_party/pybind11/tests/requirements.txt -rthird_party/benchmark/requirements.txt -rthird_party/benchmark/tools/requirements.txt -rthird_party/benchmark/bindings/python/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements-release.txt, -rrequirements-dev.txt, -rrequirements.txt, -rthird_party/pybind11/tests/requirements.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt]; v = InvocationError('/workdir/onnx-1.12.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-release.txt -rrequirements-dev.txt -rrequirements.txt -rthird_party/pybind11/tests/requirements.txt -rthird_party/benchmark/requirements.txt -rthird_party/benchmark/tools/requirements.txt -rthird_party/benchmark/bindings/python/requirements.txt', 1)

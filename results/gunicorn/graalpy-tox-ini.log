@@ -1,0 +1,13 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/gunicorn/20.1.0/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements_dev.txt
+	-rrequirements_test.txt
+	-rexamples/frameworks/requirements_webpyapp.txt
+	-rexamples/frameworks/requirements_cherryapp.txt
+	-rexamples/frameworks/requirements_flaskapp.txt
+	-rexamples/frameworks/requirements.txt
+	-rexamples/frameworks/requirements_tornadoapp.txt
+	-rexamples/frameworks/requirements_pyramidapp.txt
+

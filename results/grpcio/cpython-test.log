@@ -1,0 +1,40 @@
+GLOB sdist-make: /workdir/grpcio-1.51.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/grpcio-1.51.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rrequirements.bazel.txt, -rexamples/python/xds/requirements.txt, -rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt, -rtools/run_tests/xds_k8s_test_driver/requirements.txt, -rtools/internal_ci/helper_scripts/requirements.linux_perf.txt, -rtools/internal_ci/helper_scripts/requirements.macos.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/grpcio-1.51.1/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting coverage>=4.0 (from -r requirements.txt (line 2))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting cython>=0.29.8 (from -r requirements.txt (line 3))
+  Using cached Cython-3.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting protobuf<5.0dev,>=4.21.3 (from -r requirements.txt (line 4))
+  Using cached protobuf-4.25.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Requirement already satisfied: wheel>=0.29 in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (0.41.3)
+Collecting coverage>=4.0 (from -r requirements.txt (line 2))
+  Downloading coverage-4.5.4.tar.gz (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.2/385.2 kB 6.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cython>=0.29.8 (from -r requirements.txt (line 3))
+  Downloading Cython-0.29.21-py2.py3-none-any.whl (974 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 974.2/974.2 kB 16.9 MB/s eta 0:00:00
+ERROR: Cannot install protobuf<4.0dev and >=3.5.0.post1 and protobuf<5.0dev and >=4.21.3 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested protobuf<5.0dev and >=4.21.3
+    The user requested protobuf<4.0dev and >=3.5.0.post1
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements.txt, -rrequirements.bazel.txt, -rexamples/python/xds/requirements.txt, -rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt, -rtools/run_tests/xds_k8s_test_driver/requirements.txt, -rtools/internal_ci/helper_scripts/requirements.linux_perf.txt, -rtools/internal_ci/helper_scripts/requirements.macos.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt]; v = InvocationError('/workdir/grpcio-1.51.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rrequirements.bazel.txt -rexamples/python/xds/requirements.txt -rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt -rtools/run_tests/xds_k8s_test_driver/requirements.txt -rtools/internal_ci/helper_scripts/requirements.linux_perf.txt -rtools/internal_ci/helper_scripts/requirements.macos.txt -rthird_party/benchmark/requirements.txt -rthird_party/benchmark/tools/requirements.txt -rthird_party/benchmark/bindings/python/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements.txt, -rrequirements.bazel.txt, -rexamples/python/xds/requirements.txt, -rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt, -rtools/run_tests/xds_k8s_test_driver/requirements.txt, -rtools/internal_ci/helper_scripts/requirements.linux_perf.txt, -rtools/internal_ci/helper_scripts/requirements.macos.txt, -rthird_party/benchmark/requirements.txt, -rthird_party/benchmark/tools/requirements.txt, -rthird_party/benchmark/bindings/python/requirements.txt]; v = InvocationError('/workdir/grpcio-1.51.1/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rrequirements.bazel.txt -rexamples/python/xds/requirements.txt -rtools/run_tests/xds_k8s_test_driver/requirements-dev.txt -rtools/run_tests/xds_k8s_test_driver/requirements.txt -rtools/internal_ci/helper_scripts/requirements.linux_perf.txt -rtools/internal_ci/helper_scripts/requirements.macos.txt -rthird_party/benchmark/requirements.txt -rthird_party/benchmark/tools/requirements.txt -rthird_party/benchmark/bindings/python/requirements.txt', 1)

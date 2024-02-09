@@ -1,0 +1,714 @@
+.package create: /workdir/nbformat-5.7.0/.tox/.package
+.package installdeps: hatchling>=1.5, hatch-nodejs-version
+cpythonlibtest-unit-test-tests create: /workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/nbformat-5.7.0/.tox/.tmp/package/1/nbformat-5.7.0.tar.gz
+cpythonlibtest-unit-test-tests installed: attrs==23.1.0,exceptiongroup==1.2.0,fastjsonschema==2.19.0,iniconfig==2.0.0,jsonschema==4.20.0,jsonschema-specifications==2023.11.1,jupyter_core==5.5.0,mock==5.1.0,nbformat @ file:///workdir/nbformat-5.7.0/.tox/.tmp/package/1/nbformat-5.7.0.tar.gz#sha256=474d6e0012745979e5225b4724878030b63ae2e680f15cd174ab22e3654caf83,packaging==23.2,platformdirs==4.0.0,pluggy==1.3.0,pytest==7.4.3,referencing==0.31.0,rpds-py==0.13.1,tomli==2.0.1,traitlets==5.13.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1334649910'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/nbformat/5.7.0/1/cpython-test-results.xml
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/nbformat-5.7.0
+configfile: pyproject.toml
+testpaths: tests/
+[1mcollecting ... [0mcollected 77 items / 20 errors
+
+==================================== ERRORS ====================================
+[31m[1m______________________ ERROR collecting tests/test_api.py ______________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_api.py", line 13, in <module>
+    from pep440 import is_canonical  # type: ignore
+ModuleNotFoundError: No module named 'pep440'
+[31m[1m______________________ ERROR collecting tests/test_api.py ______________________[0m
+[31mImportError while importing test module '/workdir/nbformat-5.7.0/tests/test_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_api.py:13: in <module>
+    from pep440 import is_canonical  # type: ignore
+E   ModuleNotFoundError: No module named 'pep440'[0m
+[31m[1m____________________ ERROR collecting tests/test_convert.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_convert.py", line 6, in <module>
+    from nbformat import current_nbformat
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m____________________ ERROR collecting tests/test_convert.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_convert.py", line 6, in <module>
+    from nbformat import current_nbformat
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m___________________ ERROR collecting tests/test_nbformat.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_nbformat.py", line 3, in <module>
+    from nbformat import read
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m___________________ ERROR collecting tests/test_nbformat.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_nbformat.py", line 3, in <module>
+    from nbformat import read
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m____________________ ERROR collecting tests/test_reader.py _____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_reader.py", line 15, in <module>
+    from nbformat.reader import get_version, read
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m____________________ ERROR collecting tests/test_reader.py _____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_reader.py", line 15, in <module>
+    from nbformat.reader import get_version, read
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m_____________________ ERROR collecting tests/test_sign.py ______________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_sign.py", line 16, in <module>
+    import testpath
+ModuleNotFoundError: No module named 'testpath'
+[31m[1m_____________________ ERROR collecting tests/test_sign.py ______________________[0m
+[31mImportError while importing test module '/workdir/nbformat-5.7.0/tests/test_sign.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_sign.py:16: in <module>
+    import testpath
+E   ModuleNotFoundError: No module named 'testpath'[0m
+[31m[1m___________________ ERROR collecting tests/test_validator.py ___________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_validator.py", line 14, in <module>
+    import nbformat
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m___________________ ERROR collecting tests/test_validator.py ___________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/test_validator.py", line 14, in <module>
+    import nbformat
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m___________________ ERROR collecting tests/v4/formattest.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/nbformat-5.7.0/tests/v4/formattest.py", line 8, in <module>
+    from .nbexamples import nb0
+  File "/workdir/nbformat-5.7.0/tests/v4/nbexamples.py", line 18, in <module>
+    new_markdown_cell(
+  File "/workdir/nbformat-5.7.0/nbformat/v4/nbbase.py", line 143, in new_markdown_cell
+    validate(cell, "markdown_cell")
+  File "/workdir/nbformat-5.7.0/nbformat/v4/nbbase.py", line 38, in validate
+    from .. import validate as validate_orig
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m___________________ ERROR collecting tests/v4/nbexamples.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workdir/nbformat-5.7.0/tests/v4/nbexamples.py", line 18, in <module>
+    new_markdown_cell(
+  File "/workdir/nbformat-5.7.0/nbformat/v4/nbbase.py", line 143, in new_markdown_cell
+    validate(cell, "markdown_cell")
+  File "/workdir/nbformat-5.7.0/nbformat/v4/nbbase.py", line 38, in validate
+    from .. import validate as validate_orig
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m__________________ ERROR collecting tests/v4/test_convert.py ___________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_convert.py", line 7, in <module>
+    from nbformat import ValidationError, v3, v4, validate
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m__________________ ERROR collecting tests/v4/test_convert.py ___________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_convert.py", line 7, in <module>
+    from nbformat import ValidationError, v3, v4, validate
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m____________________ ERROR collecting tests/v4/test_json.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_json.py", line 7, in <module>
+    from nbformat.v4 import nbformat, nbformat_minor, nbjson
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m____________________ ERROR collecting tests/v4/test_json.py ____________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_json.py", line 7, in <module>
+    from nbformat.v4 import nbformat, nbformat_minor, nbjson
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m__________________ ERROR collecting tests/v4/test_validate.py __________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_validate.py", line 12, in <module>
+    from nbformat.validator import ValidationError, validate
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+[31m[1m__________________ ERROR collecting tests/v4/test_validate.py __________________[0m
+Traceback (most recent call last):
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/nbformat-5.7.0/tests/v4/test_validate.py", line 12, in <module>
+    from nbformat.validator import ValidationError, validate
+  File "/workdir/nbformat-5.7.0/nbformat/__init__.py", line 11, in <module>
+    from . import v1, v2, v3, v4
+  File "/workdir/nbformat-5.7.0/nbformat/v4/__init__.py", line 39, in <module>
+    from .convert import downgrade, upgrade
+  File "/workdir/nbformat-5.7.0/nbformat/v4/convert.py", line 13, in <module>
+    from .. import validator
+  File "/workdir/nbformat-5.7.0/nbformat/validator.py", line 15, in <module>
+    from .json_compat import ValidationError, _validator_for_name, get_current_validator
+  File "/workdir/nbformat-5.7.0/nbformat/json_compat.py", line 14, in <module>
+    from jsonschema import ErrorTree, ValidationError
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/jsonschema/__init__.py", line 48, in __getattr__
+    warnings.warn(
+DeprecationWarning: Importing ErrorTree directly from the jsonschema package is deprecated and will become an ImportError. Import it from jsonschema.exceptions instead.
+- generated xml file: /workdir/results/nbformat/5.7.0/1/cpython-test-results.xml -
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m tests/test_api.py - ModuleNotFoundError: No module named 'pep440'
+[31mERROR[0m tests/test_api.py
+[31mERROR[0m tests/test_convert.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_convert.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_nbformat.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_nbformat.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_reader.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_reader.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_sign.py - ModuleNotFoundError: No module named 'testpath'
+[31mERROR[0m tests/test_sign.py
+[31mERROR[0m tests/test_validator.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/test_validator.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/formattest.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/nbexamples.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_convert.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_convert.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_json.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_json.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_validate.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+[31mERROR[0m tests/v4/test_validate.py - DeprecationWarning: Importing ErrorTree directly from the jsonschema packag...
+!!!!!!!!!!!!!!!!!!! Interrupted: 20 errors during collection !!!!!!!!!!!!!!!!!!!
+[31m============================== [31m[1m20 errors[0m[31m in 0.43s[0m[31m ==============================[0m
+ERROR: InvocationError for command /workdir/nbformat-5.7.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/nbformat/5.7.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

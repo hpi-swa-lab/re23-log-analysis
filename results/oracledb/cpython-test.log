@@ -1,0 +1,183 @@
+.package create: /workdir/oracledb-1.3.2/.tox/.package
+.package installdeps: setuptools >= 40.6.0, wheel, cython
+cpythonlibtest-unit-test-tests create: /workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rdoc/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/oracledb-1.3.2/.tox/.tmp/package/1/oracledb-1.3.2.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/oracledb-1.3.2.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting cryptography>=3.2.1 (from oracledb==1.3.2)
+  Using cached cryptography-41.0.5-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Collecting cffi>=1.12 (from cryptography>=3.2.1->oracledb==1.3.2)
+  Using cached cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography>=3.2.1->oracledb==1.3.2)
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Using cached cryptography-41.0.5-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+Using cached cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+Building wheels for collected packages: oracledb
+  Building wheel for oracledb (pyproject.toml): started
+  Building wheel for oracledb (pyproject.toml): still running...
+  Building wheel for oracledb (pyproject.toml): still running...
+  Building wheel for oracledb (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for oracledb (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [141 lines of output]
+      /tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/config/expand.py:133: SetuptoolsWarning: File '/tmp/pip-req-build-eifw821w/README.md' cannot be found
+        return '\n'.join(
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-310
+      creating build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/aq.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/constants.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/subscr.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/__init__.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/driver_mode.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/cursor.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/errors.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/connect_params.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/exceptions.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/version.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/dbobject.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/utils.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/soda.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/var.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/lob.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/constructors.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/connection.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/pool_params.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/dsn.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/pool.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/defaults.py -> build/lib.linux-x86_64-cpython-310/oracledb
+      copying src/oracledb/py.typed -> build/lib.linux-x86_64-cpython-310/oracledb
+      running build_ext
+      Compiling src/oracledb/base_impl.pyx because it changed.
+      [1/1] Cythonizing src/oracledb/base_impl.pyx
+      building 'oracledb.base_impl' extension
+      creating build/temp.linux-x86_64-cpython-310
+      creating build/temp.linux-x86_64-cpython-310/src
+      creating build/temp.linux-x86_64-cpython-310/src/oracledb
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/include -I/usr/local/include/python3.10 -c src/oracledb/base_impl.c -o build/temp.linux-x86_64-cpython-310/src/oracledb/base_impl.o
+      src/oracledb/base_impl.c: In function ‘__pyx_pymod_exec_base_impl’:
+      src/oracledb/base_impl.c:116312:30: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+       static CYTHON_SMALL_CODE int __pyx_pymod_exec_base_impl(PyObject *__pyx_pyinit_module)
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      gcc -pthread -shared build/temp.linux-x86_64-cpython-310/src/oracledb/base_impl.o -L/usr/local/lib -o build/lib.linux-x86_64-cpython-310/oracledb/base_impl.cpython-310-x86_64-linux-gnu.so
+      Compiling src/oracledb/thin_impl.pyx because it changed.
+      [1/1] Cythonizing src/oracledb/thin_impl.pyx
+      building 'oracledb.thin_impl' extension
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/include -I/usr/local/include/python3.10 -c src/oracledb/thin_impl.c -o build/temp.linux-x86_64-cpython-310/src/oracledb/thin_impl.o
+      gcc -pthread -shared build/temp.linux-x86_64-cpython-310/src/oracledb/thin_impl.o -L/usr/local/lib -o build/lib.linux-x86_64-cpython-310/oracledb/thin_impl.cpython-310-x86_64-linux-gnu.so
+      performance hint: src/oracledb/impl/thick/subscr.pyx:32:5: Exception check on '_callback_handler' will always require the GIL to be acquired.
+      Possible solutions:
+          1. Declare the function as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+          2. Use an 'int' return type on the function to allow an error code to be returned.
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+                  session_callback_bytes = params.session_callback.encode()
+                  create_params.plsqlFixupCallback = session_callback_bytes
+                  create_params.plsqlFixupCallbackLength = \
+                          <uint32_t> len(session_callback_bytes)
+              if params.access_token_callback is not None:
+                  create_params.accessTokenCallback = _token_callback_handler
+                                                      ^
+      ------------------------------------------------------------
+      
+      src/oracledb/impl/thick/pool.pyx:116:48: Cannot assign type 'int (void *, dpiAccessToken *) except? -1 nogil' to 'dpiAccessTokenCallback'. Exception values are incompatible. Suggest adding 'noexcept' to type 'int (void *, dpiAccessToken *) except? -1 nogil'.
+      
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              params.portNumber = self.port
+              params.timeout = self.timeout
+              params.name = name_buf.ptr
+              params.nameLength = name_buf.length
+              if self.callback is not None:
+                  params.callback = _callback_handler
+                                    ^
+      ------------------------------------------------------------
+      
+      src/oracledb/impl/thick/subscr.pyx:159:30: Cannot assign type 'void (void *, dpiSubscrMessage *) except * nogil' to 'dpiSubscrCallback'. Exception values are incompatible. Suggest adding 'noexcept' to type 'void (void *, dpiSubscrMessage *) except * nogil'.
+      Compiling src/oracledb/thick_impl.pyx because it changed.
+      [1/1] Cythonizing src/oracledb/thick_impl.pyx
+      Traceback (most recent call last):
+        File "/workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 251, in build_wheel
+          return _build_backend().build_wheel(wheel_directory, config_settings,
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 404, in build_wheel
+          return self._build_with_temp_dir(
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 389, in _build_with_temp_dir
+          self.run_setup()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 81, in <module>
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/wheel/bdist_wheel.py", line 369, in run
+          self.run_command("build")
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/build.py", line 131, in run
+          self.run_command(cmd_name)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 88, in run
+          _build_ext.run(self)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+          self.build_extensions()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 467, in build_extensions
+          self._build_extensions_serial()
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 493, in _build_extensions_serial
+          self.build_extension(ext)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 249, in build_extension
+          _build_ext.build_extension(self, ext)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/Cython/Distutils/build_ext.py", line 130, in build_extension
+          new_ext = cythonize(
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1154, in cythonize
+          cythonize_one(*args)
+        File "/tmp/pip-build-env-p64iak9m/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1321, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: src/oracledb/thick_impl.pyx
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for oracledb
+Failed to build oracledb
+ERROR: Could not build wheels for oracledb, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/oracledb-1.3.2/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/oracledb-1.3.2.tar.gz (exited with code 1)

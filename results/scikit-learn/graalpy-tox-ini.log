@@ -1,0 +1,9 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/scikit-learn/1.1.3/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rdoc/binder/requirements.txt
+	-rbuild_tools/azure/ubuntu_atlas_requirements.txt
+	-rbuild_tools/azure/python_nogil_requirements.txt
+	-r.binder/requirements.txt
+

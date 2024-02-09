@@ -1,0 +1,99 @@
+.package create: /workdir/humanize-4.4.0/.tox/.package
+.package installdeps: setuptools>=42, setuptools_scm[toml]>=3.4
+/workdir/humanize-4.4.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+/workdir/humanize-4.4.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/humanize-4.4.0" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+/workdir/humanize-4.4.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching '*.mo' under directory 'src/humanize/locale'
+/workdir/humanize-4.4.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/humanize-4.4.0" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+/workdir/humanize-4.4.0/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no files found matching '*.mo' under directory 'src/humanize/locale'
+cpythonlibtest-unit-test-tests create: /workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/humanize-4.4.0/.tox/.tmp/package/1/humanize-4.4.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,humanize @ file:///workdir/humanize-4.4.0/.tox/.tmp/package/1/humanize-4.4.0.tar.gz#sha256=0e69be1495ce172af26df048ac5485fcbdc858dd834c45f8316acea0fd89cbf3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1844814627'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/humanize/4.4.0/1/cpython-test-results.xml
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/humanize-4.4.0
+configfile: tox.ini
+[1mcollecting ... [0mcollected 179 items / 4 errors
+
+==================================== ERRORS ====================================
+[31m[1m_____________________ ERROR collecting tests/test_i18n.py ______________________[0m
+Traceback (most recent call last):
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/humanize-4.4.0/tests/test_i18n.py", line 6, in <module>
+    from freezegun import freeze_time
+ModuleNotFoundError: No module named 'freezegun'
+[31m[1m_____________________ ERROR collecting tests/test_i18n.py ______________________[0m
+[31mImportError while importing test module '/workdir/humanize-4.4.0/tests/test_i18n.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_i18n.py:6: in <module>
+    from freezegun import freeze_time
+E   ModuleNotFoundError: No module named 'freezegun'[0m
+[31m[1m_____________________ ERROR collecting tests/test_time.py ______________________[0m
+Traceback (most recent call last):
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/humanize-4.4.0/tests/test_time.py", line 8, in <module>
+    from freezegun import freeze_time
+ModuleNotFoundError: No module named 'freezegun'
+[31m[1m_____________________ ERROR collecting tests/test_time.py ______________________[0m
+[31mImportError while importing test module '/workdir/humanize-4.4.0/tests/test_time.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_time.py:8: in <module>
+    from freezegun import freeze_time
+E   ModuleNotFoundError: No module named 'freezegun'[0m
+- generated xml file: /workdir/results/humanize/4.4.0/1/cpython-test-results.xml -
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m tests/test_i18n.py - ModuleNotFoundError: No module named 'freezegun'
+[31mERROR[0m tests/test_i18n.py
+[31mERROR[0m tests/test_time.py - ModuleNotFoundError: No module named 'freezegun'
+[31mERROR[0m tests/test_time.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!!
+[31m============================== [31m[1m4 errors[0m[31m in 0.22s[0m[31m ===============================[0m
+ERROR: InvocationError for command /workdir/humanize-4.4.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/humanize/4.4.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

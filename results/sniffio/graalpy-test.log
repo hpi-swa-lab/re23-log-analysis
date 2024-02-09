@@ -1,0 +1,72 @@
+GLOB sdist-make: /workdir/sniffio-1.3.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rci/rtd-requirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/sniffio-1.3.0/.tox/.tmp/package/1/sniffio-1.3.0.zip
+graalpylibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.1.0,coverage==7.3.2,curio==1.6,docutils==0.20.1,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.6,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,requests==2.31.0,sniffio @ file:///workdir/sniffio-1.3.0/.tox/.tmp/package/1/sniffio-1.3.0.zip,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-rtd-theme==2.0.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,sphinxcontrib-trio==1.1.2,tomli==2.0.1,urllib3==2.1.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1118797346'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/sniffio/1.3.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/sniffio-1.3.0
+plugins: cov-4.1.0
+collecting ... collected 4 items
+
+sniffio/_tests/test_sniffio.py::test_basics_cvar PASSED                  [ 25%]
+sniffio/_tests/test_sniffio.py::test_basics_tlocal PASSED                [ 50%]
+sniffio/_tests/test_sniffio.py::test_asyncio PASSED                      [ 75%]
+sniffio/_tests/test_sniffio.py::test_curio FAILED                        [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_curio __________________________________
+Traceback (most recent call last):
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/sniffio-1.3.0/sniffio/_tests/test_sniffio.py", line 67, in test_curio
+    import curio
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/curio/__init__.py", line 6, in <module>
+    from .queue import *
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/curio/queue.py", line 20, in <module>
+    from . import workers
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/curio/workers.py", line 23, in <module>
+    from .channel import Connection
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/curio/channel.py", line 22, in <module>
+    from . import socket
+  File "/workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/curio/socket.py", line 84, in <module>
+    @wraps(_socket.gethostbyname_ex)
+AttributeError: module 'socket' has no attribute 'gethostbyname_ex'
+- generated xml file: /workdir/results/sniffio/1.3.0/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED sniffio/_tests/test_sniffio.py::test_curio - AttributeError: module 's...
+========================= 1 failed, 3 passed in 1.52s ==========================
+ERROR: InvocationError for command /workdir/sniffio-1.3.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/sniffio/1.3.0/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

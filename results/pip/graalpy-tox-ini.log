@@ -1,0 +1,11 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pip/22.3.1/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rtests/requirements.txt
+	-rtests/requirements-common_wheels.txt
+	-rtests/data/completion_paths/requirements.txt
+

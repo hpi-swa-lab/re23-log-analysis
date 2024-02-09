@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pbr/5.11.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rtest-requirements.txt
+	-rdoc/requirements.txt
+	-rpbr/tests/testpackage/test-requirements.txt
+

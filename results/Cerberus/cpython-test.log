@@ -1,0 +1,62 @@
+GLOB sdist-make: /workdir/Cerberus-1.3.4/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/Cerberus-1.3.4/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/Cerberus-1.3.4/.tox/.tmp/package/1/Cerberus-1.3.4.zip
+cpythonlibtest-unit-test-tests installed: Cerberus @ file:///workdir/Cerberus-1.3.4/.tox/.tmp/package/1/Cerberus-1.3.4.zip#sha256=ceed063335784bca031cae6d2ceaaea056f141a0a502955cb7d4d47d5c886b02,lxml==4.9.3,mock==5.1.0,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1328704691'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/Cerberus-1.3.4/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/Cerberus/1.3.4/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+EEE
+======================================================================
+ERROR [0.004s]: cerberus.benchmarks.test_overall_performance_1 (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: cerberus.benchmarks.test_overall_performance_1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/Cerberus-1.3.4/cerberus/benchmarks/test_overall_performance_1.py", line 17, in <module>
+    from pytest import mark
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR [0.000s]: cerberus.benchmarks.test_overall_performance_2 (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: cerberus.benchmarks.test_overall_performance_2
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/Cerberus-1.3.4/cerberus/benchmarks/test_overall_performance_2.py", line 6, in <module>
+    from pytest import mark
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR [0.000s]: cerberus.tests (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: cerberus.tests
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/Cerberus-1.3.4/cerberus/tests/__init__.py", line 5, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+FAILED (errors=3)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/Cerberus-1.3.4/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/Cerberus/1.3.4/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="5" failures="0" skipped="0" tests="5" time="0.735" timestamp="2023-11-21T03:54:06.010077" hostname="b80581c01e0f"><testcase classname="" name="dill.tests.test_module" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/dill-0.3.6/dill/tests/test_module.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+dill/tests/test_module.py:11: in &lt;module&gt;
+    import test_mixins as module
+dill/__diff.py:220: in _imp
+    mod = __import__(*args, **kwds)
+E   ModuleNotFoundError: No module named 'test_mixins'</error></testcase><testcase classname="" name="dill.tests.test_objects" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dill-0.3.6/dill/tests/test_objects.py", line 20, in &lt;module&gt;
+    load_types(pickleable=True,unpickleable=False)
+  File "/workdir/dill-0.3.6/dill/__init__.py", line 72, in load_types
+    from . import _objects
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 223, in _imp
+    memorise(sys.modules[m])
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 111, in memorise
+    [mem(value) for key, value in g.items()]
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 111, in &lt;listcomp&gt;
+    [mem(value) for key, value in g.items()]
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 115, in memorise
+    [(mem(key), mem(item))
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 115, in &lt;listcomp&gt;
+    [(mem(key), mem(item))
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 91, in memorise
+    g = get_attrs(obj)
+  File "/workdir/dill-0.3.6/dill/__diff.py", line 44, in get_attrs
+    return getattr(obj, '__dict__', None)
+ReferenceError: weakly-referenced object no longer exists</error></testcase><testcase classname="" name="dill.tests.test_registered" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dill-0.3.6/dill/tests/test_registered.py", line 35, in &lt;module&gt;
+    raise e from None
+  File "/workdir/dill-0.3.6/dill/tests/test_registered.py", line 32, in &lt;module&gt;
+    assert not bool(success)
+AssertionError: assert not True
+ +  where True = bool(['PrettyPrinterType', 'StreamHandlerType'])</error></testcase><testcase classname="" name="dill.tests.test_selected" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dill-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dill-0.3.6/dill/tests/test_selected.py", line 46, in &lt;module&gt;
+    objects['TemporaryFileType'].close()
+OSError: [Errno 9] Bad file descriptor</error></testcase><testcase classname="" name="dill.tests.test_session" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/dill-0.3.6/dill/tests/test_session.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+dill/tests/test_session.py:72: in &lt;module&gt;
+    import test_dictviews as local_mod                  # non-builtin top-level module
+dill/__diff.py:220: in _imp
+    mod = __import__(*args, **kwds)
+E   ModuleNotFoundError: No module named 'test_dictviews'</error></testcase></testsuite></testsuites>

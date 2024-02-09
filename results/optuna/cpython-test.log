@@ -1,0 +1,364 @@
+GLOB sdist-make: /workdir/optuna-3.1.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/optuna-3.1.1/.tox/.tmp/package/1/optuna-3.1.1.zip
+cpythonlibtest-unit-test-tests installed: alembic==1.12.1,cmaes==0.10.0,colorlog==6.7.0,exceptiongroup==1.2.0,greenlet==3.0.1,iniconfig==2.0.0,Mako==1.3.0,MarkupSafe==2.1.3,mock==5.1.0,numpy==1.26.2,optuna @ file:///workdir/optuna-3.1.1/.tox/.tmp/package/1/optuna-3.1.1.zip#sha256=c3959592378709089207d4c167a67c5ac02b9dd8dcd84b9dfbeea47f079ee686,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,PyYAML==6.0.1,SQLAlchemy==2.0.23,tomli==2.0.1,tqdm==4.66.1,typing_extensions==4.8.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1881040566'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/optuna/3.1.1/1/cpython-test-results.xml
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/optuna-3.1.1
+configfile: pyproject.toml
+[1mcollecting ... [0mcollected 2799 items / 29 errors
+
+==================================== ERRORS ====================================
+[31m[1m______________________ ERROR collecting tests/test_cli.py ______________________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/test_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_cli.py:15: in <module>
+    from pandas import Timedelta
+E   ModuleNotFoundError: No module named 'pandas'[0m
+[31m[1m_____________ ERROR collecting tests/importance_tests/test_init.py _____________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/importance_tests/test_init.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/importance_tests/test_init.py:24: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m__________ ERROR collecting tests/integration_tests/test_chainermn.py __________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/integration_tests/test_chainermn.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration_tests/test_chainermn.py:24: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_____ ERROR collecting tests/integration_tests/test_pytorch_distributed.py _____[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/integration_tests/test_pytorch_distributed.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration_tests/test_pytorch_distributed.py:11: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m______ ERROR collecting tests/integration_tests/test_pytorch_lightning.py ______[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/integration_tests/test_pytorch_lightning.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration_tests/test_pytorch_lightning.py:14: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m___________ ERROR collecting tests/integration_tests/test_sklearn.py ___________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/integration_tests/test_sklearn.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration_tests/test_sklearn.py:6: in <module>
+    import scipy as sp
+E   ModuleNotFoundError: No module named 'scipy'[0m
+[31m[1m__________ ERROR collecting tests/multi_objective_tests/test_study.py __________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/multi_objective_tests/test_study.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/multi_objective_tests/test_study.py:10: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_____________ ERROR collecting tests/samplers_tests/test_cmaes.py ______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/samplers_tests/test_cmaes.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/samplers_tests/test_cmaes.py:19: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m______________ ERROR collecting tests/samplers_tests/test_grid.py ______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/samplers_tests/test_grid.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/samplers_tests/test_grid.py:18: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_ ERROR collecting tests/samplers_tests/search_space_tests/test_group_decomposed.py _[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/samplers_tests/search_space_tests/test_group_decomposed.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/samplers_tests/search_space_tests/test_group_decomposed.py:10: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_ ERROR collecting tests/samplers_tests/search_space_tests/test_intersection.py _[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/samplers_tests/search_space_tests/test_intersection.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/samplers_tests/search_space_tests/test_intersection.py:11: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m______ ERROR collecting tests/samplers_tests/tpe_tests/test_truncnorm.py _______[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/samplers_tests/tpe_tests/test_truncnorm.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/samplers_tests/tpe_tests/test_truncnorm.py:5: in <module>
+    from scipy.stats import truncnorm as truncnorm_scipy
+E   ModuleNotFoundError: No module named 'scipy'[0m
+[31m[1m___________ ERROR collecting tests/storages_tests/test_heartbeat.py ____________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/storages_tests/test_heartbeat.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/storages_tests/test_heartbeat.py:16: in <module>
+    from optuna.testing.storages import STORAGE_MODES_HEARTBEAT
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m____________ ERROR collecting tests/storages_tests/test_journal.py _____________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/storages_tests/test_journal.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/storages_tests/test_journal.py:14: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m____________ ERROR collecting tests/storages_tests/test_storages.py ____________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/storages_tests/test_storages.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/storages_tests/test_storages.py:24: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_______ ERROR collecting tests/storages_tests/rdb_tests/test_storage.py ________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/storages_tests/rdb_tests/test_storage.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/storages_tests/rdb_tests/test_storage.py:26: in <module>
+    from optuna.testing.storages import StorageSupplier
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_____________ ERROR collecting tests/study_tests/test_dataframe.py _____________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/study_tests/test_dataframe.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/study_tests/test_dataframe.py:3: in <module>
+    import pandas as pd
+E   ModuleNotFoundError: No module named 'pandas'[0m
+[31m[1m_____________ ERROR collecting tests/study_tests/test_optimize.py ______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/study_tests/test_optimize.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/study_tests/test_optimize.py:17: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_______________ ERROR collecting tests/study_tests/test_study.py _______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/study_tests/test_study.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/study_tests/test_study.py:35: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m______________ ERROR collecting tests/trial_tests/test_frozen.py _______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/trial_tests/test_frozen.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/trial_tests/test_frozen.py:14: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m_______________ ERROR collecting tests/trial_tests/test_trial.py _______________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/trial_tests/test_trial.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/trial_tests/test_trial.py:27: in <module>
+    from optuna.testing.storages import STORAGE_MODES
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/testing/storages.py:12: in <module>
+    import fakeredis
+E   ModuleNotFoundError: No module named 'fakeredis'[0m
+[31m[1m__________ ERROR collecting tests/visualization_tests/test_contour.py __________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_contour.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_contour.py:27: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m____________ ERROR collecting tests/visualization_tests/test_edf.py ____________[0m
+Traceback (most recent call last):
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/optuna-3.1.1/tests/visualization_tests/test_edf.py", line 36, in <module>
+    def save_static_image(figure: Union[go.Figure, Axes, np.ndarray]) -> None:
+NameError: name 'go' is not defined
+[31m[1m_____ ERROR collecting tests/visualization_tests/test_intermediate_plot.py _____[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_intermediate_plot.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_intermediate_plot.py:14: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m____ ERROR collecting tests/visualization_tests/test_parallel_coordinate.py ____[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_parallel_coordinate.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_parallel_coordinate.py:25: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m_____ ERROR collecting tests/visualization_tests/test_param_importances.py _____[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_param_importances.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_param_importances.py:24: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m_______ ERROR collecting tests/visualization_tests/test_pareto_front.py ________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_pareto_front.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_pareto_front.py:26: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m___________ ERROR collecting tests/visualization_tests/test_slice.py ___________[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/test_slice.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/test_slice.py:19: in <module>
+    from optuna.visualization._plotly_imports import go
+E   ImportError: cannot import name 'go' from 'optuna.visualization._plotly_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/_plotly_imports.py)[0m
+[31m[1m_ ERROR collecting tests/visualization_tests/matplotlib_tests/test_optimization_history.py _[0m
+[31mImportError while importing test module '/workdir/optuna-3.1.1/tests/visualization_tests/matplotlib_tests/test_optimization_history.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/visualization_tests/matplotlib_tests/test_optimization_history.py:7: in <module>
+    from optuna.visualization.matplotlib._matplotlib_imports import plt
+E   ImportError: cannot import name 'plt' from 'optuna.visualization.matplotlib._matplotlib_imports' (/workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/optuna/visualization/matplotlib/_matplotlib_imports.py)[0m
+- generated xml file: /workdir/results/optuna/3.1.1/1/cpython-test-results.xml -
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m tests/test_cli.py
+[31mERROR[0m tests/importance_tests/test_init.py
+[31mERROR[0m tests/integration_tests/test_chainermn.py
+[31mERROR[0m tests/integration_tests/test_pytorch_distributed.py
+[31mERROR[0m tests/integration_tests/test_pytorch_lightning.py
+[31mERROR[0m tests/integration_tests/test_sklearn.py
+[31mERROR[0m tests/multi_objective_tests/test_study.py
+[31mERROR[0m tests/samplers_tests/test_cmaes.py
+[31mERROR[0m tests/samplers_tests/test_grid.py
+[31mERROR[0m tests/samplers_tests/search_space_tests/test_group_decomposed.py
+[31mERROR[0m tests/samplers_tests/search_space_tests/test_intersection.py
+[31mERROR[0m tests/samplers_tests/tpe_tests/test_truncnorm.py
+[31mERROR[0m tests/storages_tests/test_heartbeat.py
+[31mERROR[0m tests/storages_tests/test_journal.py
+[31mERROR[0m tests/storages_tests/test_storages.py
+[31mERROR[0m tests/storages_tests/rdb_tests/test_storage.py
+[31mERROR[0m tests/study_tests/test_dataframe.py
+[31mERROR[0m tests/study_tests/test_optimize.py
+[31mERROR[0m tests/study_tests/test_study.py
+[31mERROR[0m tests/trial_tests/test_frozen.py
+[31mERROR[0m tests/trial_tests/test_trial.py
+[31mERROR[0m tests/visualization_tests/test_contour.py
+[31mERROR[0m tests/visualization_tests/test_edf.py - NameError: name 'go' is not defined
+[31mERROR[0m tests/visualization_tests/test_intermediate_plot.py
+[31mERROR[0m tests/visualization_tests/test_parallel_coordinate.py
+[31mERROR[0m tests/visualization_tests/test_param_importances.py
+[31mERROR[0m tests/visualization_tests/test_pareto_front.py
+[31mERROR[0m tests/visualization_tests/test_slice.py
+[31mERROR[0m tests/visualization_tests/matplotlib_tests/test_optimization_history.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 29 errors during collection !!!!!!!!!!!!!!!!!!!
+[31m============================== [31m[1m29 errors[0m[31m in 6.93s[0m[31m ==============================[0m
+ERROR: InvocationError for command /workdir/optuna-3.1.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/optuna/3.1.1/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

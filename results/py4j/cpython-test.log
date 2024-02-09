@@ -1,0 +1,34 @@
+GLOB sdist-make: /workdir/py4j-0.10.9.7/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/py4j-0.10.9.7/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rpy4j-python/requirements-test.txt, -rpy4j-web/requirements-doc.txt
+cpythonlibtest-unit-test-tests inst: /workdir/py4j-0.10.9.7/.tox/.tmp/package/1/py4j-0.10.9.7.zip
+ERROR: invocation failed (exit code 1), logfile: /workdir/py4j-0.10.9.7/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/py4j-0.10.9.7.zip
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [6 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-req-build-zydk08cw/setup.py", line 19, in <module>
+          os.chdir("py4j-java")
+      FileNotFoundError: [Errno 2] No such file or directory: 'py4j-java'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/py4j-0.10.9.7/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/py4j-0.10.9.7.zip (exited with code 1)

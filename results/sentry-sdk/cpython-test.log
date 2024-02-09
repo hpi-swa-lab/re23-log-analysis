@@ -1,0 +1,44 @@
+GLOB sdist-make: /workdir/sentry-sdk-1.15.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/sentry-sdk-1.15.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rlinter-requirements.txt, -rcheckouts/data-schemas/py/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/sentry-sdk-1.15.0/.tox/.tmp/package/1/sentry-sdk-1.15.0.zip
+cpythonlibtest-unit-test-tests installed: asttokens==2.4.1,attrs==23.1.0,black==22.12.0,certifi==2023.11.17,cffi==1.16.0,cfgv==3.4.0,click==8.1.7,colorama==0.4.6,coverage==7.3.2,cryptography==41.0.7,decorator==5.1.1,distlib==0.3.7,dnspython==2.4.2,docopt==0.6.2,exceptiongroup==1.2.0,executing==2.0.1,filelock==3.13.1,flake8==5.0.4,flake8-bugbear==22.12.6,identify==2.5.32,iniconfig==2.0.0,ipdb==0.13.13,ipython==8.18.1,jedi==0.19.1,jsonschema==3.2.0,jsonschema-typed-v2==0.8.0,matplotlib-inline==0.1.6,mccabe==0.7.0,mock==5.1.0,mypy==0.971,mypy-extensions==1.0.0,nodeenv==1.8.0,packaging==23.2,parso==0.8.3,pathspec==0.11.2,pep8-naming==0.13.2,pexpect==4.9.0,platformdirs==4.0.0,pluggy==0.13.1,pre-commit==3.5.0,prompt-toolkit==3.0.41,ptyprocess==0.7.0,pure-eval==0.2.2,py==1.11.0,pycodestyle==2.9.1,pycparser==2.21,pyflakes==2.5.0,Pygments==2.17.2,pymongo==4.6.1,pyrsistent==0.16.0,pytest==6.2.5,pytest-cov==2.8.1,pytest-forked==1.4.0,pytest-localserver==0.5.0,pytest-watch==4.2.0,PyYAML==6.0.1,sentry-sdk @ file:///workdir/sentry-sdk-1.15.0/.tox/.tmp/package/1/sentry-sdk-1.15.0.zip#sha256=f0a227696c52783b1d66815a78efdd7383495fcdaea71ce14bf962c27dd88a08,six==1.16.0,stack-data==0.6.3,toml==0.10.2,tomli==2.0.1,tox==3.7.0,traitlets==5.14.0,types-certifi==2021.10.8.3,types-pyOpenSSL==23.3.0.0,types-redis==4.6.0.11,types-setuptools==69.0.0.0,typing_extensions==4.8.0,urllib3==2.1.0,virtualenv==20.24.7,watchdog==3.0.0,wcwidth==0.2.12,Werkzeug==2.0.3
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1068652258'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/sentry-sdk/1.15.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-6.2.5, py-1.11.0, pluggy-0.13.1 -- /workdir/sentry-sdk-1.15.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/sentry-sdk-1.15.0, configfile: pytest.ini
+plugins: forked-1.4.0, cov-2.8.1, localserver-0.5.0
+collecting ... collected 600 items / 1 error / 33 skipped / 566 selected
+
+==================================== ERRORS ====================================
+_________ ERROR collecting tests/integrations/pymongo/test_pymongo.py __________
+ImportError while importing test module '/workdir/sentry-sdk-1.15.0/tests/integrations/pymongo/test_pymongo.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integrations/pymongo/test_pymongo.py:4: in <module>
+    from mockupdb import MockupDB, OpQuery
+E   ModuleNotFoundError: No module named 'mockupdb'
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1233
+  /workdir/sentry-sdk-1.15.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1233: PytestConfigWarning: Unknown config option: DJANGO_SETTINGS_MODULE
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1233
+  /workdir/sentry-sdk-1.15.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1233: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+- generated xml file: /workdir/results/sentry-sdk/1.15.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/integrations/pymongo/test_pymongo.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=================== 33 skipped, 2 warnings, 1 error in 0.96s ===================
+ERROR: InvocationError for command /workdir/sentry-sdk-1.15.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/sentry-sdk/1.15.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

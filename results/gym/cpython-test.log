@@ -1,0 +1,155 @@
+GLOB sdist-make: /workdir/gym-0.26.2/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/gym-0.26.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rtest_requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/gym-0.26.2/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring importlib_metadata: markers 'python_version < "3.10"' don't match your environment
+Ignoring dataclasses: markers 'python_version == "3.6"' don't match your environment
+Ignoring typing_extensions: markers 'python_version == "3.7"' don't match your environment
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting numpy>=1.18.0 (from -r requirements.txt (line 1))
+  Using cached numpy-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting cloudpickle>=1.2.0 (from -r requirements.txt (line 2))
+  Using cached cloudpickle-3.0.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting gym_notices>=0.0.4 (from -r requirements.txt (line 4))
+  Using cached gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Collecting opencv-python>=3.0 (from -r requirements.txt (line 7))
+  Using cached opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+Collecting lz4>=3.1.0 (from -r requirements.txt (line 8))
+  Downloading lz4-4.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 13.3 MB/s eta 0:00:00
+Collecting matplotlib>=3.0 (from -r requirements.txt (line 9))
+  Using cached matplotlib-3.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting box2d-py==2.3.5 (from -r requirements.txt (line 10))
+  Downloading box2d-py-2.3.5.tar.gz (374 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 374.4/374.4 kB 6.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pygame==2.1.0 (from -r requirements.txt (line 11))
+  Downloading pygame-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 30.8 MB/s eta 0:00:00
+Collecting ale-py~=0.8.0 (from -r requirements.txt (line 12))
+  Downloading ale_py-0.8.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 28.7 MB/s eta 0:00:00
+Collecting mujoco==2.2.0 (from -r requirements.txt (line 13))
+  Downloading mujoco-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 15.4 MB/s eta 0:00:00
+Collecting mujoco_py<2.2,>=2.1 (from -r requirements.txt (line 14))
+  Downloading mujoco_py-2.1.2.14-py3-none-any.whl (2.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 27.1 MB/s eta 0:00:00
+Collecting imageio>=2.14.1 (from -r requirements.txt (line 15))
+  Downloading imageio-2.33.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting pytest
+  Downloading pytest-7.0.1-py3-none-any.whl (296 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 297.0/297.0 kB 22.5 MB/s eta 0:00:00
+Collecting attrs>=19.2.0 (from pytest)
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting iniconfig (from pytest)
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging (from pytest)
+  Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest)
+  Using cached pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting py>=1.8.2 (from pytest)
+  Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Collecting tomli>=1.0.0 (from pytest)
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting absl-py (from mujoco==2.2.0->-r requirements.txt (line 13))
+  Downloading absl_py-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting glfw (from mujoco==2.2.0->-r requirements.txt (line 13))
+  Downloading glfw-2.6.3-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2014_x86_64.whl.metadata (5.4 kB)
+Collecting pyopengl (from mujoco==2.2.0->-r requirements.txt (line 13))
+  Downloading PyOpenGL-3.1.7-py3-none-any.whl.metadata (3.2 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached contourpy-1.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached fonttools-4.45.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (154 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+Collecting pillow>=8 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached pyparsing-3.1.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting importlib-resources (from ale-py~=0.8.0->-r requirements.txt (line 12))
+  Downloading importlib_resources-6.1.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting typing-extensions (from ale-py~=0.8.0->-r requirements.txt (line 12))
+  Using cached typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting Cython>=0.27.2 (from mujoco_py<2.2,>=2.1->-r requirements.txt (line 14))
+  Using cached Cython-3.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting cffi>=1.10 (from mujoco_py<2.2,>=2.1->-r requirements.txt (line 14))
+  Using cached cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting fasteners~=0.15 (from mujoco_py<2.2,>=2.1->-r requirements.txt (line 14))
+  Downloading fasteners-0.19-py3-none-any.whl.metadata (4.9 kB)
+Collecting pycparser (from cffi>=1.10->mujoco_py<2.2,>=2.1->-r requirements.txt (line 14))
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.0->-r requirements.txt (line 9))
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Using cached numpy-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Using cached cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Using cached opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61.7 MB)
+Using cached matplotlib-3.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+Downloading imageio-2.33.0-py3-none-any.whl (313 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.3/313.3 kB 10.9 MB/s eta 0:00:00
+Using cached cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+Using cached contourpy-1.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (310 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached Cython-3.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+Downloading fasteners-0.19-py3-none-any.whl (18 kB)
+Using cached fonttools-4.45.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+Downloading glfw-2.6.3-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2014_x86_64.whl (208 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.2/208.2 kB 23.3 MB/s eta 0:00:00
+Using cached kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Using cached Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.6 MB)
+Using cached pluggy-1.3.0-py3-none-any.whl (18 kB)
+Using cached pyparsing-3.1.1-py3-none-any.whl (103 kB)
+Downloading absl_py-2.0.0-py3-none-any.whl (130 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.2/130.2 kB 12.6 MB/s eta 0:00:00
+Downloading importlib_resources-6.1.1-py3-none-any.whl (33 kB)
+Downloading PyOpenGL-3.1.7-py3-none-any.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 29.5 MB/s eta 0:00:00
+Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Building wheels for collected packages: box2d-py
+  Building wheel for box2d-py (setup.py): started
+  Building wheel for box2d-py (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [16 lines of output]
+      Using setuptools (version 68.2.2).
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-310
+      creating build/lib.linux-x86_64-cpython-310/Box2D
+      copying library/Box2D/__init__.py -> build/lib.linux-x86_64-cpython-310/Box2D
+      copying library/Box2D/Box2D.py -> build/lib.linux-x86_64-cpython-310/Box2D
+      creating build/lib.linux-x86_64-cpython-310/Box2D/b2
+      copying library/Box2D/b2/__init__.py -> build/lib.linux-x86_64-cpython-310/Box2D/b2
+      running build_ext
+      building 'Box2D._Box2D' extension
+      swigging Box2D/Box2D.i to Box2D/Box2D_wrap.cpp
+      swig -python -c++ -IBox2D -small -O -includeall -ignoremissing -w201 -globals b2Globals -outdir library/Box2D -keyword -w511 -D_SWIG_KWARGS -o Box2D/Box2D_wrap.cpp Box2D/Box2D.i
+      error: command 'swig' failed: No such file or directory
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for box2d-py
+  Running setup.py clean for box2d-py
+Failed to build box2d-py
+ERROR: Could not build wheels for box2d-py, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements.txt, -rtest_requirements.txt]; v = InvocationError('/workdir/gym-0.26.2/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rtest_requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements.txt, -rtest_requirements.txt]; v = InvocationError('/workdir/gym-0.26.2/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rtest_requirements.txt', 1)

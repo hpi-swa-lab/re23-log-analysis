@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/Markdown/3.4.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdoc-requirements.txt
+

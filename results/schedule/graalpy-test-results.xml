@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="35" time="18.018" timestamp="2023-11-29T05:18:23.495000" hostname="a1f8948d47fc"><testcase classname="test_schedule.SchedulerTests" name="test_at_time" time="0.029" /><testcase classname="test_schedule.SchedulerTests" name="test_at_time_hour" time="0.024" /><testcase classname="test_schedule.SchedulerTests" name="test_at_time_minute" time="0.015" /><testcase classname="test_schedule.SchedulerTests" name="test_cancel_job" time="1.937" /><testcase classname="test_schedule.SchedulerTests" name="test_cancel_jobs" time="2.992" /><testcase classname="test_schedule.SchedulerTests" name="test_clear_by_tag" time="2.996" /><testcase classname="test_schedule.SchedulerTests" name="test_get_by_tag" time="0.008" /><testcase classname="test_schedule.SchedulerTests" name="test_idle_seconds" time="0.006" /><testcase classname="test_schedule.SchedulerTests" name="test_job_func_args_are_passed_on" time="0.968" /><testcase classname="test_schedule.SchedulerTests" name="test_misconfigured_job_wont_break_scheduler" time="0.005" /><testcase classname="test_schedule.SchedulerTests" name="test_next_run_property" time="0.011"><failure message="AssertionError">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 714, in test_next_run_property
+    assert schedule.next_run() == original_datetime(2010, 1, 6, 14, 16)
+AssertionError</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_next_run_time" time="0.016" /><testcase classname="test_schedule.SchedulerTests" name="test_next_run_time_day_end" time="0.011" /><testcase classname="test_schedule.SchedulerTests" name="test_next_run_time_hour_end" time="0.010" /><testcase classname="test_schedule.SchedulerTests" name="test_next_run_time_minute_end" time="0.011" /><testcase classname="test_schedule.SchedulerTests" name="test_repr_functools_partial_job_func" time="0.007" /><testcase classname="test_schedule.SchedulerTests" name="test_run_all" time="2.868" /><testcase classname="test_schedule.SchedulerTests" name="test_run_all_with_decorator" time="2.995" /><testcase classname="test_schedule.SchedulerTests" name="test_run_all_with_decorator_args" time="0.995" /><testcase classname="test_schedule.SchedulerTests" name="test_run_all_with_decorator_defaultargs" time="0.994" /><testcase classname="test_schedule.SchedulerTests" name="test_run_every_n_days_at_specific_time" time="0.009"><failure message="TypeError: can't compare 'MockDate' to 'MockDate'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 686, in test_run_every_n_days_at_specific_time
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in &lt;genexpr&gt;
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() &gt;= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_run_every_weekday_at_specific_time_past_today" time="0.009"><failure message="TypeError: can't compare 'MockDate' to 'MockDate'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 671, in test_run_every_weekday_at_specific_time_past_today
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in &lt;genexpr&gt;
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() &gt;= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_run_every_weekday_at_specific_time_today" time="0.010"><failure message="TypeError: can't compare 'MockDate' to 'MockDate'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 660, in test_run_every_weekday_at_specific_time_today
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in &lt;genexpr&gt;
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() &gt;= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_run_pending" time="0.010"><failure message="TypeError: can't compare 'MockDate' to 'MockDate'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 634, in test_run_pending
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in &lt;genexpr&gt;
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() &gt;= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_singular_time_units_match_plural_units" time="0.005" /><testcase classname="test_schedule.SchedulerTests" name="test_tag_type_enforcement" time="0.007" /><testcase classname="test_schedule.SchedulerTests" name="test_time_range" time="0.041" /><testcase classname="test_schedule.SchedulerTests" name="test_time_range_repr" time="0.007" /><testcase classname="test_schedule.SchedulerTests" name="test_time_units" time="0.018" /><testcase classname="test_schedule.SchedulerTests" name="test_to_repr" time="0.008" /><testcase classname="test_schedule.SchedulerTests" name="test_to_string" time="0.005" /><testcase classname="test_schedule.SchedulerTests" name="test_to_string_functools_partial_job_func" time="0.211" /><testcase classname="test_schedule.SchedulerTests" name="test_to_string_lambda_job_func" time="0.007" /><testcase classname="test_schedule.SchedulerTests" name="test_until_time" time="0.049"><failure message="TypeError: can't compare 'MockDate' to 'MockDate'">Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/schedule-1.1.0/test_schedule.py", line 325, in test_until_time
+    schedule.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 99, in run_pending
+    for job in sorted(runnable_jobs):
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 98, in &lt;genexpr&gt;
+    runnable_jobs = (job for job in self.jobs if job.should_run)
+  File "/workdir/schedule-1.1.0/schedule/__init__.py", line 642, in should_run
+    return datetime.datetime.now() &gt;= self.next_run
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 2022, in __ge__
+    _cmperror(self, other)
+  File "/opt/graalpy/lib/python3.10/datetime.py", line 419, in _cmperror
+    raise TypeError("can't compare '%s' to '%s'" % (
+TypeError: can't compare 'MockDate' to 'MockDate'</failure></testcase><testcase classname="test_schedule.SchedulerTests" name="test_weekday_at_todady" time="0.013" /></testsuite></testsuites>

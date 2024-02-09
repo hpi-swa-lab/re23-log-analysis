@@ -1,0 +1,118 @@
+GLOB sdist-make: /workdir/smart-open-6.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/smart-open-6.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rintegration-tests/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/smart-open-6.3.0/.tox/.tmp/package/1/smart_open-6.3.0.zip
+cpythonlibtest-unit-test-tests installed: awscli==1.31.2,botocore==1.33.2,colorama==0.4.4,docutils==0.16,exceptiongroup==1.2.0,iniconfig==2.0.0,jmespath==1.0.1,lxml==4.9.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,py-cpuinfo==9.0.0,pyasn1==0.5.1,pytest==7.4.3,pytest-benchmark==4.0.0,python-dateutil==2.8.2,PyYAML==6.0.1,rsa==4.7.2,s3transfer==0.8.1,six==1.16.0,smart-open @ file:///workdir/smart-open-6.3.0/.tox/.tmp/package/1/smart_open-6.3.0.zip#sha256=f9f396a18d6948646dbc88daa740672d68a3a07bf65076307e8a26974167c362,tomli==2.0.1,unittest-xml-reporting==3.2.0,urllib3==2.0.7
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1211248397'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/smart-open-6.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/smart-open/6.3.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+E...............EE...EEEE...
+======================================================================
+ERROR [0.005s]: smart_open.tests.test_azure (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_azure
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_azure.py", line 21, in <module>
+    import azure.storage.blob
+ModuleNotFoundError: No module named 'azure'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_gcs (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_gcs
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_gcs.py", line 18, in <module>
+    import google.cloud
+ModuleNotFoundError: No module named 'google'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_http (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_http
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_http.py", line 13, in <module>
+    import responses
+ModuleNotFoundError: No module named 'responses'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_s3 (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_s3
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_s3.py", line 21, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_s3_version (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_s3_version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_s3_version.py", line 8, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_smart_open (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_smart_open
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_smart_open.py", line 24, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+
+
+======================================================================
+ERROR [0.000s]: smart_open.tests.test_ssh (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smart_open.tests.test_ssh
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/smart-open-6.3.0/smart_open/tests/test_ssh.py", line 7, in <module>
+    from paramiko import SSHException
+ModuleNotFoundError: No module named 'paramiko'
+
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.033s
+
+FAILED (errors=7)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/smart-open-6.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/smart-open/6.3.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

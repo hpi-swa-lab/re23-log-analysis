@@ -1,0 +1,12 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/zarr/2.14.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements_dev_minimal.txt
+	-rrequirements_dev_numpy.txt
+	-rrequirements_dev_optional.txt
+	-rrequirements_rtfd.txt
+

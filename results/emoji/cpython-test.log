@@ -1,0 +1,57 @@
+GLOB sdist-make: /workdir/emoji-2.2.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/emoji-2.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rutils/requirements.txt, -rutils/gh-pages/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/emoji-2.2.0/.tox/.tmp/package/1/emoji-2.2.0.zip
+cpythonlibtest-unit-test-tests installed: asgiref==3.7.2,beautifulsoup4==4.12.2,certifi==2023.11.17,charset-normalizer==3.3.2,Django==4.2.7,django-htmlmin==0.11.0,emoji @ file:///workdir/emoji-2.2.0/.tox/.tmp/package/1/emoji-2.2.0.zip#sha256=20171d848c709fa4ae13e93a2563aff4163500467091a48b4d0be544f7ed5fc9,exceptiongroup==1.1.3,html5lib==1.1,idna==3.4,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,requests==2.31.0,six==1.16.0,soupsieve==2.5,sqlparse==0.4.4,tomli==2.0.1,typing_extensions==4.8.0,urllib3==2.1.0,webencodings==0.5.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1888403347'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/emoji/2.2.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/emoji-2.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/emoji-2.2.0
+collecting ... collected 38 items
+
+tests/test_core.py::test_emojize_name_only PASSED                        [  2%]
+tests/test_core.py::test_regular_expression_minimal PASSED               [  5%]
+tests/test_core.py::test_emojize_complicated_string PASSED               [  7%]
+tests/test_core.py::test_emojize_languages PASSED                        [ 10%]
+tests/test_core.py::test_demojize_languages PASSED                       [ 13%]
+tests/test_core.py::test_emojize_variant PASSED                          [ 15%]
+tests/test_core.py::test_demojize_removes_variant PASSED                 [ 18%]
+tests/test_core.py::test_emojize_invalid_emoji PASSED                    [ 21%]
+tests/test_core.py::test_emojize_version PASSED                          [ 23%]
+tests/test_core.py::test_alias PASSED                                    [ 26%]
+tests/test_core.py::test_invalid_alias PASSED                            [ 28%]
+tests/test_core.py::test_demojize_name_only PASSED                       [ 31%]
+tests/test_core.py::test_demojize_complicated_string PASSED              [ 34%]
+tests/test_core.py::test_demojize_delimiters PASSED                      [ 36%]
+tests/test_core.py::test_emoji_list PASSED                               [ 39%]
+tests/test_core.py::test_distinct_emoji_list PASSED                      [ 42%]
+tests/test_core.py::test_emoji_count PASSED                              [ 44%]
+tests/test_core.py::test_replace_emoji PASSED                            [ 47%]
+tests/test_core.py::test_is_emoji PASSED                                 [ 50%]
+tests/test_core.py::test_long_emoji PASSED                               [ 52%]
+tests/test_core.py::test_untranslated PASSED                             [ 55%]
+tests/test_core.py::test_text PASSED                                     [ 57%]
+tests/test_core.py::test_text_multiple_times PASSED                      [ 60%]
+tests/test_core.py::test_invalid_chars PASSED                            [ 63%]
+tests/test_core.py::test_combine_with_component PASSED                   [ 65%]
+tests/test_dict.py::test_all_languages_list PASSED                       [ 68%]
+tests/test_dict.py::test_emoji_versions PASSED                           [ 71%]
+tests/test_dict.py::test_duplicate_names PASSED                          [ 73%]
+tests/test_dict.py::test_name_valid PASSED                               [ 76%]
+tests/test_nfkc.py::test_database_normalized PASSED                      [ 78%]
+tests/test_nfkc.py::test_normalized_and_not_normalized PASSED            [ 81%]
+tests/test_unicode_codes.py::test_emoji_english_names PASSED             [ 84%]
+tests/test_unicode_codes.py::test_compare_normal_and_aliases PASSED      [ 86%]
+tests/test_unicode_codes.py::test_no_alias_duplicates PASSED             [ 89%]
+tests/test_versions.py::test_emoji_versions_complete_emojize PASSED      [ 92%]
+tests/test_versions.py::test_emoji_versions_complete_demojize PASSED     [ 94%]
+tests/test_versions.py::test_method_version PASSED                       [ 97%]
+tests/test_versions.py::test_method_replace_version PASSED               [100%]
+
+- generated xml file: /workdir/results/emoji/2.2.0/1/cpython-test-results.xml --
+============================== 38 passed in 3.97s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

@@ -1,0 +1,145 @@
+GLOB sdist-make: /workdir/progressbar2-4.2.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/progressbar2-4.2.0/.tox/.tmp/package/1/progressbar2-4.2.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,coverage==7.3.2,docutils==0.20.1,exceptiongroup==1.2.0,filelock==3.13.1,flake8==6.1.0,freezegun==1.2.2,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,mypy==1.7.0,mypy-extensions==1.0.0,packaging==23.2,pluggy==1.3.0,progressbar2 @ file:///workdir/progressbar2-4.2.0/.tox/.tmp/package/1/progressbar2-4.2.0.zip#sha256=6aa9fca931ebae089bf7cbc3c0b12297e01dafea1d9796bca3a153e06b4c63bb,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.2,pytest==7.4.3,pytest-cov==4.1.0,pytest-mypy==0.10.3,python-dateutil==2.8.2,python-utils==3.8.1,requests==2.31.0,six==1.16.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,typing_extensions==4.8.0,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1849184011'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/progressbar2/4.2.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/progressbar2-4.2.0
+configfile: pytest.ini
+plugins: mypy-0.10.3, cov-4.1.0
+collecting ... /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/coverage/control.py:883: CoverageWarning: No data was collected. (no-data-collected)
+  self._warn("No data was collected.", slug="no-data-collected")
+collected 257 items / 12 errors
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting progressbar/__about__.py ___________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.__about__', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/__about__.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/__about__.py'))
+__________________ ERROR collecting progressbar/__about__.py ___________________
+import file mismatch:
+imported module 'progressbar.__about__' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/__about__.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/__about__.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________________ ERROR collecting progressbar/bar.py ______________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.bar', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/bar.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/bar.py'))
+_____________________ ERROR collecting progressbar/bar.py ______________________
+import file mismatch:
+imported module 'progressbar.bar' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/bar.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/bar.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________________ ERROR collecting progressbar/base.py _____________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.base', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/base.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/base.py'))
+_____________________ ERROR collecting progressbar/base.py _____________________
+import file mismatch:
+imported module 'progressbar.base' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/base.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/base.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+__________________ ERROR collecting progressbar/shortcuts.py ___________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.shortcuts', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/shortcuts.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/shortcuts.py'))
+__________________ ERROR collecting progressbar/shortcuts.py ___________________
+import file mismatch:
+imported module 'progressbar.shortcuts' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/shortcuts.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/shortcuts.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+____________________ ERROR collecting progressbar/utils.py _____________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.utils', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/utils.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/utils.py'))
+____________________ ERROR collecting progressbar/utils.py _____________________
+import file mismatch:
+imported module 'progressbar.utils' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/utils.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/utils.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________________ ERROR collecting progressbar/widgets.py ____________________
+Traceback (most recent call last):
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 590, in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+_pytest.pathlib.ImportPathMismatchError: ('progressbar.widgets', '/workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/widgets.py', PosixPath('/workdir/progressbar2-4.2.0/progressbar/widgets.py'))
+___________________ ERROR collecting progressbar/widgets.py ____________________
+import file mismatch:
+imported module 'progressbar.widgets' has this __file__ attribute:
+  /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/progressbar/widgets.py
+which is not the same as the test file we want to collect:
+  /workdir/progressbar2-4.2.0/progressbar/widgets.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+- generated xml file: /workdir/results/progressbar2/4.2.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR progressbar/__about__.py - _pytest.pathlib.ImportPathMismatchError: ('p...
+ERROR progressbar/__about__.py
+ERROR progressbar/bar.py - _pytest.pathlib.ImportPathMismatchError: ('progres...
+ERROR progressbar/bar.py
+ERROR progressbar/base.py - _pytest.pathlib.ImportPathMismatchError: ('progre...
+ERROR progressbar/base.py
+ERROR progressbar/shortcuts.py - _pytest.pathlib.ImportPathMismatchError: ('p...
+ERROR progressbar/shortcuts.py
+ERROR progressbar/utils.py - _pytest.pathlib.ImportPathMismatchError: ('progr...
+ERROR progressbar/utils.py
+ERROR progressbar/widgets.py - _pytest.pathlib.ImportPathMismatchError: ('pro...
+ERROR progressbar/widgets.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 12 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 12 errors in 0.36s ==============================
+ERROR: InvocationError for command /workdir/progressbar2-4.2.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/progressbar2/4.2.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

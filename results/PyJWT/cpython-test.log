@@ -1,0 +1,370 @@
+.package create: /workdir/PyJWT-2.6.0/.tox/.package
+.package installdeps: setuptools
+warning: no previously-included files found matching 'codecov.yml'
+warning: no previously-included files matching '*' found under directory 'docs/_build'
+warning: no previously-included files matching '*.py[co]' found under directory '*'
+warning: no previously-included files matching '__pycache__' found under directory '*'
+warning: no previously-included files found matching 'codecov.yml'
+warning: no previously-included files matching '*' found under directory 'docs/_build'
+warning: no previously-included files matching '*.py[co]' found under directory '*'
+warning: no previously-included files matching '__pycache__' found under directory '*'
+cpythonlibtest-unit-test-tests create: /workdir/PyJWT-2.6.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/PyJWT-2.6.0/.tox/.tmp/package/1/PyJWT-2.6.0.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,PyJWT @ file:///workdir/PyJWT-2.6.0/.tox/.tmp/package/1/PyJWT-2.6.0.tar.gz#sha256=196ab7f9ecc2e726be2e8ff6b519daa0aa411d08fbcc4791155b80f21ba524d8,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1415892165'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/PyJWT/2.6.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/PyJWT-2.6.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/PyJWT-2.6.0
+configfile: tox.ini
+testpaths: tests
+collecting ... collected 242 items
+
+tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24 SKIPPED   [  0%]
+tests/test_algorithms.py::TestAlgorithms::test_algorithm_should_throw_exception_if_prepare_key_not_impl PASSED [  0%]
+tests/test_algorithms.py::TestAlgorithms::test_algorithm_should_throw_exception_if_sign_not_impl PASSED [  1%]
+tests/test_algorithms.py::TestAlgorithms::test_algorithm_should_throw_exception_if_verify_not_impl PASSED [  1%]
+tests/test_algorithms.py::TestAlgorithms::test_algorithm_should_throw_exception_if_to_jwk_not_impl PASSED [  2%]
+tests/test_algorithms.py::TestAlgorithms::test_algorithm_should_throw_exception_if_from_jwk_not_impl PASSED [  2%]
+tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_if_key_is_not_none PASSED [  2%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_reject_nonstring_key PASSED [  3%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_unicode_key PASSED [  3%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem0] PASSED [  4%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem1] PASSED [  4%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey_pkcs1.pub.pem] PASSED [  4%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey_rsa.cer] PASSED [  5%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey_rsa.pub] PASSED [  5%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_jwk_should_parse_and_verify PASSED [  6%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_to_jwk_returns_correct_values PASSED [  6%]
+tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_raise_exception_if_not_hmac_key PASSED [  7%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_should_parse_pem_public_key SKIPPED [  7%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_pem_private_key_bytes SKIPPED [  7%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_unicode_key SKIPPED [  8%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_should_reject_non_string_key SKIPPED [  8%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_verify_should_return_false_if_signature_invalid SKIPPED [  9%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify SKIPPED [  9%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_fails_on_invalid_json SKIPPED [  9%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk SKIPPED [ 10%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk SKIPPED [ 10%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key SKIPPED [ 11%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_private_key SKIPPED [ 11%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_raises_exception_on_invalid_key SKIPPED [ 11%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_with_valid_curves SKIPPED [ 12%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_with_invalid_curve SKIPPED [ 12%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify SKIPPED [ 13%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_private_key_to_jwk_works_with_from_jwk SKIPPED [ 13%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_public_key_to_jwk_works_with_from_jwk SKIPPED [ 14%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_private_key_with_other_primes_is_invalid SKIPPED [ 14%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_private_key_with_missing_values_is_invalid SKIPPED [ 14%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_private_key_can_recover_prime_factors SKIPPED [ 15%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_private_key_with_missing_required_values_is_invalid SKIPPED [ 15%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_raises_exception_if_not_a_valid_key SKIPPED [ 16%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_public_key SKIPPED [ 16%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_private_key SKIPPED [ 16%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_raises_exception_on_invalid_key SKIPPED [ 17%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_from_jwk_raises_exception_on_invalid_key SKIPPED [ 17%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_should_reject_non_string_key SKIPPED [ 18%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_should_accept_pem_private_key_bytes SKIPPED [ 18%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_should_accept_ssh_public_key_bytes SKIPPED [ 19%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_verify_should_return_false_if_signature_invalid SKIPPED [ 19%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_verify_should_return_false_if_signature_wrong_length SKIPPED [ 19%]
+tests/test_algorithms.py::TestAlgorithms::test_ec_should_throw_exception_on_wrong_key SKIPPED [ 20%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_sign_then_verify_should_return_true SKIPPED [ 20%]
+tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_verify_should_return_false_if_signature_invalid SKIPPED [ 21%]
+tests/test_algorithms.py::TestAlgorithmsRFC7520::test_hmac_verify_should_return_true_for_test_vector PASSED [ 21%]
+tests/test_algorithms.py::TestAlgorithmsRFC7520::test_rsa_verify_should_return_true_for_test_vector SKIPPED [ 21%]
+tests/test_algorithms.py::TestAlgorithmsRFC7520::test_rsapss_verify_should_return_true_for_test_vector SKIPPED [ 22%]
+tests/test_algorithms.py::TestAlgorithmsRFC7520::test_ec_verify_should_return_true_for_test_vector SKIPPED [ 22%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_should_reject_non_string_key SKIPPED [ 23%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_should_accept_unicode_key SKIPPED [ 23%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value SKIPPED [ 23%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid SKIPPED [ 24%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_true_if_signature_valid SKIPPED [ 24%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_prepare_key_should_be_idempotent SKIPPED [ 25%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify SKIPPED [ 25%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify_with_private_key_as_is SKIPPED [ 26%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_public_key_should_parse_and_verify SKIPPED [ 26%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_fails_on_invalid_json SKIPPED [ 26%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_to_jwk_works_with_from_jwk SKIPPED [ 27%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_to_jwk_raises_exception_on_invalid_key SKIPPED [ 27%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_jwk_private_key_should_parse_and_verify SKIPPED [ 28%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_jwk_private_key_should_parse_and_verify_with_private_key_as_is SKIPPED [ 28%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_jwk_public_key_should_parse_and_verify SKIPPED [ 28%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_jwk_fails_on_invalid_json SKIPPED [ 29%]
+tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_to_jwk_works_with_from_jwk SKIPPED [ 29%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_from_jwk_data_dict SKIPPED [ 30%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_from_jwk_data_json_string SKIPPED [ 30%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_without_alg_from_dict SKIPPED [ 30%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_from_dict_with_algorithm SKIPPED [ 31%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_ec_p256_from_dict SKIPPED [ 31%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_ec_p384_from_dict SKIPPED [ 32%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_ec_p521_from_dict SKIPPED [ 32%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_ec_secp256k1_from_dict SKIPPED [ 33%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_hmac_from_dict SKIPPED [ 33%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_hmac_without_alg_from_dict SKIPPED [ 33%]
+tests/test_api_jwk.py::TestPyJWK::test_should_load_key_okp_without_alg_from_dict SKIPPED [ 34%]
+tests/test_api_jwk.py::TestPyJWK::test_from_dict_should_throw_exception_if_arg_is_invalid SKIPPED [ 34%]
+tests/test_api_jwk.py::TestPyJWKSet::test_should_load_keys_from_jwk_data_dict SKIPPED [ 35%]
+tests/test_api_jwk.py::TestPyJWKSet::test_should_load_keys_from_jwk_data_json_string SKIPPED [ 35%]
+tests/test_api_jwk.py::TestPyJWKSet::test_keyset_should_index_by_kid SKIPPED [ 35%]
+tests/test_api_jwk.py::TestPyJWKSet::test_keyset_with_unknown_alg SKIPPED [ 36%]
+tests/test_api_jwk.py::TestPyJWKSet::test_invalid_keys_list SKIPPED      [ 36%]
+tests/test_api_jwk.py::TestPyJWKSet::test_empty_keys_list SKIPPED (R...) [ 37%]
+tests/test_api_jws.py::TestJWS::test_register_algo_does_not_allow_duplicate_registration PASSED [ 37%]
+tests/test_api_jws.py::TestJWS::test_register_algo_rejects_non_algorithm_obj PASSED [ 38%]
+tests/test_api_jws.py::TestJWS::test_unregister_algo_removes_algorithm PASSED [ 38%]
+tests/test_api_jws.py::TestJWS::test_unregister_algo_throws_error_if_not_registered PASSED [ 38%]
+tests/test_api_jws.py::TestJWS::test_algo_parameter_removes_alg_from_algorithms_list PASSED [ 39%]
+tests/test_api_jws.py::TestJWS::test_override_options PASSED             [ 39%]
+tests/test_api_jws.py::TestJWS::test_non_object_options_dont_persist PASSED [ 40%]
+tests/test_api_jws.py::TestJWS::test_options_must_be_dict PASSED         [ 40%]
+tests/test_api_jws.py::TestJWS::test_encode_decode PASSED                [ 40%]
+tests/test_api_jws.py::TestJWS::test_decode_fails_when_alg_is_not_on_method_algorithms_param PASSED [ 41%]
+tests/test_api_jws.py::TestJWS::test_decode_works_with_unicode_token PASSED [ 41%]
+tests/test_api_jws.py::TestJWS::test_decode_missing_segments_throws_exception PASSED [ 42%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_token_type_is_none PASSED [ 42%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_token_type_is_int PASSED [ 42%]
+tests/test_api_jws.py::TestJWS::test_decode_with_non_mapping_header_throws_exception PASSED [ 43%]
+tests/test_api_jws.py::TestJWS::test_encode_algorithm_param_should_be_case_sensitive PASSED [ 43%]
+tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none PASSED [ 44%]
+tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_es256 SKIPPED [ 44%]
+tests/test_api_jws.py::TestJWS::test_encode_with_alg_hs256_and_headers_alg_es256 SKIPPED [ 45%]
+tests/test_api_jws.py::TestJWS::test_decode_algorithm_param_should_be_case_sensitive PASSED [ 45%]
+tests/test_api_jws.py::TestJWS::test_bad_secret PASSED                   [ 45%]
+tests/test_api_jws.py::TestJWS::test_decodes_valid_jws PASSED            [ 46%]
+tests/test_api_jws.py::TestJWS::test_decodes_complete_valid_jws PASSED   [ 46%]
+tests/test_api_jws.py::TestJWS::test_decodes_valid_es384_jws SKIPPED     [ 47%]
+tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws SKIPPED     [ 47%]
+tests/test_api_jws.py::TestJWS::test_load_verify_valid_jws PASSED        [ 47%]
+tests/test_api_jws.py::TestJWS::test_allow_skip_verification PASSED      [ 48%]
+tests/test_api_jws.py::TestJWS::test_decode_with_optional_algorithms PASSED [ 48%]
+tests/test_api_jws.py::TestJWS::test_decode_no_algorithms_verify_signature_false PASSED [ 49%]
+tests/test_api_jws.py::TestJWS::test_load_no_verification PASSED         [ 49%]
+tests/test_api_jws.py::TestJWS::test_no_secret PASSED                    [ 50%]
+tests/test_api_jws.py::TestJWS::test_verify_signature_with_no_secret PASSED [ 50%]
+tests/test_api_jws.py::TestJWS::test_verify_signature_with_no_algo_header_throws_exception PASSED [ 50%]
+tests/test_api_jws.py::TestJWS::test_invalid_crypto_alg PASSED           [ 51%]
+tests/test_api_jws.py::TestJWS::test_missing_crypto_library_better_error_messages PASSED [ 51%]
+tests/test_api_jws.py::TestJWS::test_unicode_secret PASSED               [ 52%]
+tests/test_api_jws.py::TestJWS::test_nonascii_secret PASSED              [ 52%]
+tests/test_api_jws.py::TestJWS::test_bytes_secret PASSED                 [ 52%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_header_padding PASSED [ 53%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_header_string PASSED [ 53%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_payload_padding PASSED [ 54%]
+tests/test_api_jws.py::TestJWS::test_decode_invalid_crypto_padding PASSED [ 54%]
+tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail PASSED [ 54%]
+tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_and_verify_false_should_pass PASSED [ 55%]
+tests/test_api_jws.py::TestJWS::test_get_unverified_header_returns_header_values PASSED [ 55%]
+tests/test_api_jws.py::TestJWS::test_get_unverified_header_fails_on_bad_header_types PASSED [ 56%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS256] SKIPPED [ 56%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS384] SKIPPED [ 57%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS512] SKIPPED [ 57%]
+tests/test_api_jws.py::TestJWS::test_rsa_related_algorithms PASSED       [ 57%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES256] SKIPPED [ 58%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES256K] SKIPPED [ 58%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES384] SKIPPED [ 59%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES512] SKIPPED [ 59%]
+tests/test_api_jws.py::TestJWS::test_ecdsa_related_algorithms PASSED     [ 59%]
+tests/test_api_jws.py::TestJWS::test_skip_check_signature PASSED         [ 60%]
+tests/test_api_jws.py::TestJWS::test_decode_options_must_be_dict PASSED  [ 60%]
+tests/test_api_jws.py::TestJWS::test_custom_json_encoder PASSED          [ 61%]
+tests/test_api_jws.py::TestJWS::test_encode_headers_parameter_adds_headers PASSED [ 61%]
+tests/test_api_jws.py::TestJWS::test_encode_with_typ PASSED              [ 61%]
+tests/test_api_jws.py::TestJWS::test_encode_with_typ_empty_string PASSED [ 62%]
+tests/test_api_jws.py::TestJWS::test_encode_with_typ_none PASSED         [ 62%]
+tests/test_api_jws.py::TestJWS::test_encode_with_typ_without_keywords PASSED [ 63%]
+tests/test_api_jws.py::TestJWS::test_encode_fails_on_invalid_kid_types PASSED [ 63%]
+tests/test_api_jws.py::TestJWS::test_encode_decode_with_detached_content PASSED [ 64%]
+tests/test_api_jws.py::TestJWS::test_encode_detached_content_with_b64_header PASSED [ 64%]
+tests/test_api_jws.py::TestJWS::test_decode_detached_content_without_proper_argument PASSED [ 64%]
+tests/test_api_jws.py::TestJWS::test_decode_warns_on_unsupported_kwarg PASSED [ 65%]
+tests/test_api_jws.py::TestJWS::test_decode_complete_warns_on_unuspported_kwarg PASSED [ 65%]
+tests/test_api_jwt.py::TestJWT::test_decodes_valid_jwt PASSED            [ 66%]
+tests/test_api_jwt.py::TestJWT::test_decodes_complete_valid_jwt PASSED   [ 66%]
+tests/test_api_jwt.py::TestJWT::test_load_verify_valid_jwt PASSED        [ 66%]
+tests/test_api_jwt.py::TestJWT::test_decode_invalid_payload_string PASSED [ 67%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_non_mapping_payload_throws_exception PASSED [ 67%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_invalid_audience_param_throws_exception PASSED [ 68%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_nonlist_aud_claim_throws_exception PASSED [ 68%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_invalid_aud_list_member_throws_exception PASSED [ 69%]
+tests/test_api_jwt.py::TestJWT::test_encode_bad_type PASSED              [ 69%]
+tests/test_api_jwt.py::TestJWT::test_encode_with_typ PASSED              [ 69%]
+tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_exp_is_not_int PASSED [ 70%]
+tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_iat_is_not_int PASSED [ 70%]
+tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_iat_is_greater_than_now PASSED [ 71%]
+tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_nbf_is_not_int PASSED [ 71%]
+tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_aud_is_none PASSED [ 71%]
+tests/test_api_jwt.py::TestJWT::test_encode_datetime PASSED              [ 72%]
+tests/test_api_jwt.py::TestJWT::test_decodes_valid_es256_jwt SKIPPED     [ 72%]
+tests/test_api_jwt.py::TestJWT::test_decodes_valid_rs384_jwt SKIPPED     [ 73%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_expiration PASSED       [ 73%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_notbefore PASSED        [ 73%]
+tests/test_api_jwt.py::TestJWT::test_decode_skip_expiration_verification PASSED [ 74%]
+tests/test_api_jwt.py::TestJWT::test_decode_skip_notbefore_verification PASSED [ 74%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_expiration_with_leeway PASSED [ 75%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_notbefore_with_leeway PASSED [ 75%]
+tests/test_api_jwt.py::TestJWT::test_check_audience_when_valid PASSED    [ 76%]
+tests/test_api_jwt.py::TestJWT::test_check_audience_list_when_valid PASSED [ 76%]
+tests/test_api_jwt.py::TestJWT::test_check_audience_none_specified PASSED [ 76%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_list PASSED [ 77%]
+tests/test_api_jwt.py::TestJWT::test_check_audience_in_array_when_valid PASSED [ 77%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience PASSED [ 78%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_audience_as_bytes PASSED [ 78%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_in_array PASSED [ 78%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_token_without_issuer PASSED [ 79%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_token_without_audience PASSED [ 79%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_token_with_aud_none_and_without_audience PASSED [ 80%]
+tests/test_api_jwt.py::TestJWT::test_check_issuer_when_valid PASSED      [ 80%]
+tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_issuer PASSED [ 80%]
+tests/test_api_jwt.py::TestJWT::test_skip_check_audience PASSED          [ 81%]
+tests/test_api_jwt.py::TestJWT::test_skip_check_exp PASSED               [ 81%]
+tests/test_api_jwt.py::TestJWT::test_decode_should_raise_error_if_exp_required_but_not_present PASSED [ 82%]
+tests/test_api_jwt.py::TestJWT::test_decode_should_raise_error_if_iat_required_but_not_present PASSED [ 82%]
+tests/test_api_jwt.py::TestJWT::test_decode_should_raise_error_if_nbf_required_but_not_present PASSED [ 83%]
+tests/test_api_jwt.py::TestJWT::test_skip_check_signature PASSED         [ 83%]
+tests/test_api_jwt.py::TestJWT::test_skip_check_iat PASSED               [ 83%]
+tests/test_api_jwt.py::TestJWT::test_skip_check_nbf PASSED               [ 84%]
+tests/test_api_jwt.py::TestJWT::test_custom_json_encoder PASSED          [ 84%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_verify_exp_option PASSED [ 85%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_verify_exp_option_and_signature_off PASSED [ 85%]
+tests/test_api_jwt.py::TestJWT::test_decode_with_optional_algorithms PASSED [ 85%]
+tests/test_api_jwt.py::TestJWT::test_decode_no_algorithms_verify_signature_false PASSED [ 86%]
+tests/test_api_jwt.py::TestJWT::test_decode_legacy_verify_warning PASSED [ 86%]
+tests/test_api_jwt.py::TestJWT::test_decode_no_options_mutation PASSED   [ 87%]
+tests/test_api_jwt.py::TestJWT::test_decode_warns_on_unsupported_kwarg PASSED [ 87%]
+tests/test_api_jwt.py::TestJWT::test_decode_complete_warns_on_unsupported_kwarg PASSED [ 88%]
+tests/test_exceptions.py::test_missing_required_claim_error_has_proper_str PASSED [ 88%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwk_set SKIPPED     [ 88%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_keys SKIPPED [ 89%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_keys_if_no_use_provided SKIPPED [ 89%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_keys_raises_if_none_found SKIPPED [ 90%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key SKIPPED [ 90%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key_caches_result SKIPPED [ 90%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key_does_not_cache_opt_out SKIPPED [ 91%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key_from_jwt SKIPPED [ 91%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwk_set_caches_result SKIPPED [ 92%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_cache_expired_result SKIPPED [ 92%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_cache_disabled SKIPPED [ 92%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_failed_request_should_clear_cache SKIPPED [ 93%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_refresh_cache SKIPPED [ 93%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_no_matching_kid_after_second_attempt SKIPPED [ 94%]
+tests/test_jwks_client.py::TestPyJWKClient::test_get_jwt_set_invalid_lifespan SKIPPED [ 94%]
+tests/test_jwt.py::test_encode_decode PASSED                             [ 95%]
+tests/test_utils.py::test_to_base64url_uint[0-AA] PASSED                 [ 95%]
+tests/test_utils.py::test_to_base64url_uint[1-AQ] PASSED                 [ 95%]
+tests/test_utils.py::test_to_base64url_uint[255-_w] PASSED               [ 96%]
+tests/test_utils.py::test_to_base64url_uint[65537-AQAB] PASSED           [ 96%]
+tests/test_utils.py::test_to_base64url_uint[123456789-B1vNFQ] PASSED     [ 97%]
+tests/test_utils.py::test_to_base64url_uint[-1-] XFAIL                   [ 97%]
+tests/test_utils.py::test_from_base64url_uint[AA-0] PASSED               [ 97%]
+tests/test_utils.py::test_from_base64url_uint[AQ-1] PASSED               [ 98%]
+tests/test_utils.py::test_from_base64url_uint[_w-255] PASSED             [ 98%]
+tests/test_utils.py::test_from_base64url_uint[AQAB-65537] PASSED         [ 99%]
+tests/test_utils.py::test_from_base64url_uint[B1vNFQ-123456789] PASSED   [ 99%]
+tests/test_utils.py::test_force_bytes_raises_error_on_invalid_object PASSED [100%]
+
+- generated xml file: /workdir/results/PyJWT/2.6.0/1/cpython-test-results.xml --
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_advisory.py:26: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:107: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:114: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:121: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:128: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:135: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:158: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:178: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:239: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:253: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:263: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:281: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:300: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:307: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:326: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:336: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:349: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:363: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:373: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:384: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:395: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:417: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:428: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:440: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:464: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:521: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:528: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:536: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:543: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:550: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:557: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:578: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:592: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:604: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:620: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:673: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:704: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:735: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:776: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:788: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:794: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:811: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:825: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:837: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:846: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:855: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:866: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:878: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:930: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:949: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:955: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:964: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:975: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:987: Requires cryptography library installed
+SKIPPED [1] tests/test_algorithms.py:1039: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:16: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:37: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:58: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:70: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:82: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:94: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:106: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:118: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:130: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:142: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:155: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:166: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:213: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:234: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:255: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:277: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:294: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwk.py:299: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jws.py:176: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jws.py:186: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jws.py:258: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jws.py:277: Requires cryptography library installed
+SKIPPED [3] tests/test_api_jws.py:505: Requires cryptography library installed
+SKIPPED [4] tests/test_api_jws.py:553: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwt.py:278: Requires cryptography library installed
+SKIPPED [1] tests/test_api_jwt.py:296: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:83: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:92: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:102: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:116: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:130: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:143: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:159: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:175: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:201: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:217: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:233: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:253: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:266: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:281: Requires cryptography library installed
+SKIPPED [1] tests/test_jwks_client.py:293: Requires cryptography library installed
+XFAIL tests/test_utils.py::test_to_base64url_uint[-1-]
+================= 140 passed, 101 skipped, 1 xfailed in 1.60s ==================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

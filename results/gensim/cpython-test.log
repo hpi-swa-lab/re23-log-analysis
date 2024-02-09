@@ -1,0 +1,49 @@
+GLOB sdist-make: /workdir/gensim-4.2.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/gensim-4.2.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/gensim-4.2.0/.tox/.tmp/package/1/gensim-4.2.0.zip
+cpythonlibtest-unit-test-tests installed: gensim @ file:///workdir/gensim-4.2.0/.tox/.tmp/package/1/gensim-4.2.0.zip#sha256=cc7a236168050f88443abc40e8c7a94c9a8324a4183545c05c978da6786cac06,lxml==4.9.3,mock==5.1.0,numpy==1.26.2,scipy==1.11.4,smart-open==6.4.0,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='915538488'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/gensim-4.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/gensim/4.2.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+E
+======================================================================
+ERROR [0.004s]: gensim (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: gensim
+Traceback (most recent call last):
+  File "/workdir/gensim-4.2.0/gensim/matutils.py", line 1353, in <module>
+    from gensim.corpora._mmreader import MmReader  # noqa: F401
+ModuleNotFoundError: No module named 'gensim.corpora._mmreader'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/gensim-4.2.0/gensim/__init__.py", line 11, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, utils  # noqa:F401
+  File "/workdir/gensim-4.2.0/gensim/corpora/__init__.py", line 6, in <module>
+    from .indexedcorpus import IndexedCorpus  # noqa:F401 must appear before the other classes
+  File "/workdir/gensim-4.2.0/gensim/corpora/indexedcorpus.py", line 14, in <module>
+    from gensim import interfaces, utils
+  File "/workdir/gensim-4.2.0/gensim/interfaces.py", line 19, in <module>
+    from gensim import utils, matutils
+  File "/workdir/gensim-4.2.0/gensim/matutils.py", line 1355, in <module>
+    raise utils.NO_CYTHON
+RuntimeError: Compiled extensions are unavailable. If you've installed from a package, ask the package maintainer to include compiled extensions. If you're building Gensim from source yourself, install Cython and a C compiler, and then run `python setup.py build_ext --inplace` to retry. 
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (errors=1)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/gensim-4.2.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/gensim/4.2.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

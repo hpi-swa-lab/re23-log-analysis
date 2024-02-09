@@ -1,0 +1,52 @@
+GLOB sdist-make: /workdir/gitdb-4.0.10/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/gitdb-4.0.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/gitdb-4.0.10/.tox/.tmp/package/1/gitdb-4.0.10.zip
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,gitdb @ file:///workdir/gitdb-4.0.10/.tox/.tmp/package/1/gitdb-4.0.10.zip#sha256=b7ecfa10532f1d0a88ac04ae388537e57b8dae660e93d7783ec07d80ab78117a,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,smmap==5.0.1,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3335988465'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/gitdb/4.0.10/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/gitdb-4.0.10/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/gitdb-4.0.10
+collecting ... collected 33 items
+
+gitdb/ext/smmap/smmap/test/test_buf.py::TestBuf::test_basics PASSED      [  3%]
+gitdb/ext/smmap/smmap/test/test_mman.py::TestMMan::test_cursor PASSED    [  6%]
+gitdb/ext/smmap/smmap/test/test_mman.py::TestMMan::test_memman_operation PASSED [  9%]
+gitdb/ext/smmap/smmap/test/test_mman.py::TestMMan::test_memory_manager PASSED [ 12%]
+gitdb/ext/smmap/smmap/test/test_tutorial.py::TestTutorial::test_example PASSED [ 15%]
+gitdb/ext/smmap/smmap/test/test_util.py::TestMMan::test_region PASSED    [ 18%]
+gitdb/ext/smmap/smmap/test/test_util.py::TestMMan::test_region_list PASSED [ 21%]
+gitdb/ext/smmap/smmap/test/test_util.py::TestMMan::test_util PASSED      [ 24%]
+gitdb/ext/smmap/smmap/test/test_util.py::TestMMan::test_window PASSED    [ 27%]
+gitdb/test/test_base.py::TestBaseTypes::test_streams PASSED              [ 30%]
+gitdb/test/test_example.py::TestExamples::test_base PASSED               [ 33%]
+gitdb/test/test_pack.py::TestPack::test_pack PASSED                      [ 36%]
+gitdb/test/test_pack.py::TestPack::test_pack_64 SKIPPED (not impleme...) [ 39%]
+gitdb/test/test_pack.py::TestPack::test_pack_entity PASSED               [ 42%]
+gitdb/test/test_pack.py::TestPack::test_pack_index PASSED                [ 45%]
+gitdb/test/test_stream.py::TestStream::test_compressed_writer PASSED     [ 48%]
+gitdb/test/test_stream.py::TestStream::test_decompress_reader PASSED     [ 51%]
+gitdb/test/test_stream.py::TestStream::test_decompress_reader_special_case PASSED [ 54%]
+gitdb/test/test_stream.py::TestStream::test_sha_writer PASSED            [ 57%]
+gitdb/test/test_util.py::TestUtils::test_basics PASSED                   [ 60%]
+gitdb/test/test_util.py::TestUtils::test_lockedfd PASSED                 [ 63%]
+gitdb/test/db/test_git.py::TestGitDB::test_reading PASSED                [ 66%]
+gitdb/test/db/test_git.py::TestGitDB::test_writing PASSED                [ 69%]
+gitdb/test/db/test_loose.py::TestLooseDB::test_basics PASSED             [ 72%]
+gitdb/test/db/test_mem.py::TestMemoryDB::test_writing PASSED             [ 75%]
+gitdb/test/db/test_pack.py::TestPackDB::test_writing PASSED              [ 78%]
+gitdb/test/db/test_ref.py::TestReferenceDB::test_writing PASSED          [ 81%]
+gitdb/test/performance/test_pack.py::TestPackedDBPerformance::test_correctness PASSED [ 84%]
+gitdb/test/performance/test_pack.py::TestPackedDBPerformance::test_loose_correctness PASSED [ 87%]
+gitdb/test/performance/test_pack.py::TestPackedDBPerformance::test_pack_random_access PASSED [ 90%]
+gitdb/test/performance/test_pack_streaming.py::TestPackStreamingPerformance::test_pack_writing PASSED [ 93%]
+gitdb/test/performance/test_pack_streaming.py::TestPackStreamingPerformance::test_stream_reading PASSED [ 96%]
+gitdb/test/performance/test_stream.py::TestObjDBPerformance::test_large_data_streaming PASSED [100%]
+
+- generated xml file: /workdir/results/gitdb/4.0.10/1/cpython-test-results.xml -
+======================== 32 passed, 1 skipped in 23.19s ========================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

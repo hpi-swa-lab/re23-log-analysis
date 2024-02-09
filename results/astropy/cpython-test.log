@@ -1,0 +1,82 @@
+.package create: /workdir/astropy-5.2.1/.tox/.package
+.package installdeps: setuptools, setuptools_scm>=6.2, wheel, cython==0.29.30, oldest-supported-numpy, extension-helpers
+/workdir/astropy-5.2.1/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/astropy-5.2.1" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+warning: no files found matching '*.templ' under directory 'astropy'
+warning: no files found matching 'astropy/astropy.cfg'
+warning: no files found matching '*' under directory 'scripts'
+warning: no files found matching '*' under directory 'static'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'build'
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.o' found anywhere in distribution
+/workdir/astropy-5.2.1/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/astropy-5.2.1" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+warning: no files found matching '*.templ' under directory 'astropy'
+warning: no files found matching 'astropy/astropy.cfg'
+warning: no files found matching '*' under directory 'scripts'
+warning: no files found matching '*' under directory 'static'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'build'
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.o' found anywhere in distribution
+cpythonlibtest-test-recdeps-numpy123 create: /workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123
+cpythonlibtest-test-recdeps-numpy123 installdeps: mock, pytest
+cpythonlibtest-test-recdeps-numpy123 inst: /workdir/astropy-5.2.1/.tox/.tmp/package/1/astropy-5.2.1.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123/log/cpythonlibtest-test-recdeps-numpy123-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/astropy-5.2.1.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [31 lines of output]
+      Traceback (most recent call last):
+        File "/workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 69, in <module>
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/extension_helpers/_setup_helpers.py", line 63, in get_extensions
+          for setuppkg in iter_setup_packages(srcdir, packages):
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/extension_helpers/_setup_helpers.py", line 128, in iter_setup_packages
+          module = import_file(setup_package, name=packagename + ".setup_package")
+        File "/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/extension_helpers/_utils.py", line 133, in import_file
+          mod = loader.load_module()
+        File "<frozen importlib._bootstrap_external>", line 548, in _check_name_wrapper
+        File "<frozen importlib._bootstrap_external>", line 1063, in load_module
+        File "<frozen importlib._bootstrap_external>", line 888, in load_module
+        File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+        File "<frozen importlib._bootstrap>", line 719, in _load
+        File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+        File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+        File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+        File "./astropy/wcs/setup_package.py", line 13, in <module>
+          from setuptools.dep_util import newer_group
+      ImportError: cannot import name 'newer_group' from 'setuptools.dep_util' (/tmp/pip-build-env-u2gr448w/overlay/lib/python3.10/site-packages/setuptools/dep_util.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-test-recdeps-numpy123: InvocationError for command /workdir/astropy-5.2.1/.tox/cpythonlibtest-test-recdeps-numpy123/bin/python -m pip install --exists-action w .tox/.tmp/package/1/astropy-5.2.1.tar.gz (exited with code 1)

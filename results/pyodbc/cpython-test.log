@@ -1,0 +1,64 @@
+.package create: /workdir/pyodbc-4.0.35/.tox/.package
+.package installdeps: setuptools
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+cpythonlibtest-unit-test-tests create: /workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pyodbc-4.0.35/.tox/.tmp/package/1/pyodbc-4.0.35.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pyodbc @ file:///workdir/pyodbc-4.0.35/.tox/.tmp/package/1/pyodbc-4.0.35.tar.gz#sha256=4def4868da5e577e341813f4c0d70fd030b4897403def9df1b74621e4ad1331a,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1231052860'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pyodbc/4.0.35/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pyodbc-4.0.35
+collecting ... collected 0 items / 2 errors
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting appveyor/test_connect.py ___________________
+Traceback (most recent call last):
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/pyodbc-4.0.35/appveyor/test_connect.py", line 3, in <module>
+    c = pyodbc.connect(sys.argv[1])
+pyodbc.InterfaceError: ('IM002', '[IM002] [unixODBC][Driver Manager]Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+__________ ERROR collecting tests3/dbapi_SQLParamData_memory__test.py __________
+ImportError while importing test module '/workdir/pyodbc-4.0.35/tests3/dbapi_SQLParamData_memory__test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests3/dbapi_SQLParamData_memory__test.py:26: in <module>
+    import psutil
+E   ModuleNotFoundError: No module named 'psutil'
+- generated xml file: /workdir/results/pyodbc/4.0.35/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR appveyor/test_connect.py - pyodbc.InterfaceError: ('IM002', '[IM002] [u...
+ERROR tests3/dbapi_SQLParamData_memory__test.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 2 errors in 0.09s ===============================
+ERROR: InvocationError for command /workdir/pyodbc-4.0.35/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pyodbc/4.0.35/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

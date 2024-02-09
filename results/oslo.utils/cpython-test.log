@@ -1,0 +1,518 @@
+GLOB sdist-make: /workdir/oslo.utils-6.1.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/oslo.utils-6.1.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rrequirements.txt, -rdoc/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/oslo.utils-6.1.0/.tox/.tmp/package/1/oslo.utils-6.1.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,autopage==0.5.2,Babel==2.13.1,bandit==1.6.2,certifi==2023.11.17,cfgv==3.4.0,charset-normalizer==3.3.2,cliff==4.4.0,cmd2==2.4.3,coverage==7.3.2,ddt==1.7.0,debtcollector==2.5.0,distlib==0.3.7,dnspython==2.4.2,docutils==0.20.1,dulwich==0.21.6,entrypoints==0.3,eventlet==0.33.3,exceptiongroup==1.2.0,extras==1.0.0,filelock==3.13.1,fixtures==4.1.0,flake8==3.7.9,gitdb==4.0.11,GitPython==3.1.40,greenlet==3.0.1,hacking==3.0.1,identify==2.5.32,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,iso8601==2.1.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.6.1,mock==5.1.0,netaddr==0.9.0,netifaces==0.11.0,nodeenv==1.8.0,openstackdocstheme==3.2.0,oslo.config==9.2.0,oslo.i18n==6.2.0,oslo.utils @ file:///workdir/oslo.utils-6.1.0/.tox/.tmp/package/1/oslo.utils-6.1.0.zip#sha256=1850fd7bbed8e2d99f77905d7db731f3f36b0becb0bff94c265af021609bf97d,oslotest==4.5.0,packaging==23.2,pbr==6.0.0,platformdirs==4.0.0,pluggy==1.3.0,pre-commit==3.5.0,prettytable==3.9.0,pycodestyle==2.5.0,pyflakes==2.1.1,Pygments==2.17.2,pyparsing==3.1.1,pyperclip==1.8.2,pytest==7.4.3,python-subunit==1.4.4,pytz==2023.3.post1,PyYAML==6.0.1,reno==4.0.0,requests==2.31.0,rfc3986==2.0.0,six==1.16.0,smmap==5.0.1,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,stestr==4.1.0,stevedore==5.1.0,testscenarios==0.5.0,testtools==2.7.1,tomli==2.0.1,tomlkit==0.12.3,urllib3==2.1.0,virtualenv==20.24.7,voluptuous==0.14.1,wcwidth==0.2.12,wrapt==1.16.0,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3133440498'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/oslo.utils/6.1.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/oslo.utils-6.1.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/oslo.utils-6.1.0
+collecting ... collected 409 items
+
+oslo_utils/tests/test_dictutils.py::DictUtilsTestCase::test_flatten_dict_to_keypairs PASSED [  0%]
+oslo_utils/tests/test_dictutils.py::DictUtilsTestCase::test_flatten_dict_to_keypairs_with_separator PASSED [  0%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_api_compat PASSED [  0%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_clear_already_sent PASSED [  0%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_clear_timeout PASSED [  1%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_no_timeout PASSED [  1%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_race PASSED [  1%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_event_set_clear_timeout PASSED [  1%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_eventlet_is_patched PASSED [  2%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_eventlet_no_patcher PASSED [  2%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_invalid_patch_check PASSED [  2%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_no_warning PASSED [  2%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_partially_patched_warning PASSED [  3%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_warning_not_patched PASSED [  3%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_warning_not_patched_all PASSED [  3%]
+oslo_utils/tests/test_eventletutils.py::EventletUtilsTest::test_warning_not_patched_none_provided PASSED [  3%]
+oslo_utils/tests/test_excutils.py::CausedByTest::test_caused_by_explicit PASSED [  4%]
+oslo_utils/tests/test_excutils.py::CausedByTest::test_caused_by_implicit PASSED [  4%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception PASSED [  4%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_capture_not_active PASSED [  4%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_capture_reraise PASSED [  5%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_dropped PASSED [  5%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_dropped_no_reraise PASSED [  5%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_forced PASSED [  5%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_forced_not_active PASSED [  6%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_no_reraise PASSED [  6%]
+oslo_utils/tests/test_excutils.py::SaveAndReraiseTest::test_save_and_reraise_exception_provided_logger PASSED [  6%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_1exc_gives_1log PASSED [  6%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_mixed_4exc_1min_gives_2logs PASSED [  7%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_mixed_4exc_2min_gives_2logs PASSED [  7%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_mixed_4exc_2min_gives_3logs PASSED [  7%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_same_10exc_1min_gives_1log PASSED [  7%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_same_10exc_2min_gives_2logs PASSED [  8%]
+oslo_utils/tests/test_excutils.py::ForeverRetryUncaughtExceptionsTest::test_exc_retrier_same_2exc_2min_gives_2logs PASSED [  8%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_classmethod_docstring PASSED [  8%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_classmethod_call PASSED [  8%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_classmethod_context_manager PASSED [  9%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_func_call PASSED [  9%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_func_context_manager PASSED [  9%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_method_call PASSED [  9%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_method_context_manager PASSED [ 10%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_staticmethod_call PASSED [ 10%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_filter_staticmethod_context_manager PASSED [ 10%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_func_docstring PASSED [ 10%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_method_docstring PASSED [ 11%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_noexc_func_context_manager PASSED [ 11%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_noexc_nocall_func_context_manager PASSED [ 11%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_classmethod_call PASSED [ 11%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_classmethod_context_manager PASSED [ 11%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_func_call PASSED [ 12%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_func_context_manager PASSED [ 12%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_method_call PASSED [ 12%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_method_context_manager PASSED [ 12%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_other_func_call PASSED [ 13%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_other_func_context_manager PASSED [ 13%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_previous_after_filtered_func_call PASSED [ 13%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_previous_func_call PASSED [ 13%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_staticmethod_call PASSED [ 14%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_raise_staticmethod_context_manager PASSED [ 14%]
+oslo_utils/tests/test_excutils.py::ExceptionFilterTest::test_staticmethod_docstring PASSED [ 14%]
+oslo_utils/tests/test_fileutils.py::EnsureTree::test_ensure_tree PASSED  [ 14%]
+oslo_utils/tests/test_fileutils.py::DeleteIfExists::test_dir_present PASSED [ 15%]
+oslo_utils/tests/test_fileutils.py::DeleteIfExists::test_file_absent PASSED [ 15%]
+oslo_utils/tests/test_fileutils.py::DeleteIfExists::test_file_error PASSED [ 15%]
+oslo_utils/tests/test_fileutils.py::DeleteIfExists::test_file_present PASSED [ 15%]
+oslo_utils/tests/test_fileutils.py::RemovePathOnError::test_error PASSED [ 16%]
+oslo_utils/tests/test_fileutils.py::RemovePathOnError::test_no_error PASSED [ 16%]
+oslo_utils/tests/test_fileutils.py::RemovePathOnError::test_remove PASSED [ 16%]
+oslo_utils/tests/test_fileutils.py::RemovePathOnError::test_remove_dir PASSED [ 16%]
+oslo_utils/tests/test_fileutils.py::WriteToTempfileTestCase::test_file_with_not_default_prefix PASSED [ 17%]
+oslo_utils/tests/test_fileutils.py::WriteToTempfileTestCase::test_file_with_not_default_suffix PASSED [ 17%]
+oslo_utils/tests/test_fileutils.py::WriteToTempfileTestCase::test_file_with_not_existing_path PASSED [ 17%]
+oslo_utils/tests/test_fileutils.py::WriteToTempfileTestCase::test_file_with_not_existing_path_and_not_default_suffix PASSED [ 17%]
+oslo_utils/tests/test_fileutils.py::WriteToTempfileTestCase::test_file_without_path_and_suffix PASSED [ 18%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_compute_checksum_default_algorithm PASSED [ 18%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_compute_checksum_invalid_algorithm PASSED [ 18%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_compute_checksum_named_algorithm PASSED [ 18%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_compute_checksum_sleep_0_called PASSED [ 19%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_file_does_not_exist PASSED [ 19%]
+oslo_utils/tests/test_fileutils.py::TestComputeFileChecksum::test_generic_io_error PASSED [ 19%]
+oslo_utils/tests/test_fileutils.py::LastBytesTestCase::test_non_exist_file PASSED [ 19%]
+oslo_utils/tests/test_fileutils.py::LastBytesTestCase::test_read_all PASSED [ 20%]
+oslo_utils/tests/test_fileutils.py::LastBytesTestCase::test_truncated PASSED [ 20%]
+oslo_utils/tests/test_fileutils.py::FileTypeTestCase::test_is_json PASSED [ 20%]
+oslo_utils/tests/test_fileutils.py::FileTypeTestCase::test_is_yaml PASSED [ 20%]
+oslo_utils/tests/test_fixture.py::TimeFixtureTest::test_advance_time_delta PASSED [ 21%]
+oslo_utils/tests/test_fixture.py::TimeFixtureTest::test_advance_time_seconds PASSED [ 21%]
+oslo_utils/tests/test_fixture.py::TimeFixtureTest::test_set_time_override PASSED [ 21%]
+oslo_utils/tests/test_fixture.py::TimeFixtureTest::test_set_time_override_using_default PASSED [ 21%]
+oslo_utils/tests/test_fixture.py::UUIDSentinelsTest::test_different_sentinel PASSED [ 22%]
+oslo_utils/tests/test_fixture.py::UUIDSentinelsTest::test_returns_string PASSED [ 22%]
+oslo_utils/tests/test_fixture.py::UUIDSentinelsTest::test_returns_uuid PASSED [ 22%]
+oslo_utils/tests/test_fixture.py::UUIDSentinelsTest::test_with_underline_prefix PASSED [ 22%]
+oslo_utils/tests/test_imageutils.py::ImageUtilsHumanRawTestCase::test_qemu_img_info_human_format FAILED [ 22%]
+oslo_utils/tests/test_imageutils.py::ImageUtilsHumanQemuTestCase::test_qemu_img_info_human_format FAILED [ 23%]
+oslo_utils/tests/test_imageutils.py::ImageUtilsBlankTestCase::test_qemu_img_info_blank PASSED [ 23%]
+oslo_utils/tests/test_imageutils.py::ImageUtilsJSONTestCase::test_qemu_img_info PASSED [ 23%]
+oslo_utils/tests/test_imageutils.py::ImageUtilsJSONTestCase::test_qemu_img_info_blank PASSED [ 23%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_any_found PASSED [ 24%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_any_none_found PASSED [ 24%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_bad_class PASSED [ 24%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_class PASSED [ 24%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_module PASSED [ 25%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object PASSED [ 25%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_full_optional_arg_not_present PASSED [ 25%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_full_optional_arg_present PASSED [ 25%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_full_required_arg_not_present PASSED [ 26%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_full_required_arg_present PASSED [ 26%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_optional_arg_not_present PASSED [ 26%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_optional_arg_present PASSED [ 26%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_raise_import_error_in_init PASSED [ 27%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_required_arg_not_present PASSED [ 27%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_ns_required_arg_present PASSED [ 27%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_optional_arg_not_present PASSED [ 27%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_optional_arg_present PASSED [ 28%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_required_arg_not_present PASSED [ 28%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_required_arg_present PASSED [ 28%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_object_with_args PASSED [ 28%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_versioned_module PASSED [ 29%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_versioned_module_error PASSED [ 29%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_import_versioned_module_wrong_version_parameter PASSED [ 29%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_try_import PASSED [ 29%]
+oslo_utils/tests/test_importutils.py::ImportUtilsTest::test_try_import_returns_default PASSED [ 30%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_escape_ipv6 PASSED [ 30%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_get_my_ip PASSED [ 30%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_get_my_ip_socket_error PASSED [ 30%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_get_my_ipv4_address_with_default_route PASSED [ 31%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_get_my_ipv4_address_without_default_interface PASSED [ 31%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_get_my_ipv4_address_without_default_route PASSED [ 31%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_invalid_icmp_code PASSED [ 31%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_invalid_icmp_type PASSED [ 32%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_int_in_range PASSED [ 32%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_int_not_in_range PASSED [ 32%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_cidr PASSED [ 32%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_ip PASSED [ 33%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_ipv4 PASSED [ 33%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_ipv6 PASSED [ 33%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_ipv6_cidr PASSED [ 33%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_is_valid_mac PASSED [ 33%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_no_host PASSED [ 34%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_parse_host_port PASSED [ 34%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_set_tcp_keepalive PASSED [ 34%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_urlsplit PASSED [ 34%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_urlsplit_ipv6 PASSED [ 35%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_urlsplit_params PASSED [ 35%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_valid_icmp_code PASSED [ 35%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_valid_icmp_type PASSED [ 35%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_valid_port PASSED [ 36%]
+oslo_utils/tests/test_netutils.py::NetworkUtilsTest::test_valid_port_fail PASSED [ 36%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_by_EUI64 PASSED [ 36%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_with_IPv4_prefix PASSED [ 36%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_with_bad_mac PASSED [ 37%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_with_bad_prefix PASSED [ 37%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_with_empty_prefix PASSED [ 37%]
+oslo_utils/tests/test_netutils.py::IPv6byEUI64TestCase::test_generate_IPv6_with_error_prefix_type PASSED [ 37%]
+oslo_utils/tests/test_netutils.py::MACbyIPv6TestCase::test_local PASSED  [ 38%]
+oslo_utils/tests/test_netutils.py::MACbyIPv6TestCase::test_random_qemu_mac PASSED [ 38%]
+oslo_utils/tests/test_netutils.py::MACbyIPv6TestCase::test_reverse_generate_IPv6_by_EUI64 PASSED [ 38%]
+oslo_utils/tests/test_netutils.py::MACbyIPv6TestCase::test_universal PASSED [ 38%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_disabled PASSED [ 39%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_disabled_non_exists PASSED [ 39%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_enabled PASSED [ 39%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_memoize_disabled PASSED [ 39%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_memoize_enabled PASSED [ 40%]
+oslo_utils/tests/test_netutils.py::TestIsIPv6Enabled::test_memoize_not_exists PASSED [ 40%]
+oslo_utils/tests/test_reflection.py::MemberGetTest::test_get_members_exclude_hidden PASSED [ 40%]
+oslo_utils/tests/test_reflection.py::MemberGetTest::test_get_members_names_exclude_hidden PASSED [ 40%]
+oslo_utils/tests/test_reflection.py::MemberGetTest::test_get_members_names_no_exclude_hidden PASSED [ 41%]
+oslo_utils/tests/test_reflection.py::MemberGetTest::test_get_members_no_exclude_hidden PASSED [ 41%]
+oslo_utils/tests/test_reflection.py::CallbackEqualityTest::test_different_instance_callbacks PASSED [ 41%]
+oslo_utils/tests/test_reflection.py::CallbackEqualityTest::test_different_simple_callbacks PASSED [ 41%]
+oslo_utils/tests/test_reflection.py::CallbackEqualityTest::test_static_instance_callbacks PASSED [ 42%]
+oslo_utils/tests/test_reflection.py::BoundMethodTest::test_baddy PASSED  [ 42%]
+oslo_utils/tests/test_reflection.py::BoundMethodTest::test_static_method PASSED [ 42%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_callable_class PASSED [ 42%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_callable_class_call PASSED [ 43%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_class_method PASSED [ 43%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_constructor PASSED [ 43%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_instance_method PASSED [ 43%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_mere_function PASSED [ 44%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_method PASSED [ 44%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTest::test_static_method PASSED [ 44%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTestExtended::test_inner_callable_class PASSED [ 44%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTestExtended::test_inner_callable_function PASSED [ 44%]
+oslo_utils/tests/test_reflection.py::GetCallableNameTestExtended::test_inner_class PASSED [ 45%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_class_constructor PASSED [ 45%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_class_method PASSED [ 45%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_class_with_call PASSED [ 45%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_decorators_work PASSED [ 46%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_function_with_defaults PASSED [ 46%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_instance_method PASSED [ 46%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_mere_function PASSED [ 46%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_method PASSED [ 47%]
+oslo_utils/tests/test_reflection.py::GetCallableArgsTest::test_required_only PASSED [ 47%]
+oslo_utils/tests/test_reflection.py::AcceptsKwargsTest::test_no_kwargs PASSED [ 47%]
+oslo_utils/tests/test_reflection.py::AcceptsKwargsTest::test_with_kwargs PASSED [ 47%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_bound_method PASSED [ 48%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_class PASSED [ 48%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_class_method PASSED [ 48%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_instance PASSED [ 48%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_int PASSED   [ 49%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_qualified_class PASSED [ 49%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_static_method PASSED [ 49%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_std_exception PASSED [ 49%]
+oslo_utils/tests/test_reflection.py::GetClassNameTest::test_unbound_method PASSED [ 50%]
+oslo_utils/tests/test_reflection.py::GetAllClassNamesTest::test_std_class PASSED [ 50%]
+oslo_utils/tests/test_reflection.py::GetAllClassNamesTest::test_std_class_up_to PASSED [ 50%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_constant_time_compare FAILED [ 50%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_constant_time_compare ERROR [ 50%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_md5_with_data PASSED [ 51%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_md5_without_data PASSED [ 51%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_none_data_raises_type_error PASSED [ 51%]
+oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_string_data_raises_type_error PASSED [ 51%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_errors_bad_literal_with_op_allin PASSED [ 52%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_errors_dict_literal_with_op_allin PASSED [ 52%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_errors_list_with_op_allin PASSED [ 52%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_errors_str_with_op_allin PASSED [ 52%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_all_with_op_allin PASSED [ 53%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_match_one_with_op_allin PASSED [ 53%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_match_substr PASSED [ 53%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_match_substr_reversed PASSED [ 53%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_match_substr_single PASSED [ 54%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_onechar_with_op_allin PASSED [ 54%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_simple PASSED [ 54%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_simple2 PASSED [ 54%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_simple3 PASSED [ 55%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_string_vs_int PASSED [ 55%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_bogus_ops PASSED [ 55%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_allin PASSED [ 55%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_eq PASSED [ 55%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_eq3 PASSED [ 56%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_eqeq PASSED [ 56%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_ge PASSED [ 56%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_in PASSED [ 56%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_in2 PASSED [ 57%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_le PASSED [ 57%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_ne PASSED [ 57%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_or PASSED [ 57%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_or2 PASSED [ 58%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_or3 PASSED [ 58%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_seq PASSED [ 58%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sg PASSED [ 58%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sg2 PASSED [ 59%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sge PASSED [ 59%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sl PASSED [ 59%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sl2 PASSED [ 59%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sle PASSED [ 60%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_fails_with_op_sneq PASSED [ 60%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_match_int_leading_zero PASSED [ 60%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_all_with_op_allin PASSED [ 60%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_one_with_op_allin PASSED [ 61%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_simple PASSED [ 61%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_eq PASSED [ 61%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_eq2 PASSED [ 61%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_eqeq PASSED [ 62%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_eqeq2 PASSED [ 62%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_g PASSED [ 62%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_g2 PASSED [ 62%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_g3 PASSED [ 63%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_ge PASSED [ 63%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_ge2 PASSED [ 63%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_in PASSED [ 63%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_in2 PASSED [ 64%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_in3 PASSED [ 64%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_l PASSED [ 64%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_l2 PASSED [ 64%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_l3 PASSED [ 65%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_le PASSED [ 65%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_le2 PASSED [ 65%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_ne PASSED [ 65%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_or PASSED [ 66%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_or2 PASSED [ 66%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_or3 PASSED [ 66%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_seq PASSED [ 66%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sg PASSED [ 66%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sge PASSED [ 67%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sge2 PASSED [ 67%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sl PASSED [ 67%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sle PASSED [ 67%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sle2 PASSED [ 68%]
+oslo_utils/tests/test_specs_matcher.py::SpecsMatcherTestCase::test_specs_matches_with_op_sneq PASSED [ 68%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_bool_bool_from_string PASSED [ 68%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_bool_bool_from_string_default PASSED [ 68%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_bool_from_string PASSED [ 69%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_int_bool_from_string PASSED [ 69%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_int_from_bool_as_string PASSED [ 69%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_is_valid_boolstr PASSED [ 69%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_other_bool_from_string PASSED [ 70%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_slugify PASSED     [ 70%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_strict_bool_from_string PASSED [ 70%]
+oslo_utils/tests/test_strutils.py::StrUtilsTest::test_unicode_bool_from_string PASSED [ 70%]
+oslo_utils/tests/test_strutils.py::StringToBytesTest::test_string_to_bytes FAILED [ 71%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_json PASSED [ 71%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_json_message PASSED [ 71%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_mask_password PASSED [ 71%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_namespace_objects PASSED [ 72%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_sanitize_keys PASSED [ 72%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_xml PASSED [ 72%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_xml_attribute PASSED [ 72%]
+oslo_utils/tests/test_strutils.py::MaskPasswordTestCase::test_xml_message PASSED [ 73%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_argument_untouched PASSED [ 73%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_dictionary PASSED [ 73%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_do_an_int PASSED [ 73%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_do_no_harm PASSED [ 74%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_mask_values PASSED [ 74%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_nested_non_dict PASSED [ 74%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_non_dict PASSED [ 74%]
+oslo_utils/tests/test_strutils.py::MaskDictionaryPasswordTestCase::test_other_non_str_values PASSED [ 75%]
+oslo_utils/tests/test_strutils.py::IsIntLikeTestCase::test_is_int_like_false PASSED [ 75%]
+oslo_utils/tests/test_strutils.py::IsIntLikeTestCase::test_is_int_like_true PASSED [ 75%]
+oslo_utils/tests/test_strutils.py::StringLengthTestCase::test_check_string_length PASSED [ 75%]
+oslo_utils/tests/test_strutils.py::StringLengthTestCase::test_check_string_length_noname PASSED [ 76%]
+oslo_utils/tests/test_strutils.py::SplitPathTestCase::test_split_path_failed PASSED [ 76%]
+oslo_utils/tests/test_strutils.py::SplitPathTestCase::test_split_path_invalid_path PASSED [ 76%]
+oslo_utils/tests/test_strutils.py::SplitPathTestCase::test_split_path_success PASSED [ 76%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_no_comma_before_opening_quotes PASSED [ 77%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_not_closed_quotes PASSED [ 77%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_plain PASSED      [ 77%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_quote_inside_unquoted PASSED [ 77%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_with_backslash_inside_quoted PASSED [ 77%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_with_backslash_inside_unquoted PASSED [ 78%]
+oslo_utils/tests/test_strutils.py::SplitByCommas::test_with_escaped_quotes_in_row_inside_quoted PASSED [ 78%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_invalid_inputs_1 PASSED [ 78%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_invalid_inputs_2 PASSED [ 78%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_invalid_inputs_3 PASSED [ 79%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_invalid_inputs_4 PASSED [ 79%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_invalid_inputs_5 PASSED [ 79%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_1 PASSED [ 79%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_2 PASSED [ 80%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_3 PASSED [ 80%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_4 PASSED [ 80%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_5 PASSED [ 80%]
+oslo_utils/tests/test_strutils.py::ValidateIntegerTestCase::test_valid_inputs_6 PASSED [ 81%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_advance_time_delta PASSED [ 81%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_advance_time_seconds PASSED [ 81%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_delta_seconds PASSED [ 81%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_newer_than_aware PASSED [ 82%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_newer_than_aware_no_utc PASSED [ 82%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_newer_than_datetime PASSED [ 82%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_older_than_aware PASSED [ 82%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_older_than_aware_no_utc PASSED [ 83%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_older_than_datetime PASSED [ 83%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_is_soon PASSED   [ 83%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_marshall_time PASSED [ 83%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_marshall_time_with_tz PASSED [ 84%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_parse_isotime PASSED [ 84%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_parse_isotime_micro_second_precision PASSED [ 84%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_parse_strtime PASSED [ 84%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_set_time_override_using_default PASSED [ 85%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_unmarshall_time_leap_second PASSED [ 85%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_utcnow PASSED    [ 85%]
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_utcnow_ts PASSED [ 85%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_compare PASSED [ 86%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_compare_micros PASSED [ 86%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_east_normalize PASSED [ 86%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_normalize_aware_to_naive PASSED [ 86%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_normalize_naive PASSED [ 87%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_normalize_zulu_aware_to_naive PASSED [ 87%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_offset_east PASSED [ 87%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_offset_east_micros PASSED [ 87%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_offset_west PASSED [ 88%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_offset_west_micros PASSED [ 88%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_west_normalize PASSED [ 88%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_zulu PASSED    [ 88%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_zulu_micros PASSED [ 88%]
+oslo_utils/tests/test_timeutils.py::TestIso8601Time::test_zulu_normalize PASSED [ 89%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_no_timed_disabled PASSED [ 89%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_no_timed_exception PASSED [ 89%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_no_timed_to_fast PASSED [ 89%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_timed PASSED        [ 90%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_timed_custom_level PASSED [ 90%]
+oslo_utils/tests/test_timeutils.py::TimeItTest::test_timed_custom_message PASSED [ 90%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_backwards PASSED [ 90%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_bad_expiry PASSED [ 91%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_context_manager PASSED [ 91%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_context_manager_splits PASSED [ 91%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_elapsed PASSED   [ 91%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_elapsed_maximum PASSED [ 92%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_expiry PASSED    [ 92%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_has_started_stopped PASSED [ 92%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_leftover_no_duration PASSED [ 92%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_no_elapsed PASSED [ 93%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_no_expiry PASSED [ 93%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_no_leftover PASSED [ 93%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_no_states PASSED [ 93%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_not_expired PASSED [ 94%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_pause_resume PASSED [ 94%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_splits PASSED    [ 94%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_splits_never_started PASSED [ 94%]
+oslo_utils/tests/test_timeutils.py::StopWatchTest::test_splits_stopped PASSED [ 95%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_generate_uuid PASSED [ 95%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_generate_uuid_dashed_false PASSED [ 95%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_id_is_uuid_like PASSED [ 95%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_is_uuid_like PASSED [ 96%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_is_uuid_like_insensitive PASSED [ 96%]
+oslo_utils/tests/test_uuidutils.py::UUIDUtilsTest::test_name_is_uuid_like PASSED [ 96%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_convert_version_to_int PASSED [ 96%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_convert_version_to_string PASSED [ 97%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_convert_version_to_tuple PASSED [ 97%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_current_patch_not_present_less_than PASSED [ 97%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_current_patch_not_present_same PASSED [ 97%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_minor_greater PASSED [ 98%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_minor_less_than PASSED [ 98%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_patch_greater PASSED [ 98%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_patch_less_than PASSED [ 98%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_patch_not_present_less_than PASSED [ 99%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_requested_patch_not_present_same PASSED [ 99%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_same_major_false PASSED [ 99%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_same_major_true PASSED [ 99%]
+oslo_utils/tests/test_versionutils.py::IsCompatibleTestCase::test_same_version PASSED [100%]
+
+==================================== ERRORS ====================================
+_______ ERROR at teardown of SecretUtilsTest.test_constant_time_compare ________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_secretutils.py", line 42, in test_constant_time_compare
+    self.assertTrue(ctc(self.converter('abcd'),
+AttributeError: 'SecretUtilsTest' object has no attribute 'converter'
+
+=================================== FAILURES ===================================
+__________ ImageUtilsHumanRawTestCase.test_qemu_img_info_human_format __________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_imageutils.py", line 134, in test_qemu_img_info_human_format
+    img_info = self._initialize_img_info()
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_imageutils.py", line 105, in _initialize_img_info
+    return ('image: %s' % self.image_name,
+AttributeError: 'ImageUtilsHumanRawTestCase' object has no attribute 'image_name'. Did you mean: '_image_name'?
+
+_________ ImageUtilsHumanQemuTestCase.test_qemu_img_info_human_format __________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_imageutils.py", line 199, in test_qemu_img_info_human_format
+    img_info = self._initialize_img_info()
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_imageutils.py", line 105, in _initialize_img_info
+    return ('image: %s' % self.image_name,
+AttributeError: 'ImageUtilsHumanQemuTestCase' object has no attribute 'image_name'. Did you mean: '_image_name'?
+
+__________________ SecretUtilsTest.test_constant_time_compare __________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_secretutils.py", line 42, in test_constant_time_compare
+    self.assertTrue(ctc(self.converter('abcd'),
+AttributeError: 'SecretUtilsTest' object has no attribute 'converter'
+
+____________________ StringToBytesTest.test_string_to_bytes ____________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/workdir/oslo.utils-6.1.0/oslo_utils/tests/test_strutils.py", line 266, in test_string_to_bytes
+    text = ''.join([self.sign, self.magnitude, self.unit_prefix,
+AttributeError: 'StringToBytesTest' object has no attribute 'sign'. Did you mean: '_sign'?
+
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greenlets.py:6
+  /workdir/oslo.utils-6.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greenlets.py:6: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    preserves_excinfo = (distutils.version.LooseVersion(greenlet.__version__)
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greenlets.py:7
+  /workdir/oslo.utils-6.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/eventlet/support/greenlets.py:7: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    >= distutils.version.LooseVersion('0.3.2'))
+
+oslo_utils/tests/test_strutils.py:677
+  /workdir/oslo.utils-6.1.0/oslo_utils/tests/test_strutils.py:677: PytestCollectionWarning: cannot collect test class 'TestMapping' because it has a __init__ constructor (from: oslo_utils/tests/test_strutils.py)
+    class TestMapping(collections.abc.Mapping):
+
+oslo_utils/tests/test_timeutils.py::TimeUtilsTest::test_delta_seconds
+  /workdir/oslo.utils-6.1.0/oslo_utils/tests/test_timeutils.py:195: DeprecationWarning: Please use assertAlmostEqual instead.
+    self.assertAlmostEquals(604859.123456,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/oslo.utils/6.1.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED oslo_utils/tests/test_imageutils.py::ImageUtilsHumanRawTestCase::test_qemu_img_info_human_format
+FAILED oslo_utils/tests/test_imageutils.py::ImageUtilsHumanQemuTestCase::test_qemu_img_info_human_format
+FAILED oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_constant_time_compare
+FAILED oslo_utils/tests/test_strutils.py::StringToBytesTest::test_string_to_bytes
+ERROR oslo_utils/tests/test_secretutils.py::SecretUtilsTest::test_constant_time_compare
+============== 4 failed, 405 passed, 4 warnings, 1 error in 4.10s ==============
+ERROR: InvocationError for command /workdir/oslo.utils-6.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/oslo.utils/6.1.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

@@ -1,0 +1,68 @@
+Collecting SecretStorage==3.3.3
+  Downloading SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Collecting cryptography>=2.0
+  Downloading cryptography-3.4.7.tar.gz (546 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 546.9/546.9 kB 6.9 MB/s eta 0:00:00
+Looking for GraalPy patches for cryptography
+Patching package cryptography using /opt/graalpy/lib/graalpy23.1/patches/cryptography/cryptography-3.4.7.patch
+patching file setup.py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting jeepney>=0.6
+  Downloading jeepney-0.8.0-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.4/48.4 kB 2.2 MB/s eta 0:00:00
+Collecting cffi>=1.12
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: cryptography
+  Building wheel for cryptography (pyproject.toml): started
+  Building wheel for cryptography (pyproject.toml): finished with status 'done'
+  Created wheel for cryptography: filename=cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl size=395381 sha256=8f1f1211195cc765e924005710e28897d734f9c41f8ec2cc808f0dd1695fa38f
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/1f/40/55/766e73139190df7932ce21088de6e739f4dc8245726cdcc33a
+Successfully built cryptography
+Installing collected packages: pycparser, jeepney, cffi, cryptography, SecretStorage
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for jeepney
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for SecretStorage
+Successfully installed SecretStorage-3.3.3 cffi-1.15.1 cryptography-3.4.7 jeepney-0.8.0 pycparser-2.21

@@ -1,0 +1,12 @@
+GLOB sdist-make: /workdir/numba-0.56.4/setup.py
+ERROR: invocation failed (exit code 1), logfile: /workdir/numba-0.56.4/.tox/log/GLOB-0.log
+================================== log start ===================================
+Traceback (most recent call last):
+  File "/workdir/numba-0.56.4/setup.py", line 429, in <module>
+    metadata['ext_modules'] = get_ext_modules()
+  File "/workdir/numba-0.56.4/setup.py", line 144, in get_ext_modules
+    import numpy.distutils.misc_util as np_misc
+ModuleNotFoundError: No module named 'numpy'
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError('/opt/graalpy/bin/graalpy setup.py sdist --formats=zip --dist-dir /workdir/numba-0.56.4/.tox/dist', 1)

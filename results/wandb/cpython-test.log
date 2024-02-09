@@ -1,0 +1,646 @@
+GLOB sdist-make: /workdir/wandb-0.13.5/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements_build.txt, -rrequirements_dev.txt, -rrequirements.txt, -rrequirements_sweeps.txt, -rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt, -rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt, -rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt, -rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt, -rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt, -rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt, -rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt, -rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt, -rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt, -rtests/unit_tests_old/assets/fixtures/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Ignoring soundfile: markers 'sys_platform == "darwin" and platform_machine == "arm64"' don't match your environment
+Ignoring tensorflow: markers 'python_version > "3.6" and sys_platform == "darwin" and platform_machine != "arm64"' don't match your environment
+Ignoring tensorflow-macos: markers 'python_version > "3.6" and python_version < "3.10" and sys_platform == "darwin" and platform_machine == "arm64"' don't match your environment
+Ignoring fastcore: markers 'python_version == "3.6"' don't match your environment
+Ignoring rdkit-pypi: markers 'python_version > "3.7" and sys_platform == "darwin" and platform_machine == "arm64"' don't match your environment
+Processing /workdir/wandb-0.13.5
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
+Collecting git+https://github.com/open-mmlab/mmocr.git (from -r tests/functional_tests/t0_main/imports/09-batch9-requirements.txt (line 4))
+  Cloning https://github.com/open-mmlab/mmocr.git to /tmp/pip-req-build-x9o0kppz
+  Running command git clone --filter=blob:none --quiet https://github.com/open-mmlab/mmocr.git /tmp/pip-req-build-x9o0kppz
+  Resolved https://github.com/open-mmlab/mmocr.git to commit b18a09b2f063911a2de70f477aa21da255ff505d
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/open-mmlab/mmclassification.git (from -r tests/functional_tests/t0_main/imports/09-batch9-requirements.txt (line 5))
+  Cloning https://github.com/open-mmlab/mmclassification.git to /tmp/pip-req-build-n5x8zsk4
+  Running command git clone --filter=blob:none --quiet https://github.com/open-mmlab/mmclassification.git /tmp/pip-req-build-n5x8zsk4
+  Resolved https://github.com/open-mmlab/mmclassification.git to commit e95d9acb8919c59f7f1fab24a7701bdc23d25337
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/RangiLyu/nanodet (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 1))
+  Cloning https://github.com/RangiLyu/nanodet to /tmp/pip-req-build-getqpla7
+  Running command git clone --filter=blob:none --quiet https://github.com/RangiLyu/nanodet /tmp/pip-req-build-getqpla7
+  Resolved https://github.com/RangiLyu/nanodet to commit 226d8cc45b92313b625e893d88c595b7856f556c
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/PaddlePaddle/PaddleDetection (from -r tests/functional_tests/t0_main/imports/08-batch8-requirements.txt (line 2))
+  Cloning https://github.com/PaddlePaddle/PaddleDetection to /tmp/pip-req-build-2s_uo09p
+  Running command git clone --filter=blob:none --quiet https://github.com/PaddlePaddle/PaddleDetection /tmp/pip-req-build-2s_uo09p
+  Resolved https://github.com/PaddlePaddle/PaddleDetection to commit 7d6dc4079379b7827351c511f76e23ccea4910fd
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting unittest-xml-reporting
+  Using cached unittest_xml_reporting-3.2.0-py2.py3-none-any.whl (20 kB)
+Collecting libcst (from -r requirements_build.txt (line 1))
+  Downloading libcst-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (17 kB)
+Collecting grpcio>=1.46.3 (from -r requirements_build.txt (line 2))
+  Using cached grpcio-1.59.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting grpcio-tools>=1.46.3 (from -r requirements_build.txt (line 3))
+  Downloading grpcio_tools-1.59.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.2 kB)
+Collecting bumpversion (from -r requirements_build.txt (line 4))
+  Using cached bumpversion-0.6.0-py2.py3-none-any.whl (8.4 kB)
+Collecting twine (from -r requirements_build.txt (line 5))
+  Using cached twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting pytest (from -r requirements_dev.txt (line 1))
+  Using cached pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting coverage (from -r requirements_dev.txt (line 2))
+  Using cached coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting Pillow (from -r requirements_dev.txt (line 3))
+  Using cached Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting pandas (from -r requirements_dev.txt (line 4))
+  Using cached pandas-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting matplotlib!=3.5.2 (from -r requirements_dev.txt (line 5))
+  Using cached matplotlib-3.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting soundfile (from -r requirements_dev.txt (line 6))
+  Using cached soundfile-0.12.1-py2.py3-none-manylinux_2_17_x86_64.whl (1.3 MB)
+Collecting boto3 (from -r requirements_dev.txt (line 8))
+  Downloading boto3-1.33.5-py3-none-any.whl.metadata (6.7 kB)
+Collecting google-cloud-storage (from -r requirements_dev.txt (line 9))
+  Downloading google_cloud_storage-2.13.0-py2.py3-none-any.whl.metadata (6.1 kB)
+Collecting google-cloud-aiplatform (from -r requirements_dev.txt (line 10))
+  Downloading google_cloud_aiplatform-1.36.4-py2.py3-none-any.whl.metadata (27 kB)
+Collecting kubernetes (from -r requirements_dev.txt (line 11))
+  Downloading kubernetes-28.1.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting moviepy (from -r requirements_dev.txt (line 12))
+  Downloading moviepy-1.0.3.tar.gz (388 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 388.3/388.3 kB 4.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting imageio (from -r requirements_dev.txt (line 13))
+  Downloading imageio-2.33.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting ipython (from -r requirements_dev.txt (line 14))
+  Using cached ipython-8.18.1-py3-none-any.whl.metadata (6.0 kB)
+Collecting ipykernel (from -r requirements_dev.txt (line 15))
+  Using cached ipykernel-6.27.1-py3-none-any.whl.metadata (6.3 kB)
+Collecting nbclient (from -r requirements_dev.txt (line 16))
+  Using cached nbclient-0.9.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting scikit-learn (from -r requirements_dev.txt (line 17))
+  Using cached scikit_learn-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting tensorflow>=1.15.2 (from -r requirements_dev.txt (line 18))
+  Downloading tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting torch (from -r requirements_dev.txt (line 21))
+  Using cached torch-2.1.1-cp310-cp310-manylinux1_x86_64.whl.metadata (25 kB)
+Collecting torchvision (from -r requirements_dev.txt (line 22))
+  Using cached torchvision-0.16.1-cp310-cp310-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting plotly (from -r requirements_dev.txt (line 23))
+  Using cached plotly-5.18.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting bokeh (from -r requirements_dev.txt (line 24))
+  Using cached bokeh-3.3.1-py3-none-any.whl.metadata (12 kB)
+Collecting tqdm (from -r requirements_dev.txt (line 25))
+  Using cached tqdm-4.66.1-py3-none-any.whl.metadata (57 kB)
+Collecting docker (from -r requirements_dev.txt (line 26))
+  Downloading docker-6.1.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting stable_baselines3 (from -r requirements_dev.txt (line 27))
+  Downloading stable_baselines3-2.2.1-py3-none-any.whl.metadata (5.0 kB)
+Collecting tensorboard (from -r requirements_dev.txt (line 28))
+  Using cached tensorboard-2.15.1-py3-none-any.whl.metadata (1.7 kB)
+Collecting gym (from -r requirements_dev.txt (line 29))
+  Downloading gym-0.26.2.tar.gz (721 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 721.7/721.7 kB 13.1 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting fastcore (from -r requirements_dev.txt (line 31))
+  Downloading fastcore-1.5.29-py3-none-any.whl (67 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 4.0 MB/s eta 0:00:00
+Collecting pyarrow (from -r requirements_dev.txt (line 33))
+  Using cached pyarrow-14.0.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting metaflow>=2.3.5 (from -r requirements_dev.txt (line 34))
+  Downloading metaflow-2.10.7-py2.py3-none-any.whl.metadata (5.8 kB)
+Collecting xgboost (from -r requirements_dev.txt (line 35))
+  Downloading xgboost-2.0.2-py3-none-manylinux2014_x86_64.whl.metadata (2.0 kB)
+Collecting lightgbm (from -r requirements_dev.txt (line 36))
+  Using cached lightgbm-4.1.0-py3-none-manylinux_2_28_x86_64.whl.metadata (19 kB)
+Collecting rdkit-pypi (from -r requirements_dev.txt (line 37))
+  Downloading rdkit_pypi-2022.9.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.4/29.4 MB 9.2 MB/s eta 0:00:00
+Collecting cloudpickle (from -r requirements_dev.txt (line 42))
+  Using cached cloudpickle-3.0.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting responses (from -r requirements_dev.txt (line 43))
+  Using cached responses-0.24.1-py3-none-any.whl.metadata (46 kB)
+Collecting kfp (from -r requirements_dev.txt (line 44))
+  Downloading kfp-2.4.0.tar.gz (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.3/392.3 kB 9.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting Click!=8.0.0,>=7.0 (from -r requirements.txt (line 1))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting GitPython>=1.0.0 (from -r requirements.txt (line 2))
+  Using cached GitPython-3.1.40-py3-none-any.whl.metadata (12 kB)
+Collecting requests<3,>=2.0.0 (from -r requirements.txt (line 3))
+  Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting promise<3,>=2.0 (from -r requirements.txt (line 4))
+  Using cached promise-2.3-py3-none-any.whl
+Collecting shortuuid>=0.5.0 (from -r requirements.txt (line 5))
+  Using cached shortuuid-1.0.11-py3-none-any.whl (10 kB)
+Collecting psutil>=5.0.0 (from -r requirements.txt (line 6))
+  Using cached psutil-5.9.6-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting sentry-sdk>=1.0.0 (from -r requirements.txt (line 7))
+  Using cached sentry_sdk-1.38.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting six>=1.13.0 (from -r requirements.txt (line 8))
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting docker-pycreds>=0.4.0 (from -r requirements.txt (line 9))
+  Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Collecting protobuf!=4.0.*,!=4.21.0,<5,>=3.12.0 (from -r requirements.txt (line 10))
+  Using cached protobuf-4.25.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting PyYAML (from -r requirements.txt (line 11))
+  Using cached PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting pathtools (from -r requirements.txt (line 12))
+  Using cached pathtools-0.1.2-py3-none-any.whl
+Collecting setproctitle (from -r requirements.txt (line 13))
+  Using cached setproctitle-1.3.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.9 kB)
+Requirement already satisfied: setuptools in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements.txt (line 14)) (68.2.2)
+Collecting sweeps>=0.2.0 (from -r requirements_sweeps.txt (line 1))
+  Downloading sweeps-0.2.0-py3-none-any.whl (28 kB)
+Collecting mmcv (from -r tests/functional_tests/t0_main/imports/09-batch9-requirements.txt (line 1))
+  Downloading mmcv-2.1.0.tar.gz (471 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 471.4/471.4 kB 13.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mmsegmentation (from -r tests/functional_tests/t0_main/imports/09-batch9-requirements.txt (line 2))
+  Downloading mmsegmentation-1.2.1-py3-none-any.whl.metadata (22 kB)
+Collecting mmdet (from -r tests/functional_tests/t0_main/imports/09-batch9-requirements.txt (line 3))
+  Downloading mmdet-3.2.0-py3-none-any.whl.metadata (32 kB)
+Collecting syft (from -r tests/functional_tests/t0_main/imports/05-batch5-requirements.txt (line 3))
+  Downloading syft-0.8.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting autogluon (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 2))
+  Downloading autogluon-1.0.0-py3-none-any.whl.metadata (12 kB)
+Collecting autokeras (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 3))
+  Downloading autokeras-1.1.0-py3-none-any.whl (148 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.6/148.6 kB 5.3 MB/s eta 0:00:00
+Collecting catalyst (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 5))
+  Downloading catalyst-22.4-py2.py3-none-any.whl (446 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.7/446.7 kB 11.6 MB/s eta 0:00:00
+Collecting catboost (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 6))
+  Downloading catboost-1.2.2-cp310-cp310-manylinux2014_x86_64.whl.metadata (1.2 kB)
+Collecting datasets (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 8))
+  Downloading datasets-2.15.0-py3-none-any.whl.metadata (20 kB)
+Collecting deepchem (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 9))
+  Downloading deepchem-2.7.1-py3-none-any.whl (693 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 693.2/693.2 kB 13.3 MB/s eta 0:00:00
+Collecting deepctr (from -r tests/functional_tests/t0_main/imports/01-batch1-requirements.txt (line 10))
+  Downloading deepctr-0.9.3-py3-none-any.whl (141 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.2/141.2 kB 4.7 MB/s eta 0:00:00
+Collecting TTS (from -r tests/functional_tests/t0_main/imports/06-batch6-requirements.txt (line 5))
+  Downloading TTS-0.21.2-cp310-cp310-manylinux1_x86_64.whl.metadata (22 kB)
+Collecting segmentation-models-pytorch (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 2))
+  Downloading segmentation_models_pytorch-0.3.3-py3-none-any.whl.metadata (30 kB)
+Collecting sentence-transformers (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 3))
+  Using cached sentence_transformers-2.2.2-py3-none-any.whl
+Collecting dgl (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 4))
+  Downloading dgl-1.1.2-cp310-cp310-manylinux1_x86_64.whl.metadata (557 bytes)
+Collecting jina (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 5))
+  Downloading jina-3.23.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (38 kB)
+Collecting kornia (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 6))
+  Downloading kornia-0.7.0-py2.py3-none-any.whl.metadata (12 kB)
+Collecting albumentations (from -r tests/functional_tests/t0_main/imports/11-batch11-requirements.txt (line 7))
+  Downloading albumentations-1.3.1-py3-none-any.whl.metadata (34 kB)
+Collecting pycaret (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 4))
+  Downloading pycaret-3.2.0-py3-none-any.whl.metadata (17 kB)
+Collecting pytorch-ignite (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 5))
+  Downloading pytorch_ignite-0.4.13-py3-none-any.whl.metadata (27 kB)
+Collecting pytorchvideo (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 6))
+  Downloading pytorchvideo-0.1.5.tar.gz (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 6.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pytorch-lightning (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 7))
+  Downloading pytorch_lightning-2.1.2-py3-none-any.whl.metadata (21 kB)
+Collecting simpletransformers (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 10))
+  Downloading simpletransformers-0.64.3-py3-none-any.whl.metadata (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 1.5 MB/s eta 0:00:00
+Collecting skorch (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 11))
+  Downloading skorch-0.15.0-py3-none-any.whl.metadata (11 kB)
+Collecting spacy>=3.1 (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 12))
+  Downloading spacy-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+Collecting distributed (from -r tests/functional_tests/t0_main/imports/07-batch7-requirements.txt (line 1))
+  Downloading distributed-2023.11.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting joblib (from -r tests/functional_tests/t0_main/imports/07-batch7-requirements.txt (line 2))
+  Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting sacred (from -r tests/functional_tests/t0_main/imports/07-batch7-requirements.txt (line 3))
+  Downloading sacred-0.8.5-py2.py3-none-any.whl.metadata (13 kB)
+Collecting timm (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 1))
+  Downloading timm-0.9.12-py3-none-any.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 3.8 MB/s eta 0:00:00
+Collecting deepchecks (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 2))
+  Downloading deepchecks-0.17.5-py3-none-any.whl.metadata (5.5 kB)
+Collecting mosaicml (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 3))
+  Downloading mosaicml-0.17.1-py3-none-any.whl.metadata (27 kB)
+Collecting sparseml (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 4))
+  Downloading sparseml-1.5.4-py3-none-any.whl.metadata (21 kB)
+Collecting zenml (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 5))
+  Downloading zenml-0.50.0-py3-none-any.whl.metadata (17 kB)
+Collecting accelerate (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 6))
+  Downloading accelerate-0.24.1-py3-none-any.whl.metadata (18 kB)
+Collecting merlin-models (from -r tests/functional_tests/t0_main/imports/10-batch10-requirements.txt (line 7))
+  Downloading merlin-models-23.8.1.tar.gz (485 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.8/485.8 kB 8.6 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting paddleocr (from -r tests/functional_tests/t0_main/imports/08-batch8-requirements.txt (line 1))
+  Downloading paddleocr-2.7.0.3-py3-none-any.whl.metadata (26 kB)
+Collecting paddleseg (from -r tests/functional_tests/t0_main/imports/08-batch8-requirements.txt (line 3))
+  Downloading paddleseg-2.8.0-py3-none-any.whl (424 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 424.3/424.3 kB 9.9 MB/s eta 0:00:00
+Collecting paddlenlp (from -r tests/functional_tests/t0_main/imports/08-batch8-requirements.txt (line 4))
+  Downloading paddlenlp-2.6.1-py3-none-any.whl.metadata (28 kB)
+Collecting wandb (from -r tests/unit_tests_old/assets/fixtures/requirements.txt (line 1))
+  Downloading wandb-0.16.0-py3-none-any.whl.metadata (9.8 kB)
+Collecting numpy (from -r tests/unit_tests_old/assets/fixtures/requirements.txt (line 2))
+  Using cached numpy-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting jax[cpu] (from -r requirements_dev.txt (line 30))
+  Downloading jax-0.4.20-py3-none-any.whl.metadata (23 kB)
+Collecting ray[tune] (from -r tests/functional_tests/t0_main/imports/04-batch4-requirements.txt (line 8))
+  Downloading ray-2.8.0-cp310-cp310-manylinux2014_x86_64.whl.metadata (13 kB)
+Collecting lxml (from unittest-xml-reporting)
+  Using cached lxml-4.9.3-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting typing-extensions>=3.7.4.2 (from libcst->-r requirements_build.txt (line 1))
+  Using cached typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting typing-inspect>=0.4.0 (from libcst->-r requirements_build.txt (line 1))
+  Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting bump2version (from bumpversion->-r requirements_build.txt (line 4))
+  Using cached bump2version-1.0.1-py2.py3-none-any.whl (22 kB)
+Collecting pkginfo>=1.8.1 (from twine->-r requirements_build.txt (line 5))
+  Using cached pkginfo-1.9.6-py3-none-any.whl (30 kB)
+Collecting readme-renderer>=35.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached readme_renderer-42.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Collecting urllib3>=1.26.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached urllib3-2.1.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting importlib-metadata>=3.6 (from twine->-r requirements_build.txt (line 5))
+  Using cached importlib_metadata-6.8.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting keyring>=15.1 (from twine->-r requirements_build.txt (line 5))
+  Using cached keyring-24.3.0-py3-none-any.whl.metadata (20 kB)
+Collecting rfc3986>=1.4.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+Collecting rich>=12.0.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached rich-13.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting iniconfig (from pytest->-r requirements_dev.txt (line 1))
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging (from pytest->-r requirements_dev.txt (line 1))
+  Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest->-r requirements_dev.txt (line 1))
+  Using cached pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest->-r requirements_dev.txt (line 1))
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tomli>=1.0.0 (from pytest->-r requirements_dev.txt (line 1))
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r requirements_dev.txt (line 4))
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1 (from pandas->-r requirements_dev.txt (line 4))
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas->-r requirements_dev.txt (line 4))
+  Using cached tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+Collecting contourpy>=1.0.1 (from matplotlib!=3.5.2->-r requirements_dev.txt (line 5))
+  Using cached contourpy-1.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting cycler>=0.10 (from matplotlib!=3.5.2->-r requirements_dev.txt (line 5))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib!=3.5.2->-r requirements_dev.txt (line 5))
+  Using cached fonttools-4.45.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (155 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib!=3.5.2->-r requirements_dev.txt (line 5))
+  Using cached kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib!=3.5.2->-r requirements_dev.txt (line 5))
+  Using cached pyparsing-3.1.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting cffi>=1.0 (from soundfile->-r requirements_dev.txt (line 6))
+  Using cached cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting botocore<1.34.0,>=1.33.5 (from boto3->-r requirements_dev.txt (line 8))
+  Downloading botocore-1.33.5-py3-none-any.whl.metadata (6.1 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3->-r requirements_dev.txt (line 8))
+  Using cached jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting s3transfer<0.9.0,>=0.8.2 (from boto3->-r requirements_dev.txt (line 8))
+  Using cached s3transfer-0.8.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting google-auth<3.0dev,>=2.23.3 (from google-cloud-storage->-r requirements_dev.txt (line 9))
+  Using cached google_auth-2.24.0-py2.py3-none-any.whl.metadata (4.7 kB)
+Collecting google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0dev,>=1.31.5 (from google-cloud-storage->-r requirements_dev.txt (line 9))
+  Using cached google_api_core-2.14.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting google-cloud-core<3.0dev,>=2.3.0 (from google-cloud-storage->-r requirements_dev.txt (line 9))
+  Using cached google_cloud_core-2.3.3-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting google-resumable-media>=2.6.0 (from google-cloud-storage->-r requirements_dev.txt (line 9))
+  Downloading google_resumable_media-2.6.0-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting google-crc32c<2.0dev,>=1.0 (from google-cloud-storage->-r requirements_dev.txt (line 9))
+  Downloading google_crc32c-1.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (32 kB)
+Collecting proto-plus<2.0.0dev,>=1.22.0 (from google-cloud-aiplatform->-r requirements_dev.txt (line 10))
+  Downloading proto_plus-1.22.3-py3-none-any.whl.metadata (2.2 kB)
+Collecting google-cloud-bigquery<4.0.0dev,>=1.15.0 (from google-cloud-aiplatform->-r requirements_dev.txt (line 10))
+  Downloading google_cloud_bigquery-3.13.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting google-cloud-resource-manager<3.0.0dev,>=1.3.3 (from google-cloud-aiplatform->-r requirements_dev.txt (line 10))
+  Downloading google_cloud_resource_manager-1.10.4-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting shapely<3.0.0dev (from google-cloud-aiplatform->-r requirements_dev.txt (line 10))
+  Downloading shapely-2.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting certifi>=14.05.14 (from kubernetes->-r requirements_dev.txt (line 11))
+  Using cached certifi-2023.11.17-py3-none-any.whl.metadata (2.2 kB)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes->-r requirements_dev.txt (line 11))
+  Using cached websocket_client-1.6.4-py3-none-any.whl.metadata (7.7 kB)
+Collecting requests-oauthlib (from kubernetes->-r requirements_dev.txt (line 11))
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting oauthlib>=3.2.2 (from kubernetes->-r requirements_dev.txt (line 11))
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting urllib3>=1.26.0 (from twine->-r requirements_build.txt (line 5))
+  Using cached urllib3-1.26.18-py2.py3-none-any.whl.metadata (48 kB)
+Collecting decorator<5.0,>=4.0.2 (from moviepy->-r requirements_dev.txt (line 12))
+  Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+Collecting proglog<=1.0.0 (from moviepy->-r requirements_dev.txt (line 12))
+  Downloading proglog-0.1.10-py3-none-any.whl (6.1 kB)
+Collecting imageio_ffmpeg>=0.2.0 (from moviepy->-r requirements_dev.txt (line 12))
+  Downloading imageio_ffmpeg-0.4.9-py3-none-manylinux2010_x86_64.whl.metadata (1.7 kB)
+Collecting jedi>=0.16 (from ipython->-r requirements_dev.txt (line 14))
+  Using cached jedi-0.19.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython->-r requirements_dev.txt (line 14))
+  Using cached matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting prompt-toolkit<3.1.0,>=3.0.41 (from ipython->-r requirements_dev.txt (line 14))
+  Using cached prompt_toolkit-3.0.41-py3-none-any.whl.metadata (6.5 kB)
+Collecting pygments>=2.4.0 (from ipython->-r requirements_dev.txt (line 14))
+  Using cached pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting stack-data (from ipython->-r requirements_dev.txt (line 14))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting traitlets>=5 (from ipython->-r requirements_dev.txt (line 14))
+  Using cached traitlets-5.14.0-py3-none-any.whl.metadata (10 kB)
+Collecting pexpect>4.3 (from ipython->-r requirements_dev.txt (line 14))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting comm>=0.1.1 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached comm-0.2.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting debugpy>=1.6.5 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached debugpy-1.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.0 kB)
+Collecting jupyter-client>=6.1.12 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached jupyter_client-8.6.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting jupyter-core!=5.0.*,>=4.12 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached jupyter_core-5.5.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting nest-asyncio (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached nest_asyncio-1.5.8-py3-none-any.whl.metadata (2.8 kB)
+Collecting pyzmq>=20 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached pyzmq-25.1.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+Collecting tornado>=6.1 (from ipykernel->-r requirements_dev.txt (line 15))
+  Using cached tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting nbformat>=5.1 (from nbclient->-r requirements_dev.txt (line 16))
+  Using cached nbformat-5.9.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting scipy>=1.5.0 (from scikit-learn->-r requirements_dev.txt (line 17))
+  Using cached scipy-1.11.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn->-r requirements_dev.txt (line 17))
+  Using cached threadpoolctl-3.2.0-py3-none-any.whl.metadata (10.0 kB)
+Collecting absl-py>=1.0.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached absl_py-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting flatbuffers>=23.5.26 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached flatbuffers-23.5.26-py2.py3-none-any.whl.metadata (850 bytes)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached gast-0.5.4-py3-none-any.whl (19 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Collecting h5py>=2.9.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached h5py-3.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting libclang>=13.0.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached libclang-16.0.6-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+Collecting ml-dtypes~=0.2.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Downloading ml_dtypes-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting termcolor>=1.1.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached termcolor-2.3.0-py3-none-any.whl (6.9 kB)
+Collecting wrapt<1.15,>=1.11.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached wrapt-1.14.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Using cached tensorflow_io_gcs_filesystem-0.34.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (14 kB)
+Collecting tensorflow-estimator<2.16,>=2.15.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Downloading tensorflow_estimator-2.15.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting keras<2.16,>=2.15.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Downloading keras-2.15.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting filelock (from torch->-r requirements_dev.txt (line 21))
+  Using cached filelock-3.13.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting sympy (from torch->-r requirements_dev.txt (line 21))
+  Using cached sympy-1.12-py3-none-any.whl (5.7 MB)
+Collecting networkx (from torch->-r requirements_dev.txt (line 21))
+  Using cached networkx-3.2.1-py3-none-any.whl.metadata (5.2 kB)
+Collecting jinja2 (from torch->-r requirements_dev.txt (line 21))
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting fsspec (from torch->-r requirements_dev.txt (line 21))
+  Using cached fsspec-2023.10.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.1.3.1 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+Collecting nvidia-cufft-cu12==11.0.2.54 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+Collecting nvidia-curand-cu12==10.3.2.106 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+Collecting nvidia-cusolver-cu12==11.4.5.107 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+Collecting nvidia-cusparse-cu12==12.1.0.106 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+Collecting nvidia-nccl-cu12==2.18.1 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_nccl_cu12-2.18.1-py3-none-manylinux1_x86_64.whl (209.8 MB)
+Collecting nvidia-nvtx-cu12==12.1.105 (from torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+Collecting triton==2.1.0 (from torch->-r requirements_dev.txt (line 21))
+  Using cached triton-2.1.0-0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.3 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12==11.4.5.107->torch->-r requirements_dev.txt (line 21))
+  Using cached nvidia_nvjitlink_cu12-12.3.101-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting tenacity>=6.2.0 (from plotly->-r requirements_dev.txt (line 23))
+  Using cached tenacity-8.2.3-py3-none-any.whl.metadata (1.0 kB)
+Collecting xyzservices>=2021.09.1 (from bokeh->-r requirements_dev.txt (line 24))
+  Using cached xyzservices-2023.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting gymnasium<0.30,>=0.28.1 (from stable_baselines3->-r requirements_dev.txt (line 27))
+  Downloading gymnasium-0.29.1-py3-none-any.whl.metadata (10 kB)
+Collecting google-auth-oauthlib<2,>=0.5 (from tensorboard->-r requirements_dev.txt (line 28))
+  Using cached google_auth_oauthlib-1.1.0-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard->-r requirements_dev.txt (line 28))
+  Using cached Markdown-3.5.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting protobuf!=4.0.*,!=4.21.0,<5,>=3.12.0 (from -r requirements.txt (line 10))
+  Downloading protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl.metadata (540 bytes)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->-r requirements_dev.txt (line 28))
+  Using cached tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard->-r requirements_dev.txt (line 28))
+  Using cached werkzeug-3.0.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting gym-notices>=0.0.4 (from gym->-r requirements_dev.txt (line 29))
+  Downloading gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Collecting jaxlib==0.4.20 (from jax[cpu]->-r requirements_dev.txt (line 30))
+  Downloading jaxlib-0.4.20-cp310-cp310-manylinux2014_x86_64.whl.metadata (2.1 kB)
+Requirement already satisfied: pip in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from fastcore->-r requirements_dev.txt (line 31)) (23.3.1)
+Collecting nbconvert
+  Downloading nbconvert-7.11.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting chardet
+  Using cached chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting iso8601
+  Using cached iso8601-2.1.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting azure-storage-blob
+  Downloading azure_storage_blob-12.19.0-py3-none-any.whl.metadata (26 kB)
+Collecting docstring-parser<1,>=0.7.3 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading docstring_parser-0.15-py3-none-any.whl (36 kB)
+Collecting kfp-pipeline-spec==0.2.2 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading kfp_pipeline_spec-0.2.2-py3-none-any.whl (20 kB)
+Collecting kfp-server-api<2.1.0,>=2.0.0 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading kfp-server-api-2.0.3.tar.gz (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 1.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting kubernetes (from -r requirements_dev.txt (line 11))
+  Downloading kubernetes-26.1.0-py2.py3-none-any.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 12.5 MB/s eta 0:00:00
+INFO: pip is looking at multiple versions of kfp to determine which version is compatible with other requirements. This could take a while.
+Collecting kfp (from -r requirements_dev.txt (line 44))
+  Downloading kfp-2.3.0.tar.gz (377 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.2/377.2 kB 10.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+  Downloading kfp-2.2.0.tar.gz (375 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 375.1/375.1 kB 9.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+  Downloading kfp-2.1.3.tar.gz (372 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 372.4/372.4 kB 9.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+  Downloading kfp-2.0.1.tar.gz (372 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 372.4/372.4 kB 6.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+  Downloading kfp-2.0.0.tar.gz (372 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 372.7/372.7 kB 11.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+  Downloading kfp-1.8.22.tar.gz (304 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.9/304.9 kB 11.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting absl-py>=1.0.0 (from tensorflow>=1.15.2->-r requirements_dev.txt (line 18))
+  Downloading absl_py-1.4.0-py3-none-any.whl (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.5/126.5 kB 6.4 MB/s eta 0:00:00
+Collecting kubernetes (from -r requirements_dev.txt (line 11))
+  Downloading kubernetes-25.3.0-py2.py3-none-any.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 12.4 MB/s eta 0:00:00
+Collecting google-api-python-client<2,>=1.7.8 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading google_api_python_client-1.12.11-py2.py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 4.6 MB/s eta 0:00:00
+Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine->-r requirements_build.txt (line 5))
+  Downloading requests_toolbelt-0.10.1-py2.py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 1.9 MB/s eta 0:00:00
+Collecting cloudpickle (from -r requirements_dev.txt (line 42))
+  Downloading cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+Collecting kfp-server-api<2.0.0,>=1.1.2 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading kfp-server-api-1.8.5.tar.gz (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 3.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting jsonschema<5,>=3.0.1 (from kfp->-r requirements_dev.txt (line 44))
+  Using cached jsonschema-4.20.0-py3-none-any.whl.metadata (8.1 kB)
+Collecting tabulate<1,>=0.8.6 (from kfp->-r requirements_dev.txt (line 44))
+  Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting Deprecated<2,>=1.2.7 (from kfp->-r requirements_dev.txt (line 44))
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+Collecting strip-hints<1,>=0.1.8 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading strip-hints-0.1.10.tar.gz (29 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting kfp-pipeline-spec<0.2.0,>=0.1.16 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading kfp_pipeline_spec-0.1.16-py3-none-any.whl (19 kB)
+Collecting fire<1,>=0.3.1 (from kfp->-r requirements_dev.txt (line 44))
+  Downloading fire-0.5.0.tar.gz (88 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.3/88.3 kB 3.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting kfp (from -r requirements_dev.txt (line 44))
+  Downloading kfp-1.8.21.tar.gz (304 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.9/304.9 kB 5.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting PyYAML (from -r requirements.txt (line 11))
+  Using cached PyYAML-5.4.1.tar.gz (175 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [48 lines of output]
+      running egg_info
+      writing lib3/PyYAML.egg-info/PKG-INFO
+      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt
+      writing top-level names to lib3/PyYAML.egg-info/top_level.txt
+      Traceback (most recent call last):
+        File "/workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 271, in <module>
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 321, in run
+          self.find_sources()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 329, in find_sources
+          mm.run()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 551, in run
+          self.add_defaults()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 589, in add_defaults
+          sdist.add_defaults(self)
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/command/sdist.py", line 112, in add_defaults
+          super().add_defaults()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 251, in add_defaults
+          self._add_defaults_ext()
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 336, in _add_defaults_ext
+          self.filelist.extend(build_ext.get_source_files())
+        File "<string>", line 201, in get_source_files
+        File "/tmp/pip-build-env-dwinpxwg/overlay/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 107, in __getattr__
+          raise AttributeError(attr)
+      AttributeError: cython_sources
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, unittest-xml-reporting, -rrequirements_build.txt, -rrequirements_dev.txt, -rrequirements.txt, -rrequirements_sweeps.txt, -rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt, -rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt, -rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt, -rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt, -rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt, -rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt, -rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt, -rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt, -rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt, -rtests/unit_tests_old/assets/fixtures/requirements.txt]; v = InvocationError('/workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock unittest-xml-reporting -rrequirements_build.txt -rrequirements_dev.txt -rrequirements.txt -rrequirements_sweeps.txt -rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt -rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt -rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt -rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt -rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt -rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt -rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt -rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt -rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt -rtests/unit_tests_old/assets/fixtures/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, unittest-xml-reporting, -rrequirements_build.txt, -rrequirements_dev.txt, -rrequirements.txt, -rrequirements_sweeps.txt, -rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt, -rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt, -rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt, -rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt, -rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt, -rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt, -rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt, -rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt, -rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt, -rtests/unit_tests_old/assets/fixtures/requirements.txt]; v = InvocationError('/workdir/wandb-0.13.5/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock unittest-xml-reporting -rrequirements_build.txt -rrequirements_dev.txt -rrequirements.txt -rrequirements_sweeps.txt -rtests/functional_tests/t0_main/imports/09-batch9-requirements.txt -rtests/functional_tests/t0_main/imports/05-batch5-requirements.txt -rtests/functional_tests/t0_main/imports/01-batch1-requirements.txt -rtests/functional_tests/t0_main/imports/06-batch6-requirements.txt -rtests/functional_tests/t0_main/imports/11-batch11-requirements.txt -rtests/functional_tests/t0_main/imports/04-batch4-requirements.txt -rtests/functional_tests/t0_main/imports/07-batch7-requirements.txt -rtests/functional_tests/t0_main/imports/10-batch10-requirements.txt -rtests/functional_tests/t0_main/imports/08-batch8-requirements.txt -rtests/unit_tests_old/assets/fixtures/requirements.txt', 1)

@@ -1,0 +1,10 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pytest-asyncio/0.20.3/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rdependencies/pytest-min/requirements.txt
+	-rdependencies/default/requirements.txt
+

@@ -1,0 +1,151 @@
+.package create: /workdir/asyncpg-0.27.0/.tox/.package
+.package installdeps: setuptools>=42, wheel
+warning: no files found matching '*.py' under directory 'examples'
+cpythonlibtest-unit-test-tests create: /workdir/asyncpg-0.27.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/asyncpg-0.27.0/.tox/.tmp/package/1/asyncpg-0.27.0.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/asyncpg-0.27.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/asyncpg-0.27.0.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: asyncpg
+  Building wheel for asyncpg (pyproject.toml): started
+  Building wheel for asyncpg (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for asyncpg (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [118 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-310
+      creating build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/compat.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/transaction.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/cluster.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/connect_utils.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/cursor.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/connresource.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/introspection.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/serverversion.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/utils.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/_version.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/prepared_stmt.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/connection.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/pool.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      copying asyncpg/types.py -> build/lib.linux-x86_64-cpython-310/asyncpg
+      creating build/lib.linux-x86_64-cpython-310/asyncpg/_testbase
+      copying asyncpg/_testbase/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg/_testbase
+      copying asyncpg/_testbase/fuzzer.py -> build/lib.linux-x86_64-cpython-310/asyncpg/_testbase
+      creating build/lib.linux-x86_64-cpython-310/asyncpg/exceptions
+      copying asyncpg/exceptions/_base.py -> build/lib.linux-x86_64-cpython-310/asyncpg/exceptions
+      copying asyncpg/exceptions/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg/exceptions
+      creating build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      creating build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/types.py -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      creating build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/__init__.py -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/coreproto.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/prepared_stmt.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/scram.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/protocol.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/encodings.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/settings.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/scram.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/cpythonx.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/coreproto.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/protocol.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/prepared_stmt.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/settings.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/consts.pxi -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/protocol/pgtypes.pxi -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol
+      copying asyncpg/pgproto/frb.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/buffer.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/uuid.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/pgproto.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/buffer.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/cpythonx.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/debug.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/hton.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/__init__.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/frb.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/tohex.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/pgproto.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/pgproto/consts.pxi -> build/lib.linux-x86_64-cpython-310/asyncpg/pgproto
+      copying asyncpg/protocol/codecs/range.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/base.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/textutils.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/record.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/pgproto.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/array.pyx -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      copying asyncpg/protocol/codecs/base.pxd -> build/lib.linux-x86_64-cpython-310/asyncpg/protocol/codecs
+      running build_ext
+      building 'asyncpg.pgproto.pgproto' extension
+      creating build/temp.linux-x86_64-cpython-310
+      creating build/temp.linux-x86_64-cpython-310/asyncpg
+      creating build/temp.linux-x86_64-cpython-310/asyncpg/pgproto
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/workdir/asyncpg-0.27.0/.tox/cpythonlibtest-unit-test-tests/include -I/usr/local/include/python3.10 -c asyncpg/pgproto/pgproto.c -o build/temp.linux-x86_64-cpython-310/asyncpg/pgproto/pgproto.o -O2 -fsigned-char -Wall -Wsign-compare -Wconversion
+      asyncpg/pgproto/pgproto.c: In function ‘__Pyx_check_single_interpreter’:
+      asyncpg/pgproto/pgproto.c:36460:29: warning: implicit declaration of function ‘PyInterpreterState_GetIDFromThreadState’; did you mean ‘PyInterpreterState_ThreadHead’? [-Wimplicit-function-declaration]
+           PY_INT64_T current_id = PyInterpreterState_GetIDFromThreadState(PyThreadState_Get());
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                   PyInterpreterState_ThreadHead
+      asyncpg/pgproto/pgproto.c: In function ‘__Pyx_AddTraceback’:
+      asyncpg/pgproto/pgproto.c:520:54: warning: implicit declaration of function ‘_PyFrame_SetLineNumber’; did you mean ‘PyFrame_GetLineNumber’? [-Wimplicit-function-declaration]
+         #define __Pyx_PyFrame_SetLineNumber(frame, lineno) _PyFrame_SetLineNumber((frame), (lineno))
+                                                            ^~~~~~~~~~~~~~~~~~~~~~
+      asyncpg/pgproto/pgproto.c:40740:5: note: in expansion of macro ‘__Pyx_PyFrame_SetLineNumber’
+           __Pyx_PyFrame_SetLineNumber(py_frame, py_line);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      gcc -pthread -shared build/temp.linux-x86_64-cpython-310/asyncpg/pgproto/pgproto.o -L/usr/local/lib -o build/lib.linux-x86_64-cpython-310/asyncpg/pgproto/pgproto.cpython-310-x86_64-linux-gnu.so
+      building 'asyncpg.protocol.protocol' extension
+      creating build/temp.linux-x86_64-cpython-310/asyncpg/protocol
+      creating build/temp.linux-x86_64-cpython-310/asyncpg/protocol/record
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Iasyncpg/pgproto/ -I/workdir/asyncpg-0.27.0/.tox/cpythonlibtest-unit-test-tests/include -I/usr/local/include/python3.10 -c asyncpg/protocol/protocol.c -o build/temp.linux-x86_64-cpython-310/asyncpg/protocol/protocol.o -O2 -fsigned-char -Wall -Wsign-compare -Wconversion
+      asyncpg/protocol/protocol.c: In function ‘__Pyx_check_single_interpreter’:
+      asyncpg/protocol/protocol.c:84675:29: warning: implicit declaration of function ‘PyInterpreterState_GetIDFromThreadState’; did you mean ‘PyInterpreterState_ThreadHead’? [-Wimplicit-function-declaration]
+           PY_INT64_T current_id = PyInterpreterState_GetIDFromThreadState(PyThreadState_Get());
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                   PyInterpreterState_ThreadHead
+      asyncpg/protocol/protocol.c: In function ‘__Pyx_TryUnpackUnboundCMethod’:
+      asyncpg/protocol/protocol.c:86700:24: warning: implicit declaration of function ‘PyMethodDescrObject_GetMethod’; did you mean ‘PyDescr_NewMethod’? [-Wimplicit-function-declaration]
+               target->func = PyMethodDescrObject_GetMethod(method)->ml_meth;
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              PyDescr_NewMethod
+      asyncpg/protocol/protocol.c:86700:61: error: invalid type argument of ‘->’ (have ‘int’)
+               target->func = PyMethodDescrObject_GetMethod(method)->ml_meth;
+                                                                   ^~
+      asyncpg/protocol/protocol.c:86701:61: error: invalid type argument of ‘->’ (have ‘int’)
+               target->flag = PyMethodDescrObject_GetMethod(method)->ml_flags & ~(METH_CLASS | METH_STATIC | METH_COEXIST | METH_STACKLESS);
+                                                                   ^~
+      asyncpg/protocol/protocol.c:86699:30: warning: unused variable ‘descr’ [-Wunused-variable]
+               PyMethodDescrObject *descr = (PyMethodDescrObject*) method;
+                                    ^~~~~
+      asyncpg/protocol/protocol.c: In function ‘__Pyx_AddTraceback’:
+      asyncpg/protocol/protocol.c:522:54: warning: implicit declaration of function ‘_PyFrame_SetLineNumber’; did you mean ‘PyFrame_GetLineNumber’? [-Wimplicit-function-declaration]
+         #define __Pyx_PyFrame_SetLineNumber(frame, lineno) _PyFrame_SetLineNumber((frame), (lineno))
+                                                            ^~~~~~~~~~~~~~~~~~~~~~
+      asyncpg/protocol/protocol.c:92633:5: note: in expansion of macro ‘__Pyx_PyFrame_SetLineNumber’
+           __Pyx_PyFrame_SetLineNumber(py_frame, py_line);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for asyncpg
+Failed to build asyncpg
+ERROR: Could not build wheels for asyncpg, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/asyncpg-0.27.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/asyncpg-0.27.0.tar.gz (exited with code 1)

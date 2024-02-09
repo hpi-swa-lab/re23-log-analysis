@@ -1,0 +1,129 @@
+GLOB sdist-make: /workdir/Flask-WTF-1.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements/tests.txt, -rrequirements/dev.txt, -rrequirements/style.txt
+cpythonlibtest-unit-test-tests inst: /workdir/Flask-WTF-1.0.1/.tox/.tmp/package/1/Flask-WTF-1.0.1.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.12,attrs==21.4.0,Babel==2.9.1,blinker==1.7.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,click==8.1.7,distlib==0.3.4,docutils==0.17.1,filelock==3.6.0,Flask==3.0.0,Flask-WTF @ file:///workdir/Flask-WTF-1.0.1/.tox/.tmp/package/1/Flask-WTF-1.0.1.zip#sha256=caaa8b666ead2f601061deeba8f39e1a0a633f592efab9dafe23db8a4d367122,identify==2.4.12,idna==3.3,imagesize==1.3.0,iniconfig==1.1.1,itsdangerous==2.1.2,Jinja2==3.1.2,MarkupSafe==2.1.1,mock==5.1.0,nodeenv==1.6.0,packaging==21.3,Pallets-Sphinx-Themes==2.0.2,pep517==0.12.0,pip-compile-multi==2.4.4,pip-tools==6.5.1,platformdirs==2.5.1,pluggy==1.0.0,pre-commit==2.17.0,py==1.11.0,Pygments==2.11.2,pyparsing==3.0.7,pytest==6.2.5,pytz==2022.1,PyYAML==6.0,requests==2.27.1,six==1.16.0,snowballstemmer==2.2.0,Sphinx==4.5.0,sphinx-issues==3.0.1,sphinxcontrib-applehelp==1.0.2,sphinxcontrib-devhelp==1.0.2,sphinxcontrib-htmlhelp==2.0.0,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-log-cabinet==1.0.1,sphinxcontrib-qthelp==1.0.3,sphinxcontrib-serializinghtml==1.1.5,toml==0.10.2,tomli==2.0.1,toposort==1.7,tox==3.24.5,urllib3==1.26.9,virtualenv==20.14.0,Werkzeug==3.0.1,WTForms==3.1.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3689764664'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/Flask-WTF/1.0.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- /workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/Flask-WTF-1.0.1, configfile: setup.cfg, testpaths: tests
+collecting ... collected 0 items / 6 errors
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_csrf_extension.py _________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_csrf_extension.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_csrf_extension.py:6: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+___________________ ERROR collecting tests/test_csrf_form.py ___________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_csrf_form.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_csrf_form.py:6: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+_____________________ ERROR collecting tests/test_file.py ______________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_file.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_file.py:6: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+_____________________ ERROR collecting tests/test_form.py ______________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_form.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_form.py:12: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+_____________________ ERROR collecting tests/test_i18n.py ______________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_i18n.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_i18n.py:7: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+___________________ ERROR collecting tests/test_recaptcha.py ___________________
+ImportError while importing test module '/workdir/Flask-WTF-1.0.1/tests/test_recaptcha.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_recaptcha.py:5: in <module>
+    from flask_wtf import FlaskForm
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/__init__.py:4: in <module>
+    from .recaptcha import Recaptcha
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py:1: in <module>
+    from .fields import RecaptchaField
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py:3: in <module>
+    from . import widgets
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py:3: in <module>
+    from flask import Markup
+E   ImportError: cannot import name 'Markup' from 'flask' (/workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/flask/__init__.py)
+- generated xml file: /workdir/results/Flask-WTF/1.0.1/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_csrf_extension.py
+ERROR tests/test_csrf_form.py
+ERROR tests/test_file.py
+ERROR tests/test_form.py
+ERROR tests/test_i18n.py
+ERROR tests/test_recaptcha.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 6 errors in 0.16s ===============================
+ERROR: InvocationError for command /workdir/Flask-WTF-1.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/Flask-WTF/1.0.1/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

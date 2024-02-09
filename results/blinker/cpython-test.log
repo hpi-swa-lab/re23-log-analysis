@@ -1,0 +1,47 @@
+GLOB sdist-make: /workdir/blinker-1.5/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/blinker-1.5/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtests/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/blinker-1.5/.tox/.tmp/package/1/blinker-1.5.zip
+cpythonlibtest-unit-test-tests installed: attrs==21.4.0,blinker @ file:///workdir/blinker-1.5/.tox/.tmp/package/1/blinker-1.5.zip#sha256=16e3e60b88469bfa3af47bfb8ee06b29052f37746d94f6e92066e5737e7c356a,iniconfig==1.1.1,mock==5.1.0,packaging==21.3,pluggy==1.0.0,py==1.11.0,pyparsing==3.0.9,pytest==7.1.2,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3218709416'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/blinker/1.5/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.1.2, pluggy-1.0.0 -- /workdir/blinker-1.5/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/blinker-1.5, configfile: setup.cfg, testpaths: tests
+collecting ... collected 28 items
+
+tests/test_context.py::test_temp_connection PASSED                       [  3%]
+tests/test_context.py::test_temp_connection_for_sender PASSED            [  7%]
+tests/test_context.py::test_temp_connection_failure PASSED               [ 10%]
+tests/test_saferef.py::TestSaferef::test_In PASSED                       [ 14%]
+tests/test_saferef.py::TestSaferef::test_Representation PASSED           [ 17%]
+tests/test_saferef.py::TestSaferef::test_ShortCircuit PASSED             [ 21%]
+tests/test_saferef.py::TestSaferef::test_Valid PASSED                    [ 25%]
+tests/test_signals.py::test_meta_connect PASSED                          [ 28%]
+tests/test_signals.py::test_signal_signals_any_sender PASSED             [ 32%]
+tests/test_signals.py::test_signal_signals_strong_sender PASSED          [ 35%]
+tests/test_signals.py::test_signal_weak_receiver_vanishes PASSED         [ 39%]
+tests/test_signals.py::test_signal_signals_weak_sender PASSED            [ 42%]
+tests/test_signals.py::test_empty_bucket_growth PASSED                   [ 46%]
+tests/test_signals.py::test_meta_connect_failure PASSED                  [ 50%]
+tests/test_signals.py::test_weak_namespace PASSED                        [ 53%]
+tests/test_signals.py::test_namespace PASSED                             [ 57%]
+tests/test_signals.py::test_weak_receiver PASSED                         [ 60%]
+tests/test_signals.py::test_strong_receiver PASSED                       [ 64%]
+tests/test_signals.py::test_instancemethod_receiver PASSED               [ 67%]
+tests/test_signals.py::test_filtered_receiver PASSED                     [ 71%]
+tests/test_signals.py::test_filtered_receiver_weakref PASSED             [ 75%]
+tests/test_signals.py::test_decorated_receiver PASSED                    [ 78%]
+tests/test_signals.py::test_no_double_send PASSED                        [ 82%]
+tests/test_signals.py::test_has_receivers PASSED                         [ 85%]
+tests/test_signals.py::test_instance_doc PASSED                          [ 89%]
+tests/test_signals.py::test_named_blinker PASSED                         [ 92%]
+tests/test_utilities.py::test_symbols PASSED                             [ 96%]
+tests/test_utilities.py::test_pickled_symbols PASSED                     [100%]
+
+- generated xml file: /workdir/results/blinker/1.5/1/cpython-test-results.xml --
+============================== 28 passed in 0.10s ==============================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

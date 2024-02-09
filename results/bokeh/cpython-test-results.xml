@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="63" failures="0" skipped="0" tests="63" time="9.100" timestamp="2023-11-20T23:08:01.296391" hostname="b80581c01e0f"><testcase classname="" name="tests.test_defaults" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/test_defaults.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_defaults.py:24: in &lt;module&gt;
+    from tests.support.defaults import collect_defaults, output_defaults
+tests/support/defaults.py:28: in &lt;module&gt;
+    import json5
+E   ModuleNotFoundError: No module named 'json5'</error></testcase><testcase classname="" name="tests.test_examples" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 781, in import_plugin
+    __import__(importspec)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/bokeh-3.0.2/tests/support/plugins/bokeh_server.py", line 32, in &lt;module&gt;
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 657, in _importtestmodule
+    self.config.pluginmanager.consider_module(mod)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 747, in consider_module
+    self._import_plugin_specs(getattr(mod, "pytest_plugins", []))
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 754, in _import_plugin_specs
+    self.import_plugin(import_spec)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 783, in import_plugin
+    raise ImportError(
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 781, in import_plugin
+    __import__(importspec)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/bokeh-3.0.2/tests/support/plugins/bokeh_server.py", line 32, in &lt;module&gt;
+    import requests
+ImportError: Error importing plugin "tests.support.plugins.bokeh_server": No module named 'requests'</error></testcase><testcase classname="" name="tests.integration.test_regressions" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/test_regressions.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/test_regressions.py:22: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.embed.test_json_item" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/embed/test_json_item.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/embed/test_json_item.py:25: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.models.test_datarange1d" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/models/test_datarange1d.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/models/test_datarange1d.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.models.test_plot" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/models/test_plot.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/models/test_plot.py:32: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.models.test_sources" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/models/test_sources.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/models/test_sources.py:29: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_box_edit_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_box_edit_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_box_edit_tool.py:35: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_box_zoom_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_box_zoom_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_box_zoom_tool.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_custom_action" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_custom_action.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_custom_action.py:23: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_freehand_draw_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_freehand_draw_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_freehand_draw_tool.py:35: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_pan_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_pan_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_pan_tool.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_point_draw_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_point_draw_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_point_draw_tool.py:35: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_poly_draw_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_poly_draw_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_poly_draw_tool.py:36: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_poly_edit_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_poly_edit_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_poly_edit_tool.py:36: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_range_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_range_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_range_tool.py:29: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_reset_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_reset_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_reset_tool.py:32: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_tap_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_tap_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_tap_tool.py:23: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_wheel_pan_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_wheel_pan_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_wheel_pan_tool.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_wheel_zoom_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_wheel_zoom_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_wheel_zoom_tool.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_zoom_in_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_zoom_in_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_zoom_in_tool.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.tools.test_zoom_out_tool" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/tools/test_zoom_out_tool.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/tools/test_zoom_out_tool.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_autocomplete_input" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_autocomplete_input.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_autocomplete_input.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_button" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_button.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_button.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_checkbox_button_group" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_checkbox_button_group.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_checkbox_button_group.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_checkbox_group" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_checkbox_group.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_checkbox_group.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_color_picker" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_color_picker.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_color_picker.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_copy_paste" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_copy_paste.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_copy_paste.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_datepicker" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_datepicker.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_datepicker.py:33: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_daterange_slider" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_daterange_slider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_daterange_slider.py:34: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_dateslider" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_dateslider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_dateslider.py:34: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_datetime_range_slider" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_datetime_range_slider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_datetime_range_slider.py:34: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_div" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_div.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_div.py:25: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_dropdown" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_dropdown.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_dropdown.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_multi_choice" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_multi_choice.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_multi_choice.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_numeric_input" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_numeric_input.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_numeric_input.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_paragraph" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_paragraph.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_paragraph.py:25: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_password_input" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_password_input.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_password_input.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_pretext" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_pretext.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_pretext.py:25: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_radio_button_group" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_radio_button_group.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_radio_button_group.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_radio_group" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_radio_group.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_radio_group.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_range_slider" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_range_slider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_range_slider.py:34: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_select" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_select.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_select.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.by import By
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_slider" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_slider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_slider.py:33: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_spinner" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_spinner.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_spinner.py:30: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_text_input" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_text_input.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_text_input.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_textarea_input" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_textarea_input.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_textarea_input.py:21: in &lt;module&gt;
+    from selenium.webdriver.common.keys import Keys
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.test_toggle" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/test_toggle.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/test_toggle.py:31: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage, BokehServerPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.tables.test_cell_editors" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/tables/test_cell_editors.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/tables/test_cell_editors.py:33: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.tables.test_copy_paste" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/tables/test_copy_paste.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/tables/test_copy_paste.py:24: in &lt;module&gt;
+    from selenium.webdriver.common.keys import Keys
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.tables.test_data_table" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/tables/test_data_table.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/tables/test_data_table.py:28: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.tables.test_sortable" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/tables/test_sortable.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/tables/test_sortable.py:22: in &lt;module&gt;
+    from tests.support.plugins.project import BokehModelPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.integration.widgets.tables.test_source_updates" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/integration/widgets/tables/test_source_updates.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/integration/widgets/tables/test_source_updates.py:34: in &lt;module&gt;
+    from tests.support.plugins.project import BokehServerPage, SinglePlotPage
+tests/support/plugins/project.py:37: in &lt;module&gt;
+    from selenium.webdriver.common.action_chains import ActionChains
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.unit.bokeh.test_resources" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/test_resources.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/test_resources.py:27: in &lt;module&gt;
+    import bs4
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase><testcase classname="" name="tests.unit.bokeh.test_tile_providers" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/xyzservices/lib.py", line 44, in __getattr__
+    return self.__getitem__(key)
+KeyError: 'Stamen'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/bokeh-3.0.2/tests/unit/bokeh/test_tile_providers.py", line 52, in &lt;module&gt;
+    'STAMEN_TERRAIN':          xyz.Stamen.Terrain.build_url(),
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/xyzservices/lib.py", line 46, in __getattr__
+    raise AttributeError(key) from err
+AttributeError: Stamen</error></testcase><testcase classname="" name="tests.unit.bokeh.application.handlers.test_notebook__handlers" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/application/handlers/test_notebook__handlers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/application/handlers/test_notebook__handlers.py:20: in &lt;module&gt;
+    import nbconvert
+E   ModuleNotFoundError: No module named 'nbconvert'</error></testcase><testcase classname="" name="tests.unit.bokeh.command.subcommands.test_serve" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/command/subcommands/test_serve.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/command/subcommands/test_serve.py:33: in &lt;module&gt;
+    import requests
+E   ModuleNotFoundError: No module named 'requests'</error></testcase><testcase classname="" name="tests.unit.bokeh.embed.test_server__embed" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/embed/test_server__embed.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/embed/test_server__embed.py:20: in &lt;module&gt;
+    import bs4
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase><testcase classname="" name="tests.unit.bokeh.embed.test_standalone" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/embed/test_standalone.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/embed/test_standalone.py:27: in &lt;module&gt;
+    import bs4
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase><testcase classname="" name="tests.unit.bokeh.io.test_export" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/bokeh/util/dependencies.py", line 80, in import_required
+    return import_module(mod_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 992, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 241, in _call_with_frames_removed
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'selenium'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/bokeh-3.0.2/tests/unit/bokeh/io/test_export.py", line 31, in &lt;module&gt;
+    from bokeh.io.webdriver import webdriver_control
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/bokeh/io/webdriver.py", line 24, in &lt;module&gt;
+    import_required("selenium.webdriver",
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/bokeh/util/dependencies.py", line 82, in import_required
+    raise RuntimeError(error_msg) from e
+RuntimeError: To use bokeh.io image export functions you need selenium ('conda install selenium' or 'pip install selenium')</error></testcase><testcase classname="" name="tests.unit.bokeh.io.test_webdriver" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/io/test_webdriver.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/io/test_webdriver.py:20: in &lt;module&gt;
+    import selenium.webdriver.chrome.webdriver
+E   ModuleNotFoundError: No module named 'selenium'</error></testcase><testcase classname="" name="tests.unit.bokeh.model.test_docs" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/bokeh-3.0.2/tests/unit/bokeh/model/test_docs.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/unit/bokeh/model/test_docs.py:20: in &lt;module&gt;
+    import bs4
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase><testcase classname="" name="tests.unit.bokeh.models.test_plots" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/xyzservices/lib.py", line 44, in __getattr__
+    return self.__getitem__(key)
+KeyError: 'Stamen'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/bokeh-3.0.2/tests/unit/bokeh/models/test_plots.py", line 335, in &lt;module&gt;
+    ("STAMEN_TERRAIN", xyz.Stamen.Terrain),
+  File "/workdir/bokeh-3.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/xyzservices/lib.py", line 46, in __getattr__
+    raise AttributeError(key) from err
+AttributeError: Stamen</error></testcase></testsuite></testsuites>

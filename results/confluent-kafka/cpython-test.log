@@ -1,0 +1,80 @@
+GLOB sdist-make: /workdir/confluent-kafka-2.0.2/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rexamples/requirements.txt, -rtools/requirements-manylinux.txt, -rsrc/confluent_kafka/requirements.txt, -rsrc/confluent_kafka/avro/requirements.txt, -rsrc/confluent_kafka/schema_registry/requirements.txt, -rtests/requirements.txt, -rtests/soak/requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/confluent-kafka-2.0.2/.tox/.tmp/package/1/confluent-kafka-2.0.2.zip
+cpythonlibtest-unit-test-tests installed: annotated-types==0.6.0,anyio==3.7.1,attrs==23.1.0,avro==1.11.3,bashlex==0.18,bracex==2.4,certifi==2023.11.17,cffi==1.16.0,charset-normalizer==3.3.2,cibuildwheel==2.16.2,click==8.1.7,confluent-kafka @ file:///workdir/confluent-kafka-2.0.2/.tox/.tmp/package/1/confluent-kafka-2.0.2.zip#sha256=2864b287f1a29121d0049e950dc5a2a001da8bb2fbdbef92b137355112eb6f61,cryptography==41.0.5,datadog==0.47.0,Deprecated==1.2.14,exceptiongroup==1.1.3,fastapi==0.104.1,fastavro==1.9.0,filelock==3.13.1,flake8==6.1.0,h11==0.14.0,idna==3.4,iniconfig==2.0.0,jsonschema==4.20.0,jsonschema-specifications==2023.11.1,jwcrypto==1.5.0,mccabe==0.7.0,mock==5.1.0,packaging==23.2,platformdirs==4.0.0,pluggy==1.3.0,protobuf==4.25.1,psutil==5.9.6,pycodestyle==2.11.1,pycparser==2.21,pydantic==2.5.1,pydantic_core==2.14.3,pyflakes==3.1.0,pyrsistent==0.20.0,pytest==7.4.3,pytest-timeout==2.2.0,python-jwt==4.1.0,referencing==0.31.0,requests==2.31.0,requests-mock==1.11.0,rpds-py==0.13.1,six==1.16.0,sniffio==1.3.0,starlette==0.27.0,tomli==2.0.1,trivup==0.12.2,typing_extensions==4.8.0,urllib3==2.1.0,uvicorn==0.24.0.post1,wrapt==1.16.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2022152856'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/confluent-kafka/2.0.2/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/confluent-kafka-2.0.2
+configfile: tox.ini
+testpaths: tests
+plugins: timeout-2.2.0, anyio-3.7.1, requests-mock-1.11.0
+collecting ... collected 272 items
+
+tests/test_Admin.py::test_types PASSED                                   [  0%]
+tests/test_Admin.py::test_acl_binding_type PASSED                        [  0%]
+tests/test_Admin.py::test_basic_api PASSED                               [  1%]
+tests/test_Admin.py::test_create_topics_api PASSED                       [  1%]
+tests/test_Admin.py::test_delete_topics_api PASSED                       [  1%]
+tests/test_Admin.py::test_create_partitions_api PASSED                   [  2%]
+tests/test_Admin.py::test_describe_configs_api PASSED                    [  2%]
+tests/test_Admin.py::test_alter_configs_api PASSED                       [  2%]
+tests/test_Admin.py::test_create_acls_api PASSED                         [  3%]
+tests/test_Admin.py::test_delete_acls_api PASSED                         [  3%]
+tests/test_Admin.py::test_describe_acls_api PASSED                       [  4%]
+tests/test_Admin.py::test_list_consumer_groups_api PASSED                [  4%]
+tests/test_Admin.py::test_describe_consumer_groups_api PASSED            [  4%]
+tests/test_Admin.py::test_delete_consumer_groups_api PASSED              [  5%]
+tests/test_Admin.py::test_list_consumer_group_offsets_api PASSED         [  5%]
+tests/test_Admin.py::test_alter_consumer_group_offsets_api PASSED        [  5%]
+tests/test_Consumer.py::test_basic_api Fatal Python error: Aborted
+
+Current thread 0x00007ff36e335700 (most recent call first):
+  Garbage-collecting
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 447 in result
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/confluent_kafka/admin/__init__.py", line 192 in _make_consumer_group_offsets_result
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/confluent_kafka/admin/__init__.py", line 259 in <lambda>
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 342 in _invoke_callbacks
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 567 in set_exception
+
+Thread 0x00007ff37bce5740 (most recent call first):
+  File "/workdir/confluent-kafka-2.0.2/tests/test_Consumer.py", line 79 in test_basic_api
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194 in pytest_pyfunc_call
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77 in _multicall
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115 in _hookexec
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493 in __call__
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792 in runtest
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169 in pytest_runtest_call
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77 in _multicall
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115 in _hookexec
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493 in __call__
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262 in <lambda>
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341 in from_call
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 261 in call_runtest_hook
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 222 in call_and_report
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 133 in runtestprotocol
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 114 in pytest_runtest_protocol
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77 in _multicall
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115 in _hookexec
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493 in __call__
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 350 in pytest_runtestloop
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77 in _multicall
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115 in _hookexec
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493 in __call__
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 325 in _main
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 271 in wrap_session
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/main.py", line 318 in pytest_cmdline_main
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77 in _multicall
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115 in _hookexec
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493 in __call__
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 169 in main
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 192 in console_main
+  File "/workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 8 in <module>
+
+Extension modules: charset_normalizer.md, _cffi_backend, confluent_kafka.cimpl, fastavro._logical_readers, fastavro._schema, fastavro._read, fastavro._logical_writers, fastavro._validation, fastavro._write, google._upb._message (total: 10)
+ERROR: InvocationError for command /workdir/confluent-kafka-2.0.2/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/confluent-kafka/2.0.2/1/cpython-test-results.xml (exited with code -6 (SIGABRT)) (exited with code -6)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

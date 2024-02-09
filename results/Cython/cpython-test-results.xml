@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="4" failures="0" skipped="0" tests="4" time="0.565" timestamp="2023-11-21T01:28:06.780754" hostname="b80581c01e0f"><testcase classname="" name="Cython.Debugger.Tests.test_libcython_in_gdb" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/Cython-0.29.32/Cython/Debugger/Tests/test_libcython_in_gdb.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+Cython/Debugger/Tests/test_libcython_in_gdb.py:24: in &lt;module&gt;
+    import gdb
+E   ModuleNotFoundError: No module named 'gdb'</error></testcase><testcase classname="" name="Cython.Debugger.Tests.test_libpython_in_gdb" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/Cython-0.29.32/Cython/Debugger/Tests/test_libpython_in_gdb.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+Cython/Debugger/Tests/test_libpython_in_gdb.py:12: in &lt;module&gt;
+    import gdb
+E   ModuleNotFoundError: No module named 'gdb'</error></testcase><testcase classname="" name="docs.examples.tutorial.clibraries.test_queue" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/Cython-0.29.32/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/Cython-0.29.32/docs/examples/tutorial/clibraries/test_queue.py", line 9, in &lt;module&gt;
+    Q.append(10)
+AttributeError: 'Queue' object has no attribute 'append'</error></testcase><testcase classname="" name="pyximport.test.test_reload" time="0.000"><error message="collection failure">ImportError while importing test module '/workdir/Cython-0.29.32/pyximport/test/test_reload.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+pyximport/test/test_reload.py:4: in &lt;module&gt;
+    from . import test_pyximport
+E   ImportError: attempted relative import with no known parent package</error></testcase></testsuite></testsuites>

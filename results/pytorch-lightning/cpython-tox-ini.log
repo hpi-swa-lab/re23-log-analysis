@@ -1,0 +1,27 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pytorch-lightning/1.8.3.post1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rexamples/app_hpo/requirements.txt
+	-rexamples/app_template_streamlit_ui/requirements.txt
+	-rexamples/app_works_on_default_machine/requirements.txt
+	-rexamples/app_justpy/requirements.txt
+	-rexamples/app_components/serve/gradio/requirements.txt
+	-rexamples/app_pickle_or_not/requirements.txt
+	-rexamples/app_multi_node/requirements.txt
+	-rexamples/app_layout/requirements.txt
+	-rexamples/app_dag/requirements.txt
+	-rexamples/app_v0/requirements.txt
+	-rsrc/lightning_app/cli/app-template/requirements.txt
+	-rsrc/lightning_app/cli/app-template/tests/requirements.txt
+	-rsrc/lightning_app/cli/component-template/requirements.txt
+	-rsrc/lightning_app/cli/component-template/tests/requirements.txt
+	-r.actions/requirements.txt
+	-r_notebooks/requirements.txt
+	-r_notebooks/.actions/requirements.txt
+	-rtests/tests_app/utilities/packaging/projects/requirements.txt
+	-rtests/tests_app/utilities/packaging/projects/req/comp_req/a/requirements.txt
+	-rtests/tests_app_examples/collect_failures/requirements.txt
+	-rtests/legacy/requirements.txt
+

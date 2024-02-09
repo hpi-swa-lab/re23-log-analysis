@@ -1,0 +1,169 @@
+Collecting bcrypt==4.0.1
+  Downloading bcrypt-4.0.1.tar.gz (25 kB)
+Looking for GraalPy patches for bcrypt
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: bcrypt
+  Building wheel for bcrypt (pyproject.toml): started
+  Building wheel for bcrypt (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for bcrypt (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [146 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib
+      creating build/lib/bcrypt
+      copying src/bcrypt/__init__.py -> build/lib/bcrypt
+      copying src/bcrypt/__about__.py -> build/lib/bcrypt
+      running egg_info
+      writing src/bcrypt.egg-info/PKG-INFO
+      writing dependency_links to src/bcrypt.egg-info/dependency_links.txt
+      writing requirements to src/bcrypt.egg-info/requires.txt
+      writing top-level names to src/bcrypt.egg-info/top_level.txt
+      reading manifest file 'src/bcrypt.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files found matching 'requirements.txt'
+      warning: no previously-included files found matching 'release.py'
+      warning: no previously-included files found matching 'mypy.ini'
+      warning: no previously-included files matching '*' found under directory '.github'
+      warning: no previously-included files matching '*' found under directory '.circleci'
+      warning: no previously-included files found matching 'src/_bcrypt/target'
+      warning: no previously-included files matching '*' found under directory 'src/_bcrypt/target'
+      adding license file 'LICENSE'
+      writing manifest file 'src/bcrypt.egg-info/SOURCES.txt'
+      copying src/bcrypt/_bcrypt.pyi -> build/lib/bcrypt
+      copying src/bcrypt/py.typed -> build/lib/bcrypt
+      running build_ext
+      running build_rust
+       Downloading crates ...
+        Downloaded generic-array v0.14.6
+        Downloaded crypto-common v0.1.6
+        Downloaded unindent v0.1.10
+        Downloaded version_check v0.9.4
+        Downloaded cpufeatures v0.2.5
+        Downloaded bcrypt v0.13.0
+        Downloaded getrandom v0.2.7
+        Downloaded pyo3-macros v0.15.2
+        Downloaded indoc-impl v0.3.6
+        Downloaded instant v0.1.12
+        Downloaded subtle v2.4.1
+        Downloaded paste-impl v0.1.18
+        Downloaded redox_syscall v0.2.16
+        Downloaded byteorder v1.4.3
+        Downloaded proc-macro-hack v0.5.19
+        Downloaded pyo3-build-config v0.15.2
+        Downloaded cipher v0.4.3
+        Downloaded digest v0.10.5
+        Downloaded indoc v0.3.6
+        Downloaded blowfish v0.9.1
+        Downloaded zeroize v1.5.7
+        Downloaded block-buffer v0.10.3
+        Downloaded sha2 v0.10.6
+        Downloaded pbkdf2 v0.10.1
+        Downloaded unicode-ident v1.0.4
+        Downloaded bcrypt-pbkdf v0.8.1
+        Downloaded parking_lot v0.11.2
+        Downloaded quote v1.0.21
+        Downloaded once_cell v1.15.0
+        Downloaded inout v0.1.3
+        Downloaded typenum v1.15.0
+        Downloaded proc-macro2 v1.0.46
+        Downloaded lock_api v0.4.9
+        Downloaded pyo3-macros-backend v0.15.2
+        Downloaded parking_lot_core v0.8.5
+        Downloaded paste v0.1.18
+        Downloaded base64 v0.13.0
+        Downloaded syn v1.0.102
+        Downloaded pyo3 v0.15.2
+        Downloaded libc v0.2.134
+        Downloaded winapi v0.3.9
+        Downloaded winapi-i686-pc-windows-gnu v0.4.0
+        Downloaded winapi-x86_64-pc-windows-gnu v0.4.0
+      cargo rustc --lib --message-format=json-render-diagnostics --manifest-path src/_bcrypt/Cargo.toml --release -v --features pyo3/abi3-py36 pyo3/extension-module -- --crate-type cdylib
+         Compiling typenum v1.15.0
+         Compiling version_check v0.9.4
+         Compiling proc-macro2 v1.0.46
+         Compiling quote v1.0.21
+           Running `rustc --crate-name build_script_main --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/build/main.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=9c71733560aed355 -C extra-filename=-9c71733560aed355 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/typenum-9c71733560aed355 -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.21/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=0d6b1e720a4b493a -C extra-filename=-0d6b1e720a4b493a --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/quote-0d6b1e720a4b493a -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name version_check /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=97f039c81b6445fe -C extra-filename=-97f039c81b6445fe --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.46/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=96fe84892ebb914f -C extra-filename=-96fe84892ebb914f --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/proc-macro2-96fe84892ebb914f -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+         Compiling unicode-ident v1.0.4
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/proc-macro2-96fe84892ebb914f/build-script-build`
+           Running `rustc --crate-name unicode_ident --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.4/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=76c94a9999a52e64 -C extra-filename=-76c94a9999a52e64 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+         Compiling generic-array v0.14.6
+           Running `rustc --crate-name build_script_build /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/generic-array-0.14.6/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="more_lengths"' -C metadata=ee21738e53a3f45d -C extra-filename=-ee21738e53a3f45d --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/generic-array-ee21738e53a3f45d -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern version_check=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libversion_check-97f039c81b6445fe.rlib --cap-lints allow`
+         Compiling cfg-if v1.0.0
+           Running `rustc --crate-name cfg_if --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-if-1.0.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on -C metadata=70e9094ffe752602 -C extra-filename=-70e9094ffe752602 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name proc_macro2 --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.46/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=0b7a356fa898aff9 -C extra-filename=-0b7a356fa898aff9 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern unicode_ident=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libunicode_ident-76c94a9999a52e64.rmeta --cap-lints allow --cfg use_proc_macro --cfg wrap_proc_macro`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/quote-0d6b1e720a4b493a/build-script-build`
+         Compiling proc-macro-hack v0.5.19
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-hack-0.5.19/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=c93e7e637f4a0854 -C extra-filename=-c93e7e637f4a0854 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/proc-macro-hack-c93e7e637f4a0854 -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/generic-array-ee21738e53a3f45d/build-script-build`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/typenum-9c71733560aed355/build-script-main`
+         Compiling syn v1.0.102
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/syn-1.0.102/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="clone-impls"' --cfg 'feature="default"' --cfg 'feature="derive"' --cfg 'feature="extra-traits"' --cfg 'feature="full"' --cfg 'feature="parsing"' --cfg 'feature="printing"' --cfg 'feature="proc-macro"' --cfg 'feature="quote"' -C metadata=29fc1fc946790897 -C extra-filename=-29fc1fc946790897 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/syn-29fc1fc946790897 -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name typenum --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on -C metadata=8f0bb2b53b601368 -C extra-filename=-8f0bb2b53b601368 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+         Compiling libc v0.2.134
+           Running `rustc --crate-name build_script_build /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/libc-0.2.134/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=60797b06290817c9 -C extra-filename=-60797b06290817c9 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/libc-60797b06290817c9 -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+         Compiling pyo3-build-config v0.15.2
+           Running `rustc --crate-name build_script_build --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/pyo3-build-config-0.15.2/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="abi3"' --cfg 'feature="abi3-py310"' --cfg 'feature="abi3-py36"' --cfg 'feature="abi3-py37"' --cfg 'feature="abi3-py38"' --cfg 'feature="abi3-py39"' --cfg 'feature="default"' --cfg 'feature="resolve-config"' -C metadata=b7d89eaca00ba789 -C extra-filename=-b7d89eaca00ba789 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/pyo3-build-config-b7d89eaca00ba789 -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/libc-60797b06290817c9/build-script-build`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/syn-29fc1fc946790897/build-script-build`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/proc-macro-hack-c93e7e637f4a0854/build-script-build`
+           Running `rustc --crate-name quote --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.21/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=fd37eb19708bfbb9 -C extra-filename=-fd37eb19708bfbb9 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern proc_macro2=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libproc_macro2-0b7a356fa898aff9.rmeta --cap-lints allow`
+         Compiling once_cell v1.15.0
+           Running `rustc --crate-name once_cell --edition=2021 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/once_cell-1.15.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="alloc"' --cfg 'feature="default"' --cfg 'feature="race"' --cfg 'feature="std"' -C metadata=bc28620668884c6d -C extra-filename=-bc28620668884c6d --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+           Running `rustc --crate-name generic_array /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/generic-array-0.14.6/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on --cfg 'feature="more_lengths"' -C metadata=3f1904c93e5f5254 -C extra-filename=-3f1904c93e5f5254 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern typenum=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libtypenum-8f0bb2b53b601368.rmeta --cap-lints allow --cfg relaxed_coherence`
+           Running `rustc --crate-name syn --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/syn-1.0.102/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on --cfg 'feature="clone-impls"' --cfg 'feature="default"' --cfg 'feature="derive"' --cfg 'feature="extra-traits"' --cfg 'feature="full"' --cfg 'feature="parsing"' --cfg 'feature="printing"' --cfg 'feature="proc-macro"' --cfg 'feature="quote"' -C metadata=69bd9c49e624f1f3 -C extra-filename=-69bd9c49e624f1f3 --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern proc_macro2=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libproc_macro2-0b7a356fa898aff9.rmeta --extern quote=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libquote-fd37eb19708bfbb9.rmeta --extern unicode_ident=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libunicode_ident-76c94a9999a52e64.rmeta --cap-lints allow --cfg syn_disable_nightly_tests`
+           Running `rustc --crate-name proc_macro_hack --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-hack-0.5.19/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type proc-macro --emit=dep-info,link -C prefer-dynamic -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=3644a1a2faae173f -C extra-filename=-3644a1a2faae173f --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern proc_macro --cap-lints allow`
+           Running `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/pyo3-build-config-b7d89eaca00ba789/build-script-build`
+         Compiling crypto-common v0.1.6
+           Running `rustc --crate-name crypto_common --edition=2018 /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/crypto-common-0.1.6/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on -C metadata=bdfc50d670cf745c -C extra-filename=-bdfc50d670cf745c --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --extern generic_array=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libgeneric_array-3f1904c93e5f5254.rmeta --extern typenum=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps/libtypenum-8f0bb2b53b601368.rmeta --cap-lints allow`
+           Running `rustc --crate-name libc /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/libc-0.2.134/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C linker-plugin-lto -C overflow-checks=on --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=18689e7932cf80ad -C extra-filename=-18689e7932cf80ad --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow --cfg freebsd11 --cfg libc_priv_mod_use --cfg libc_union --cfg libc_const_size_of --cfg libc_align --cfg libc_int128 --cfg libc_core_cvoid --cfg libc_packedN --cfg libc_cfg_target_vendor --cfg libc_non_exhaustive --cfg libc_ptr_addr_of --cfg libc_underscore_const_names --cfg libc_const_extern_fn`
+         Compiling autocfg v1.1.0
+           Running `rustc --crate-name autocfg /workdir/.cargo/registry/src/github.com-1ecc6299db9ec823/autocfg-1.1.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debug-assertions=off -C overflow-checks=on -C metadata=0be9fa6b385e030e -C extra-filename=-0be9fa6b385e030e --out-dir /tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps -L dependency=/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/deps --cap-lints allow`
+      error: failed to run custom build command for `pyo3-build-config v0.15.2`
+      
+      Caused by:
+        process didn't exit successfully: `/tmp/pip-install-ttpturb_/bcrypt_13ab9a4325e24719a72b53a779b48c04/src/_bcrypt/target/release/build/pyo3-build-config-b7d89eaca00ba789/build-script-build` (exit status: 1)
+        --- stdout
+        cargo:rerun-if-env-changed=PYO3_CONFIG_FILE
+        cargo:rerun-if-env-changed=PYO3_NO_PYTHON
+        cargo:rerun-if-env-changed=PYO3_PYTHON
+      
+        --- stderr
+        error: unknown interpreter: GraalVM
+      warning: build failed, waiting for other jobs to finish...
+      
+          =============================DEBUG ASSISTANCE=============================
+          If you are seeing a compilation error please try the following steps to
+          successfully install bcrypt:
+          1) Upgrade to the latest pip and try again. This will fix errors for most
+             users. See: https://pip.pypa.io/en/stable/installing/#upgrading-pip
+          2) Ensure you have a recent Rust toolchain installed. bcrypt requires
+             rustc >= 1.56.0.
+      
+          Python: 3.10.8
+          platform: Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.16
+          pip: n/a
+          setuptools: 69.0.0
+          setuptools_rust: 1.8.1
+          rustc: 1.62.1 (Red Hat 1.62.1-1.module+el8.7.0+20820+0664b183)
+          =============================DEBUG ASSISTANCE=============================
+      
+      error: `cargo rustc --lib --message-format=json-render-diagnostics --manifest-path src/_bcrypt/Cargo.toml --release -v --features 'pyo3/abi3-py36 pyo3/extension-module' -- --crate-type cdylib` failed with code 101
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for bcrypt
+Failed to build bcrypt
+ERROR: Could not build wheels for bcrypt, which is required to install pyproject.toml-based projects

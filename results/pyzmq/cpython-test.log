@@ -1,0 +1,61 @@
+.package create: /workdir/pyzmq-24.0.1/.tox/.package
+.package installdeps: setuptools, wheel, packaging, cffi; implementation_name == 'pypy'
+/opt/graalpy/lib/python3.10/distutils/dist.py:274: UserWarning: Unknown distribution option: 'cffi_modules'
+  warnings.warn(msg)
+fetching https://github.com/zeromq/libzmq/releases/download/v4.3.4/zeromq-4.3.4.zip into bundled
+Warning: Cython is missing
+Settings obtained from pkg-config: {'library_dirs': [], 'include_dirs': [], 'libraries': ['zmq']}
+{'libraries': ['zmq'], 'include_dirs': [], 'library_dirs': [], 'runtime_library_dirs': [], 'extra_link_args': []}
+Configure: Autodetecting ZMQ settings...
+    Custom ZMQ dir:       
+Checking for timer_create
+** Errors about missing timer_create are a normal part of this process **
+/tmp/timer_create_h1_ghbe.c: In function ‘main’:
+/tmp/timer_create_h1_ghbe.c:2:5: warning: implicit declaration of function ‘timer_create’ [-Wimplicit-function-declaration]
+     timer_create();
+     ^~~~~~~~~~~~
+tmp/timer_create_h1_ghbe.o: In function `main':
+timer_create_h1_ghbe.c:(.text+0x15): undefined reference to `timer_create'
+collect2: error: ld returned 1 exit status
+** The above error about timer_create is normal and not a problem! **
+no timer_create, linking librt
+    ZMQ version detected: 4.3.4
+warning: no files found matching 'setupegg.py'
+warning: no files found matching 'tox.ini'
+warning: no files found matching '.travis.yml'
+no previously-included directories found matching 'docs/build'
+no previously-included directories found matching 'docs/gh-pages'
+warning: no directories found matching 'bundled/zeromq/tweetnacl'
+warning: no previously-included files found matching 'bundled/zeromq/src/Makefile*'
+warning: no previously-included files found matching 'bundled/zeromq/src/platform.hpp'
+warning: no previously-included files found matching 'setup.cfg'
+warning: no previously-included files found matching 'zmq/libzmq*'
+warning: no previously-included files matching '.deps/*' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+warning: no previously-included files matching '*.pyd' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+warning: no previously-included files matching '.mailmap' found anywhere in distribution
+warning: no previously-included files matching 'Makefile.am' found anywhere in distribution
+warning: no previously-included files matching 'Makefile.in' found anywhere in distribution
+cpythonlibtest-unit-test-tests create: /workdir/pyzmq-24.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rtools/wheel-requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pyzmq-24.0.1/.tox/.tmp/package/1/pyzmq-24.0.1.tar.gz
+cpythonlibtest-unit-test-tests installed: bashlex==0.18,black==23.11.0,bracex==2.4,certifi==2023.11.17,charset-normalizer==3.3.2,cibuildwheel==2.9.0,click==8.1.7,codecov==2.1.13,coverage==4.5.4,Cython==0.29.32,exceptiongroup==1.2.0,filelock==3.13.1,flake8==6.1.0,gevent==23.9.1,greenlet==3.0.1,idna==3.6,iniconfig==2.0.0,mccabe==0.7.0,mock==5.1.0,mypy==1.7.1,mypy-extensions==1.0.0,packaging==23.2,pathspec==0.11.2,platformdirs==4.0.0,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,pytest==7.4.3,pytest-cov==2.10.1,pytest-rerunfailures==13.0,pyzmq @ file:///workdir/pyzmq-24.0.1/.tox/.tmp/package/1/pyzmq-24.0.1.tar.gz#sha256=9a848d94512d1e02c16b98ddcfc6919ba5adc697eecb9347b3df898a91fde3cf,requests==2.31.0,tomli==2.0.1,tornado==6.4,typing_extensions==4.8.0,urllib3==2.1.0,zope.event==5.0,zope.interface==6.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1631842397'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pyzmq/24.0.1/1/cpython-test-results.xml
+ImportError while loading conftest '/workdir/pyzmq-24.0.1/zmq/tests/conftest.py'.
+zmq/__init__.py:103: in <module>
+    from zmq import backend
+zmq/backend/__init__.py:31: in <module>
+    raise original_error from None
+zmq/backend/__init__.py:26: in <module>
+    _ns = select_backend(first)
+zmq/backend/select.py:31: in select_backend
+    mod = import_module(name)
+zmq/backend/cython/__init__.py:6: in <module>
+    from . import (
+E   ImportError: cannot import name '_device' from partially initialized module 'zmq.backend.cython' (most likely due to a circular import) (/workdir/pyzmq-24.0.1/zmq/backend/cython/__init__.py)
+ERROR: InvocationError for command /workdir/pyzmq-24.0.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pyzmq/24.0.1/1/cpython-test-results.xml (exited with code 4)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

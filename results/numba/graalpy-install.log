@@ -1,0 +1,112 @@
+Collecting numba==0.56.4
+  Downloading numba-0.56.4.tar.gz (2.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 3.5 MB/s eta 0:00:00
+Looking for GraalPy patches for numba
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting llvmlite<0.40,>=0.39.0dev0
+  Downloading llvmlite-0.39.1.tar.gz (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.8/132.8 kB 1.4 MB/s eta 0:00:00
+Looking for GraalPy patches for llvmlite
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting numpy<1.24,>=1.18
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Requirement already satisfied: setuptools in ./install-virtualenv/lib/python3.10/site-packages (from numba==0.56.4) (63.2.0)
+Building wheels for collected packages: numba, llvmlite
+  Building wheel for numba (setup.py): started
+  Building wheel for numba (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-install-k_s0wpvg/numba_b7b148e2594e4e4f843b39aaa6143698/setup.py", line 429, in <module>
+          metadata['ext_modules'] = get_ext_modules()
+        File "/tmp/pip-install-k_s0wpvg/numba_b7b148e2594e4e4f843b39aaa6143698/setup.py", line 144, in get_ext_modules
+          import numpy.distutils.misc_util as np_misc
+      ModuleNotFoundError: No module named 'numpy'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for numba
+  Running setup.py clean for numba
+  Building wheel for llvmlite (setup.py): started
+  Building wheel for llvmlite (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [15 lines of output]
+      running bdist_wheel
+      /workdir/install-virtualenv/bin/graalpy /tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py
+      LLVM version... 14.0.6
+      
+      Traceback (most recent call last):
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 226, in <module>
+          main()
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 216, in main
+          main_posix('linux', '.so')
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 173, in main_posix
+          raise RuntimeError(msg)
+      RuntimeError: Building llvmlite requires LLVM 11.x.x, got '14.0.6'. Be sure to set LLVM_CONFIG to the right executable path.
+      Read the documentation at http://llvmlite.pydata.org/ for more information about building llvmlite.
+      
+      error: command '/workdir/install-virtualenv/bin/graalpy' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llvmlite
+  Running setup.py clean for llvmlite
+Failed to build numba llvmlite
+Installing collected packages: numpy, llvmlite, numba
+Looking for GraalPy patches for numpy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+numpy == 1.16.4
+numpy == 1.19.5
+numpy == 1.21.6
+numpy == 1.22.4
+numpy == 1.23.4
+numpy == 1.23.1
+numpy == 1.23.5
+  Running setup.py install for llvmlite: started
+  Running setup.py install for llvmlite: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Running setup.py install for llvmlite did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      running install
+      /workdir/install-virtualenv/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+        warnings.warn(
+      running build
+      got version from file /tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/llvmlite/_version.py {'version': '0.39.1', 'full': '31f808fa7a5796bb8d4b14e8a9e27c6dd15f2b6c'}
+      running build_ext
+      /workdir/install-virtualenv/bin/graalpy /tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py
+      LLVM version... 14.0.6
+      
+      Traceback (most recent call last):
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 226, in <module>
+          main()
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 216, in main
+          main_posix('linux', '.so')
+        File "/tmp/pip-install-k_s0wpvg/llvmlite_f19e0e25d6e7469abd208cb22847377f/ffi/build.py", line 173, in main_posix
+          raise RuntimeError(msg)
+      RuntimeError: Building llvmlite requires LLVM 11.x.x, got '14.0.6'. Be sure to set LLVM_CONFIG to the right executable path.
+      Read the documentation at http://llvmlite.pydata.org/ for more information about building llvmlite.
+      
+      error: command '/workdir/install-virtualenv/bin/graalpy' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: legacy-install-failure
+
+× Encountered error while trying to install package.
+╰─> llvmlite
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for output from the failure.

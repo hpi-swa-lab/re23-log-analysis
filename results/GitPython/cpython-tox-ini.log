@@ -1,0 +1,13 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/GitPython/3.1.29/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rtest-requirements.txt
+	-rrequirements-dev.txt
+	-rrequirements.txt
+	-rdoc/requirements.txt
+	-rgit/ext/gitdb/requirements.txt
+

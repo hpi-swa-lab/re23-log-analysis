@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/bandit/1.7.4/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rtest-requirements.txt
+	-rrequirements.txt
+	-rdoc/requirements.txt
+

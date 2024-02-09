@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="0.231" timestamp="2023-11-22T04:08:04.496895" hostname="80ac3eb7f7f2"><testcase classname="" name="exercises" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "&lt;frozen importlib._bootstrap_external&gt;", line 883, in exec_module
+  File "&lt;frozen importlib._bootstrap&gt;", line 241, in _call_with_frames_removed
+  File "/workdir/importlib-metadata-5.1.0/exercises.py", line 1, in &lt;module&gt;
+    from pytest_perf.deco import extras
+ModuleNotFoundError: No module named 'pytest_perf'</error></testcase><testcase classname="" name="tests.test_main" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/doctest.py", line 567, in collect
+    module = import_path(
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/importlib-metadata-5.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/importlib-metadata-5.1.0/tests/test_main.py", line 6, in &lt;module&gt;
+    import pyfakefs.fake_filesystem_unittest as ffs
+ModuleNotFoundError: No module named 'pyfakefs'</error><error message="collection failure">ImportError while importing test module '/workdir/importlib-metadata-5.1.0/tests/test_main.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_main.py:6: in &lt;module&gt;
+    import pyfakefs.fake_filesystem_unittest as ffs
+E   ModuleNotFoundError: No module named 'pyfakefs'</error></testcase></testsuite></testsuites>

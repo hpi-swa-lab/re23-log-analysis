@@ -1,0 +1,12 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/networkx/2.8.8/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/release.txt
+	-rrequirements/doc.txt
+	-rrequirements/example.txt
+	-rrequirements/default.txt
+	-rrequirements/extra.txt
+	-rrequirements/test.txt
+	-rrequirements/developer.txt
+

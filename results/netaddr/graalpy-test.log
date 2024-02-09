@@ -1,0 +1,356 @@
+GLOB sdist-make: /workdir/netaddr-0.8.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/netaddr-0.8.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/netaddr-0.8.0/.tox/.tmp/package/1/netaddr-0.8.0.zip
+graalpylibtest-unit-test-tests installed: coverage==7.3.2,exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,netaddr @ file:///workdir/netaddr-0.8.0/.tox/.tmp/package/1/netaddr-0.8.0.zip,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytest-cov==4.1.0,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3831972104'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/netaddr/0.8.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/netaddr-0.8.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/netaddr-0.8.0
+configfile: pytest.ini
+plugins: cov-4.1.0
+collecting ... collected 274 items
+
+netaddr/tests/test_netaddr.py::test_valid_mac PASSED                     [  0%]
+netaddr/tests/test_netaddr.py::test_valid_eui64 PASSED                   [  0%]
+netaddr/tests/core/test_compat.py::test_compat_py3 PASSED                [  1%]
+netaddr/tests/core/test_compat.py::test_compat_py2 SKIPPED (requires...) [  1%]
+netaddr/tests/core/test_compat.py::test_compat_string_and_int_detection PASSED [  1%]
+netaddr/tests/core/test_compat.py::test_compat_dict_operations PASSED    [  2%]
+netaddr/tests/core/test_compat.py::test_compat_zip PASSED                [  2%]
+netaddr/tests/core/test_compat.py::test_compat_range PASSED              [  2%]
+netaddr/tests/core/test_compat.py::test_compat_callable PASSED           [  3%]
+netaddr/tests/core/test_compat.py::test_iter_next PASSED                 [  3%]
+netaddr/tests/core/test_pubsub.py::test_pubsub PASSED                    [  4%]
+netaddr/tests/eui/test_eui.py::test_mac_address_properties PASSED        [  4%]
+netaddr/tests/eui/test_eui.py::test_mac_address_numerical_operations PASSED [  4%]
+netaddr/tests/eui/test_eui.py::test_eui_oct_format_py2 SKIPPED (requ...) [  5%]
+netaddr/tests/eui/test_eui.py::test_eui_oct_format_py3 PASSED            [  5%]
+netaddr/tests/eui/test_eui.py::test_eui_constructor PASSED               [  5%]
+netaddr/tests/eui/test_eui.py::test_eui_dialects PASSED                  [  6%]
+netaddr/tests/eui/test_eui.py::test_eui_dialect_property_assignment PASSED [  6%]
+netaddr/tests/eui/test_eui.py::test_eui_format PASSED                    [  6%]
+netaddr/tests/eui/test_eui.py::test_eui_custom_dialect PASSED            [  7%]
+netaddr/tests/eui/test_eui.py::test_eui64_dialects PASSED                [  7%]
+netaddr/tests/eui/test_eui.py::test_eui64_dialect_property_assignment PASSED [  8%]
+netaddr/tests/eui/test_eui.py::test_eui64_custom_dialect PASSED          [  8%]
+netaddr/tests/eui/test_eui.py::test_eui_oui_information PASSED           [  8%]
+netaddr/tests/eui/test_eui.py::test_oui_constructor PASSED               [  9%]
+netaddr/tests/eui/test_eui.py::test_eui_iab PASSED                       [  9%]
+netaddr/tests/eui/test_eui.py::test_eui64 PASSED                         [  9%]
+netaddr/tests/eui/test_eui.py::test_mac_to_ipv6_link_local PASSED        [ 10%]
+netaddr/tests/eui/test_eui.py::test_iab PASSED                           [ 10%]
+netaddr/tests/eui/test_eui.py::test_new_iab PASSED                       [ 10%]
+netaddr/tests/eui/test_eui.py::test_eui48_vs_eui64 PASSED                [ 11%]
+netaddr/tests/eui/test_eui.py::test_eui_sort_order PASSED                [ 11%]
+netaddr/tests/eui/test_eui.py::test_eui_pickle_support PASSED            [ 12%]
+netaddr/tests/eui/test_eui.py::test_mac_to_eui64_conversion PASSED       [ 12%]
+netaddr/tests/eui/test_eui.py::test_mac_to_ipv6 PASSED                   [ 12%]
+netaddr/tests/eui/test_eui.py::test_eui64_constructor PASSED             [ 13%]
+netaddr/tests/eui/test_ieee_parsers.py::test_oui_parser_py2 SKIPPED      [ 13%]
+netaddr/tests/eui/test_ieee_parsers.py::test_iab_parser_py2 SKIPPED      [ 13%]
+netaddr/tests/eui/test_ieee_parsers.py::test_oui_parser_py3 PASSED       [ 14%]
+netaddr/tests/eui/test_ieee_parsers.py::test_iab_parser_py3 PASSED       [ 14%]
+netaddr/tests/ip/test_cidr_v4.py::test_iprange_to_cidrs_worst_case_v4 PASSED [ 14%]
+netaddr/tests/ip/test_cidr_v4.py::test_cidr_exclude_v4 PASSED            [ 15%]
+netaddr/tests/ip/test_cidr_v4.py::test_cidr_merge_v4 PASSED              [ 15%]
+netaddr/tests/ip/test_cidr_v4.py::test_extended_cidr_merge PASSED        [ 16%]
+netaddr/tests/ip/test_cidr_v4.py::test_whole_network_cidr_merge_v4 PASSED [ 16%]
+netaddr/tests/ip/test_cidr_v4.py::test_largest_matching_cidr_v4 PASSED   [ 16%]
+netaddr/tests/ip/test_cidr_v4.py::test_smallest_matching_cidr_v4 PASSED  [ 17%]
+netaddr/tests/ip/test_cidr_v4.py::test_all_matching_cidrs_v4 PASSED      [ 17%]
+netaddr/tests/ip/test_cidr_v4.py::test_cidr_matching_v4 PASSED           [ 17%]
+netaddr/tests/ip/test_cidr_v6.py::test_iprange_to_cidrs_worst_case_v6 PASSED [ 18%]
+netaddr/tests/ip/test_cidr_v6.py::test_rfc_4291 PASSED                   [ 18%]
+netaddr/tests/ip/test_cidr_v6.py::test_whole_network_cidr_merge_v6 PASSED [ 18%]
+netaddr/tests/ip/test_cidr_v6.py::test_all_matching_cidrs_v6 PASSED      [ 19%]
+netaddr/tests/ip/test_dns.py::test_reverse_dns_v4 PASSED                 [ 19%]
+netaddr/tests/ip/test_dns.py::test_reverse_dns_v6 PASSED                 [ 20%]
+netaddr/tests/ip/test_ip.py::test_ip_classes_are_weak_referencable PASSED [ 20%]
+netaddr/tests/ip/test_ip_categories.py::test_is_unicast PASSED           [ 20%]
+netaddr/tests/ip/test_ip_categories.py::test_is_multicast PASSED         [ 21%]
+netaddr/tests/ip/test_ip_categories.py::test_is_private PASSED           [ 21%]
+netaddr/tests/ip/test_ip_categories.py::test_is_reserved PASSED          [ 21%]
+netaddr/tests/ip/test_ip_categories.py::test_is_public PASSED            [ 22%]
+netaddr/tests/ip/test_ip_categories.py::test_is_netmask PASSED           [ 22%]
+netaddr/tests/ip/test_ip_categories.py::test_is_hostmask PASSED          [ 22%]
+netaddr/tests/ip/test_ip_categories.py::test_is_loopback PASSED          [ 23%]
+netaddr/tests/ip/test_ip_comparisons.py::test_basic_comparisons PASSED   [ 23%]
+netaddr/tests/ip/test_ip_comparisons.py::test_advanced_comparisons PASSED [ 24%]
+netaddr/tests/ip/test_ip_globs.py::test_ipglob_basic PASSED              [ 24%]
+netaddr/tests/ip/test_ip_globs.py::test_ipglob_boolean_evaluation PASSED [ 24%]
+netaddr/tests/ip/test_ip_globs.py::test_cidr_to_glob PASSED              [ 25%]
+netaddr/tests/ip/test_ip_globs.py::test_glob_to_cidrs PASSED             [ 25%]
+netaddr/tests/ip/test_ip_globs.py::test_glob_to_iptuple PASSED           [ 25%]
+netaddr/tests/ip/test_ip_globs.py::test_iprange_to_globs PASSED          [ 26%]
+netaddr/tests/ip/test_ip_globs.py::test_glob_to_iprange PASSED           [ 26%]
+netaddr/tests/ip/test_ip_globs.py::test_invalid_glob PASSED              [ 27%]
+netaddr/tests/ip/test_ip_ranges.py::test_ip_range PASSED                 [ 27%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange PASSED                  [ 27%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_boundaries PASSED       [ 28%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_boolean_evaluation PASSED [ 28%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_sorting PASSED          [ 28%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_constructor PASSED      [ 29%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_indexing PASSED         [ 29%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_slicing PASSED          [ 29%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_ipv6_unsupported_slicing PASSED [ 30%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_membership PASSED       [ 30%]
+netaddr/tests/ip/test_ip_ranges.py::test_more_iprange_sorting PASSED     [ 31%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_cidr_interoperability PASSED [ 31%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_info_and_properties PASSED [ 31%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_invalid_len_and_alternative PASSED [ 32%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_pickling_v4 PASSED      [ 32%]
+netaddr/tests/ip/test_ip_ranges.py::test_iprange_pickling_v6 PASSED      [ 32%]
+netaddr/tests/ip/test_ip_rfc1924.py::test_RFC_1924 PASSED                [ 33%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_basic_api PASSED            [ 33%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_empty PASSED                [ 33%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_constructor PASSED          [ 34%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_iteration PASSED            [ 34%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_member_insertion_and_deletion PASSED [ 35%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_membership PASSED           [ 35%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_membership_largest PASSED   [ 35%]
+netaddr/tests/ip/test_ip_sets.py::test_set_membership_smallest PASSED    [ 36%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_unions PASSED               [ 36%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_unions_intersections_differences PASSED [ 36%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_supersets_and_subsets PASSED [ 37%]
+netaddr/tests/ip/test_ip_sets.py::test_combined_ipv4_and_ipv6_ipsets PASSED [ 37%]
+netaddr/tests/ip/test_ip_sets.py::test_disjointed_ipsets PASSED          [ 37%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_updates PASSED              [ 38%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_clear PASSED                [ 38%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_cidr_fracturing PASSED      [ 39%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_with_iprange PASSED         [ 39%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_pickling PASSED             [ 39%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_comparison PASSED           [ 40%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_adding_and_removing_members_ip_addresses_as_ints PASSED [ 40%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_operations_with_combined_ipv4_and_ipv6 PASSED [ 40%]
+netaddr/tests/ip/test_ip_sets.py::test_converting_ipsets_to_ipranges PASSED [ 41%]
+netaddr/tests/ip/test_ip_sets.py::test_len_on_ipset_failure_with_large_ipv6_addresses PASSED [ 41%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_ipv4_and_ipv4_separation PASSED [ 41%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_exceptions PASSED           [ 42%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_comparison_with_int_is_invalid PASSED [ 42%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_converts_to_cidr_networks_v4 PASSED [ 43%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_converts_to_cidr_networks_v6 PASSED [ 43%]
+netaddr/tests/ip/test_ip_sets.py::test_ipset_is_weak_referencable PASSED [ 43%]
+netaddr/tests/ip/test_ip_splitter.py::test_ip_splitter PASSED            [ 44%]
+netaddr/tests/ip/test_ip_splitter.py::test_ip_splitter_remove_same_input_range PASSED [ 44%]
+netaddr/tests/ip/test_ip_splitter.py::test_ip_splitter_remove_more_than_input_range PASSED [ 44%]
+netaddr/tests/ip/test_ip_splitter.py::test_ip_splitter_remove_prefix_larger_than_input_range PASSED [ 45%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_v4 PASSED                 [ 45%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_v4[192.0.2.1-ipaddr0-network0-cidr0-None-netmask0-hostmask0-1] PASSED [ 45%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_v4[192.0.2.0/24-ipaddr1-network1-cidr1-broadcast1-netmask1-hostmask1-256] PASSED [ 46%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_v4[192.0.3.112/22-ipaddr2-network2-cidr2-broadcast2-netmask2-hostmask2-1024] PASSED [ 46%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_list_operations_v4 PASSED [ 47%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_index_operations_v4 PASSED [ 47%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_slice_operations_v4 PASSED [ 47%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_sort_order PASSED         [ 48%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_and_ipnetwork_canonical_sort_order_by_version PASSED [ 48%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_v4_constructor PASSED     [ 48%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_integer_operations_v4 PASSED [ 49%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_binary_operations_v4 PASSED [ 49%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_slices_v4 PASSED          [ 50%]
+netaddr/tests/ip/test_ip_v4.py::test_iterhosts_v4 PASSED                 [ 50%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_boolean_evaluation_v4 PASSED [ 50%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_boolean_evaluation_v4 PASSED [ 51%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_equality_v4 PASSED        [ 51%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_slicing_v4 PASSED         [ 51%]
+netaddr/tests/ip/test_ip_v4.py::test_ip_network_membership_v4 PASSED     [ 52%]
+netaddr/tests/ip/test_ip_v4.py::test_ip_network_equality_v4 PASSED       [ 52%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_integer_constructor_v4 PASSED [ 52%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_integer_constructor_v6 PASSED [ 53%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_inet_aton_constructor_v4 PASSED [ 53%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_inet_pton_constructor_v4 PASSED [ 54%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_constructor_zero_filled_octets_v4 PASSED [ 54%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_constructor_v4 PASSED     [ 54%]
+netaddr/tests/ip/test_ip_v4.py::test_ip_network_cosntructor_implicit_prefix_flag_v4 PASSED [ 55%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_constructor_other_flags_v4 PASSED [ 55%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_bad_string_constructor PASSED [ 55%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_netmask_v4 PASSED         [ 56%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_hex_format PASSED         [ 56%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_oct_format_py2 SKIPPED    [ 56%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_oct_format_py3 PASSED     [ 57%]
+netaddr/tests/ip/test_ip_v4.py::test_is_multicast PASSED                 [ 57%]
+netaddr/tests/ip/test_ip_v4.py::test_multicast_info PASSED               [ 58%]
+netaddr/tests/ip/test_ip_v4.py::test_ipaddress_pickling_v4 PASSED        [ 58%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_pickling_v4 PASSED        [ 58%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_incrementing_by_int PASSED [ 59%]
+netaddr/tests/ip/test_ip_v4.py::test_rfc3021_subnets PASSED              [ 59%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_change_prefixlen PASSED   [ 59%]
+netaddr/tests/ip/test_ip_v4.py::test_ipnetwork_change_netmask PASSED     [ 60%]
+netaddr/tests/ip/test_ip_v4.py::test_spanning_cidr_handles_strings PASSED [ 60%]
+netaddr/tests/ip/test_ip_v4_v6_conversions.py::test_ip_v4_to_ipv6_mapped PASSED [ 60%]
+netaddr/tests/ip/test_ip_v4_v6_conversions.py::test_ip_v4_to_ipv4 PASSED [ 61%]
+netaddr/tests/ip/test_ip_v4_v6_conversions.py::test_ip_v4_to_ipv6_compatible PASSED [ 61%]
+netaddr/tests/ip/test_ip_v4_v6_conversions.py::test_ip_v6_to_ipv4 PASSED [ 62%]
+netaddr/tests/ip/test_ip_v4_v6_conversions.py::test_ip_v6_to_ipv6 PASSED [ 62%]
+netaddr/tests/ip/test_ip_v6.py::test_ipaddress_v6 PASSED                 [ 62%]
+netaddr/tests/ip/test_ip_v6.py::test_ipnetwork_v6[fe80::dead:beef/64-ipaddr0-network0-cidr0-broadcast0-netmask0-hostmask0-18446744073709551616] PASSED [ 63%]
+netaddr/tests/ip/test_ip_v6.py::test_iterhosts_v6 PASSED                 [ 63%]
+netaddr/tests/ip/test_ip_v6.py::test_ipnetwork_boolean_evaluation_v6 PASSED [ 63%]
+netaddr/tests/ip/test_ip_v6.py::test_ipnetwork_slice_v6 PASSED           [ 64%]
+netaddr/tests/ip/test_ip_v6.py::test_ip_network_membership_v6 PASSED     [ 64%]
+netaddr/tests/ip/test_ip_v6.py::test_ip_network_equality_v6 PASSED       [ 64%]
+netaddr/tests/ip/test_ip_v6.py::test_ipnetwork_constructor_v6 PASSED     [ 65%]
+netaddr/tests/ip/test_ip_v6.py::test_ipaddress_netmask_v6 PASSED         [ 65%]
+netaddr/tests/ip/test_ip_v6.py::test_objects_use_slots PASSED            [ 66%]
+netaddr/tests/ip/test_ip_v6.py::test_ipaddress_pickling_v6 PASSED        [ 66%]
+netaddr/tests/ip/test_ip_v6.py::test_ipnetwork_pickling_v6 PASSED        [ 66%]
+netaddr/tests/ip/test_ip_v6.py::test_ipv6_unicast_address_allocation_info PASSED [ 67%]
+netaddr/tests/ip/test_network_ops.py::test_ipnetwork_cidr_merge PASSED   [ 67%]
+netaddr/tests/ip/test_network_ops.py::test_subnetting PASSED             [ 67%]
+netaddr/tests/ip/test_network_ops.py::test_supernetting PASSED           [ 68%]
+netaddr/tests/ip/test_nmap.py::test_valid_nmap_range_with_valid_target_specs PASSED [ 68%]
+netaddr/tests/ip/test_nmap.py::test_valid_nmap_range_with_invalid_target_specs PASSED [ 68%]
+netaddr/tests/ip/test_nmap.py::test_iter_nmap_range PASSED               [ 69%]
+netaddr/tests/ip/test_nmap.py::test_iter_nmap_range_with_multiple_targets_including_cidr PASSED [ 69%]
+netaddr/tests/ip/test_nmap.py::test_iter_nmap_range_invalid PASSED       [ 70%]
+netaddr/tests/ip/test_nmap.py::test_iter_nmap_range_remove_duplicates PASSED [ 70%]
+netaddr/tests/ip/test_old_specs.py::test_cidr_abbrev_to_verbose PASSED   [ 70%]
+netaddr/tests/ip/test_old_specs.py::test_cidr_abbrev_to_verbose_invalid_prefixlen PASSED [ 71%]
+netaddr/tests/ip/test_old_specs.py::test_expand_partial_address PASSED   [ 71%]
+netaddr/tests/ip/test_platform_osx.py::test_ip_behaviour_osx SKIPPED     [ 71%]
+netaddr/tests/ip/test_platform_osx.py::test_ip_behaviour_non_osx PASSED  [ 72%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:0:0:0:0:0:0:0-::] PASSED [ 72%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:0:0:0:0:0:0:A-::a] PASSED [ 72%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:0:0:0:0:0:0-a::] PASSED [ 73%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:A:0:0:0:0:0-a:0:a::] PASSED [ 73%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:0:0:0:0:0:A-a::a] PASSED [ 74%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:A:0:0:0:0:0:A-0:a::a] PASSED [ 74%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:A:0:0:0:0:A-a:0:a::a] PASSED [ 74%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:0:0:A:0:0:0:A-::a:0:0:0:a] PASSED [ 75%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:0:0:0:A:0:0:A-::a:0:0:a] PASSED [ 75%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:0:0:0:A:0:A-a::a:0:a] PASSED [ 75%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:0:A:0:0:A:0-a::a:0:0:a:0] PASSED [ 76%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[A:0:A:0:A:0:A:0-a:0:a:0:a:0:a:0] PASSED [ 76%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[0:A:0:A:0:A:0:A-0:a:0:a:0:a:0:a] PASSED [ 77%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[1080:0:0:0:8:800:200C:417A-1080::8:800:200c:417a] PASSED [ 77%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntop_and_inet_pton_ipv6_conversion[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210-fedc:ba98:7654:3210:fedc:ba98:7654:3210] PASSED [ 77%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_ntoa_ipv4_exceptions PASSED [ 78%]
+netaddr/tests/ip/test_socket_module_fallback.py::test_inet_pton_ipv6_exceptions PASSED [ 78%]
+netaddr/tests/strategy/test_eui48_strategy.py::test_strategy_eui48 PASSED [ 78%]
+netaddr/tests/strategy/test_eui48_strategy.py::test_strategy_eui48_py2 SKIPPED [ 79%]
+netaddr/tests/strategy/test_eui48_strategy.py::test_strategy_eui48_py3 PASSED [ 79%]
+netaddr/tests/strategy/test_eui48_strategy.py::test_strategy_eui48_alternate_dialect PASSED [ 79%]
+netaddr/tests/strategy/test_ipv4_strategy.py::test_strategy_ipv4 PASSED  [ 80%]
+netaddr/tests/strategy/test_ipv4_strategy.py::test_strategy_ipv4_py2 SKIPPED [ 80%]
+netaddr/tests/strategy/test_ipv4_strategy.py::test_strategy_ipv4_py3 PASSED [ 81%]
+netaddr/tests/strategy/test_ipv4_strategy.py::test_strategy_inet_aton_behaviour PASSED [ 81%]
+netaddr/tests/strategy/test_ipv4_strategy.py::test_strategy_inet_pton_behaviour PASSED [ 81%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6 PASSED  [ 82%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_py2 SKIPPED [ 82%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_py3 PASSED [ 82%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0db8:0000:0000:0000:0000:1428:57ab] PASSED [ 83%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0db8:0000:0000:0000::1428:57ab] PASSED [ 83%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0db8:0:0:0:0:1428:57ab] PASSED [ 83%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0db8:0:0::1428:57ab] PASSED [ 84%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0db8::1428:57ab] PASSED [ 84%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:0DB8:0000:0000:0000:0000:1428:57AB] PASSED [ 85%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_equivalent_variants[2001:DB8::1428:57AB] PASSED [ 85%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210] PASSED [ 85%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[1080:0:0:0:8:800:200C:417A] PASSED [ 86%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[FF01:0:0:0:0:0:0:43] PASSED [ 86%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:0:0:1] PASSED [ 86%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:0:0:00] PASSED [ 87%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[1080::8:800:200C:417A] PASSED [ 87%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[FF01::43] PASSED [ 87%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::1] PASSED [ 88%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::] PASSED [ 88%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::192.0.2.1] PASSED [ 89%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::ffff:192.0.2.1] PASSED [ 89%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:0:192.0.2.1] PASSED [ 89%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:FFFF:192.0.2.1] PASSED [ 90%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:0:13.1.68.3] PASSED [ 90%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:FFFF:129.144.52.38] PASSED [ 90%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::13.1.68.3] PASSED [ 91%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::FFFF:129.144.52.38] PASSED [ 91%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[1::] PASSED [ 91%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[::ffff] PASSED [ 92%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[ffff::] PASSED [ 92%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[ffff::ffff] PASSED [ 93%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:1:2:3:4:5:6:7] PASSED [ 93%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[8:9:a:b:c:d:e:f] PASSED [ 93%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[0:0:0:0:0:0:0:01] PASSED [ 94%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str[ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff] PASSED [ 94%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[g:h:i:j:k:l:m:n] PASSED [ 94%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[0:0:0:0:0:0:0:0:0] PASSED [ 95%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[str_value2] PASSED [ 95%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[str_value3] PASSED [ 95%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[str_value4] PASSED [ 96%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[True] PASSED [ 96%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_is_not_valid_str[False] PASSED [ 97%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_valid_str_exception_on_empty_string PASSED [ 97%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_string_compaction[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210-fedc:ba98:7654:3210:fedc:ba98:7654:3210] PASSED [ 97%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_string_compaction[1080:0:0:0:8:800:200C:417A-1080::8:800:200c:417a] PASSED [ 98%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_string_compaction[FF01:0:0:0:0:0:0:43-ff01::43] PASSED [ 98%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_string_compaction[0:0:0:0:0:0:0:1-::1] PASSED [ 98%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_string_compaction[0:0:0:0:0:0:0:0-::] PASSED [ 99%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_mapped_and_compatible_ipv4_string_formatting PASSED [ 99%]
+netaddr/tests/strategy/test_ipv6_strategy.py::test_strategy_ipv6_str_to_int_behaviour_legacy_mode PASSED [100%]
+
+- generated xml file: /workdir/results/netaddr/0.8.0/1/graalpy-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-alpha-0 -----------
+Name                                              Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------------------------
+netaddr/__init__.py                                  19      1      4      1    91%   16
+netaddr/cli.py                                       25     25      2      0     0%   7-42
+netaddr/compat.py                                    47     23     30      2    49%   34->exit, 50-87, 92-93
+netaddr/contrib/__init__.py                           1      0      0      0   100%
+netaddr/contrib/subnet_splitter.py                   17      0      6      0   100%
+netaddr/core.py                                      73     21     22      2    69%   62-74, 89, 112-113, 122-124, 146->exit, 158-161, 186, 199-200, 203
+netaddr/eui/__init__.py                             367    109    130     29    66%   32, 37-39, 44, 88-90, 101, 105-108, 112-117, 181, 214-216, 257, 270, 274-277, 281-286, 329, 365-371, 375, 379, 386->389, 409-412, 423->437, 430->423, 431-433, 438, 443-446, 452, 470, 484->exit, 492->exit, 505->exit, 522-525, 530, 534-553, 557, 565-568, 577-580, 589-592, 600-605, 612-617, 624-629, 648, 723-727
+netaddr/eui/ieee.py                                 108     14     35      7    85%   64, 111, 143-144, 194, 226-227, 252-254, 259-264, 279, 290
+netaddr/fbsocket.py                                 145     73     98     14    49%   26, 61, 80, 84, 98-100, 104, 115-138, 148, 155, 162-204, 211-226, 230, 235-238, 242, 246
+netaddr/ip/__init__.py                              850    103    371     62    84%   34, 36, 47, 54, 71-72, 95-96, 107-108, 119-120, 131-132, 142->exit, 153->exit, 166->171, 167->171, 168->167, 172, 183->exit, 195-199, 263, 275, 278, 289->304, 292-293, 319, 339, 359->365, 368, 429, 445, 480, 485-487, 492, 557-563, 582-586, 587->594, 605-606, 644, 653, 740, 751-760, 777, 781, 784, 813->827, 824, 828-831, 939, 977, 983, 988, 990, 1055, 1058, 1102, 1104, 1123, 1125, 1154->1158, 1186->1196, 1194, 1219->1228, 1265, 1291, 1369, 1429-1439, 1477, 1488-1490, 1522, 1560, 1567-1568, 1571-1573, 1592, 1661, 1716-1717, 1734, 1766, 1771, 1846, 1875, 1902
+netaddr/ip/glob.py                                  137     20     66     14    83%   27, 35, 40, 44, 50, 52, 54, 61, 64, 80, 110, 145, 175, 230, 289, 293-294, 297, 308, 312
+netaddr/ip/iana.py                                  183     12     82      5    91%   86->88, 130, 177->181, 351->exit, 393-403, 415, 434->445
+netaddr/ip/nmap.py                                   64      3     44      3    94%   30, 55, 75
+netaddr/ip/rfc1924.py                                28      0     10      0   100%
+netaddr/ip/sets.py                                  350      4    174      6    98%   340->347, 347->exit, 451, 477, 489, 696->exit, 700
+netaddr/strategy/__init__.py                        113     28     54     19    71%   45, 48, 54, 73, 98, 122, 124->127, 128, 135-138, 155, 157->160, 189->194, 192, 208, 211, 216, 223-226, 243-252, 255, 271
+netaddr/strategy/eui48.py                           135     14     50      2    88%   149-150, 178, 195, 249-251, 267-269, 286-288, 296
+netaddr/strategy/eui64.py                           122     31     42      5    70%   136-137, 154-156, 168, 173, 188, 214-222, 226-228, 238-240, 244-246, 250-252, 256->258, 263-265, 273
+netaddr/strategy/ipv4.py                            103     19     48      8    77%   16, 91-107, 148, 197, 213, 218, 226->228, 256->275, 273, 276
+netaddr/strategy/ipv6.py                            106      9     26      2    92%   18, 24-25, 169-170, 221, 237, 245->247, 251, 259
+netaddr/tests/__init__.py                             0      0      0      0   100%
+netaddr/tests/core/__init__.py                        0      0      0      0   100%
+netaddr/tests/core/test_compat.py                    52      5      2      1    89%   24-29, 69, 71->exit
+netaddr/tests/core/test_pubsub.py                    21      0      2      0   100%
+netaddr/tests/eui/__init__.py                         0      0      0      0   100%
+netaddr/tests/eui/test_eui.py                       210      1      2      0    99%   31
+netaddr/tests/eui/test_ieee_parsers.py               41     14      8      0    63%   12-18, 23-29
+netaddr/tests/ip/__init__.py                          0      0      0      0   100%
+netaddr/tests/ip/test_cidr_v4.py                     49      0      4      0   100%
+netaddr/tests/ip/test_cidr_v6.py                     19      0      0      0   100%
+netaddr/tests/ip/test_dns.py                          5      0      0      0   100%
+netaddr/tests/ip/test_ip.py                           6      0      0      0   100%
+netaddr/tests/ip/test_ip_categories.py               36      0      0      0   100%
+netaddr/tests/ip/test_ip_comparisons.py              23      0      0      0   100%
+netaddr/tests/ip/test_ip_globs.py                    32      0      0      0   100%
+netaddr/tests/ip/test_ip_ranges.py                  111      0     12      0   100%
+netaddr/tests/ip/test_ip_rfc1924.py                  11      0      2      0   100%
+netaddr/tests/ip/test_ip_sets.py                    249      0     12      0   100%
+netaddr/tests/ip/test_ip_splitter.py                 25      0      2      0   100%
+netaddr/tests/ip/test_ip_v4.py                      268      2     26      1    99%   19->21, 428-429
+netaddr/tests/ip/test_ip_v4_v6_conversions.py        22      0      0      0   100%
+netaddr/tests/ip/test_ip_v6.py                       91      0      6      1    99%   15->17
+netaddr/tests/ip/test_network_ops.py                 16      0      0      0   100%
+netaddr/tests/ip/test_nmap.py                        40      0      2      0   100%
+netaddr/tests/ip/test_old_specs.py                   14      0      2      0   100%
+netaddr/tests/ip/test_platform_osx.py                17      5      4      0    67%   11-82
+netaddr/tests/ip/test_socket_module_fallback.py      13      0      6      0   100%
+netaddr/tests/strategy/__init__.py                    0      0      0      0   100%
+netaddr/tests/strategy/test_eui48_strategy.py        42      4      0      0    90%   27-30
+netaddr/tests/strategy/test_ipv4_strategy.py         54      4     12      0    94%   30-33
+netaddr/tests/strategy/test_ipv6_strategy.py         75      5     12      1    93%   29-32, 147
+netaddr/tests/test_netaddr.py                         7      0      0      0   100%
+---------------------------------------------------------------------------------------------
+TOTAL                                              4542    549   1410    185    85%
+Coverage HTML written to dir htmlcov
+Coverage XML written to file coverage.xml
+
+================== 265 passed, 9 skipped in 126.13s (0:02:06) ==================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

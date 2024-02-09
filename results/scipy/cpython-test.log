@@ -1,0 +1,23 @@
+.package create: /workdir/scipy-1.10.1/.tox/.package
+.package installdeps: meson-python>=0.11.0,<0.13.0, Cython>=0.29.32,<3.0, pybind11==2.10.1, pythran>=0.12.0,<0.13.0, wheel<0.39.0, numpy==1.19.5; python_version=='3.8' and platform_machine=='aarch64' and platform_python_implementation != 'PyPy', numpy==1.21.0; python_version=='3.8' and platform_machine=='arm64' and platform_system=='Darwin', numpy==1.21.0; python_version=='3.9' and platform_machine=='arm64' and platform_system=='Darwin', numpy==1.22.0; platform_machine=='loongarch64', numpy==1.22.3; python_version=='3.10' and platform_system=='Windows' and platform_python_implementation != 'PyPy', numpy==1.19.5; python_version=='3.8' and (platform_machine!='arm64' or platform_system!='Darwin') and platform_machine!='aarch64' and platform_machine!='loongarch64' and platform_python_implementation != 'PyPy', numpy==1.19.5; python_version=='3.9' and (platform_machine!='arm64' or platform_system!='Darwin') and platform_machine!='loongarch64' and platform_python_implementation != 'PyPy', numpy==1.21.6; python_version=='3.10' and (platform_system!='Windows' and platform_machine!='loongarch64') and platform_python_implementation != 'PyPy', numpy==1.23.2; python_version=='3.11' and platform_python_implementation != 'PyPy', numpy; python_version>='3.12', numpy; python_version>='3.8' and platform_python_implementation=='PyPy'
+ERROR: invocation failed (exit code 1), logfile: /workdir/scipy-1.10.1/.tox/.package/log/.package-3.log
+================================== log start ===================================
++ meson setup --prefix=/opt/graalpy /workdir/scipy-1.10.1 /workdir/scipy-1.10.1/.mesonpy-h3erqr99/build --native-file=/workdir/scipy-1.10.1/.mesonpy-native-file.ini -Ddebug=false -Doptimization=2
+The Meson build system
+Version: 1.0.0
+Source dir: /workdir/scipy-1.10.1
+Build dir: /workdir/scipy-1.10.1/.mesonpy-h3erqr99/build
+Build type: native build
+Project name: SciPy
+Project version: 1.10.1
+C compiler for the host machine: cc (gcc 8.5.0 "cc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+C linker for the host machine: cc ld.bfd 2.30-119
+C++ compiler for the host machine: c++ (gcc 8.5.0 "c++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18.0.6)")
+C++ linker for the host machine: c++ ld.bfd 2.30-119
+
+../../meson.build:1:0: ERROR: Cython compiler 'cython' cannot compile programs
+
+A full log can be found at /workdir/scipy-1.10.1/.mesonpy-h3erqr99/build/meson-logs/meson-log.txt
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError("/workdir/scipy-1.10.1/.tox/.package/bin/python /opt/graalpy/lib/python3.10/site-packages/tox/helper/build_isolated.py .tox/dist mesonpy '' ''", 1)

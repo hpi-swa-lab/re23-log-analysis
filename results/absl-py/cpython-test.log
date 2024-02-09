@@ -1,0 +1,106 @@
+GLOB sdist-make: /workdir/absl-py-1.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/absl-py-1.3.0/.tox/.tmp/package/1/absl-py-1.3.0.zip
+cpythonlibtest-unit-test-tests installed: absl-py @ file:///workdir/absl-py-1.3.0/.tox/.tmp/package/1/absl-py-1.3.0.zip#sha256=a2256a9569cad36a0fc7aaeb81bf58945b0e41702a1c3abf8cc23f6c6dedc415,exceptiongroup==1.1.3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='771226328'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/absl-py-1.3.0
+collecting ... collected 928 items / 1 error
+
+==================================== ERRORS ====================================
+__________ ERROR collecting absl/logging/tests/verbosity_flag_test.py __________
+Traceback (most recent call last):
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/absl-py-1.3.0/absl/logging/tests/verbosity_flag_test.py", line 36, in <module>
+    assert FLAGS['verbosity'].value == -1, (
+AssertionError: -v/--verbosity should be -1 before flags are parsed.
+assert -2 == -1
+ +  where -2 = <absl.logging._VerbosityFlag object at 0x7f9c085b5060>.value
+- generated xml file: /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR absl/logging/tests/verbosity_flag_test.py - AssertionError: -v/--verbos...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 1.46s ===============================
+ERROR: InvocationError for command /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed
+GLOB sdist-make: /workdir/absl-py-1.3.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/absl-py-1.3.0/.tox/.tmp/package/1/absl-py-1.3.0.zip
+cpythonlibtest-unit-test-tests installed: absl-py @ file:///workdir/absl-py-1.3.0/.tox/.tmp/package/1/absl-py-1.3.0.zip#sha256=ec3c288ad2708c4a8403d8ed5ad5ed20c20b66a9e62c8ddc4599b03bf6098393,exceptiongroup==1.1.3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3674218628'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/absl-py-1.3.0
+collecting ... collected 928 items / 1 error
+
+==================================== ERRORS ====================================
+__________ ERROR collecting absl/logging/tests/verbosity_flag_test.py __________
+Traceback (most recent call last):
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in <lambda>
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "/workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/absl-py-1.3.0/absl/logging/tests/verbosity_flag_test.py", line 36, in <module>
+    assert FLAGS['verbosity'].value == -1, (
+AssertionError: -v/--verbosity should be -1 before flags are parsed.
+assert -2 == -1
+ +  where -2 = <absl.logging._VerbosityFlag object at 0x7f1576a71060>.value
+- generated xml file: /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR absl/logging/tests/verbosity_flag_test.py - AssertionError: -v/--verbos...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 1.39s ===============================
+ERROR: InvocationError for command /workdir/absl-py-1.3.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/absl-py/1.3.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

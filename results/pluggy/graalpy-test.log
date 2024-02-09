@@ -1,0 +1,102 @@
+GLOB sdist-make: /workdir/pluggy-1.0.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/pluggy-1.0.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/pluggy-1.0.0/.tox/.tmp/package/1/pluggy-1.0.0.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy @ file:///workdir/pluggy-1.0.0/.tox/.tmp/package/1/pluggy-1.0.0.zip,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='917735645'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pluggy/1.0.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.0.0 -- /workdir/pluggy-1.0.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pluggy-1.0.0
+configfile: tox.ini
+testpaths: testing
+collecting ... collected 81 items
+
+testing/test_details.py::test_parse_hookimpl_override PASSED             [  1%]
+testing/test_details.py::test_warn_when_deprecated_specified PASSED      [  2%]
+testing/test_details.py::test_plugin_getattr_raises_errors PASSED        [  3%]
+testing/test_details.py::test_warning_on_call_vs_hookspec_arg_mismatch PASSED [  4%]
+testing/test_details.py::test_repr PASSED                                [  6%]
+testing/test_helpers.py::test_varnames PASSED                            [  7%]
+testing/test_helpers.py::test_varnames_default PASSED                    [  8%]
+testing/test_helpers.py::test_varnames_class PASSED                      [  9%]
+testing/test_helpers.py::test_varnames_keyword_only PASSED               [ 11%]
+testing/test_helpers.py::test_formatdef PASSED                           [ 12%]
+testing/test_hookcaller.py::test_adding_nonwrappers PASSED               [ 13%]
+testing/test_hookcaller.py::test_adding_nonwrappers_trylast PASSED       [ 14%]
+testing/test_hookcaller.py::test_adding_nonwrappers_trylast3 PASSED      [ 16%]
+testing/test_hookcaller.py::test_adding_nonwrappers_trylast2 PASSED      [ 17%]
+testing/test_hookcaller.py::test_adding_nonwrappers_tryfirst PASSED      [ 18%]
+testing/test_hookcaller.py::test_adding_wrappers_ordering PASSED         [ 19%]
+testing/test_hookcaller.py::test_adding_wrappers_ordering_tryfirst PASSED [ 20%]
+testing/test_hookcaller.py::test_hookspec PASSED                         [ 22%]
+testing/test_hookcaller.py::test_hookimpl[True-hookwrapper] PASSED       [ 23%]
+testing/test_hookcaller.py::test_hookimpl[True-optionalhook] PASSED      [ 24%]
+testing/test_hookcaller.py::test_hookimpl[True-tryfirst] PASSED          [ 25%]
+testing/test_hookcaller.py::test_hookimpl[True-trylast] PASSED           [ 27%]
+testing/test_hookcaller.py::test_hookimpl[False-hookwrapper] PASSED      [ 28%]
+testing/test_hookcaller.py::test_hookimpl[False-optionalhook] PASSED     [ 29%]
+testing/test_hookcaller.py::test_hookimpl[False-tryfirst] PASSED         [ 30%]
+testing/test_hookcaller.py::test_hookimpl[False-trylast] PASSED          [ 32%]
+testing/test_hookcaller.py::test_hookrelay_registry PASSED               [ 33%]
+testing/test_hookcaller.py::test_hookrelay_registration_by_specname PASSED [ 34%]
+testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises PASSED [ 35%]
+testing/test_invocations.py::test_argmismatch PASSED                     [ 37%]
+testing/test_invocations.py::test_only_kwargs PASSED                     [ 38%]
+testing/test_invocations.py::test_opt_in_args PASSED                     [ 39%]
+testing/test_invocations.py::test_call_order PASSED                      [ 40%]
+testing/test_invocations.py::test_firstresult_definition PASSED          [ 41%]
+testing/test_invocations.py::test_firstresult_force_result PASSED        [ 43%]
+testing/test_invocations.py::test_firstresult_returns_none PASSED        [ 44%]
+testing/test_invocations.py::test_firstresult_no_plugin PASSED           [ 45%]
+testing/test_multicall.py::test_keyword_args PASSED                      [ 46%]
+testing/test_multicall.py::test_keyword_args_with_defaultargs PASSED     [ 48%]
+testing/test_multicall.py::test_tags_call_error PASSED                   [ 49%]
+testing/test_multicall.py::test_call_none_is_no_result PASSED            [ 50%]
+testing/test_multicall.py::test_hookwrapper PASSED                       [ 51%]
+testing/test_multicall.py::test_hookwrapper_order PASSED                 [ 53%]
+testing/test_multicall.py::test_hookwrapper_not_yield PASSED             [ 54%]
+testing/test_multicall.py::test_hookwrapper_too_many_yield PASSED        [ 55%]
+testing/test_multicall.py::test_hookwrapper_exception[ValueError] PASSED [ 56%]
+testing/test_multicall.py::test_hookwrapper_exception[SystemExit] PASSED [ 58%]
+testing/test_pluginmanager.py::test_plugin_double_register PASSED        [ 59%]
+testing/test_pluginmanager.py::test_pm PASSED                            [ 60%]
+testing/test_pluginmanager.py::test_has_plugin PASSED                    [ 61%]
+testing/test_pluginmanager.py::test_register_dynamic_attr[spec-is-class] PASSED [ 62%]
+testing/test_pluginmanager.py::test_register_dynamic_attr[spec-is-instance] PASSED [ 64%]
+testing/test_pluginmanager.py::test_pm_name PASSED                       [ 65%]
+testing/test_pluginmanager.py::test_set_blocked PASSED                   [ 66%]
+testing/test_pluginmanager.py::test_register_mismatch_method[spec-is-class] PASSED [ 67%]
+testing/test_pluginmanager.py::test_register_mismatch_method[spec-is-instance] PASSED [ 69%]
+testing/test_pluginmanager.py::test_register_mismatch_arg[spec-is-class] PASSED [ 70%]
+testing/test_pluginmanager.py::test_register_mismatch_arg[spec-is-instance] PASSED [ 71%]
+testing/test_pluginmanager.py::test_register_hookwrapper_not_a_generator_function[spec-is-class] PASSED [ 72%]
+testing/test_pluginmanager.py::test_register_hookwrapper_not_a_generator_function[spec-is-instance] PASSED [ 74%]
+testing/test_pluginmanager.py::test_register PASSED                      [ 75%]
+testing/test_pluginmanager.py::test_register_unknown_hooks PASSED        [ 76%]
+testing/test_pluginmanager.py::test_register_historic PASSED             [ 77%]
+testing/test_pluginmanager.py::test_with_result_memorized[True] PASSED   [ 79%]
+testing/test_pluginmanager.py::test_with_result_memorized[False] PASSED  [ 80%]
+testing/test_pluginmanager.py::test_with_callbacks_immediately_executed PASSED [ 81%]
+testing/test_pluginmanager.py::test_register_historic_incompat_hookwrapper PASSED [ 82%]
+testing/test_pluginmanager.py::test_call_extra PASSED                    [ 83%]
+testing/test_pluginmanager.py::test_call_with_too_few_args PASSED        [ 85%]
+testing/test_pluginmanager.py::test_subset_hook_caller PASSED            [ 86%]
+testing/test_pluginmanager.py::test_get_hookimpls PASSED                 [ 87%]
+testing/test_pluginmanager.py::test_add_hookspecs_nohooks PASSED         [ 88%]
+testing/test_pluginmanager.py::test_load_setuptools_instantiation PASSED [ 90%]
+testing/test_pluginmanager.py::test_add_tracefuncs[spec-is-class] PASSED [ 91%]
+testing/test_pluginmanager.py::test_add_tracefuncs[spec-is-instance] PASSED [ 92%]
+testing/test_pluginmanager.py::test_hook_tracing[spec-is-class] PASSED   [ 93%]
+testing/test_pluginmanager.py::test_hook_tracing[spec-is-instance] PASSED [ 95%]
+testing/test_tracer.py::test_simple PASSED                               [ 96%]
+testing/test_tracer.py::test_indent PASSED                               [ 97%]
+testing/test_tracer.py::test_readable_output_dictargs PASSED             [ 98%]
+testing/test_tracer.py::test_setprocessor PASSED                         [100%]
+
+- generated xml file: /workdir/results/pluggy/1.0.0/1/graalpy-test-results.xml -
+============================== 81 passed in 2.09s ==============================
+___________________________________ summary ____________________________________
+  graalpylibtest-unit-test-tests: commands succeeded
+  congratulations :)

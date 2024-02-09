@@ -1,0 +1,101 @@
+Collecting oci==2.104.3
+  Downloading oci-2.104.3-py3-none-any.whl (20.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.3/20.3 MB 2.2 MB/s eta 0:00:00
+Collecting certifi
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Collecting cryptography<40.0.0,>=3.2.1
+  Using cached cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyOpenSSL<24.0.0,>=17.5.0
+  Downloading pyOpenSSL-21.0.0-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 1.1 MB/s eta 0:00:00
+Collecting python-dateutil<3.0.0,>=2.5.3
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2016.10
+  Using cached pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+Collecting circuitbreaker<2.0.0,>=1.3.1
+  Downloading circuitbreaker-1.4.0.tar.gz (9.7 kB)
+Looking for GraalPy patches for circuitbreaker
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cffi>=1.12
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting six>=1.5.2
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: circuitbreaker
+  Building wheel for circuitbreaker (setup.py): started
+  Building wheel for circuitbreaker (setup.py): finished with status 'done'
+  Created wheel for circuitbreaker: filename=circuitbreaker-1.4.0-py3-none-any.whl size=7518 sha256=c36267c008da7016b6b8b89d919039de92ab1865981d4a43d24e6a73a0952a7a
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/c6/8c/ca/9d48a62177ce15a9694382450f7eb185ded7558812016901ee
+Successfully built circuitbreaker
+Installing collected packages: pytz, circuitbreaker, six, pycparser, certifi, python-dateutil, cffi, cryptography, pyOpenSSL, oci
+Looking for GraalPy patches for pytz
+Patching package pytz using /opt/graalpy/lib/graalpy23.1/patches/pytz/pytz-2022.2.1.patch
+Looking for GraalPy patches for circuitbreaker
+Looking for GraalPy patches for six
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for certifi
+Looking for GraalPy patches for python_dateutil
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for cryptography
+Patching package cryptography using /opt/graalpy/lib/graalpy23.1/patches/cryptography/cryptography-3.4.7.patch
+can't find file to patch at input line 14
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|From 48c48e16800c6331598aa63849873f121122a3b0 Mon Sep 17 00:00:00 2001
+|From: Michael Simacek <michael.simacek@oracle.com>
+|Date: Mon, 24 Jan 2022 10:09:39 +0100
+|Subject: [PATCH] Disable rust
+|
+|---
+| setup.py | 2 +-
+| 1 file changed, 1 insertion(+), 1 deletion(-)
+|
+|diff --git a/setup.py b/setup.py
+|index 74f69e7..f24c626 100644
+|--- a/setup.py
+|+++ b/setup.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cryptography. The package may still work.
+Looking for GraalPy patches for pyOpenSSL
+Looking for GraalPy patches for oci
+Successfully installed certifi-2023.11.17 cffi-1.15.1 circuitbreaker-1.4.0 cryptography-3.4.7 oci-2.104.3 pyOpenSSL-21.0.0 pycparser-2.21 python-dateutil-2.8.2 pytz-2022.2.1 six-1.16.0

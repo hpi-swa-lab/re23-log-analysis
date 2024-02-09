@@ -1,0 +1,114 @@
+Collecting azure-identity==1.12.0
+  Downloading azure_identity-1.12.0-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.5/135.5 kB 4.5 MB/s eta 0:00:00
+Collecting azure-core<2.0.0,>=1.11.0
+  Downloading azure_core-1.29.5-py3-none-any.whl (192 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 192.4/192.4 kB 6.2 MB/s eta 0:00:00
+Collecting cryptography>=2.5
+  Using cached cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting msal<2.0.0,>=1.12.0
+  Downloading msal-1.25.0-py2.py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.7/97.7 kB 4.3 MB/s eta 0:00:00
+Collecting msal-extensions<2.0.0,>=0.3.0
+  Downloading msal_extensions-1.0.0-py2.py3-none-any.whl (19 kB)
+Collecting six>=1.12.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting requests>=2.18.4
+  Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting typing-extensions>=4.6.0
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting cffi>=1.12
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting PyJWT[crypto]<3,>=1.0.0
+  Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+Collecting portalocker<3,>=1.0
+  Downloading portalocker-2.8.2-py3-none-any.whl (17 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-py3-none-any.whl (46 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting urllib3<3,>=1.21.1
+  Using cached urllib3-2.1.0-py3-none-any.whl (104 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Installing collected packages: urllib3, typing-extensions, six, PyJWT, pycparser, portalocker, idna, charset-normalizer, certifi, requests, cffi, cryptography, azure-core, msal, msal-extensions, azure-identity
+Looking for GraalPy patches for urllib3
+Looking for GraalPy patches for typing_extensions
+Looking for GraalPy patches for six
+Looking for GraalPy patches for PyJWT
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for portalocker
+Looking for GraalPy patches for idna
+Looking for GraalPy patches for charset_normalizer
+Patching package charset_normalizer using /opt/graalpy/lib/graalpy23.1/patches/charset_normalizer/charset_normalizer-3.1.0.patch
+patching file charset_normalizer/utils.py
+Hunk #1 succeeded at 7 with fuzz 2 (offset -4 lines).
+Hunk #2 succeeded at 258 with fuzz 2 (offset 11 lines).
+Looking for GraalPy patches for certifi
+Looking for GraalPy patches for requests
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for cryptography
+Patching package cryptography using /opt/graalpy/lib/graalpy23.1/patches/cryptography/cryptography-3.4.7.patch
+can't find file to patch at input line 14
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|From 48c48e16800c6331598aa63849873f121122a3b0 Mon Sep 17 00:00:00 2001
+|From: Michael Simacek <michael.simacek@oracle.com>
+|Date: Mon, 24 Jan 2022 10:09:39 +0100
+|Subject: [PATCH] Disable rust
+|
+|---
+| setup.py | 2 +-
+| 1 file changed, 1 insertion(+), 1 deletion(-)
+|
+|diff --git a/setup.py b/setup.py
+|index 74f69e7..f24c626 100644
+|--- a/setup.py
+|+++ b/setup.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cryptography. The package may still work.
+Looking for GraalPy patches for azure_core
+Looking for GraalPy patches for msal
+Looking for GraalPy patches for msal_extensions
+Looking for GraalPy patches for azure_identity
+Successfully installed PyJWT-2.8.0 azure-core-1.29.5 azure-identity-1.12.0 certifi-2023.11.17 cffi-1.15.1 charset-normalizer-3.1.0 cryptography-3.4.7 idna-3.4 msal-1.25.0 msal-extensions-1.0.0 portalocker-2.8.2 pycparser-2.21 requests-2.31.0 six-1.16.0 typing-extensions-4.8.0 urllib3-2.1.0

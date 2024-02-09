@@ -1,0 +1,116 @@
+.package create: /workdir/aiofiles-22.1.0/.tox/.package
+.package installdeps: poetry-core>=1.0.0
+cpythonlibtest-unit-test-tests create: /workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest_requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiofiles-22.1.0/.tox/.tmp/package/1/aiofiles-22.1.0.tar.gz
+cpythonlibtest-unit-test-tests installed: aiofiles @ file:///workdir/aiofiles-22.1.0/.tox/.tmp/package/1/aiofiles-22.1.0.tar.gz#sha256=565cb4be5f527437a9026f7706ee6bf2bf1e9d6dff4a6c353bbf4860922e7e9d,atomicwrites==1.4.1,attrs==23.1.0,coverage==4.5.1,mock==5.1.0,more-itertools==10.1.0,pluggy==1.3.0,py==1.11.0,pytest==3.7.1,pytest-asyncio==0.9.0,pytest-cov==2.5.1,six==1.16.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1086259621'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aiofiles/22.1.0/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 939, in _find_spec
+AttributeError: 'AssertionRewritingHook' object has no attribute 'find_spec'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 8, in <module>
+    sys.exit(main())
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 55, in main
+    config = _prepareconfig(args, plugins)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 179, in _prepareconfig
+    return pluginmanager.hook.pytest_cmdline_parse(
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 130, in _multicall
+    teardown[0].send(outcome)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/helpconfig.py", line 89, in pytest_cmdline_parse
+    config = outcome.get_result()
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 612, in pytest_cmdline_parse
+    self.parse(args)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 777, in parse
+    self._preparse(args, addopts=addopts)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 729, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 398, in load_setuptools_entrypoints
+    plugin = ep.load()
+  File "/usr/local/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
+    module = import_module(match.group('module'))
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 941, in _find_spec
+  File "<frozen importlib._bootstrap>", line 915, in _find_spec_legacy
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 149, in find_module
+    source_stat, co = _rewrite_test(self.config, fn_pypath)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 344, in _rewrite_test
+    co = compile(tree, fn.strpath, "exec", dont_inherit=True)
+TypeError: required field "lineno" missing from alias
+ERROR: InvocationError for command /workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/aiofiles/22.1.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed
+.package create: /workdir/aiofiles-22.1.0/.tox/.package
+.package installdeps: poetry-core>=1.0.0
+cpythonlibtest-unit-test-tests create: /workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest_requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiofiles-22.1.0/.tox/.tmp/package/1/aiofiles-22.1.0.tar.gz
+cpythonlibtest-unit-test-tests installed: aiofiles @ file:///workdir/aiofiles-22.1.0/.tox/.tmp/package/1/aiofiles-22.1.0.tar.gz#sha256=565cb4be5f527437a9026f7706ee6bf2bf1e9d6dff4a6c353bbf4860922e7e9d,atomicwrites==1.4.1,attrs==23.1.0,coverage==4.5.1,mock==5.1.0,more-itertools==10.1.0,pluggy==1.3.0,py==1.11.0,pytest==3.7.1,pytest-asyncio==0.9.0,pytest-cov==2.5.1,six==1.16.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='411787694'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/aiofiles/22.1.0/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 939, in _find_spec
+AttributeError: 'AssertionRewritingHook' object has no attribute 'find_spec'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest", line 8, in <module>
+    sys.exit(main())
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 55, in main
+    config = _prepareconfig(args, plugins)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 179, in _prepareconfig
+    return pluginmanager.hook.pytest_cmdline_parse(
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 130, in _multicall
+    teardown[0].send(outcome)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/helpconfig.py", line 89, in pytest_cmdline_parse
+    config = outcome.get_result()
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 612, in pytest_cmdline_parse
+    self.parse(args)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 777, in parse
+    self._preparse(args, addopts=addopts)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py", line 729, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 398, in load_setuptools_entrypoints
+    plugin = ep.load()
+  File "/usr/local/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
+    module = import_module(match.group('module'))
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 941, in _find_spec
+  File "<frozen importlib._bootstrap>", line 915, in _find_spec_legacy
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 149, in find_module
+    source_stat, co = _rewrite_test(self.config, fn_pypath)
+  File "/workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 344, in _rewrite_test
+    co = compile(tree, fn.strpath, "exec", dont_inherit=True)
+TypeError: required field "lineno" missing from alias
+ERROR: InvocationError for command /workdir/aiofiles-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/aiofiles/22.1.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

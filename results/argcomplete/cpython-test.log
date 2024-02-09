@@ -1,0 +1,34 @@
+GLOB sdist-make: /workdir/argcomplete-2.0.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/argcomplete-2.0.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/argcomplete-2.0.0/.tox/.tmp/package/1/argcomplete-2.0.0.zip
+cpythonlibtest-unit-test-tests installed: argcomplete @ file:///workdir/argcomplete-2.0.0/.tox/.tmp/package/1/argcomplete-2.0.0.zip#sha256=4fa351582d0d321b416a1510271a8e9456af42074e38a2a2292ad53ecc529207,lxml==4.9.3,mock==5.1.0,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2598541912'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/argcomplete-2.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/argcomplete/2.0.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+E
+======================================================================
+ERROR [0.003s]: test.test (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test.test
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/argcomplete-2.0.0/test/test.py", line 7, in <module>
+    import pexpect, pexpect.replwrap
+ModuleNotFoundError: No module named 'pexpect'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/argcomplete-2.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/argcomplete/2.0.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

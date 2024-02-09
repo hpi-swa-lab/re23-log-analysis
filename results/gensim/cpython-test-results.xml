@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="unittest.loader._FailedTest-20231121222044" tests="1" file="unittest/loader.py" time="0.004" timestamp="2023-11-21T22:20:44" failures="0" errors="1" skipped="0">
+		<testcase classname="unittest.loader._FailedTest" name="gensim" time="0.004" timestamp="2023-11-21T22:20:44" file="/usr/local/lib/python3.10/unittest/loader.py" line="33">
+			<error type="ImportError" message="Failed to import test module: gensim
+Traceback (most recent call last):
+  File &quot;/workdir/gensim-4.2.0/gensim/matutils.py&quot;, line 1353, in &lt;module&gt;
+    from gensim.corpora._mmreader import MmReader  # noqa: F401
+ModuleNotFoundError: No module named 'gensim.corpora._mmreader'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;/workdir/gensim-4.2.0/gensim/__init__.py&quot;, line 11, in &lt;module&gt;
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, utils  # noqa:F401
+  File &quot;/workdir/gensim-4.2.0/gensim/corpora/__init__.py&quot;, line 6, in &lt;module&gt;
+    from .indexedcorpus import IndexedCorpus  # noqa:F401 must appear before the other classes
+  File &quot;/workdir/gensim-4.2.0/gensim/corpora/indexedcorpus.py&quot;, line 14, in &lt;module&gt;
+    from gensim import interfaces, utils
+  File &quot;/workdir/gensim-4.2.0/gensim/interfaces.py&quot;, line 19, in &lt;module&gt;
+    from gensim import utils, matutils
+  File &quot;/workdir/gensim-4.2.0/gensim/matutils.py&quot;, line 1355, in &lt;module&gt;
+    raise utils.NO_CYTHON
+RuntimeError: Compiled extensions are unavailable. If you've installed from a package, ask the package maintainer to include compiled extensions. If you're building Gensim from source yourself, install Cython and a C compiler, and then run `python setup.py build_ext --inplace` to retry. 
+"><![CDATA[ImportError: Failed to import test module: gensim
+Traceback (most recent call last):
+  File "/workdir/gensim-4.2.0/gensim/matutils.py", line 1353, in <module>
+    from gensim.corpora._mmreader import MmReader  # noqa: F401
+ModuleNotFoundError: No module named 'gensim.corpora._mmreader'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/gensim-4.2.0/gensim/__init__.py", line 11, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, utils  # noqa:F401
+  File "/workdir/gensim-4.2.0/gensim/corpora/__init__.py", line 6, in <module>
+    from .indexedcorpus import IndexedCorpus  # noqa:F401 must appear before the other classes
+  File "/workdir/gensim-4.2.0/gensim/corpora/indexedcorpus.py", line 14, in <module>
+    from gensim import interfaces, utils
+  File "/workdir/gensim-4.2.0/gensim/interfaces.py", line 19, in <module>
+    from gensim import utils, matutils
+  File "/workdir/gensim-4.2.0/gensim/matutils.py", line 1355, in <module>
+    raise utils.NO_CYTHON
+RuntimeError: Compiled extensions are unavailable. If you've installed from a package, ask the package maintainer to include compiled extensions. If you're building Gensim from source yourself, install Cython and a C compiler, and then run `python setup.py build_ext --inplace` to retry. 
+
+]]></error>
+		</testcase>
+	</testsuite>
+</testsuites>

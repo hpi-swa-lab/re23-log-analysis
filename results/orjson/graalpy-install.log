@@ -1,0 +1,54 @@
+Collecting orjson==3.8.3
+  Downloading orjson-3.8.3.tar.gz (861 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 861.2/861.2 kB 5.8 MB/s eta 0:00:00
+Looking for GraalPy patches for orjson
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [29 lines of output]
+      Checking for Rust toolchain....
+      Running `maturin pep517 write-dist-info --metadata-directory /tmp/pip-modern-metadata-rmh7d6z7 --interpreter /workdir/install-virtualenv/bin/graalpy`
+       Downloading crates ...
+        Downloaded target-lexicon v0.12.5
+        Downloaded pyo3-ffi v0.17.3
+        Downloaded arrayvec v0.7.2
+        Downloaded beef v0.5.2
+        Downloaded castaway v0.2.2
+        Downloaded pyo3-build-config v0.17.3
+        Downloaded bytecount v0.6.3
+        Downloaded once_cell v1.16.0
+        Downloaded compact_str v0.6.1
+        Downloaded ahash v0.8.2
+        Downloaded itoa v1.0.4
+        Downloaded simdutf8 v0.1.4
+        Downloaded associative-cache v1.0.1
+        Downloaded cc v1.0.77
+        Downloaded ryu v1.0.11
+        Downloaded serde v1.0.148
+        Downloaded chrono v0.4.23
+        Downloaded rustversion v1.0.9
+        Downloaded libc v0.2.137
+        Downloaded encoding_rs v0.8.31
+      📦 Including license file "/tmp/pip-install-s5nlvt18/orjson_2dc086bd57ba4123bf1a6b084a020294/LICENSE-APACHE"
+      📦 Including license file "/tmp/pip-install-s5nlvt18/orjson_2dc086bd57ba4123bf1a6b084a020294/LICENSE-MIT"
+      🔗 Found pyo3-ffi bindings
+      💥 maturin failed
+        Caused by: Unsupported Python interpreter: /workdir/install-virtualenv/bin/graalpy
+      Error running maturin: Command '['maturin', 'pep517', 'write-dist-info', '--metadata-directory', '/tmp/pip-modern-metadata-rmh7d6z7', '--interpreter', '/workdir/install-virtualenv/bin/graalpy']' returned non-zero exit status 1.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

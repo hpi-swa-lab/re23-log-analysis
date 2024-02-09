@@ -1,0 +1,609 @@
+GLOB sdist-make: /workdir/python-multipart-0.0.5/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/python-multipart-0.0.5/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/python-multipart-0.0.5/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting unittest-xml-reporting
+  Using cached unittest_xml_reporting-3.2.0-py2.py3-none-any.whl (20 kB)
+Collecting atomicwrites==1.2.1 (from -r requirements.txt (line 1))
+  Downloading atomicwrites-1.2.1-py2.py3-none-any.whl (5.9 kB)
+Collecting attrs==18.2.0 (from -r requirements.txt (line 2))
+  Downloading attrs-18.2.0-py2.py3-none-any.whl (34 kB)
+Collecting coverage==4.5.1 (from -r requirements.txt (line 3))
+  Downloading coverage-4.5.1.tar.gz (379 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.7/379.7 kB 6.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting mock
+  Downloading mock-2.0.0-py2.py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.8/56.8 kB 4.8 MB/s eta 0:00:00
+Collecting more-itertools==4.3.0 (from -r requirements.txt (line 5))
+  Downloading more_itertools-4.3.0-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.5/48.5 kB 8.1 MB/s eta 0:00:00
+Collecting pbr==4.3.0 (from -r requirements.txt (line 6))
+  Downloading pbr-4.3.0-py2.py3-none-any.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.6/106.6 kB 7.2 MB/s eta 0:00:00
+Collecting pluggy==0.7.1 (from -r requirements.txt (line 7))
+  Downloading pluggy-0.7.1-py2.py3-none-any.whl (14 kB)
+Collecting py==1.6.0 (from -r requirements.txt (line 8))
+  Downloading py-1.6.0-py2.py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.9/83.9 kB 13.4 MB/s eta 0:00:00
+Collecting pytest==3.8.2 (from -r requirements.txt (line 9))
+  Downloading pytest-3.8.2-py2.py3-none-any.whl (209 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.9/209.9 kB 8.0 MB/s eta 0:00:00
+Collecting PyYAML==3.13 (from -r requirements.txt (line 10))
+  Downloading PyYAML-3.13.tar.gz (270 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.6/270.6 kB 13.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting six==1.11.0 (from -r requirements.txt (line 11))
+  Downloading six-1.11.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: setuptools in ./.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages (from pytest==3.8.2->-r requirements.txt (line 9)) (68.2.2)
+Collecting lxml (from unittest-xml-reporting)
+  Using cached lxml-4.9.3-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Using cached lxml-4.9.3-cp310-cp310-manylinux_2_28_x86_64.whl (7.9 MB)
+Building wheels for collected packages: coverage, PyYAML
+  Building wheel for coverage (setup.py): started
+  Building wheel for coverage (setup.py): finished with status 'done'
+  Created wheel for coverage: filename=coverage-4.5.1-cp310-cp310-linux_x86_64.whl size=211636 sha256=c5c0d9e1f1742553ede9d06f586ff5be83f1d5991b0f51b04ffa6e5b97874747
+  Stored in directory: /workdir/.cache/pip/wheels/03/db/7f/1245b00a7b1db19aa0807ecb9bbf1fe18b4591ef85d1629528
+  Building wheel for PyYAML (setup.py): started
+  Building wheel for PyYAML (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [538 lines of output]
+      In file included from ext/_yaml.c:565:
+      ext/_yaml.h:10: warning: "PyString_CheckExact" redefined
+       #define PyString_CheckExact PyBytes_CheckExact
+      
+      ext/_yaml.c:455: note: this is the location of the previous definition
+         #define PyString_CheckExact          PyUnicode_CheckExact
+      
+      ext/_yaml.c: In function ‘__pyx_pf_5_yaml_get_version_string’:
+      ext/_yaml.c:1818:17: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         __pyx_v_value = yaml_get_version_string();
+                       ^
+      ext/_yaml.c: In function ‘__pyx_pf_5_yaml_7CParser___init__’:
+      ext/_yaml.c:3318:52: warning: passing argument 2 of ‘yaml_parser_set_input’ from incompatible pointer type [-Wincompatible-pointer-types]
+           yaml_parser_set_input((&__pyx_v_self->parser), __pyx_f_5_yaml_input_handler, ((void *)__pyx_v_self));
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:1368:30: note: expected ‘int (*)(void *, unsigned char *, size_t,  size_t *)’ {aka ‘int (*)(void *, unsigned char *, long unsigned int,  long unsigned int *)’} but argument is of type ‘int (*)(void *, char *, size_t,  size_t *)’ {aka ‘int (*)(void *, char *, long unsigned int,  long unsigned int *)’}
+               yaml_read_handler_t *handler, void *data);
+               ~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/bytesobject.h:62,
+                       from /usr/local/include/python3.10/Python.h:82,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/bytesobject.h:32:57: warning: pointer targets in passing argument 2 of ‘yaml_parser_set_input_string’ differ in signedness [-Wpointer-sign]
+       #define PyBytes_AS_STRING(op) (assert(PyBytes_Check(op)), \
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+                                       (((PyBytesObject *)(op))->ob_sval))
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.h:11:29: note: in expansion of macro ‘PyBytes_AS_STRING’
+       #define PyString_AS_STRING  PyBytes_AS_STRING
+                                   ^~~~~~~~~~~~~~~~~
+      ext/_yaml.c:3559:59: note: in expansion of macro ‘PyString_AS_STRING’
+           yaml_parser_set_input_string((&__pyx_v_self->parser), PyString_AS_STRING(__pyx_v_stream), PyString_GET_SIZE(__pyx_v_stream));
+                                                                 ^~~~~~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:1341:1: note: expected ‘const unsigned char *’ but argument is of type ‘char *’
+       yaml_parser_set_input_string(yaml_parser_t *parser,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__token_to_object’:
+      ext/_yaml.c:5457:71: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.handle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 417, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:5469:71: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.prefix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:6583:63: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.alias.value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:6675:64: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.anchor.value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:6767:61: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.handle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 454, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:6779:61: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.suffix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:6911:64: warning: pointer targets in passing argument 1 of ‘PyUnicode_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_token->data.scalar.value, __pyx_v_token->data.scalar.length, ((char *)"strict")); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 460, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:454:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__event_to_object’:
+      ext/_yaml.c:8664:63: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+               __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->handle); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 574, __pyx_L1_error)
+                                                ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:8676:63: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+               __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->prefix); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 575, __pyx_L1_error)
+                                                ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:8935:63: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.alias.anchor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 586, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9047:66: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.anchor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 591, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9088:66: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.tag); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 594, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9109:64: warning: pointer targets in passing argument 1 of ‘PyUnicode_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_DecodeUTF8(__pyx_v_event->data.scalar.value, __pyx_v_event->data.scalar.length, ((char *)"strict")); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 595, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:454:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9490:74: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.anchor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 620, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9531:74: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.tag); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 623, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9779:73: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.anchor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 637, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:9820:73: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.tag); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 640, __pyx_L1_error)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_node’:
+      ext/_yaml.c:11517:75: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.alias.anchor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 734, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:11837:76: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.anchor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 750, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:11893:84: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.anchor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 753, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:11949:83: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.anchor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 756, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_scalar_node’:
+      ext/_yaml.c:12626:74: warning: pointer targets in passing argument 1 of ‘PyUnicode_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_self->parsed_event.data.scalar.value, __pyx_v_self->parsed_event.data.scalar.length, ((char *)"strict")); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 791, __pyx_L1_error)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:454:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:12849:76: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.tag); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 804, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_sequence_node’:
+      ext/_yaml.c:13419:84: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.tag); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 837, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_mapping_node’:
+      ext/_yaml.c:14052:83: warning: pointer targets in passing argument 1 of ‘PyUnicode_FromString’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.tag); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 876, __pyx_L1_error)
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      In file included from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/unicodeobject.h:137:23: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’ {aka ‘unsigned char *’}
+       PyAPI_FUNC(PyObject*) PyUnicode_FromString(
+                             ^~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_input_handler’:
+      ext/_yaml.c:14903:87: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+         __pyx_t_3 = (((__pyx_v_parser->stream_cache_len - __pyx_v_parser->stream_cache_pos) < __pyx_v_size) != 0);
+                                                                                             ^
+      ext/_yaml.c: In function ‘__pyx_pf_5_yaml_8CEmitter___init__’:
+      ext/_yaml.c:15423:53: warning: passing argument 2 of ‘yaml_emitter_set_output’ from incompatible pointer type [-Wincompatible-pointer-types]
+         yaml_emitter_set_output((&__pyx_v_self->emitter), __pyx_f_5_yaml_output_handler, ((void *)__pyx_v_self));
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:1830:31: note: expected ‘int (*)(void *, unsigned char *, size_t)’ {aka ‘int (*)(void *, unsigned char *, long unsigned int)’} but argument is of type ‘int (*)(void *, char *, size_t)’ {aka ‘int (*)(void *, char *, long unsigned int)’}
+               yaml_write_handler_t *handler, void *data);
+               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_8CEmitter__object_to_event’:
+      ext/_yaml.c:16813:44: warning: pointer targets in assignment from ‘char *’ to ‘yaml_char_t *’ {aka ‘unsigned char *’} differ in signedness [-Wpointer-sign]
+               __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                                  ^
+      ext/_yaml.c:16928:44: warning: pointer targets in assignment from ‘char *’ to ‘yaml_char_t *’ {aka ‘unsigned char *’} differ in signedness [-Wpointer-sign]
+               __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                                  ^
+      ext/_yaml.c:17265:62: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_alias_event_initialize(__pyx_v_event, __pyx_v_anchor) == 0) != 0);
+                                                                    ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:553:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:17980:63: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                     ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:17980:79: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                                     ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:17980:92: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                                                  ^~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:18414:71: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+                                                                             ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_sequence_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:18414:87: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+                                                                                             ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_sequence_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:18848:70: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+                                                                            ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_mapping_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:18848:86: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+                                                                                            ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_mapping_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_pf_5_yaml_8CEmitter_12serialize’:
+      ext/_yaml.c:20317:42: warning: pointer targets in assignment from ‘char *’ to ‘yaml_char_t *’ {aka ‘unsigned char *’} differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                                ^
+      ext/_yaml.c:20432:42: warning: pointer targets in assignment from ‘char *’ to ‘yaml_char_t *’ {aka ‘unsigned char *’} differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                                ^
+      ext/_yaml.c: In function ‘__pyx_f_5_yaml_8CEmitter__serialize_node’:
+      ext/_yaml.c:21288:65: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_alias_event_initialize((&__pyx_v_event), __pyx_v_anchor) == 0) != 0);
+                                                                       ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:553:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:22099:68: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                          ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:22099:84: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                                          ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:22099:97: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+                                                                                                       ^~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_scalar_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:22486:76: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+                                                                                  ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_sequence_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:22486:92: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+                                                                                                  ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_sequence_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:23016:75: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+                                                                                 ^~~~~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_mapping_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:23016:91: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+             __pyx_t_2 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+                                                                                                 ^~~~~~~~~~~
+      In file included from ext/_yaml.h:2,
+                       from ext/_yaml.c:565:
+      /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ {aka ‘unsigned char *’} but argument is of type ‘char *’
+       yaml_mapping_start_event_initialize(yaml_event_t *event,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c: In function ‘__pyx_tp_dealloc_5_yaml_CParser’:
+      ext/_yaml.c:24340:5: error: lvalue required as increment operand
+           ++Py_REFCNT(o);
+           ^~
+      ext/_yaml.c:24342:5: error: lvalue required as decrement operand
+           --Py_REFCNT(o);
+           ^~
+      ext/_yaml.c: In function ‘__pyx_tp_dealloc_5_yaml_CEmitter’:
+      ext/_yaml.c:24510:5: error: lvalue required as increment operand
+           ++Py_REFCNT(o);
+           ^~
+      ext/_yaml.c:24512:5: error: lvalue required as decrement operand
+           --Py_REFCNT(o);
+           ^~
+      ext/_yaml.c: In function ‘__Pyx_modinit_type_init_code’:
+      ext/_yaml.c:25698:26: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’; did you mean ‘tp_dict’?
+         __pyx_type_5_yaml_Mark.tp_print = 0;
+                                ^~~~~~~~
+                                tp_dict
+      ext/_yaml.c:25718:29: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’; did you mean ‘tp_dict’?
+         __pyx_type_5_yaml_CParser.tp_print = 0;
+                                   ^~~~~~~~
+                                   tp_dict
+      ext/_yaml.c:25732:30: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’; did you mean ‘tp_dict’?
+         __pyx_type_5_yaml_CEmitter.tp_print = 0;
+                                    ^~~~~~~~
+                                    tp_dict
+      ext/_yaml.c: In function ‘__Pyx_ParseOptionalKeywords’:
+      ext/_yaml.c:26917:21: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26917:21: warning: ‘PyUnicode_AsUnicode’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:580:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26917:21: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26917:21: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26917:21: warning: ‘PyUnicode_AsUnicode’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:580:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26917:21: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘PyUnicode_AsUnicode’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:580:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘PyUnicode_AsUnicode’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:580:45: note: declared here
+       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+                                                   ^~~~~~~~~~~~~~~~~~~
+      ext/_yaml.c:26933:25: warning: ‘_PyUnicode_get_wstr_length’ is deprecated [-Wdeprecated-declarations]
+                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      In file included from /usr/local/include/python3.10/unicodeobject.h:1046,
+                       from /usr/local/include/python3.10/Python.h:83,
+                       from ext/_yaml.c:4:
+      /usr/local/include/python3.10/cpython/unicodeobject.h:446:26: note: declared here
+       static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for PyYAML
+  Running setup.py clean for PyYAML
+Successfully built coverage
+Failed to build PyYAML
+ERROR: Could not build wheels for PyYAML, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, unittest-xml-reporting, -rrequirements.txt]; v = InvocationError('/workdir/python-multipart-0.0.5/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock unittest-xml-reporting -rrequirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, unittest-xml-reporting, -rrequirements.txt]; v = InvocationError('/workdir/python-multipart-0.0.5/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock unittest-xml-reporting -rrequirements.txt', 1)

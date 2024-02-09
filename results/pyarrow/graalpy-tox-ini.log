@@ -1,0 +1,11 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pyarrow/12.0.0/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rpython/requirements-test.txt
+	-rpython/requirements-wheel-test.txt
+	-rpython/requirements-build.txt
+	-rpython/requirements-wheel-build.txt
+	-rdev/requirements_merge_arrow_pr.txt
+	-rdev/archery/requirements.txt
+

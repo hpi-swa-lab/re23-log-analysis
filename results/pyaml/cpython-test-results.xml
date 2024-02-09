@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="21" time="0.188" timestamp="2023-11-23T04:10:11.576796" hostname="80ac3eb7f7f2"><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_colons_in_strings" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_dst" time="0.001"><failure message="ModuleNotFoundError: No module named 'unidecode'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 261, in test_dst
+    self.assertIs(pyaml.dump(data, buff), None)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'</failure></testcase><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_dumps" time="0.002" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_empty_strings" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_encoding" time="0.002" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_force_embed" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_ids" time="0.001"><failure message="ModuleNotFoundError: No module named 'unidecode'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 292, in test_ids
+    b = pyaml.dump(data, unicode)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'</failure></testcase><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_multiple_docs" time="0.033" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_namedtuple" time="0.001" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_ordereddict" time="0.001" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_print" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_print_args" time="0.001" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_pyyaml_params" time="0.002" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_ruamel_yaml" time="0.001" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_simple" time="0.002"><failure message="ModuleNotFoundError: No module named 'unidecode'">Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 267, in test_simple
+    b = pyaml.dump(data, unicode)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'</failure></testcase><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_single_dash_strings" time="0.005" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_str_long" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_str_multiline" time="0.003" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_str_style_pick" time="0.007" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_unqouted_spaces" time="0.002" /><testcase classname="pyaml.tests.test_dump.DumpTests" name="test_vspacing" time="0.045" /></testsuite></testsuites>

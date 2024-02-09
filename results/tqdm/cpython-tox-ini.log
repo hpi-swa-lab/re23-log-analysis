@@ -1,0 +1,10 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/tqdm/4.64.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-r.meta/requirements-test.txt
+	-r.meta/requirements-build.txt
+

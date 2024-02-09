@@ -1,0 +1,981 @@
+GLOB sdist-make: /workdir/papermill-2.4.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements.txt, -rbinder/requirements.txt, -rrequirements/gcs.txt, -rrequirements/azure.txt, -rrequirements/github.txt, -rrequirements/dev.txt, -rrequirements/hdfs.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/log/graalpylibtest-unit-test-tests-1.log
+================================== log start ===================================
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting ansiwrap
+  Using cached ansiwrap-0.8.4-py2.py3-none-any.whl (8.5 kB)
+Collecting click
+  Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Collecting pyyaml
+  Using cached PyYAML-6.0.1-py3-none-any.whl
+Collecting nbformat>=5.1.2
+  Using cached nbformat-5.9.2-py3-none-any.whl (77 kB)
+Collecting nbclient>=0.2.0
+  Using cached nbclient-0.9.0-py3-none-any.whl (24 kB)
+Collecting tqdm>=4.32.2
+  Using cached tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting requests
+  Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting entrypoints
+  Using cached entrypoints-0.4-py3-none-any.whl (5.3 kB)
+Collecting tenacity
+  Using cached tenacity-8.2.3-py3-none-any.whl (24 kB)
+Collecting nteract-scrapbook
+  Downloading nteract_scrapbook-0.4.2-py3-none-any.whl (34 kB)
+Collecting pandas
+  Using cached pandas-1.5.2-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting matplotlib
+  Using cached matplotlib-3.7.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting ipywidgets
+  Using cached ipywidgets-8.1.1-py3-none-any.whl (139 kB)
+Collecting ipykernel
+  Using cached ipykernel-6.27.0-py3-none-any.whl (114 kB)
+Collecting gcsfs>=0.2.0
+  Downloading gcsfs-2023.10.0-py2.py3-none-any.whl (33 kB)
+Collecting azure-datalake-store>=0.0.30
+  Downloading azure_datalake_store-0.0.53-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.3/55.3 kB 1.5 MB/s eta 0:00:00
+Collecting azure-storage-blob>=12.1.0
+  Downloading azure_storage_blob-12.19.0-py3-none-any.whl (394 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.2/394.2 kB 4.4 MB/s eta 0:00:00
+Collecting PyGithub>=1.55
+  Downloading PyGithub-2.1.1-py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.9/302.9 kB 5.1 MB/s eta 0:00:00
+Collecting boto3
+  Downloading boto3-1.29.6-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 2.4 MB/s eta 0:00:00
+Collecting botocore
+  Downloading botocore-1.32.6-py3-none-any.whl (11.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 6.1 MB/s eta 0:00:00
+Collecting codecov
+  Using cached codecov-2.1.13-py2.py3-none-any.whl (16 kB)
+Collecting coverage
+  Using cached coverage-7.3.2-py3-none-any.whl
+Collecting google_compute_engine
+  Downloading google-compute-engine-2.8.13.tar.gz (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.6/46.6 kB 2.0 MB/s eta 0:00:00
+Looking for GraalPy patches for google-compute-engine
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting ipython>=5.0
+  Using cached ipython-8.17.2-py3-none-any.whl (808 kB)
+Collecting notebook
+  Using cached notebook-7.0.6-py3-none-any.whl (4.0 MB)
+Collecting moto
+  Downloading moto-4.2.9-py2.py3-none-any.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 6.0 MB/s eta 0:00:00
+Collecting pytest-cov>=2.6.1
+  Using cached pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Collecting pytest-mock>=1.10
+  Using cached pytest_mock-3.12.0-py3-none-any.whl (9.8 kB)
+Collecting pytest-env>=0.6.2
+  Downloading pytest_env-1.1.1-py3-none-any.whl (6.2 kB)
+Collecting check-manifest
+  Downloading check_manifest-0.49-py3-none-any.whl (20 kB)
+Collecting attrs>=17.4.0
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting pre-commit
+  Using cached pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
+Collecting flake8
+  Using cached flake8-6.1.0-py2.py3-none-any.whl (58 kB)
+Collecting tox
+  Using cached tox-3.28.0-py2.py3-none-any.whl (86 kB)
+Collecting bumpversion
+  Downloading bumpversion-0.6.0-py2.py3-none-any.whl (8.4 kB)
+Collecting recommonmark
+  Downloading recommonmark-0.7.1-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: pip>=18.1 in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/dev.txt (line 22)) (22.2.2)
+Requirement already satisfied: wheel>=0.31.0 in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/dev.txt (line 23)) (0.41.2)
+Requirement already satisfied: setuptools>=38.6.0 in ./.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages (from -r requirements/dev.txt (line 24)) (63.2.0)
+Collecting twine>=1.11.0
+  Using cached twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting pyarrow>=2.0
+  Downloading pyarrow-14.0.1.tar.gz (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 6.9 MB/s eta 0:00:00
+Looking for GraalPy patches for pyarrow
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting iniconfig
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pluggy<2.0,>=0.12
+  Using cached pluggy-1.3.0-py3-none-any.whl (18 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting tomli>=1.0.0
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting textwrap3>=0.9.2
+  Using cached textwrap3-0.9.2-py2.py3-none-any.whl (12 kB)
+Collecting fastjsonschema
+  Using cached fastjsonschema-2.19.0-py3-none-any.whl (23 kB)
+Collecting jsonschema>=2.6
+  Using cached jsonschema-4.17.3-py3-none-any.whl (90 kB)
+Collecting jupyter-core
+  Using cached jupyter_core-5.5.0-py3-none-any.whl (28 kB)
+Collecting traitlets>=5.1
+  Using cached traitlets-5.13.0-py3-none-any.whl (84 kB)
+Collecting jupyter-client>=6.1.12
+  Using cached jupyter_client-8.6.0-py3-none-any.whl (105 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-py3-none-any.whl (46 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting urllib3<3,>=1.21.1
+  Using cached urllib3-2.1.0-py3-none-any.whl (104 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2023.11.17-py3-none-any.whl (162 kB)
+Collecting papermill
+  Downloading papermill-2.5.0-py3-none-any.whl (38 kB)
+Collecting python-dateutil>=2.8.1
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1
+  Using cached pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+Collecting numpy>=1.21.0
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.2.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting cycler>=0.10
+  Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.45.0-py3-none-any.whl (1.0 MB)
+Collecting kiwisolver>=1.0.1
+  Using cached kiwisolver-1.4.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pillow>=6.2.0
+  Using cached Pillow-10.1.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyparsing>=2.3.1
+  Using cached pyparsing-3.0.8-py3-none-any.whl (98 kB)
+Collecting comm>=0.1.3
+  Using cached comm-0.2.0-py3-none-any.whl (7.0 kB)
+Collecting widgetsnbextension~=4.0.9
+  Using cached widgetsnbextension-4.0.9-py3-none-any.whl (2.3 MB)
+Collecting jupyterlab-widgets~=3.0.9
+  Using cached jupyterlab_widgets-3.0.9-py3-none-any.whl (214 kB)
+Collecting debugpy>=1.6.5
+  Using cached debugpy-1.8.0-py2.py3-none-any.whl (5.0 MB)
+Collecting matplotlib-inline>=0.1
+  Using cached matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting nest-asyncio
+  Using cached nest_asyncio-1.5.8-py3-none-any.whl (5.3 kB)
+Collecting psutil
+  Using cached psutil-5.9.6-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyzmq>=20
+  Using cached pyzmq-25.1.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting tornado>=6.1
+  Using cached tornado-6.3.3-py3-none-any.whl
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+  Using cached aiohttp-3.9.0-py3-none-any.whl
+Collecting decorator>4.1.2
+  Using cached decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting fsspec==2023.10.0
+  Using cached fsspec-2023.10.0-py3-none-any.whl (166 kB)
+Collecting google-auth>=1.2
+  Using cached google_auth-2.23.4-py2.py3-none-any.whl (183 kB)
+Collecting google-auth-oauthlib
+  Downloading google_auth_oauthlib-1.1.0-py2.py3-none-any.whl (19 kB)
+Collecting google-cloud-storage
+  Downloading google_cloud_storage-2.13.0-py2.py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 kB 5.4 MB/s eta 0:00:00
+Collecting cffi
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting msal<2,>=1.16.0
+  Downloading msal-1.25.0-py2.py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.7/97.7 kB 5.2 MB/s eta 0:00:00
+Collecting azure-core<2.0.0,>=1.28.0
+  Downloading azure_core-1.29.5-py3-none-any.whl (192 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 192.4/192.4 kB 6.4 MB/s eta 0:00:00
+Collecting cryptography>=2.1.4
+  Using cached cryptography-3.4.7-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting typing-extensions>=4.3.0
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting isodate>=0.6.1
+  Using cached isodate-0.6.1-py2.py3-none-any.whl (41 kB)
+Collecting pynacl>=1.4.0
+  Downloading PyNaCl-1.5.0.tar.gz (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 9.5 MB/s eta 0:00:00
+Looking for GraalPy patches for PyNaCl
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyjwt[crypto]>=2.4.0
+  Using cached PyJWT-2.8.0-py3-none-any.whl (22 kB)
+Collecting Deprecated
+  Downloading Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Collecting jmespath<2.0.0,>=0.7.1
+  Using cached jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting s3transfer<0.8.0,>=0.7.0
+  Using cached s3transfer-0.7.0-py3-none-any.whl (79 kB)
+Collecting urllib3<3,>=1.21.1
+  Using cached urllib3-2.0.7-py3-none-any.whl (124 kB)
+Collecting boto
+  Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 10.9 MB/s eta 0:00:00
+Collecting distro
+  Using cached distro-1.8.0-py3-none-any.whl (20 kB)
+Collecting jedi>=0.16
+  Using cached jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+Collecting prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30
+  Using cached prompt_toolkit-3.0.41-py3-none-any.whl (385 kB)
+Collecting pygments>=2.4.0
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting stack-data
+  Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting pexpect>4.3
+  Using cached pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting jupyter-server<3,>=2.4.0
+  Downloading jupyter_server-2.10.1-py3-none-any.whl (378 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 378.6/378.6 kB 9.1 MB/s eta 0:00:00
+Collecting jupyterlab-server<3,>=2.22.1
+  Using cached jupyterlab_server-2.25.2-py3-none-any.whl (58 kB)
+Collecting jupyterlab<5,>=4.0.2
+  Using cached jupyterlab-4.0.9-py3-none-any.whl (9.2 MB)
+Collecting notebook-shim<0.3,>=0.2
+  Using cached notebook_shim-0.2.3-py3-none-any.whl (13 kB)
+Collecting xmltodict
+  Using cached xmltodict-0.13.0-py2.py3-none-any.whl (10.0 kB)
+Collecting werkzeug!=2.2.0,!=2.2.1,>=0.5
+  Using cached werkzeug-3.0.1-py3-none-any.whl (226 kB)
+Collecting responses>=0.13.0
+  Using cached responses-0.24.1-py3-none-any.whl (55 kB)
+Collecting Jinja2>=2.10.1
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting build>=0.1
+  Using cached build-1.0.3-py3-none-any.whl (18 kB)
+Collecting cfgv>=2.0.0
+  Using cached cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Collecting identify>=1.0.0
+  Using cached identify-2.5.32-py2.py3-none-any.whl (98 kB)
+Collecting nodeenv>=0.11.1
+  Using cached nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Collecting virtualenv>=20.10.0
+  Using cached virtualenv-20.24.7-py3-none-any.whl (3.8 MB)
+Collecting mccabe<0.8.0,>=0.7.0
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting pycodestyle<2.12.0,>=2.11.0
+  Using cached pycodestyle-2.11.1-py2.py3-none-any.whl (31 kB)
+Collecting pyflakes<3.2.0,>=3.1.0
+  Using cached pyflakes-3.1.0-py2.py3-none-any.whl (62 kB)
+Collecting filelock>=3.0.0
+  Using cached filelock-3.13.1-py3-none-any.whl (11 kB)
+Collecting py>=1.4.17
+  Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Collecting six>=1.14.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting bump2version
+  Using cached bump2version-1.0.1-py2.py3-none-any.whl (22 kB)
+Collecting commonmark>=0.8.1
+  Using cached commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+Collecting docutils>=0.11
+  Using cached docutils-0.20.1-py3-none-any.whl (572 kB)
+Collecting sphinx>=1.3.1
+  Using cached sphinx-7.2.6-py3-none-any.whl (3.2 MB)
+Collecting pkginfo>=1.8.1
+  Using cached pkginfo-1.9.6-py3-none-any.whl (30 kB)
+Collecting readme-renderer>=35.0
+  Using cached readme_renderer-42.0-py3-none-any.whl (13 kB)
+Collecting requests-toolbelt!=0.9.0,>=0.8.0
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Collecting importlib-metadata>=3.6
+  Using cached importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+Collecting keyring>=15.1
+  Using cached keyring-24.3.0-py3-none-any.whl (38 kB)
+Collecting rfc3986>=1.4.0
+  Using cached rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+Collecting rich>=12.0.0
+  Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Collecting multidict<7.0,>=4.5
+  Using cached multidict-6.0.4-py3-none-any.whl
+Collecting yarl<2.0,>=1.0
+  Using cached yarl-1.9.3-py3-none-any.whl (30 kB)
+Collecting frozenlist>=1.1.1
+  Using cached frozenlist-1.4.0-py3-none-any.whl
+Collecting aiosignal>=1.1.2
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout<5.0,>=4.0
+  Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting pyproject_hooks
+  Using cached pyproject_hooks-1.0.0-py3-none-any.whl (9.3 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Using cached cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+Collecting pyasn1-modules>=0.2.1
+  Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+Collecting rsa<5,>=3.1.4
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting zipp>=0.5
+  Using cached zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Using cached parso-0.8.3-py2.py3-none-any.whl (100 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.3-py3-none-any.whl
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Using cached pyrsistent-0.20.0-py3-none-any.whl (58 kB)
+Collecting platformdirs>=2.5
+  Using cached platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Collecting anyio>=3.1.0
+  Using cached anyio-4.0.0-py3-none-any.whl (83 kB)
+Collecting argon2-cffi
+  Using cached argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+Collecting jupyter-events>=0.9.0
+  Using cached jupyter_events-0.9.0-py3-none-any.whl (18 kB)
+Collecting jupyter-server-terminals
+  Using cached jupyter_server_terminals-0.4.4-py3-none-any.whl (13 kB)
+Collecting nbconvert>=6.4.4
+  Using cached nbconvert-7.11.0-py3-none-any.whl (256 kB)
+Collecting overrides
+  Using cached overrides-7.4.0-py3-none-any.whl (17 kB)
+Collecting prometheus-client
+  Using cached prometheus_client-0.19.0-py3-none-any.whl (54 kB)
+Collecting send2trash>=1.8.2
+  Using cached Send2Trash-1.8.2-py3-none-any.whl (18 kB)
+Collecting terminado>=0.8.3
+  Using cached terminado-0.18.0-py3-none-any.whl (14 kB)
+Collecting websocket-client
+  Using cached websocket_client-1.6.4-py3-none-any.whl (57 kB)
+Collecting async-lru>=1.0.0
+  Using cached async_lru-2.0.4-py3-none-any.whl (6.1 kB)
+Collecting jupyter-lsp>=2.0.0
+  Using cached jupyter_lsp-2.2.0-py3-none-any.whl (65 kB)
+Collecting babel>=2.10
+  Using cached Babel-2.13.1-py3-none-any.whl (10.1 MB)
+Collecting json5>=0.9.0
+  Using cached json5-0.9.14-py2.py3-none-any.whl (19 kB)
+Collecting jsonschema>=2.6
+  Using cached jsonschema-4.20.0-py3-none-any.whl (84 kB)
+Collecting jsonschema-specifications>=2023.03.6
+  Using cached jsonschema_specifications-2023.11.1-py3-none-any.whl (17 kB)
+Collecting referencing>=0.28.4
+  Using cached referencing-0.31.0-py3-none-any.whl (25 kB)
+Collecting rpds-py>=0.7.1
+  Using cached rpds_py-0.13.1.tar.gz (17 kB)
+Looking for GraalPy patches for rpds_py
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting jaraco.classes
+  Using cached jaraco.classes-3.3.0-py3-none-any.whl (5.9 kB)
+Collecting SecretStorage>=3.2
+  Using cached SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2
+  Using cached jeepney-0.8.0-py3-none-any.whl (48 kB)
+Collecting ptyprocess>=0.5
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting wcwidth
+  Using cached wcwidth-0.2.12-py2.py3-none-any.whl (34 kB)
+Collecting nh3>=0.2.14
+  Using cached nh3-0.2.14-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting markdown-it-py>=2.2.0
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Collecting sphinxcontrib-applehelp
+  Using cached sphinxcontrib_applehelp-1.0.7-py3-none-any.whl (120 kB)
+Collecting sphinxcontrib-devhelp
+  Using cached sphinxcontrib_devhelp-1.0.5-py3-none-any.whl (83 kB)
+Collecting sphinxcontrib-jsmath
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting sphinxcontrib-htmlhelp>=2.0.0
+  Using cached sphinxcontrib_htmlhelp-2.0.4-py3-none-any.whl (99 kB)
+Collecting sphinxcontrib-serializinghtml>=1.1.9
+  Using cached sphinxcontrib_serializinghtml-1.1.9-py3-none-any.whl (92 kB)
+Collecting sphinxcontrib-qthelp
+  Using cached sphinxcontrib_qthelp-1.0.6-py3-none-any.whl (89 kB)
+Collecting snowballstemmer>=2.0
+  Using cached snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+Collecting alabaster<0.8,>=0.7
+  Using cached alabaster-0.7.13-py3-none-any.whl (13 kB)
+Collecting imagesize>=1.3
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Collecting distlib<1,>=0.3.7
+  Using cached distlib-0.3.7-py2.py3-none-any.whl (468 kB)
+Collecting wrapt<2,>=1.10
+  Using cached wrapt-1.16.0-py3-none-any.whl (23 kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0dev,>=1.31.5
+  Using cached google_api_core-2.14.0-py3-none-any.whl (122 kB)
+Collecting google-cloud-core<3.0dev,>=2.3.0
+  Using cached google_cloud_core-2.3.3-py2.py3-none-any.whl (29 kB)
+Collecting google-resumable-media>=2.6.0
+  Using cached google_resumable_media-2.6.0-py2.py3-none-any.whl (80 kB)
+Collecting google-crc32c<2.0dev,>=1.0
+  Using cached google_crc32c-1.5.0-py3-none-any.whl
+Collecting executing>=1.2.0
+  Using cached executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting asttokens>=2.1.0
+  Using cached asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting pure-eval
+  Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting sniffio>=1.1
+  Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting googleapis-common-protos<2.0.dev0,>=1.56.2
+  Using cached googleapis_common_protos-1.61.0-py2.py3-none-any.whl (230 kB)
+Collecting protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0.dev0,>=3.19.5
+  Using cached protobuf-4.25.1-py3-none-any.whl (156 kB)
+Collecting python-json-logger>=2.0.4
+  Using cached python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Collecting rfc3339-validator
+  Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Collecting rfc3986-validator>=0.1.1
+  Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Collecting mdurl~=0.1
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting beautifulsoup4
+  Using cached beautifulsoup4-4.12.2-py3-none-any.whl (142 kB)
+Collecting bleach!=5.0.0
+  Using cached bleach-6.1.0-py3-none-any.whl (162 kB)
+Collecting defusedxml
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jupyterlab-pygments
+  Using cached jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+Collecting mistune<4,>=2.0.3
+  Using cached mistune-3.0.2-py3-none-any.whl (47 kB)
+Collecting pandocfilters>=1.4.1
+  Using cached pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Collecting tinycss2
+  Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Collecting pyasn1<0.6.0,>=0.4.6
+  Using cached pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting argon2-cffi-bindings
+  Using cached argon2_cffi_bindings-21.2.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting more-itertools
+  Using cached more_itertools-10.1.0-py3-none-any.whl (55 kB)
+Collecting webencodings
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting fqdn
+  Using cached fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Collecting isoduration
+  Using cached isoduration-20.11.0-py3-none-any.whl (11 kB)
+Collecting jsonpointer>1.13
+  Using cached jsonpointer-2.4-py2.py3-none-any.whl (7.8 kB)
+Collecting uri-template
+  Using cached uri_template-1.3.0-py3-none-any.whl (11 kB)
+Collecting webcolors>=1.11
+  Using cached webcolors-1.13-py3-none-any.whl (14 kB)
+Collecting soupsieve>1.2
+  Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Collecting arrow>=0.15.0
+  Using cached arrow-1.3.0-py3-none-any.whl (66 kB)
+Collecting types-python-dateutil>=2.8.10
+  Using cached types_python_dateutil-2.8.19.14-py3-none-any.whl (9.4 kB)
+Building wheels for collected packages: google_compute_engine, pyarrow, pynacl, rpds-py
+  Building wheel for google_compute_engine (setup.py): started
+  Building wheel for google_compute_engine (setup.py): finished with status 'done'
+  Created wheel for google_compute_engine: filename=google_compute_engine-2.8.13-py2.py3-none-any.whl size=84083 sha256=1efc76362d6aa5b6e6f484f7f452503ab6ce04c68c21920be802d4ddd739a26b
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/29/c1/ac/f700635b80093b84c6bc44ad9c13ccdcfa2ad39d25fb88f11c
+  Building wheel for pyarrow (pyproject.toml): started
+  Building wheel for pyarrow (pyproject.toml): still running...
+  Building wheel for pyarrow (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for pyarrow (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [421 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-3.10
+      creating build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/pandas_compat.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/conftest.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/acero.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_generated_version.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/dataset.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/cuda.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/compute.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/benchmark.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/json.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/ipc.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/substrait.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/fs.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/cffi.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/csv.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_compute_docstrings.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/jvm.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/hdfs.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/util.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/orc.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/flight.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/feather.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/types.py -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/filesystem.py -> build/lib.linux-x86_64-3.10/pyarrow
+      creating build/lib.linux-x86_64-3.10/pyarrow/vendored
+      copying pyarrow/vendored/docscrape.py -> build/lib.linux-x86_64-3.10/pyarrow/vendored
+      copying pyarrow/vendored/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/vendored
+      copying pyarrow/vendored/version.py -> build/lib.linux-x86_64-3.10/pyarrow/vendored
+      package init file 'pyarrow/src/__init__.py' not found (or not a regular file)
+      creating build/lib.linux-x86_64-3.10/pyarrow/parquet
+      copying pyarrow/parquet/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/parquet
+      copying pyarrow/parquet/encryption.py -> build/lib.linux-x86_64-3.10/pyarrow/parquet
+      copying pyarrow/parquet/core.py -> build/lib.linux-x86_64-3.10/pyarrow/parquet
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_feather.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_gandiva.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_csv.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_filesystem.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_memory.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_types.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/conftest.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_convert_builtin.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_jvm.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_flight.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_acero.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_misc.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_dataset_encryption.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_deprecations.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_ipc.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_gdb.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_builder.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_pandas.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_strategies.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_compute.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/strategies.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_hdfs.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_scalars.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/pandas_examples.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_cython.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_json.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_adhoc_memory_leak.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_fs.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_exec_plan.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_substrait.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/arrow_16597.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_orc.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_cuda.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_sparse_tensor.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_flight_async.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_cffi.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_tensor.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/arrow_7980.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_array.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_util.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_schema.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_dataset.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_cpp_internals.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/util.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_table.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_io.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_udf.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/pandas_threaded_import.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/read_record_batch.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_extension_type.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/test_cuda_numba_interop.py -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      creating build/lib.linux-x86_64-3.10/pyarrow/interchange
+      copying pyarrow/interchange/column.py -> build/lib.linux-x86_64-3.10/pyarrow/interchange
+      copying pyarrow/interchange/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/interchange
+      copying pyarrow/interchange/dataframe.py -> build/lib.linux-x86_64-3.10/pyarrow/interchange
+      copying pyarrow/interchange/buffer.py -> build/lib.linux-x86_64-3.10/pyarrow/interchange
+      copying pyarrow/interchange/from_dataframe.py -> build/lib.linux-x86_64-3.10/pyarrow/interchange
+      package init file 'pyarrow/includes/__init__.py' not found (or not a regular file)
+      package init file 'pyarrow/src/arrow/__init__.py' not found (or not a regular file)
+      package init file 'pyarrow/src/arrow/python/__init__.py' not found (or not a regular file)
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_parquet_file.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_basic.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_metadata.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/conftest.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/common.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_pandas.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_encryption.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_parquet_writer.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/encryption.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_data_types.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_dataset.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_compliant_nested_type.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      copying pyarrow/tests/parquet/test_datetime.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/parquet
+      package init file 'pyarrow/tests/data/__init__.py' not found (or not a regular file)
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/interchange
+      copying pyarrow/tests/interchange/__init__.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/interchange
+      copying pyarrow/tests/interchange/test_conversion.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/interchange
+      copying pyarrow/tests/interchange/test_interchange_spec.py -> build/lib.linux-x86_64-3.10/pyarrow/tests/interchange
+      package init file 'pyarrow/tests/data/parquet/__init__.py' not found (or not a regular file)
+      package init file 'pyarrow/tests/data/orc/__init__.py' not found (or not a regular file)
+      package init file 'pyarrow/tests/data/feather/__init__.py' not found (or not a regular file)
+      running egg_info
+      writing pyarrow.egg-info/PKG-INFO
+      writing dependency_links to pyarrow.egg-info/dependency_links.txt
+      writing requirements to pyarrow.egg-info/requires.txt
+      writing top-level names to pyarrow.egg-info/top_level.txt
+      listing git files failed - pretending there aren't any
+      reading manifest file 'pyarrow.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no files found matching '../LICENSE.txt'
+      warning: no files found matching '../NOTICE.txt'
+      warning: no previously-included files matching '*.so' found anywhere in distribution
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*~' found anywhere in distribution
+      warning: no previously-included files matching '#*' found anywhere in distribution
+      warning: no previously-included files matching '.git*' found anywhere in distribution
+      warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+      no previously-included directories found matching '.asv'
+      writing manifest file 'pyarrow.egg-info/SOURCES.txt'
+      copying pyarrow/__init__.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_acero.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_acero.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_compute.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_compute.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_csv.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_csv.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_cuda.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_cuda.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset_orc.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset_parquet.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset_parquet.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_dataset_parquet_encryption.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_feather.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_flight.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_fs.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_fs.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_gcsfs.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_hdfs.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_hdfsio.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_json.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_json.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_orc.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_orc.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_parquet.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_parquet.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_parquet_encryption.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_parquet_encryption.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_pyarrow_cpp_tests.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_pyarrow_cpp_tests.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_s3fs.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/_substrait.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/array.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/benchmark.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/builder.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/compat.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/config.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/error.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/gandiva.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/io.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/ipc.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/lib.pxd -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/lib.pyx -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/memory.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/pandas-shim.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/public-api.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/scalar.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/table.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/tensor.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      copying pyarrow/types.pxi -> build/lib.linux-x86_64-3.10/pyarrow
+      creating build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_acero.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_dataset.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libparquet_encryption.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_cuda.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_python.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_dataset_parquet.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/__init__.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_feather.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_substrait.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/common.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_flight.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libarrow_fs.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/includes/libgandiva.pxd -> build/lib.linux-x86_64-3.10/pyarrow/includes
+      copying pyarrow/tests/bound_function_visit_strings.pyx -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/extensions.pyx -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      copying pyarrow/tests/pyarrow_cython_example.pyx -> build/lib.linux-x86_64-3.10/pyarrow/tests
+      creating build/lib.linux-x86_64-3.10/pyarrow/src
+      creating build/lib.linux-x86_64-3.10/pyarrow/src/arrow
+      creating build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/CMakeLists.txt -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/api.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/arrow_to_pandas.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/arrow_to_pandas.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/arrow_to_python_internal.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/async.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/benchmark.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/benchmark.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/common.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/common.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/csv.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/csv.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/datetime.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/datetime.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/decimal.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/decimal.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/deserialize.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/deserialize.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/extension_type.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/extension_type.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/filesystem.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/filesystem.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/flight.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/flight.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/gdb.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/gdb.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/helpers.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/helpers.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/inference.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/inference.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/init.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/init.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/io.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/io.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/ipc.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/ipc.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/iterators.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_convert.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_convert.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_internal.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_interop.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_to_arrow.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/numpy_to_arrow.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/parquet_encryption.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/parquet_encryption.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/pch.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/platform.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/pyarrow.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/pyarrow.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/pyarrow_api.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/pyarrow_lib.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/python_test.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/python_test.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/python_to_arrow.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/python_to_arrow.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/serialize.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/serialize.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/type_traits.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/udf.cc -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/udf.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      copying pyarrow/src/arrow/python/visibility.h -> build/lib.linux-x86_64-3.10/pyarrow/src/arrow/python
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/data
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/data/parquet
+      copying pyarrow/tests/data/parquet/v0.7.1.all-named-index.parquet -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/parquet
+      copying pyarrow/tests/data/parquet/v0.7.1.column-metadata-handling.parquet -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/parquet
+      copying pyarrow/tests/data/parquet/v0.7.1.parquet -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/parquet
+      copying pyarrow/tests/data/parquet/v0.7.1.some-named-index.parquet -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/parquet
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/README.md -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.emptyFile.jsn.gz -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.emptyFile.orc -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.test1.jsn.gz -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.test1.orc -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.testDate1900.jsn.gz -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/TestOrcFile.testDate1900.orc -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/decimal.jsn.gz -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      copying pyarrow/tests/data/orc/decimal.orc -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/orc
+      creating build/lib.linux-x86_64-3.10/pyarrow/tests/data/feather
+      copying pyarrow/tests/data/feather/v0.17.0.version.2-compression.lz4.feather -> build/lib.linux-x86_64-3.10/pyarrow/tests/data/feather
+      running build_ext
+      creating /tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/build/temp.linux-x86_64-3.10
+      -- Running cmake for PyArrow
+      cmake -DCMAKE_INSTALL_PREFIX=/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/build/lib.linux-x86_64-3.10/pyarrow -DPYTHON_EXECUTABLE=/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python -DPython3_EXECUTABLE=/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python -DPYARROW_CXXFLAGS= -DPYARROW_BUILD_CUDA=off -DPYARROW_BUILD_SUBSTRAIT=off -DPYARROW_BUILD_FLIGHT=off -DPYARROW_BUILD_GANDIVA=off -DPYARROW_BUILD_ACERO=off -DPYARROW_BUILD_DATASET=off -DPYARROW_BUILD_ORC=off -DPYARROW_BUILD_PARQUET=off -DPYARROW_BUILD_PARQUET_ENCRYPTION=off -DPYARROW_BUILD_GCS=off -DPYARROW_BUILD_S3=off -DPYARROW_BUILD_HDFS=off -DPYARROW_BUNDLE_ARROW_CPP=off -DPYARROW_BUNDLE_CYTHON_CPP=off -DPYARROW_GENERATE_COVERAGE=off -DCMAKE_BUILD_TYPE=release /tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec
+      -- The C compiler identification is GNU 8.5.0
+      -- The CXX compiler identification is GNU 8.5.0
+      -- Detecting C compiler ABI info
+      -- Detecting C compiler ABI info - done
+      -- Check for working C compiler: /usr/bin/cc - skipped
+      -- Detecting C compile features
+      -- Detecting C compile features - done
+      -- Detecting CXX compiler ABI info
+      -- Detecting CXX compiler ABI info - done
+      -- Check for working CXX compiler: /usr/bin/c++ - skipped
+      -- Detecting CXX compile features
+      -- Detecting CXX compile features - done
+      -- System processor: x86_64
+      -- Performing Test CXX_SUPPORTS_SSE4_2
+      -- Performing Test CXX_SUPPORTS_SSE4_2 - Success
+      -- Performing Test CXX_SUPPORTS_AVX2
+      -- Performing Test CXX_SUPPORTS_AVX2 - Success
+      -- Performing Test CXX_SUPPORTS_AVX512
+      -- Performing Test CXX_SUPPORTS_AVX512 - Success
+      -- Arrow build warning level: PRODUCTION
+      -- Using ld linker
+      -- Build Type: RELEASE
+      -- CMAKE_C_FLAGS:  -Wall -fno-semantic-interposition -msse4.2  -fdiagnostics-color=always  -fno-omit-frame-pointer -Wno-unused-variable -Wno-maybe-uninitialized
+      -- CMAKE_CXX_FLAGS:  -Wno-noexcept-type  -Wall -fno-semantic-interposition -msse4.2  -fdiagnostics-color=always  -fno-omit-frame-pointer -Wno-unused-variable -Wno-maybe-uninitialized
+      -- Generator: Unix Makefiles
+      -- Build output directory: /tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/build/temp.linux-x86_64-3.10/release
+      -- Found Python3: /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python (found version "3.10.8") found components: Interpreter Development.Module NumPy
+      -- Found Python3Alt: /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python
+      -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+      -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+      -- Check if compiler accepts -pthread
+      -- Check if compiler accepts -pthread - yes
+      -- Found Threads: TRUE
+      -- Arrow version: 12.0.1
+      -- Found the Arrow shared library: /usr/local/lib64/libarrow.so.1200.1.0
+      -- Found the Arrow import library: ARROW_IMPORT_LIB-NOTFOUND
+      -- Found the Arrow static library: /usr/local/lib64/libarrow.a
+      -- Parquet Encryption is NOT Enabled
+      -- Configuring done
+      -- Generating done
+      -- Build files have been written to: /tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/build/temp.linux-x86_64-3.10
+      -- Finished cmake for PyArrow
+      -- Running cmake --build for PyArrow
+      cmake --build . --config release --
+      [  1%] Compiling Cython CXX source for lib...
+      [  1%] Built target lib_pyx
+      [  3%] Generating pyarrow/src/arrow/python/lib_api.h, pyarrow/src/arrow/python/lib.h
+      [  3%] Built target cython_api_headers
+      [  5%] Building CXX object CMakeFiles/arrow_python.dir/cmake_pch.hxx.gch
+      [  7%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/arrow_to_pandas.cc.o
+      [  8%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/benchmark.cc.o
+      [ 10%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/common.cc.o
+      [ 12%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/datetime.cc.o
+      [ 14%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/decimal.cc.o
+      [ 15%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/deserialize.cc.o
+      [ 17%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/extension_type.cc.o
+      [ 19%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/gdb.cc.o
+      [ 21%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/helpers.cc.o
+      [ 22%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/inference.cc.o
+      [ 24%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/init.cc.o
+      [ 26%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/io.cc.o
+      [ 28%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/ipc.cc.o
+      [ 29%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/numpy_convert.cc.o
+      [ 31%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/numpy_to_arrow.cc.o
+      [ 33%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/python_test.cc.o
+      [ 35%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/python_to_arrow.cc.o
+      [ 36%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/pyarrow.cc.o
+      [ 38%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/serialize.cc.o
+      [ 40%] Building CXX object CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/udf.cc.o
+      [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:[m[K In function ‘[01m[Karrow::Status arrow::py::RegisterScalarAggregateFunction(PyObject*, arrow::py::UdfWrapperCallback, const arrow::py::UdfOptions&, arrow::compute::FunctionRegistry*)[m[K’:
+      [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:593:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel(std::remove_reference<std::shared_ptr<arrow::compute::KernelSignature>&>::type, std::remove_reference<std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState> >(arrow::compute::KernelContext*, const arrow::compute::KernelInitArgs&)>&>::type, arrow::Status (&)(arrow::compute::KernelContext*, const arrow::compute::ExecSpan&), arrow::Status (&)(arrow::compute::KernelContext*, arrow::compute::KernelState&&, arrow::compute::KernelState*), arrow::Status (&)(arrow::compute::KernelContext*, arrow::Datum*), bool)[m[K’
+                                               AggregateUdfFinalize, /*ordered=*/false[01;31m[K)[m[K;
+                                                                                      [01;31m[K^[m[K
+      In file included from [01m[K/usr/local/include/arrow/compute/function.h:27[m[K,
+                       from [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.h:21[m[K,
+                       from [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:18[m[K:
+      [01m[K/usr/local/include/arrow/compute/kernel.h:657:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel(std::vector<arrow::compute::InputType>, arrow::compute::OutputType, arrow::compute::KernelInit, arrow::compute::ScalarAggregateConsume, arrow::compute::ScalarAggregateMerge, arrow::compute::ScalarAggregateFinalize)[m[K’
+         [01;36m[KScalarAggregateKernel[m[K(std::vector<InputType> in_types, OutputType out_type,
+         [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:657:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::remove_reference<std::shared_ptr<arrow::compute::KernelSignature>&>::type[m[K’ {aka ‘[01m[Kstd::shared_ptr<arrow::compute::KernelSignature>[m[K’} to ‘[01m[Kstd::vector<arrow::compute::InputType>[m[K’
+      [01m[K/usr/local/include/arrow/compute/kernel.h:649:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel(std::shared_ptr<arrow::compute::KernelSignature>, arrow::compute::KernelInit, arrow::compute::ScalarAggregateConsume, arrow::compute::ScalarAggregateMerge, arrow::compute::ScalarAggregateFinalize)[m[K’
+         [01;36m[KScalarAggregateKernel[m[K(std::shared_ptr<KernelSignature> sig, KernelInit init,
+         [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:649:3:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 6 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:647:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel()[m[K’
+         [01;36m[KScalarAggregateKernel[m[K() = default;
+         [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:647:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 6 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:646:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel(const arrow::compute::ScalarAggregateKernel&)[m[K’
+       struct ARROW_EXPORT [01;36m[KScalarAggregateKernel[m[K : public Kernel {
+                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:646:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:646:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::ScalarAggregateKernel::ScalarAggregateKernel(arrow::compute::ScalarAggregateKernel&&)[m[K’
+      [01m[K/usr/local/include/arrow/compute/kernel.h:646:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+      [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:[m[K In function ‘[01m[Karrow::Status arrow::py::RegisterHashAggregateFunction(PyObject*, arrow::py::UdfWrapperCallback, const arrow::py::UdfOptions&, arrow::compute::FunctionRegistry*)[m[K’:
+      [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:669:73:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel(std::remove_reference<std::shared_ptr<arrow::compute::KernelSignature>&>::type, std::remove_reference<std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState> >(arrow::compute::KernelContext*, const arrow::compute::KernelInitArgs&)>&>::type, arrow::Status (&)(arrow::compute::KernelContext*, int64_t), arrow::Status (&)(arrow::compute::KernelContext*, const arrow::compute::ExecSpan&), arrow::Status (&)(arrow::compute::KernelContext*, arrow::compute::KernelState&&, const arrow::ArrayData&), arrow::Status (&)(arrow::compute::KernelContext*, arrow::Datum*), bool)[m[K’
+             HashAggregateUdfMerge, HashAggregateUdfFinalize, /*ordered=*/false[01;31m[K)[m[K;
+                                                                               [01;31m[K^[m[K
+      In file included from [01m[K/usr/local/include/arrow/compute/function.h:27[m[K,
+                       from [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.h:21[m[K,
+                       from [01m[K/tmp/pip-install-bylms7xi/pyarrow_205d3ce35b2c4a70bf0b699e5abbf1ec/pyarrow/src/arrow/python/udf.cc:18[m[K:
+      [01m[K/usr/local/include/arrow/compute/kernel.h:709:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel(std::vector<arrow::compute::InputType>, arrow::compute::OutputType, arrow::compute::KernelInit, arrow::compute::HashAggregateConsume, arrow::compute::HashAggregateResize, arrow::compute::HashAggregateMerge, arrow::compute::HashAggregateFinalize)[m[K’
+         [01;36m[KHashAggregateKernel[m[K(std::vector<InputType> in_types, OutputType out_type,
+         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:709:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::remove_reference<std::shared_ptr<arrow::compute::KernelSignature>&>::type[m[K’ {aka ‘[01m[Kstd::shared_ptr<arrow::compute::KernelSignature>[m[K’} to ‘[01m[Kstd::vector<arrow::compute::InputType>[m[K’
+      [01m[K/usr/local/include/arrow/compute/kernel.h:700:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel(std::shared_ptr<arrow::compute::KernelSignature>, arrow::compute::KernelInit, arrow::compute::HashAggregateResize, arrow::compute::HashAggregateConsume, arrow::compute::HashAggregateMerge, arrow::compute::HashAggregateFinalize)[m[K’
+         [01;36m[KHashAggregateKernel[m[K(std::shared_ptr<KernelSignature> sig, KernelInit init,
+         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:700:3:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 7 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:698:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel()[m[K’
+         [01;36m[KHashAggregateKernel[m[K() = default;
+         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:698:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 7 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:697:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel(const arrow::compute::HashAggregateKernel&)[m[K’
+       struct ARROW_EXPORT [01;36m[KHashAggregateKernel[m[K : public Kernel {
+                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+      [01m[K/usr/local/include/arrow/compute/kernel.h:697:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 7 provided
+      [01m[K/usr/local/include/arrow/compute/kernel.h:697:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Karrow::compute::HashAggregateKernel::HashAggregateKernel(arrow::compute::HashAggregateKernel&&)[m[K’
+      [01m[K/usr/local/include/arrow/compute/kernel.h:697:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 7 provided
+      gmake[2]: *** [CMakeFiles/arrow_python.dir/build.make:395: CMakeFiles/arrow_python.dir/pyarrow/src/arrow/python/udf.cc.o] Error 1
+      gmake[1]: *** [CMakeFiles/Makefile2:108: CMakeFiles/arrow_python.dir/all] Error 2
+      gmake: *** [Makefile:136: all] Error 2
+      error: command '/usr/local/bin/cmake' failed with exit code 2
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pyarrow
+  Building wheel for pynacl (pyproject.toml): started
+  Building wheel for pynacl (pyproject.toml): still running...
+  Building wheel for pynacl (pyproject.toml): finished with status 'done'
+  Created wheel for pynacl: filename=PyNaCl-1.5.0-graalpy310-graalpy231_310_native-linux_x86_64.whl size=384943 sha256=d670f065fbce710e9e96dd9f9d10b42fd435eccaf625b672836e341d20ade0f7
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/ea/55/02/f94124643ddb6ab4ca2933ffce6f1e49bc94fc4c234fd34867
+  Building wheel for rpds-py (pyproject.toml): started
+  Building wheel for rpds-py (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for rpds-py (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      Running `maturin pep517 build-wheel -i /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python --compatibility off`
+      📦 Including license file "/tmp/pip-install-bylms7xi/rpds-py_89e1b5c251cf45179e2bc6cc52ee1e52/LICENSE"
+      🔗 Found pyo3 bindings
+      🐍 Found GraalPy 3.10 at /workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python
+      📡 Using build options features from pyproject.toml
+         Compiling target-lexicon v0.12.9
+         Compiling autocfg v1.1.0
+         Compiling once_cell v1.18.0
+         Compiling proc-macro2 v1.0.66
+         Compiling unicode-ident v1.0.11
+         Compiling libc v0.2.147
+         Compiling lock_api v0.4.10
+         Compiling parking_lot_core v0.9.8
+         Compiling memoffset v0.9.0
+         Compiling pyo3-build-config v0.20.0
+         Compiling quote v1.0.31
+         Compiling syn v2.0.32
+         Compiling scopeguard v1.1.0
+         Compiling smallvec v1.11.0
+         Compiling heck v0.4.1
+         Compiling cfg-if v1.0.0
+         Compiling static_assertions v1.1.0
+         Compiling triomphe v0.1.9
+         Compiling archery v1.1.0
+         Compiling parking_lot v0.12.1
+         Compiling unindent v0.2.3
+      error: failed to run custom build command for `pyo3-build-config v0.20.0`
+      
+      Caused by:
+        process didn't exit successfully: `/tmp/pip-install-bylms7xi/rpds-py_89e1b5c251cf45179e2bc6cc52ee1e52/target/release/build/pyo3-build-config-2dd999090c931a94/build-script-build` (exit status: 1)
+        --- stdout
+        cargo:rerun-if-env-changed=PYO3_CONFIG_FILE
+        cargo:rerun-if-env-changed=PYO3_NO_PYTHON
+        cargo:rerun-if-env-changed=PYO3_ENVIRONMENT_SIGNATURE
+        cargo:rerun-if-env-changed=PYO3_PYTHON
+      
+        --- stderr
+        error: unknown interpreter: GraalVM
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `PYO3_ENVIRONMENT_SIGNATURE="graalpy-3.10-64bit" PYO3_PYTHON="/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python" PYTHON_SYS_EXECUTABLE="/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python" "cargo" "rustc" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "/tmp/pip-install-bylms7xi/rpds-py_89e1b5c251cf45179e2bc6cc52ee1e52/Cargo.toml" "--release" "--lib"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for rpds-py
+Successfully built google_compute_engine pynacl
+Failed to build pyarrow rpds-py
+ERROR: Could not build wheels for pyarrow, rpds-py, which is required to install pyproject.toml-based projects
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements.txt, -rbinder/requirements.txt, -rrequirements/gcs.txt, -rrequirements/azure.txt, -rrequirements/github.txt, -rrequirements/dev.txt, -rrequirements/hdfs.txt]; v = InvocationError('/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rbinder/requirements.txt -rrequirements/gcs.txt -rrequirements/azure.txt -rrequirements/github.txt -rrequirements/dev.txt -rrequirements/hdfs.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements.txt, -rbinder/requirements.txt, -rrequirements/gcs.txt, -rrequirements/azure.txt, -rrequirements/github.txt, -rrequirements/dev.txt, -rrequirements/hdfs.txt]; v = InvocationError('/workdir/papermill-2.4.0/.tox/graalpylibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements.txt -rbinder/requirements.txt -rrequirements/gcs.txt -rrequirements/azure.txt -rrequirements/github.txt -rrequirements/dev.txt -rrequirements/hdfs.txt', 1)

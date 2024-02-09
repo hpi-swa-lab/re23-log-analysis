@@ -1,0 +1,13 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/astroid/2.12.13/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements_test_brain.txt
+	-rrequirements_test.txt
+	-rrequirements_test_pre_commit.txt
+	-rrequirements_test_min.txt
+	-rdoc/requirements.txt
+

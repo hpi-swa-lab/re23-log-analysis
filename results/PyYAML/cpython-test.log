@@ -1,0 +1,81 @@
+.package create: /workdir/PyYAML-6.0/.tox/.package
+.package installdeps: setuptools, wheel, Cython
+warning: no files found matching 'README'
+warning: no files found matching 'README'
+cpythonlibtest-unit-test-tests create: /workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/PyYAML-6.0/.tox/.tmp/package/1/PyYAML-6.0.tar.gz
+ERROR: invocation failed (exit code 1), logfile: /workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-2.log
+================================== log start ===================================
+Processing ./.tox/.tmp/package/1/PyYAML-6.0.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [48 lines of output]
+      running egg_info
+      writing lib/PyYAML.egg-info/PKG-INFO
+      writing dependency_links to lib/PyYAML.egg-info/dependency_links.txt
+      writing top-level names to lib/PyYAML.egg-info/top_level.txt
+      Traceback (most recent call last):
+        File "/workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 288, in <module>
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 321, in run
+          self.find_sources()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 329, in find_sources
+          mm.run()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 551, in run
+          self.add_defaults()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 589, in add_defaults
+          sdist.add_defaults(self)
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/command/sdist.py", line 112, in add_defaults
+          super().add_defaults()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 251, in add_defaults
+          self._add_defaults_ext()
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 336, in _add_defaults_ext
+          self.filelist.extend(build_ext.get_source_files())
+        File "<string>", line 204, in get_source_files
+        File "/tmp/pip-build-env-zme2y_tk/overlay/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 107, in __getattr__
+          raise AttributeError(attr)
+      AttributeError: cython_sources
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: InvocationError for command /workdir/PyYAML-6.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install --exists-action w .tox/.tmp/package/1/PyYAML-6.0.tar.gz (exited with code 1)

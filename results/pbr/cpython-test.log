@@ -1,0 +1,646 @@
+GLOB sdist-make: /workdir/pbr-5.11.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rtest-requirements.txt, -rdoc/requirements.txt, -rpbr/tests/testpackage/test-requirements.txt
+cpythonlibtest-unit-test-tests inst: /workdir/pbr-5.11.0/.tox/.tmp/package/1/pbr-5.11.0.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,attrs==23.1.0,autopage==0.5.2,Babel==2.13.1,certifi==2023.11.17,cfgv==3.4.0,charset-normalizer==3.3.2,cliff==4.4.0,cmd2==2.4.3,coverage==7.3.2,distlib==0.3.7,docutils==0.20.1,dulwich==0.21.6,exceptiongroup==1.2.0,extras==1.0.0,filelock==3.13.1,fixtures==4.1.0,flake8==3.8.4,hacking==3.2.0,identify==2.5.32,idna==3.4,imagesize==1.4.1,importlib-metadata==6.8.0,iniconfig==2.0.0,iso8601==2.1.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.6.1,mock==5.1.0,nodeenv==1.8.0,openstackdocstheme==3.2.0,packaging==23.2,pbr @ file:///workdir/pbr-5.11.0/.tox/.tmp/package/1/pbr-5.11.0.zip#sha256=3d951f6bd3476b2d7fff05bd111b509741d9733c0a071259b8eb15c82fa9be51,platformdirs==4.0.0,pluggy==1.3.0,pre-commit==3.5.0,prettytable==3.9.0,pycodestyle==2.6.0,pyflakes==2.2.0,Pygments==2.17.2,pyperclip==1.8.2,pytest==7.4.3,python-subunit==1.4.4,PyYAML==6.0.1,reno==4.0.0,requests==2.31.0,requests-mock==1.11.0,six==1.12.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinxcontrib-apidoc==0.4.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,stestr==4.1.0,stevedore==5.1.0,testrepository==0.0.20,testresources==2.0.1,testscenarios==0.5.0,testtools==2.7.1,tomli==2.0.1,tomlkit==0.12.3,urllib3==2.1.0,virtualenv==20.24.7,voluptuous==0.14.1,wcwidth==0.2.12,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2186872418'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pbr/5.11.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pbr-5.11.0
+plugins: requests-mock-1.11.0
+collecting ... collected 135 items
+
+pbr/tests/test_commands.py::TestCommands::test_custom_build_py_command PASSED [  0%]
+pbr/tests/test_commands.py::TestCommands::test_custom_deb_version_py_command PASSED [  1%]
+pbr/tests/test_commands.py::TestCommands::test_custom_rpm_version_py_command PASSED [  2%]
+pbr/tests/test_commands.py::TestCommands::test_freeze_command PASSED     [  2%]
+pbr/tests/test_core.py::TestCore::test_console_script_develop PASSED     [  3%]
+pbr/tests/test_core.py::TestCore::test_console_script_install PASSED     [  4%]
+pbr/tests/test_core.py::TestCore::test_sdist_extra_files PASSED          [  5%]
+pbr/tests/test_core.py::TestCore::test_setup_py_build_sphinx FAILED      [  5%]
+pbr/tests/test_core.py::TestCore::test_setup_py_keywords PASSED          [  6%]
+pbr/tests/test_core.py::TestGitSDist::test_sdist_git_extra_files PASSED  [  7%]
+pbr/tests/test_files.py::FilesConfigTest::test_auto_package PASSED       [  8%]
+pbr/tests/test_files.py::FilesConfigTest::test_data_files_globbing PASSED [  8%]
+pbr/tests/test_files.py::FilesConfigTest::test_data_files_globbing_source_prefix_in_directory_name PASSED [  9%]
+pbr/tests/test_files.py::FilesConfigTest::test_data_files_with_spaces PASSED [ 10%]
+pbr/tests/test_files.py::FilesConfigTest::test_data_files_with_spaces_quoted_components PASSED [ 11%]
+pbr/tests/test_files.py::FilesConfigTest::test_data_files_with_spaces_subdirectories PASSED [ 11%]
+pbr/tests/test_files.py::FilesConfigTest::test_implicit_auto_package PASSED [ 12%]
+pbr/tests/test_hooks.py::TestHooks::test_custom_commands_known PASSED    [ 13%]
+pbr/tests/test_hooks.py::TestHooks::test_global_setup_hooks PASSED       [ 14%]
+pbr/tests/test_integration.py::TestIntegration::test_integration SKIPPED [ 14%]
+pbr/tests/test_integration.py::TestInstallWithoutPbr::test_install_without_pbr SKIPPED [ 15%]
+pbr/tests/test_integration.py::TestMarkersPip::test_pip_versions SKIPPED [ 16%]
+pbr/tests/test_integration.py::TestLTSSupport::test_lts_venv_default_versions SKIPPED [ 17%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_authors PASSED [ 17%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_changelog PASSED [ 18%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_changelog_handles_astrisk PASSED [ 19%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_changelog_handles_backticks PASSED [ 20%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_changelog_handles_dead_links_in_commit PASSED [ 20%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_install_writes_changelog PASSED [ 21%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithCommit::test_manifest_exclude_honoured PASSED [ 22%]
+pbr/tests/test_packaging.py::TestExtrafileInstallation::test_install_glob PASSED [ 22%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithoutCommit::test_authors PASSED [ 23%]
+pbr/tests/test_packaging.py::TestPackagingInGitRepoWithoutCommit::test_changelog PASSED [ 24%]
+pbr/tests/test_packaging.py::TestPackagingWheels::test_data_directory_has_wsgi_scripts PASSED [ 25%]
+pbr/tests/test_packaging.py::TestPackagingWheels::test_generates_c_extensions PASSED [ 25%]
+pbr/tests/test_packaging.py::TestPackagingWheels::test_metadata_directory_has_pbr_json PASSED [ 26%]
+pbr/tests/test_packaging.py::TestPackagingHelpers::test_generate_script PASSED [ 27%]
+pbr/tests/test_packaging.py::TestPackagingHelpers::test_generate_script_validates_expectations PASSED [ 28%]
+pbr/tests/test_packaging.py::TestPackagingInPlainDirectory::test_authors PASSED [ 28%]
+pbr/tests/test_packaging.py::TestPackagingInPlainDirectory::test_changelog PASSED [ 29%]
+pbr/tests/test_packaging.py::TestPackagingInPlainDirectory::test_install_no_ChangeLog PASSED [ 30%]
+pbr/tests/test_packaging.py::TestPresenceOfGit::testGitIsInstalled PASSED [ 31%]
+pbr/tests/test_packaging.py::TestPresenceOfGit::testGitIsNotInstalled PASSED [ 31%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_default_requirements PASSED [ 32%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_empty_requirements PASSED [ 33%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_index_present PASSED [ 34%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_nested_requirements PASSED [ 34%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_override_with_env PASSED [ 35%]
+pbr/tests/test_packaging.py::ParseRequirementsTest::test_override_with_env_multiple_files PASSED [ 36%]
+pbr/tests/test_packaging.py::ParseRequirementsTestScenarios::test_parse_requirements FAILED [ 37%]
+pbr/tests/test_packaging.py::ParseDependencyLinksTest::test_parse_dependency_normal PASSED [ 37%]
+pbr/tests/test_packaging.py::ParseDependencyLinksTest::test_parse_dependency_with_git_egg_url PASSED [ 38%]
+pbr/tests/test_packaging.py::TestVersions::test_capitalized_headers PASSED [ 39%]
+pbr/tests/test_packaging.py::TestVersions::test_capitalized_headers_partial PASSED [ 40%]
+pbr/tests/test_packaging.py::TestVersions::test_email_parsing_errors_are_handled PASSED [ 40%]
+pbr/tests/test_packaging.py::TestVersions::test_get_kwargs_corner_cases PASSED [ 41%]
+pbr/tests/test_packaging.py::TestVersions::test_invalid_tag_ignored PASSED [ 42%]
+pbr/tests/test_packaging.py::TestVersions::test_leading_characters_symbol_not_found PASSED [ 42%]
+pbr/tests/test_packaging.py::TestVersions::test_leading_space PASSED     [ 43%]
+pbr/tests/test_packaging.py::TestVersions::test_leading_space_multiline PASSED [ 44%]
+pbr/tests/test_packaging.py::TestVersions::test_multi_inline_symbols_no_space PASSED [ 45%]
+pbr/tests/test_packaging.py::TestVersions::test_multi_inline_symbols_reversed PASSED [ 45%]
+pbr/tests/test_packaging.py::TestVersions::test_multi_inline_symbols_spaced PASSED [ 46%]
+pbr/tests/test_packaging.py::TestVersions::test_non_canonical_tagged_version_bump PASSED [ 47%]
+pbr/tests/test_packaging.py::TestVersions::test_preversion_too_low_semver_headers PASSED [ 48%]
+pbr/tests/test_packaging.py::TestVersions::test_preversion_too_low_simple PASSED [ 48%]
+pbr/tests/test_packaging.py::TestVersions::test_skip_write_git_changelog PASSED [ 49%]
+pbr/tests/test_packaging.py::TestVersions::test_tagged_version_has_tag_version PASSED [ 50%]
+pbr/tests/test_packaging.py::TestVersions::test_tagged_version_with_semver_compliant_prerelease PASSED [ 51%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_pre_release_has_pre_dev_version_postversion PASSED [ 51%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_after_pre_has_dev_version_preversion PASSED [ 52%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_after_rc_has_dev_version_preversion PASSED [ 53%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_after_semver_compliant_prerelease_tag PASSED [ 54%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_has_dev_version_postversion PASSED [ 54%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_has_dev_version_preversion PASSED [ 55%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_major_bump PASSED [ 56%]
+pbr/tests/test_packaging.py::TestVersions::test_untagged_version_minor_bump PASSED [ 57%]
+pbr/tests/test_packaging.py::TestVersions::test_valid_tag_honoured PASSED [ 57%]
+pbr/tests/test_packaging.py::TestRequirementParsing::test_requirement_parsing PASSED [ 58%]
+pbr/tests/test_packaging.py::TestPEP517Support::test_pep_517_support PASSED [ 59%]
+pbr/tests/test_packaging.py::TestRepositoryURLDependencies::test_egg_fragment PASSED [ 60%]
+pbr/tests/test_packaging.py::TestRepositoryURLDependencies::test_parse_repo_url_dependency_links PASSED [ 60%]
+pbr/tests/test_packaging.py::TestRepositoryURLDependencies::test_parse_repo_url_requirements PASSED [ 61%]
+pbr/tests/test_pbr_json.py::TestJsonContent::test_content PASSED         [ 62%]
+pbr/tests/test_setup.py::SkipFileWrites::test_skip SKIPPED (/tmp/tmp...) [ 62%]
+pbr/tests/test_setup.py::GitLogsTest::test_generate_authors PASSED       [ 63%]
+pbr/tests/test_setup.py::GitLogsTest::test_write_git_changelog FAILED    [ 64%]
+pbr/tests/test_setup.py::BuildSphinxTest::test_build_doc FAILED          [ 65%]
+pbr/tests/test_setup.py::BuildSphinxTest::test_builders_config FAILED    [ 65%]
+pbr/tests/test_setup.py::BuildSphinxTest::test_cmd_builder_override FAILED [ 66%]
+pbr/tests/test_setup.py::BuildSphinxTest::test_cmd_builder_override_multiple_builders FAILED [ 67%]
+pbr/tests/test_setup.py::APIAutoDocTest::test_default_api_build_dir FAILED [ 68%]
+pbr/tests/test_setup.py::APIAutoDocTest::test_different_api_build_dir FAILED [ 68%]
+pbr/tests/test_util.py::TestBasics::test_basics PASSED                   [ 69%]
+pbr/tests/test_util.py::TestExtrasRequireParsingScenarios::test_extras_parsing FAILED [ 70%]
+pbr/tests/test_util.py::TestInvalidMarkers::test_invalid_marker_raises_error PASSED [ 71%]
+pbr/tests/test_util.py::TestMapFieldsParsingScenarios::test_project_url_parsing FAILED [ 71%]
+pbr/tests/test_util.py::TestKeywordsParsingScenarios::test_keywords_parsing FAILED [ 72%]
+pbr/tests/test_util.py::TestProvidesExtras::test_provides_extras PASSED  [ 73%]
+pbr/tests/test_util.py::TestDataFilesParsing::test_handling_of_whitespace_in_data_files FAILED [ 74%]
+pbr/tests/test_util.py::TestUTF8DescriptionFile::test_utf8_description_file PASSED [ 74%]
+pbr/tests/test_version.py::TestSemanticVersion::test_alpha_default_version PASSED [ 75%]
+pbr/tests/test_version.py::TestSemanticVersion::test_alpha_dev_version PASSED [ 76%]
+pbr/tests/test_version.py::TestSemanticVersion::test_alpha_major_zero_version PASSED [ 77%]
+pbr/tests/test_version.py::TestSemanticVersion::test_alpha_version PASSED [ 77%]
+pbr/tests/test_version.py::TestSemanticVersion::test_alpha_zero_version PASSED [ 78%]
+pbr/tests/test_version.py::TestSemanticVersion::test_beta_dev_version PASSED [ 79%]
+pbr/tests/test_version.py::TestSemanticVersion::test_beta_version PASSED [ 80%]
+pbr/tests/test_version.py::TestSemanticVersion::test_decrement_nonrelease PASSED [ 80%]
+pbr/tests/test_version.py::TestSemanticVersion::test_decrement_nonrelease_zero PASSED [ 81%]
+pbr/tests/test_version.py::TestSemanticVersion::test_decrement_release PASSED [ 82%]
+pbr/tests/test_version.py::TestSemanticVersion::test_dev_no_git_version PASSED [ 82%]
+pbr/tests/test_version.py::TestSemanticVersion::test_dev_version PASSED  [ 83%]
+pbr/tests/test_version.py::TestSemanticVersion::test_dev_zero_version PASSED [ 84%]
+pbr/tests/test_version.py::TestSemanticVersion::test_final_version PASSED [ 85%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_alpha PASSED [ 85%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_no_0_prerelease PASSED [ 86%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_no_0_prerelease_2 PASSED [ 87%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_non_440_beta PASSED [ 88%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_nonzero_lead_in PASSED [ 88%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_postN PASSED [ 89%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_legacy_short_nonzero_lead_in PASSED [ 90%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_non_digit_start PASSED [ 91%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_pure_git_hash PASSED [ 91%]
+pbr/tests/test_version.py::TestSemanticVersion::test_from_pip_string_v_version PASSED [ 92%]
+pbr/tests/test_version.py::TestSemanticVersion::test_increment_nonrelease PASSED [ 93%]
+pbr/tests/test_version.py::TestSemanticVersion::test_increment_release PASSED [ 94%]
+pbr/tests/test_version.py::TestSemanticVersion::test_ordering PASSED     [ 94%]
+pbr/tests/test_version.py::TestSemanticVersion::test_parsing_short_forms PASSED [ 95%]
+pbr/tests/test_version.py::TestSemanticVersion::test_rc_dev_version PASSED [ 96%]
+pbr/tests/test_version.py::TestSemanticVersion::test_rc_version PASSED   [ 97%]
+pbr/tests/test_version.py::TestSemanticVersion::test_to_dev PASSED       [ 97%]
+pbr/tests/test_wsgi.py::TestWsgiScripts::test_with_argument PASSED       [ 98%]
+pbr/tests/test_wsgi.py::TestWsgiScripts::test_wsgi_script_install PASSED [ 99%]
+pbr/tests/test_wsgi.py::TestWsgiScripts::test_wsgi_script_run PASSED     [100%]
+
+=================================== FAILURES ===================================
+_____________________ TestCore.test_setup_py_build_sphinx ______________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_core.py", line 82, in test_setup_py_build_sphinx
+    self.assertEqual(0, return_code)
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 395, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/testtools/testcase.py", line 482, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 0 != 1
+
+----------------------------- Captured stdout call -----------------------------
+Running /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/bin/python setup.py build_sphinx
+STDOUT:
+
+STDERR:
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'author-email' will not be supported in future
+        versions. Please use the underscore name 'author_email' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'home-page' will not be supported in future
+        versions. Please use the underscore name 'home_page' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'description-file' will not be supported in future
+        versions. Please use the underscore name 'description_file' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'description-content-type' will not be supported in future
+        versions. Please use the underscore name 'description_content_type' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'python-requires' will not be supported in future
+        versions. Please use the underscore name 'python_requires' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'requires-dist' will not be supported in future
+        versions. Please use the underscore name 'requires_dist' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/__init__.py:80: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+!!
+
+        ********************************************************************************
+        Requirements should be satisfied by a PEP 517 installer.
+        If you are using pip, you can try `pip install --use-pep517`.
+        ********************************************************************************
+
+!!
+  dist.fetch_build_eggs(dist.setup_requires)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'author-email' will not be supported in future
+        versions. Please use the underscore name 'author_email' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'home-page' will not be supported in future
+        versions. Please use the underscore name 'home_page' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'description-file' will not be supported in future
+        versions. Please use the underscore name 'description_file' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'description-content-type' will not be supported in future
+        versions. Please use the underscore name 'description_content_type' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'python-requires' will not be supported in future
+        versions. Please use the underscore name 'python_requires' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/setuptools/dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'requires-dist' will not be supported in future
+        versions. Please use the underscore name 'requires_dist' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'build_sphinx'
+____________ ParseRequirementsTestScenarios.test_parse_requirements ____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_packaging.py", line 600, in test_parse_requirements
+    req_string = self.url
+AttributeError: 'ParseRequirementsTestScenarios' object has no attribute 'url'
+
+_____________________ GitLogsTest.test_write_git_changelog _____________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:'pbr'
+
+pythonlogging:'': {{{
+[pbr] Writing ChangeLog
+[pbr] Generating ChangeLog
+}}}
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 157, in test_write_git_changelog
+    git.write_git_changelog(git_dir=self.git_dir,
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 289, in write_git_changelog
+    for release, content in changelog:
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 176, in _iter_changelog
+    for hash, tags, msg in changelog:
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 235, in _iter_log_inner
+    changelog = _run_git_command(log_cmd, git_dir)
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 64, in _run_git_command
+    return _run_shell_command(
+  File "/workdir/pbr-5.11.0/pbr/git.py", line 46, in _run_shell_command
+    output = subprocess.Popen(cmd,
+  File "/workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/fixtures/_fixtures/popen.py", line 169, in __call__
+    proc_info = self.get_info(proc_args)
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 154, in <lambda>
+    "stdout": BytesIO(self.changelog.encode('utf-8'))
+AttributeError: 'GitLogsTest' object has no attribute 'changelog'
+
+________________________ BuildSphinxTest.test_build_doc ________________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 295, in test_build_doc
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable
+
+_____________________ BuildSphinxTest.test_builders_config _____________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 315, in test_builders_config
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable
+
+__________________ BuildSphinxTest.test_cmd_builder_override ___________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 344, in test_cmd_builder_override
+    if self.has_opt:
+AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'
+
+_________ BuildSphinxTest.test_cmd_builder_override_multiple_builders __________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 364, in test_cmd_builder_override_multiple_builders
+    if self.has_opt:
+AttributeError: 'BuildSphinxTest' object has no attribute 'has_opt'
+
+__________________ APIAutoDocTest.test_default_api_build_dir ___________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 417, in test_default_api_build_dir
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable
+
+_________________ APIAutoDocTest.test_different_api_build_dir __________________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_setup.py", line 436, in test_different_api_build_dir
+    build_doc = packaging.LocalBuildDoc(self.distr)
+TypeError: 'NoneType' object is not callable
+
+____________ TestExtrasRequireParsingScenarios.test_extras_parsing _____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 186, in test_extras_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestExtrasRequireParsingScenarios' object has no attribute 'config_text'
+
+____________ TestMapFieldsParsingScenarios.test_project_url_parsing ____________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 234, in test_project_url_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestMapFieldsParsingScenarios' object has no attribute 'config_text'
+
+______________ TestKeywordsParsingScenarios.test_keywords_parsing ______________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 264, in test_keywords_parsing
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestKeywordsParsingScenarios' object has no attribute 'config_text'
+
+________ TestDataFilesParsing.test_handling_of_whitespace_in_data_files ________
+'NoneType' object is not iterable
+
+During handling of the above exception, another exception occurred:
+NOTE: Incompatible Exception Representation, displaying natively:
+
+testtools.testresult.real._StringException: Empty attachments:
+  pythonlogging:''
+  pythonlogging:'pbr'
+
+Traceback (most recent call last):
+  File "/workdir/pbr-5.11.0/pbr/tests/test_util.py", line 300, in test_handling_of_whitespace_in_data_files
+    config = config_from_ini(self.config_text)
+AttributeError: 'TestDataFilesParsing' object has no attribute 'config_text'
+
+=============================== warnings summary ===============================
+pbr/packaging.py:42
+  /workdir/pbr-5.11.0/pbr/packaging.py:42: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871
+  /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+pbr/tests/test_packaging.py:43
+  /workdir/pbr-5.11.0/pbr/tests/test_packaging.py:43: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+    import imp
+
+pbr/tests/test_packaging.py:71
+  /workdir/pbr-5.11.0/pbr/tests/test_packaging.py:71: PytestCollectionWarning: cannot collect test class 'TestRepo' because it has a __init__ constructor (from: pbr/tests/test_packaging.py)
+    class TestRepo(fixtures.Fixture):
+
+pbr/tests/test_packaging.py::TestVersions::test_capitalized_headers
+  /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unraisableexception.py:78: PytestUnraisableExceptionWarning: Exception ignored in: <function _TemporaryFileCloser.__del__ at 0x7fec66ee1630>
+  
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.10/tempfile.py", line 450, in __del__
+      self.close()
+    File "/usr/local/lib/python3.10/tempfile.py", line 446, in close
+      unlink(self.name)
+  FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpusdgk0xk/tmpno_il0qv'
+  
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-- generated xml file: /workdir/results/pbr/5.11.0/1/cpython-test-results.xml --
+=========================== short test summary info ============================
+FAILED pbr/tests/test_core.py::TestCore::test_setup_py_build_sphinx - Failed:...
+FAILED pbr/tests/test_packaging.py::ParseRequirementsTestScenarios::test_parse_requirements
+FAILED pbr/tests/test_setup.py::GitLogsTest::test_write_git_changelog - Faile...
+FAILED pbr/tests/test_setup.py::BuildSphinxTest::test_build_doc - Failed: NOT...
+FAILED pbr/tests/test_setup.py::BuildSphinxTest::test_builders_config - Faile...
+FAILED pbr/tests/test_setup.py::BuildSphinxTest::test_cmd_builder_override - ...
+FAILED pbr/tests/test_setup.py::BuildSphinxTest::test_cmd_builder_override_multiple_builders
+FAILED pbr/tests/test_setup.py::APIAutoDocTest::test_default_api_build_dir - ...
+FAILED pbr/tests/test_setup.py::APIAutoDocTest::test_different_api_build_dir
+FAILED pbr/tests/test_util.py::TestExtrasRequireParsingScenarios::test_extras_parsing
+FAILED pbr/tests/test_util.py::TestMapFieldsParsingScenarios::test_project_url_parsing
+FAILED pbr/tests/test_util.py::TestKeywordsParsingScenarios::test_keywords_parsing
+FAILED pbr/tests/test_util.py::TestDataFilesParsing::test_handling_of_whitespace_in_data_files
+============ 13 failed, 117 passed, 5 skipped, 6 warnings in 31.93s ============
+ERROR: InvocationError for command /workdir/pbr-5.11.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pbr/5.11.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

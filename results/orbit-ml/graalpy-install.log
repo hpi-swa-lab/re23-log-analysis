@@ -1,0 +1,409 @@
+Collecting orbit-ml==1.1.4.2
+  Downloading orbit-ml-1.1.4.2.tar.gz (445 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 445.9/445.9 kB 2.2 MB/s eta 0:00:00
+Looking for GraalPy patches for orbit-ml
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting numpy>=1.18
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pandas>=1.0.3
+  Using cached pandas-1.5.2-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting matplotlib>=3.3.2
+  Using cached matplotlib-3.7.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting scipy>=1.4.1
+  Using cached scipy-1.10.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting torch>=1.11.0
+  Downloading https://github.com/pytorch/pytorch/releases/download/v1.13.1/pytorch-v1.13.1.tar.gz (234.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 234.1/234.1 MB 399.2 kB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/torch/csrc/Module.cpp
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/torch/csrc/utils/python_compat.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/torch/csrc/autograd/python_variable.cpp
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/pybind11/include/pybind11/pytypes.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/protobuf/python/google/protobuf/pyext/message.cc
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/protobuf/python/google/protobuf/pyext/descriptor.cc
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/protobuf/python/google/protobuf/pyext/message_factory.cc
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/protobuf/python/google/protobuf/pyext/repeated_composite_container.cc
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/onnx/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/onnx/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/onnx/third_party/pybind11/include/pybind11/pytypes.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/tensorpipe/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/tensorpipe/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/onnx-tensorrt/third_party/onnx/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-169hqi5z/torch_0f8b79c432084f03b5815b82329c91cb/third_party/onnx-tensorrt/third_party/onnx/third_party/pybind11/include/pybind11/cast.h
+Looking for GraalPy patches for torch
+Patching package torch using /opt/graalpy/lib/graalpy23.1/patches/torch/torch-1.13.1.patch
+patching file CMakeLists.txt
+patching file functorch/csrc/dim/dim.cpp
+patching file setup.py
+patching file test/test_overrides.py
+patching file test/test_python_dispatch.py
+patching file third_party/fbgemm/CMakeLists.txt
+patching file third_party/gloo/gloo/common/linux.cc
+patching file third_party/gloo/gloo/transport/pair.h
+patching file third_party/gloo/gloo/transport/tcp/device.h
+patching file third_party/pybind11/include/pybind11/gil.h
+patching file third_party/pybind11/include/pybind11/pytypes.h
+patching file torch/_dispatch/python.py
+patching file torch/_tensor_str.py
+patching file torch/autograd/grad_mode.py
+patching file torch/csrc/Module.cpp
+patching file torch/csrc/autograd/init.cpp
+patching file torch/csrc/autograd/python_variable_indexing.cpp
+patching file torch/csrc/jit/python/python_tracer.cpp
+patching file torch/csrc/utils/python_compat.h
+patching file torch/distributed/_shard/partial_tensor.py
+patching file torch/overrides.py
+patching file torch/testing/_internal/common_utils.py
+patching file torch/utils/_mode_utils.py
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+Collecting orbit-ml==1.1.4.2
+  Using cached orbit-ml-1.1.4.2.tar.gz (445 kB)
+Looking for GraalPy patches for orbit-ml
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting numpy>=1.18
+  Using cached numpy-1.23.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pandas>=1.0.3
+  Using cached pandas-1.5.2-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting matplotlib>=3.3.2
+  Using cached matplotlib-3.7.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting scipy>=1.4.1
+  Using cached scipy-1.10.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting torch>=1.11.0
+  Downloading https://github.com/pytorch/pytorch/releases/download/v1.13.1/pytorch-v1.13.1.tar.gz (234.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 234.1/234.1 MB 786.1 kB/s eta 0:00:00
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/torch/csrc/Module.cpp
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/torch/csrc/utils/python_compat.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/torch/csrc/autograd/python_variable.cpp
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/pybind11/include/pybind11/pytypes.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/protobuf/python/google/protobuf/pyext/message.cc
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/protobuf/python/google/protobuf/pyext/descriptor.cc
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/protobuf/python/google/protobuf/pyext/message_factory.cc
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/protobuf/python/google/protobuf/pyext/repeated_composite_container.cc
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/onnx/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/onnx/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/onnx/third_party/pybind11/include/pybind11/pytypes.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/tensorpipe/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/tensorpipe/third_party/pybind11/include/pybind11/cast.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/onnx-tensorrt/third_party/onnx/third_party/pybind11/include/pybind11/pybind11.h
+auto-patching C API usages in /tmp/pip-install-8p_7snzk/torch_f69d651fc8904a22a040a11a18b9c280/third_party/onnx-tensorrt/third_party/onnx/third_party/pybind11/include/pybind11/cast.h
+Looking for GraalPy patches for torch
+Patching package torch using /opt/graalpy/lib/graalpy23.1/patches/torch/torch-1.13.1.patch
+patching file CMakeLists.txt
+patching file functorch/csrc/dim/dim.cpp
+patching file setup.py
+patching file test/test_overrides.py
+patching file test/test_python_dispatch.py
+patching file third_party/fbgemm/CMakeLists.txt
+patching file third_party/gloo/gloo/common/linux.cc
+patching file third_party/gloo/gloo/transport/pair.h
+patching file third_party/gloo/gloo/transport/tcp/device.h
+patching file third_party/pybind11/include/pybind11/gil.h
+patching file third_party/pybind11/include/pybind11/pytypes.h
+patching file torch/_dispatch/python.py
+patching file torch/_tensor_str.py
+patching file torch/autograd/grad_mode.py
+patching file torch/csrc/Module.cpp
+patching file torch/csrc/autograd/init.cpp
+patching file torch/csrc/autograd/python_variable_indexing.cpp
+patching file torch/csrc/jit/python/python_tracer.cpp
+patching file torch/csrc/utils/python_compat.h
+patching file torch/distributed/_shard/partial_tensor.py
+patching file torch/overrides.py
+patching file torch/testing/_internal/common_utils.py
+patching file torch/utils/_mode_utils.py
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tqdm>=4.36.1
+  Using cached tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting seaborn>=0.10.0
+  Using cached seaborn-0.13.0-py3-none-any.whl (294 kB)
+Collecting pyro-ppl>=1.4.0
+  Downloading pyro_ppl-1.8.6-py3-none-any.whl (732 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 732.8/732.8 kB 4.0 MB/s eta 0:00:00
+Collecting statsmodels>=0.11.1
+  Downloading statsmodels-0.14.0.tar.gz (19.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.4/19.4 MB 5.5 MB/s eta 0:00:00
+Looking for GraalPy patches for statsmodels
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: still running...
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting arviz
+  Downloading arviz-0.16.1-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 7.0 MB/s eta 0:00:00
+Collecting cmdstanpy>=1.0.4
+  Using cached cmdstanpy-1.2.0-py3-none-any.whl (93 kB)
+Requirement already satisfied: setuptools>=42 in ./install-virtualenv/lib/python3.10/site-packages (from orbit-ml==1.1.4.2) (63.2.0)
+Collecting stanio~=0.3.0
+  Using cached stanio-0.3.0-py3-none-any.whl (6.2 kB)
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.2.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting cycler>=0.10
+  Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.45.0-py3-none-any.whl (1.0 MB)
+Collecting kiwisolver>=1.0.1
+  Using cached kiwisolver-1.4.5-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting packaging>=20.0
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pillow>=6.2.0
+  Using cached Pillow-10.1.0-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyparsing>=2.3.1
+  Using cached pyparsing-3.0.8-py3-none-any.whl (98 kB)
+Collecting python-dateutil>=2.7
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1
+  Using cached pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+Collecting opt-einsum>=2.3.2
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting pyro-api>=0.1.1
+  Downloading pyro_api-0.1.2-py3-none-any.whl (11 kB)
+Collecting patsy>=0.5.2
+  Downloading patsy-0.5.3-py2.py3-none-any.whl (233 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.8/233.8 kB 9.2 MB/s eta 0:00:00
+Collecting typing-extensions
+  Using cached typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting xarray>=0.21.0
+  Downloading xarray-2023.11.0-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 7.7 MB/s eta 0:00:00
+Collecting h5netcdf>=1.0.2
+  Downloading h5netcdf-1.3.0-py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.6/43.6 kB 3.4 MB/s eta 0:00:00
+Collecting xarray-einstats>=0.3
+  Downloading xarray_einstats-0.6.0-py3-none-any.whl (31 kB)
+Collecting h5py
+  Downloading h5py-2.10.0.tar.gz (301 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.1/301.1 kB 6.2 MB/s eta 0:00:00
+Looking for GraalPy patches for h5py
+Patching package h5py using /opt/graalpy/lib/graalpy23.1/patches/h5py/h5py-2.10.0.patch
+patching file setup_configure.py
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting six
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Building wheels for collected packages: orbit-ml, statsmodels, torch, h5py
+  Building wheel for orbit-ml (pyproject.toml): started
+  Building wheel for orbit-ml (pyproject.toml): still running...
+  Building wheel for orbit-ml (pyproject.toml): still running...
+  Building wheel for orbit-ml (pyproject.toml): finished with status 'done'
+  Created wheel for orbit-ml: filename=orbit_ml-1.1.4.2-py3-none-any.whl size=475081 sha256=ae11b816532f422cc1b602087dd5251be1c8a0a8c70b445563dac146ddf20c4b
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/ad/f9/ac/273014d8289f09d728429aa504df47a667d869c2821029536e
+  Building wheel for statsmodels (pyproject.toml): started
+  Building wheel for statsmodels (pyproject.toml): finished with status 'done'
+  Created wheel for statsmodels: filename=statsmodels-0.14.0-graalpy310-graalpy231_310_native-linux_x86_64.whl size=9990186 sha256=f6fb09da040bf3173b77599f9b26fe4c25457241e3d77af1af1c47ef085fa37c
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/3a/7b/86/fb33a0288299bdf44e92ccfd6092c81d1f625073ed06bdfaa5
+  Building wheel for torch (pyproject.toml): started
+  Building wheel for torch (pyproject.toml): still running...
+  Building wheel for torch (pyproject.toml): finished with status 'done'
+  Created wheel for torch: filename=torch-1.13.1-graalpy310-graalpy231_310_native-linux_x86_64.whl size=77681307 sha256=824229496a66da6777ea773a24e8624ff5515105ca08d895d4b5381dfb01765f
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/92/93/97/5a53a4bae7b3011db9c8632c0cfa1865a1d1445118326de619
+  Building wheel for h5py (setup.py): started
+  Building wheel for h5py (setup.py): still running...
+  Building wheel for h5py (setup.py): still running...
+  Building wheel for h5py (setup.py): still running...
+  Building wheel for h5py (setup.py): finished with status 'done'
+  Created wheel for h5py: filename=h5py-2.10.0-graalpy310-graalpy231_310_native-linux_x86_64.whl size=1225010 sha256=d760d6c9aab48a64ce7911f1f27fff06816bcafdcfa5256efc044ce579bd969d
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/cd/f4/fd/8093410a645a7539953593e19e68f1c05e488dd96188d6a23e
+Successfully built orbit-ml statsmodels torch h5py
+Installing collected packages: pytz, pyro-api, typing-extensions, tqdm, six, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, torch, stanio, scipy, python-dateutil, patsy, opt-einsum, h5py, contourpy, pyro-ppl, pandas, matplotlib, h5netcdf, xarray, statsmodels, seaborn, cmdstanpy, xarray-einstats, arviz, orbit-ml
+Looking for GraalPy patches for pytz
+Patching package pytz using /opt/graalpy/lib/graalpy23.1/patches/pytz/pytz-2022.2.1.patch
+Looking for GraalPy patches for pyro_api
+Looking for GraalPy patches for typing_extensions
+Looking for GraalPy patches for tqdm
+Looking for GraalPy patches for six
+Looking for GraalPy patches for pyparsing
+Patching package pyparsing using /opt/graalpy/lib/graalpy23.1/patches/pyparsing/pyparsing-3.0.8.patch
+Looking for GraalPy patches for Pillow
+Looking for GraalPy patches for packaging
+Patching package packaging using /opt/graalpy/lib/graalpy23.1/patches/packaging/packaging.patch
+patching file packaging/tags.py
+Hunk #1 FAILED at 4.
+Hunk #2 FAILED at 37.
+2 out of 2 hunks FAILED -- saving rejects to file packaging/tags.py.rej
+Applying GraalPy patch failed for packaging. The package may still work.
+Looking for GraalPy patches for numpy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+numpy == 1.16.4
+numpy == 1.19.5
+numpy == 1.21.6
+numpy == 1.22.4
+numpy == 1.23.4
+numpy == 1.23.1
+numpy == 1.23.5
+Looking for GraalPy patches for kiwisolver
+Looking for GraalPy patches for fonttools
+Looking for GraalPy patches for cycler
+Looking for GraalPy patches for stanio
+Looking for GraalPy patches for scipy
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+scipy == 1.4.1
+scipy == 1.7.3
+scipy == 1.8.1
+scipy == 1.9.3
+scipy == 1.10.1
+Looking for GraalPy patches for python_dateutil
+Looking for GraalPy patches for patsy
+Looking for GraalPy patches for opt_einsum
+Looking for GraalPy patches for contourpy
+Looking for GraalPy patches for pyro_ppl
+Looking for GraalPy patches for pandas
+We have patches to make this package work on GraalVM for some version(s).
+If installing or running fails, consider using one of the versions that we have patches for:
+pandas == 1.4.3
+pandas == 1.5.2
+Looking for GraalPy patches for matplotlib
+Patching package matplotlib using /opt/graalpy/lib/graalpy23.1/patches/matplotlib/matplotlib-3.7.0.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/setupext.py b/setupext.py
+|index a898d64..1f0b0b4 100644
+|--- a/setupext.py
+|+++ b/setupext.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for matplotlib. The package may still work.
+Looking for GraalPy patches for h5netcdf
+Looking for GraalPy patches for xarray
+Looking for GraalPy patches for statsmodels
+Looking for GraalPy patches for seaborn
+Looking for GraalPy patches for cmdstanpy
+Looking for GraalPy patches for xarray_einstats
+Looking for GraalPy patches for arviz
+Looking for GraalPy patches for orbit_ml
+Successfully installed arviz-0.16.1 cmdstanpy-1.2.0 contourpy-1.2.0 cycler-0.12.1 fonttools-4.45.0 h5netcdf-1.3.0 h5py-2.10.0 kiwisolver-1.4.5 matplotlib-3.7.0 numpy-1.23.5 opt-einsum-3.3.0 orbit-ml-1.1.4.2 packaging-23.2 pandas-1.5.2 patsy-0.5.3 pillow-10.1.0 pyparsing-3.0.8 pyro-api-0.1.2 pyro-ppl-1.8.6 python-dateutil-2.8.2 pytz-2022.2.1 scipy-1.10.1 seaborn-0.13.0 six-1.16.0 stanio-0.3.0 statsmodels-0.14.0 torch-1.13.1 tqdm-4.66.1 typing-extensions-4.8.0 xarray-2023.11.0 xarray-einstats-0.6.0

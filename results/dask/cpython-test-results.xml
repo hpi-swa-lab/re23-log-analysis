@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="2" failures="0" skipped="12" tests="14" time="2.256" timestamp="2023-11-21T01:29:23.822158" hostname="b80581c01e0f"><testcase classname="" name="dask.bag.tests.test_avro" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/bag/tests/test_avro.py', 8, "Skipped: could not import 'fastavro': No module named 'fastavro'")</skipped></testcase><testcase classname="" name="dask.bytes.tests.test_http" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/bytes/tests/test_http.py', 17, "Skipped: could not import 'requests': No module named 'requests'")</skipped></testcase><testcase classname="" name="dask.bytes.tests.test_s3" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/bytes/tests/test_s3.py', 13, "Skipped: could not import 's3fs': No module named 's3fs'")</skipped></testcase><testcase classname="" name="dask.tests.test_base" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dask-2022.12.0/dask/tests/test_base.py", line 1584, in &lt;module&gt;
+    @pytest.mark.flaky(reruns=10, reruns_delay=5)
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/mark/structures.py", line 549, in __getattr__
+    warnings.warn(
+pytest.PytestUnknownMarkWarning: Unknown pytest.mark.flaky - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html</error></testcase><testcase classname="" name="dask.tests.test_cache" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_cache.py', 11, "Skipped: could not import 'cachey': No module named 'cachey'")</skipped></testcase><testcase classname="" name="dask.tests.test_distributed" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_distributed.py', 3, "Skipped: could not import 'distributed': No module named 'distributed'")</skipped></testcase><testcase classname="" name="dask.tests.test_dot" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_dot.py', 10, "Skipped: could not import 'ipycytoscape': No module named 'ipycytoscape'")</skipped></testcase><testcase classname="" name="dask.tests.test_graph_manipulation" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1050, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dask-2022.12.0/dask/tests/test_graph_manipulation.py", line 14, in &lt;module&gt;
+    from dask.tests.test_base import Tuple
+  File "&lt;frozen importlib._bootstrap&gt;", line 1027, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 1006, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 688, in _load_unlocked
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workdir/dask-2022.12.0/dask/tests/test_base.py", line 1584, in &lt;module&gt;
+    @pytest.mark.flaky(reruns=10, reruns_delay=5)
+  File "/workdir/dask-2022.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/mark/structures.py", line 549, in __getattr__
+    warnings.warn(
+pytest.PytestUnknownMarkWarning: Unknown pytest.mark.flaky - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html</error></testcase><testcase classname="" name="dask.tests.test_hashing" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_hashing.py', 5, "Skipped: could not import 'numpy': No module named 'numpy'")</skipped></testcase><testcase classname="" name="dask.tests.test_layers" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_layers.py', 5, "Skipped: could not import 'distributed': No module named 'distributed'")</skipped></testcase><testcase classname="" name="dask.tests.test_spark_compat" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_spark_compat.py', 9, 'Skipped: could not import \'dask.dataframe\': Dask dataframe requirements are not installed.\n\nPlease either conda or pip install as follows:\n\n  conda install dask                     # either conda install\n  python -m pip install "dask[dataframe]" --upgrade  # or python -m pip install')</skipped></testcase><testcase classname="" name="dask.tests.test_system" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_system.py', 10, "Skipped: could not import 'psutil': No module named 'psutil'")</skipped></testcase><testcase classname="" name="dask.tests.test_typing" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/tests/test_typing.py', 26, 'Skipped: could not import \'dask.array\': No module named \'numpy\'\n\nDask array requirements are not installed.\n\nPlease either conda or pip install as follows:\n\n  conda install dask                 # either conda install\n  python -m pip install "dask[array]" --upgrade  # or python -m pip install')</skipped></testcase><testcase classname="" name="dask.widgets.tests.test_widgets" time="0.000"><skipped message="collection skipped">('/workdir/dask-2022.12.0/dask/widgets/tests/test_widgets.py', 5, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase></testsuite></testsuites>

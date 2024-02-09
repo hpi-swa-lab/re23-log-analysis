@@ -1,0 +1,11 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/Flask-Login/0.6.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements/tests-min.txt
+	-rrequirements/ci-tests.txt
+	-rrequirements/tests.txt
+	-rrequirements/dev.txt
+	-rrequirements/style.txt
+	-rrequirements/ci-release.txt
+

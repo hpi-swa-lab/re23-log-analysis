@@ -1,0 +1,1445 @@
+.package create: /workdir/pydata-sphinx-theme-0.12.0/.tox/.package
+.package installdeps: sphinx-theme-builder >= 0.2.0a7
+cpythonlibtest-unit-test-tests create: /workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pydata-sphinx-theme-0.12.0/.tox/.tmp/package/1/pydata_sphinx_theme-0.12.0.tar.gz
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,Babel==2.13.1,beautifulsoup4==4.12.2,certifi==2023.11.17,charset-normalizer==3.3.2,docutils==0.20.1,exceptiongroup==1.2.0,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pydata-sphinx-theme @ file:///workdir/pydata-sphinx-theme-0.12.0/.tox/.tmp/package/1/pydata_sphinx_theme-0.12.0.tar.gz#sha256=8e204052aab3e66ed682220daaa908325f36eae4e88c88258e111bf523eba192,Pygments==2.17.2,pytest==7.4.3,requests==2.31.0,snowballstemmer==2.2.0,soupsieve==2.5,Sphinx==7.2.6,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2170969394'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pydata-sphinx-theme/0.12.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pydata-sphinx-theme-0.12.0
+collecting ... collected 45 items
+
+tests/test_build.py::test_build_html ERROR                               [  2%]
+tests/test_build.py::test_toc_visibility FAILED                          [  4%]
+tests/test_build.py::test_icon_links ERROR                               [  6%]
+tests/test_build.py::test_logo_basic FAILED                              [  8%]
+tests/test_build.py::test_logo_no_image FAILED                           [ 11%]
+tests/test_build.py::test_logo_two_images FAILED                         [ 13%]
+tests/test_build.py::test_logo_external_link FAILED                      [ 15%]
+tests/test_build.py::test_logo_external_image FAILED                     [ 17%]
+tests/test_build.py::test_favicons FAILED                                [ 20%]
+tests/test_build.py::test_navbar_align_default FAILED                    [ 22%]
+tests/test_build.py::test_navbar_align_right FAILED                      [ 24%]
+tests/test_build.py::test_navbar_no_in_page_headers ERROR                [ 26%]
+tests/test_build.py::test_navbar_header_dropdown[0] ERROR                [ 28%]
+tests/test_build.py::test_navbar_header_dropdown[4] ERROR                [ 31%]
+tests/test_build.py::test_navbar_header_dropdown[8] ERROR                [ 33%]
+tests/test_build.py::test_sidebars_captions ERROR                        [ 35%]
+tests/test_build.py::test_sidebars_nested_page ERROR                     [ 37%]
+tests/test_build.py::test_sidebars_level2 ERROR                          [ 40%]
+tests/test_build.py::test_sidebars_show_nav_level0 ERROR                 [ 42%]
+tests/test_build.py::test_included_toc FAILED                            [ 44%]
+tests/test_build.py::test_edit_page_url[html_context0-https://github.com/foo/bar/edit/HEAD/docs/index.rst] FAILED [ 46%]
+tests/test_build.py::test_edit_page_url[html_context1-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst] FAILED [ 48%]
+tests/test_build.py::test_edit_page_url[html_context2-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit] FAILED [ 51%]
+tests/test_build.py::test_edit_page_url[html_context3-https://github.com/foo/bar/edit/HEAD/docs/index.rst] FAILED [ 53%]
+tests/test_build.py::test_edit_page_url[html_context4-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst] FAILED [ 55%]
+tests/test_build.py::test_edit_page_url[html_context5-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit] FAILED [ 57%]
+tests/test_build.py::test_edit_page_url[html_context6-None] FAILED       [ 60%]
+tests/test_build.py::test_edit_page_url[html_context7-None] FAILED       [ 62%]
+tests/test_build.py::test_edit_page_url[html_context8-None] FAILED       [ 64%]
+tests/test_build.py::test_edit_page_url[html_context9-https://dvcs.example.com/foo/bar/edit/HEAD/index.rst] FAILED [ 66%]
+tests/test_build.py::test_edit_page_url[html_context10-None] FAILED      [ 68%]
+tests/test_build.py::test_edit_page_url[html_context11-https://github.example.com/foo/bar/edit/HEAD/docs/index.rst] FAILED [ 71%]
+tests/test_build.py::test_edit_page_url[html_context12-https://gitlab.example.com/foo/bar/-/edit/HEAD/docs/index.rst] FAILED [ 73%]
+tests/test_build.py::test_edit_page_url[html_context13-https://bitbucket.example.com/foo/bar/src/HEAD/docs/index.rst?mode=edit] FAILED [ 75%]
+tests/test_build.py::test_analytics[provider0-tags0] FAILED              [ 77%]
+tests/test_build.py::test_analytics[provider1-tags1] FAILED              [ 80%]
+tests/test_build.py::test_plausible FAILED                               [ 82%]
+tests/test_build.py::test_show_nav_level FAILED                          [ 84%]
+tests/test_build.py::test_version_switcher[switcher.json] ERROR          [ 86%]
+tests/test_build.py::test_version_switcher[http://a.b/switcher.json] ERROR [ 88%]
+tests/test_build.py::test_version_switcher[missing_url.json] ERROR       [ 91%]
+tests/test_build.py::test_theme_switcher ERROR                           [ 93%]
+tests/test_build.py::test_shorten_link ERROR                             [ 95%]
+tests/test_build.py::test_math_header_item ERROR                         [ 97%]
+tests/test_build.py::test_deprecated_build_html ERROR                    [100%]
+
+==================================== ERRORS ====================================
+______________________ ERROR at setup of test_build_html _______________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 63
+  def test_build_html(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:63
+______________________ ERROR at setup of test_icon_links _______________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 105
+  def test_icon_links(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:105
+_______________ ERROR at setup of test_navbar_no_in_page_headers _______________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 299
+  def test_navbar_no_in_page_headers(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:299
+_______________ ERROR at setup of test_navbar_header_dropdown[0] _______________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 308
+  @pytest.mark.parametrize("n_links", (0, 4, 8))  # 0 = only dropdown, 8 = no dropdown
+  def test_navbar_header_dropdown(sphinx_build_factory, file_regression, n_links):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:308
+_______________ ERROR at setup of test_navbar_header_dropdown[4] _______________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 308
+  @pytest.mark.parametrize("n_links", (0, 4, 8))  # 0 = only dropdown, 8 = no dropdown
+  def test_navbar_header_dropdown(sphinx_build_factory, file_regression, n_links):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:308
+_______________ ERROR at setup of test_navbar_header_dropdown[8] _______________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 308
+  @pytest.mark.parametrize("n_links", (0, 4, 8))  # 0 = only dropdown, 8 = no dropdown
+  def test_navbar_header_dropdown(sphinx_build_factory, file_regression, n_links):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:308
+___________________ ERROR at setup of test_sidebars_captions ___________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 339
+  def test_sidebars_captions(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:339
+_________________ ERROR at setup of test_sidebars_nested_page __________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 349
+  def test_sidebars_nested_page(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:349
+____________________ ERROR at setup of test_sidebars_level2 ____________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 359
+  def test_sidebars_level2(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:359
+_______________ ERROR at setup of test_sidebars_show_nav_level0 ________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 371
+  def test_sidebars_show_nav_level0(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:371
+____________ ERROR at setup of test_version_switcher[switcher.json] ____________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 626
+  @pytest.mark.parametrize("url", switcher_files)
+  def test_version_switcher(sphinx_build_factory, file_regression, url):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:626
+______ ERROR at setup of test_version_switcher[http://a.b/switcher.json] _______
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 626
+  @pytest.mark.parametrize("url", switcher_files)
+  def test_version_switcher(sphinx_build_factory, file_regression, url):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:626
+__________ ERROR at setup of test_version_switcher[missing_url.json] ___________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 626
+  @pytest.mark.parametrize("url", switcher_files)
+  def test_version_switcher(sphinx_build_factory, file_regression, url):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:626
+____________________ ERROR at setup of test_theme_switcher _____________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 664
+  def test_theme_switcher(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:664
+_____________________ ERROR at setup of test_shorten_link ______________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 674
+  def test_shorten_link(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:674
+___________________ ERROR at setup of test_math_header_item ____________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 686
+  def test_math_header_item(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:686
+_________________ ERROR at setup of test_deprecated_build_html _________________
+file /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py, line 694
+  def test_deprecated_build_html(sphinx_build_factory, file_regression):
+E       fixture 'file_regression' not found
+>       available fixtures: _shared_result_cache, app, app_params, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, if_graphviz_found, make_app, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, rollback_sysmodules, rootdir, shared_result, sphinx_build_factory, sphinx_test_tempdir, status, test_params, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, warning
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:694
+=================================== FAILURES ===================================
+_____________________________ test_toc_visibility ______________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 97, in test_toc_visibility
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_______________________________ test_logo_basic ________________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 167, in test_logo_basic
+    sphinx_build = sphinx_build_factory("base").build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+______________________________ test_logo_no_image ______________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 179, in test_logo_no_image
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_____________________________ test_logo_two_images _____________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 196, in test_logo_two_images
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+___________________________ test_logo_external_link ____________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 215, in test_logo_external_link
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+___________________________ test_logo_external_image ___________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 232, in test_logo_external_image
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+________________________________ test_favicons _________________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 260, in test_favicons
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+__________________________ test_navbar_align_default ___________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 283, in test_navbar_align_default
+    sphinx_build = sphinx_build_factory("base").build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+___________________________ test_navbar_align_right ____________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 291, in test_navbar_align_right
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+______________________________ test_included_toc _______________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 419, in test_included_toc
+    sphinx_build = sphinx_build_factory("test_included_toc").build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context0-https://github.com/foo/bar/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context1-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context2-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context3-https://github.com/foo/bar/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context4-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context5-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+____________________ test_edit_page_url[html_context6-None] ____________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+____________________ test_edit_page_url[html_context7-None] ____________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+____________________ test_edit_page_url[html_context8-None] ____________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context9-https://dvcs.example.com/foo/bar/edit/HEAD/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+___________________ test_edit_page_url[html_context10-None] ____________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context11-https://github.example.com/foo/bar/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context12-https://gitlab.example.com/foo/bar/-/edit/HEAD/docs/index.rst] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_ test_edit_page_url[html_context13-https://bitbucket.example.com/foo/bar/src/HEAD/docs/index.rst?mode=edit] _
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 540, in test_edit_page_url
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_______________________ test_analytics[provider0-tags0] ________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 578, in test_analytics
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_______________________ test_analytics[provider1-tags1] ________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 578, in test_analytics
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+________________________________ test_plausible ________________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 598, in test_plausible
+    sphinx_build = sphinx_build_factory("base", confoverrides=confoverrides)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+_____________________________ test_show_nav_level ______________________________
+Traceback (most recent call last):
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 613, in test_show_nav_level
+    sphinx_build = sphinx_build_factory("sidebars", confoverrides=confoverrides).build()
+  File "/workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py", line 55, in _func
+    app = make_app(
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/fixtures.py", line 183, in make
+    app_: Any = SphinxTestApp(*args, **kwargs)
+  File "/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/sphinx/testing/util.py", line 105, in __init__
+    outdir.mkdir(parents=True, exist_ok=True)
+AttributeError: 'path' object has no attribute 'mkdir'. Did you mean: 'isdir'?
+=============================== warnings summary ===============================
+tests/test_build.py:9
+  /workdir/pydata-sphinx-theme-0.12.0/tests/test_build.py:9: RemovedInSphinx90Warning: 'sphinx.testing.path' is deprecated. Use 'os.path' or 'pathlib' instead.
+    from sphinx.testing.path import path as sphinx_path
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pydata-sphinx-theme/0.12.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_build.py::test_toc_visibility - AttributeError: 'path' obje...
+FAILED tests/test_build.py::test_logo_basic - AttributeError: 'path' object h...
+FAILED tests/test_build.py::test_logo_no_image - AttributeError: 'path' objec...
+FAILED tests/test_build.py::test_logo_two_images - AttributeError: 'path' obj...
+FAILED tests/test_build.py::test_logo_external_link - AttributeError: 'path' ...
+FAILED tests/test_build.py::test_logo_external_image - AttributeError: 'path'...
+FAILED tests/test_build.py::test_favicons - AttributeError: 'path' object has...
+FAILED tests/test_build.py::test_navbar_align_default - AttributeError: 'path...
+FAILED tests/test_build.py::test_navbar_align_right - AttributeError: 'path' ...
+FAILED tests/test_build.py::test_included_toc - AttributeError: 'path' object...
+FAILED tests/test_build.py::test_edit_page_url[html_context0-https://github.com/foo/bar/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context1-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context2-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit]
+FAILED tests/test_build.py::test_edit_page_url[html_context3-https://github.com/foo/bar/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context4-https://gitlab.com/foo/bar/-/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context5-https://bitbucket.org/foo/bar/src/HEAD/docs/index.rst?mode=edit]
+FAILED tests/test_build.py::test_edit_page_url[html_context6-None] - Attribut...
+FAILED tests/test_build.py::test_edit_page_url[html_context7-None] - Attribut...
+FAILED tests/test_build.py::test_edit_page_url[html_context8-None] - Attribut...
+FAILED tests/test_build.py::test_edit_page_url[html_context9-https://dvcs.example.com/foo/bar/edit/HEAD/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context10-None] - Attribu...
+FAILED tests/test_build.py::test_edit_page_url[html_context11-https://github.example.com/foo/bar/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context12-https://gitlab.example.com/foo/bar/-/edit/HEAD/docs/index.rst]
+FAILED tests/test_build.py::test_edit_page_url[html_context13-https://bitbucket.example.com/foo/bar/src/HEAD/docs/index.rst?mode=edit]
+FAILED tests/test_build.py::test_analytics[provider0-tags0] - AttributeError:...
+FAILED tests/test_build.py::test_analytics[provider1-tags1] - AttributeError:...
+FAILED tests/test_build.py::test_plausible - AttributeError: 'path' object ha...
+FAILED tests/test_build.py::test_show_nav_level - AttributeError: 'path' obje...
+ERROR tests/test_build.py::test_build_html
+ERROR tests/test_build.py::test_icon_links
+ERROR tests/test_build.py::test_navbar_no_in_page_headers
+ERROR tests/test_build.py::test_navbar_header_dropdown[0]
+ERROR tests/test_build.py::test_navbar_header_dropdown[4]
+ERROR tests/test_build.py::test_navbar_header_dropdown[8]
+ERROR tests/test_build.py::test_sidebars_captions
+ERROR tests/test_build.py::test_sidebars_nested_page
+ERROR tests/test_build.py::test_sidebars_level2
+ERROR tests/test_build.py::test_sidebars_show_nav_level0
+ERROR tests/test_build.py::test_version_switcher[switcher.json]
+ERROR tests/test_build.py::test_version_switcher[http://a.b/switcher.json]
+ERROR tests/test_build.py::test_version_switcher[missing_url.json]
+ERROR tests/test_build.py::test_theme_switcher
+ERROR tests/test_build.py::test_shorten_link
+ERROR tests/test_build.py::test_math_header_item
+ERROR tests/test_build.py::test_deprecated_build_html
+=================== 28 failed, 1 warning, 17 errors in 0.38s ===================
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b/test_safe_delete_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_delete_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b/test_safe_set_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_set_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b/test_rmtree_errorhandler_rerai0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_rerai0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b/test_rmtree_errorhandler_reado0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_reado0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b/test_safe_get_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_get_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b
+<class 'OSError'>: [Errno 39] Directory not empty: '/tmp/pytest-of-tester/garbage-69d8d7cc-2035-4b63-991f-ec0762803b4b'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c/test_safe_delete_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_delete_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c/test_safe_set_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_set_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c/test_rmtree_errorhandler_rerai0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_rerai0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c/test_rmtree_errorhandler_reado0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_rmtree_errorhandler_reado0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c/test_safe_get_no_perms0
+<class 'OSError'>: [Errno 39] Directory not empty: 'test_safe_get_no_perms0'
+  warnings.warn(
+/workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py:95: PytestWarning: (rm_rf) error removing /tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c
+<class 'OSError'>: [Errno 39] Directory not empty: '/tmp/pytest-of-tester/garbage-c6d24ee9-e3f7-48e1-8c20-9b3dd9d03f2c'
+  warnings.warn(
+ERROR: InvocationError for command /workdir/pydata-sphinx-theme-0.12.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pydata-sphinx-theme/0.12.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

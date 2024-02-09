@@ -1,0 +1,36 @@
+GLOB sdist-make: /workdir/smmap2-3.0.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, nose
+cpythonlibtest-unit-test-tests inst: /workdir/smmap2-3.0.1/.tox/.tmp/package/1/smmap-3.0.1.zip
+cpythonlibtest-unit-test-tests installed: mock==5.1.0,nose==1.3.7,smmap @ file:///workdir/smmap2-3.0.1/.tox/.tmp/package/1/smmap-3.0.1.zip#sha256=579b4bc9d7690f1df3545dbd679429e16443a54dfee063e84086b2e784631cc6
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1464813419'
+cpythonlibtest-unit-test-tests run-test: commands[0] | nosetests --with-xunit --xunit-file /workdir/results/smmap2/3.0.1/1/cpython-test-results.xml
+Traceback (most recent call last):
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/nosetests", line 8, in <module>
+    sys.exit(run_exit())
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/core.py", line 118, in __init__
+    unittest.TestProgram.__init__(
+  File "/usr/local/lib/python3.10/unittest/main.py", line 100, in __init__
+    self.parseArgs(argv)
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/core.py", line 179, in parseArgs
+    self.createTests()
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/core.py", line 193, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames)
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/loader.py", line 481, in loadTestsFromNames
+    return unittest.TestLoader.loadTestsFromNames(self, names, module)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 220, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 220, in <listcomp>
+    suites = [self.loadTestsFromName(name, module) for name in names]
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/loader.py", line 454, in loadTestsFromName
+    return LazySuite(
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/suite.py", line 53, in __init__
+    super(LazySuite, self).__init__()
+  File "/usr/local/lib/python3.10/unittest/suite.py", line 22, in __init__
+    self._tests = []
+  File "/workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/nose/suite.py", line 106, in _set_tests
+    if isinstance(tests, collections.Callable) and not is_suite:
+AttributeError: module 'collections' has no attribute 'Callable'
+ERROR: InvocationError for command /workdir/smmap2-3.0.1/.tox/cpythonlibtest-unit-test-tests/bin/nosetests --with-xunit --xunit-file /workdir/results/smmap2/3.0.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

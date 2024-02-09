@@ -1,0 +1,81 @@
+Collecting awscli==1.27.23
+  Downloading awscli-1.27.23-py3-none-any.whl (3.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 9.3 MB/s eta 0:00:00
+Collecting botocore==1.29.23 (from awscli==1.27.23)
+  Downloading botocore-1.29.23-py3-none-any.whl (10.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 12.2 MB/s eta 0:00:00
+Collecting docutils<0.17,>=0.10 (from awscli==1.27.23)
+  Downloading docutils-0.16-py2.py3-none-any.whl (548 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 548.2/548.2 kB 11.4 MB/s eta 0:00:00
+Collecting s3transfer<0.7.0,>=0.6.0 (from awscli==1.27.23)
+  Downloading s3transfer-0.6.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting PyYAML<5.5,>=3.10 (from awscli==1.27.23)
+  Downloading PyYAML-5.4.1.tar.gz (175 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 175.1/175.1 kB 8.5 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [48 lines of output]
+      running egg_info
+      writing lib3/PyYAML.egg-info/PKG-INFO
+      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt
+      writing top-level names to lib3/PyYAML.egg-info/top_level.txt
+      Traceback (most recent call last):
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/workdir/install-virtualenv/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 325, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['wheel'])
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 295, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 271, in <module>
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/dist.py", line 963, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 321, in run
+          self.find_sources()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 329, in find_sources
+          mm.run()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 551, in run
+          self.add_defaults()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 589, in add_defaults
+          sdist.add_defaults(self)
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/command/sdist.py", line 112, in add_defaults
+          super().add_defaults()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 251, in add_defaults
+          self._add_defaults_ext()
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 336, in _add_defaults_ext
+          self.filelist.extend(build_ext.get_source_files())
+        File "<string>", line 201, in get_source_files
+        File "/tmp/pip-build-env-k2w04l5u/overlay/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 107, in __getattr__
+          raise AttributeError(attr)
+      AttributeError: cython_sources
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.

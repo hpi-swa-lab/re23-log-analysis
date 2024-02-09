@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="tests.test_config.ConfigTest-20231122042309" tests="14" file="tests/test_config.py" time="0.319" timestamp="2023-11-22T04:23:09" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_cwd" time="0.098" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="218">
+			<!--
+        Setup: $IPDB_CONFIG is set, .ipdb in local dir,
+            setup.cfg does not exist, pyproject.toml does not exist
+        Result: load .ipdb
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_def_nosetup" time="0.020" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="234">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb exists,
+            setup.cfg does not exist, pyproject.toml does not exist
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_def_setup" time="0.015" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="278">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb exists,
+            setup.cfg exists, pyproject.toml does not exist
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_def_setup_pyproject" time="0.026" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="134">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb exists,
+            setup.cfg exists, pyproject.toml exists
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_nodef_nosetup" time="0.014" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="173">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb does not exist,
+            setup.cfg does not exist, pyproject.toml does not exist
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_nodef_setup" time="0.015" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="292">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb does not
+            exist, setup.cfg exists, pyproject.toml does not exist
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_env_nodef_setup_pyproject" time="0.015" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="121">
+			<!--
+        Setup: $IPDB_CONFIG is set, $HOME/.ipdb does not exist,
+            setup.cfg exists, pyproject.toml exists
+        Result: load $IPDB_CONFIG
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_def_nosetup" time="0.013" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="189">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb exists,
+            setup.cfg does not exist, pyproject.toml does not exist
+        Result: load $HOME/.ipdb
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_def_setup" time="0.014" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="307">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb exists,
+            setup.cfg exists, pyproject.toml does not exist
+        Result: load $HOME/.ipdb
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_def_setup_pyproject" time="0.015" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="160">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb exists,
+            setup.cfg exists, pyproject.toml exists
+        Result: load .ipdb
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_nodef_nosetup" time="0.034" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="204">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb does not
+            exist, setup.cfg does not exist, pyproject.toml does not exist
+        Result: load nothing
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_nodef_nosetup_pyproject" time="0.013" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="106">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb does not exist,
+            setup.cfg does not exist, pyproject.toml exists
+        Result: load pyproject.toml
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_nodef_setup" time="0.014" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="263">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb does not exist,
+            setup.cfg exists, pyproject.toml does not exist
+        Result: load setup
+        -->
+		</testcase>
+		<testcase classname="tests.test_config.ConfigTest" name="test_noenv_nodef_setup_pyproject" time="0.013" timestamp="2023-11-22T04:23:09" file="tests/test_config.py" line="146">
+			<!--
+        Setup: $IPDB_CONFIG unset, $HOME/.ipdb does not exist,
+            setup.cfg exists, pyproject.toml exists
+        Result: load pyproject.toml
+        -->
+		</testcase>
+	</testsuite>
+	<testsuite name="tests.test_import.ImportTest-20231122042309" tests="1" file="tests/test_import.py" time="0.004" timestamp="2023-11-22T04:23:09" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_import.ImportTest" name="test_import" time="0.004" timestamp="2023-11-22T04:23:09" file="tests/test_import.py" line="12"/>
+	</testsuite>
+	<testsuite name="tests.test_opts.OptsTest-20231122042309" tests="3" file="tests/test_opts.py" time="0.100" timestamp="2023-11-22T04:23:09" failures="0" errors="0" skipped="0">
+		<testcase classname="tests.test_opts.OptsTest" name="test_debug_module_script" time="0.034" timestamp="2023-11-22T04:23:09" file="tests/test_opts.py" line="25"/>
+		<testcase classname="tests.test_opts.OptsTest" name="test_debug_script" time="0.035" timestamp="2023-11-22T04:23:09" file="tests/test_opts.py" line="35"/>
+		<testcase classname="tests.test_opts.OptsTest" name="test_option_m_fallback_on_py36" time="0.031" timestamp="2023-11-22T04:23:09" file="tests/test_opts.py" line="44"/>
+	</testsuite>
+</testsuites>

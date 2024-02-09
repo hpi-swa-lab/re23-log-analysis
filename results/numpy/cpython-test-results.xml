@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="unittest.loader._FailedTest-20231122140529" tests="1" file="unittest/loader.py" time="0.009" timestamp="2023-11-22T14:05:29" failures="0" errors="1" skipped="0">
+		<testcase classname="unittest.loader._FailedTest" name="numpy" time="0.009" timestamp="2023-11-22T14:05:29" file="/usr/local/lib/python3.10/unittest/loader.py" line="33">
+			<error type="ImportError" message="Failed to import test module: numpy
+Traceback (most recent call last):
+  File &quot;/workdir/numpy-1.23.5/numpy/__init__.py&quot;, line 124, in &lt;module&gt;
+    from numpy.__config__ import show as show_config
+ModuleNotFoundError: No module named 'numpy.__config__'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File &quot;/usr/local/lib/python3.10/unittest/loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;/workdir/numpy-1.23.5/numpy/__init__.py&quot;, line 129, in &lt;module&gt;
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+"><![CDATA[ImportError: Failed to import test module: numpy
+Traceback (most recent call last):
+  File "/workdir/numpy-1.23.5/numpy/__init__.py", line 124, in <module>
+    from numpy.__config__ import show as show_config
+ModuleNotFoundError: No module named 'numpy.__config__'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/numpy-1.23.5/numpy/__init__.py", line 129, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+
+]]></error>
+		</testcase>
+	</testsuite>
+</testsuites>

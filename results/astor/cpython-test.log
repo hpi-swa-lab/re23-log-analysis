@@ -1,0 +1,152 @@
+GLOB sdist-make: /workdir/astor-0.8.1/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/astor-0.8.1/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt, -rrequirements-tox.txt
+cpythonlibtest-unit-test-tests inst: /workdir/astor-0.8.1/.tox/.tmp/package/1/astor-0.8.1.zip
+cpythonlibtest-unit-test-tests installed: alabaster==0.7.13,astor @ file:///workdir/astor-0.8.1/.tox/.tmp/package/1/astor-0.8.1.zip#sha256=d27659345570d56dea2de56a34feb110197b1cd839e49ff4c73f7c3b3fb2eb06,Babel==2.13.1,certifi==2023.11.17,charset-normalizer==3.3.2,coverage==7.3.2,docutils==0.18.1,exceptiongroup==1.1.3,flake8==6.1.0,idna==3.4,imagesize==1.4.1,iniconfig==2.0.0,Jinja2==3.1.2,MarkupSafe==2.1.3,mccabe==0.7.0,mock==5.1.0,nose==1.3.7,packaging==23.2,pluggy==1.3.0,pycodestyle==2.11.1,pyflakes==3.1.0,Pygments==2.17.1,pytest==7.4.3,requests==2.31.0,snowballstemmer==2.2.0,Sphinx==7.2.6,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tomli==2.0.1,urllib3==2.1.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='493880544'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/astor/0.8.1/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/astor-0.8.1/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/astor-0.8.1
+collecting ... collected 55 items
+
+tests/test_code_gen.py::CodegenTestCase::test_annassign PASSED           [  1%]
+tests/test_code_gen.py::CodegenTestCase::test_arguments PASSED           [  3%]
+tests/test_code_gen.py::CodegenTestCase::test_assignment_expr PASSED     [  5%]
+tests/test_code_gen.py::CodegenTestCase::test_async_comprehension PASSED [  7%]
+tests/test_code_gen.py::CodegenTestCase::test_async_def_with_for PASSED  [  9%]
+tests/test_code_gen.py::CodegenTestCase::test_attribute PASSED           [ 10%]
+tests/test_code_gen.py::CodegenTestCase::test_class_definition_with_starbases_and_kwargs PASSED [ 12%]
+tests/test_code_gen.py::CodegenTestCase::test_compile_types PASSED       [ 14%]
+tests/test_code_gen.py::CodegenTestCase::test_complex PASSED             [ 16%]
+tests/test_code_gen.py::CodegenTestCase::test_comprehension PASSED       [ 18%]
+tests/test_code_gen.py::CodegenTestCase::test_constant_nodes PASSED      [ 20%]
+tests/test_code_gen.py::CodegenTestCase::test_del_statement PASSED       [ 21%]
+tests/test_code_gen.py::CodegenTestCase::test_deprecated_constant_nodes PASSED [ 23%]
+tests/test_code_gen.py::CodegenTestCase::test_deprecated_constants_as_name SKIPPED [ 25%]
+tests/test_code_gen.py::CodegenTestCase::test_deprecated_name_constants PASSED [ 27%]
+tests/test_code_gen.py::CodegenTestCase::test_dictionary_literals PASSED [ 29%]
+tests/test_code_gen.py::CodegenTestCase::test_docstring_class PASSED     [ 30%]
+tests/test_code_gen.py::CodegenTestCase::test_docstring_function PASSED  [ 32%]
+tests/test_code_gen.py::CodegenTestCase::test_docstring_method PASSED    [ 34%]
+tests/test_code_gen.py::CodegenTestCase::test_docstring_module PASSED    [ 36%]
+tests/test_code_gen.py::CodegenTestCase::test_double_await PASSED        [ 38%]
+tests/test_code_gen.py::CodegenTestCase::test_elif PASSED                [ 40%]
+tests/test_code_gen.py::CodegenTestCase::test_empty_iterable_literals PASSED [ 41%]
+tests/test_code_gen.py::CodegenTestCase::test_fstring_debugging PASSED   [ 43%]
+tests/test_code_gen.py::CodegenTestCase::test_fstring_escaped_braces PASSED [ 45%]
+tests/test_code_gen.py::CodegenTestCase::test_fstring_trailing_newline PASSED [ 47%]
+tests/test_code_gen.py::CodegenTestCase::test_fstrings PASSED            [ 49%]
+tests/test_code_gen.py::CodegenTestCase::test_huge_int FAILED            [ 50%]
+tests/test_code_gen.py::CodegenTestCase::test_imports PASSED             [ 52%]
+tests/test_code_gen.py::CodegenTestCase::test_inf PASSED                 [ 54%]
+tests/test_code_gen.py::CodegenTestCase::test_matrix_multiplication PASSED [ 56%]
+tests/test_code_gen.py::CodegenTestCase::test_multiple_call_unpackings PASSED [ 58%]
+tests/test_code_gen.py::CodegenTestCase::test_nan PASSED                 [ 60%]
+tests/test_code_gen.py::CodegenTestCase::test_non_string_leakage PASSED  [ 61%]
+tests/test_code_gen.py::CodegenTestCase::test_output_formatting PASSED   [ 63%]
+tests/test_code_gen.py::CodegenTestCase::test_pass_arguments_node PASSED [ 65%]
+tests/test_code_gen.py::CodegenTestCase::test_positional_only_arguments PASSED [ 67%]
+tests/test_code_gen.py::CodegenTestCase::test_pow PASSED                 [ 69%]
+tests/test_code_gen.py::CodegenTestCase::test_right_hand_side_dictionary_unpacking PASSED [ 70%]
+tests/test_code_gen.py::CodegenTestCase::test_slicing PASSED             [ 72%]
+tests/test_code_gen.py::CodegenTestCase::test_try_expect PASSED          [ 74%]
+tests/test_code_gen.py::CodegenTestCase::test_tuple_corner_cases PASSED  [ 76%]
+tests/test_code_gen.py::CodegenTestCase::test_unary PASSED               [ 78%]
+tests/test_code_gen.py::CodegenTestCase::test_unicode_literals PASSED    [ 80%]
+tests/test_code_gen.py::CodegenTestCase::test_with PASSED                [ 81%]
+tests/test_code_gen.py::CodegenTestCase::test_yield PASSED               [ 83%]
+tests/test_misc.py::GetSymbolTestCase::test_get_mat_mult PASSED          [ 85%]
+tests/test_misc.py::PublicAPITestCase::test_aliases PASSED               [ 87%]
+tests/test_misc.py::PublicAPITestCase::test_codegen_as_submodule PASSED  [ 89%]
+tests/test_misc.py::PublicAPITestCase::test_codegen_from_root PASSED     [ 90%]
+tests/test_misc.py::PublicAPITestCase::test_to_source_invalid_customize_generator PASSED [ 92%]
+tests/test_misc.py::FastCompareTestCase::test_fast_compare PASSED        [ 94%]
+tests/test_misc.py::TreeWalkTestCase::test_auto_generated_attributes PASSED [ 96%]
+tests/test_misc.py::SourceReprTestCase::test_split_lines_unicode_support SKIPPED [ 98%]
+tests/test_rtrip.py::RtripTestCase::test_convert_stdlib FAILED           [100%]
+
+=================================== FAILURES ===================================
+________________________ CodegenTestCase.test_huge_int _________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 290, in test_huge_int
+    self.assertEqual(astornum(n), n)
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 31, in astornum
+    return astorexpr(ast.Num(n=x))
+  File "/workdir/astor-0.8.1/tests/test_code_gen.py", line 28, in astorexpr
+    return eval(astor.to_source(ast.Expression(body=x)))
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 63, in to_source
+    generator.visit(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 883, in visit_Expression
+    self.visit(node.body)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 556, in visit_Constant
+    self._handle_numeric_constant(value)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 677, in _handle_numeric_constant
+    real = part(x.real if isinstance(x, complex) else x, imaginary=False)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 675, in part
+    return repr(p) + s
+ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit
+______________________ RtripTestCase.test_convert_stdlib _______________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/astor-0.8.1/tests/test_rtrip.py", line 23, in test_convert_stdlib
+    result = astor.rtrip.convert(srcdir)
+  File "/workdir/astor-0.8.1/astor/rtrip.py", line 83, in convert
+    dsttxt = to_source(srcast)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 63, in to_source
+    generator.visit(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 878, in visit_Module
+    self.write(*node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 364, in visit_ClassDef
+    self.body(node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 226, in body
+    self.write(*statements)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 335, in visit_FunctionDef
+    self.body(node.body)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 226, in body
+    self.write(*statements)
+  File "/workdir/astor-0.8.1/astor/code_gen.py", line 178, in write
+    visit(item)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 143, in visit
+    return visitor(node)
+  File "/workdir/astor-0.8.1/astor/node_util.py", line 137, in abort_visit
+    raise AttributeError(msg % node.__class__.__name__)
+AttributeError: No defined handler for node of type Match
+------------------------------ Captured log call -------------------------------
+WARNING  root:rtrip.py:112     calculating dump -- bad
+WARNING  root:rtrip.py:112     calculating dump -- bad
+WARNING  root:rtrip.py:112     calculating dump -- bad
+- generated xml file: /workdir/results/astor/0.8.1/1/cpython-test-results.xml --
+=========================== short test summary info ============================
+FAILED tests/test_code_gen.py::CodegenTestCase::test_huge_int - ValueError: E...
+FAILED tests/test_rtrip.py::RtripTestCase::test_convert_stdlib - AttributeErr...
+=================== 2 failed, 51 passed, 2 skipped in 27.63s ===================
+ERROR: InvocationError for command /workdir/astor-0.8.1/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/astor/0.8.1/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

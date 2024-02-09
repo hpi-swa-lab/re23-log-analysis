@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/pydantic/1.10.2/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+	-rtests/requirements-testing.txt
+	-rtests/requirements-linting.txt
+

@@ -1,0 +1,7 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/catboost/1.2/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rcatboost/benchmarks/quality_benchmarks/install/requirements.txt
+	-rcatboost/benchmarks/training_speed/requirements.txt
+

@@ -1,0 +1,12 @@
+GLOB sdist-make: /workdir/awscli-1.27.23/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/awscli-1.27.23/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt, -rrequirements-check.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/awscli-1.27.23/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+Obtaining botocore from git+https://github.com/boto/botocore.git@develop#egg=botocore (from -r requirements.txt (line 4))
+ERROR: The editable requirement botocore from git+https://github.com/boto/botocore.git@develop#egg=botocore (from -r requirements.txt (line 4)) cannot be installed when requiring hashes, because there is no single file to hash.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt, -rrequirements-check.txt]; v = InvocationError('/workdir/awscli-1.27.23/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-dev.txt -rrequirements-dev-lock.txt -rrequirements.txt -rrequirements-check.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rrequirements-dev.txt, -rrequirements-dev-lock.txt, -rrequirements.txt, -rrequirements-check.txt]; v = InvocationError('/workdir/awscli-1.27.23/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rrequirements-dev.txt -rrequirements-dev-lock.txt -rrequirements.txt -rrequirements-check.txt', 1)

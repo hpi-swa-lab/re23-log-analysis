@@ -1,0 +1,239 @@
+GLOB sdist-make: /workdir/pyqtgraph-0.13.1/setup.py
+graalpylibtest-pyside6 create: /workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6
+graalpylibtest-pyside6 installdeps: mock, pytest, -rdoc/requirements.txt, -rbinder/requirements.txt, -r.github/workflows/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/log/graalpylibtest-pyside6-1.log
+================================== log start ===================================
+Collecting git+https://github.com/pyqtgraph/pyqtgraph.git (from -r binder/requirements.txt (line 1))
+  Cloning https://github.com/pyqtgraph/pyqtgraph.git to /tmp/pip-req-build-ycaeb9vx
+  Running command git clone --filter=blob:none --quiet https://github.com/pyqtgraph/pyqtgraph.git /tmp/pip-req-build-ycaeb9vx
+  Resolved https://github.com/pyqtgraph/pyqtgraph.git to commit 818583daa691d213b32bd3cc78ac1827d3180a20
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Ignoring numpy: markers 'python_version == "3.9"' don't match your environment
+Ignoring numpy: markers 'python_version == "3.8"' don't match your environment
+Ignoring numba: markers 'python_version == "3.9"' don't match your environment
+Collecting mock
+  Using cached mock-5.1.0-py3-none-any.whl (30 kB)
+Collecting pytest
+  Using cached pytest-7.4.3-py3-none-any.whl (325 kB)
+Collecting sphinx==5.2.2
+  Downloading sphinx-5.2.2-py3-none-any.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 3.4 MB/s eta 0:00:00
+Collecting PyQt6==6.3.1
+  Downloading PyQt6-6.3.1.tar.gz (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 3.5 MB/s eta 0:00:00
+Looking for GraalPy patches for PyQt6
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × pip subprocess to install build dependencies did not run successfully.
+  │ exit code: 1
+  ╰─> [187 lines of output]
+      Collecting sip<7,>=6.5
+        Downloading sip-6.7.12.tar.gz (1.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 2.3 MB/s eta 0:00:00
+      Looking for GraalPy patches for sip
+        Installing build dependencies: started
+        Installing build dependencies: finished with status 'done'
+        Getting requirements to build wheel: started
+        Getting requirements to build wheel: finished with status 'done'
+        Preparing metadata (pyproject.toml): started
+        Preparing metadata (pyproject.toml): finished with status 'done'
+      Collecting PyQt-builder<2,>=1.11
+        Downloading PyQt_builder-1.15.3-py3-none-any.whl (3.7 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 3.2 MB/s eta 0:00:00
+      Collecting packaging
+        Using cached packaging-23.2-py3-none-any.whl (53 kB)
+      Collecting ply
+        Using cached ply-3.11-py2.py3-none-any.whl (49 kB)
+      Collecting setuptools
+        Using cached setuptools-69.0.2-py3-none-any.whl (819 kB)
+      Collecting tomli
+        Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+      Building wheels for collected packages: sip
+        Building wheel for sip (pyproject.toml): started
+        Building wheel for sip (pyproject.toml): finished with status 'error'
+        error: subprocess-exited-with-error
+      
+        × Building wheel for sip (pyproject.toml) did not run successfully.
+        │ exit code: 1
+        ╰─> [152 lines of output]
+            running bdist_wheel
+            running build
+            running build_py
+            creating build
+            creating build/lib.linux-x86_64-3.10
+            creating build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/abstract_builder.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/distutils_builder.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/buildable.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/bindings_configuration.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/setuptools_builder.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/argument_parser.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/installable.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/configurable.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/bindings.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/toml.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/pyproject.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/exceptions.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/api.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/version.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/py_versions.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/builder.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/project.py -> build/lib.linux-x86_64-3.10/sipbuild
+            copying sipbuild/abstract_project.py -> build/lib.linux-x86_64-3.10/sipbuild
+            creating build/lib.linux-x86_64-3.10/sipbuild/tools
+            copying sipbuild/tools/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/tools
+            copying sipbuild/tools/sdist.py -> build/lib.linux-x86_64-3.10/sipbuild/tools
+            copying sipbuild/tools/build.py -> build/lib.linux-x86_64-3.10/sipbuild/tools
+            copying sipbuild/tools/install.py -> build/lib.linux-x86_64-3.10/sipbuild/tools
+            copying sipbuild/tools/wheel.py -> build/lib.linux-x86_64-3.10/sipbuild/tools
+            creating build/lib.linux-x86_64-3.10/sipbuild/module
+            copying sipbuild/module/module.py -> build/lib.linux-x86_64-3.10/sipbuild/module
+            copying sipbuild/module/abi_version.py -> build/lib.linux-x86_64-3.10/sipbuild/module
+            copying sipbuild/module/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/module
+            copying sipbuild/module/main.py -> build/lib.linux-x86_64-3.10/sipbuild/module
+            creating build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/scoped_name.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/specification.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/instantiations.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/templates.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/utils.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/error_log.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            copying sipbuild/generator/python_slots.py -> build/lib.linux-x86_64-3.10/sipbuild/generator
+            creating build/lib.linux-x86_64-3.10/sipbuild/distinfo
+            copying sipbuild/distinfo/distinfo.py -> build/lib.linux-x86_64-3.10/sipbuild/distinfo
+            copying sipbuild/distinfo/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/distinfo
+            copying sipbuild/distinfo/main.py -> build/lib.linux-x86_64-3.10/sipbuild/distinfo
+            creating build/lib.linux-x86_64-3.10/sipbuild/generator/resolver
+            copying sipbuild/generator/resolver/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/resolver
+            copying sipbuild/generator/resolver/resolver.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/resolver
+            creating build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/parser_manager.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/parser.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/annotations.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/tokens.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/python_exceptions.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/rules.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            copying sipbuild/generator/parser/parsetab.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/parser
+            creating build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/api.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/extracts.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/type_hints.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/xml.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            copying sipbuild/generator/outputs/pyi.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs
+            creating build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/base_formatter.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/scoped.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/__init__.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/template.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/argument.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/variable.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/enum.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/signature.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/overload.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/utils.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/klass.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            copying sipbuild/generator/outputs/formatters/value_list.py -> build/lib.linux-x86_64-3.10/sipbuild/generator/outputs/formatters
+            creating build/lib.linux-x86_64-3.10/sipbuild/module/source
+            creating build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/LICENSE -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip.rst.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip.pyi -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/LICENSE-GPL3 -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/setup.cfg.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_array.h -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/README.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_int_convertors.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_core.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_threads.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/LICENSE-GPL2 -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_core.h -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip.h.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_object_map.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_array.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/MANIFEST.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_enum.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_voidptr.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/pyproject.toml -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_descriptors.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_enum.h -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/sip_bool.cpp -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            copying sipbuild/module/source/13/setup.py.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/13
+            creating build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/LICENSE -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sip.rst.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sip.pyi -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/qtlib.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/descriptors.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/LICENSE-GPL3 -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/setup.cfg.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sip_array.h -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/README.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/voidptr.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/LICENSE-GPL2 -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sipint.h -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sip.h.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/threads.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/siplib.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/objmap.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/sip_array.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/MANIFEST.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/apiversions.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/bool.cpp -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/pyproject.toml -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/int_convertors.c -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            copying sipbuild/module/source/12/setup.py.in -> build/lib.linux-x86_64-3.10/sipbuild/module/source/12
+            running build_ext
+            building 'sipbuild.code_generator' extension
+            creating build/temp.linux-x86_64-3.10
+            creating build/temp.linux-x86_64-3.10/code_generator
+            gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -Icode_generator -I/workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/include -I/opt/graalpy/include/python3.10 -c code_generator/gencode.c -o build/temp.linux-x86_64-3.10/code_generator/gencode.o
+            gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -Icode_generator -I/workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/include -I/opt/graalpy/include/python3.10 -c code_generator/heap.c -o build/temp.linux-x86_64-3.10/code_generator/heap.o
+            gcc -DNDEBUG -D_GNU_SOURCE=1 -fPIC -Icode_generator -I/workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/include -I/opt/graalpy/include/python3.10 -c code_generator/py2c.c -o build/temp.linux-x86_64-3.10/code_generator/py2c.o
+            In file included from /opt/graalpy/include/python3.10/Python.h:113,
+                             from code_generator/py2c.c:25:
+            /opt/graalpy/include/python3.10/sliceobject.h:61:37: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+             PyAPI_FUNC(PyObject*) PySlice_Start(PySliceObject *slice);
+                                                 ^~~~~~~~~~~~~
+                                                 PyFrameObject
+            /opt/graalpy/include/python3.10/sliceobject.h:62:36: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+             PyAPI_FUNC(PyObject*) PySlice_Stop(PySliceObject *slice);
+                                                ^~~~~~~~~~~~~
+                                                PyFrameObject
+            /opt/graalpy/include/python3.10/sliceobject.h:63:36: error: unknown type name ‘PySliceObject’; did you mean ‘PyFrameObject’?
+             PyAPI_FUNC(PyObject*) PySlice_Step(PySliceObject *slice);
+                                                ^~~~~~~~~~~~~
+                                                PyFrameObject
+            error: command '/usr/bin/gcc' failed with exit code 1
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+        ERROR: Failed building wheel for sip
+      Failed to build sip
+      ERROR: Could not build wheels for sip, which is required to install pyproject.toml-based projects
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rdoc/requirements.txt, -rbinder/requirements.txt, -r.github/workflows/requirements.txt]; v = InvocationError('/workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/bin/python -m pip install mock pytest -rdoc/requirements.txt -rbinder/requirements.txt -r.github/workflows/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-pyside6: could not install deps [mock, pytest, -rdoc/requirements.txt, -rbinder/requirements.txt, -r.github/workflows/requirements.txt]; v = InvocationError('/workdir/pyqtgraph-0.13.1/.tox/graalpylibtest-pyside6/bin/python -m pip install mock pytest -rdoc/requirements.txt -rbinder/requirements.txt -r.github/workflows/requirements.txt', 1)

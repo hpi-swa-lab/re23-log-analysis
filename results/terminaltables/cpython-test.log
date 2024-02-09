@@ -1,0 +1,72 @@
+.package create: /workdir/terminaltables-3.1.10/.tox/.package
+.package installdeps: poetry>=0.12
+cpythonlibtest-unit-test-tests create: /workdir/terminaltables-3.1.10/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/terminaltables-3.1.10/.tox/.tmp/package/1/terminaltables-3.1.10.tar.gz
+cpythonlibtest-unit-test-tests installed: exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,terminaltables @ file:///workdir/terminaltables-3.1.10/.tox/.tmp/package/1/terminaltables-3.1.10.tar.gz#sha256=0a93326869beb5d48e3eeead1f4c805139c8da00a003260284bccfd2c5e1fe66,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1205190656'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/terminaltables/3.1.10/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/terminaltables-3.1.10/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/terminaltables-3.1.10
+collecting ... collected 126 items / 5 errors
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting tests/test_base_table/test_table.py _____________
+ImportError while importing test module '/workdir/terminaltables-3.1.10/tests/test_base_table/test_table.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_base_table/test_table.py:4: in <module>
+    from colorama import Fore
+E   ModuleNotFoundError: No module named 'colorama'
+____________ ERROR collecting tests/test_build/test_build_border.py ____________
+ImportError while importing test module '/workdir/terminaltables-3.1.10/tests/test_build/test_build_border.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_build/test_build_border.py:5: in <module>
+    from colorama import Fore, Style
+E   ModuleNotFoundError: No module named 'colorama'
+__ ERROR collecting tests/test_width_and_alignment/test_align_and_pad_cell.py __
+ImportError while importing test module '/workdir/terminaltables-3.1.10/tests/test_width_and_alignment/test_align_and_pad_cell.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_width_and_alignment/test_align_and_pad_cell.py:5: in <module>
+    from colorama import Fore
+E   ModuleNotFoundError: No module named 'colorama'
+____ ERROR collecting tests/test_width_and_alignment/test_max_dimensions.py ____
+ImportError while importing test module '/workdir/terminaltables-3.1.10/tests/test_width_and_alignment/test_max_dimensions.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_width_and_alignment/test_max_dimensions.py:5: in <module>
+    from colorama import Fore
+E   ModuleNotFoundError: No module named 'colorama'
+____ ERROR collecting tests/test_width_and_alignment/test_visible_width.py _____
+ImportError while importing test module '/workdir/terminaltables-3.1.10/tests/test_width_and_alignment/test_visible_width.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_width_and_alignment/test_visible_width.py:5: in <module>
+    from colorama import Fore
+E   ModuleNotFoundError: No module named 'colorama'
+- generated xml file: /workdir/results/terminaltables/3.1.10/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_base_table/test_table.py
+ERROR tests/test_build/test_build_border.py
+ERROR tests/test_width_and_alignment/test_align_and_pad_cell.py
+ERROR tests/test_width_and_alignment/test_max_dimensions.py
+ERROR tests/test_width_and_alignment/test_visible_width.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.27s ===============================
+ERROR: InvocationError for command /workdir/terminaltables-3.1.10/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/terminaltables/3.1.10/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

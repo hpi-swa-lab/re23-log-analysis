@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/sentry-sdk/1.15.0/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rtest-requirements.txt
+	-rlinter-requirements.txt
+	-rcheckouts/data-schemas/py/requirements.txt
+

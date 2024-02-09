@@ -1,0 +1,197 @@
+GLOB sdist-make: /workdir/Deprecated-1.2.13/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/Deprecated-1.2.13/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/Deprecated-1.2.13/.tox/.tmp/package/1/Deprecated-1.2.13.zip
+cpythonlibtest-unit-test-tests installed: Deprecated @ file:///workdir/Deprecated-1.2.13/.tox/.tmp/package/1/Deprecated-1.2.13.zip#sha256=b8e5d399f2443d99f343fbe54e5c559a6db5f93d824d14799154b05032fa9581,exceptiongroup==1.1.3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1,wrapt==1.16.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3972407484'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/Deprecated/1.2.13/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/Deprecated-1.2.13/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/Deprecated-1.2.13
+configfile: setup.cfg
+collecting ... collected 159 items
+
+tests/test.py::test_deprecated_has_docstring PASSED                      [  0%]
+tests/test.py::test_deprecated_has_version PASSED                        [  1%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[None] PASSED [  1%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function1] PASSED [  2%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function2] PASSED [  3%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function3] PASSED [  3%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function4] PASSED [  4%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function5] PASSED [  5%]
+tests/test_deprecated.py::test_classic_deprecated_function__warns[classic_deprecated_function6] PASSED [  5%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[None] PASSED [  6%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class1] PASSED [  6%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class2] PASSED [  7%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class3] PASSED [  8%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class4] PASSED [  8%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class5] PASSED [  9%]
+tests/test_deprecated.py::test_classic_deprecated_class__warns[classic_deprecated_class6] PASSED [ 10%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[None] PASSED [ 10%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method1] PASSED [ 11%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method2] PASSED [ 11%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method3] PASSED [ 12%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method4] PASSED [ 13%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method5] PASSED [ 13%]
+tests/test_deprecated.py::test_classic_deprecated_method__warns[classic_deprecated_method6] PASSED [ 14%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[None] PASSED [ 15%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method1] PASSED [ 15%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method2] PASSED [ 16%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method3] PASSED [ 16%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method4] PASSED [ 17%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method5] PASSED [ 18%]
+tests/test_deprecated.py::test_classic_deprecated_static_method__warns[classic_deprecated_static_method6] PASSED [ 18%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[None] PASSED [ 19%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method1] PASSED [ 20%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method2] PASSED [ 20%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method3] PASSED [ 21%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method4] PASSED [ 22%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method5] PASSED [ 22%]
+tests/test_deprecated.py::test_classic_deprecated_class_method__warns[classic_deprecated_class_method6] PASSED [ 23%]
+tests/test_deprecated.py::test_should_raise_type_error PASSED            [ 23%]
+tests/test_deprecated.py::test_warning_msg_has_reason PASSED             [ 24%]
+tests/test_deprecated.py::test_warning_msg_has_version PASSED            [ 25%]
+tests/test_deprecated.py::test_warning_is_ignored PASSED                 [ 25%]
+tests/test_deprecated.py::test_specific_warning_cls_is_used PASSED       [ 26%]
+tests/test_deprecated.py::test_respect_global_filter PASSED              [ 27%]
+tests/test_deprecated_class.py::test_simple_class_deprecation PASSED     [ 27%]
+tests/test_deprecated_class.py::test_class_deprecation_using_wrapper PASSED [ 28%]
+tests/test_deprecated_class.py::test_class_deprecation_using_a_simple_decorator PASSED [ 28%]
+tests/test_deprecated_class.py::test_class_deprecation_using_deprecated_decorator PASSED [ 29%]
+tests/test_deprecated_class.py::test_class_respect_global_filter PASSED  [ 30%]
+tests/test_deprecated_class.py::test_subclass_deprecation_using_deprecated_decorator PASSED [ 30%]
+tests/test_deprecated_class.py::test_simple_class_deprecation_with_args PASSED [ 31%]
+tests/test_deprecated_metaclass.py::test_with_init PASSED                [ 32%]
+tests/test_deprecated_metaclass.py::test_with_new PASSED                 [ 32%]
+tests/test_deprecated_metaclass.py::test_with_metaclass PASSED           [ 33%]
+tests/test_deprecated_metaclass.py::test_with_singleton_metaclass PASSED [ 33%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-reason&version] PASSED [ 34%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionadded-version] PASSED [ 35%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-reason&version] PASSED [ 35%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionadded-version] PASSED [ 36%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-reason&version] PASSED [ 37%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionadded-version] PASSED [ 37%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-reason&version] PASSED [ 38%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionadded-version] PASSED [ 38%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-reason&version] PASSED [ 39%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-versionchanged-version] PASSED [ 40%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-reason&version] PASSED [ 40%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-versionchanged-version] PASSED [ 41%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-reason&version] PASSED [ 42%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-versionchanged-version] PASSED [ 42%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-reason&version] PASSED [ 43%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-versionchanged-version] PASSED [ 44%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionchanged-reason&version] PASSED [ 44%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionchanged-version] PASSED [ 45%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionchanged-reason&version] PASSED [ 45%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionchanged-version] PASSED [ 46%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionadded-reason&version] PASSED [ 47%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-versionadded-version] PASSED [ 47%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionadded-reason&version] PASSED [ 48%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-versionadded-version] PASSED [ 49%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-deprecated-reason&version] PASSED [ 49%]
+tests/test_sphinx.py::test_has_sphinx_docstring[long_docstring-deprecated-version] PASSED [ 50%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-deprecated-reason&version] PASSED [ 50%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[long_docstring-deprecated-version] PASSED [ 51%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-reason&version] PASSED [ 52%]
+tests/test_sphinx.py::test_has_sphinx_docstring[short_docstring-deprecated-version] PASSED [ 52%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-reason&version] PASSED [ 53%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[short_docstring-deprecated-version] PASSED [ 54%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-reason&version] PASSED [ 54%]
+tests/test_sphinx.py::test_has_sphinx_docstring[no_docstring-deprecated-version] PASSED [ 55%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-reason&version] PASSED [ 55%]
+tests/test_sphinx.py::test_cls_has_sphinx_docstring[no_docstring-deprecated-version] PASSED [ 56%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function0] PASSED [ 57%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function1] PASSED [ 57%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function2] PASSED [ 58%]
+tests/test_sphinx.py::test_sphinx_deprecated_function__warns[sphinx_deprecated_function3] PASSED [ 59%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class0] PASSED [ 59%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class1] PASSED [ 60%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class2] PASSED [ 61%]
+tests/test_sphinx.py::test_sphinx_deprecated_class__warns[sphinx_deprecated_class3] PASSED [ 61%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method0] PASSED [ 62%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method1] PASSED [ 62%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method2] PASSED [ 63%]
+tests/test_sphinx.py::test_sphinx_deprecated_method__warns[sphinx_deprecated_method3] PASSED [ 64%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method0] PASSED [ 64%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method1] PASSED [ 65%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method2] PASSED [ 66%]
+tests/test_sphinx.py::test_sphinx_deprecated_static_method__warns[sphinx_deprecated_static_method3] PASSED [ 66%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method0] PASSED [ 67%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method1] PASSED [ 67%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method2] PASSED [ 68%]
+tests/test_sphinx.py::test_sphinx_deprecated_class_method__warns[sphinx_deprecated_class_method3] PASSED [ 69%]
+tests/test_sphinx.py::test_should_raise_type_error PASSED                [ 69%]
+tests/test_sphinx.py::test_warning_msg_has_reason PASSED                 [ 70%]
+tests/test_sphinx.py::test_warning_msg_has_version PASSED                [ 71%]
+tests/test_sphinx.py::test_warning_is_ignored PASSED                     [ 71%]
+tests/test_sphinx.py::test_specific_warning_cls_is_used PASSED           [ 72%]
+tests/test_sphinx.py::test_can_catch_warnings PASSED                     [ 72%]
+tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :function:`bar` instead-Use `bar` instead] PASSED [ 73%]
+tests/test_sphinx.py::test_sphinx_syntax_trimming[Use :py:func:`bar` instead-Use `bar` instead] PASSED [ 74%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`bar` instead-Use `bar` instead] PASSED [ 74%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :function:`bar` instead-Use `bar` instead] PASSED [ 75%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :class:`Baz` instead-Use `Baz` instead] PASSED [ 76%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :exc:`Baz` instead-Use `Baz` instead] PASSED [ 76%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :exception:`Baz` instead-Use `Baz` instead] PASSED [ 77%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :meth:`Baz.bar` instead-Use `Baz.bar` instead] PASSED [ 77%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :method:`Baz.bar` instead-Use `Baz.bar` instead] PASSED [ 78%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :py:func:`bar` instead-Use `bar` instead] PASSED [ 79%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :cpp:func:`bar` instead-Use `bar` instead] PASSED [ 79%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :js:func:`bar` instead-Use `bar` instead] PASSED [ 80%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :func:`~pkg.mod.bar` instead-Use `~pkg.mod.bar` instead] PASSED [ 81%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`` instead-Use `` instead] PASSED [ 81%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`` instead-Use `` instead] PASSED [ 82%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :r:`foo` instead-Use `foo` instead] PASSED [ 83%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :d:r:`foo` instead-Use `foo` instead] PASSED [ 83%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use r:`bad` instead-Use r:`bad` instead] PASSED [ 84%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use ::`bad` instead-Use ::`bad` instead] PASSED [ 84%]
+tests/test_sphinx.py::test_get_deprecated_msg[Use :::`bad` instead-Use :::`bad` instead] PASSED [ 85%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionchanged-wrapped] PASSED [ 86%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionchanged-long] PASSED [ 86%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionadded-wrapped] PASSED [ 87%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[versionadded-long] PASSED [ 88%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[deprecated-wrapped] PASSED [ 88%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter[deprecated-long] PASSED [ 89%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[versionchanged] PASSED [ 89%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[versionadded] PASSED [ 90%]
+tests/test_sphinx_adapter.py::test_sphinx_adapter__empty_docstring[deprecated] PASSED [ 91%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionadded-versionadded] PASSED [ 91%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[versionchanged-versionchanged] PASSED [ 92%]
+tests/test_sphinx_adapter.py::test_decorator_accept_line_length[deprecated-deprecated] PASSED [ 93%]
+tests/test_sphinx_class.py::test_class_deprecation_using_a_simple_decorator PASSED [ 93%]
+tests/test_sphinx_class.py::test_class_deprecation_using_deprecated_decorator PASSED [ 94%]
+tests/test_sphinx_class.py::test_subclass_deprecation_using_deprecated_decorator PASSED [ 94%]
+tests/test_sphinx_class.py::test_isinstance_versionadded PASSED          [ 95%]
+tests/test_sphinx_class.py::test_isinstance_versionchanged PASSED        [ 96%]
+tests/test_sphinx_class.py::test_isinstance_deprecated PASSED            [ 96%]
+tests/test_sphinx_class.py::test_isinstance_versionadded_versionchanged PASSED [ 97%]
+tests/test_sphinx_metaclass.py::test_with_init PASSED                    [ 98%]
+tests/test_sphinx_metaclass.py::test_with_new PASSED                     [ 98%]
+tests/test_sphinx_metaclass.py::test_with_metaclass PASSED               [ 99%]
+tests/test_sphinx_metaclass.py::test_with_singleton_metaclass PASSED     [100%]
+
+=============================== warnings summary ===============================
+tests/test.py:2
+  /workdir/Deprecated-1.2.13/tests/test.py:2: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+tests/test_deprecated_class.py::test_simple_class_deprecation_with_args
+  /workdir/Deprecated-1.2.13/tests/test_deprecated_class.py:148: DeprecationWarning: Call to deprecated class MyClass. (kwargs class)
+    MyClass(5)
+
+tests/test_sphinx_class.py::test_isinstance_deprecated
+  /workdir/Deprecated-1.2.13/tests/test_sphinx_class.py:134: DeprecationWarning: Call to deprecated class DeprecatedChildCls. (some reason) -- Deprecated since version Y.Z.
+    instance = DeprecatedChildCls()
+
+tests/test_sphinx_class.py::test_isinstance_deprecated
+  /workdir/Deprecated-1.2.13/deprecated/classic.py:173: DeprecationWarning: Call to deprecated class DeprecatedCls. (some reason) -- Deprecated since version X.Y.
+    return old_new1(cls, *args, **kwargs)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/Deprecated/1.2.13/1/cpython-test-results.xml -
+======================= 159 passed, 4 warnings in 0.53s ========================
+___________________________________ summary ____________________________________
+  cpythonlibtest-unit-test-tests: commands succeeded
+  congratulations :)

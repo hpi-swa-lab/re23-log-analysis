@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="43" time="3.281" timestamp="2023-11-20T21:50:23.586000" hostname="b80581c01e0f"><testcase classname="async_generator._tests.test_async_generator" name="test_async_generator" time="0.021" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_no_arg" time="0.009" /><testcase classname="async_generator._tests.test_async_generator" name="test_bad_return_value" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_different_entries" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_reentrance_forbidden" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_reentrance_forbidden_simultaneous_asends" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_reentrance_forbidden_while_suspended_in_coroutine_runner" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_asend" time="0.005" /><testcase classname="async_generator._tests.test_async_generator" name="test_athrow" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_aclose" time="0.005" /><testcase classname="async_generator._tests.test_async_generator" name="test_aclose_on_unstarted_generator" time="0.006"><failure message="StopAsyncIteration">Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/async_generator-1.10/async_generator/_tests/conftest.py", line 28, in wrapper
+    value = coro.send(None)
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_async_generator.py", line 313, in test_aclose_on_unstarted_generator
+    async for obj in aiter:
+  File "/workdir/async_generator-1.10/async_generator/_impl.py", line 337, in __anext__
+    return self._do_it(self._it.__next__)
+  File "/workdir/async_generator-1.10/async_generator/_impl.py", line 359, in _do_it
+    raise StopAsyncIteration()
+StopAsyncIteration</failure></testcase><testcase classname="async_generator._tests.test_async_generator" name="test_aclose_on_finished_generator" time="0.011" /><testcase classname="async_generator._tests.test_async_generator" name="test_aclose_yielding" time="0.009" /><testcase classname="async_generator._tests.test_async_generator" name="test_async_yield_from_" time="0.009" /><testcase classname="async_generator._tests.test_async_generator" name="test_async_yield_from_asend" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_async_yield_from_athrow" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_async_yield_from_return_value" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_from_empty" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_from_non_generator" time="0.222" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_from_non_generator_with_no_aclose" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_from_with_old_style_aiter" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_yield_from_athrow_raises_StopAsyncIteration" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test___del__" time="0.022" /><testcase classname="async_generator._tests.test_async_generator" name="test_isasyncgen" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_isasyncgenfunction" time="0.005" /><testcase classname="async_generator._tests.test_async_generator" name="test_isasyncgenfunction_is_not_inherited_by_wrappers" time="0.006" /><testcase classname="async_generator._tests.test_async_generator" name="test_collections_abc_AsyncGenerator" time="0.005" /><testcase classname="async_generator._tests.test_async_generator" name="test_ag_attributes" time="0.007" /><testcase classname="async_generator._tests.test_async_generator" name="test_refcnt" time="0.009"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_async_generator.py", line 774, in test_refcnt
+    assert sys.getrefcount(x) &gt;= base_count + 100
+AssertionError</failure></testcase><testcase classname="async_generator._tests.test_async_generator" name="test_throw_StopIteration_or_StopAsyncIteration" time="0.008" /><testcase classname="async_generator._tests.test_async_generator" name="test_no_spurious_unawaited_coroutine_warning" time="0.897" /><testcase classname="async_generator._tests.test_async_generator" name="test_gc_hooks_interface" time="0.009"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_async_generator.py", line 863, in test_gc_hooks_interface
+    assert get_asyncgen_hooks() == (None, two)
+AssertionError</failure></testcase><testcase classname="async_generator._tests.test_async_generator" name="test_gc_hooks_behavior" time="0.893"><failure message="AssertionError">Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/async_generator-1.10/async_generator/_tests/conftest.py", line 28, in wrapper
+    value = coro.send(None)
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_async_generator.py", line 975, in test_gc_hooks_behavior
+    assert refA() is None
+AssertionError</failure></testcase><testcase classname="async_generator._tests.test_util" name="test_aclosing" time="0.009" /><testcase classname="async_generator._tests.test_util" name="test_contextmanager_do_not_unchain_non_stopiteration_exceptions" time="0.009" /><testcase classname="async_generator._tests.test_util" name="test_native_contextmanager_do_not_unchain_non_stopiteration_exceptions" time="0.008" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_exception_passthrough" time="0.007" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_catches_exception" time="0.007" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_different_exception" time="0.006" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_nice_message_on_sync_enter" time="0.007" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_no_yield" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'RuntimeError'&gt;">Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_util.py", line 185, in test_asynccontextmanager_no_yield
+    async with yeehaw():
+  File "/workdir/async_generator-1.10/async_generator/_util.py", line 36, in __aenter__
+    raise RuntimeError("async generator didn't yield") from None
+RuntimeError: async generator didn't yield
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/async_generator-1.10/async_generator/_tests/conftest.py", line 28, in wrapper
+    value = coro.send(None)
+  File "/workdir/async_generator-1.10/async_generator/_tests/test_util.py", line 184, in test_asynccontextmanager_no_yield
+    with pytest.raises(RuntimeError) as excinfo:
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python_api.py", line 987, in __exit__
+    fail(self.message)
+  File "/workdir/async_generator-1.10/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/outcomes.py", line 198, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: DID NOT RAISE &lt;class 'RuntimeError'&gt;</failure></testcase><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_too_many_yields" time="0.007" /><testcase classname="async_generator._tests.test_util" name="test_asynccontextmanager_requires_asyncgenfunction" time="0.006" /></testsuite></testsuites>

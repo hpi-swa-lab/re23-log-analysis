@@ -1,0 +1,351 @@
+.package create: /workdir/distlib-0.3.6/.tox/.package
+.package installdeps: setuptools >= 44, wheel >= 0.29.0
+/workdir/distlib-0.3.6/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no previously-included files matching '*.log' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.pyo' found anywhere in distribution
+no previously-included directories found matching 'tests/pypiserver'
+no previously-included directories found matching 'tests/packages'
+warning: no previously-included files found matching 'tests/passwords'
+/workdir/distlib-0.3.6/.tox/.package/lib/python3.10/site-packages/setuptools/config/setupcfg.py:463: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+warning: no previously-included files matching '*.log' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.pyo' found anywhere in distribution
+no previously-included directories found matching 'tests/pypiserver'
+no previously-included directories found matching 'tests/packages'
+warning: no previously-included files found matching 'tests/passwords'
+cpythonlibtest-unit-test-tests create: /workdir/distlib-0.3.6/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/distlib-0.3.6/.tox/.tmp/package/1/distlib-0.3.6.tar.gz
+cpythonlibtest-unit-test-tests installed: distlib @ file:///workdir/distlib-0.3.6/.tox/.tmp/package/1/distlib-0.3.6.tar.gz#sha256=8fdc1abdafc1a1d94f3394eb35a7e374281421b24d21d6cc879437af47593f81,exceptiongroup==1.1.3,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='4083286006'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/distlib/0.3.6/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/distlib-0.3.6/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/distlib-0.3.6
+collecting ... collected 237 items
+
+tests/test_database.py::TestDistribution::test_check_installed_files PASSED [  0%]
+tests/test_database.py::TestDistribution::test_comparison PASSED         [  0%]
+tests/test_database.py::TestDistribution::test_get_distinfo_file PASSED  [  1%]
+tests/test_database.py::TestDistribution::test_get_resources_path PASSED [  1%]
+tests/test_database.py::TestDistribution::test_hash PASSED               [  2%]
+tests/test_database.py::TestDistribution::test_instantiation PASSED      [  2%]
+tests/test_database.py::TestDistribution::test_list_distinfo_files PASSED [  2%]
+tests/test_database.py::TestDistribution::test_list_installed_files PASSED [  3%]
+tests/test_database.py::TestDistribution::test_repr PASSED               [  3%]
+tests/test_database.py::TestDistribution::test_str PASSED                [  4%]
+tests/test_database.py::TestEggInfoDistribution::test_comparison PASSED  [  4%]
+tests/test_database.py::TestEggInfoDistribution::test_hash PASSED        [  5%]
+tests/test_database.py::TestEggInfoDistribution::test_instantiation PASSED [  5%]
+tests/test_database.py::TestEggInfoDistribution::test_list_installed_files SKIPPED [  5%]
+tests/test_database.py::TestEggInfoDistribution::test_repr PASSED        [  6%]
+tests/test_database.py::TestEggInfoDistribution::test_str PASSED         [  6%]
+tests/test_database.py::TestDatabase::test_caches PASSED                 [  7%]
+tests/test_database.py::TestDatabase::test_distinfo_dirname PASSED       [  7%]
+tests/test_database.py::TestDatabase::test_exports_iteration PASSED      [  8%]
+tests/test_database.py::TestDatabase::test_get_distribution PASSED       [  8%]
+tests/test_database.py::TestDatabase::test_get_distributions PASSED      [  8%]
+tests/test_database.py::TestDatabase::test_modules PASSED                [  9%]
+tests/test_database.py::TestDatabase::test_provides PASSED               [  9%]
+tests/test_database.py::TestDatabase::test_read_exports PASSED           [ 10%]
+tests/test_database.py::TestDatabase::test_yield_distribution PASSED     [ 10%]
+tests/test_database.py::DataFilesTestCase::test_final_example_glob PASSED [ 10%]
+tests/test_database.py::DataFilesTestCase::test_get_file PASSED          [ 11%]
+tests/test_database.py::DataFilesTestCase::test_glob_in_base PASSED      [ 11%]
+tests/test_database.py::DataFilesTestCase::test_multiple_match PASSED    [ 12%]
+tests/test_database.py::DataFilesTestCase::test_recursive_glob PASSED    [ 12%]
+tests/test_database.py::DataFilesTestCase::test_set_match PASSED         [ 13%]
+tests/test_database.py::DataFilesTestCase::test_set_match_exclude PASSED [ 13%]
+tests/test_database.py::DataFilesTestCase::test_set_match_multiple PASSED [ 13%]
+tests/test_database.py::DataFilesTestCase::test_simple_glob PASSED       [ 14%]
+tests/test_database.py::DepGraphTestCase::test_dependent_dists PASSED    [ 14%]
+tests/test_database.py::DepGraphTestCase::test_dependent_dists_egg PASSED [ 15%]
+tests/test_database.py::DepGraphTestCase::test_graph_bad_version_to_dot PASSED [ 15%]
+tests/test_database.py::DepGraphTestCase::test_graph_disconnected_to_dot PASSED [ 16%]
+tests/test_database.py::DepGraphTestCase::test_graph_to_dot PASSED       [ 16%]
+tests/test_database.py::DepGraphTestCase::test_make_graph PASSED         [ 16%]
+tests/test_database.py::DepGraphTestCase::test_make_graph_egg PASSED     [ 17%]
+tests/test_database.py::DepGraphTestCase::test_repr PASSED               [ 17%]
+tests/test_database.py::DepGraphTestCase::test_required_dists PASSED     [ 18%]
+tests/test_database.py::test_suite PASSED                                [ 18%]
+tests/test_index.py::PackageIndexTestCase::test_download PASSED          [ 18%]
+tests/test_index.py::PackageIndexTestCase::test_invalid PASSED           [ 19%]
+tests/test_index.py::PackageIndexTestCase::test_register SKIPPED (Th...) [ 19%]
+tests/test_index.py::PackageIndexTestCase::test_save_configuration PASSED [ 20%]
+tests/test_index.py::PackageIndexTestCase::test_search SKIPPED (skip...) [ 20%]
+tests/test_index.py::PackageIndexTestCase::test_ssl_verification PASSED  [ 21%]
+tests/test_index.py::PackageIndexTestCase::test_upload SKIPPED (The ...) [ 21%]
+tests/test_index.py::PackageIndexTestCase::test_upload_documentation SKIPPED [ 21%]
+tests/test_index.py::PackageIndexTestCase::test_verify_signature PASSED  [ 22%]
+tests/test_locators.py::LocatorTestCase::test_aggregation PASSED         [ 22%]
+tests/test_locators.py::LocatorTestCase::test_all_versions PASSED        [ 23%]
+tests/test_locators.py::LocatorTestCase::test_dependency_finder FAILED   [ 23%]
+tests/test_locators.py::LocatorTestCase::test_dir PASSED                 [ 24%]
+tests/test_locators.py::LocatorTestCase::test_dir_nonrecursive PASSED    [ 24%]
+tests/test_locators.py::LocatorTestCase::test_dist_reqts PASSED          [ 24%]
+tests/test_locators.py::LocatorTestCase::test_dist_reqts_extras PASSED   [ 25%]
+tests/test_locators.py::LocatorTestCase::test_get_all_dist_names SKIPPED [ 25%]
+tests/test_locators.py::LocatorTestCase::test_json PASSED                [ 26%]
+tests/test_locators.py::LocatorTestCase::test_nonexistent PASSED         [ 26%]
+tests/test_locators.py::LocatorTestCase::test_path PASSED                [ 27%]
+tests/test_locators.py::LocatorTestCase::test_prereleases PASSED         [ 27%]
+tests/test_locators.py::LocatorTestCase::test_scraper PASSED             [ 27%]
+tests/test_locators.py::LocatorTestCase::test_unicode_project_name PASSED [ 28%]
+tests/test_locators.py::LocatorTestCase::test_url_preference PASSED      [ 28%]
+tests/test_locators.py::LocatorTestCase::test_xmlrpc SKIPPED (PyPI X...) [ 29%]
+tests/test_manifest.py::ManifestTestCase::test_add PASSED                [ 29%]
+tests/test_manifest.py::ManifestTestCase::test_add_many PASSED           [ 29%]
+tests/test_manifest.py::ManifestTestCase::test_clear PASSED              [ 30%]
+tests/test_manifest.py::ManifestTestCase::test_default_action PASSED     [ 30%]
+tests/test_manifest.py::ManifestTestCase::test_exclude PASSED            [ 31%]
+tests/test_manifest.py::ManifestTestCase::test_exclude_regex_re PASSED   [ 31%]
+tests/test_manifest.py::ManifestTestCase::test_exclude_regex_str PASSED  [ 32%]
+tests/test_manifest.py::ManifestTestCase::test_find_warnings PASSED      [ 32%]
+tests/test_manifest.py::ManifestTestCase::test_findall PASSED            [ 32%]
+tests/test_manifest.py::ManifestTestCase::test_global_exclude PASSED     [ 33%]
+tests/test_manifest.py::ManifestTestCase::test_global_include PASSED     [ 33%]
+tests/test_manifest.py::ManifestTestCase::test_graft PASSED              [ 34%]
+tests/test_manifest.py::ManifestTestCase::test_include PASSED            [ 34%]
+tests/test_manifest.py::ManifestTestCase::test_invalid PASSED            [ 35%]
+tests/test_manifest.py::ManifestTestCase::test_prune PASSED              [ 35%]
+tests/test_manifest.py::ManifestTestCase::test_recursive_exclude PASSED  [ 35%]
+tests/test_manifest.py::ManifestTestCase::test_recursive_include PASSED  [ 36%]
+tests/test_manifest.py::ManifestTestCase::test_sorting PASSED            [ 36%]
+tests/test_markers.py::MarkersTestCase::test_interpret PASSED            [ 37%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_attribute_access PASSED [ 37%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_author PASSED [ 37%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_homepage PASSED [ 38%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_matchers PASSED [ 38%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_name PASSED   [ 39%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_name_strict PASSED [ 39%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_version PASSED [ 40%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_check_version_strict PASSED [ 40%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_description PASSED  [ 40%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_description_folding PASSED [ 41%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_fields PASSED       [ 41%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_fullname PASSED     [ 42%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_instantiation PASSED [ 42%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_mapping_api PASSED  [ 43%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_metadata_read_write PASSED [ 43%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_metadata_versions PASSED [ 43%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_obsoletes_dist PASSED [ 44%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_project_url PASSED  [ 44%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_provides_dist PASSED [ 45%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_read_metadata PASSED [ 45%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_requires_dist PASSED [ 45%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_version PASSED      [ 46%]
+tests/test_metadata.py::LegacyMetadataTestCase::test_write_metadata PASSED [ 46%]
+tests/test_metadata.py::MetadataTestCase::test_add_requirements PASSED   [ 47%]
+tests/test_metadata.py::MetadataTestCase::test_init PASSED               [ 47%]
+tests/test_metadata.py::MetadataTestCase::test_requirements PASSED       [ 48%]
+tests/test_metadata.py::MetadataTestCase::test_valid PASSED              [ 48%]
+tests/test_metadata.py::MetadataTestCase::test_write PASSED              [ 48%]
+tests/test_resources.py::ZipResourceTestCase::test_contents PASSED       [ 49%]
+tests/test_resources.py::ZipResourceTestCase::test_dir_in_zip PASSED     [ 49%]
+tests/test_resources.py::ZipResourceTestCase::test_existing_resource PASSED [ 50%]
+tests/test_resources.py::ZipResourceTestCase::test_finder_for_path PASSED [ 50%]
+tests/test_resources.py::ZipResourceTestCase::test_iterator PASSED       [ 51%]
+tests/test_resources.py::ZipResourceTestCase::test_non_package PASSED    [ 51%]
+tests/test_resources.py::ZipResourceTestCase::test_nonexistent_resource PASSED [ 51%]
+tests/test_resources.py::ZipResourceTestCase::test_root_resources PASSED [ 52%]
+tests/test_resources.py::FileResourceTestCase::test_bytes_path SKIPPED   [ 52%]
+tests/test_resources.py::FileResourceTestCase::test_contents PASSED      [ 53%]
+tests/test_resources.py::FileResourceTestCase::test_existing_resource PASSED [ 53%]
+tests/test_resources.py::FileResourceTestCase::test_iterator PASSED      [ 54%]
+tests/test_resources.py::FileResourceTestCase::test_nested PASSED        [ 54%]
+tests/test_resources.py::FileResourceTestCase::test_nonexistent_resource PASSED [ 54%]
+tests/test_resources.py::FileResourceTestCase::test_root_resources PASSED [ 55%]
+tests/test_resources.py::CacheTestCase::test_base PASSED                 [ 55%]
+tests/test_resources.py::CacheTestCase::test_filepath PASSED             [ 56%]
+tests/test_scripts.py::ScriptTestCase::test_args_on_copy PASSED          [ 56%]
+tests/test_scripts.py::ScriptTestCase::test_clobber PASSED               [ 56%]
+tests/test_scripts.py::ScriptTestCase::test_custom_shebang PASSED        [ 57%]
+tests/test_scripts.py::ScriptTestCase::test_dry_run PASSED               [ 57%]
+tests/test_scripts.py::ScriptTestCase::test_enquote_executable PASSED    [ 58%]
+tests/test_scripts.py::ScriptTestCase::test_generation PASSED            [ 58%]
+tests/test_scripts.py::ScriptTestCase::test_interpreter_args PASSED      [ 59%]
+tests/test_scripts.py::ScriptTestCase::test_launcher_run SKIPPED (Te...) [ 59%]
+tests/test_scripts.py::ScriptTestCase::test_launcher_run_with_interpreter_args SKIPPED [ 59%]
+tests/test_scripts.py::ScriptTestCase::test_launchers SKIPPED (Test ...) [ 60%]
+tests/test_scripts.py::ScriptTestCase::test_mode PASSED                  [ 60%]
+tests/test_scripts.py::ScriptTestCase::test_multiple PASSED              [ 61%]
+tests/test_scripts.py::ScriptTestCase::test_script_run PASSED            [ 61%]
+tests/test_scripts.py::ScriptTestCase::test_shebangs PASSED              [ 62%]
+tests/test_scripts.py::ScriptTestCase::test_shebangs_custom_executable PASSED [ 62%]
+tests/test_scripts.py::ScriptTestCase::test_variant_configuration PASSED [ 62%]
+tests/test_scripts.py::ScriptTestCase::test_windows SKIPPED (Test is...) [ 63%]
+tests/test_scripts.py::ScriptTestCase::test_windows_run SKIPPED (Tes...) [ 63%]
+tests/test_util.py::UtilTestCase::test_cache_base PASSED                 [ 64%]
+tests/test_util.py::UtilTestCase::test_configurator PASSED               [ 64%]
+tests/test_util.py::UtilTestCase::test_convert_path PASSED               [ 64%]
+tests/test_util.py::UtilTestCase::test_ensure_slash PASSED               [ 65%]
+tests/test_util.py::UtilTestCase::test_events PASSED                     [ 65%]
+tests/test_util.py::UtilTestCase::test_export_entry PASSED               [ 66%]
+tests/test_util.py::UtilTestCase::test_package_data PASSED               [ 66%]
+tests/test_util.py::UtilTestCase::test_parse_credentials PASSED          [ 67%]
+tests/test_util.py::UtilTestCase::test_path_to_cache_dir_nt SKIPPED      [ 67%]
+tests/test_util.py::UtilTestCase::test_path_to_cache_dir_posix PASSED    [ 67%]
+tests/test_util.py::UtilTestCase::test_resolve PASSED                    [ 68%]
+tests/test_util.py::UtilTestCase::test_sequencer_basic FAILED            [ 68%]
+tests/test_util.py::UtilTestCase::test_sequencer_cycle PASSED            [ 69%]
+tests/test_util.py::UtilTestCase::test_sequencer_removal PASSED          [ 69%]
+tests/test_util.py::UtilTestCase::test_split_filename PASSED             [ 70%]
+tests/test_util.py::UtilTestCase::test_string_sequence PASSED            [ 70%]
+tests/test_util.py::UtilTestCase::test_unarchive PASSED                  [ 70%]
+tests/test_util.py::UtilTestCase::test_zip_dir PASSED                    [ 71%]
+tests/test_util.py::ProgressTestCase::test_basic PASSED                  [ 71%]
+tests/test_util.py::ProgressTestCase::test_unknown PASSED                [ 72%]
+tests/test_util.py::FileOpsTestCase::test_byte_compile PASSED            [ 72%]
+tests/test_util.py::FileOpsTestCase::test_commit PASSED                  [ 72%]
+tests/test_util.py::FileOpsTestCase::test_copy_check PASSED              [ 73%]
+tests/test_util.py::FileOpsTestCase::test_ensure_dir PASSED              [ 73%]
+tests/test_util.py::FileOpsTestCase::test_ensure_removed PASSED          [ 74%]
+tests/test_util.py::FileOpsTestCase::test_is_writable PASSED             [ 74%]
+tests/test_util.py::FileOpsTestCase::test_rollback PASSED                [ 75%]
+tests/test_util.py::GlobTestCase::test_get_extras PASSED                 [ 75%]
+tests/test_util.py::GlobTestCase::test_glob_all PASSED                   [ 75%]
+tests/test_util.py::GlobTestCase::test_glob_set_head PASSED              [ 76%]
+tests/test_util.py::GlobTestCase::test_glob_set_middle PASSED            [ 76%]
+tests/test_util.py::GlobTestCase::test_glob_set_tail PASSED              [ 77%]
+tests/test_util.py::GlobTestCase::test_invalid_glob_pattern PASSED       [ 77%]
+tests/test_util.py::GlobTestCase::test_parse_requirement PASSED          [ 78%]
+tests/test_util.py::GlobTestCase::test_recursive_glob_head PASSED        [ 78%]
+tests/test_util.py::GlobTestCase::test_recursive_glob_middle PASSED      [ 78%]
+tests/test_util.py::GlobTestCase::test_recursive_glob_tail PASSED        [ 79%]
+tests/test_util.py::GlobTestCase::test_regex_rich_glob PASSED            [ 79%]
+tests/test_util.py::GlobTestCase::test_simple_glob PASSED                [ 80%]
+tests/test_util.py::GlobTestCase::test_simple_glob_in_dir PASSED         [ 80%]
+tests/test_util.py::GlobTestCase::test_write_exports PASSED              [ 81%]
+tests/test_version.py::VersionTestCase::test_440 PASSED                  [ 81%]
+tests/test_version.py::VersionTestCase::test_basic_versions PASSED       [ 81%]
+tests/test_version.py::VersionTestCase::test_comparison PASSED           [ 82%]
+tests/test_version.py::VersionTestCase::test_comparison_pep440 PASSED    [ 82%]
+tests/test_version.py::VersionTestCase::test_hash PASSED                 [ 83%]
+tests/test_version.py::VersionTestCase::test_huge_version PASSED         [ 83%]
+tests/test_version.py::VersionTestCase::test_matcher PASSED              [ 83%]
+tests/test_version.py::VersionTestCase::test_matcher_local PASSED        [ 84%]
+tests/test_version.py::VersionTestCase::test_matcher_name PASSED         [ 84%]
+tests/test_version.py::VersionTestCase::test_prereleases PASSED          [ 85%]
+tests/test_version.py::VersionTestCase::test_repr PASSED                 [ 85%]
+tests/test_version.py::VersionTestCase::test_schemes PASSED              [ 86%]
+tests/test_version.py::VersionTestCase::test_suggest_normalized_version PASSED [ 86%]
+tests/test_version.py::VersionTestCase::test_suggestions_other PASSED    [ 86%]
+tests/test_version.py::VersionTestCase::test_unsupported_versions PASSED [ 87%]
+tests/test_version.py::LegacyVersionTestCase::test_absolute PASSED       [ 87%]
+tests/test_version.py::LegacyVersionTestCase::test_equality PASSED       [ 88%]
+tests/test_version.py::LegacyVersionTestCase::test_ordering PASSED       [ 88%]
+tests/test_version.py::LegacyVersionTestCase::test_prereleases PASSED    [ 89%]
+tests/test_version.py::SemanticVersionTestCase::test_basic PASSED        [ 89%]
+tests/test_version.py::SemanticVersionTestCase::test_ordering PASSED     [ 89%]
+tests/test_version.py::SemanticVersionTestCase::test_prereleases PASSED  [ 90%]
+tests/test_version.py::CompatibilityTestCase::test_basic PASSED          [ 90%]
+tests/test_version.py::test_suite PASSED                                 [ 91%]
+tests/test_wheel.py::WheelTestCase::test_abi PASSED                      [ 91%]
+tests/test_wheel.py::WheelTestCase::test_build_and_install_data SKIPPED  [ 91%]
+tests/test_wheel.py::WheelTestCase::test_build_and_install_plat SKIPPED  [ 92%]
+tests/test_wheel.py::WheelTestCase::test_build_and_install_pure SKIPPED  [ 92%]
+tests/test_wheel.py::WheelTestCase::test_build_and_install_scripts SKIPPED [ 93%]
+tests/test_wheel.py::WheelTestCase::test_build_tags PASSED               [ 93%]
+tests/test_wheel.py::WheelTestCase::test_compatible_tags PASSED          [ 94%]
+tests/test_wheel.py::WheelTestCase::test_custom_executable PASSED        [ 94%]
+tests/test_wheel.py::WheelTestCase::test_info PASSED                     [ 94%]
+tests/test_wheel.py::WheelTestCase::test_invalid PASSED                  [ 95%]
+tests/test_wheel.py::WheelTestCase::test_invalid_filename PASSED         [ 95%]
+tests/test_wheel.py::WheelTestCase::test_is_compatible PASSED            [ 96%]
+tests/test_wheel.py::WheelTestCase::test_local_version PASSED            [ 96%]
+tests/test_wheel.py::WheelTestCase::test_metadata PASSED                 [ 97%]
+tests/test_wheel.py::WheelTestCase::test_mount SKIPPED (The test whe...) [ 97%]
+tests/test_wheel.py::WheelTestCase::test_mount_extensions SKIPPED (S...) [ 97%]
+tests/test_wheel.py::WheelTestCase::test_update PASSED                   [ 98%]
+tests/test_wheel.py::WheelTestCase::test_valid_filename PASSED           [ 98%]
+tests/test_wheel.py::WheelTestCase::test_valid_name PASSED               [ 99%]
+tests/test_wheel.py::WheelTestCase::test_verify PASSED                   [ 99%]
+tests/test_wheel.py::WheelTestCase::test_version_incompatibility PASSED  [100%]
+
+=================================== FAILURES ===================================
+____________________ LocatorTestCase.test_dependency_finder ____________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/distlib-0.3.6/tests/test_locators.py", line 338, in test_dependency_finder
+    self.assertIn(tuple(names), expected)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: ('hgtools', 'setuptools_scm', 'pytest', 'pytest-runner', 'irc') not found in {('pytest', 'setuptools_scm', 'hgtools', 'pytest-runner', 'irc'), ('wcwidth', 'setuptools_scm', 'more-itertools', 'six', 'setuptools', 'importlib-metadata', 'pyparsing', 'setuptools-scm', 'atomicwrites', 'colorama', 'attrs', 'pathlib2', 'packaging', 'pytest-runner', 'hgtools', 'py', 'pluggy', 'pytest', 'irc'), ('wcwidth', 'setuptools_scm', 'colorama', 'six', 'importlib-metadata', 'setuptools', 'setuptools-scm', 'pyparsing', 'more-itertools', 'attrs', 'atomicwrites', 'pathlib2', 'packaging', 'pytest-runner', 'hgtools', 'py', 'pluggy', 'irc', 'pytest'), ('atomicwrites', 'six', 'importlib-metadata', 'more-itertools', 'attrs', 'pyparsing', 'setuptools', 'setuptools_scm', 'setuptools-scm', 'wcwidth', 'colorama', 'py', 'pathlib2', 'pluggy', 'hgtools', 'pytest-runner', 'packaging', 'irc', 'pytest'), ('setuptools', 'setuptools-scm', 'wcwidth', 'importlib-metadata', 'colorama', 'six', 'atomicwrites', 'more-itertools', 'attrs', 'pyparsing', 'setuptools_scm', 'pluggy', 'pathlib2', 'packaging', 'py', 'pytest-runner', 'hgtools', 'irc', 'pytest'), ('atomicwrites', 'setuptools', 'importlib-metadata', 'more-itertools', 'attrs', 'wcwidth', 'pyparsing', 'colorama', 'six', 'setuptools_scm', 'setuptools-scm', 'pluggy', 'packaging', 'py', 'hgtools', 'pytest-runner', 'pathlib2', 'irc', 'pytest'), ('six', 'atomicwrites', 'setuptools', 'setuptools-scm', 'attrs', 'importlib-metadata', 'more-itertools', 'wcwidth', 'pyparsing', 'colorama', 'setuptools_scm', 'pluggy', 'packaging', 'hgtools', 'py', 'pytest-runner', 'pathlib2', 'irc', 'pytest'), ('pytest', 'setuptools_scm', 'pytest-runner', 'hgtools', 'irc'), ('wcwidth', 'setuptools_scm', 'more-itertools', 'colorama', 'six', 'importlib-metadata', 'setuptools', 'setuptools-scm', 'atomicwrites', 'pyparsing', 'attrs', 'pathlib2', 'packaging', 'pytest-runner', 'py', 'pluggy', 'hgtools', 'irc', 'pytest'), ('atomicwrites', 'pyparsing', 'six', 'setuptools', 'importlib-metadata', 'more-itertools', 'attrs', 'setuptools_scm', 'setuptools-scm', 'wcwidth', 'colorama', 'py', 'pathlib2', 'pluggy', 'hgtools', 'pytest-runner', 'packaging', 'irc', 'pytest'), ('wcwidth', 'setuptools_scm', 'more-itertools', 'six', 'setuptools', 'importlib-metadata', 'pyparsing', 'setuptools-scm', 'atomicwrites', 'attrs', 'colorama', 'pathlib2', 'packaging', 'pytest-runner', 'hgtools', 'py', 'pluggy', 'pytest', 'irc'), ('atomicwrites', 'setuptools', 'importlib-metadata', 'attrs', 'wcwidth', 'more-itertools', 'pyparsing', 'colorama', 'six', 'setuptools_scm', 'setuptools-scm', 'pluggy', 'packaging', 'hgtools', 'pytest-runner', 'pathlib2', 'py', 'irc', 'pytest'), ('atomicwrites', 'importlib-metadata', 'attrs', 'pyparsing', 'wcwidth', 'colorama', 'setuptools', 'more-itertools', 'six', 'setuptools_scm', 'setuptools-scm', 'pluggy', 'packaging', 'hgtools', 'pytest-runner', 'pathlib2', 'py', 'irc', 'pytest'), ('six', 'atomicwrites', 'setuptools', 'setuptools-scm', 'attrs', 'importlib-metadata', 'more-itertools', 'wcwidth', 'colorama', 'pyparsing', 'setuptools_scm', 'pluggy', 'packaging', 'hgtools', 'py', 'pytest-runner', 'pathlib2', 'irc', 'pytest'), ('setuptools_scm', 'pytest', 'hgtools', 'pytest-runner', 'irc'), ('atomicwrites', 'setuptools', 'importlib-metadata', 'more-itertools', 'attrs', 'pyparsing', 'wcwidth', 'colorama', 'six', 'setuptools_scm', 'setuptools-scm', 'pluggy', 'packaging', 'py', 'hgtools', 'pytest-runner', 'pathlib2', 'irc', 'pytest')}
+______________________ UtilTestCase.test_sequencer_basic _______________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/local/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/distlib-0.3.6/tests/test_util.py", line 418, in test_sequencer_basic
+    self.assertIn(actual, expected)
+  File "/usr/local/lib/python3.10/unittest/case.py", line 1112, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/lib/python3.10/unittest/case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: [('test',), ('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('upload_bdist',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('upload_sdist',), ('register',), ('sdist',), ('check',)] not found in ([('test',), ('upload_bdist',), ('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('upload_sdist',), ('sdist',), ('register',), ('check',)], [('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('test',), ('upload_bdist',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('upload_sdist',), ('sdist',), ('register',), ('check',)], [('upload_sdist',), ('sdist',), ('install',), ('install_distinfo',), ('install_data',), ('upload_bdist',), ('register',), ('install_scripts',), ('install_lib',), ('install_headers',), ('test',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('check',)], [('upload_sdist',), ('sdist',), ('upload_bdist',), ('register',), ('test',), ('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('check',)], [('upload_sdist',), ('sdist',), ('upload_bdist',), ('register',), ('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('test',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('check',)], [('upload_sdist',), ('sdist',), ('install',), ('install_distinfo',), ('install_data',), ('install_scripts',), ('install_lib',), ('install_headers',), ('test',), ('upload_bdist',), ('build',), ('build_scripts',), ('build_py',), ('build_ext',), ('build_clibs',), ('register',), ('check',)])
+=============================== warnings summary ===============================
+tests/test_util.py:39
+  /workdir/distlib-0.3.6/tests/test_util.py:39: PytestCollectionWarning: cannot collect test class 'TestContainer' because it has a __init__ constructor (from: tests/test_util.py)
+    class TestContainer(object):
+
+tests/test_database.py::test_suite
+  /workdir/distlib-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:198: PytestReturnNotNoneWarning: Expected None, but tests/test_database.py::test_suite returned <unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<test_database.TestDistribution testMethod=test_check_installed_files>, <test_database.TestDistribution testMethod=test_comparison>, <test_database.TestDistribution testMethod=test_get_distinfo_file>, <test_database.TestDistribution testMethod=test_get_resources_path>, <test_database.TestDistribution testMethod=test_hash>, <test_database.TestDistribution testMethod=test_instantiation>, <test_database.TestDistribution testMethod=test_list_distinfo_files>, <test_database.TestDistribution testMethod=test_list_installed_files>, <test_database.TestDistribution testMethod=test_repr>, <test_database.TestDistribution testMethod=test_str>]>, <unittest.suite.TestSuite tests=[<test_database.TestEggInfoDistribution testMethod=test_comparison>, <test_database.TestEggInfoDistribution testMethod=test_hash>, <test_database.TestEggInfoDistribution testMethod=test_instantiation>, <test_database.TestEggInfoDistribution testMethod=test_list_installed_files>, <test_database.TestEggInfoDistribution testMethod=test_repr>, <test_database.TestEggInfoDistribution testMethod=test_str>]>, <unittest.suite.TestSuite tests=[<test_database.TestDatabase testMethod=test_caches>, <test_database.TestDatabase testMethod=test_distinfo_dirname>, <test_database.TestDatabase testMethod=test_exports_iteration>, <test_database.TestDatabase testMethod=test_get_distribution>, <test_database.TestDatabase testMethod=test_get_distributions>, <test_database.TestDatabase testMethod=test_modules>, <test_database.TestDatabase testMethod=test_provides>, <test_database.TestDatabase testMethod=test_read_exports>, <test_database.TestDatabase testMethod=test_yield_distribution>]>, <unittest.suite.TestSuite tests=[<test_database.DataFilesTestCase testMethod=test_final_example_glob>, <test_database.DataFilesTestCase testMethod=test_get_file>, <test_database.DataFilesTestCase testMethod=test_glob_in_base>, <test_database.DataFilesTestCase testMethod=test_multiple_match>, <test_database.DataFilesTestCase testMethod=test_recursive_glob>, <test_database.DataFilesTestCase testMethod=test_set_match>, <test_database.DataFilesTestCase testMethod=test_set_match_exclude>, <test_database.DataFilesTestCase testMethod=test_set_match_multiple>, <test_database.DataFilesTestCase testMethod=test_simple_glob>]>, <unittest.suite.TestSuite tests=[<test_database.DepGraphTestCase testMethod=test_dependent_dists>, <test_database.DepGraphTestCase testMethod=test_dependent_dists_egg>, <test_database.DepGraphTestCase testMethod=test_graph_bad_version_to_dot>, <test_database.DepGraphTestCase testMethod=test_graph_disconnected_to_dot>, <test_database.DepGraphTestCase testMethod=test_graph_to_dot>, <test_database.DepGraphTestCase testMethod=test_make_graph>, <test_database.DepGraphTestCase testMethod=test_make_graph_egg>, <test_database.DepGraphTestCase testMethod=test_repr>, <test_database.DepGraphTestCase testMethod=test_required_dists>]>]>, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_ssl_verification
+  /workdir/distlib-0.3.6/distlib/util.py:1435: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+    context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_ssl_verification
+  /workdir/distlib-0.3.6/tests/support.py:221: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+    context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_download
+tests/test_index.py::PackageIndexTestCase::test_ssl_verification
+  /workdir/distlib-0.3.6/distlib/util.py:1450: DeprecationWarning: ssl.match_hostname() is deprecated
+    match_hostname(self.sock.getpeercert(), self.host)
+
+tests/test_util.py: 2 warnings
+tests/test_wheel.py: 8 warnings
+  <frozen importlib._bootstrap_external>:399: DeprecationWarning: the debug_override parameter is deprecated; use 'optimization' instead
+
+tests/test_version.py::test_suite
+  /workdir/distlib-0.3.6/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py:198: PytestReturnNotNoneWarning: Expected None, but tests/test_version.py::test_suite returned <unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<test_version.VersionTestCase testMethod=test_440>, <test_version.VersionTestCase testMethod=test_basic_versions>, <test_version.VersionTestCase testMethod=test_comparison>, <test_version.VersionTestCase testMethod=test_comparison_pep440>, <test_version.VersionTestCase testMethod=test_hash>, <test_version.VersionTestCase testMethod=test_huge_version>, <test_version.VersionTestCase testMethod=test_matcher>, <test_version.VersionTestCase testMethod=test_matcher_local>, <test_version.VersionTestCase testMethod=test_matcher_name>, <test_version.VersionTestCase testMethod=test_prereleases>, <test_version.VersionTestCase testMethod=test_repr>, <test_version.VersionTestCase testMethod=test_schemes>, <test_version.VersionTestCase testMethod=test_suggest_normalized_version>, <test_version.VersionTestCase testMethod=test_suggestions_other>, <test_version.VersionTestCase testMethod=test_unsupported_versions>]>, <unittest.suite.TestSuite tests=[<test_version.CompatibilityTestCase testMethod=test_basic>]>, <unittest.suite.TestSuite tests=[<test_version.LegacyVersionTestCase testMethod=test_absolute>, <test_version.LegacyVersionTestCase testMethod=test_equality>, <test_version.LegacyVersionTestCase testMethod=test_ordering>, <test_version.LegacyVersionTestCase testMethod=test_prereleases>]>, <unittest.suite.TestSuite tests=[<test_version.SemanticVersionTestCase testMethod=test_basic>, <test_version.SemanticVersionTestCase testMethod=test_ordering>, <test_version.SemanticVersionTestCase testMethod=test_prereleases>]>]>, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/distlib/0.3.6/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+FAILED tests/test_locators.py::LocatorTestCase::test_dependency_finder - Asse...
+FAILED tests/test_util.py::UtilTestCase::test_sequencer_basic - AssertionErro...
+=========== 2 failed, 215 passed, 20 skipped, 28 warnings in 18.50s ============
+ERROR: InvocationError for command /workdir/distlib-0.3.6/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/distlib/0.3.6/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

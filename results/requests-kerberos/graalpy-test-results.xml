@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="1.412" timestamp="2023-11-29T04:15:21.790000" hostname="a1f8948d47fc"><testcase classname="" name="tests.test_functional_kerberos" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/requests-kerberos-0.14.0/tests/test_functional_kerberos.py", line 8, in &lt;module&gt;
+    from requests_kerberos import HTTPKerberosAuth, REQUIRED
+  File "/workdir/requests-kerberos-0.14.0/requests_kerberos/__init__.py", line 17, in &lt;module&gt;
+    from .kerberos_ import HTTPKerberosAuth, REQUIRED, OPTIONAL, DISABLED
+  File "/workdir/requests-kerberos-0.14.0/requests_kerberos/kerberos_.py", line 6, in &lt;module&gt;
+    import spnego
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/__init__.py", line 9, in &lt;module&gt;
+    from spnego._context import (
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/_context.py", line 10, in &lt;module&gt;
+    from spnego._credential import Credential
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/_credential.py", line 15, in &lt;module&gt;
+    from spnego.exceptions import InvalidCredentialError, NoCredentialError
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/exceptions.py", line 9, in &lt;module&gt;
+    from gssapi.raw import GSSError  # type: ignore
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/gssapi/__init__.py", line 31, in &lt;module&gt;
+    from gssapi.raw.types import NameType, RequirementFlag, AddressType  # noqa
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/gssapi/raw/__init__.py", line 50, in &lt;module&gt;
+    from gssapi.raw.creds import *  # noqa
+  File "gssapi/raw/creds.pyx", line 1, in init gssapi.raw.creds
+TypeError: __slots__ items must be strings, not str</error></testcase><testcase classname="" name="tests.test_requests_kerberos" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 531, in collect
+    self._inject_setup_module_fixture()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 545, in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 310, in obj
+    self._obj = obj = self._getobj()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 528, in _getobj
+    return self._importtestmodule()
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 617, in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/pathlib.py", line 567, in import_path
+    importlib.import_module(module_name)
+  File "/opt/graalpy/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/workdir/requests-kerberos-0.14.0/tests/test_requests_kerberos.py", line 11, in &lt;module&gt;
+    import requests_kerberos
+  File "/workdir/requests-kerberos-0.14.0/requests_kerberos/__init__.py", line 17, in &lt;module&gt;
+    from .kerberos_ import HTTPKerberosAuth, REQUIRED, OPTIONAL, DISABLED
+  File "/workdir/requests-kerberos-0.14.0/requests_kerberos/kerberos_.py", line 6, in &lt;module&gt;
+    import spnego
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/__init__.py", line 9, in &lt;module&gt;
+    from spnego._context import (
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/_context.py", line 10, in &lt;module&gt;
+    from spnego._credential import Credential
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/_credential.py", line 15, in &lt;module&gt;
+    from spnego.exceptions import InvalidCredentialError, NoCredentialError
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/spnego/exceptions.py", line 9, in &lt;module&gt;
+    from gssapi.raw import GSSError  # type: ignore
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/gssapi/__init__.py", line 31, in &lt;module&gt;
+    from gssapi.raw.types import NameType, RequirementFlag, AddressType  # noqa
+  File "/workdir/requests-kerberos-0.14.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/gssapi/raw/__init__.py", line 50, in &lt;module&gt;
+    from gssapi.raw.creds import *  # noqa
+  File "gssapi/raw/creds.pyx", line 1, in init gssapi.raw.creds
+TypeError: __slots__ items must be strings, not str</error></testcase></testsuite></testsuites>

@@ -1,0 +1,480 @@
+.package create: /workdir/jsonpickle-3.0.0/.tox/.package
+.package installdeps: setuptools>=42,<59, wheel, setuptools_scm[toml]>=3.4.1
+/workdir/jsonpickle-3.0.0/.tox/.package/lib/python3.10/site-packages/setuptools/__init__.py:148: SetuptoolsDeprecationWarning: setup_requires is deprecated. Supply build dependencies using PEP 517 pyproject.toml build-requires.
+  warnings.warn(
+/workdir/jsonpickle-3.0.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/_integration/setuptools.py:30: RuntimeWarning: 
+ERROR: setuptools==58.5.3 is used in combination with setuptools_scm>=8.x
+
+Your build configuration is incomplete and previously worked by accident!
+setuptools_scm requires setuptools>=61
+
+Suggested workaround if applicable:
+ - migrating from the deprecated setup_requires mechanism to pep517/518
+   and using a pyproject.toml to declare build dependencies
+   which are reliably pre-installed before running the build tools
+
+  warnings.warn(
+/workdir/jsonpickle-3.0.0/.tox/.package/lib/python3.10/site-packages/setuptools_scm/git.py:163: UserWarning: "/workdir/jsonpickle-3.0.0" is shallow and may cause errors
+  warnings.warn(f'"{wd.path}" is shallow and may cause errors')
+cpythonlibtest-unit-test-tests create: /workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/jsonpickle-3.0.0/.tox/.tmp/package/1/jsonpickle-3.0.0.tar.gz
+cpythonlibtest-unit-test-tests installed: bson==0.5.10,coverage==4.5.4,dnspython==2.4.2,ecdsa==0.18.0,exceptiongroup==1.2.0,feedparser==6.0.10,flake8==4.0.1,gmpy2==2.1.5,greenlet==3.0.1,importlib-metadata==6.8.0,iniconfig==2.0.0,joblib==1.3.2,jsonpickle @ file:///workdir/jsonpickle-3.0.0/.tox/.tmp/package/1/jsonpickle-3.0.0.tar.gz#sha256=f9c35350e9e5a458b540777b9de695ec36b15753708cd385c9d38dbba73cd654,mccabe==0.6.1,mock==5.1.0,numpy==1.26.2,packaging==23.2,pandas==2.1.3,pluggy==1.3.0,py-cpuinfo==9.0.0,pycodestyle==2.8.0,pyflakes==2.4.0,pygal==3.0.4,pygaljs==1.0.2,pymongo==4.6.0,pytest==7.4.3,pytest-benchmark==4.0.0,pytest-cov==2.10.1,pytest-flake8==1.1.1,python-dateutil==2.8.2,pytz==2023.3.post1,scikit-learn==1.3.2,scipy==1.11.4,sgmllib3k==1.0.0,simplejson==3.19.2,six==1.16.0,SQLAlchemy==2.0.23,threadpoolctl==3.2.0,tomli==2.0.1,typing_extensions==4.8.0,tzdata==2023.3,ujson==5.8.0,zipp==3.17.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1771734158'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/jsonpickle/3.0.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /workdir/jsonpickle-3.0.0
+configfile: pytest.ini
+plugins: cov-2.10.1, flake8-1.1.1, benchmark-4.0.0
+collecting ... collected 345 items
+
+jsonpickle/pickler.py::jsonpickle.pickler.Pickler.flatten PASSED         [  0%]
+jsonpickle/pickler.py::jsonpickle.pickler._mktyperef PASSED              [  0%]
+jsonpickle/pickler.py::jsonpickle.pickler.encode PASSED                  [  0%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.Unpickler._refname PASSED  [  1%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.Unpickler.restore PASSED   [  1%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.decode PASSED              [  1%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.has_tag PASSED             [  2%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.has_tag_dict PASSED        [  2%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.loadclass PASSED           [  2%]
+jsonpickle/unpickler.py::jsonpickle.unpickler.loadrepr PASSED            [  2%]
+jsonpickle/util.py::jsonpickle.util.importable_name PASSED               [  3%]
+jsonpickle/util.py::jsonpickle.util.is_bytes PASSED                      [  3%]
+jsonpickle/util.py::jsonpickle.util.is_dictionary PASSED                 [  3%]
+jsonpickle/util.py::jsonpickle.util.is_dictionary_subclass PASSED        [  4%]
+jsonpickle/util.py::jsonpickle.util.is_function PASSED                   [  4%]
+jsonpickle/util.py::jsonpickle.util.is_installed PASSED                  [  4%]
+jsonpickle/util.py::jsonpickle.util.is_list PASSED                       [  4%]
+jsonpickle/util.py::jsonpickle.util.is_module PASSED                     [  5%]
+jsonpickle/util.py::jsonpickle.util.is_module_function PASSED            [  5%]
+jsonpickle/util.py::jsonpickle.util.is_object PASSED                     [  5%]
+jsonpickle/util.py::jsonpickle.util.is_picklable PASSED                  [  6%]
+jsonpickle/util.py::jsonpickle.util.is_primitive PASSED                  [  6%]
+jsonpickle/util.py::jsonpickle.util.is_sequence PASSED                   [  6%]
+jsonpickle/util.py::jsonpickle.util.is_sequence_subclass PASSED          [  6%]
+jsonpickle/util.py::jsonpickle.util.is_set PASSED                        [  7%]
+jsonpickle/util.py::jsonpickle.util.is_tuple PASSED                      [  7%]
+jsonpickle/util.py::jsonpickle.util.is_type PASSED                       [  7%]
+tests/backend_test.py::BackendBase::test_None_dict_key PASSED            [  8%]
+tests/backend_test.py::BackendBase::test_encode_with_indent_and_separators PASSED [  8%]
+tests/backend_test.py::JsonTestCase::test_None_dict_key PASSED           [  8%]
+tests/backend_test.py::JsonTestCase::test_backend PASSED                 [  8%]
+tests/backend_test.py::JsonTestCase::test_encode_with_indent_and_separators PASSED [  9%]
+tests/backend_test.py::SimpleJsonTestCase::test_None_dict_key PASSED     [  9%]
+tests/backend_test.py::SimpleJsonTestCase::test_backend PASSED           [  9%]
+tests/backend_test.py::SimpleJsonTestCase::test_decimal PASSED           [ 10%]
+tests/backend_test.py::SimpleJsonTestCase::test_encode_with_indent_and_separators PASSED [ 10%]
+tests/backend_test.py::SimpleJsonTestCase::test_sort_keys PASSED         [ 10%]
+tests/backend_test.py::YajlTestCase::test_None_dict_key SKIPPED (yaj...) [ 11%]
+tests/backend_test.py::YajlTestCase::test_backend SKIPPED (yajl not ...) [ 11%]
+tests/backend_test.py::YajlTestCase::test_encode_with_indent_and_separators SKIPPED [ 11%]
+tests/backend_test.py::UJsonTestCase::test_None_dict_key PASSED          [ 11%]
+tests/backend_test.py::UJsonTestCase::test_backend PASSED                [ 12%]
+tests/backend_test.py::UJsonTestCase::test_encode_with_indent_and_separators PASSED [ 12%]
+tests/bson_test.py::BSONTestCase::test_FixedOffsetSerializable PASSED    [ 12%]
+tests/bson_test.py::BSONTestCase::test_datetime_with_fixed_offset PASSED [ 13%]
+tests/bson_test.py::BSONTestCase::test_datetime_with_fixed_offset_incremental PASSED [ 13%]
+tests/bson_test.py::BSONTestCase::test_nested_objects PASSED             [ 13%]
+tests/bson_test.py::BSONTestCase::test_stdlib_pickle PASSED              [ 13%]
+tests/bson_test.py::BSONTestCase::test_timedelta PASSED                  [ 14%]
+tests/collections_test.py::test_dict_no_cycle PASSED                     [ 14%]
+tests/collections_test.py::test_dict_self_cycle PASSED                   [ 14%]
+tests/collections_test.py::test_dict_mutual_cycle PASSED                 [ 15%]
+tests/collections_test.py::test_set_no_cycle PASSED                      [ 15%]
+tests/collections_test.py::test_set_self_cycle PASSED                    [ 15%]
+tests/collections_test.py::test_set_mutual_cycle PASSED                  [ 15%]
+tests/datetime_test.py::DateTimeInnerReferenceTestCase::test_object_with_inner_datetime_refs PASSED [ 16%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_date PASSED         [ 16%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_datetime PASSED     [ 16%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_object_with_datetime PASSED [ 17%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_time PASSED         [ 17%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_timedelta PASSED    [ 17%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_unpickleable PASSED [ 17%]
+tests/datetime_test.py::DateTimeSimpleTestCase::test_utc PASSED          [ 18%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_dict_keys_defaults PASSED [ 18%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_dict_keys_with_keys_enabled PASSED [ 18%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_inside_int_keys_defaults PASSED [ 19%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_inside_int_keys_with_keys_enabled PASSED [ 19%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_repr_not_unpicklable PASSED [ 19%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_datetime_structure PASSED [ 20%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_struct_time PASSED [ 20%]
+tests/datetime_test.py::DateTimeAdvancedTestCase::test_struct_time_chars PASSED [ 20%]
+tests/document_test.py::DocumentTestCase::test_cyclical PASSED           [ 20%]
+tests/ecdsa_test.py::EcdsaTestCase::test_roundtrip PASSED                [ 21%]
+tests/feedparser_test.py::FeedParserTestCase::test PASSED                [ 21%]
+tests/handler_test.py::HandlerTestCase::test_base_handler PASSED         [ 21%]
+tests/handler_test.py::HandlerTestCase::test_custom_handler PASSED       [ 22%]
+tests/handler_test.py::HandlerTestCase::test_custom_handler_can_rewrite_everything PASSED [ 22%]
+tests/handler_test.py::HandlerTestCase::test_decorated_register PASSED   [ 22%]
+tests/handler_test.py::HandlerTestCase::test_invalid_class PASSED        [ 22%]
+tests/handler_test.py::HandlerTestCase::test_references PASSED           [ 23%]
+tests/jsonpickle_test.py::PicklingTestCase::test_base85_override_py3 PASSED [ 23%]
+tests/jsonpickle_test.py::PicklingTestCase::test_base85_still_handles_base64 PASSED [ 23%]
+tests/jsonpickle_test.py::PicklingTestCase::test_boolean PASSED          [ 24%]
+tests/jsonpickle_test.py::PicklingTestCase::test_builtin_error PASSED    [ 24%]
+tests/jsonpickle_test.py::PicklingTestCase::test_builtin_function PASSED [ 24%]
+tests/jsonpickle_test.py::PicklingTestCase::test_bytes_default_base85 PASSED [ 24%]
+tests/jsonpickle_test.py::PicklingTestCase::test_class PASSED            [ 25%]
+tests/jsonpickle_test.py::PicklingTestCase::test_class_reference PASSED  [ 25%]
+tests/jsonpickle_test.py::PicklingTestCase::test_classdict PASSED        [ 25%]
+tests/jsonpickle_test.py::PicklingTestCase::test_classlist PASSED        [ 26%]
+tests/jsonpickle_test.py::PicklingTestCase::test_decode_base85 PASSED    [ 26%]
+tests/jsonpickle_test.py::PicklingTestCase::test_dict PASSED             [ 26%]
+tests/jsonpickle_test.py::PicklingTestCase::test_float PASSED            [ 26%]
+tests/jsonpickle_test.py::PicklingTestCase::test_include_properties_dict PASSED [ 27%]
+tests/jsonpickle_test.py::PicklingTestCase::test_include_properties_slots PASSED [ 27%]
+tests/jsonpickle_test.py::PicklingTestCase::test_int PASSED              [ 27%]
+tests/jsonpickle_test.py::PicklingTestCase::test_list PASSED             [ 28%]
+tests/jsonpickle_test.py::PicklingTestCase::test_list_roundtrip PASSED   [ 28%]
+tests/jsonpickle_test.py::PicklingTestCase::test_load_non_fully_qualified_classes PASSED [ 28%]
+tests/jsonpickle_test.py::PicklingTestCase::test_none PASSED             [ 28%]
+tests/jsonpickle_test.py::PicklingTestCase::test_private_slot_members PASSED [ 29%]
+tests/jsonpickle_test.py::PicklingTestCase::test_py3_bytes_base64_default PASSED [ 29%]
+tests/jsonpickle_test.py::PicklingTestCase::test_recursive PASSED        [ 29%]
+tests/jsonpickle_test.py::PicklingTestCase::test_references PASSED       [ 30%]
+tests/jsonpickle_test.py::PicklingTestCase::test_references_in_number_keyed_dict PASSED [ 30%]
+tests/jsonpickle_test.py::PicklingTestCase::test_restore_legacy_builtins PASSED [ 30%]
+tests/jsonpickle_test.py::PicklingTestCase::test_set PASSED              [ 31%]
+tests/jsonpickle_test.py::PicklingTestCase::test_set_not_unpicklable PASSED [ 31%]
+tests/jsonpickle_test.py::PicklingTestCase::test_set_roundtrip PASSED    [ 31%]
+tests/jsonpickle_test.py::PicklingTestCase::test_string PASSED           [ 31%]
+tests/jsonpickle_test.py::PicklingTestCase::test_supports_getstate_setstate PASSED [ 32%]
+tests/jsonpickle_test.py::PicklingTestCase::test_thing_with_module PASSED [ 32%]
+tests/jsonpickle_test.py::PicklingTestCase::test_thing_with_module_safe PASSED [ 32%]
+tests/jsonpickle_test.py::PicklingTestCase::test_thing_with_submodule PASSED [ 33%]
+tests/jsonpickle_test.py::PicklingTestCase::test_tuple PASSED            [ 33%]
+tests/jsonpickle_test.py::PicklingTestCase::test_tuple_notunpicklable PASSED [ 33%]
+tests/jsonpickle_test.py::PicklingTestCase::test_tuple_roundtrip PASSED  [ 33%]
+tests/jsonpickle_test.py::PicklingTestCase::test_type_reference PASSED   [ 34%]
+tests/jsonpickle_test.py::PicklingTestCase::test_unicode PASSED          [ 34%]
+tests/jsonpickle_test.py::PicklingTestCase::test_unpickler_on_missing PASSED [ 34%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_API_names PASSED      [ 35%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_None_dict_key_default PASSED [ 35%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_None_dict_key_with_keys_enabled PASSED [ 35%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_can_serialize_inner_classes PASSED [ 35%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_can_serialize_nested_class_objects PASSED [ 36%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_can_serialize_nested_classes PASSED [ 36%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_decode PASSED         [ 36%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_dict_subclass PASSED  [ 37%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_encode PASSED         [ 37%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_encode_notunpicklable PASSED [ 37%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_int_dict_keys_defaults PASSED [ 37%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_int_dict_keys_with_keys_enabled PASSED [ 38%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_json PASSED           [ 38%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_list_item_reference PASSED [ 38%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_list_of_objects PASSED [ 39%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_listlike PASSED       [ 39%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_load_backend PASSED   [ 39%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_load_backend_handles_bad_encode PASSED [ 40%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_load_backend_handles_bad_loads_exc PASSED [ 40%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_load_backend_raises_on_bad_decode PASSED [ 40%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_load_backend_submodule PASSED [ 40%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_make_refs_disabled_list PASSED [ 41%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_make_refs_disabled_reference_to_list PASSED [ 41%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_object_dict_keys PASSED [ 41%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_object_keys_to_list PASSED [ 42%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_reference_to_list PASSED [ 42%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_refs_in_objects PASSED [ 42%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_refs_keys_values PASSED [ 42%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_refs_recursive PASSED [ 43%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_set_preferred_backend_allows_magic PASSED [ 43%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_string_key_not_requiring_escape_dict_keys_with_keys_enabled PASSED [ 43%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_string_key_requiring_escape_dict_keys_with_keys_enabled PASSED [ 44%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_tuple_dict_keys_default PASSED [ 44%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_tuple_dict_keys_with_keys_enabled PASSED [ 44%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_unicode_dict_keys PASSED [ 44%]
+tests/jsonpickle_test.py::JSONPickleTestCase::test_v1_decode PASSED      [ 45%]
+tests/jsonpickle_test.py::PicklingProtocol4TestCase::test_pickle_newargs_ex PASSED [ 45%]
+tests/jsonpickle_test.py::PicklingProtocol4TestCase::test_references PASSED [ 45%]
+tests/jsonpickle_test.py::PicklingProtocol4TestCase::test_validate_reconstruct_by_newargs_ex PASSED [ 46%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_cyclical_objects PASSED [ 46%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_cyclical_objects_list PASSED [ 46%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_cyclical_objects_unpickleable_false PASSED [ 46%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_cyclical_objects_unpickleable_false_list PASSED [ 47%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_getnewargs_priority PASSED [ 47%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_handles_cyclical_objects_in_lists PASSED [ 47%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_handles_nested_objects PASSED [ 48%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_pickle_newargs PASSED [ 48%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_basic PASSED [ 48%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_basic_func PASSED [ 48%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_complex_num PASSED [ 49%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_complex_zero PASSED [ 49%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_dictitems PASSED [ 49%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_ex_string PASSED [ 50%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_iter PASSED [ 50%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_iterable PASSED [ 50%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_listitems_append PASSED [ 51%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_listitems_extend PASSED [ 51%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_newobj PASSED [ 51%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_state_dict PASSED [ 51%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_state_no_dict PASSED [ 52%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_state_setstate PASSED [ 52%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_reduce_string PASSED [ 52%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_restore_dict_state PASSED [ 53%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_restore_slots_dict_state PASSED [ 53%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_restore_slots_state PASSED [ 53%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_setstate PASSED [ 53%]
+tests/jsonpickle_test.py::PicklingProtocol2TestCase::test_validate_reconstruct_by_newargs PASSED [ 54%]
+tests/jsonpickle_test.py::test_dict_references_are_preserved PASSED      [ 54%]
+tests/jsonpickle_test.py::test_repeat_objects_are_expanded PASSED        [ 54%]
+tests/numpy_test.py::test_dtype_roundtrip PASSED                         [ 55%]
+tests/numpy_test.py::test_generic_roundtrip PASSED                       [ 55%]
+tests/numpy_test.py::test_ndarray_roundtrip PASSED                       [ 55%]
+tests/numpy_test.py::test_shapes_containing_zeroes PASSED                [ 55%]
+tests/numpy_test.py::test_accuracy PASSED                                [ 56%]
+tests/numpy_test.py::test_b64 PASSED                                     [ 56%]
+tests/numpy_test.py::test_views PASSED                                   [ 56%]
+tests/numpy_test.py::test_strides PASSED                                 [ 57%]
+tests/numpy_test.py::test_weird_arrays PASSED                            [ 57%]
+tests/numpy_test.py::test_transpose PASSED                               [ 57%]
+tests/numpy_test.py::test_fortran_base PASSED                            [ 57%]
+tests/numpy_test.py::test_buffer PASSED                                  [ 58%]
+tests/numpy_test.py::test_as_strided PASSED                              [ 58%]
+tests/numpy_test.py::test_immutable PASSED                               [ 58%]
+tests/numpy_test.py::test_byteorder PASSED                               [ 59%]
+tests/numpy_test.py::test_zero_dimensional_array PASSED                  [ 59%]
+tests/numpy_test.py::test_nested_data_list_of_dict_with_list_keys PASSED [ 59%]
+tests/numpy_test.py::test_size_threshold_None PASSED                     [ 60%]
+tests/numpy_test.py::test_ndarray_dtype_object PASSED                    [ 60%]
+tests/numpy_test.py::test_np_random PASSED                               [ 60%]
+tests/numpy_test.py::test_np_poly1d PASSED                               [ 60%]
+tests/object_test.py::FailSafeTestCase::test_custom_err_msg PASSED       [ 61%]
+tests/object_test.py::FailSafeTestCase::test_error_recorded PASSED       [ 61%]
+tests/object_test.py::FailSafeTestCase::test_no_error PASSED             [ 61%]
+tests/object_test.py::AdvancedObjectsTestCase::test_array_handler_numeric PASSED [ 62%]
+tests/object_test.py::AdvancedObjectsTestCase::test_base_object_roundrip PASSED [ 62%]
+tests/object_test.py::AdvancedObjectsTestCase::test_bytes_unicode PASSED [ 62%]
+tests/object_test.py::AdvancedObjectsTestCase::test_decimal PASSED       [ 62%]
+tests/object_test.py::AdvancedObjectsTestCase::test_dictsubclass PASSED  [ 63%]
+tests/object_test.py::AdvancedObjectsTestCase::test_dictsubclass_notunpickable PASSED [ 63%]
+tests/object_test.py::AdvancedObjectsTestCase::test_enum34 PASSED        [ 63%]
+tests/object_test.py::AdvancedObjectsTestCase::test_exceptions_with_arguments PASSED [ 64%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_dict_subclass_roundtrip_cyclical PASSED [ 64%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_dict_subclass_roundtrip_simple PASSED [ 64%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_dict_subclass_structure PASSED [ 64%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_list_inside_list PASSED [ 65%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_list_simple PASSED [ 65%]
+tests/object_test.py::AdvancedObjectsTestCase::test_getstate_with_getstate_only PASSED [ 65%]
+tests/object_test.py::AdvancedObjectsTestCase::test_list_subclass PASSED [ 66%]
+tests/object_test.py::AdvancedObjectsTestCase::test_list_subclass_with_data PASSED [ 66%]
+tests/object_test.py::AdvancedObjectsTestCase::test_list_subclass_with_init PASSED [ 66%]
+tests/object_test.py::AdvancedObjectsTestCase::test_nested_objects PASSED [ 66%]
+tests/object_test.py::AdvancedObjectsTestCase::test_oldstyleclass PASSED [ 67%]
+tests/object_test.py::AdvancedObjectsTestCase::test_set_subclass PASSED  [ 67%]
+tests/object_test.py::AdvancedObjectsTestCase::test_set_subclass_with_data PASSED [ 67%]
+tests/object_test.py::AdvancedObjectsTestCase::test_thing_with_compiled_regex PASSED [ 68%]
+tests/object_test.py::AdvancedObjectsTestCase::test_thing_with_func PASSED [ 68%]
+tests/object_test.py::AdvancedObjectsTestCase::test_thing_with_queue PASSED [ 68%]
+tests/object_test.py::AdvancedObjectsTestCase::test_threading_lock PASSED [ 68%]
+tests/object_test.py::test_getstate_does_not_recurse_infinitely PASSED   [ 69%]
+tests/object_test.py::test_defaultdict_roundtrip PASSED                  [ 69%]
+tests/object_test.py::test_defaultdict_roundtrip_simple_lambda PASSED    [ 69%]
+tests/object_test.py::test_defaultdict_roundtrip_simple_lambda2 PASSED   [ 70%]
+tests/object_test.py::test_defaultdict_and_things_roundtrip_simple_lambda PASSED [ 70%]
+tests/object_test.py::test_defaultdict_subclass_with_self_as_default_factory PASSED [ 70%]
+tests/object_test.py::test_defaultdict_subclass_with_class_as_default_factory PASSED [ 71%]
+tests/object_test.py::test_posix_stat_result PASSED                      [ 71%]
+tests/object_test.py::test_repr_using_jsonpickle PASSED                  [ 71%]
+tests/object_test.py::test_broken_repr_dict_key PASSED                   [ 71%]
+tests/object_test.py::test_ordered_dict_python3 PASSED                   [ 72%]
+tests/object_test.py::test_ordered_dict PASSED                           [ 72%]
+tests/object_test.py::test_ordered_dict_unpicklable PASSED               [ 72%]
+tests/object_test.py::test_ordered_dict_reduces PASSED                   [ 73%]
+tests/object_test.py::test_int_keys_in_object_with_getstate_only PASSED  [ 73%]
+tests/object_test.py::test_ordered_dict_int_keys PASSED                  [ 73%]
+tests/object_test.py::test_ordered_dict_nested PASSED                    [ 73%]
+tests/object_test.py::test_deque_roundtrip PASSED                        [ 74%]
+tests/object_test.py::test_namedtuple_roundtrip PASSED                   [ 74%]
+tests/object_test.py::test_counter_roundtrip PASSED                      [ 74%]
+tests/object_test.py::test_counter_roundtrip_with_keys PASSED            [ 75%]
+tests/object_test.py::test_list_with_fd XPASS (https://github.com/js...) [ 75%]
+tests/object_test.py::test_thing_with_fd XPASS (https://github.com/j...) [ 75%]
+tests/object_test.py::test_dict_with_fd XPASS (https://github.com/js...) [ 75%]
+tests/object_test.py::test_thing_with_lamda PASSED                       [ 76%]
+tests/object_test.py::test_newstyleslots PASSED                          [ 76%]
+tests/object_test.py::test_newstyleslots_inherited PASSED                [ 76%]
+tests/object_test.py::test_newstyleslots_inherited_deleted_attr PASSED   [ 77%]
+tests/object_test.py::test_newstyleslots_with_children PASSED            [ 77%]
+tests/object_test.py::test_newstyleslots_with_children_inherited PASSED  [ 77%]
+tests/object_test.py::test_newstyleslots_iterable PASSED                 [ 77%]
+tests/object_test.py::test_newstyleslots_string_slot PASSED              [ 78%]
+tests/object_test.py::test_enum34_nested PASSED                          [ 78%]
+tests/object_test.py::test_enum_references PASSED                        [ 78%]
+tests/object_test.py::test_enum_unpicklable PASSED                       [ 79%]
+tests/object_test.py::test_enum_int_key_and_value PASSED                 [ 79%]
+tests/object_test.py::test_enum_string_key_and_value PASSED              [ 79%]
+tests/object_test.py::test_multiple_string_enums_when_make_refs_is_false PASSED [ 80%]
+tests/object_test.py::test_unicode_mixin PASSED                          [ 80%]
+tests/object_test.py::test_datetime_with_tz_copies_refs PASSED           [ 80%]
+tests/pandas_test.py::test_series_roundtrip PASSED                       [ 80%]
+tests/pandas_test.py::test_dataframe_roundtrip FAILED                    [ 81%]
+tests/pandas_test.py::test_multindex_dataframe_roundtrip PASSED          [ 81%]
+tests/pandas_test.py::test_dataframe_with_interval_index_roundtrip PASSED [ 81%]
+tests/pandas_test.py::test_index_roundtrip PASSED                        [ 82%]
+tests/pandas_test.py::test_datetime_index_roundtrip PASSED               [ 82%]
+tests/pandas_test.py::test_ragged_datetime_index_roundtrip PASSED        [ 82%]
+tests/pandas_test.py::test_timedelta_index_roundtrip PASSED              [ 82%]
+tests/pandas_test.py::test_period_index_roundtrip PASSED                 [ 83%]
+tests/pandas_test.py::test_int64_index_roundtrip PASSED                  [ 83%]
+tests/pandas_test.py::test_uint64_index_roundtrip PASSED                 [ 83%]
+tests/pandas_test.py::test_float64_index_roundtrip PASSED                [ 84%]
+tests/pandas_test.py::test_interval_index_roundtrip PASSED               [ 84%]
+tests/pandas_test.py::test_datetime_interval_index_roundtrip PASSED      [ 84%]
+tests/pandas_test.py::test_multi_index_roundtrip PASSED                  [ 84%]
+tests/pandas_test.py::test_timestamp_roundtrip PASSED                    [ 85%]
+tests/pandas_test.py::test_period_roundtrip PASSED                       [ 85%]
+tests/pandas_test.py::test_interval_roundtrip PASSED                     [ 85%]
+tests/pandas_test.py::test_b64 PASSED                                    [ 86%]
+tests/pandas_test.py::test_series_list_index PASSED                      [ 86%]
+tests/pandas_test.py::test_series_multi_index PASSED                     [ 86%]
+tests/pandas_test.py::test_series_multi_index_strings PASSED             [ 86%]
+tests/pandas_test.py::test_dataframe_with_timedelta64_dtype PASSED       [ 87%]
+tests/pandas_test.py::test_multilevel_columns PASSED                     [ 87%]
+tests/sklearn_test.py::test_decision_tree PASSED                         [ 87%]
+tests/sqlalchemy_test.py::SQLAlchemyTestCase::test_sqlalchemy_roundtrip_with_detached_session PASSED [ 88%]
+tests/sqlalchemy_test.py::SQLAlchemyTestCase::test_sqlalchemy_roundtrip_with_two_sessions PASSED [ 88%]
+tests/sqlalchemy_test.py::SQLAlchemyTestCase::test_sqlalchemy_with_dynamic_table PASSED [ 88%]
+tests/stdlib_test.py::UUIDTestCase::test_known_uuid PASSED               [ 88%]
+tests/stdlib_test.py::UUIDTestCase::test_random_uuid PASSED              [ 89%]
+tests/stdlib_test.py::BytesTestCase::test_bytestream PASSED              [ 89%]
+tests/util_test.py::UtilTestCase::test_has_method PASSED                 [ 89%]
+tests/util_test.py::UtilTestCase::test_importable_name PASSED            [ 90%]
+tests/util_test.py::UtilTestCase::test_is_dicitonary_sequences PASSED    [ 90%]
+tests/util_test.py::UtilTestCase::test_is_dictionary_dict PASSED         [ 90%]
+tests/util_test.py::UtilTestCase::test_is_dictionary_primitive PASSED    [ 91%]
+tests/util_test.py::UtilTestCase::test_is_dictionary_subclass_dict PASSED [ 91%]
+tests/util_test.py::UtilTestCase::test_is_dictionary_subclass_subclass PASSED [ 91%]
+tests/util_test.py::UtilTestCase::test_is_dictionary_tuple PASSED        [ 91%]
+tests/util_test.py::UtilTestCase::test_is_function_builtins PASSED       [ 92%]
+tests/util_test.py::UtilTestCase::test_is_function_instance_method PASSED [ 92%]
+tests/util_test.py::UtilTestCase::test_is_function_lambda PASSED         [ 92%]
+tests/util_test.py::UtilTestCase::test_is_list_dict PASSED               [ 93%]
+tests/util_test.py::UtilTestCase::test_is_list_list PASSED               [ 93%]
+tests/util_test.py::UtilTestCase::test_is_list_other PASSED              [ 93%]
+tests/util_test.py::UtilTestCase::test_is_list_set PASSED                [ 93%]
+tests/util_test.py::UtilTestCase::test_is_list_tuple PASSED              [ 94%]
+tests/util_test.py::UtilTestCase::test_is_noncomplex_other PASSED        [ 94%]
+tests/util_test.py::UtilTestCase::test_is_noncomplex_time_struct PASSED  [ 94%]
+tests/util_test.py::UtilTestCase::test_is_primitive_None PASSED          [ 95%]
+tests/util_test.py::UtilTestCase::test_is_primitive_bool PASSED          [ 95%]
+tests/util_test.py::UtilTestCase::test_is_primitive_bytes PASSED         [ 95%]
+tests/util_test.py::UtilTestCase::test_is_primitive_dict PASSED          [ 95%]
+tests/util_test.py::UtilTestCase::test_is_primitive_float PASSED         [ 96%]
+tests/util_test.py::UtilTestCase::test_is_primitive_int PASSED           [ 96%]
+tests/util_test.py::UtilTestCase::test_is_primitive_list PASSED          [ 96%]
+tests/util_test.py::UtilTestCase::test_is_primitive_long PASSED          [ 97%]
+tests/util_test.py::UtilTestCase::test_is_primitive_object PASSED        [ 97%]
+tests/util_test.py::UtilTestCase::test_is_primitive_set PASSED           [ 97%]
+tests/util_test.py::UtilTestCase::test_is_primitive_tuple PASSED         [ 97%]
+tests/util_test.py::UtilTestCase::test_is_primitive_unicode PASSED       [ 98%]
+tests/util_test.py::UtilTestCase::test_is_sequence_subclass_list PASSED  [ 98%]
+tests/util_test.py::UtilTestCase::test_is_sequence_subclass_subclass PASSED [ 98%]
+tests/util_test.py::UtilTestCase::test_is_sequence_various PASSED        [ 99%]
+tests/util_test.py::UtilTestCase::test_itemgetter PASSED                 [ 99%]
+tests/wizard_test.py::MagicTestCase::test_with_pickling PASSED           [ 99%]
+tests/wizard_test.py::MagicTestCase::test_without_pickling PASSED        [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_dataframe_roundtrip ___________________________
+Traceback (most recent call last):
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/jsonpickle-3.0.0/tests/pandas_test.py", line 72, in test_dataframe_roundtrip
+    assert_frame_equal(decoded_df, df)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pandas/_testing/asserters.py", line 1209, in assert_frame_equal
+    assert_series_equal(
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pandas/_testing/asserters.py", line 918, in assert_series_equal
+    assert_attr_equal("dtype", left, right, obj=f"Attributes of {obj}")
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pandas/_testing/asserters.py", line 414, in assert_attr_equal
+    raise_assert_detail(obj, msg, left_attr, right_attr)
+  File "/workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pandas/_testing/asserters.py", line 598, in raise_assert_detail
+    raise AssertionError(msg)
+AssertionError: Attributes of DataFrame.iloc[:, 7] (column name="date") are different
+
+Attribute "dtype" are different
+[left]:  datetime64[ns]
+[right]: datetime64[s]
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_cov/plugin.py:233
+  /workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_cov/plugin.py:233: PytestDeprecationWarning: The hookimpl CovPlugin.pytest_configure_node uses old-style configuration options (marks or attributes).
+  Please use the pytest.hookimpl(optionalhook=True) decorator instead
+   to configure the hooks.
+   See https://docs.pytest.org/en/latest/deprecations.html#configuring-hook-specs-impls-using-markers
+    def pytest_configure_node(self, node):
+
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_cov/plugin.py:242
+  /workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest_cov/plugin.py:242: PytestDeprecationWarning: The hookimpl CovPlugin.pytest_testnodedown uses old-style configuration options (marks or attributes).
+  Please use the pytest.hookimpl(optionalhook=True) decorator instead
+   to configure the hooks.
+   See https://docs.pytest.org/en/latest/deprecations.html#configuring-hook-specs-impls-using-markers
+    def pytest_testnodedown(self, node, error):
+
+tests/sqlalchemy_test.py:20
+  /workdir/jsonpickle-3.0.0/tests/sqlalchemy_test.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative.declarative_base()
+
+tests/numpy_test.py::test_ndarray_roundtrip
+tests/sklearn_test.py::test_decision_tree
+  /workdir/jsonpickle-3.0.0/jsonpickle/ext/numpy.py:307: UserWarning: ndarray is defined by reference to an object we do not know how to serialize. A deep copy is serialized instead, breaking memory aliasing.
+    warnings.warn(msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/jsonpickle/3.0.0/1/cpython-test-results.xml -
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                         Stmts   Miss  Cover   Missing
+----------------------------------------------------------
+jsonpickle/__init__.py          21      0   100%
+jsonpickle/backend.py          109     19    83%   21, 38-39, 46-48, 64-65, 70-74, 129, 164-165, 171-172, 246-247
+jsonpickle/compat.py            12      0   100%
+jsonpickle/errors.py             3      0   100%
+jsonpickle/ext/__init__.py       0      0   100%
+jsonpickle/ext/gmpy.py          13      0   100%
+jsonpickle/ext/numpy.py        182     16    91%   30, 72-75, 78, 109, 169, 176, 208-212, 308-313
+jsonpickle/ext/pandas.py       161      0   100%
+jsonpickle/handlers.py         136      6    96%   112, 119, 157, 180, 247, 290
+jsonpickle/pickler.py          387     43    89%   241-245, 361-363, 380-381, 386, 389, 400, 409, 421, 516, 535-539, 547-551, 563-565, 621-622, 631, 643-644, 649, 663-664, 700, 709, 716-725, 811-812, 822
+jsonpickle/tags.py              23      0   100%
+jsonpickle/unpickler.py        454     35    92%   75, 146-147, 150, 226, 241, 243-244, 262, 297, 439, 469, 486-497, 519-520, 525, 599, 627-630, 766, 809, 816, 849, 866-867
+jsonpickle/util.py             168      6    96%   101, 211, 334, 365-366, 422
+jsonpickle/version.py           15      5    67%   5, 8-9, 16-17
+----------------------------------------------------------
+TOTAL                         1684    130    92%
+
+=========================== short test summary info ============================
+FAILED tests/pandas_test.py::test_dataframe_roundtrip - AssertionError: Attri...
+======= 1 failed, 338 passed, 3 skipped, 3 xpassed, 5 warnings in 2.75s ========
+ERROR: InvocationError for command /workdir/jsonpickle-3.0.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/jsonpickle/3.0.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

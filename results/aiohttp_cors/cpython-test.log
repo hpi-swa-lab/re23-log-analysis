@@ -1,0 +1,440 @@
+GLOB sdist-make: /workdir/aiohttp_cors-0.7.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiohttp_cors-0.7.0/.tox/.tmp/package/1/aiohttp-cors-0.7.0.zip
+cpythonlibtest-unit-test-tests installed: aiohttp==3.0.5,aiohttp-cors @ file:///workdir/aiohttp_cors-0.7.0/.tox/.tmp/package/1/aiohttp-cors-0.7.0.zip#sha256=f565d722d1fcd5df56e2448987e1f6f2782a8d87e308a78c6d3b3c5b443b187a,astroid==3.0.1,async-timeout==2.0.1,attrs==23.1.0,chardet==3.0.4,coverage==7.3.2,dill==0.3.7,distlib==0.3.7,docutils==0.14,execnet==2.0.2,filelock==3.13.1,flake8==3.5.0,idna==3.4,isort==5.12.0,lxml==4.9.3,mccabe==0.6.1,mock==5.1.0,multidict==4.7.6,platformdirs==3.11.0,pluggy==0.6.0,py==1.11.0,pycodestyle==2.3.1,pyflakes==1.6.0,Pygments==2.2.0,pylint==3.0.2,pytest==3.4.0,pytest-aiohttp==0.3.0,pytest-cache==1.0,pytest-cov==2.5.1,pytest-flakes==2.0.0,pytest-pylint==0.7.1,pytest-runner==3.0,pytest-sugar==0.9.1,selenium==3.8.1,six==1.16.0,termcolor==2.3.0,tomli==2.0.1,tomlkit==0.12.3,tox==2.9.1,typing_extensions==4.8.0,unittest-xml-reporting==3.2.0,virtualenv==20.24.6,yarl==1.9.2
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='915294924'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/aiohttp_cors/0.7.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+EEEEEEEEE
+======================================================================
+ERROR [0.007s]: aiohttp_cors (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: aiohttp_cors
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/aiohttp_cors/__init__.py", line 20, in <module>
+    from aiohttp import web
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.integration.test_main (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.integration.test_main
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/integration/test_main.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.000s]: tests.integration.test_real_browser (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.integration.test_real_browser
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/integration/test_real_browser.py", line 26, in <module>
+    from aiohttp import web, hdrs
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test___about__ (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test___about__
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test___about__.py", line 20, in <module>
+    import aiohttp_cors
+  File "/workdir/aiohttp_cors-0.7.0/aiohttp_cors/__init__.py", line 20, in <module>
+    from aiohttp import web
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_cors_config (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_cors_config
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_cors_config.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_mixin (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_mixin
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_mixin.py", line 5, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.000s]: tests.unit.test_preflight_handler (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_preflight_handler
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_preflight_handler.py", line 3, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.000s]: tests.unit.test_resource_options (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_resource_options
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_resource_options.py", line 18, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.000s]: tests.unit.test_urldispatcher_router_adapter (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_urldispatcher_router_adapter
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_urldispatcher_router_adapter.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.012s
+
+FAILED (errors=9)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/aiohttp_cors/0.7.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed
+GLOB sdist-make: /workdir/aiohttp_cors-0.7.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting, -rrequirements-dev.txt
+cpythonlibtest-unit-test-tests inst: /workdir/aiohttp_cors-0.7.0/.tox/.tmp/package/1/aiohttp-cors-0.7.0.zip
+cpythonlibtest-unit-test-tests installed: aiohttp==3.0.5,aiohttp-cors @ file:///workdir/aiohttp_cors-0.7.0/.tox/.tmp/package/1/aiohttp-cors-0.7.0.zip#sha256=bfed1ad6c16081207548de7cc3f00c4c7f7307ed26b39ff90bd727a2a1f25132,astroid==3.0.1,async-timeout==2.0.1,attrs==23.1.0,chardet==3.0.4,coverage==7.3.2,dill==0.3.7,distlib==0.3.7,docutils==0.14,execnet==2.0.2,filelock==3.13.1,flake8==3.5.0,idna==3.4,isort==5.12.0,lxml==4.9.3,mccabe==0.6.1,mock==5.1.0,multidict==4.7.6,platformdirs==3.11.0,pluggy==0.6.0,py==1.11.0,pycodestyle==2.3.1,pyflakes==1.6.0,Pygments==2.2.0,pylint==3.0.2,pytest==3.4.0,pytest-aiohttp==0.3.0,pytest-cache==1.0,pytest-cov==2.5.1,pytest-flakes==2.0.0,pytest-pylint==0.7.1,pytest-runner==3.0,pytest-sugar==0.9.1,selenium==3.8.1,six==1.16.0,termcolor==2.3.0,tomli==2.0.1,tomlkit==0.12.3,tox==2.9.1,typing_extensions==4.8.0,unittest-xml-reporting==3.2.0,virtualenv==20.24.6,yarl==1.9.2
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='912566008'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/aiohttp_cors/0.7.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+EEEEEEEEE
+======================================================================
+ERROR [0.008s]: aiohttp_cors (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: aiohttp_cors
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/aiohttp_cors/__init__.py", line 20, in <module>
+    from aiohttp import web
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.integration.test_main (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.integration.test_main
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/integration/test_main.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.integration.test_real_browser (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.integration.test_real_browser
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/integration/test_real_browser.py", line 26, in <module>
+    from aiohttp import web, hdrs
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test___about__ (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test___about__
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test___about__.py", line 20, in <module>
+    import aiohttp_cors
+  File "/workdir/aiohttp_cors-0.7.0/aiohttp_cors/__init__.py", line 20, in <module>
+    from aiohttp import web
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/__init__.py", line 6, in <module>
+    from .client import *  # noqa
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client.py", line 16, in <module>
+    from . import client_exceptions, client_reqrep
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 17, in <module>
+    from . import hdrs, helpers, http, multipart, payload
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/aiohttp/multipart.py", line 8, in <module>
+    from collections import Mapping, Sequence, deque
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_cors_config (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_cors_config
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_cors_config.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_mixin (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_mixin
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_mixin.py", line 5, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_preflight_handler (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_preflight_handler
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_preflight_handler.py", line 3, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_resource_options (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_resource_options
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_resource_options.py", line 18, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+======================================================================
+ERROR [0.001s]: tests.unit.test_urldispatcher_router_adapter (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.unit.test_urldispatcher_router_adapter
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/aiohttp_cors-0.7.0/tests/unit/test_urldispatcher_router_adapter.py", line 20, in <module>
+    import pytest
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/pytest.py", line 9, in <module>
+    from _pytest.config import (
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config.py", line 16, in <module>
+    import _pytest.assertion
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/__init__.py", line 8, in <module>
+    from _pytest.assertion import util
+  File "/workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/assertion/util.py", line 8, in <module>
+    from collections import Sequence
+ImportError: cannot import name 'Sequence' from 'collections' (/usr/local/lib/python3.10/collections/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.014s
+
+FAILED (errors=9)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/aiohttp_cors-0.7.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/aiohttp_cors/0.7.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

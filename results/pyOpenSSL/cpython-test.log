@@ -1,0 +1,52 @@
+GLOB sdist-make: /workdir/pyOpenSSL-22.1.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/pyOpenSSL-22.1.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest
+cpythonlibtest-unit-test-tests inst: /workdir/pyOpenSSL-22.1.0/.tox/.tmp/package/1/pyOpenSSL-22.1.0.zip
+cpythonlibtest-unit-test-tests installed: cffi==1.16.0,cryptography==38.0.4,exceptiongroup==1.2.0,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pycparser==2.21,pyOpenSSL @ file:///workdir/pyOpenSSL-22.1.0/.tox/.tmp/package/1/pyOpenSSL-22.1.0.zip#sha256=fd2b33cfaee1dc9f423f6dc9179cae645431975932bcdbac4f5b3733079f072a,pytest==7.4.3,tomli==2.0.1
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1253304184'
+cpythonlibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pyOpenSSL/22.1.0/1/cpython-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pyOpenSSL-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/python
+cachedir: .tox/cpythonlibtest-unit-test-tests/.pytest_cache
+OpenSSL: b'OpenSSL 3.0.7 1 Nov 2022'
+cryptography: 38.0.4
+rootdir: /workdir/pyOpenSSL-22.1.0
+configfile: setup.cfg
+testpaths: tests
+collecting ... collected 6 items / 2 errors
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_crypto.py _____________________
+ImportError while importing test module '/workdir/pyOpenSSL-22.1.0/tests/test_crypto.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_crypto.py:17: in <module>
+    import flaky
+E   ModuleNotFoundError: No module named 'flaky'
+______________________ ERROR collecting tests/test_ssl.py ______________________
+ImportError while importing test module '/workdir/pyOpenSSL-22.1.0/tests/test_ssl.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_ssl.py:42: in <module>
+    import flaky
+E   ModuleNotFoundError: No module named 'flaky'
+=============================== warnings summary ===============================
+.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/pyOpenSSL-22.1.0/.tox/cpythonlibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: strict
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pyOpenSSL/22.1.0/1/cpython-test-results.xml -
+=========================== short test summary info ============================
+ERROR tests/test_crypto.py
+ERROR tests/test_ssl.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 2 errors in 0.65s =========================
+ERROR: InvocationError for command /workdir/pyOpenSSL-22.1.0/.tox/cpythonlibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pyOpenSSL/22.1.0/1/cpython-test-results.xml (exited with code 2)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

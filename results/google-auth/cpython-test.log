@@ -1,0 +1,11 @@
+GLOB sdist-make: /workdir/google-auth-2.15.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/google-auth-2.15.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, pytest, -rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt, -rsamples/cloud-client/snippets/requirements.txt, -r.kokoro/requirements.txt, -rtesting/requirements.txt
+ERROR: invocation failed (exit code 1), logfile: /workdir/google-auth-2.15.0/.tox/cpythonlibtest-unit-test-tests/log/cpythonlibtest-unit-test-tests-1.log
+================================== log start ===================================
+ERROR: Directory '../../..' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+
+=================================== log end ====================================
+ERROR: could not install deps [mock, pytest, -rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt, -rsamples/cloud-client/snippets/requirements.txt, -r.kokoro/requirements.txt, -rtesting/requirements.txt]; v = InvocationError('/workdir/google-auth-2.15.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt -rsamples/cloud-client/snippets/requirements.txt -r.kokoro/requirements.txt -rtesting/requirements.txt', 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: could not install deps [mock, pytest, -rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt, -rsamples/cloud-client/snippets/requirements.txt, -r.kokoro/requirements.txt, -rtesting/requirements.txt]; v = InvocationError('/workdir/google-auth-2.15.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m pip install mock pytest -rsystem_tests/system_tests_sync/app_engine_test_app/requirements.txt -rsamples/cloud-client/snippets/requirements.txt -r.kokoro/requirements.txt -rtesting/requirements.txt', 1)

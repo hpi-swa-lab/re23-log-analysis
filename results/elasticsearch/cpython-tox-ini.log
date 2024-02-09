@@ -1,0 +1,8 @@
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/elasticsearch/8.5.2/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rdev-requirements.txt
+	-rexamples/bulk-ingest/requirements.txt
+	-rexamples/fastapi-apm/requirements.txt
+

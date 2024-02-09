@@ -1,0 +1,9 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/freezegun/1.2.1/1/cpython-test-results.xml
+deps = mock
+	pytest
+	-rrequirements.txt
+

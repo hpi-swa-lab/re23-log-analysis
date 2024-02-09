@@ -1,0 +1,11 @@
+[tox]
+isolated_build = True
+
+[testenv]
+commands = pytest -v --tb=native --junitxml /workdir/results/nox/2022.11.21/1/graalpy-test-results.xml
+deps = mock
+	pytest
+	-rrequirements-test.txt
+	-rrequirements-dev.txt
+	-rrequirements-conda-test.txt
+

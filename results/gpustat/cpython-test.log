@@ -1,0 +1,19 @@
+GLOB sdist-make: /workdir/gpustat-1.1/setup.py
+ERROR: invocation failed (exit code 1), logfile: /workdir/gpustat-1.1/.tox/log/GLOB-0.log
+================================== log start ===================================
+Traceback (most recent call last):
+  File "/workdir/gpustat-1.1/setup.py", line 18, in read_version
+    import setuptools_scm
+ModuleNotFoundError: No module named 'setuptools_scm'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workdir/gpustat-1.1/setup.py", line 37, in <module>
+    __version__ = read_version()
+  File "/workdir/gpustat-1.1/setup.py", line 20, in read_version
+    raise ImportError(
+ImportError: setuptools_scm not found. When running setup.py directly, setuptools_scm needs to be installed manually. Or consider running `pip install -e .` instead.
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError('/opt/graalpy/bin/graalpy setup.py sdist --formats=zip --dist-dir /workdir/gpustat-1.1/.tox/dist', 1)

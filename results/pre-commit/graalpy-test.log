@@ -1,0 +1,28 @@
+GLOB sdist-make: /workdir/pre-commit-2.20.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/pre-commit-2.20.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt
+graalpylibtest-unit-test-tests inst: /workdir/pre-commit-2.20.0/.tox/.tmp/package/1/pre_commit-2.20.0.zip
+graalpylibtest-unit-test-tests installed: cfgv==3.4.0,covdefaults==2.3.0,coverage==7.3.2,distlib==0.3.7,exceptiongroup==1.2.0,filelock==3.13.1,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,identify==2.5.32,iniconfig==2.0.0,mock==5.1.0,nodeenv==1.8.0,packaging==23.2,platformdirs==4.0.0,pluggy==1.3.0,pre-commit @ file:///workdir/pre-commit-2.20.0/.tox/.tmp/package/1/pre_commit-2.20.0.zip,pytest==7.4.3,pytest-env==1.1.1,PyYAML==6.0.1,re-assert==1.1.0,regex==2023.10.3,toml==0.10.2,tomli==2.0.1,virtualenv==20.24.7
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1611838711'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pre-commit/2.20.0/1/graalpy-test-results.xml
+ImportError while loading conftest '/workdir/pre-commit-2.20.0/tests/conftest.py'.
+tests/conftest.py:17: in <module>
+    from testing.fixtures import git_dir
+testing/fixtures.py:12: in <module>
+    from pre_commit.clientlib import CONFIG_SCHEMA
+pre_commit/clientlib.py:20: in <module>
+    from pre_commit.languages.all import all_languages
+pre_commit/languages/all.py:8: in <module>
+    from pre_commit.languages import conda
+pre_commit/languages/conda.py:14: in <module>
+    from pre_commit.languages import helpers
+pre_commit/languages/helpers.py:17: in <module>
+    from pre_commit.xargs import xargs
+pre_commit/xargs.py:122: in <module>
+    _max_length: int = _get_platform_max_length(),
+pre_commit/xargs.py:35: in _get_platform_max_length
+    maximum = os.sysconf('SC_ARG_MAX') - 2048 - _environ_size()
+E   ValueError: unrecognized configuration name: SC_ARG_MAX
+ERROR: InvocationError for command /workdir/pre-commit-2.20.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pre-commit/2.20.0/1/graalpy-test-results.xml (exited with code 4)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

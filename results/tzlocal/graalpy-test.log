@@ -1,0 +1,112 @@
+warning: check: missing required meta-data: url
+
+graalpylibtest-unit-test-tests create: /workdir/tzlocal-4.2/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/tzlocal-4.2/.tox/.tmp/package/1/tzlocal-4.2.tar.gz
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,pytz-deprecation-shim==0.1.0.post0,tomli==2.0.1,tzdata==2023.3,tzlocal @ file:///workdir/tzlocal-4.2/.tox/.tmp/package/1/tzlocal-4.2.tar.gz
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2566734984'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/tzlocal/4.2/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/tzlocal-4.2/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/tzlocal-4.2
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 21 items
+
+tests/test_tzlocal.py::test_env PASSED                                   [  4%]
+tests/test_tzlocal.py::test_timezone PASSED                              [  9%]
+tests/test_tzlocal.py::test_timezone_top_line_comment PASSED             [ 14%]
+tests/test_tzlocal.py::test_zone_setting PASSED                          [ 19%]
+tests/test_tzlocal.py::test_timezone_setting PASSED                      [ 23%]
+tests/test_tzlocal.py::test_symlink_localtime PASSED                     [ 28%]
+tests/test_tzlocal.py::test_vardbzoneinfo_setting PASSED                 [ 33%]
+tests/test_tzlocal.py::test_only_localtime PASSED                        [ 38%]
+tests/test_tzlocal.py::test_get_reload ERROR                             [ 42%]
+tests/test_tzlocal.py::test_fail PASSED                                  [ 47%]
+tests/test_tzlocal.py::test_assert_tz_offset PASSED                      [ 52%]
+tests/test_tzlocal.py::test_win32 ERROR                                  [ 57%]
+tests/test_tzlocal.py::test_win32_env ERROR                              [ 61%]
+tests/test_tzlocal.py::test_win32_no_dst ERROR                           [ 66%]
+tests/test_tzlocal.py::test_termux ERROR                                 [ 71%]
+tests/test_tzlocal.py::test_conflicting PASSED                           [ 76%]
+tests/test_tzlocal.py::test_noconflict PASSED                            [ 80%]
+tests/test_tzlocal.py::test_pytz_compatibility PASSED                    [ 85%]
+tests/test_tzlocal.py::test_zoneinfo_compatibility PASSED                [ 90%]
+tests/test_tzlocal.py::test_get_localzone_name PASSED                    [ 95%]
+tests/test_tzlocal.py::test_ubuntu_docker_bug PASSED                     [100%]
+
+==================================== ERRORS ====================================
+______________________ ERROR at setup of test_get_reload _______________________
+file /workdir/tzlocal-4.2/tests/test_tzlocal.py, line 113
+  def test_get_reload(mocker, monkeypatch):
+E       fixture 'mocker' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, clear_tz_env_variable, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/tzlocal-4.2/tests/test_tzlocal.py:113
+_________________________ ERROR at setup of test_win32 _________________________
+file /workdir/tzlocal-4.2/tests/test_tzlocal.py, line 146
+  def test_win32(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, clear_tz_env_variable, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/tzlocal-4.2/tests/test_tzlocal.py:146
+_______________________ ERROR at setup of test_win32_env _______________________
+file /workdir/tzlocal-4.2/tests/test_tzlocal.py, line 192
+  def test_win32_env(mocker, monkeypatch):
+E       fixture 'mocker' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, clear_tz_env_variable, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/tzlocal-4.2/tests/test_tzlocal.py:192
+_____________________ ERROR at setup of test_win32_no_dst ______________________
+file /workdir/tzlocal-4.2/tests/test_tzlocal.py, line 207
+  def test_win32_no_dst(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, clear_tz_env_variable, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/tzlocal-4.2/tests/test_tzlocal.py:207
+________________________ ERROR at setup of test_termux _________________________
+file /workdir/tzlocal-4.2/tests/test_tzlocal.py, line 250
+  def test_termux(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, clear_tz_env_variable, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/workdir/tzlocal-4.2/tests/test_tzlocal.py:250
+=============================== warnings summary ===============================
+tests/test_tzlocal.py::test_pytz_compatibility
+  /workdir/tzlocal-4.2/tests/test_tzlocal.py:291: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+    dt = tz_harare.localize(dt)
+
+tests/test_tzlocal.py::test_pytz_compatibility
+  /workdir/tzlocal-4.2/tests/test_tzlocal.py:292: PytzUsageWarning: The normalize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+    tz_harare.normalize(dt)
+
+tests/test_tzlocal.py::test_pytz_compatibility
+  /workdir/tzlocal-4.2/tests/test_tzlocal.py:293: PytzUsageWarning: The zone attribute is specific to pytz's interface; please migrate to a new time zone provider. For more details on how to do so, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+    assert dt.tzinfo.zone == "Africa/Harare"
+
+tests/test_tzlocal.py::test_pytz_compatibility
+  /workdir/tzlocal-4.2/tests/test_tzlocal.py:296: PytzUsageWarning: The normalize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+    dt = tz_newyork.normalize(dt)
+
+tests/test_tzlocal.py::test_pytz_compatibility
+  /workdir/tzlocal-4.2/tests/test_tzlocal.py:297: PytzUsageWarning: The zone attribute is specific to pytz's interface; please migrate to a new time zone provider. For more details on how to do so, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+    assert dt.tzinfo.zone == "America/New_York"
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/tzlocal/4.2/1/graalpy-test-results.xml --
+=========================== short test summary info ============================
+ERROR tests/test_tzlocal.py::test_get_reload
+ERROR tests/test_tzlocal.py::test_win32
+ERROR tests/test_tzlocal.py::test_win32_env
+ERROR tests/test_tzlocal.py::test_win32_no_dst
+ERROR tests/test_tzlocal.py::test_termux
+=================== 16 passed, 5 warnings, 5 errors in 2.95s ===================
+ERROR: InvocationError for command /workdir/tzlocal-4.2/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/tzlocal/4.2/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

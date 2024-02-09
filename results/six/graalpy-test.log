@@ -1,0 +1,278 @@
+GLOB sdist-make: /workdir/six-1.16.0/setup.py
+graalpylibtest-unit-test-tests create: /workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/six-1.16.0/.tox/.tmp/package/1/six-1.16.0.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,six @ file:///workdir/six-1.16.0/.tox/.tmp/package/1/six-1.16.0.zip,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='2465456525'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/six/1.16.0/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/six-1.16.0
+configfile: setup.cfg
+collecting ... collected 200 items
+
+test_six.py::test_add_doc PASSED                                         [  0%]
+test_six.py::test_import_module PASSED                                   [  1%]
+test_six.py::test_integer_types PASSED                                   [  1%]
+test_six.py::test_string_types PASSED                                    [  2%]
+test_six.py::test_class_types PASSED                                     [  2%]
+test_six.py::test_text_type PASSED                                       [  3%]
+test_six.py::test_binary_type PASSED                                     [  3%]
+test_six.py::test_MAXSIZE PASSED                                         [  4%]
+test_six.py::test_lazy PASSED                                            [  4%]
+test_six.py::test_move_items[cStringIO] PASSED                           [  5%]
+test_six.py::test_move_items[filter] PASSED                              [  5%]
+test_six.py::test_move_items[filterfalse] PASSED                         [  6%]
+test_six.py::test_move_items[input] PASSED                               [  6%]
+test_six.py::test_move_items[intern] PASSED                              [  7%]
+test_six.py::test_move_items[map] PASSED                                 [  7%]
+test_six.py::test_move_items[getcwd] PASSED                              [  8%]
+test_six.py::test_move_items[getcwdb] PASSED                             [  8%]
+test_six.py::test_move_items[getoutput] PASSED                           [  9%]
+test_six.py::test_move_items[range] PASSED                               [  9%]
+test_six.py::test_move_items[reload_module] PASSED                       [ 10%]
+test_six.py::test_move_items[reduce] PASSED                              [ 10%]
+test_six.py::test_move_items[shlex_quote] PASSED                         [ 11%]
+test_six.py::test_move_items[StringIO] PASSED                            [ 11%]
+test_six.py::test_move_items[UserDict] PASSED                            [ 12%]
+test_six.py::test_move_items[UserList] PASSED                            [ 12%]
+test_six.py::test_move_items[UserString] PASSED                          [ 13%]
+test_six.py::test_move_items[xrange] PASSED                              [ 13%]
+test_six.py::test_move_items[zip] PASSED                                 [ 14%]
+test_six.py::test_move_items[zip_longest] PASSED                         [ 14%]
+test_six.py::test_move_items[builtins] PASSED                            [ 15%]
+test_six.py::test_move_items[configparser] PASSED                        [ 15%]
+test_six.py::test_move_items[collections_abc] PASSED                     [ 16%]
+test_six.py::test_move_items[copyreg] PASSED                             [ 16%]
+test_six.py::test_move_items[dbm_gnu] SKIPPED (requires gdbm)            [ 17%]
+test_six.py::test_move_items[dbm_ndbm] FAILED                            [ 17%]
+test_six.py::test_move_items[_dummy_thread] PASSED                       [ 18%]
+test_six.py::test_move_items[http_cookiejar] PASSED                      [ 18%]
+test_six.py::test_move_items[http_cookies] PASSED                        [ 19%]
+test_six.py::test_move_items[html_entities] PASSED                       [ 19%]
+test_six.py::test_move_items[html_parser] PASSED                         [ 20%]
+test_six.py::test_move_items[http_client] PASSED                         [ 20%]
+test_six.py::test_move_items[email_mime_base] PASSED                     [ 21%]
+test_six.py::test_move_items[email_mime_image] PASSED                    [ 21%]
+test_six.py::test_move_items[email_mime_multipart] PASSED                [ 22%]
+test_six.py::test_move_items[email_mime_nonmultipart] PASSED             [ 22%]
+test_six.py::test_move_items[email_mime_text] PASSED                     [ 23%]
+test_six.py::test_move_items[BaseHTTPServer] PASSED                      [ 23%]
+test_six.py::test_move_items[CGIHTTPServer] PASSED                       [ 24%]
+test_six.py::test_move_items[SimpleHTTPServer] PASSED                    [ 24%]
+test_six.py::test_move_items[cPickle] PASSED                             [ 25%]
+test_six.py::test_move_items[queue] PASSED                               [ 25%]
+test_six.py::test_move_items[reprlib] PASSED                             [ 26%]
+test_six.py::test_move_items[socketserver] PASSED                        [ 26%]
+test_six.py::test_move_items[_thread] PASSED                             [ 27%]
+test_six.py::test_move_items[tkinter] SKIPPED (requires tkinter)         [ 27%]
+test_six.py::test_move_items[tkinter_dialog] SKIPPED (requires tkinter)  [ 28%]
+test_six.py::test_move_items[tkinter_filedialog] SKIPPED (requires t...) [ 28%]
+test_six.py::test_move_items[tkinter_scrolledtext] SKIPPED (requires...) [ 29%]
+test_six.py::test_move_items[tkinter_simpledialog] SKIPPED (requires...) [ 29%]
+test_six.py::test_move_items[tkinter_tix] SKIPPED (requires tkinter)     [ 30%]
+test_six.py::test_move_items[tkinter_ttk] SKIPPED (requires tkinter)     [ 30%]
+test_six.py::test_move_items[tkinter_constants] SKIPPED (requires tk...) [ 31%]
+test_six.py::test_move_items[tkinter_dnd] SKIPPED (requires tkinter)     [ 31%]
+test_six.py::test_move_items[tkinter_colorchooser] SKIPPED (requires...) [ 32%]
+test_six.py::test_move_items[tkinter_commondialog] SKIPPED (requires...) [ 32%]
+test_six.py::test_move_items[tkinter_tkfiledialog] SKIPPED (requires...) [ 33%]
+test_six.py::test_move_items[tkinter_font] SKIPPED (requires tkinter)    [ 33%]
+test_six.py::test_move_items[tkinter_messagebox] SKIPPED (requires t...) [ 34%]
+test_six.py::test_move_items[tkinter_tksimpledialog] SKIPPED (requir...) [ 34%]
+test_six.py::test_move_items[urllib_parse] PASSED                        [ 35%]
+test_six.py::test_move_items[urllib_error] PASSED                        [ 35%]
+test_six.py::test_move_items[urllib] PASSED                              [ 36%]
+test_six.py::test_move_items[urllib_robotparser] PASSED                  [ 36%]
+test_six.py::test_move_items[xmlrpc_client] PASSED                       [ 37%]
+test_six.py::test_move_items[xmlrpc_server] PASSED                       [ 37%]
+test_six.py::test_move_items_urllib_parse[ParseResult] PASSED            [ 38%]
+test_six.py::test_move_items_urllib_parse[SplitResult] PASSED            [ 38%]
+test_six.py::test_move_items_urllib_parse[parse_qs] PASSED               [ 39%]
+test_six.py::test_move_items_urllib_parse[parse_qsl] PASSED              [ 39%]
+test_six.py::test_move_items_urllib_parse[urldefrag] PASSED              [ 40%]
+test_six.py::test_move_items_urllib_parse[urljoin] PASSED                [ 40%]
+test_six.py::test_move_items_urllib_parse[urlparse] PASSED               [ 41%]
+test_six.py::test_move_items_urllib_parse[urlsplit] PASSED               [ 41%]
+test_six.py::test_move_items_urllib_parse[urlunparse] PASSED             [ 42%]
+test_six.py::test_move_items_urllib_parse[urlunsplit] PASSED             [ 42%]
+test_six.py::test_move_items_urllib_parse[quote] PASSED                  [ 43%]
+test_six.py::test_move_items_urllib_parse[quote_plus] PASSED             [ 43%]
+test_six.py::test_move_items_urllib_parse[unquote] PASSED                [ 44%]
+test_six.py::test_move_items_urllib_parse[unquote_plus] PASSED           [ 44%]
+test_six.py::test_move_items_urllib_parse[unquote_to_bytes] PASSED       [ 45%]
+test_six.py::test_move_items_urllib_parse[urlencode] PASSED              [ 45%]
+test_six.py::test_move_items_urllib_parse[splitquery] PASSED             [ 46%]
+test_six.py::test_move_items_urllib_parse[splittag] PASSED               [ 46%]
+test_six.py::test_move_items_urllib_parse[splituser] PASSED              [ 47%]
+test_six.py::test_move_items_urllib_parse[splitvalue] PASSED             [ 47%]
+test_six.py::test_move_items_urllib_parse[uses_fragment] PASSED          [ 48%]
+test_six.py::test_move_items_urllib_parse[uses_netloc] PASSED            [ 48%]
+test_six.py::test_move_items_urllib_parse[uses_params] PASSED            [ 49%]
+test_six.py::test_move_items_urllib_parse[uses_query] PASSED             [ 49%]
+test_six.py::test_move_items_urllib_parse[uses_relative] PASSED          [ 50%]
+test_six.py::test_move_items_urllib_error[URLError] PASSED               [ 50%]
+test_six.py::test_move_items_urllib_error[HTTPError] PASSED              [ 51%]
+test_six.py::test_move_items_urllib_error[ContentTooShortError] PASSED   [ 51%]
+test_six.py::test_move_items_urllib_request[urlopen] PASSED              [ 52%]
+test_six.py::test_move_items_urllib_request[install_opener] PASSED       [ 52%]
+test_six.py::test_move_items_urllib_request[build_opener] PASSED         [ 53%]
+test_six.py::test_move_items_urllib_request[pathname2url] PASSED         [ 53%]
+test_six.py::test_move_items_urllib_request[url2pathname] PASSED         [ 54%]
+test_six.py::test_move_items_urllib_request[getproxies] PASSED           [ 54%]
+test_six.py::test_move_items_urllib_request[Request] PASSED              [ 55%]
+test_six.py::test_move_items_urllib_request[OpenerDirector] PASSED       [ 55%]
+test_six.py::test_move_items_urllib_request[HTTPDefaultErrorHandler] PASSED [ 56%]
+test_six.py::test_move_items_urllib_request[HTTPRedirectHandler] PASSED  [ 56%]
+test_six.py::test_move_items_urllib_request[HTTPCookieProcessor] PASSED  [ 57%]
+test_six.py::test_move_items_urllib_request[ProxyHandler] PASSED         [ 57%]
+test_six.py::test_move_items_urllib_request[BaseHandler] PASSED          [ 58%]
+test_six.py::test_move_items_urllib_request[HTTPPasswordMgr] PASSED      [ 58%]
+test_six.py::test_move_items_urllib_request[HTTPPasswordMgrWithDefaultRealm] PASSED [ 59%]
+test_six.py::test_move_items_urllib_request[AbstractBasicAuthHandler] PASSED [ 59%]
+test_six.py::test_move_items_urllib_request[HTTPBasicAuthHandler] PASSED [ 60%]
+test_six.py::test_move_items_urllib_request[ProxyBasicAuthHandler] PASSED [ 60%]
+test_six.py::test_move_items_urllib_request[AbstractDigestAuthHandler] PASSED [ 61%]
+test_six.py::test_move_items_urllib_request[HTTPDigestAuthHandler] PASSED [ 61%]
+test_six.py::test_move_items_urllib_request[ProxyDigestAuthHandler] PASSED [ 62%]
+test_six.py::test_move_items_urllib_request[HTTPHandler] PASSED          [ 62%]
+test_six.py::test_move_items_urllib_request[HTTPSHandler] PASSED         [ 63%]
+test_six.py::test_move_items_urllib_request[FileHandler] PASSED          [ 63%]
+test_six.py::test_move_items_urllib_request[FTPHandler] PASSED           [ 64%]
+test_six.py::test_move_items_urllib_request[CacheFTPHandler] PASSED      [ 64%]
+test_six.py::test_move_items_urllib_request[UnknownHandler] PASSED       [ 65%]
+test_six.py::test_move_items_urllib_request[HTTPErrorProcessor] PASSED   [ 65%]
+test_six.py::test_move_items_urllib_request[urlretrieve] PASSED          [ 66%]
+test_six.py::test_move_items_urllib_request[urlcleanup] PASSED           [ 66%]
+test_six.py::test_move_items_urllib_request[URLopener] PASSED            [ 67%]
+test_six.py::test_move_items_urllib_request[FancyURLopener] PASSED       [ 67%]
+test_six.py::test_move_items_urllib_request[proxy_bypass] PASSED         [ 68%]
+test_six.py::test_move_items_urllib_request[parse_http_list] PASSED      [ 68%]
+test_six.py::test_move_items_urllib_request[parse_keqv_list] PASSED      [ 69%]
+test_six.py::test_move_items_urllib_response[addbase] PASSED             [ 69%]
+test_six.py::test_move_items_urllib_response[addclosehook] PASSED        [ 70%]
+test_six.py::test_move_items_urllib_response[addinfo] PASSED             [ 70%]
+test_six.py::test_move_items_urllib_response[addinfourl] PASSED          [ 71%]
+test_six.py::test_move_items_urllib_robotparser[RobotFileParser] PASSED  [ 71%]
+test_six.py::test_import_moves_error_1 PASSED                            [ 72%]
+test_six.py::test_import_moves_error_2 PASSED                            [ 72%]
+test_six.py::test_import_moves_error_3 PASSED                            [ 73%]
+test_six.py::test_from_imports PASSED                                    [ 73%]
+test_six.py::test_filter PASSED                                          [ 74%]
+test_six.py::test_filter_false PASSED                                    [ 74%]
+test_six.py::test_map PASSED                                             [ 75%]
+test_six.py::test_getoutput PASSED                                       [ 75%]
+test_six.py::test_zip PASSED                                             [ 76%]
+test_six.py::test_zip_longest PASSED                                     [ 76%]
+test_six.py::TestCustomizedMoves::test_moved_attribute PASSED            [ 77%]
+test_six.py::TestCustomizedMoves::test_moved_module PASSED               [ 77%]
+test_six.py::TestCustomizedMoves::test_custom_move_module PASSED         [ 78%]
+test_six.py::TestCustomizedMoves::test_custom_move_attribute PASSED      [ 78%]
+test_six.py::TestCustomizedMoves::test_empty_remove PASSED               [ 79%]
+test_six.py::test_get_unbound_function PASSED                            [ 79%]
+test_six.py::test_get_method_self PASSED                                 [ 80%]
+test_six.py::test_get_method_function PASSED                             [ 80%]
+test_six.py::test_get_function_closure PASSED                            [ 81%]
+test_six.py::test_get_function_code PASSED                               [ 81%]
+test_six.py::test_get_function_defaults PASSED                           [ 82%]
+test_six.py::test_get_function_globals PASSED                            [ 82%]
+test_six.py::test_dictionary_iterators PASSED                            [ 83%]
+test_six.py::test_dictionary_views PASSED                                [ 83%]
+test_six.py::test_advance_iterator PASSED                                [ 84%]
+test_six.py::test_iterator PASSED                                        [ 84%]
+test_six.py::test_callable PASSED                                        [ 85%]
+test_six.py::test_create_bound_method PASSED                             [ 85%]
+test_six.py::test_create_unbound_method PASSED                           [ 86%]
+test_six.py::test_b PASSED                                               [ 86%]
+test_six.py::test_u PASSED                                               [ 87%]
+test_six.py::test_u_escapes PASSED                                       [ 87%]
+test_six.py::test_unichr PASSED                                          [ 88%]
+test_six.py::test_int2byte PASSED                                        [ 88%]
+test_six.py::test_byte2int PASSED                                        [ 89%]
+test_six.py::test_bytesindex PASSED                                      [ 89%]
+test_six.py::test_bytesiter PASSED                                       [ 90%]
+test_six.py::test_StringIO PASSED                                        [ 90%]
+test_six.py::test_BytesIO PASSED                                         [ 91%]
+test_six.py::test_exec_ PASSED                                           [ 91%]
+test_six.py::test_reraise PASSED                                         [ 92%]
+test_six.py::test_raise_from PASSED                                      [ 92%]
+test_six.py::test_print_ PASSED                                          [ 93%]
+test_six.py::test_print_exceptions PASSED                                [ 93%]
+test_six.py::test_with_metaclass PASSED                                  [ 94%]
+test_six.py::test_with_metaclass_typing PASSED                           [ 94%]
+test_six.py::test_with_metaclass_pep_560 PASSED                          [ 95%]
+test_six.py::test_with_metaclass_prepare PASSED                          [ 95%]
+test_six.py::test_wraps PASSED                                           [ 96%]
+test_six.py::test_wraps_raises_on_missing_updated_field_on_wrapper PASSED [ 96%]
+test_six.py::test_add_metaclass PASSED                                   [ 97%]
+test_six.py::test_add_metaclass_nested PASSED                            [ 97%]
+test_six.py::test_assertCountEqual PASSED                                [ 98%]
+test_six.py::test_assertRegex PASSED                                     [ 98%]
+test_six.py::test_assertNotRegex PASSED                                  [ 99%]
+test_six.py::test_assertRaisesRegex PASSED                               [ 99%]
+test_six.py::test_python_2_unicode_compatible PASSED                     [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_move_items[dbm_ndbm] ___________________________
+Traceback (most recent call last):
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/six-1.16.0/test_six.py", line 121, in test_move_items
+    item = getattr(six.moves, item_name)
+  File "/workdir/six-1.16.0/six.py", line 97, in __get__
+    result = self._resolve()
+  File "/workdir/six-1.16.0/six.py", line 120, in _resolve
+    return _import_module(self.mod)
+  File "/workdir/six-1.16.0/six.py", line 87, in _import_module
+    __import__(name)
+  File "/opt/graalpy/lib/python3.10/dbm/ndbm.py", line 3, in <module>
+    from _dbm import *
+ModuleNotFoundError: No module named '_dbm'
+=============================== warnings summary ===============================
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: flakes-ignore
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373
+  /workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: pep8ignore
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-- generated xml file: /workdir/results/six/1.16.0/1/graalpy-test-results.xml --
+=========================== short test summary info ============================
+FAILED test_six.py::test_move_items[dbm_ndbm] - ModuleNotFoundError: No modul...
+============ 1 failed, 183 passed, 16 skipped, 2 warnings in 8.23s =============
+ERROR: InvocationError for command /workdir/six-1.16.0/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/six/1.16.0/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

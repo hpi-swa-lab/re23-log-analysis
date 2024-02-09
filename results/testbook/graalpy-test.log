@@ -1,0 +1,245 @@
+GLOB sdist-make: /workdir/testbook-0.4.2/setup.py
+graalpylibtest-unit-test-tests create: /workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest, -rrequirements-dev.txt, -rrequirements.txt
+graalpylibtest-unit-test-tests inst: /workdir/testbook-0.4.2/.tox/.tmp/package/1/testbook-0.4.2.zip
+graalpylibtest-unit-test-tests installed: asttokens==2.4.1,attrs==23.1.0,black==23.11.0,build==1.0.3,bump2version==1.0.1,bumpversion==0.6.0,certifi==2023.11.17,cffi==1.15.1,charset-normalizer==3.1.0,check-manifest==0.49,click==8.1.7,codecov==2.1.13,comm==0.2.0,coverage==7.3.2,cryptography==3.4.7,debugpy==1.8.0,decorator==5.1.1,distlib==0.3.7,docutils==0.20.1,exceptiongroup==1.2.0,executing==2.0.1,fastjsonschema==2.19.0,filelock==3.13.1,flake8==6.1.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,idna==3.6,importlib-metadata==6.8.0,iniconfig==2.0.0,ipykernel==6.27.1,ipython==8.18.1,ipywidgets==8.1.1,jaraco.classes==3.3.0,jedi==0.19.1,jeepney==0.8.0,jsonschema==4.17.3,jupyter_client==8.6.0,jupyter_core==5.5.0,jupyterlab-widgets==3.0.9,keyring==24.3.0,markdown-it-py==3.0.0,matplotlib-inline==0.1.6,mccabe==0.7.0,mdurl==0.1.2,mock==5.1.0,more-itertools==10.1.0,mypy-extensions==1.0.0,nbclient==0.9.0,nbformat==5.9.2,nest-asyncio==1.5.8,nh3==0.2.14,numpy==1.23.5,packaging==23.2,pandas==1.5.2,parso==0.8.3,pathspec==0.11.2,pexpect==4.9.0,pkginfo==1.9.6,platformdirs==4.0.0,pluggy==1.3.0,prompt-toolkit==3.0.41,psutil==5.9.6,ptyprocess==0.7.0,pure-eval==0.2.2,py==1.11.0,pycodestyle==2.11.1,pycparser==2.21,pyflakes==3.1.0,Pygments==2.17.2,pyproject_hooks==1.0.0,pyrsistent==0.20.0,pytest==7.4.3,pytest-cov==4.1.0,python-dateutil==2.8.2,pytz==2022.2.1,pyzmq==25.1.1,readme-renderer==42.0,requests==2.31.0,requests-toolbelt==1.0.0,rfc3986==2.0.0,rich==13.7.0,SecretStorage==3.3.3,six==1.16.0,stack-data==0.6.3,testbook @ file:///workdir/testbook-0.4.2/.tox/.tmp/package/1/testbook-0.4.2.zip,tomli==2.0.1,tornado==6.4,tox==3.28.0,traitlets==5.14.0,twine==4.0.2,typing_extensions==4.8.0,urllib3==2.1.0,virtualenv==20.24.7,wcwidth==0.2.12,widgetsnbextension==4.0.9,xmltodict==0.13.0,zipp==3.17.0
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='3995869427'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/testbook/0.4.2/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/testbook-0.4.2
+configfile: pytest.ini
+testpaths: testbook/tests/
+plugins: cov-4.1.0
+collecting ... collected 110 items
+
+testbook/tests/test_client.py::test_cell_index[2-2] PASSED               [  0%]
+testbook/tests/test_client.py::test_cell_index[hello-1] PASSED           [  1%]
+testbook/tests/test_client.py::test_cell_index_raises_error[cell_index_args0-TypeError] PASSED [  2%]
+testbook/tests/test_client.py::test_cell_index_raises_error[non-existent-tag-TestbookCellTagNotFoundError] PASSED [  3%]
+testbook/tests/test_client.py::test_value[sample_dict-expected_result0] PASSED [  4%]
+testbook/tests/test_client.py::test_value[sample_list-expected_result1] PASSED [  5%]
+testbook/tests/test_client.py::test_value[sample_list + ["hello world"]-expected_result2] PASSED [  6%]
+testbook/tests/test_client.py::test_value[sample_int-42] PASSED          [  7%]
+testbook/tests/test_client.py::test_value[sample_int * 2-84] PASSED      [  8%]
+testbook/tests/test_client.py::test_value[sample_str-hello world] PASSED [  9%]
+testbook/tests/test_client.py::test_value[sample_str + " foo"-hello world foo] PASSED [ 10%]
+testbook/tests/test_client.py::test_value_raises_error[sample_int *= 2] PASSED [ 10%]
+testbook/tests/test_client.py::test_value_raises_error[print(sample_int)] PASSED [ 11%]
+testbook/tests/test_client.py::test_value_raises_error[] PASSED          [ 12%]
+testbook/tests/test_client.py::test_output_text[cell0-\n            hello world\n            foo\n            bar\n            ] PASSED [ 13%]
+testbook/tests/test_client.py::test_output_text[cell1-] PASSED           [ 14%]
+testbook/tests/test_client.py::test_output_text_raises_error[cell0] PASSED [ 15%]
+testbook/tests/test_client.py::test_output_text_raises_error[cell1] PASSED [ 16%]
+testbook/tests/test_client.py::test_cell_execute_result_index PASSED     [ 17%]
+testbook/tests/test_client.py::test_cell_execute_result_tag PASSED       [ 18%]
+testbook/tests/test_client.py::test_cell_execute_result_indexerror PASSED [ 19%]
+testbook/tests/test_client.py::test_cell_execute_result_tagnotfound PASSED [ 20%]
+testbook/tests/test_datamodel.py::test_len PASSED                        [ 20%]
+testbook/tests/test_datamodel.py::test_iter PASSED                       [ 21%]
+testbook/tests/test_datamodel.py::test_getitem PASSED                    [ 22%]
+testbook/tests/test_datamodel.py::test_getitem_raisesIndexError PASSED   [ 23%]
+testbook/tests/test_datamodel.py::test_getitem_raisesTypeError PASSED    [ 24%]
+testbook/tests/test_datamodel.py::test_setitem PASSED                    [ 25%]
+testbook/tests/test_datamodel.py::test_setitem_raisesIndexError PASSED   [ 26%]
+testbook/tests/test_datamodel.py::test_setitem_raisesTypeError PASSED    [ 27%]
+testbook/tests/test_datamodel.py::test_contains PASSED                   [ 28%]
+testbook/tests/test_execute.py::test_execute_cell PASSED                 [ 29%]
+testbook/tests/test_execute.py::test_execute_and_show_pandas_output PASSED [ 30%]
+testbook/tests/test_execute.py::test_execute_cell_tags PASSED            [ 30%]
+testbook/tests/test_execute.py::test_execute_cell_raises_error PASSED    [ 31%]
+testbook/tests/test_execute.py::test_testbook_with_execute PASSED        [ 32%]
+testbook/tests/test_execute.py::test_testbook_with_execute_context_manager PASSED [ 33%]
+testbook/tests/test_execute.py::test_testbook_range PASSED               [ 34%]
+testbook/tests/test_execute.py::test_testbook_slice[slice_params0-6] PASSED [ 35%]
+testbook/tests/test_execute.py::test_testbook_slice[slice_params1-4] PASSED [ 36%]
+testbook/tests/test_execute.py::test_testbook_slice_raises_error PASSED  [ 37%]
+testbook/tests/test_execute.py::test_raise_exception PASSED              [ 38%]
+testbook/tests/test_execute.py::test_underscore PASSED                   [ 39%]
+testbook/tests/test_inject.py::test_inject[None-None] PASSED             [ 40%]
+testbook/tests/test_inject.py::test_inject[args1-None] PASSED            [ 40%]
+testbook/tests/test_inject.py::test_inject[args2-None] PASSED            [ 41%]
+testbook/tests/test_inject.py::test_inject[args3-None] PASSED            [ 42%]
+testbook/tests/test_inject.py::test_inject[args4-None] PASSED            [ 43%]
+testbook/tests/test_inject.py::test_inject[args5-None] PASSED            [ 44%]
+testbook/tests/test_inject.py::test_inject[args6-None] PASSED            [ 45%]
+testbook/tests/test_inject.py::test_inject[args7-kwargs7] PASSED         [ 46%]
+testbook/tests/test_inject.py::test_inject[args8-kwargs8] PASSED         [ 47%]
+testbook/tests/test_inject.py::test_inject_code_block[\n            def foo():\n                print('I ran in the code block')\n            foo()\n        -I ran in the code block] PASSED [ 48%]
+testbook/tests/test_inject.py::test_inject_code_block[\n            def foo(arg):\n                print(f'You passed {arg}')\n            foo('bar')\n        -You passed bar] PASSED [ 49%]
+testbook/tests/test_inject.py::test_inject_raises_exception PASSED       [ 50%]
+testbook/tests/test_inject.py::test_inject_before_after PASSED           [ 50%]
+testbook/tests/test_inject.py::test_inject_pop PASSED                    [ 51%]
+testbook/tests/test_patch.py::TestPatch::test_patch_basic[os.listdir-listdir] PASSED [ 52%]
+testbook/tests/test_patch.py::TestPatch::test_patch_basic[os.popen-get_branch] FAILED [ 53%]
+testbook/tests/test_patch.py::TestPatch::test_patch_raises_error[os.listdir-listdir] PASSED [ 54%]
+testbook/tests/test_patch.py::TestPatch::test_patch_raises_error[os.popen-get_branch] PASSED [ 55%]
+testbook/tests/test_patch.py::TestPatch::test_patch_return_value FAILED  [ 56%]
+testbook/tests/test_patch.py::TestPatchDict::test_patch_dict[os.environ-values0] PASSED [ 57%]
+testbook/tests/test_reference.py::test_create_reference PASSED           [ 58%]
+testbook/tests/test_reference.py::test_create_reference_getitem PASSED   [ 59%]
+testbook/tests/test_reference.py::test_create_reference_get PASSED       [ 60%]
+testbook/tests/test_reference.py::test_eq_in_notebook PASSED             [ 60%]
+testbook/tests/test_reference.py::test_eq_in_notebook_ref PASSED         [ 61%]
+testbook/tests/test_reference.py::test_function_call PASSED              [ 62%]
+testbook/tests/test_reference.py::test_function_call_with_ref_object PASSED [ 63%]
+testbook/tests/test_reference.py::test_reference PASSED                  [ 64%]
+testbook/tests/test_testbook.py::test_testbook_execute_all_cells PASSED  [ 65%]
+testbook/tests/test_testbook.py::test_testbook_class_decorator PASSED    [ 66%]
+testbook/tests/test_testbook.py::test_testbook_class_decorator_execute_none PASSED [ 67%]
+testbook/tests/test_testbook.py::test_testbook_decorator_with_fixture PASSED [ 68%]
+testbook/tests/test_testbook.py::test_testbook_decorator_with_markers[2-2] PASSED [ 69%]
+testbook/tests/test_testbook.py::test_testbook_decorator_with_markers[hello-1] PASSED [ 70%]
+testbook/tests/test_testbook.py::test_testbook_decorator_with_markers_order_does_not_matter[2-2] PASSED [ 70%]
+testbook/tests/test_testbook.py::test_testbook_decorator_with_markers_order_does_not_matter[hello-1] PASSED [ 71%]
+testbook/tests/test_testbook.py::test_testbook_execute_all_cells_context_manager PASSED [ 72%]
+testbook/tests/test_testbook.py::test_testbook_class_decorator_context_manager PASSED [ 73%]
+testbook/tests/test_testbook.py::test_testbook_class_decorator_execute_none_context_manager PASSED [ 74%]
+testbook/tests/test_testbook.py::test_testbook_with_file_object PASSED   [ 75%]
+testbook/tests/test_testbook.py::test_testbook_with_notebook_node PASSED [ 76%]
+testbook/tests/test_translators.py::test_translate_type_python[foo-"foo"] PASSED [ 77%]
+testbook/tests/test_translators.py::test_translate_type_python[{"foo": "bar"}-"{\\"foo\\": \\"bar\\"}"] PASSED [ 78%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input2-{"foo": "bar"}] PASSED [ 79%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input3-{"foo": "\\"bar\\""}] PASSED [ 80%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input4-{"foo": ["bar"]}] PASSED [ 80%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input5-{"foo": {"bar": "baz"}}] PASSED [ 81%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input6-{"foo": {"bar": "\\"baz\\""}}] PASSED [ 82%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input7-["foo"]] PASSED [ 83%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input8-["foo", "\\"bar\\""]] PASSED [ 84%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input9-[{"foo": "bar"}]] PASSED [ 85%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input10-[{"foo": "\\"bar\\""}]] PASSED [ 86%]
+testbook/tests/test_translators.py::test_translate_type_python[12345-12345] PASSED [ 87%]
+testbook/tests/test_translators.py::test_translate_type_python[-54321--54321] PASSED [ 88%]
+testbook/tests/test_translators.py::test_translate_type_python[1.2345-1.2345] PASSED [ 89%]
+testbook/tests/test_translators.py::test_translate_type_python[-5432.1--5432.1] PASSED [ 90%]
+testbook/tests/test_translators.py::test_translate_type_python[nan-float('nan')] PASSED [ 90%]
+testbook/tests/test_translators.py::test_translate_type_python[-inf-float('-inf')] PASSED [ 91%]
+testbook/tests/test_translators.py::test_translate_type_python[inf-float('inf')] PASSED [ 92%]
+testbook/tests/test_translators.py::test_translate_type_python[True-True] PASSED [ 93%]
+testbook/tests/test_translators.py::test_translate_type_python[False-False] PASSED [ 94%]
+testbook/tests/test_translators.py::test_translate_type_python[None-None] PASSED [ 95%]
+testbook/tests/test_translators.py::test_translate_type_python[test_input21-"<Foo val='bar'>"] PASSED [ 96%]
+testbook/tests/test_translators.py::test_translate_float[3.14-3.14] PASSED [ 97%]
+testbook/tests/test_translators.py::test_translate_float[False-false] PASSED [ 98%]
+testbook/tests/test_translators.py::test_translate_float[True-true] PASSED [ 99%]
+testbook/tests/test_translators.py::test_translate_assign PASSED         [100%]
+
+=================================== FAILURES ===================================
+_______________ TestPatch.test_patch_basic[os.popen-get_branch] ________________
+Traceback (most recent call last):
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/testbook-0.4.2/testbook/tests/test_patch.py", line 20, in test_patch_basic
+    mock_obj.assert_called_once()
+  File "/workdir/testbook-0.4.2/testbook/reference.py", line 85, in __call__
+    return self.tb.value(code)
+  File "/workdir/testbook-0.4.2/testbook/client.py", line 273, in value
+    result = self.inject(code, pop=True)
+  File "/workdir/testbook-0.4.2/testbook/client.py", line 237, in inject
+    cell = TestbookNode(self.execute_cell(inject_idx)) if run else TestbookNode(code_cell)
+  File "/workdir/testbook-0.4.2/testbook/client.py", line 135, in execute_cell
+    raise TestbookRuntimeError(ce.evalue, ce, self._get_error_class(ce.ename))
+testbook.exceptions.TestbookRuntimeError: An error occurred while executing the following cell:
+------------------
+
+_mock_rgmycrbaug.assert_called_once(*[], **{})
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAssertionError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[20], line 1[0m
+[0;32m----> 1[0m _mock_rgmycrbaug[38;5;241m.[39massert_called_once([38;5;241m*[39m[], [38;5;241m*[39m[38;5;241m*[39m{})
+
+File [0;32m/opt/graalpy/lib/python3.10/unittest/mock.py:898[0m, in [0;36mNonCallableMock.assert_called_once[0;34m(self)[0m
+[1;32m    893[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39mcall_count [38;5;241m==[39m [38;5;241m1[39m:
+[1;32m    894[0m     msg [38;5;241m=[39m ([38;5;124m"[39m[38;5;124mExpected [39m[38;5;124m'[39m[38;5;132;01m%s[39;00m[38;5;124m'[39m[38;5;124m to have been called once. Called [39m[38;5;132;01m%s[39;00m[38;5;124m times.[39m[38;5;132;01m%s[39;00m[38;5;124m"[39m
+[1;32m    895[0m            [38;5;241m%[39m ([38;5;28mself[39m[38;5;241m.[39m_mock_name [38;5;129;01mor[39;00m [38;5;124m'[39m[38;5;124mmock[39m[38;5;124m'[39m,
+[1;32m    896[0m               [38;5;28mself[39m[38;5;241m.[39mcall_count,
+[1;32m    897[0m               [38;5;28mself[39m[38;5;241m.[39m_calls_repr()))
+[0;32m--> 898[0m     [38;5;28;01mraise[39;00m [38;5;167;01mAssertionError[39;00m(msg)
+
+[0;31mAssertionError[0m: Expected 'popen' to have been called once. Called 0 times.
+
+______________________ TestPatch.test_patch_return_value _______________________
+Traceback (most recent call last):
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 177, in pytest_runtest_call
+    raise e
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 169, in pytest_runtest_call
+    item.runtest()
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1792, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 194, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/workdir/testbook-0.4.2/testbook/tests/test_patch.py", line 31, in test_patch_return_value
+    assert tb.ref("listdir")() == ['file1', 'file2']
+AssertionError
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
+  given by the platformdirs library.  To remove this warning and
+  see the appropriate new directories, set the environment variable
+  `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
+  The use of platformdirs will be the default in `jupyter_core` v6
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/testbook/0.4.2/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED testbook/tests/test_patch.py::TestPatch::test_patch_basic[os.popen-get_branch]
+FAILED testbook/tests/test_patch.py::TestPatch::test_patch_return_value - Ass...
+============= 2 failed, 108 passed, 1 warning in 431.29s (0:07:11) =============
+ERROR: InvocationError for command /workdir/testbook-0.4.2/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/testbook/0.4.2/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

@@ -1,0 +1,73 @@
+GLOB sdist-make: /workdir/prometheus-client-0.15.0/setup.py
+cpythonlibtest-unit-test-tests create: /workdir/prometheus-client-0.15.0/.tox/cpythonlibtest-unit-test-tests
+cpythonlibtest-unit-test-tests installdeps: mock, unittest-xml-reporting
+cpythonlibtest-unit-test-tests inst: /workdir/prometheus-client-0.15.0/.tox/.tmp/package/1/prometheus_client-0.15.0.zip
+cpythonlibtest-unit-test-tests installed: lxml==4.9.3,mock==5.1.0,prometheus-client @ file:///workdir/prometheus-client-0.15.0/.tox/.tmp/package/1/prometheus_client-0.15.0.zip#sha256=6f2273925c5d2d0ca1f94e3478978881b2b30d8bd9aa964c98a7b917f56a5ed4,unittest-xml-reporting==3.2.0
+cpythonlibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='1461862800'
+cpythonlibtest-unit-test-tests run-test: commands[0] | /workdir/prometheus-client-0.15.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/prometheus-client/0.15.0/1/cpython-test-results.xml
+
+Running tests...
+----------------------------------------------------------------------
+E...........b'# HELP hh A histogram\n# TYPE hh histogram\nhh_bucket{le="1.0"} 1.0 # {a="b"} 0.5 123.456\nhh_bucket{le="2.0"} 2.0 # {le="7"} 1.5 123.456\nhh_bucket{le="3.0"} 3.0 # {a="b"} 2.5 123.456\nhh_bucket{le="4.0"} 4.0 # {a="\\n\\"\\\\"} 3.5 123.456\nhh_bucket{le="+Inf"} 4.0\nhh_count 4.0\nhh_sum 8.0\nhh_created 123.456\n# EOF\n'
+......................................................ssssssEE..............................F.................................s.......
+======================================================================
+ERROR [0.003s]: prometheus_client.twisted (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: prometheus_client.twisted
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/prometheus_client/twisted/__init__.py", line 1, in <module>
+    from ._exposition import MetricsResource
+  File "/workdir/prometheus-client-0.15.0/prometheus_client/twisted/_exposition.py", line 1, in <module>
+    from twisted.internet import reactor
+ModuleNotFoundError: No module named 'twisted'
+
+
+======================================================================
+ERROR [0.000s]: tests.test_core (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_core
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/tests/test_core.py", line 6, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR [0.000s]: tests.test_exposition (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_exposition
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/workdir/prometheus-client-0.15.0/tests/test_exposition.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+FAIL [0.001s]: test_deprecation_warning (tests.test_multiprocess.TestMultiProcessDeprecation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workdir/prometheus-client-0.15.0/tests/test_multiprocess.py", line 39, in test_deprecation_warning
+    assert len(w) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 146 tests in 0.156s
+
+FAILED (failures=1, errors=3, skipped=7)
+
+Generating XML reports...
+ERROR: InvocationError for command /workdir/prometheus-client-0.15.0/.tox/cpythonlibtest-unit-test-tests/bin/python -m xmlrunner --output-file /workdir/results/prometheus-client/0.15.0/1/cpython-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   cpythonlibtest-unit-test-tests: commands failed

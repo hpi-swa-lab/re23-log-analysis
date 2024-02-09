@@ -1,0 +1,537 @@
+GLOB sdist-make: /workdir/docutils-0.19/setup.py
+graalpylibtest-unit-test-tests create: /workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/docutils-0.19/.tox/.tmp/package/1/docutils-0.19.zip
+graalpylibtest-unit-test-tests installed: docutils @ file:///workdir/docutils-0.19/.tox/.tmp/package/1/docutils-0.19.zip,exceptiongroup==1.1.3,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pytest==7.4.3,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='126412985'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/docutils/0.19/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/docutils-0.19
+collecting ... collected 263 items
+
+test/test_CLI.py::CliTests::test_main_help FAILED                        [  0%]
+test/test__init__.py::ApplicationErrorTests::test_message PASSED         [  0%]
+test/test__init__.py::ApplicationErrorTests::test_non_ASCII_message PASSED [  1%]
+test/test__init__.py::VersionInfoTests::test_VersionInfo PASSED          [  1%]
+test/test__init__.py::VersionInfoTests::test_VersionInfo_value_check PASSED [  1%]
+test/test__init__.py::VersionInfoTests::test__version__ PASSED           [  2%]
+test/test__init__.py::VersionInfoTests::test__version_info__ PASSED      [  2%]
+test/test__init__.py::VersionInfoTests::test_version_info_comparing PASSED [  3%]
+test/test__init__.py::VersionInfoTests::test_version_info_tuple_comparing PASSED [  3%]
+test/test_dependencies.py::RecordDependenciesTests::test_csv_dependencies PASSED [  3%]
+test/test_dependencies.py::RecordDependenciesTests::test_dependencies_html PASSED [  4%]
+test/test_dependencies.py::RecordDependenciesTests::test_dependencies_latex PASSED [  4%]
+test/test_dependencies.py::RecordDependenciesTests::test_dependencies_xml PASSED [  4%]
+test/test_dependencies.py::RecordDependenciesTests::test_stylesheet_dependencies PASSED [  5%]
+test/test_error_reporting.py::SafeStringTests::test_7bit PASSED          [  5%]
+test/test_error_reporting.py::SafeStringTests::test_str PASSED           [  6%]
+test/test_error_reporting.py::SafeStringTests::test_ustr PASSED          [  6%]
+test/test_error_reporting.py::ErrorStringTests::test_str PASSED          [  6%]
+test/test_error_reporting.py::ErrorStringTests::test_unicode PASSED      [  7%]
+test/test_error_reporting.py::ErrorOutputTests::test_bbuf PASSED         [  7%]
+test/test_error_reporting.py::ErrorOutputTests::test_defaults PASSED     [  7%]
+test/test_error_reporting.py::ErrorOutputTests::test_ubuf PASSED         [  8%]
+test/test_error_reporting.py::SafeStringTests_locale::test_str PASSED    [  8%]
+test/test_error_reporting.py::SafeStringTests_locale::test_ustr PASSED   [  9%]
+test/test_error_reporting.py::ErrorReportingTests::test_csv_table PASSED [  9%]
+test/test_error_reporting.py::ErrorReportingTests::test_include PASSED   [  9%]
+test/test_error_reporting.py::ErrorReportingTests::test_raw_file PASSED  [ 10%]
+test/test_functional.py::FunctionalTestCase::test ERROR                  [ 10%]
+test/test_io.py::HelperTests::test_check_encoding_false PASSED           [ 11%]
+test/test_io.py::HelperTests::test_check_encoding_none PASSED            [ 11%]
+test/test_io.py::HelperTests::test_check_encoding_true FAILED            [ 11%]
+test/test_io.py::HelperTests::test_error_string PASSED                   [ 12%]
+test/test_io.py::InputTests::test_bom PASSED                             [ 12%]
+test/test_io.py::InputTests::test_bom_detection PASSED                   [ 12%]
+test/test_io.py::InputTests::test_coding_slug PASSED                     [ 13%]
+test/test_io.py::InputTests::test_decode_unicode PASSED                  [ 13%]
+test/test_io.py::InputTests::test_heuristics_no_utf8 PASSED              [ 14%]
+test/test_io.py::InputTests::test_readlines PASSED                       [ 14%]
+test/test_io.py::OutputTests::test_FileOutput_hande_io_errors_deprection_warning PASSED [ 14%]
+test/test_io.py::OutputTests::test_encoding_clash_nonresolvable PASSED   [ 15%]
+test/test_io.py::OutputTests::test_encoding_clash_resolved PASSED        [ 15%]
+test/test_io.py::OutputTests::test_write_bytes PASSED                    [ 15%]
+test/test_io.py::OutputTests::test_write_bytes_to_stdout PASSED          [ 16%]
+test/test_io.py::OutputTests::test_write_unicode PASSED                  [ 16%]
+test/test_io.py::OutputTests::test_write_utf8 PASSED                     [ 17%]
+test/test_io.py::ErrorOutputTests::test_bbuf PASSED                      [ 17%]
+test/test_io.py::ErrorOutputTests::test_defaults PASSED                  [ 17%]
+test/test_io.py::ErrorOutputTests::test_ubuf PASSED                      [ 18%]
+test/test_io.py::FileInputTests::test_bom_utf_16 PASSED                  [ 18%]
+test/test_io.py::FileInputTests::test_bom_utf_8 PASSED                   [ 19%]
+test/test_io.py::FileInputTests::test_coding_slug PASSED                 [ 19%]
+test/test_io.py::FileInputTests::test_fallback_no_utf8 SKIPPED (loca...) [ 19%]
+test/test_io.py::FileInputTests::test_fallback_utf8 PASSED               [ 20%]
+test/test_language.py::LanguageTestCase::test_bibliographic_fields ERROR [ 20%]
+test/test_language.py::LanguageTestCase::test_directives ERROR           [ 20%]
+test/test_language.py::LanguageTestCase::test_labels ERROR               [ 21%]
+test/test_language.py::LanguageTestCase::test_roles ERROR                [ 21%]
+test/test_nodes.py::TextTests::test_Text_rawsource_deprection_warning PASSED [ 22%]
+test/test_nodes.py::TextTests::test_asciirestriction PASSED              [ 22%]
+test/test_nodes.py::TextTests::test_astext PASSED                        [ 22%]
+test/test_nodes.py::TextTests::test_comparison PASSED                    [ 23%]
+test/test_nodes.py::TextTests::test_longrepr PASSED                      [ 23%]
+test/test_nodes.py::TextTests::test_pformat PASSED                       [ 23%]
+test/test_nodes.py::TextTests::test_repr PASSED                          [ 24%]
+test/test_nodes.py::TextTests::test_str PASSED                           [ 24%]
+test/test_nodes.py::TextTests::test_strip PASSED                         [ 25%]
+test/test_nodes.py::TextTests::test_unicode PASSED                       [ 25%]
+test/test_nodes.py::ElementTests::test_clear PASSED                      [ 25%]
+test/test_nodes.py::ElementTests::test_default_attributes PASSED         [ 26%]
+test/test_nodes.py::ElementTests::test_empty PASSED                      [ 26%]
+test/test_nodes.py::ElementTests::test_index PASSED                      [ 26%]
+test/test_nodes.py::ElementTests::test_normal_attributes PASSED          [ 27%]
+test/test_nodes.py::ElementTests::test_replace_self PASSED               [ 27%]
+test/test_nodes.py::ElementTests::test_unicode PASSED                    [ 28%]
+test/test_nodes.py::ElementTests::test_update_all_atts PASSED            [ 28%]
+test/test_nodes.py::ElementTests::test_update_basic_atts PASSED          [ 28%]
+test/test_nodes.py::ElementTests::test_withtext PASSED                   [ 29%]
+test/test_nodes.py::MiscTests::test_copy PASSED                          [ 29%]
+test/test_nodes.py::MiscTests::test_findall PASSED                       [ 30%]
+test/test_nodes.py::MiscTests::test_findall_duplicate_texts PASSED       [ 30%]
+test/test_nodes.py::MiscTests::test_make_id PASSED                       [ 30%]
+test/test_nodes.py::MiscTests::test_next_node PASSED                     [ 31%]
+test/test_nodes.py::MiscTests::test_node_class_names PASSED              [ 31%]
+test/test_nodes.py::MiscTests::test_system_message_copy PASSED           [ 31%]
+test/test_nodes.py::TreeCopyVisitorTests::test_copy_whole PASSED         [ 32%]
+test/test_nodes.py::SetIdTests::test_set_id_custom PASSED                [ 32%]
+test/test_nodes.py::SetIdTests::test_set_id_custom_descriptive_auto_id PASSED [ 33%]
+test/test_nodes.py::SetIdTests::test_set_id_default PASSED               [ 33%]
+test/test_nodes.py::SetIdTests::test_set_id_descriptive_auto_id PASSED   [ 33%]
+test/test_nodes.py::NodeVisitorTests::test_dispatch_visit_optional PASSED [ 34%]
+test/test_nodes.py::NodeVisitorTests::test_dispatch_visit_unknown PASSED [ 34%]
+test/test_nodes.py::MiscFunctionTests::test_normalize_name PASSED        [ 34%]
+test/test_pickle.py::PickleTests::test_pickle PASSED                     [ 35%]
+test/test_publisher.py::PublisherTests::test_input_error_handling PASSED [ 35%]
+test/test_publisher.py::PublisherTests::test_output_error_handling PASSED [ 36%]
+test/test_publisher.py::PublishDoctreeTestCase::test_publish_doctree PASSED [ 36%]
+test/test_publisher.py::PublishDoctreeTestCase::test_publish_pickle PASSED [ 36%]
+test/test_settings.py::ConfigFileTests::test_encoding_error_handler PASSED [ 37%]
+test/test_settings.py::ConfigFileTests::test_encoding_error_handler2 PASSED [ 37%]
+test/test_settings.py::ConfigFileTests::test_list PASSED                 [ 38%]
+test/test_settings.py::ConfigFileTests::test_list2 PASSED                [ 38%]
+test/test_settings.py::ConfigFileTests::test_multiple PASSED             [ 38%]
+test/test_settings.py::ConfigFileTests::test_multiple_with_html5_writer PASSED [ 39%]
+test/test_settings.py::ConfigFileTests::test_nofiles PASSED              [ 39%]
+test/test_settings.py::ConfigFileTests::test_old PASSED                  [ 39%]
+test/test_settings.py::ConfigFileTests::test_old_and_new PASSED          [ 40%]
+test/test_settings.py::ConfigFileTests::test_one PASSED                  [ 40%]
+test/test_settings.py::ConfigFileTests::test_syntax_error PASSED         [ 41%]
+test/test_settings.py::ConfigEnvVarFileTests::test_encoding_error_handler PASSED [ 41%]
+test/test_settings.py::ConfigEnvVarFileTests::test_encoding_error_handler2 PASSED [ 41%]
+test/test_settings.py::ConfigEnvVarFileTests::test_get_standard_config_files PASSED [ 42%]
+test/test_settings.py::ConfigEnvVarFileTests::test_list PASSED           [ 42%]
+test/test_settings.py::ConfigEnvVarFileTests::test_list2 PASSED          [ 42%]
+test/test_settings.py::ConfigEnvVarFileTests::test_multiple PASSED       [ 43%]
+test/test_settings.py::ConfigEnvVarFileTests::test_multiple_with_html5_writer PASSED [ 43%]
+test/test_settings.py::ConfigEnvVarFileTests::test_nofiles PASSED        [ 44%]
+test/test_settings.py::ConfigEnvVarFileTests::test_old PASSED            [ 44%]
+test/test_settings.py::ConfigEnvVarFileTests::test_old_and_new PASSED    [ 44%]
+test/test_settings.py::ConfigEnvVarFileTests::test_one PASSED            [ 45%]
+test/test_settings.py::ConfigEnvVarFileTests::test_syntax_error PASSED   [ 45%]
+test/test_settings.py::HelperFunctionsTests::test_make_paths_absolute PASSED [ 46%]
+test/test_settings.py::HelperFunctionsTests::test_make_paths_absolute_cwd PASSED [ 46%]
+test/test_settings.py::HelperFunctionsTests::test_set_conditions_deprecation_warning PASSED [ 46%]
+test/test_settings.py::HelperFunctionsTests::test_validate_boolean PASSED [ 47%]
+test/test_settings.py::HelperFunctionsTests::test_validate_colon_separated_string_list PASSED [ 47%]
+test/test_settings.py::HelperFunctionsTests::test_validate_comma_separated_list PASSED [ 47%]
+test/test_settings.py::HelperFunctionsTests::test_validate_smartquotes_locales PASSED [ 48%]
+test/test_settings.py::HelperFunctionsTests::test_validate_ternary PASSED [ 48%]
+test/test_settings.py::HelperFunctionsTests::test_validate_url_trailing_slash PASSED [ 49%]
+test/test_statemachine.py::EmptySMTests::test_add_state PASSED           [ 49%]
+test/test_statemachine.py::EmptySMTests::test_add_states PASSED          [ 49%]
+test/test_statemachine.py::EmptySMTests::test_get_state PASSED           [ 50%]
+test/test_statemachine.py::EmptySMWSTests::test_add_state PASSED         [ 50%]
+test/test_statemachine.py::EmptySMWSTests::test_add_states PASSED        [ 50%]
+test/test_statemachine.py::EmptySMWSTests::test_get_state PASSED         [ 51%]
+test/test_statemachine.py::SMWSTests::test___init__ PASSED               [ 51%]
+test/test_statemachine.py::SMWSTests::test_get_indented PASSED           [ 52%]
+test/test_statemachine.py::SMWSTests::test_get_text_block PASSED         [ 52%]
+test/test_statemachine.py::SMWSTests::test_get_text_block_flush_left PASSED [ 52%]
+test/test_statemachine.py::SMWSTests::test_run PASSED                    [ 53%]
+test/test_statemachine.py::EmptyStateTests::test_add_transition PASSED   [ 53%]
+test/test_statemachine.py::EmptyStateTests::test_add_transitions PASSED  [ 53%]
+test/test_statemachine.py::EmptyStateTests::test_make_transition PASSED  [ 54%]
+test/test_statemachine.py::EmptyStateTests::test_make_transitions PASSED [ 54%]
+test/test_statemachine.py::EmptyStateTests::test_remove_transition PASSED [ 55%]
+test/test_statemachine.py::MiscTests::test_string2lines PASSED           [ 55%]
+test/test_traversals.py::StopTraversalTests::test_stop_traversal PASSED  [ 55%]
+test/test_utils.py::ReporterTests::test_level0 PASSED                    [ 56%]
+test/test_utils.py::ReporterTests::test_level1 PASSED                    [ 56%]
+test/test_utils.py::ReporterTests::test_level2 PASSED                    [ 57%]
+test/test_utils.py::ReporterTests::test_level3 PASSED                    [ 57%]
+test/test_utils.py::ReporterTests::test_level4 PASSED                    [ 57%]
+test/test_utils.py::ReporterTests::test_unicode_message PASSED           [ 58%]
+test/test_utils.py::ReporterTests::test_unicode_message_from_exception PASSED [ 58%]
+test/test_utils.py::QuietReporterTests::test_debug PASSED                [ 58%]
+test/test_utils.py::QuietReporterTests::test_error PASSED                [ 59%]
+test/test_utils.py::QuietReporterTests::test_info PASSED                 [ 59%]
+test/test_utils.py::QuietReporterTests::test_severe PASSED               [ 60%]
+test/test_utils.py::QuietReporterTests::test_warning PASSED              [ 60%]
+test/test_utils.py::NameValueTests::test_extract_name_value PASSED       [ 60%]
+test/test_utils.py::ExtensionOptionTests::test_assemble_option_dict PASSED [ 61%]
+test/test_utils.py::ExtensionOptionTests::test_extract_extension_options PASSED [ 61%]
+test/test_utils.py::HelperFunctionTests::test_column_width PASSED        [ 61%]
+test/test_utils.py::HelperFunctionTests::test_decode_path PASSED         [ 62%]
+test/test_utils.py::HelperFunctionTests::test_escape2null PASSED         [ 62%]
+test/test_utils.py::HelperFunctionTests::test_find_file_in_dirs PASSED   [ 63%]
+test/test_utils.py::HelperFunctionTests::test_implicit_version_identifier PASSED [ 63%]
+test/test_utils.py::HelperFunctionTests::test_normalize_language_tag PASSED [ 63%]
+test/test_utils.py::HelperFunctionTests::test_relative_path PASSED       [ 64%]
+test/test_utils.py::HelperFunctionTests::test_unescape PASSED            [ 64%]
+test/test_utils.py::HelperFunctionTests::test_version_identifier PASSED  [ 65%]
+test/test_utils.py::StylesheetFunctionTests::test_get_stylesheet_list_conflict PASSED [ 65%]
+test/test_utils.py::StylesheetFunctionTests::test_get_stylesheet_list_stylesheet PASSED [ 65%]
+test/test_utils.py::StylesheetFunctionTests::test_get_stylesheet_list_stylesheet_path PASSED [ 66%]
+test/test_viewlist.py::ViewListTests::test_append PASSED                 [ 66%]
+test/test_viewlist.py::ViewListTests::test_del_slice PASSED              [ 66%]
+test/test_viewlist.py::ViewListTests::test_extend PASSED                 [ 67%]
+test/test_viewlist.py::ViewListTests::test_get_slice PASSED              [ 67%]
+test/test_viewlist.py::ViewListTests::test_info PASSED                   [ 68%]
+test/test_viewlist.py::ViewListTests::test_insert PASSED                 [ 68%]
+test/test_viewlist.py::ViewListTests::test_lists PASSED                  [ 68%]
+test/test_viewlist.py::ViewListTests::test_reverse PASSED                [ 69%]
+test/test_viewlist.py::ViewListTests::test_set_slice PASSED              [ 69%]
+test/test_viewlist.py::ViewListTests::test_sort PASSED                   [ 69%]
+test/test_viewlist.py::ViewListTests::test_special_class_methods PASSED  [ 70%]
+test/test_viewlist.py::ViewListTests::test_trim PASSED                   [ 70%]
+test/test_viewlist.py::ViewListTests::test_view PASSED                   [ 71%]
+test/test_viewlist.py::ViewListTests::test_xitems PASSED                 [ 71%]
+test/test_viewlist.py::StringList::test_get_indented PASSED              [ 71%]
+test/test_viewlist.py::StringList::test_trim_left PASSED                 [ 72%]
+test/test_parsers/test_get_parser_class.py::GetParserClassTestCase::test_bogus_parser PASSED [ 72%]
+test/test_parsers/test_get_parser_class.py::GetParserClassTestCase::test_local_parser PASSED [ 73%]
+test/test_parsers/test_get_parser_class.py::GetParserClassTestCase::test_registered_parser PASSED [ 73%]
+test/test_parsers/test_parser.py::RstParserTests::test_inputrestrictions PASSED [ 73%]
+test/test_parsers/test_recommonmark/test_misc.py::RecommonmarkParserTests::test_parser_name SKIPPED [ 74%]
+test/test_parsers/test_recommonmark/test_misc.py::RecommonmarkParserTests::test_raw_disabled SKIPPED [ 74%]
+test/test_parsers/test_recommonmark/test_misc.py::RecommonmarkParserTests::test_raw_disabled_inline SKIPPED [ 74%]
+test/test_parsers/test_recommonmark/test_misc.py::RecommonmarkMissingTests::test_missing_parser_message PASSED [ 75%]
+test/test_parsers/test_rst/test_directives/test__init__.py::DirectiveOptionConversionTestCase::test_flag PASSED [ 75%]
+test/test_parsers/test_rst/test_directives/test__init__.py::DirectiveOptionConversionTestCase::test_parser_name PASSED [ 76%]
+test/test_parsers/test_rst/test_directives/test__init__.py::DirectiveOptionConversionTestCase::test_unchanged PASSED [ 76%]
+test/test_parsers/test_rst/test_directives/test__init__.py::DirectiveOptionConversionTestCase::test_unchanged_required PASSED [ 76%]
+test/test_parsers/test_rst/test_directives/test_code_parsing.py::CodeParsingTests::test_lexer_error SKIPPED [ 77%]
+test/test_parsers/test_rst/test_directives/test_code_parsing.py::CodeParsingTests::test_lexer_error_workaround SKIPPED [ 77%]
+test/test_readers/test_get_reader_class.py::GetReaderClassTestCase::test_bogus_reader PASSED [ 77%]
+test/test_readers/test_get_reader_class.py::GetReaderClassTestCase::test_local_reader PASSED [ 78%]
+test/test_readers/test_get_reader_class.py::GetReaderClassTestCase::test_registered_reader PASSED [ 78%]
+test/test_transforms/test___init__.py::KwargsTestCase::test_kwargs PASSED [ 79%]
+test/test_writers/test_docutils_xml.py::DocutilsXMLTestCase::test_invalid_raw_xml PASSED [ 79%]
+test/test_writers/test_docutils_xml.py::DocutilsXMLTestCase::test_publish PASSED [ 79%]
+test/test_writers/test_docutils_xml.py::DocutilsXMLTestCase::test_publish_indents PASSED [ 80%]
+test/test_writers/test_docutils_xml.py::DocutilsXMLTestCase::test_publish_newlines PASSED [ 80%]
+test/test_writers/test_docutils_xml.py::DocutilsXMLTestCase::test_raw_xml PASSED [ 80%]
+test/test_writers/test_get_writer_class.py::GetWriterClassTestCase::test_bogus_writer PASSED [ 81%]
+test/test_writers/test_get_writer_class.py::GetWriterClassTestCase::test_local_writer PASSED [ 81%]
+test/test_writers/test_get_writer_class.py::GetWriterClassTestCase::test_registered_writer PASSED [ 82%]
+test/test_writers/test_html4css1_misc.py::EncodingTestCase::test_xmlcharrefreplace PASSED [ 82%]
+test/test_writers/test_html4css1_misc.py::MovingArgsTestCase::test_definition_list_item_classes PASSED [ 82%]
+test/test_writers/test_html4css1_misc.py::MovingArgsTestCase::test_definition_list_item_name PASSED [ 83%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_custom_stylesheet_dir PASSED [ 83%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_custom_stylesheet_dir_embedded PASSED [ 84%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_custom_stylesheet_linked PASSED [ 84%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_default_stylesheet PASSED [ 84%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_default_stylesheet_linked PASSED [ 85%]
+test/test_writers/test_html4css1_misc.py::SettingsTestCase::test_math_stylesheet_linked PASSED [ 85%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_default PASSED [ 85%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_html PASSED [ 86%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_html_stylesheet PASSED [ 86%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_mathjax PASSED [ 87%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_mathjax_custom PASSED [ 87%]
+test/test_writers/test_html4css1_misc.py::MathTestCase::test_math_output_mathjax_no_math PASSED [ 87%]
+test/test_writers/test_html5_polyglot_misc.py::EncodingTestCase::test_xmlcharrefreplace PASSED [ 88%]
+test/test_writers/test_html5_polyglot_misc.py::MovingArgsTestCase::test_definition_list_item_classes PASSED [ 88%]
+test/test_writers/test_html5_polyglot_misc.py::MovingArgsTestCase::test_definition_list_item_name PASSED [ 88%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_custom_stylesheet_dir PASSED [ 89%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_custom_stylesheet_dir_embedded PASSED [ 89%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_custom_stylesheet_linked PASSED [ 90%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_default_stylesheet PASSED [ 90%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_default_stylesheet_linked PASSED [ 90%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_future_warnings PASSED [ 91%]
+test/test_writers/test_html5_polyglot_misc.py::SettingsTestCase::test_math_stylesheet_linked PASSED [ 91%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_default PASSED [ 92%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_html PASSED [ 92%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_html_stylesheet PASSED [ 92%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_mathjax PASSED [ 93%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_mathjax_custom PASSED [ 93%]
+test/test_writers/test_html5_polyglot_misc.py::MathTestCase::test_math_output_mathjax_no_math PASSED [ 93%]
+test/test_writers/test_html5_polyglot_parts.py::HtmlWriterPublishPartsTestCase::test_publish ERROR [ 94%]
+test/test_writers/test_html5_polyglot_parts.py::Html5WriterPublishPartsTestCase::test_publish ERROR [ 94%]
+test/test_writers/test_latex2e_misc.py::TocTestCase::test_publish_from_doctree PASSED [ 95%]
+test/test_writers/test_latex2e_misc.py::WarningsTestCase::test_future_warnings PASSED [ 95%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_basic PASSED [ 95%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_classifier PASSED [ 96%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_contents PASSED [ 96%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_custom_headfoot PASSED [ 96%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_footnotes PASSED [ 97%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_header_footer PASSED [ 97%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_literal_block PASSED [ 98%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_nested_class PASSED [ 98%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_raw PASSED  [ 98%]
+test/test_writers/test_odt.py::DocutilsOdtTestCase::test_odt_tables1 PASSED [ 99%]
+tools/test/test_buildhtml.py::BuildHtmlTests::test_1 PASSED              [ 99%]
+tools/test/test_buildhtml.py::BuildHtmlTests::test_local PASSED          [100%]
+
+==================================== ERRORS ====================================
+__________________ ERROR at setup of FunctionalTestCase.test ___________________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/test_functional.py", line 103, in __init__
+    assert configfile is not None, 'required argument'
+AssertionError: required argument
+_________ ERROR at setup of LanguageTestCase.test_bibliographic_fields _________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/test_language.py", line 90, in __init__
+    assert language is not None, 'required argument'
+AssertionError: required argument
+______________ ERROR at setup of LanguageTestCase.test_directives ______________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/test_language.py", line 90, in __init__
+    assert language is not None, 'required argument'
+AssertionError: required argument
+________________ ERROR at setup of LanguageTestCase.test_labels ________________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/test_language.py", line 90, in __init__
+    assert language is not None, 'required argument'
+AssertionError: required argument
+________________ ERROR at setup of LanguageTestCase.test_roles _________________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/test_language.py", line 90, in __init__
+    assert language is not None, 'required argument'
+AssertionError: required argument
+________ ERROR at setup of HtmlWriterPublishPartsTestCase.test_publish _________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/DocutilsTestSupport.py", line 668, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: CustomTestCase.__init__() missing 3 required positional arguments: 'input', 'expected', and 'id'
+________ ERROR at setup of Html5WriterPublishPartsTestCase.test_publish ________
+Traceback (most recent call last):
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 262, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 152, in _multicall
+    return outcome.get_result()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_result.py", line 114, in get_result
+    raise exc.with_traceback(exc.__traceback__)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 157, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 497, in setup
+    raise exc
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 494, in setup
+    col.setup()
+  File "/workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/unittest.py", line 201, in setup
+    self._testcase = self.parent.obj(self.name)  # type: ignore[attr-defined]
+  File "/workdir/docutils-0.19/test/DocutilsTestSupport.py", line 668, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: CustomTestCase.__init__() missing 3 required positional arguments: 'input', 'expected', and 'id'
+=================================== FAILURES ===================================
+___________________________ CliTests.test_main_help ____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 594, in run
+    self._callTearDown()
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 552, in _callTearDown
+    self.tearDown()
+  File "/workdir/docutils-0.19/test/test_CLI.py", line 52, in tearDown
+    locale.setlocale(locale.LC_ALL, 'C')  # restore default (C) locale
+  File "/opt/graalpy/lib/python3.10/locale.py", line 620, in setlocale
+    return _setlocale(category, locale)
+ValueError: unsupported locale setting
+_____________________ HelperTests.test_check_encoding_true _____________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/docutils-0.19/test/test_io.py", line 49, in test_check_encoding_true
+    self.assertEqual(io.check_encoding(mock_stdout, 'utf8'), True)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 838, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: False != True
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: The `docutils.utils.error_reporting` module is deprecated and will be removed in Docutils 0.21 or later.
+  Details with help("docutils.utils.error_reporting").
+
+test/test_transforms/test___init__.py:16
+  /workdir/docutils-0.19/test/test_transforms/test___init__.py:16: PytestCollectionWarning: cannot collect test class 'TestTransform' because it has a __init__ constructor (from: test/test_transforms/test___init__.py)
+    class TestTransform(transforms.Transform):
+
+test/test_settings.py::HelperFunctionsTests::test_make_paths_absolute
+test/test_settings.py::HelperFunctionsTests::test_make_paths_absolute_cwd
+test/test_settings.py::HelperFunctionsTests::test_set_conditions_deprecation_warning
+test/test_settings.py::HelperFunctionsTests::test_validate_boolean
+test/test_settings.py::HelperFunctionsTests::test_validate_colon_separated_string_list
+test/test_settings.py::HelperFunctionsTests::test_validate_comma_separated_list
+test/test_settings.py::HelperFunctionsTests::test_validate_smartquotes_locales
+test/test_settings.py::HelperFunctionsTests::test_validate_ternary
+test/test_settings.py::HelperFunctionsTests::test_validate_url_trailing_slash
+  /workdir/docutils-0.19/test/test_settings.py:254: DeprecationWarning: The frontend.OptionParser class will be replaced by a subclass of argparse.ArgumentParser in Docutils 0.21 or later.
+    self.option_parser = frontend.OptionParser(
+
+test/test_settings.py: 612 warnings
+  /opt/graalpy/lib/python3.10/optparse.py:1000: DeprecationWarning: The frontend.Option class will be removed in Docutils 0.21 or later.
+    option = self.option_class(*args, **kwargs)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/docutils/0.19/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED test/test_CLI.py::CliTests::test_main_help - ValueError: unsupported l...
+FAILED test/test_io.py::HelperTests::test_check_encoding_true - AssertionErro...
+ERROR test/test_functional.py::FunctionalTestCase::test - AssertionError: req...
+ERROR test/test_language.py::LanguageTestCase::test_bibliographic_fields - As...
+ERROR test/test_language.py::LanguageTestCase::test_directives - AssertionErr...
+ERROR test/test_language.py::LanguageTestCase::test_labels - AssertionError: ...
+ERROR test/test_language.py::LanguageTestCase::test_roles - AssertionError: r...
+ERROR test/test_writers/test_html5_polyglot_parts.py::HtmlWriterPublishPartsTestCase::test_publish
+ERROR test/test_writers/test_html5_polyglot_parts.py::Html5WriterPublishPartsTestCase::test_publish
+====== 2 failed, 248 passed, 6 skipped, 623 warnings, 7 errors in 21.52s =======
+ERROR: InvocationError for command /workdir/docutils-0.19/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/docutils/0.19/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

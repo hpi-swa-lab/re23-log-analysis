@@ -1,0 +1,12 @@
+.package create: /workdir/py-spy-0.3.14/.tox/.package
+.package installdeps: maturin>=0.11,<0.12
+💥 maturin failed
+  Caused by: Failed to build source distribution
+  Caused by: Attempting to include the sdist output tarball .tox/dist/py_spy-0.3.14.tar.gz into itself! Check 'cargo package --list' output.
+Error: command ['maturin', 'pep517', 'write-sdist', '--sdist-directory', '.tox/dist'] returned non-zero exit status 1
+ERROR: invocation failed (exit code 1), logfile: /workdir/py-spy-0.3.14/.tox/.package/log/.package-3.log
+================================== log start ===================================
+Running `maturin pep517 write-sdist --sdist-directory .tox/dist`
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError("/workdir/py-spy-0.3.14/.tox/.package/bin/python /opt/graalpy/lib/python3.10/site-packages/tox/helper/build_isolated.py .tox/dist maturin '' ''", 1)

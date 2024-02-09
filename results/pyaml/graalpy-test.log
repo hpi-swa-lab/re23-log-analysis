@@ -1,0 +1,136 @@
+GLOB sdist-make: /workdir/pyaml-21.10.1/setup.py
+graalpylibtest-unit-test-tests create: /workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests
+graalpylibtest-unit-test-tests installdeps: mock, pytest
+graalpylibtest-unit-test-tests inst: /workdir/pyaml-21.10.1/.tox/.tmp/package/1/pyaml-21.10.1.zip
+graalpylibtest-unit-test-tests installed: exceptiongroup==1.2.0,graalpy-virtualenv==0.0.1,hpy==0.9.0rc2,iniconfig==2.0.0,mock==5.1.0,packaging==23.2,pluggy==1.3.0,pyaml @ file:///workdir/pyaml-21.10.1/.tox/.tmp/package/1/pyaml-21.10.1.zip,pytest==7.4.3,PyYAML==6.0.1,tomli==2.0.1
+graalpylibtest-unit-test-tests run-test-pre: PYTHONHASHSEED='4100316705'
+graalpylibtest-unit-test-tests run-test: commands[0] | pytest -v --tb=native --junitxml /workdir/results/pyaml/21.10.1/1/graalpy-test-results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.4.3, pluggy-1.3.0 -- /workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/bin/python
+cachedir: .tox/graalpylibtest-unit-test-tests/.pytest_cache
+rootdir: /workdir/pyaml-21.10.1
+collecting ... collected 21 items
+
+pyaml/tests/test_dump.py::DumpTests::test_colons_in_strings PASSED       [  4%]
+pyaml/tests/test_dump.py::DumpTests::test_dst FAILED                     [  9%]
+pyaml/tests/test_dump.py::DumpTests::test_dumps PASSED                   [ 14%]
+pyaml/tests/test_dump.py::DumpTests::test_empty_strings PASSED           [ 19%]
+pyaml/tests/test_dump.py::DumpTests::test_encoding PASSED                [ 23%]
+pyaml/tests/test_dump.py::DumpTests::test_force_embed PASSED             [ 28%]
+pyaml/tests/test_dump.py::DumpTests::test_ids FAILED                     [ 33%]
+pyaml/tests/test_dump.py::DumpTests::test_multiple_docs PASSED           [ 38%]
+pyaml/tests/test_dump.py::DumpTests::test_namedtuple PASSED              [ 42%]
+pyaml/tests/test_dump.py::DumpTests::test_ordereddict PASSED             [ 47%]
+pyaml/tests/test_dump.py::DumpTests::test_print PASSED                   [ 52%]
+pyaml/tests/test_dump.py::DumpTests::test_print_args PASSED              [ 57%]
+pyaml/tests/test_dump.py::DumpTests::test_pyyaml_params PASSED           [ 61%]
+pyaml/tests/test_dump.py::DumpTests::test_ruamel_yaml PASSED             [ 66%]
+pyaml/tests/test_dump.py::DumpTests::test_simple FAILED                  [ 71%]
+pyaml/tests/test_dump.py::DumpTests::test_single_dash_strings PASSED     [ 76%]
+pyaml/tests/test_dump.py::DumpTests::test_str_long PASSED                [ 80%]
+pyaml/tests/test_dump.py::DumpTests::test_str_multiline PASSED           [ 85%]
+pyaml/tests/test_dump.py::DumpTests::test_str_style_pick PASSED          [ 90%]
+pyaml/tests/test_dump.py::DumpTests::test_unqouted_spaces PASSED         [ 95%]
+pyaml/tests/test_dump.py::DumpTests::test_vspacing PASSED                [100%]
+
+=================================== FAILURES ===================================
+______________________________ DumpTests.test_dst ______________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 261, in test_dst
+    self.assertIs(pyaml.dump(data, buff), None)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'
+______________________________ DumpTests.test_ids ______________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 292, in test_ids
+    b = pyaml.dump(data, unicode)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'
+____________________________ DumpTests.test_simple _____________________________
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/graalpy/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/workdir/pyaml-21.10.1/pyaml/tests/test_dump.py", line 267, in test_simple
+    b = pyaml.dump(data, unicode)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 198, in dump
+    yaml.dump_all( data, buff, Dumper=Dumper,
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/yaml/serializer.py", line 53, in serialize
+    self.anchor_node(node)
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 76, in anchor_node
+    self.anchor_node(value, hint=hint+[key])
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 66, in anchor_node
+    self.pyaml_transliterate(
+  File "/workdir/pyaml-21.10.1/pyaml/__init__.py", line 53, in pyaml_transliterate
+    from unidecode import unidecode
+ModuleNotFoundError: No module named 'unidecode'
+=============================== warnings summary ===============================
+pyaml/__init__.py:113
+  /workdir/pyaml-21.10.1/pyaml/__init__.py:113: DeprecationWarning: invalid escape sequence '\s'
+    def choose_scalar_style(self, _re1=re.compile(':(\s|$)')):
+
+pyaml/tests/test_dump.py:19
+  /workdir/pyaml-21.10.1/pyaml/tests/test_dump.py:19: DeprecationWarning: invalid escape sequence '\.'
+    large_yaml = b'''
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workdir/results/pyaml/21.10.1/1/graalpy-test-results.xml -
+=========================== short test summary info ============================
+FAILED pyaml/tests/test_dump.py::DumpTests::test_dst - ModuleNotFoundError: N...
+FAILED pyaml/tests/test_dump.py::DumpTests::test_ids - ModuleNotFoundError: N...
+FAILED pyaml/tests/test_dump.py::DumpTests::test_simple - ModuleNotFoundError...
+=================== 3 failed, 18 passed, 2 warnings in 1.85s ===================
+ERROR: InvocationError for command /workdir/pyaml-21.10.1/.tox/graalpylibtest-unit-test-tests/bin/pytest -v --tb=native --junitxml /workdir/results/pyaml/21.10.1/1/graalpy-test-results.xml (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   graalpylibtest-unit-test-tests: commands failed

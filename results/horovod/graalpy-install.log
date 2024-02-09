@@ -1,0 +1,78 @@
+Collecting horovod==0.28.1
+  Downloading horovod-0.28.1.tar.gz (3.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 4.8 MB/s eta 0:00:00
+Looking for GraalPy patches for horovod
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cloudpickle
+  Using cached cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+Collecting psutil
+  Using cached psutil-5.9.6-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pyyaml
+  Using cached PyYAML-6.0.1-py3-none-any.whl
+Collecting packaging
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting cffi>=1.4.0
+  Using cached cffi-1.15.1-graalpy310-graalpy231_310_native-linux_x86_64.whl
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: horovod
+  Building wheel for horovod (setup.py): started
+  Building wheel for horovod (setup.py): still running...
+  Building wheel for horovod (setup.py): finished with status 'done'
+  Created wheel for horovod: filename=horovod-0.28.1-graalpy310-graalpy231_310_native-linux_x86_64.whl size=345182 sha256=4afc16ed35caadd3f06c3e0879aa84a02bceb3651e85cb353bbe6eb5c2e0c5de
+  Stored in directory: /workdir/.cache/pip-graalpy/wheels/db/e5/7c/ebd05fdca446b224275f0684dfa4c806ef0d16cb44b7a942ac
+Successfully built horovod
+Installing collected packages: pyyaml, pycparser, psutil, packaging, cloudpickle, cffi, horovod
+Looking for GraalPy patches for PyYAML
+Looking for GraalPy patches for pycparser
+Looking for GraalPy patches for psutil
+Looking for GraalPy patches for packaging
+Patching package packaging using /opt/graalpy/lib/graalpy23.1/patches/packaging/packaging.patch
+patching file packaging/tags.py
+Hunk #1 FAILED at 4.
+Hunk #2 FAILED at 37.
+2 out of 2 hunks FAILED -- saving rejects to file packaging/tags.py.rej
+Applying GraalPy patch failed for packaging. The package may still work.
+Looking for GraalPy patches for cloudpickle
+Patching package cloudpickle using /opt/graalpy/lib/graalpy23.1/patches/cloudpickle/cloudpickle-2.2.1.patch
+patching file cloudpickle/cloudpickle.py
+patching file cloudpickle/cloudpickle_fast.py
+Looking for GraalPy patches for cffi
+Patching package cffi using /opt/graalpy/lib/graalpy23.1/patches/cffi/cffi-1.15.1.patch
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/_cffi_backend.c b/c/_cffi_backend.c
+|index 2cdb76b..ab91032 100644
+|--- a/c/_cffi_backend.c
+|+++ b/c/_cffi_backend.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/lib_obj.c b/c/lib_obj.c
+|index 38bf3d5..9954f3b 100644
+|--- a/c/lib_obj.c
+|+++ b/c/lib_obj.c
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 35
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/c/misc_thread_common.h b/c/misc_thread_common.h
+|index 66e2835..b48fd85 100644
+|--- a/c/misc_thread_common.h
+|+++ b/c/misc_thread_common.h
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+Applying GraalPy patch failed for cffi. The package may still work.
+Looking for GraalPy patches for horovod
+Successfully installed cffi-1.15.1 cloudpickle-2.2.1 horovod-0.28.1 packaging-23.2 psutil-5.9.6 pycparser-2.21 pyyaml-6.0.1

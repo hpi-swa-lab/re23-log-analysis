@@ -1,0 +1,23 @@
+.package create: /workdir/jupyterlab-3.5.1/.tox/.package
+.package installdeps: jupyter_packaging>=0.9,<2
+Traceback (most recent call last):
+  File "/opt/graalpy/lib/python3.10/site-packages/tox/helper/build_requires.py", line 11, in <module>
+    backend = __import__(backend_spec, fromlist=["_trash"])
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/jupyter_packaging/build_api.py", line 7, in <module>
+    import tomlkit
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/tomlkit/__init__.py", line 1, in <module>
+    from tomlkit.api import TOMLDocument
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/tomlkit/api.py", line 12, in <module>
+    from tomlkit.container import Container
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/tomlkit/container.py", line 14, in <module>
+    from tomlkit.items import AoT
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/tomlkit/items.py", line 593, in <module>
+    class Integer(Item, _CustomInt):
+  File "/workdir/jupyterlab-3.5.1/.tox/.package/lib/python3.10/site-packages/tomlkit/items.py", line 663, in Integer
+    __rmod__ = wrap_method(int.__rmod__)
+AttributeError: 'int' object has no attribute '__rmod__'
+ERROR: invocation failed (exit code 1), logfile: /workdir/jupyterlab-3.5.1/.tox/.package/log/.package-2.log
+================================== log start ===================================
+
+=================================== log end ====================================
+ERROR: FAIL could not package project - v = InvocationError("/workdir/jupyterlab-3.5.1/.tox/.package/bin/python /opt/graalpy/lib/python3.10/site-packages/tox/helper/build_requires.py jupyter_packaging.build_api '' ''", 1)

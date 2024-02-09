@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="10" tests="11" time="27.045" timestamp="2023-11-30T23:37:27.101000" hostname="be2d8ee410eb"><testcase classname="" name="xarray.tests.test_calendar_ops" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_calendar_ops.py', 13, "Skipped: could not import 'cftime': No module named 'cftime'")</skipped></testcase><testcase classname="" name="xarray.tests.test_cftime_offsets" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_cftime_offsets.py', 39, "Skipped: could not import 'cftime': No module named 'cftime'")</skipped></testcase><testcase classname="" name="xarray.tests.test_cftimeindex_resample" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_cftimeindex_resample.py', 12, "Skipped: could not import 'cftime': No module named 'cftime'")</skipped></testcase><testcase classname="" name="xarray.tests.test_cupy" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_cupy.py', 9, "Skipped: could not import 'cupy': No module named 'cupy'")</skipped></testcase><testcase classname="" name="xarray.tests.test_dask" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_dask.py', 34, "Skipped: could not import 'dask': No module named 'dask'")</skipped></testcase><testcase classname="" name="xarray.tests.test_distributed" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_distributed.py', 16, "Skipped: could not import 'dask': No module named 'dask'")</skipped></testcase><testcase classname="" name="xarray.tests.test_sparse" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_sparse.py', 22, "Skipped: could not import 'sparse': No module named 'sparse'")</skipped></testcase><testcase classname="" name="xarray.tests.test_units" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/xarray/tests/test_units.py', 31, "Skipped: could not import 'pint': No module named 'pint'")</skipped></testcase><testcase classname="" name="xarray.tests.test_variable" time="0.000"><error message="collection failure">Traceback (most recent call last):
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1047, in _idval_from_function
+    id = self.idfn(val)
+  File "/workdir/xarray-2022.12.0/xarray/tests/test_variable.py", line 2835, in &lt;lambda&gt;
+    ids=lambda x: f"{x}",
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 1592, in _array_str_implementation
+    return array2string(a, max_line_width, precision, suppress_small, ' ', "")
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 736, in array2string
+    return _array2string(a, options, separator, prefix)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 513, in wrapper
+    return f(self, *args, **kwargs)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 539, in _array2string
+    format_function = _get_format_function(data, **options)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 481, in _get_format_function
+    return formatdict['datetime']()
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 419, in &lt;lambda&gt;
+    'datetime': lambda: DatetimeFormat(data, legacy=legacy),
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 1322, in __init__
+    super().__init__(x)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 1283, in __init__
+    max_str_len = max(len(self._format_non_nat(np.max(non_nat))),
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/numpy/core/arrayprint.py", line 1330, in _format_non_nat
+    return "'%s'" % datetime_as_string(x,
+  File "", line 180, in public_api
+SystemError: internal exception occurred
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 341, in from_call
+    result: Optional[TResult] = func()
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/runner.py", line 372, in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 534, in collect
+    return super().collect()
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 455, in collect
+    res = ihook.pytest_pycollect_makeitem(
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 493, in __call__
+    return self._hookexec(self.name, self._hookimpls, kwargs, firstresult)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 271, in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 498, in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_hooks.py", line 552, in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_manager.py", line 115, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 113, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/pluggy/_callers.py", line 77, in _multicall
+    res = hook_impl.function(*args)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 150, in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1335, in parametrize
+    ids = self._resolve_parameter_set_ids(
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1405, in _resolve_parameter_set_ids
+    return id_maker.make_unique_parameterset_ids()
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 996, in make_unique_parameterset_ids
+    resolved_ids = list(self._resolve_ids())
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1021, in _resolve_ids
+    yield "-".join(
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1022, in &lt;genexpr&gt;
+    self._idval(val, argname, idx)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1028, in _idval
+    idval = self._idval_from_function(val, argname, idx)
+  File "/workdir/xarray-2022.12.0/.tox/graalpylibtest-unit-test-tests/lib/python3.10/site-packages/_pytest/python.py", line 1052, in _idval_from_function
+    raise ValueError(msg) from e
+ValueError: xarray/tests/test_variable.py::test_datetime_conversion_warning: error raised while trying to determine id of parameter 'values' at position 2</error></testcase><testcase classname="" name="properties.test_encode_decode" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/properties/test_encode_decode.py', 9, "Skipped: could not import 'hypothesis': No module named 'hypothesis'")</skipped></testcase><testcase classname="" name="properties.test_pandas_roundtrip" time="0.000"><skipped message="collection skipped">('/workdir/xarray-2022.12.0/properties/test_pandas_roundtrip.py', 12, "Skipped: could not import 'hypothesis': No module named 'hypothesis'")</skipped></testcase></testsuite></testsuites>
